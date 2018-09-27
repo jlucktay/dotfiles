@@ -23,6 +23,8 @@
 
 ### Install cht.sh
 #
+# curl cht.sh/:intro
+#
 # curl https://cht.sh/:cht.sh > ~/bin/cht.sh
 # chmod +x ~/bin/cht.sh
 #
