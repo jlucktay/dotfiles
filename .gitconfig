@@ -9,6 +9,9 @@
 	submit = codereview submit
 	sync = codereview sync
 [color]
+	branch = auto
+	diff = auto
+	status = auto
 	ui = auto
 [http]
 	cookiefile = /Users/jameslucktaylor/.gitcookies
