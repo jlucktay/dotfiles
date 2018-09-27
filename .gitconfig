@@ -1,0 +1,21 @@
+[alias]
+	ap = add --patch
+	change = codereview change
+	dt = difftool -y
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	rup = remote update --prune
+	submit = codereview submit
+	sync = codereview sync
+[color]
+	ui = auto
+[http]
+	cookiefile = /Users/jameslucktaylor/.gitcookies
+[merge]
+	tool = kdiff3
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[user]
+	name = James Lucktaylor
+	useConfigOnly = true

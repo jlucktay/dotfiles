@@ -1,0 +1,7 @@
+[tasks.default]
+    links = [
+        [".bash_profile"],
+        [".bashrc"],
+        [".gitconfig"],
+        ["xkpasswd.json"],
+    ]
