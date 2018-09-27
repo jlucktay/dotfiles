@@ -1,7 +1,5 @@
-#!/usr/local/bin/bash
-
-# set -euo pipefail
-
+#!/usr/bin/env bash
+set -euo pipefail
 IFS=$'\n\t'
 
 cd /Users/jameslucktaylor/git || return
