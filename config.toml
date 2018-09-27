@@ -20,3 +20,23 @@
         ["bin/git-hub-out.sh"],
         ["xkpasswd.json"],
     ]
+
+### Install cht.sh
+#
+# curl https://cht.sh/:cht.sh > ~/bin/cht.sh
+# chmod +x ~/bin/cht.sh
+#
+# mkdir -p ~/.bash.d/
+# curl https://cht.sh/:bash_completion > ~/.bash.d/cht.sh
+# echo 'source ~/.bash.d/cht.sh' >> ~/.bashrc
+# source ~/.bash.d/cht.sh
+
+### Capture git and go source repos
+#
+# tree -d -l -L 3 -o ... -n /Users/jameslucktaylor/git /Users/jameslucktaylor/go/src/
+#
+#   -d            List directories only.
+#   -l            Follow symbolic links like directories.
+#   -L level      Descend only level directories deep.
+#   -o filename   Output to file instead of stdout.
+#   -n            Turn colorization off always (-C overrides).
