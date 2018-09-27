@@ -5,6 +5,7 @@
         [".config/htop/htoprc"],
         [".gitconfig"],
         [".ssh/config"],
+        ["bin/.vscode/launch.json"],
         ["bin/aws-ec2-headcount.sh"],
         ["bin/aws-iam-cleanup.sh"],
         ["bin/aws-my-ec2-status.sh"],
