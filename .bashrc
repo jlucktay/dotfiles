@@ -43,7 +43,7 @@ stty -ixon
 ### Prompt setup
 # Git info in the prompt
 # shellcheck source=/Users/jameslucktaylor/git-prompt.sh
-source ~/git-prompt.sh
+source "$HOME/git-prompt.sh"
 
 # Fancy colourful prompt, including git info
 PROMPT_COMMAND='__posh_git_ps1 "\[\033[38;5;14m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;13m\]\H\[$(tput sgr0)\]\[\033[38;5;15m\] [\[$(tput sgr0)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]] \$? " "\n\[$(tput sgr0)\]\[\033[38;5;10m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"'
@@ -66,7 +66,7 @@ alias ls='gls --color -h --group-directories-first'
 alias ll='gls --color -AFlh --group-directories-first'
 
 alias acsjl="awsume celab --session-name james.lucktaylor"
-alias did='vim +"normal Go" +"r!date" +"normal Go" ~/did.txt'
+alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 alias dst='du -hd 1 | sort -h | tail -n 20'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
@@ -165,7 +165,7 @@ export HISTTIMEFORMAT="[%F %T] "
 
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
 # http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
-export HISTFILE=~/.bash_eternal_history
+export HISTFILE=$HOME/.bash_eternal_history
 
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
@@ -185,10 +185,10 @@ shopt -s globstar
 eval "$(perl "-I$HOME/perl5/lib/perl5" "-Mlocal::lib=$HOME/perl5")"
 
 # Cheat sheet - keep this second last
-if [ -f ~/bash-cheat-sheet.txt ]; then
-    cat ~/bash-cheat-sheet.txt
+if [ -f "$HOME/bash-cheat-sheet.txt" ]; then
+    cat "$HOME/bash-cheat-sheet.txt"
 else
-    echo "'~/bash-cheat-sheet.txt' not available"
+    echo "'$HOME/bash-cheat-sheet.txt' not available"
 fi
 
 # Stop the clock - keep this last
