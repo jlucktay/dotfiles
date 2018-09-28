@@ -35,7 +35,7 @@
 
 ### Capture git and go source repos
 #
-# tree -d -l -L 3 -o ... -n /Users/jameslucktaylor/git /Users/jameslucktaylor/go/src/
+# tree -d -l -L 3 -o tree.src.$(gdn).txt -n /Users/jameslucktaylor/git /Users/jameslucktaylor/go/src
 #
 #   -d            List directories only.
 #   -l            Follow symbolic links like directories.
