@@ -60,6 +60,8 @@ alias rm='rm -iv'
 # Git
 alias gpa="git push --all"
 alias gsurr="git submodule update --recursive --remote"
+# TODO: finish this WIP alias
+alias git-outdated-push="find . -type d -name .git -not -path *.terraform* -execdir sh -c 'pwd ; git status' \\;"
 
 # Bash ls
 alias ls='gls --color -h --group-directories-first'
