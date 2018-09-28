@@ -61,6 +61,7 @@ alias rm='rm -iv'
 alias gpa="git push --all"
 alias gsurr="git submodule update --recursive --remote"
 # TODO: finish this WIP alias
+# Note to self: use 'git push --all' in each repo
 alias git-outdated-push="find . -type d -name .git -not -path *.terraform* -execdir sh -c 'pwd ; git status' \\;"
 
 # Bash ls
