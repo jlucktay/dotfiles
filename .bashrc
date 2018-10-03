@@ -14,10 +14,8 @@ export GOPATH
 GOROOT=$(go env GOROOT)
 export GOROOT
 
-PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
+PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH
-
-#   export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 export MANPATH
