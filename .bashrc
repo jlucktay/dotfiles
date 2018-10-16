@@ -79,8 +79,9 @@ alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 # alias top10='HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10'
 # history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
 
-alias chrome_cloudreach='open -a "Google Chrome" --args --profile-directory=Default'
-alias chrome_personal='open -a "Google Chrome" --args --profile-directory="Profile 1"'
+alias chrome_cloudreach='open --new -a "Google Chrome" --args --profile-directory=Default'
+alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory="Profile 1"'
+alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Profile 5"'
 
 awsregions() {
     aws ec2 describe-regions | jq -r '.Regions[].RegionName' | sort -f
