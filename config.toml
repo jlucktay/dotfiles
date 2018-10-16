@@ -42,6 +42,10 @@
 #   -L level      Descend only level directories deep.
 #   -o filename   Output to file instead of stdout.
 #   -n            Turn colorization off always (-C overrides).
+#
+# OR
+#
+# find ~ -type d -name ".git" -execdir pwd \; 2>/dev/null
 
 ### Used in .bashrc
 #
