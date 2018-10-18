@@ -14,6 +14,7 @@
         ["bin/cron-monthly-cleanup.sh"],
         ["bin/do-terraform-init.sh"],
         ["bin/docker-start.sh"],
+        ["bin/gcp-katka-du.sh"],
         ["bin/get-latest-k8s.sh"],
         ["bin/get-path.sh"],
         ["bin/git-branch-sync.sh"],
