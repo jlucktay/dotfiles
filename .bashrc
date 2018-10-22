@@ -71,6 +71,7 @@ alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 alias dst='du -hd 1 | sort -h | tail -n 20'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
+alias hlh='find ~ -type f -name Dockerfile -path "*jlucktay*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
 alias jq='jq --sort-keys'
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 
