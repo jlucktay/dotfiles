@@ -58,9 +58,10 @@ alias rm='rm -iv'
 # Git
 alias gpa="git push --all"
 alias gsurr="git submodule update --recursive --remote"
-# TODO: finish this WIP alias
-# Note to self: use 'git push --all' in each repo
-alias git-outdated-push="find . -type d -name .git -not -path *.terraform* -execdir sh -c 'pwd ; git status' \\;"
+
+git-outdated-sync(){
+    find . -type d -name .git -not -path "*.terraform*" -execdir bash -c "pwd ; git pull --all ; git push --all ; echo" \;
+}
 
 # Bash ls
 alias ls='gls --color -h --group-directories-first'
@@ -75,10 +76,10 @@ alias hlh='find ~ -type f -name Dockerfile -path "*jlucktay*" -not -path "*/.ter
 alias jq='jq --sort-keys'
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 
-### TODO: alias'ify this top10 history command
-### http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
-# alias top10='HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10'
-# history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
+# http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
+top10(){
+    HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
+}
 
 alias chrome_cloudreach='open --new -a "Google Chrome" --args --profile-directory=Default'
 alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory="Profile 1"'
