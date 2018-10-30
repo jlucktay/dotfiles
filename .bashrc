@@ -34,6 +34,9 @@ export TF_VAR_region="eu-west-1"
 # AWS SDK for Go
 export AWS_SDK_LOAD_CONFIG=true
 
+# Homebrew should always clean up after itself
+export HOMEBREW_UPGRADE_CLEANUP=1
+
 ### Bash setup
 # Fix for searching forward through command history
 stty -ixon
