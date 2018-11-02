@@ -2,4 +2,5 @@
 set -euo pipefail
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-homemaker -verbose config.toml "$DIR"
+TASK=${1:-"default"}
+homemaker --task="$TASK" --verbose config.toml "$DIR"
