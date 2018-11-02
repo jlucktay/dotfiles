@@ -41,3 +41,7 @@
 ### Used in .bashrc
 #
 # git-prompt.sh -> git/github.com/lyze/posh-git-sh/git-prompt.sh
+
+### Homebrew
+#
+# Update the 'brew.[cask.]list.txt' files
