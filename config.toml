@@ -1,6 +1,7 @@
 [tasks.default]
     cmds = [
         ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
+        ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
     ]
 
     links = [
@@ -41,7 +42,3 @@
 ### Used in .bashrc
 #
 # git-prompt.sh -> git/github.com/lyze/posh-git-sh/git-prompt.sh
-
-### Homebrew
-#
-# Update the 'brew.[cask.]list.txt' files
