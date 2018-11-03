@@ -1,3 +1,7 @@
+[macros.install]
+    deps = ["homebrew"]
+    prefix = ["brew", "install"]
+
 [tasks.default]
     cmds = [
         ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
@@ -8,7 +12,6 @@
         [".bash_profile"],
         [".bashrc"],
         [".config/htop/htoprc"],
-        [".gitconfig"],
         [".ssh/config"],
         ["bin/.vscode/launch.json"],
         ["bin/aws-ec2-headcount.sh"],
@@ -26,6 +29,11 @@
         ["bin/git-hub-out.sh"],
         ["xkpasswd.json"],
     ]
+
+[tasks.git]
+    rejects = [["stat", "/usr/local/bin/git"]]
+    cmds = [["@install", "git"]]
+    links = [[".gitconfig"]]
 
 [tasks.homebrew]
     rejects = [["command", "-v", "brew"]]

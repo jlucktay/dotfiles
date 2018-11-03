@@ -1,4 +1,4 @@
-# 20181103.113910.583262000+1100
+# 20181103.131003.830587000+1100
 adns
 autojump
 awscli
@@ -16,6 +16,7 @@ freetype
 gd
 gdbm
 gettext
+git
 gmp
 gnupg
 gnutls
@@ -62,6 +63,7 @@ openjpeg
 openssl
 openssl@1.1
 p11-kit
+pcre2
 perl
 phantomjs
 pinentry
