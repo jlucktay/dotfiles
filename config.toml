@@ -27,6 +27,13 @@
         ["xkpasswd.json"],
     ]
 
+[tasks.homebrew]
+    rejects = [["command", "-v", "brew"]]
+    cmds = [[
+        "/usr/bin/ruby", "-e",
+        "$(curl --fail --location --show-error --silent https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ]]
+
 ### Install cht.sh
 #
 # curl cht.sh/:intro
