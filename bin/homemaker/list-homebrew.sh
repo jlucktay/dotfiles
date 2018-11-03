@@ -27,6 +27,7 @@ function processHomebrewLists () {
             rm -fv "$3"
         else
             rm -fv "$2"
+            mv -iv "$3" "$2"
         fi
     else
         mv -iv "$3" "$2"
