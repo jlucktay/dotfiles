@@ -3,6 +3,8 @@
     prefix = ["brew", "install"]
 
 [tasks.default]
+    deps = ["git"]
+
     links = [
         [".bash_profile"],
         [".bashrc"],
