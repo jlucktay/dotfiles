@@ -1,3 +1,5 @@
+# Managed by homemaker, so edit this file in the 'dotfiles' repo, not locally
+
 [alias]
 	ap = add --patch
 	change = codereview change
@@ -14,7 +16,7 @@
 	status = auto
 	ui = auto
 [http]
-	cookiefile = /Users/jameslucktaylor/.gitcookies
+	cookiefile = {{.Env.HOME}}/.gitcookies
 [merge]
 	tool = kdiff3
 [url "git@github.com:"]

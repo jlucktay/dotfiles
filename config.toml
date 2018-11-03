@@ -30,7 +30,7 @@
 [tasks.git]
     rejects = [["stat", "/usr/local/bin/git"]]
     cmds = [["@install", "git"]]
-    links = [[".gitconfig"]]
+    templates = [[".gitconfig"]]
 
 [tasks.golang]
     rejects = [["stat", "/usr/local/bin/go"]]
