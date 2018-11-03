@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
-# set +e -u
+set +e -u
 IFS=$'\n\t'
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
@@ -12,9 +11,9 @@ HomebrewCaskList=$(realpath "$DIR/../../brew.cask.list.txt")
 HomebrewCaskListArchive=$(realpath "$DIR/../../brew.cask.list.$Now.txt")
 
 function processHomebrewLists () {
-    echo "Parameter #1 is the command to generate the list: '$1'"
-    echo "Parameter #2 is the filename to put the new list in: '$2'"
-    echo "Parameter #3 is the filename to archive the old list to: '$3'"
+    # echo "Parameter #1 is the command to generate the list: '$1'"
+    # echo "Parameter #2 is the filename to put the new list in: '$2'"
+    # echo "Parameter #3 is the filename to archive the old list to: '$3'"
 
     if [ -f "$2" ]; then
         mv -iv "$2" "$3"
