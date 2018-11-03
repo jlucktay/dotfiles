@@ -1,7 +1,8 @@
-# 20180927.150909.382542000+0100
+# 20181103.113910.583262000+1100
 1password
 authy
 beyond-compare
+cleanmymac
 discord
 docker
 filezilla
@@ -26,6 +27,7 @@ skype
 skype-for-business
 slack
 spectacle
+steam
 twitch
 tyke
 virtualbox

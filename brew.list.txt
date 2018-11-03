@@ -1,4 +1,4 @@
-# 20180927.150838.816435000+0100
+# 20181103.113910.583262000+1100
 adns
 autojump
 awscli
@@ -46,6 +46,7 @@ libunistring
 libusb
 libxmlsec1
 libyaml
+little-cms2
 make
 mas
 mongodb
@@ -57,6 +58,7 @@ node
 npth
 oath-toolkit
 oniguruma
+openjpeg
 openssl
 openssl@1.1
 p11-kit
