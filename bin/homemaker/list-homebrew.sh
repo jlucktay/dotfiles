@@ -24,9 +24,9 @@ function processHomebrewLists () {
 
         if ! ((DiffResult)); then
             # No difference, so delete the new file
-            rm -fv "$3"
+            rm -f "$3"
         else
-            rm -fv "$2"
+            rm -f "$2"
             mv -iv "$3" "$2"
         fi
     else
