@@ -4,7 +4,6 @@
 
 [tasks.default]
     deps = ["git"]
-
     links = [
         [".bash_profile"],
         [".bashrc"],
@@ -27,6 +26,10 @@
         ["xkpasswd.json"],
     ]
 
+[tasks.coreutils]
+    rejects = [["stat", "/usr/local/opt/coreutils"]]
+    cmds = [["@install", "coreutils"]]
+
 [tasks.git]
     rejects = [["stat", "/usr/local/bin/git"]]
     cmds = [["@install", "git"]]
@@ -48,8 +51,17 @@
     ]]
 
 [tasks.lists]
+    deps = ["lists-git", "lists-homebrew"]
+
+[tasks.lists-git]
+    deps = ["coreutils"]
     cmds = [
         ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
+    ]
+
+[tasks.lists-homebrew]
+    deps = ["coreutils", "homebrew"]
+    cmds = [
         ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
     ]
 
