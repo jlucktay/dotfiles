@@ -3,11 +3,6 @@
     prefix = ["brew", "install"]
 
 [tasks.default]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
-        ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
-    ]
-
     links = [
         [".bash_profile"],
         [".bashrc"],
@@ -41,6 +36,12 @@
         "/usr/bin/ruby", "-e",
         "$(curl --fail --location --show-error --silent https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ]]
+
+[tasks.lists]
+    cmds = [
+        ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
+        ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
+    ]
 
 ### Install cht.sh
 #
