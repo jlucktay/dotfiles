@@ -2,13 +2,13 @@
 set +e -u
 IFS=$'\n\t'
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 Now=$(date +%Y%m%d.%H%M%S.%N%z)
 
-HomebrewList=$(realpath "$DIR/../../brew.list.txt")
-HomebrewListArchive=$(realpath "$DIR/../../brew.list.$Now.txt")
-HomebrewCaskList=$(realpath "$DIR/../../brew.cask.list.txt")
-HomebrewCaskListArchive=$(realpath "$DIR/../../brew.cask.list.$Now.txt")
+HomebrewList=$(realpath "$ScriptDirectory/../../brew.list.txt")
+HomebrewListArchive=$(realpath "$ScriptDirectory/../../brew.list.$Now.txt")
+HomebrewCaskList=$(realpath "$ScriptDirectory/../../brew.cask.list.txt")
+HomebrewCaskListArchive=$(realpath "$ScriptDirectory/../../brew.cask.list.$Now.txt")
 
 function processHomebrewLists () {
     # echo "Parameter #1 is the command to generate the list: '$1'"
