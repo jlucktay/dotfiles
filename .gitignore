@@ -1,2 +1,5 @@
-brew.cask.*
+brew.list.*
+!brew.list.txt
+
 brew.cask.list.*
+!brew.cask.list.txt
