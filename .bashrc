@@ -58,6 +58,16 @@ alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 
+# Alternative commands (thank you: https://remysharp.com/2018/08/23/cli-improved)
+alias cat=bat
+alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
+alias ping='prettyping --nolegend'
+
+export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+
+# shellcheck source=/Users/jameslucktaylor/.fzf.bash
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 # Git
 alias gpa="git push --all"
 alias gsurr="git submodule update --recursive --remote"
@@ -70,9 +80,10 @@ git-outdated-sync(){
 alias ls='gls --color -h --group-directories-first'
 alias ll='gls --color -AFlh --group-directories-first'
 
+# Miscellaneous
 alias acsjl="awsume celab --session-name james.lucktaylor"
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
-alias dst='du -hd 1 | sort -h | tail -n 20'
+#alias dst='du -hd 1 | sort -h | tail -n 20'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
 alias hlh='find ~ -type f -name Dockerfile -path "*jlucktay*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
