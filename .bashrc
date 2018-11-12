@@ -72,7 +72,7 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 alias gpa="git push --all"
 alias gsurr="git submodule update --recursive --remote"
 
-git-outdated-sync(){
+function git-outdated-sync(){
     find . -type d -name .git -not -path "*.terraform*" -execdir bash -c "pwd ; git pull --all ; git push --all ; echo" \;
 }
 
@@ -91,7 +91,7 @@ alias jq='jq --sort-keys'
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 
 # http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
-top10(){
+function top10(){
     HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
 }
 
@@ -99,23 +99,23 @@ alias chrome_cloudreach='open --new -a "Google Chrome" --args --profile-director
 alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Profile 5"'
 
-awsregions() {
+function awsregions(){
     aws ec2 describe-regions | jq -r '.Regions[].RegionName' | sort -f
 }
 export -f awsregions
 
-azlablogin() {
+function azlablogin(){
     az account set --subscription="$(az account list | jq -r '.[] | select( .name == "Cloudreach Lab") | .id')"
 }
 export -f azlablogin
 
-azregions() {
+function azregions(){
     az account list-locations | jq -r '.[].name' | sort -f
 }
 export -f azregions
 
 # Virtual MFA token, just give it the secret
-function mmfa () {
+function mmfa(){
     oathtool --base32 --totp "$1" ;
 }
 
@@ -123,7 +123,7 @@ function mmfa () {
 alias awsume=". awsume"
 
 # Auto-Complete function for AWSume
-_awsume() {
+function _awsume(){
     local cur prev opts
     COMPREPLY=()
     cur="${COMP_WORDS[COMP_CWORD]}"
@@ -138,7 +138,7 @@ complete -F _awsume awsume
 #            Displays paginated result with colored search terms and two lines surrounding each hit.
 #   Example: mans mplayer codec
 #   --------------------------------------------------------------------
-mans () {
+function mans(){
     man "$1" | grep -iC2 "$2" | less
 }
 
@@ -165,7 +165,7 @@ fi
 [[ -e "${HOME}/.iterm2_shell_integration.bash" ]] && source "${HOME}/.iterm2_shell_integration.bash"
 
 # Used for the badge
-function iterm2_print_user_vars() {
+function iterm2_print_user_vars(){
     iterm2_set_user_var currentDir "${PWD##*/}"
 }
 
