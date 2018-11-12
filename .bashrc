@@ -204,7 +204,7 @@ eval "$(perl "-I$HOME/perl5/lib/perl5" "-Mlocal::lib=$HOME/perl5")"
 
 # Cheat sheet - keep this second last
 if [ -f "$HOME/bash-cheat-sheet.txt" ]; then
-    cat "$HOME/bash-cheat-sheet.txt"
+    \cat "$HOME/bash-cheat-sheet.txt"
 else
     echo "'$HOME/bash-cheat-sheet.txt' not available"
 fi
