@@ -3,9 +3,9 @@ set -euo pipefail
 IFS=$'\n\t'
 
 CronLogDir="/Users/jameslucktaylor/log"
-mkdir -p $CronLogDir
+mkdir -p "$CronLogDir"
 
-CronLog="${CronLogDir}/cron.$(gdate '+%Y%m%d.%H%M%S.%N%z').log"
+CronLog="$CronLogDir/cron.$(gdate '+%Y%m%d.%H%M%S.%N%z').log"
 
 { echo "--- 'brew cleanup'"; brew cleanup; } >> "$CronLog" 2>&1
 

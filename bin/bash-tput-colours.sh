@@ -13,6 +13,6 @@ coloursReset="$(tput sgr0)"
 
 echo "before one"
 echo "before two"
-echo "Hello, ${coloursBackgroundWhite}${coloursForegroundBlack}world${coloursReset}!"
+echo "Hello, $coloursBackgroundWhite${coloursForegroundBlack}world$coloursReset!"
 echo "after one"
 echo "after two"
