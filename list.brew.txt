@@ -1,10 +1,11 @@
-# 20181103.131003.830587000+1100
+# 20181114.093251.857099000+0000
 adns
 autojump
 awscli
 azure-cli
 bash
 bashdb
+bat
 chromedriver
 cmatrix
 coreutils
@@ -13,6 +14,7 @@ exercism
 findutils
 fontconfig
 freetype
+fzf
 gd
 gdbm
 gettext
@@ -24,6 +26,7 @@ go
 graphviz
 hadolint
 htop
+httpie
 hugo
 icu4c
 imagemagick
@@ -47,6 +50,7 @@ libunistring
 libusb
 libxmlsec1
 libyaml
+libzip
 little-cms2
 make
 mas
@@ -67,6 +71,7 @@ pcre2
 perl
 phantomjs
 pinentry
+prettyping
 python
 python3
 python@2
@@ -81,6 +86,7 @@ telnet
 terraform
 terraform-docs
 terraform_landscape
+tldr
 tree
 typescript
 vim
