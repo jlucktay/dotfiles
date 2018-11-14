@@ -58,7 +58,7 @@
 [tasks.lists-git]
     deps = ["coreutils"]
     cmds = [
-        ["${HM_SRC}/bin/homemaker/capture-git-src.sh"],
+        ["${HM_SRC}/bin/homemaker/list-git.sh"],
     ]
 
 [tasks.lists-homebrew]

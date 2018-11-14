@@ -1,8 +1,12 @@
+# 20181114.094237.966998000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/aws-lambda-backup
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/cloud-foundation
+/Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-packer
+/Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-sceptre
+/Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-terraform
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/cr-aws-landing-zone
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/cr-lab-form-automation
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/gameday-repo
@@ -27,6 +31,7 @@
 /Users/jameslucktaylor/git/github.com/awslabs/aws-security-benchmark
 /Users/jameslucktaylor/git/github.com/boto/boto3
 /Users/jameslucktaylor/git/github.com/cloudreach/sceptre
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/dan-migration-factory
 /Users/jameslucktaylor/git/github.com/dtan4/terraforming
 /Users/jameslucktaylor/git/github.com/gakimball/taswell-ipsum
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kube-pubsub-bq
