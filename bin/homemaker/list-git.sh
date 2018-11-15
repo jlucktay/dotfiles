@@ -5,9 +5,16 @@ set +e -u
 IFS=$'\n\t'
 
 ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
-GitArchive=$(realpath "$ScriptDirectory/../../list.git.txt")
-echo "# $(date +%Y%m%d.%H%M%S.%N%z)" > "$GitArchive"
 
-find "$HOME" -type d -name ".git" \
-    -not -path "*.terraform*" -not -path "*go/pkg/dep/sources*" \
-    -execdir pwd \; 2>/dev/null | sort -f >> "$GitArchive"
+# shellcheck source=/dev/null
+. "$(realpath "$ScriptDirectory/func.processList.sh")"
+
+Now=$(date +%Y%m%d.%H%M%S.%N%z)
+
+GitListCmd="find \"$HOME\" -type d -name \".git\" \
+    -not -path \"*/.terraform/*\" -not -path \"*/go/pkg/dep/sources/*\" \
+    -execdir pwd \\; 2>/dev/null | sort -f"
+GitList=$(realpath "$ScriptDirectory/../../list.git.txt")
+GitListArchive=$(realpath "$ScriptDirectory/../../list.git.$Now.txt")
+
+processList "$Now" "$GitListCmd" "$GitList" "$GitListArchive"
