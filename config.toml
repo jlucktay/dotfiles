@@ -56,7 +56,7 @@
     deps = ["lists-git", "lists-homebrew"]
 
 [tasks.lists-git]
-    deps = ["coreutils"]
+    deps = ["coreutils", "git"]
     cmds = [
         ["${HM_SRC}/bin/homemaker/list-git.sh"],
     ]
