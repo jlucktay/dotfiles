@@ -1,8 +1,7 @@
-# 20181103.113910.583262000+1100
+# 20181116.165111.N+0000
 1password
 authy
 beyond-compare
-cleanmymac
 discord
 docker
 filezilla
