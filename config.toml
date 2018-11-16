@@ -67,6 +67,12 @@
         ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
     ]
 
+[tasks.lists-vscode]
+    deps = ["coreutils"] # vscode
+    cmds = [
+        ["${HM_SRC}/bin/homemaker/list-vscode.sh"],
+    ]
+
 ### Install cht.sh
 #
 # curl cht.sh/:intro

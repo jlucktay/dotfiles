@@ -1,0 +1,27 @@
+# 20181116.164218.N+0000
+bungcip.better-toml
+casualjim.gotemplate
+CoenraadS.bracket-pair-colorizer
+DavidAnson.vscode-markdownlint
+DotJoshJohnson.xml
+eamodio.gitlens
+EditorConfig.EditorConfig
+eg2.tslint
+eg2.vscode-npm-script
+GrapeCity.gc-excelviewer
+mauve.terraform
+mikestead.dotenv
+ms-python.python
+ms-vscode.azure-account
+ms-vscode.Go
+ms-vscode.PowerShell
+ms-vsliveshare.vsliveshare
+oderwat.indent-rainbow
+PeterJausovec.vscode-docker
+PKief.material-icon-theme
+richie5um2.vscode-sort-json
+rogalmic.bash-debug
+secanis.jenkinsfile-support
+sidneys1.gitconfig
+timonwong.shellcheck
+Tyriar.sort-lines
