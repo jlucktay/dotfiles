@@ -14,11 +14,17 @@ export GOPATH
 GOROOT=$(go env GOROOT)
 export GOROOT
 
-PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
-export PATH
+# Thank you: https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash
+if ! [ -z ${TERM_PROGRAM+x} ]; then
+    if ! [ "$TERM_PROGRAM" = "vscode" ]; then
+        # Don't double up inside $PATH with VSCode terminals
+        PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
+        export PATH
 
-MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-export MANPATH
+        MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+        export MANPATH
+    fi
+fi
 
 ### Environment variables
 # If I have to edit something in a terminal window, I like using Nano

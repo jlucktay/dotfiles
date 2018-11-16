@@ -9,7 +9,7 @@ coloursForegroundBlack="$(tput setaf 0)"
 # Reset colours
 coloursReset="$(tput sgr0)"
 
-echo "${coloursBackgroundWhite}${coloursForegroundBlack}PATH unsorted:${coloursReset}"
+echo "$coloursBackgroundWhite${coloursForegroundBlack}PATH unsorted:$coloursReset"
 
 while IFS=':' read -ra SPLITPATH; do
     # Split off sorted $PATH array for later output
@@ -22,7 +22,7 @@ while IFS=':' read -ra SPLITPATH; do
 done <<< "$PATH"
 
 echo
-echo "${coloursBackgroundWhite}${coloursForegroundBlack}PATH sorted:${coloursReset}"
+echo "$coloursBackgroundWhite${coloursForegroundBlack}PATH sorted:$coloursReset"
 
 for i in "${SORTEDPATH[@]}"; do
     echo "$i"
