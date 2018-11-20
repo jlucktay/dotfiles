@@ -1,4 +1,4 @@
-# 20181116.165111.N+0000
+# 20181120.094637.097871000+0000
 1password
 authy
 beyond-compare
@@ -15,6 +15,7 @@ joinme
 kdiff3
 keepassx
 keepingyouawake
+krisp
 launchcontrol
 licecap
 owasp-zap

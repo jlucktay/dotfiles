@@ -1,4 +1,4 @@
-# 20181114.093251.857099000+0000
+# 20181120.094637.097871000+0000
 adns
 autojump
 awscli
@@ -57,6 +57,7 @@ mas
 mongodb
 mono
 ncdu
+nethack
 nettle
 nmap
 node
