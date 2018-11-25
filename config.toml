@@ -12,6 +12,7 @@
         [".bash_profile"],
         [".bashrc"],
         [".config/htop/htoprc"],
+        [".nethackrc"],
         [".ssh/config"],
         ["bin/.vscode/launch.json"],
         ["bin/aws-ec2-headcount.sh"],
