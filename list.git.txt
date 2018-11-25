@@ -1,4 +1,4 @@
-# 20181114.094237.966998000+0000
+# 20181123.152500.949843000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -27,6 +27,7 @@
 /Users/jameslucktaylor/git/dev.azure.com/DANAzureDevOps/HelloDAN/HelloDAN
 /Users/jameslucktaylor/git/dev.azure.com/DANAzureDevOps/HelloDAN/HelloDAN2
 /Users/jameslucktaylor/git/dev.azure.com/JamesLucktaylor/DANMigFac
+/Users/jameslucktaylor/git/github.com/alextercete/practical-git
 /Users/jameslucktaylor/git/github.com/aws-quickstart/quickstart-enterprise-accelerator-pci
 /Users/jameslucktaylor/git/github.com/awslabs/aws-security-benchmark
 /Users/jameslucktaylor/git/github.com/boto/boto3
@@ -37,6 +38,7 @@
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kube-pubsub-bq
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kubernetes-bigquery-python
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/nodejs-docs-samples
+/Users/jameslucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.page
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
@@ -46,6 +48,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/jameslucktaylor/git/github.com/lyze/posh-git-sh
 /Users/jameslucktaylor/git/github.com/mzazon/php-apache-mysql-containerized
+/Users/jameslucktaylor/git/github.com/NetHack/NetHack
 /Users/jameslucktaylor/git/github.com/nozaq/terraform-aws-secure-baseline
 /Users/jameslucktaylor/git/github.com/sbromberger/goquote
 /Users/jameslucktaylor/git/github.com/terraform-providers/terraform-provider-aws
@@ -56,7 +59,6 @@
 /Users/jameslucktaylor/git/github.com/wofr06/lesspipe
 /Users/jameslucktaylor/git/go.googlesource.com/go
 /Users/jameslucktaylor/git/stash.wimpmusic.com/terraform
-/Users/jameslucktaylor/git/tmp/setup_and_run_workbench
 /Users/jameslucktaylor/go/src/9fans.net/go
 /Users/jameslucktaylor/go/src/cloud.google.com/go
 /Users/jameslucktaylor/go/src/dmitri.shuralyov.com/gpu/mtl

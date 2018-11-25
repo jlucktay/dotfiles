@@ -1,4 +1,4 @@
-# 20181120.094637.097871000+0000
+# 20181123.152520.586677000+0000
 1password
 authy
 beyond-compare
@@ -9,6 +9,7 @@ firefox
 google-cloud-sdk
 google-drive-file-stream
 grammarly
+inspec
 itsycal
 java
 joinme
