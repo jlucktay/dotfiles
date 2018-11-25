@@ -3,8 +3,8 @@
 function processList(){
     # Parameter #1 is the timestamp to use in the header
     # Parameter #2 is the command to generate the list
-    # Parameter #3 is the filename to put the new list in
-    # Parameter #4 is the filename to archive the old list to
+    # Parameter #3 is the filename of the old archived list
+    # Parameter #4 is the filename to put the new list in
 
     echo "# $1" > "$4"
     eval "$2" >> "$4"
