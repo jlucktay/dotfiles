@@ -28,6 +28,7 @@
         ["bin/get-path.sh"],
         ["bin/git-branch-sync.sh"],
         ["bin/git-hub-out.sh"],
+        ["Library/Application Support/Code/User/settings.json"],
         ["xkpasswd.json"],
     ]
 

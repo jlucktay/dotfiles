@@ -1,0 +1,66 @@
+{
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "[terraform]": {
+    "editor.tabSize": 2
+  },
+  "azure.resourceFilter": [
+    "152e4c75-3657-4284-bb2c-0d825873d72b/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd"
+  ],
+  "breadcrumbs.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line-thin",
+  "editor.formatOnSave": true,
+  "editor.minimap.showSlider": "always",
+  "editor.multiCursorModifier": "alt",
+  "editor.renderControlCharacters": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.rulers": [
+    80,
+    120,
+    160
+  ],
+  "editor.wordWrap": "on",
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "files.associations": {
+    "htoprc": "properties"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true
+  },
+  "files.hotExit": "onExitAndWindowClose",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "gitlens.advanced.messages": {
+    "suppressShowKeyBindingsNotice": true
+  },
+  "gitlens.historyExplorer.enabled": true,
+  "markdown.preview.scrollEditorWithPreview": false,
+  "material-icon-theme.showUpdateMessage": false,
+  "shellcheck.customArgs": [
+    "-s",
+    "bash",
+    "-x"
+  ],
+  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+  "terminal.integrated.cursorBlinking": true,
+  "window.newWindowDimensions": "maximized",
+  "window.openFilesInNewWindow": "default",
+  "window.restoreWindows": "all",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme"
+}
