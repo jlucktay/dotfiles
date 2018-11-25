@@ -1,4 +1,4 @@
-# 20181123.152520.586677000+0000
+# 20181125.201935.380750000+0000
 1password
 authy
 beyond-compare
@@ -29,7 +29,6 @@ skype-for-business
 slack
 spectacle
 steam
-twitch
 tyke
 virtualbox
 viscosity
