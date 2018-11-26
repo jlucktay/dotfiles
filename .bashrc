@@ -49,8 +49,12 @@ stty -ixon
 
 ### Prompt setup
 # Git info in the prompt
-# shellcheck source=/Users/jameslucktaylor/git-prompt.sh
-source "$HOME/git-prompt.sh"
+if [ -f "$HOME/git-prompt.sh" ]; then
+    # shellcheck source=/Users/jameslucktaylor/git-prompt.sh
+    source "$HOME/git-prompt.sh"
+else
+    echo "'$HOME/git-prompt.sh' not available"
+fi
 
 # Fancy colourful prompt, including git info
 PROMPT_COMMAND='__posh_git_ps1 "\[\033[38;5;14m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput sgr0)\]\[\033[38;5;13m\]\H\[$(tput sgr0)\]\[\033[38;5;15m\] [\[$(tput sgr0)\]\[\033[38;5;11m\]\W\[$(tput sgr0)\]\[\033[38;5;15m\]] \$? " "\n\[$(tput sgr0)\]\[\033[38;5;10m\]\t\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]\[\033[38;5;9m\]\\$\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"'
