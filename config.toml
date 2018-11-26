@@ -14,6 +14,7 @@
         [".config/htop/htoprc"],
         [".nethackrc"],
         [".ssh/config"],
+        [".vimrc"],
         ["bin/.vscode/launch.json"],
         ["bin/aws-ec2-headcount.sh"],
         ["bin/aws-iam-cleanup.sh"],
