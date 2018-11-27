@@ -35,7 +35,9 @@ export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Terraform
-export TF_VAR_region="eu-west-1"
+export TF_VAR_region="eu-west-2" # London
+export TF_VAR_state_dynamodb="jlucktay.terraform.state"
+export TF_VAR_state_bucket="$TF_VAR_state_dynamodb.london"
 
 # AWS SDK for Go
 export AWS_SDK_LOAD_CONFIG=true

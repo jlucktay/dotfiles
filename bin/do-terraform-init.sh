@@ -49,7 +49,14 @@ fi
 
 # Announce init
 echo "Initialising Terraform with following dynamic values:"
-printf '\tkey:\t%s\n' "$DesiredStateKey"
+printf '\tbucket:\t\t%s\n' "$TF_VAR_state_bucket"
+printf '\tdynamodb_table:\t%s\n' "$TF_VAR_state_dynamodb"
+printf '\tkey:\t\t%s\n' "$DesiredStateKey"
+printf '\tregion:\t\t%s\n' "${TF_VAR_region:-}"
 
 # Run the initialisation
-terraform init -backend-config="key=$DesiredStateKey" -backend-config="region=${TF_VAR_region:-}"
+terraform init \
+    -backend-config="bucket=$TF_VAR_state_bucket" \
+    -backend-config="dynamodb_table=$TF_VAR_state_dynamodb" \
+    -backend-config="key=$DesiredStateKey" \
+    -backend-config="region=${TF_VAR_region:-}"
