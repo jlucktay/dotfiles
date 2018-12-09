@@ -9,7 +9,6 @@
     "152e4c75-3657-4284-bb2c-0d825873d72b/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd"
   ],
   "breadcrumbs.enabled": false,
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.formatOnSave": true,
@@ -49,6 +48,8 @@
     "suppressShowKeyBindingsNotice": true
   },
   "gitlens.historyExplorer.enabled": true,
+  "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.lineHistory.enabled": true,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
   "shellcheck.customArgs": [
