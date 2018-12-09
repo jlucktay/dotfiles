@@ -1,4 +1,4 @@
-# 20181125.201935.380750000+0000
+# 20181209.221528.210729000+0000
 1password
 authy
 beyond-compare
@@ -19,6 +19,7 @@ keepingyouawake
 krisp
 launchcontrol
 licecap
+microsoft-teams
 owasp-zap
 pingmenu
 postman

@@ -1,4 +1,4 @@
-# 20181120.094637.097871000+0000
+# 20181209.221528.210729000+0000
 adns
 autojump
 awscli
@@ -9,6 +9,7 @@ bat
 chromedriver
 cmatrix
 coreutils
+dive
 elvish
 exercism
 findutils
@@ -52,6 +53,7 @@ libxmlsec1
 libyaml
 libzip
 little-cms2
+lua
 make
 mas
 mongodb
