@@ -15,7 +15,7 @@ GitListCmd="find \"$HOME\" -type d -name \".git\" \
     -not -path \"*/.glide/cache/*\" \
     -not -path \"*/.terraform/*\" \
     -not -path \"*/go/pkg/dep/sources/*\" \
-    -execdir pwd \\; 2>/dev/null | sort -f"
+    -execdir pwd \\; 2>/dev/null"
 GitList=$(realpath "$ScriptDirectory/../../list.git.txt")
 GitListArchive=$(realpath "$ScriptDirectory/../../list.git.$Now.txt")
 

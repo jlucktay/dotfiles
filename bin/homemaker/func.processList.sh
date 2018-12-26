@@ -7,10 +7,11 @@ function processList(){
     # Parameter #4 is the filename to put the new list in
 
     echo "# $1" > "$4"
-    eval "$2" >> "$4"
+    eval "$2" | sort -f >> "$4"
 
     if [ -f "$3" ]; then
         # Compare the old archive file with the newly-created file
+        set +e
         DiffResult=$(diff --brief <(tail -n +2 "$3") <(tail -n +2 "$4") | wc -l)
 
         if ! ((DiffResult)); then

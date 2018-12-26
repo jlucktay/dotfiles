@@ -12,4 +12,4 @@ Now=$(date +%Y%m%d.%H%M%S.%N%z)
 VsCodeList=$(realpath "$ScriptDirectory/../../list.vscode.txt")
 VsCodeListArchive=$(realpath "$ScriptDirectory/../../list.vscode.$Now.txt")
 
-processList "$Now" "code --list-extensions | sort -f" "$VsCodeList" "$VsCodeListArchive"
+processList "$Now" "code --list-extensions" "$VsCodeList" "$VsCodeListArchive"
