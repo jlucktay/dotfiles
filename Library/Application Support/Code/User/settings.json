@@ -1,7 +1,4 @@
 {
-  "[markdown]": {
-    "editor.tabSize": 2
-  },
   "[terraform]": {
     "editor.tabSize": 2
   },
@@ -47,11 +44,22 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
-  "gitlens.historyExplorer.enabled": true,
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
+  "mssql.connections": [
+    {
+      "authenticationType": "SqlLogin",
+      "database": "AZEUW1SQDBFCT01",
+      "emptyPasswordInput": false,
+      "password": "",
+      "profileName": "clzmf-176.FranceContract",
+      "savePassword": true,
+      "server": "azeuw1sqfct01.database.windows.net",
+      "user": "FranceContract"
+    }
+  ],
   "shellcheck.customArgs": [
     "-s",
     "bash",
