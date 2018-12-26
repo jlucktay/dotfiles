@@ -1,4 +1,4 @@
-# 20181123.152500.949843000+0000
+# 20181226.133837.069570000+0100
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -41,6 +41,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.page
+/Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
@@ -101,6 +102,7 @@
 /Users/jameslucktaylor/go/src/github.com/golang/dep
 /Users/jameslucktaylor/go/src/github.com/golang/example
 /Users/jameslucktaylor/go/src/github.com/golang/lint
+/Users/jameslucktaylor/go/src/github.com/golang/mock
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/google/uuid
 /Users/jameslucktaylor/go/src/github.com/googleapis/gax-go
@@ -150,9 +152,11 @@
 /Users/jameslucktaylor/go/src/github.com/Masterminds/glide
 /Users/jameslucktaylor/go/src/github.com/mattn/go-runewidth
 /Users/jameslucktaylor/go/src/github.com/mattn/go-sqlite3
+/Users/jameslucktaylor/go/src/github.com/mb0/glob
 /Users/jameslucktaylor/go/src/github.com/mdempsky/gocode
 /Users/jameslucktaylor/go/src/github.com/MichaelTJones/walk
 /Users/jameslucktaylor/go/src/github.com/miekg/mmark
+/Users/jameslucktaylor/go/src/github.com/mitchellh/gox
 /Users/jameslucktaylor/go/src/github.com/mitchellh/mapstructure
 /Users/jameslucktaylor/go/src/github.com/muesli/smartcrop
 /Users/jameslucktaylor/go/src/github.com/naoina/go-stringutil
@@ -172,6 +176,7 @@
 /Users/jameslucktaylor/go/src/github.com/PuerkitoBio/urlesc
 /Users/jameslucktaylor/go/src/github.com/rakyll/hey
 /Users/jameslucktaylor/go/src/github.com/ramya-rao-a/go-outline
+/Users/jameslucktaylor/go/src/github.com/rebuy-de/aws-nuke
 /Users/jameslucktaylor/go/src/github.com/remyoudompheng/go-misc
 /Users/jameslucktaylor/go/src/github.com/rjkroege/edwood
 /Users/jameslucktaylor/go/src/github.com/rogpeppe/godef
@@ -180,6 +185,7 @@
 /Users/jameslucktaylor/go/src/github.com/sbromberger/goquote
 /Users/jameslucktaylor/go/src/github.com/shuLhan/go-bindata
 /Users/jameslucktaylor/go/src/github.com/shurcooL/sanitized_anchor_name
+/Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/skratchdot/open-golang
 /Users/jameslucktaylor/go/src/github.com/spf13/afero
 /Users/jameslucktaylor/go/src/github.com/spf13/cast

@@ -1,5 +1,6 @@
-brew.list.*
-!brew.list.txt
-
-brew.cask.list.*
-!brew.cask.list.txt
+list.*.txt
+!list.brew.cask.txt
+!list.brew.tap.txt
+!list.brew.txt
+!list.git.txt
+!list.vscode.txt

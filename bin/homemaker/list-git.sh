@@ -12,7 +12,9 @@ ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 Now=$(date +%Y%m%d.%H%M%S.%N%z)
 
 GitListCmd="find \"$HOME\" -type d -name \".git\" \
-    -not -path \"*/.terraform/*\" -not -path \"*/go/pkg/dep/sources/*\" \
+    -not -path \"*/.glide/cache/*\" \
+    -not -path \"*/.terraform/*\" \
+    -not -path \"*/go/pkg/dep/sources/*\" \
     -execdir pwd \\; 2>/dev/null | sort -f"
 GitList=$(realpath "$ScriptDirectory/../../list.git.txt")
 GitListArchive=$(realpath "$ScriptDirectory/../../list.git.$Now.txt")
