@@ -1,4 +1,4 @@
-# 20181123.160529.628057000+0000
+# 20181226.151837.299496000+0100
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
@@ -8,10 +8,12 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.tslint
 eg2.vscode-npm-script
+fallenwood.vimL
 GrapeCity.gc-excelviewer
 mauve.terraform
 mechatroner.rainbow-csv
 mikestead.dotenv
+ms-mssql.mssql
 ms-python.python
 ms-vscode.azure-account
 ms-vscode.cpptools
