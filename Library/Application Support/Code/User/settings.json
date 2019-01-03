@@ -1,4 +1,7 @@
 {
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
   "[terraform]": {
     "editor.tabSize": 2
   },
