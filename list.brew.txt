@@ -1,4 +1,4 @@
-# 20181226.132047.244033000+0100
+# 20190103.072831.296802000+0000
 adns
 autojump
 awscli
@@ -75,6 +75,7 @@ pcre2
 perl
 phantomjs
 pinentry
+pre-commit
 prettyping
 python
 python3
@@ -91,6 +92,7 @@ terraform
 terraform-docs
 terraform_landscape
 tldr
+trash
 tree
 typescript
 vim

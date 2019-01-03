@@ -1,4 +1,4 @@
-# 20181209.221528.210729000+0000
+# 20190103.072831.296802000+0000
 1password
 authy
 beyond-compare
@@ -35,3 +35,4 @@ virtualbox
 viscosity
 vlc
 xquartz
+yed
