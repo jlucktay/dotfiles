@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
-# Need these specific options set so that when 'find' hits directories with
-# permission errors, it doesn't send a non-zero exit code back to 'homemaker'
-set +e -u
+set -euo pipefail
 IFS=$'\n\t'
 
 ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
