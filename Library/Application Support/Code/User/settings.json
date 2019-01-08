@@ -5,6 +5,9 @@
   "[terraform]": {
     "editor.tabSize": 2
   },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
   "azure.resourceFilter": [
     "152e4c75-3657-4284-bb2c-0d825873d72b/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd"
   ],
@@ -69,6 +72,12 @@
     "-x"
   ],
   "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+  "sortJSON.orderOverride": [
+    "$schema",
+    "contentVersion",
+    "parameters",
+    "variables",
+  ],
   "terminal.integrated.cursorBlinking": true,
   "window.newWindowDimensions": "maximized",
   "window.openFilesInNewWindow": "default",
