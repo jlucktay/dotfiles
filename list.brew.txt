@@ -1,4 +1,4 @@
-# 20190103.072831.296802000+0000
+20190108.164258.208244000+0000
 adns
 autojump
 awscli
@@ -25,6 +25,7 @@ gmp
 gnupg
 gnutls
 go
+gometalinter
 graphviz
 hadolint
 htop
