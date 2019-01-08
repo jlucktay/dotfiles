@@ -1,4 +1,4 @@
-# 20190103.073116.842795000+0000
+20190108.151656.903358000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -183,6 +183,7 @@
 /Users/jameslucktaylor/go/src/github.com/rogpeppe/godef
 /Users/jameslucktaylor/go/src/github.com/rs/cors
 /Users/jameslucktaylor/go/src/github.com/russross/blackfriday
+/Users/jameslucktaylor/go/src/github.com/satori/go.uuid
 /Users/jameslucktaylor/go/src/github.com/sbromberger/goquote
 /Users/jameslucktaylor/go/src/github.com/shuLhan/go-bindata
 /Users/jameslucktaylor/go/src/github.com/shurcooL/sanitized_anchor_name
@@ -199,6 +200,7 @@
 /Users/jameslucktaylor/go/src/github.com/sqs/goreturns
 /Users/jameslucktaylor/go/src/github.com/stamblerre/gocode
 /Users/jameslucktaylor/go/src/github.com/streamrail/concurrent-map
+/Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-azurerm
 /Users/jameslucktaylor/go/src/github.com/thrasher-/gocryptotrader
 /Users/jameslucktaylor/go/src/github.com/thrasher-/socketio
 /Users/jameslucktaylor/go/src/github.com/tinylib/msgp
