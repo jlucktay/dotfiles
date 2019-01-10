@@ -40,6 +40,9 @@
 [tasks.git]
     rejects = [["stat", "/usr/local/bin/git"]]
     cmds = [["@install", "git"]]
+
+[tasks.gitconfig]
+    deps = ["git"]
     templates = [[".gitconfig"]]
 
 [tasks.golang]

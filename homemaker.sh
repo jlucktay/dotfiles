@@ -14,7 +14,7 @@ ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
 HomemakerTask=${1:-"default"}
 HomemakerCommand="homemaker"
 
-if [ "$HomemakerTask" == "git" ]; then
+if [ "$HomemakerTask" == "gitconfig" ]; then
     HomemakerCommand="$HomemakerCommand --clobber"
 fi
 

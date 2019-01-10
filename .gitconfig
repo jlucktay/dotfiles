@@ -19,8 +19,8 @@
 	cookiefile = {{.Env.HOME}}/.gitcookies
 [merge]
 	tool = kdiff3
-[url "git@github.com:"]
-	insteadOf = https://github.com/
 [user]
 	name = James Lucktaylor
 	useConfigOnly = true
+[credential]
+	helper = osxkeychain
