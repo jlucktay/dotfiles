@@ -1,4 +1,4 @@
-20190108.164258.208244000+0000
+20190116.152526.257366000+0000
 adns
 autojump
 awscli
@@ -28,6 +28,7 @@ go
 gometalinter
 graphviz
 hadolint
+hexyl
 htop
 httpie
 hugo
