@@ -21,6 +21,8 @@
 	cookiefile = {{.Env.HOME}}/.gitcookies
 [merge]
 	tool = kdiff3
+[push]
+	followTags = true
 [user]
 	name = James Lucktaylor
 	useConfigOnly = true
