@@ -25,7 +25,6 @@
     160
   ],
   "editor.wordWrap": "on",
-  "explorer.confirmDragAndDrop": false,
   "explorer.sortOrder": "type",
   "files.associations": {
     "htoprc": "properties"
@@ -52,7 +51,6 @@
   },
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "go.lintTool": "gometalinter",
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
   "mssql.connections": [
