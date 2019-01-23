@@ -1,4 +1,4 @@
-20190116.154542.584979000+0000
+20190122.215814.956838000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -75,7 +75,6 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
-/Users/jameslucktaylor/git/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/jameslucktaylor/git/github.com/lyze/posh-git-sh
 /Users/jameslucktaylor/git/github.com/mzazon/php-apache-mysql-containerized
@@ -112,6 +111,7 @@
 /Users/jameslucktaylor/go/src/github.com/danwakefield/fnmatch
 /Users/jameslucktaylor/go/src/github.com/davecheney/httpstat
 /Users/jameslucktaylor/go/src/github.com/davidrjenni/reftools
+/Users/jameslucktaylor/go/src/github.com/Dentsu-Aegis-Network-Global-Technology/clz-mage
 /Users/jameslucktaylor/go/src/github.com/derekparker/delve
 /Users/jameslucktaylor/go/src/github.com/dgrijalva/jwt-go
 /Users/jameslucktaylor/go/src/github.com/disintegration/imaging
@@ -148,6 +148,7 @@
 /Users/jameslucktaylor/go/src/github.com/hashicorp/go-immutable-radix
 /Users/jameslucktaylor/go/src/github.com/hashicorp/golang-lru
 /Users/jameslucktaylor/go/src/github.com/hashicorp/hcl
+/Users/jameslucktaylor/go/src/github.com/hashicorp/terraform
 /Users/jameslucktaylor/go/src/github.com/haya14busa/goplay
 /Users/jameslucktaylor/go/src/github.com/ianthehat/godef
 /Users/jameslucktaylor/go/src/github.com/jban332/go-jsonhelpers
@@ -165,6 +166,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
+/Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/jmuldoon/go-keychain
 /Users/jameslucktaylor/go/src/github.com/joefitzgerald/forecast

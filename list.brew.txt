@@ -1,4 +1,4 @@
-20190116.152526.257366000+0000
+20190122.215900.620566000+0000
 adns
 autojump
 awscli
@@ -46,6 +46,7 @@ libgcrypt
 libgpg-error
 libidn2
 libksba
+libomp
 libpng
 libtasn1
 libtiff
@@ -73,10 +74,12 @@ openjpeg
 openssl
 openssl@1.1
 p11-kit
+pcre
 pcre2
 perl
 phantomjs
 pinentry
+pkg-config
 pre-commit
 prettyping
 python
