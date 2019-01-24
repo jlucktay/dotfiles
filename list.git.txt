@@ -1,4 +1,4 @@
-20190122.215814.956838000+0000
+20190124.174002.598006000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -99,6 +99,7 @@
 /Users/jameslucktaylor/go/src/github.com/andybalholm/cascadia
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/gotraining
 /Users/jameslucktaylor/go/src/github.com/aws/aws-sdk-go
+/Users/jameslucktaylor/go/src/github.com/Azure/azure-sdk-for-go
 /Users/jameslucktaylor/go/src/github.com/beatgammit/turnpike
 /Users/jameslucktaylor/go/src/github.com/bep/gitmap
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
@@ -167,6 +168,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
+/Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
 /Users/jameslucktaylor/go/src/github.com/jlucktay/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/jmuldoon/go-keychain
 /Users/jameslucktaylor/go/src/github.com/joefitzgerald/forecast
