@@ -89,11 +89,11 @@ alias ll='gls --color -AFlh --group-directories-first'
 # Miscellaneous
 alias acsjl="awsume celab --session-name james.lucktaylor"
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
-#alias dst='du -hd 1 | sort -h | tail -n 20'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
 alias hlh='find ~ -type f -name Dockerfile -path "*/jlucktay/*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
 alias jq='jq --sort-keys'
+alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 
 # http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
