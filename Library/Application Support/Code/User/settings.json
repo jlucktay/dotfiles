@@ -51,6 +51,7 @@
   },
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
+  "go.lintTool": "golangci-lint",
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
   "mssql.connections": [
@@ -75,7 +76,7 @@
     "$schema",
     "contentVersion",
     "parameters",
-    "variables",
+    "variables"
   ],
   "terminal.integrated.cursorBlinking": true,
   "window.newWindowDimensions": "maximized",
