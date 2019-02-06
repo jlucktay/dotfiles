@@ -15,8 +15,6 @@
 	diff = auto
 	status = auto
 	ui = auto
-[credential]
-	helper = osxkeychain
 [http]
 	cookiefile = {{.Env.HOME}}/.gitcookies
 [merge]
