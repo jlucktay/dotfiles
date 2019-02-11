@@ -1,4 +1,4 @@
-# 20190103.072831.296802000+0000
+20190211.194533.283980000+0000
 1password
 authy
 beyond-compare
@@ -25,6 +25,7 @@ pingmenu
 postman
 powershell
 qbittorrent
+sequel-pro
 skype
 skype-for-business
 slack

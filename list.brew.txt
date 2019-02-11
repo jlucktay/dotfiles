@@ -1,4 +1,4 @@
-20190122.215900.620566000+0000
+20190211.194532.335730000+0000
 adns
 autojump
 awscli
@@ -60,6 +60,7 @@ little-cms2
 lua
 make
 mas
+mkcert
 mongodb
 mono
 ncdu
@@ -68,6 +69,8 @@ nettle
 nmap
 node
 npth
+nspr
+nss
 oath-toolkit
 oniguruma
 openjpeg
