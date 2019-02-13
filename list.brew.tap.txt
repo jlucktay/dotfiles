@@ -1,9 +1,10 @@
-20190108.164254.789738000+0000
+20190213.080415.811931000+0000
 alecthomas/tap
 chef/chef
 go-delve/delve
 homebrew/cask
 homebrew/core
 homebrew/services
+isacikgoz/gitin
 jenkins-x/jx
 wagoodman/dive

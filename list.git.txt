@@ -1,4 +1,4 @@
-20190211.194456.472116000+0000
+20190213.080343.980608000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -63,7 +63,6 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-vm-extension-windows-diagnostics
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-vm-extension-windows-domain-join
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-vm-windows-dsc
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/dan-migration-factory
 /Users/jameslucktaylor/git/github.com/dtan4/terraforming
 /Users/jameslucktaylor/git/github.com/gakimball/taswell-ipsum
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kube-pubsub-bq

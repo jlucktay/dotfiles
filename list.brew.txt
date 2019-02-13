@@ -1,4 +1,4 @@
-20190211.194532.335730000+0000
+20190213.080419.230071000+0000
 adns
 autojump
 awscli
@@ -21,6 +21,7 @@ gd
 gdbm
 gettext
 git
+gitin
 gmp
 gnupg
 gnutls
@@ -33,6 +34,7 @@ htop
 httpie
 hugo
 icu4c
+ilmbase
 imagemagick
 jpeg
 jq
@@ -41,13 +43,17 @@ kubernetes-helm
 less
 lesspipe
 libassuan
+libde265
 libffi
 libgcrypt
+libgit2
 libgpg-error
+libheif
 libidn2
 libksba
 libomp
 libpng
+libssh2
 libtasn1
 libtiff
 libtool
@@ -64,6 +70,7 @@ mkcert
 mongodb
 mono
 ncdu
+ncurses
 nethack
 nettle
 nmap
@@ -73,6 +80,7 @@ nspr
 nss
 oath-toolkit
 oniguruma
+openexr
 openjpeg
 openssl
 openssl@1.1
@@ -106,4 +114,5 @@ typescript
 vim
 webp
 wget
+x265
 xz
