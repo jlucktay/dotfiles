@@ -30,6 +30,7 @@
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
+  "files.enableTrash": false,
   "files.exclude": {
     "**/*.js": {
       "when": "$(basename).ts"
