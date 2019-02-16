@@ -1,4 +1,4 @@
-20190213.080343.980608000+0000
+20190216.070227.427426000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -94,6 +94,7 @@
 /Users/jameslucktaylor/go/src/contrib.go.opencensus.io/exporter/ocagent
 /Users/jameslucktaylor/go/src/dmitri.shuralyov.com/gpu/mtl
 /Users/jameslucktaylor/go/src/firebase.google.com/go
+/Users/jameslucktaylor/go/src/github.com/0xAX/notificator
 /Users/jameslucktaylor/go/src/github.com/acroca/go-symbols
 /Users/jameslucktaylor/go/src/github.com/adjust/go-wrk
 /Users/jameslucktaylor/go/src/github.com/alecthomas/chroma
@@ -113,6 +114,8 @@
 /Users/jameslucktaylor/go/src/github.com/chaseadamsio/goorgeous
 /Users/jameslucktaylor/go/src/github.com/cheekybits/genny
 /Users/jameslucktaylor/go/src/github.com/cloudflare/cfssl
+/Users/jameslucktaylor/go/src/github.com/codegangsta/envy
+/Users/jameslucktaylor/go/src/github.com/codegangsta/gin
 /Users/jameslucktaylor/go/src/github.com/cpuguy83/go-md2man
 /Users/jameslucktaylor/go/src/github.com/cweill/gotests
 /Users/jameslucktaylor/go/src/github.com/danwakefield/fnmatch
@@ -204,6 +207,7 @@
 /Users/jameslucktaylor/go/src/github.com/marstr/guid
 /Users/jameslucktaylor/go/src/github.com/Masterminds/glide
 /Users/jameslucktaylor/go/src/github.com/mattn/go-runewidth
+/Users/jameslucktaylor/go/src/github.com/mattn/go-shellwords
 /Users/jameslucktaylor/go/src/github.com/mattn/go-sqlite3
 /Users/jameslucktaylor/go/src/github.com/mb0/glob
 /Users/jameslucktaylor/go/src/github.com/mdempsky/gocode
@@ -291,6 +295,7 @@
 /Users/jameslucktaylor/go/src/google.golang.org/genproto
 /Users/jameslucktaylor/go/src/google.golang.org/grpc
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
+/Users/jameslucktaylor/go/src/gopkg.in/urfave/cli.v1
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
 /Users/jameslucktaylor/go/src/k8s.io/api
 /Users/jameslucktaylor/go/src/k8s.io/apimachinery
