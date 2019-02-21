@@ -1,4 +1,4 @@
-20190213.080419.230071000+0000
+20190221.175516.964549000+0000
 adns
 autojump
 awscli
@@ -10,6 +10,7 @@ cfssl
 chromedriver
 cmatrix
 coreutils
+dep
 dive
 elvish
 exercism
