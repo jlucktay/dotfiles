@@ -1,4 +1,4 @@
-# 20181226.151837.299496000+0100
+# 20190224.105003.796904000+0000
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
@@ -20,6 +20,7 @@ ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode.PowerShell
 ms-vsliveshare.vsliveshare
+msazurermtools.azurerm-vscode-tools
 oderwat.indent-rainbow
 PeterJausovec.vscode-docker
 PKief.material-icon-theme
