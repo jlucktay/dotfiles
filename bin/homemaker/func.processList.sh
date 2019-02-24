@@ -5,7 +5,7 @@ function processList(){
     # Parameter #2 is the filename of the old archived list
 
     TempList="$2.tmp"
-    date +%Y%m%d.%H%M%S.%N%z > "$TempList"
+    echo "# $(date +%Y%m%d.%H%M%S.%N%z)" > "$TempList"
 
     # Need this so that when 'find' hits directories with permission errors, or
     # 'diff' finds changes, they don't cause a stop on the non-zero exit code
