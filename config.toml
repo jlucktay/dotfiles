@@ -12,6 +12,7 @@
         [".bash_profile"],
         [".bashrc"],
         [".config/htop/htoprc"],
+        [".config/nano/nanorc"],
         [".nethackrc"],
         [".ssh/config"],
         [".vimrc"],
