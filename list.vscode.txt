@@ -1,4 +1,4 @@
-# 20190224.105003.796904000+0000
+# 20190310.070904.323577000+0000
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
@@ -6,9 +6,7 @@ DavidAnson.vscode-markdownlint
 DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
-eg2.tslint
 eg2.vscode-npm-script
-fallenwood.vimL
 GrapeCity.gc-excelviewer
 mauve.terraform
 mechatroner.rainbow-csv
