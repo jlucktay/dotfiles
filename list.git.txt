@@ -1,4 +1,4 @@
-# 20190224.104928.371250000+0000
+# 20190310.070815.858282000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -31,6 +31,7 @@
 /Users/jameslucktaylor/git/github.com/aws-quickstart/quickstart-enterprise-accelerator-pci
 /Users/jameslucktaylor/git/github.com/awslabs/aws-security-benchmark
 /Users/jameslucktaylor/git/github.com/boto/boto3
+/Users/jameslucktaylor/git/github.com/cloudreach/ce-azure-dan-plaster
 /Users/jameslucktaylor/git/github.com/cloudreach/sceptre
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-automation-account
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-firewall-multigeo
@@ -98,6 +99,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.page
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
+/Users/jameslucktaylor/git/github.com/jlucktay/pp2a-asg2
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
@@ -126,6 +128,7 @@
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
 /Users/jameslucktaylor/go/src/github.com/andybalholm/cascadia
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/gotraining
+/Users/jameslucktaylor/go/src/github.com/ardanlabs/service
 /Users/jameslucktaylor/go/src/github.com/aws/aws-sdk-go
 /Users/jameslucktaylor/go/src/github.com/azure-samples/azure-sdk-for-go-samples
 /Users/jameslucktaylor/go/src/github.com/Azure/azure-sdk-for-go
@@ -161,7 +164,6 @@
 /Users/jameslucktaylor/go/src/github.com/fatih/gomodifytags
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/fsnotify/fsnotify
-/Users/jameslucktaylor/go/src/github.com/globalsign/mgo
 /Users/jameslucktaylor/go/src/github.com/go-delve/delve
 /Users/jameslucktaylor/go/src/github.com/go-gl/glfw
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
@@ -200,6 +202,7 @@
 /Users/jameslucktaylor/go/src/github.com/jban332/kin-test
 /Users/jameslucktaylor/go/src/github.com/jdkato/prose
 /Users/jameslucktaylor/go/src/github.com/jlucktay/adventofcode
+/Users/jameslucktaylor/go/src/github.com/jlucktay/azure-devops-helper
 /Users/jameslucktaylor/go/src/github.com/jlucktay/f1-go-scrape
 /Users/jameslucktaylor/go/src/github.com/jlucktay/go-wfs
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gobyexample
@@ -231,6 +234,7 @@
 /Users/jameslucktaylor/go/src/github.com/marstr/collection
 /Users/jameslucktaylor/go/src/github.com/marstr/guid
 /Users/jameslucktaylor/go/src/github.com/Masterminds/glide
+/Users/jameslucktaylor/go/src/github.com/matryer/is
 /Users/jameslucktaylor/go/src/github.com/mattn/go-runewidth
 /Users/jameslucktaylor/go/src/github.com/mattn/go-shellwords
 /Users/jameslucktaylor/go/src/github.com/mattn/go-sqlite3
@@ -241,6 +245,7 @@
 /Users/jameslucktaylor/go/src/github.com/mitchellh/go-homedir
 /Users/jameslucktaylor/go/src/github.com/mitchellh/gox
 /Users/jameslucktaylor/go/src/github.com/mitchellh/mapstructure
+/Users/jameslucktaylor/go/src/github.com/mongodb/mongo-go-driver
 /Users/jameslucktaylor/go/src/github.com/muesli/smartcrop
 /Users/jameslucktaylor/go/src/github.com/naoina/go-stringutil
 /Users/jameslucktaylor/go/src/github.com/naoina/toml
@@ -302,6 +307,7 @@
 /Users/jameslucktaylor/go/src/github.com/xeipuuv/gojsonschema
 /Users/jameslucktaylor/go/src/github.com/yhat/scrape
 /Users/jameslucktaylor/go/src/github.com/yosssi/ace
+/Users/jameslucktaylor/go/src/go.mongodb.org/mongo-driver
 /Users/jameslucktaylor/go/src/go.opencensus.io
 /Users/jameslucktaylor/go/src/golang.org/x/crypto
 /Users/jameslucktaylor/go/src/golang.org/x/image
