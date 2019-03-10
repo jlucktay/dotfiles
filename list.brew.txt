@@ -1,4 +1,4 @@
-# 20190224.105001.388678000+0000
+# 20190310.070901.936596000+0000
 adns
 autojump
 awscli
@@ -45,6 +45,7 @@ less
 lesspipe
 libassuan
 libde265
+libevent
 libffi
 libgcrypt
 libgit2
@@ -70,6 +71,7 @@ mas
 mkcert
 mongodb
 mono
+nano
 ncdu
 ncurses
 nethack
@@ -112,6 +114,7 @@ tldr
 trash
 tree
 typescript
+unbound
 vim
 webp
 wget

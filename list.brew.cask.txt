@@ -1,4 +1,4 @@
-# 20190224.105002.385427000+0000
+# 20190310.070902.931831000+0000
 1password
 authy
 beyond-compare
@@ -37,3 +37,4 @@ viscosity
 vlc
 xquartz
 yed
+zoomus
