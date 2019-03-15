@@ -88,6 +88,7 @@ alias ll='gls --color -AFlh --group-directories-first'
 
 # Miscellaneous
 alias acsjl="awsume celab --session-name james.lucktaylor"
+alias dantfclean='find $HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology $HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name ".terraform" \) -o \( -type f -iname "terraform*.*tfstate*" \) \) -exec rm -rfv -- "{}" +'
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
