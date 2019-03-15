@@ -1,4 +1,4 @@
-# 20190310.070815.858282000+0000
+# 20190315.084155.674915000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -141,6 +141,7 @@
 /Users/jameslucktaylor/go/src/github.com/census-instrumentation/opencensus-proto
 /Users/jameslucktaylor/go/src/github.com/chaseadamsio/goorgeous
 /Users/jameslucktaylor/go/src/github.com/cheekybits/genny
+/Users/jameslucktaylor/go/src/github.com/chzyer/readline
 /Users/jameslucktaylor/go/src/github.com/cjbassi/gotop
 /Users/jameslucktaylor/go/src/github.com/cloudflare/cfssl
 /Users/jameslucktaylor/go/src/github.com/codegangsta/envy
@@ -180,6 +181,7 @@
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/golangci/golangci-lint
 /Users/jameslucktaylor/go/src/github.com/google/gofuzz
+/Users/jameslucktaylor/go/src/github.com/google/pprof
 /Users/jameslucktaylor/go/src/github.com/google/uuid
 /Users/jameslucktaylor/go/src/github.com/googleapis/gax-go
 /Users/jameslucktaylor/go/src/github.com/GoogleCloudPlatform/golang-samples
@@ -195,6 +197,7 @@
 /Users/jameslucktaylor/go/src/github.com/hashicorp/hcl
 /Users/jameslucktaylor/go/src/github.com/hashicorp/terraform
 /Users/jameslucktaylor/go/src/github.com/haya14busa/goplay
+/Users/jameslucktaylor/go/src/github.com/ianlancetaylor/demangle
 /Users/jameslucktaylor/go/src/github.com/ianthehat/godef
 /Users/jameslucktaylor/go/src/github.com/jban332/go-jsonhelpers
 /Users/jameslucktaylor/go/src/github.com/jban332/kin-log

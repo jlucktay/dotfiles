@@ -1,4 +1,4 @@
-# 20190310.070902.931831000+0000
+# 20190315.084242.630684000+0000
 1password
 authy
 beyond-compare
@@ -6,6 +6,7 @@ discord
 docker
 filezilla
 firefox
+font-fira-code
 google-cloud-sdk
 google-drive-file-stream
 grammarly
