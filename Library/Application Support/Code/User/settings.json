@@ -14,6 +14,8 @@
   "breadcrumbs.enabled": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.minimap.showSlider": "always",
   "editor.multiCursorModifier": "alt",
@@ -52,7 +54,6 @@
   },
   "gitlens.views.fileHistory.enabled": true,
   "gitlens.views.lineHistory.enabled": true,
-  "go.autocompleteUnimportedPackages": true,
   "go.enableCodeLens": {
     "references": false,
     "runtest": true
