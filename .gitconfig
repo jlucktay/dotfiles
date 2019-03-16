@@ -1,15 +1,5 @@
 # Managed by homemaker, so edit this file in the 'dotfiles' repo, not locally
 
-[alias]
-	ap = add --patch
-	change = codereview change
-	dt = difftool -y
-	gofmt = codereview gofmt
-	mail = codereview mail
-	pending = codereview pending
-	rup = remote update --prune
-	submit = codereview submit
-	sync = codereview sync
 [color]
 	branch = auto
 	diff = auto
@@ -19,6 +9,8 @@
 	editor = nano
 [http]
 	cookiefile = {{.Env.HOME}}/.gitcookies
+[include]
+	path = ~/.gitconfig.aliases
 [merge]
 	tool = kdiff3
 [push]

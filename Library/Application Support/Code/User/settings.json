@@ -29,6 +29,8 @@
   "editor.wordWrap": "on",
   "explorer.sortOrder": "type",
   "files.associations": {
+    ".gitconfig": "gitconfig",
+    ".gitconfig.aliases": "gitconfig",
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
