@@ -91,6 +91,7 @@ alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
 alias hlh='find $HOME -type f -name Dockerfile -path "*/jlucktay/*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
 alias jq='jq --sort-keys'
 alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
+alias stashcheck='find $HOME/go/src $HOME/git -type d -name ".git" -path "*jlucktay*" -execdir bash -c "pwd ; git stash list ; echo" \; 2>/dev/null'
 alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
 
