@@ -12,9 +12,13 @@
 	submit = codereview submit
 	sync = codereview sync
 
-	### From: https://haacked.com/archive/2019/02/14/including-git-aliases/
+	incoming = show -p ..@{u}
+	outgoing = show -p @{u}..
+	surr = submodule update --recursive --remote
 
-	aliases = "!git config -l | grep alias | cut -c 7-"
+	### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
+
+	aliases = "!git config --list | grep -E ^alias | cut --characters 7- | LC_ALL='C' sort -f"
 
 	# Deletes all branches merged with specified branch (or master if no branch is specified)
 	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"

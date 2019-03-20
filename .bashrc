@@ -74,10 +74,6 @@ export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 # shellcheck source=/Users/jameslucktaylor/.fzf.bash
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-# Git
-alias gpa="git push --all"
-alias gsurr="git submodule update --recursive --remote"
-
 function git-outdated-sync(){
     find . -type d -name .git -not -path "*/.terraform/*" -execdir bash -c "pwd ; git pull --all ; git push --all ; echo" \;
 }
