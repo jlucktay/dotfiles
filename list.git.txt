@@ -1,4 +1,4 @@
-# 20190315.084155.674915000+0000
+# 20190325.074927.819103000+0000
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -127,6 +127,7 @@
 /Users/jameslucktaylor/go/src/github.com/alecthomas/chroma
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
 /Users/jameslucktaylor/go/src/github.com/andybalholm/cascadia
+/Users/jameslucktaylor/go/src/github.com/antonmedv/countdown
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/gotraining
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/service
 /Users/jameslucktaylor/go/src/github.com/aws/aws-sdk-go
@@ -257,6 +258,7 @@
 /Users/jameslucktaylor/go/src/github.com/nicksnyder/go-i18n
 /Users/jameslucktaylor/go/src/github.com/nordcloud/azure-go-example
 /Users/jameslucktaylor/go/src/github.com/nsf/gocode
+/Users/jameslucktaylor/go/src/github.com/nsf/termbox-go
 /Users/jameslucktaylor/go/src/github.com/nu7hatch/gouuid
 /Users/jameslucktaylor/go/src/github.com/olekukonko/tablewriter
 /Users/jameslucktaylor/go/src/github.com/onsi/ginkgo
