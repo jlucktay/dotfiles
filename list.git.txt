@@ -216,6 +216,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
+/Users/jameslucktaylor/go/src/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
