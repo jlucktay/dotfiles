@@ -24,6 +24,8 @@ gettext
 git
 gitin
 gmp
+gnu-sed
+gnu-tar
 gnupg
 gnutls
 go

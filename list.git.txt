@@ -214,6 +214,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gophercises
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
+/Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
@@ -334,6 +335,7 @@
 /Users/jameslucktaylor/go/src/k8s.io/apimachinery
 /Users/jameslucktaylor/go/src/k8s.io/client-go
 /Users/jameslucktaylor/go/src/k8s.io/klog
+/Users/jameslucktaylor/go/src/k8s.io/kubernetes
 /Users/jameslucktaylor/go/src/rsc.io/letsencrypt
 /Users/jameslucktaylor/go/src/sourcegraph.com/sqs/goreturns
 /Users/jameslucktaylor/Library/Containers/com.docker.docker/Data/database
