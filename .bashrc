@@ -91,9 +91,21 @@ alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
 alias hlh='find $HOME -type f -name Dockerfile -path "*/jlucktay/*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
 alias jq='jq --sort-keys'
 alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
-alias stashcheck='find $HOME/go/src $HOME/git -type d -name ".git" -path "*jlucktay*" -execdir bash -c "pwd ; git stash list ; echo" \; 2>/dev/null'
 alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -exec terraform fmt -write=true \;'
+
+function stashcheck(){
+    while IFS= read -r -d '' Git; do
+        mapfile -t Stash < <(GIT_DIR=$Git git stash list)
+
+        if (( ${#Stash[@]} > 0 )); then
+            realpath "$Git/.."
+        fi
+        for StashLine in "${Stash[@]}"; do
+            printf "\t%s\n" "$StashLine"
+        done
+    done < <(find "$HOME/go/src" "$HOME/git" -type d -name ".git" -path "*jlucktay*" -print0)
+}
 
 # http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
 function top10(){
