@@ -18,7 +18,7 @@
 
 	### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
 
-	aliases = "!git config --list | grep -E ^alias | cut --characters 7- | LC_ALL='C' sort -f"
+	aliases = "!git config --list | grep -E '^alias.' | cut --characters 7-"
 
 	# Deletes all branches merged with specified branch (or master if no branch is specified)
 	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
