@@ -10,7 +10,7 @@ if [[ "$currentBranch" = "" ]]; then exit 0; fi
 coloursHighlight="$(tput setab 7 ; tput setaf 0)"
 coloursReset="$(tput sgr0)"
 
-for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3); do
+for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-); do
     echo "Start  - $coloursHighlight$branch$coloursReset"
 
     git checkout "$branch"
