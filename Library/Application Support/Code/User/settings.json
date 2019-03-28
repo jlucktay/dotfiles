@@ -51,6 +51,8 @@
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "git.confirmSync": false,
+  "git.fetchOnPull": true,
+  "git.rebaseWhenSync": true,
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
