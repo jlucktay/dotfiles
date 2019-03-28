@@ -1,4 +1,4 @@
-# 20190325.075019.114470000+0000
+# 20190328.083035.704482000+0000
 adns
 autojump
 awscli
@@ -6,6 +6,7 @@ azure-cli
 bash
 bashdb
 bat
+bazaar
 cfssl
 chromedriver
 cmatrix
