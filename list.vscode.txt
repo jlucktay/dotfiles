@@ -1,4 +1,4 @@
-# 20190310.070904.323577000+0000
+# 20190401.102327.047062000+0100
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
@@ -16,7 +16,7 @@ ms-python.python
 ms-vscode.azure-account
 ms-vscode.cpptools
 ms-vscode.Go
-ms-vscode.PowerShell
+ms-vscode.powershell
 ms-vsliveshare.vsliveshare
 msazurermtools.azurerm-vscode-tools
 oderwat.indent-rainbow
@@ -28,3 +28,4 @@ secanis.jenkinsfile-support
 sidneys1.gitconfig
 timonwong.shellcheck
 Tyriar.sort-lines
+WakaTime.vscode-wakatime
