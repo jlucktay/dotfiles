@@ -92,7 +92,7 @@ alias hlh='find $HOME -type f -name Dockerfile -path "*/jlucktay/*" -not -path "
 alias jq='jq --sort-keys'
 alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
 alias tb="nc termbin.com 9999"
-alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt -write=true \;'
+alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
 
 function stashcheck(){
     while IFS= read -r -d '' Git; do
