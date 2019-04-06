@@ -1,4 +1,4 @@
-# 20190325.074927.819103000+0000
+# 20190406.202712.475217000+0100
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -52,9 +52,11 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-2016
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-backup
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-devops
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-linux
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-rhel
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-secrets-gen
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-suse
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-windows
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vnet-multigeo
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-generic-azure-firewall
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-generic-lz
@@ -175,12 +177,14 @@
 /Users/jameslucktaylor/go/src/github.com/gobwas/glob
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/golang-web-dev
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/GolangTraining
+/Users/jameslucktaylor/go/src/github.com/gofrs/uuid
 /Users/jameslucktaylor/go/src/github.com/gohugoio/hugo
 /Users/jameslucktaylor/go/src/github.com/golang/example
 /Users/jameslucktaylor/go/src/github.com/golang/lint
 /Users/jameslucktaylor/go/src/github.com/golang/mock
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/golangci/golangci-lint
+/Users/jameslucktaylor/go/src/github.com/google/go-cmp
 /Users/jameslucktaylor/go/src/github.com/google/gofuzz
 /Users/jameslucktaylor/go/src/github.com/google/pprof
 /Users/jameslucktaylor/go/src/github.com/google/uuid
@@ -281,7 +285,6 @@
 /Users/jameslucktaylor/go/src/github.com/rogpeppe/godef
 /Users/jameslucktaylor/go/src/github.com/rs/cors
 /Users/jameslucktaylor/go/src/github.com/russross/blackfriday
-/Users/jameslucktaylor/go/src/github.com/satori/go.uuid
 /Users/jameslucktaylor/go/src/github.com/sbromberger/goquote
 /Users/jameslucktaylor/go/src/github.com/shopspring/decimal
 /Users/jameslucktaylor/go/src/github.com/shuLhan/go-bindata
