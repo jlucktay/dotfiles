@@ -1,4 +1,4 @@
-# 20190406.202712.475217000+0100
+# 20190412.100022.391336000+0100
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -36,6 +36,7 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-automation-account
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-firewall-multigeo
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-keyvaults
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-load-balancer
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-sql
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-sql-mi
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-waf
@@ -92,6 +93,16 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-vm-extension-windows-domain-join
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-vm-windows-dsc
 /Users/jameslucktaylor/git/github.com/dtan4/terraforming
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-auth-controller
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-cli
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-controller
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-data-controller
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-go-commons
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-infrastructure
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-services
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-web-api
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-web-ui
+/Users/jameslucktaylor/git/github.com/Finland-Institute-of-Molecular-Medicine/finngen-wttyd
 /Users/jameslucktaylor/git/github.com/gakimball/taswell-ipsum
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kube-pubsub-bq
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/kubernetes-bigquery-python
@@ -168,6 +179,7 @@
 /Users/jameslucktaylor/go/src/github.com/fatih/gomodifytags
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/fsnotify/fsnotify
+/Users/jameslucktaylor/go/src/github.com/go-chi/chi
 /Users/jameslucktaylor/go/src/github.com/go-delve/delve
 /Users/jameslucktaylor/go/src/github.com/go-gl/glfw
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
@@ -180,6 +192,7 @@
 /Users/jameslucktaylor/go/src/github.com/gofrs/uuid
 /Users/jameslucktaylor/go/src/github.com/gohugoio/hugo
 /Users/jameslucktaylor/go/src/github.com/golang/example
+/Users/jameslucktaylor/go/src/github.com/golang/gddo
 /Users/jameslucktaylor/go/src/github.com/golang/lint
 /Users/jameslucktaylor/go/src/github.com/golang/mock
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
@@ -197,7 +210,9 @@
 /Users/jameslucktaylor/go/src/github.com/gravitational/teleport
 /Users/jameslucktaylor/go/src/github.com/grpc-ecosystem/grpc-gateway
 /Users/jameslucktaylor/go/src/github.com/gruntwork-io/terratest
+/Users/jameslucktaylor/go/src/github.com/hashicorp/errwrap
 /Users/jameslucktaylor/go/src/github.com/hashicorp/go-immutable-radix
+/Users/jameslucktaylor/go/src/github.com/hashicorp/go-multierror
 /Users/jameslucktaylor/go/src/github.com/hashicorp/golang-lru
 /Users/jameslucktaylor/go/src/github.com/hashicorp/hcl
 /Users/jameslucktaylor/go/src/github.com/hashicorp/terraform
@@ -217,6 +232,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/golang-web-dev
 /Users/jameslucktaylor/go/src/github.com/jlucktay/golang-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gophercises
+/Users/jameslucktaylor/go/src/github.com/jlucktay/goreadme
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
@@ -272,6 +288,7 @@
 /Users/jameslucktaylor/go/src/github.com/pelletier/go-toml
 /Users/jameslucktaylor/go/src/github.com/philhofer/fwd
 /Users/jameslucktaylor/go/src/github.com/pkg/errors
+/Users/jameslucktaylor/go/src/github.com/posener/goreadme
 /Users/jameslucktaylor/go/src/github.com/pquerna/otp
 /Users/jameslucktaylor/go/src/github.com/PuerkitoBio/goquery
 /Users/jameslucktaylor/go/src/github.com/PuerkitoBio/purell
