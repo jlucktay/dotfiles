@@ -190,6 +190,7 @@
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/golang-web-dev
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/GolangTraining
 /Users/jameslucktaylor/go/src/github.com/gofrs/uuid
+/Users/jameslucktaylor/go/src/github.com/gogo/protobuf
 /Users/jameslucktaylor/go/src/github.com/gohugoio/hugo
 /Users/jameslucktaylor/go/src/github.com/golang/example
 /Users/jameslucktaylor/go/src/github.com/golang/gddo
@@ -306,6 +307,7 @@
 /Users/jameslucktaylor/go/src/github.com/shopspring/decimal
 /Users/jameslucktaylor/go/src/github.com/shuLhan/go-bindata
 /Users/jameslucktaylor/go/src/github.com/shurcooL/sanitized_anchor_name
+/Users/jameslucktaylor/go/src/github.com/simplesteph/protobuf-example-go
 /Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/skratchdot/open-golang
 /Users/jameslucktaylor/go/src/github.com/spf13/afero

@@ -2,6 +2,10 @@
   "[markdown]": {
     "editor.tabSize": 2
   },
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    "editor.tabSize": 2
+  },
   "[terraform]": {
     "editor.tabSize": 2
   },

@@ -29,3 +29,5 @@ sidneys1.gitconfig
 timonwong.shellcheck
 Tyriar.sort-lines
 WakaTime.vscode-wakatime
+xaver.clang-format
+zxh404.vscode-proto3

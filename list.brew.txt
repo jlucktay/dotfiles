@@ -9,6 +9,7 @@ bat
 bazaar
 cfssl
 chromedriver
+clang-format
 cmatrix
 coreutils
 dep
@@ -99,6 +100,7 @@ pinentry
 pkg-config
 pre-commit
 prettyping
+protobuf
 python
 python3
 python@2
