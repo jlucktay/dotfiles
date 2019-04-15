@@ -1,4 +1,4 @@
-# 20190406.202753.423260000+0100
+# 20190415.065837.149052000+0100
 1password
 authy
 beyond-compare
@@ -17,7 +17,6 @@ joinme
 kdiff3
 keepassx
 keepingyouawake
-krisp
 launchcontrol
 licecap
 microsoft-teams

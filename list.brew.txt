@@ -1,4 +1,4 @@
-# 20190328.083035.704482000+0000
+# 20190415.065835.884354000+0100
 adns
 autojump
 awscli
@@ -25,6 +25,7 @@ gdbm
 gettext
 git
 gitin
+glib
 gmp
 gnu-sed
 gnu-tar
@@ -107,6 +108,7 @@ python@2
 readline
 ruby
 screenfetch
+shared-mime-info
 shellcheck
 shellharden
 sqlite

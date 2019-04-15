@@ -1,4 +1,4 @@
-# 20190412.100022.391336000+0100
+# 20190415.065750.339858000+0100
 /Users/jameslucktaylor/.vim/plugged/vim-polyglot
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
@@ -113,6 +113,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
 /Users/jameslucktaylor/git/github.com/jlucktay/pp2a-asg2
+/Users/jameslucktaylor/git/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
@@ -181,6 +182,7 @@
 /Users/jameslucktaylor/go/src/github.com/fsnotify/fsnotify
 /Users/jameslucktaylor/go/src/github.com/go-chi/chi
 /Users/jameslucktaylor/go/src/github.com/go-delve/delve
+/Users/jameslucktaylor/go/src/github.com/go-errors/errors
 /Users/jameslucktaylor/go/src/github.com/go-gl/glfw
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
 /Users/jameslucktaylor/go/src/github.com/go-spatial/tegola
@@ -210,6 +212,7 @@
 /Users/jameslucktaylor/go/src/github.com/goware/urlx
 /Users/jameslucktaylor/go/src/github.com/gravitational/teleport
 /Users/jameslucktaylor/go/src/github.com/grpc-ecosystem/grpc-gateway
+/Users/jameslucktaylor/go/src/github.com/gruntwork-io/gruntwork-cli
 /Users/jameslucktaylor/go/src/github.com/gruntwork-io/terratest
 /Users/jameslucktaylor/go/src/github.com/hashicorp/errwrap
 /Users/jameslucktaylor/go/src/github.com/hashicorp/go-immutable-radix
@@ -241,11 +244,13 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
+/Users/jameslucktaylor/go/src/github.com/jlucktay/wyag
 /Users/jameslucktaylor/go/src/github.com/jlucktay/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/jmuldoon/go-keychain
 /Users/jameslucktaylor/go/src/github.com/joefitzgerald/forecast
 /Users/jameslucktaylor/go/src/github.com/joho/godotenv
 /Users/jameslucktaylor/go/src/github.com/josharian/impl
+/Users/jameslucktaylor/go/src/github.com/jstemmer/go-junit-report
 /Users/jameslucktaylor/go/src/github.com/julienschmidt/httprouter
 /Users/jameslucktaylor/go/src/github.com/karrick/godirwalk
 /Users/jameslucktaylor/go/src/github.com/kennygrant/sanitize
@@ -265,6 +270,7 @@
 /Users/jameslucktaylor/go/src/github.com/mattn/go-runewidth
 /Users/jameslucktaylor/go/src/github.com/mattn/go-shellwords
 /Users/jameslucktaylor/go/src/github.com/mattn/go-sqlite3
+/Users/jameslucktaylor/go/src/github.com/mattn/go-zglob
 /Users/jameslucktaylor/go/src/github.com/mb0/glob
 /Users/jameslucktaylor/go/src/github.com/mdempsky/gocode
 /Users/jameslucktaylor/go/src/github.com/MichaelTJones/walk
@@ -329,6 +335,7 @@
 /Users/jameslucktaylor/go/src/github.com/toorop/go-pusher
 /Users/jameslucktaylor/go/src/github.com/tylerb/gotype-live
 /Users/jameslucktaylor/go/src/github.com/ugorji/go
+/Users/jameslucktaylor/go/src/github.com/urfave/cli
 /Users/jameslucktaylor/go/src/github.com/uudashr/gopkgs
 /Users/jameslucktaylor/go/src/github.com/wfscheper/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/xeipuuv/gojsonpointer
