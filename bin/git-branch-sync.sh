@@ -2,22 +2,23 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-currentBranch="$(git branch 2>/dev/null | grep "\\*" | cut -d ' ' -f2)"
+CurrentBranch="$(git branch 2>/dev/null | grep "\\*" | cut -d ' ' -f2)"
 
-if [[ "$currentBranch" = "" ]]; then exit 0; fi
+if [[ "$CurrentBranch" = "" ]]; then exit 0; fi
 
 # Background = white, foreground = black
-coloursHighlight="$(tput setab 7 ; tput setaf 0)"
-coloursReset="$(tput sgr0)"
+ColoursHighlight="$(tput setab 7 ; tput setaf 0)"
+ColoursReset="$(tput sgr0)"
 
-for branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-); do
-    echo "Start  - $coloursHighlight$branch$coloursReset"
+git fetch --all
 
-    git checkout "$branch"
-    git fetch
+for Branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-); do
+    echo "Start  - $ColoursHighlight$Branch$ColoursReset"
+
+    git checkout "$Branch"
     git status
 
-    echo "Finish - $coloursHighlight$branch$coloursReset"
+    echo "Finish - $ColoursHighlight$Branch$ColoursReset"
 done
 
-git checkout "$currentBranch"
+git checkout "$CurrentBranch"
