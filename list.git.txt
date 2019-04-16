@@ -202,6 +202,7 @@
 /Users/jameslucktaylor/go/src/github.com/google/go-cmp
 /Users/jameslucktaylor/go/src/github.com/google/gofuzz
 /Users/jameslucktaylor/go/src/github.com/google/pprof
+/Users/jameslucktaylor/go/src/github.com/google/protobuf
 /Users/jameslucktaylor/go/src/github.com/google/uuid
 /Users/jameslucktaylor/go/src/github.com/googleapis/gax-go
 /Users/jameslucktaylor/go/src/github.com/GoogleCloudPlatform/golang-samples
@@ -290,6 +291,7 @@
 /Users/jameslucktaylor/go/src/github.com/olekukonko/tablewriter
 /Users/jameslucktaylor/go/src/github.com/onsi/ginkgo
 /Users/jameslucktaylor/go/src/github.com/onsi/gomega
+/Users/jameslucktaylor/go/src/github.com/op/go-logging
 /Users/jameslucktaylor/go/src/github.com/opennota/check
 /Users/jameslucktaylor/go/src/github.com/pelletier/go-toml
 /Users/jameslucktaylor/go/src/github.com/philhofer/fwd

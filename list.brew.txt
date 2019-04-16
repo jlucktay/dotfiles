@@ -101,6 +101,7 @@ pkg-config
 pre-commit
 prettyping
 protobuf
+protoc-gen-go
 python
 python3
 python@2
