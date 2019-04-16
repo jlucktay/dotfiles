@@ -1,4 +1,3 @@
-# 20190415.065837.149052000+0100
 1password
 authy
 beyond-compare

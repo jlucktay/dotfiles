@@ -1,4 +1,3 @@
-# 20190315.084240.360091000+0000
 alecthomas/tap
 caskroom/fonts
 chef/chef
