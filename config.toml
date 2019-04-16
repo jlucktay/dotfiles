@@ -30,6 +30,7 @@
         ["bin/get-latest-k8s.sh"],
         ["bin/get-path.sh"],
         ["bin/git-branch-sync.sh"],
+        ["bin/git-fix-remotes.sh"],
         ["bin/git-hub-out.sh"],
         ["Library/Application Support/Code/User/settings.json"],
         ["Library/Preferences/com.googlecode.iterm2.plist"],
