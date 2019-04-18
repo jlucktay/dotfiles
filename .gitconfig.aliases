@@ -16,6 +16,9 @@
 	outgoing = show --patch @{u}..
 	surr = submodule update --recursive --remote
 
+	# Push a new branch upstream
+	psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
+
 	### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
 
 	aliases = "!git config --list | grep -E '^alias.' | cut --characters 7-"
