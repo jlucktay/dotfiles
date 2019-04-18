@@ -71,6 +71,7 @@
     "--fast"
   ],
   "go.lintTool": "golangci-lint",
+  "liveshare.featureSet": "stable",
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
   "mssql.connections": [
