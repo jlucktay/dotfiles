@@ -1,8 +1,8 @@
 [alias]
 	ap = add --patch
-	branches = branch -a # Lists all branches including remote branches
-	dt = difftool -y
-	remotes = remote -v
+	branches = branch --all # Lists all branches including remote branches
+	dt = difftool --no-prompt
+	remotes = remote --verbose
 	rup = remote update --prune
 
 	change = codereview change
@@ -12,8 +12,8 @@
 	submit = codereview submit
 	sync = codereview sync
 
-	incoming = show -p ..@{u}
-	outgoing = show -p @{u}..
+	incoming = show --patch ..@{u}
+	outgoing = show --patch @{u}..
 	surr = submodule update --recursive --remote
 
 	### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
