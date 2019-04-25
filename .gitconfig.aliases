@@ -1,9 +1,14 @@
 [alias]
 	ap = add --patch
 	branches = branch --all # Lists all branches including remote branches
+	diffs = diff --staged
 	dt = difftool --no-prompt
 	remotes = remote --verbose
 	rup = remote update --prune
+	surr = submodule update --recursive --remote
+
+	incoming = show --patch ..@{u}
+	outgoing = show --patch @{u}..
 
 	change = codereview change
 	gofmt = codereview gofmt
@@ -11,10 +16,6 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
-
-	incoming = show --patch ..@{u}
-	outgoing = show --patch @{u}..
-	surr = submodule update --recursive --remote
 
 	# Push a new branch upstream
 	psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
