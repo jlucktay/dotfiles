@@ -48,14 +48,10 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-storage-diag
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-subnets
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-tags
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-2012r2
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-2016
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-backup
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-devops
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-linux
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-rhel
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-secrets-gen
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-suse
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-windows
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vnet-multigeo
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-region-conversion
@@ -103,6 +99,7 @@
 /Users/jameslucktaylor/git/github.com/timothyf/gameday_api
 /Users/jameslucktaylor/git/github.com/trek10inc/awsume
 /Users/jameslucktaylor/git/github.com/varjolintu/keepassxc-browser
+/Users/jameslucktaylor/git/github.com/wardviaene/kubernetes-course
 /Users/jameslucktaylor/git/github.com/wefner/experiments
 /Users/jameslucktaylor/git/github.com/wofr06/lesspipe
 /Users/jameslucktaylor/git/go.googlesource.com/go
@@ -153,6 +150,7 @@
 /Users/jameslucktaylor/go/src/github.com/dustin/go-humanize
 /Users/jameslucktaylor/go/src/github.com/dvyukov/go-fuzz
 /Users/jameslucktaylor/go/src/github.com/eknkc/amber
+/Users/jameslucktaylor/go/src/github.com/ericlagergren/decimal
 /Users/jameslucktaylor/go/src/github.com/fatih/color
 /Users/jameslucktaylor/go/src/github.com/fatih/gomodifytags
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker

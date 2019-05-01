@@ -6,6 +6,7 @@ DotJoshJohnson.xml
 eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
+ericadamski.carbon-now-sh
 GrapeCity.gc-excelviewer
 mauve.terraform
 mechatroner.rainbow-csv
