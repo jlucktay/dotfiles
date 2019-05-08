@@ -84,7 +84,6 @@ alias ll='gls --color -AFlh --group-directories-first'
 
 # Miscellaneous
 alias acsjl="awsume celab --session-name james.lucktaylor"
-alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
@@ -93,6 +92,10 @@ alias jq='jq --sort-keys'
 alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
 alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
+
+# DAN
+alias danmodver="for repo in \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*; do ( cd \$(realpath \$repo); printf \"%s\t%s\n\" \"\$( git tag --list | sort --version-sort | tail -n 1 )\" \"\$repo\" ); done"
+alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
 
 function stashcheck(){
     while IFS= read -r -d '' Git; do
