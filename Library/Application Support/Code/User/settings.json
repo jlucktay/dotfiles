@@ -60,8 +60,13 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
+  "gitlens.views.compare.location": "gitlens",
   "gitlens.views.fileHistory.enabled": true,
+  "gitlens.views.fileHistory.location": "gitlens",
   "gitlens.views.lineHistory.enabled": true,
+  "gitlens.views.lineHistory.location": "gitlens",
+  "gitlens.views.repositories.location": "gitlens",
+  "gitlens.views.search.location": "gitlens",
   "go.enableCodeLens": {
     "references": false,
     "runtest": true
