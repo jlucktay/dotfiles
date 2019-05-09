@@ -97,6 +97,14 @@ alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --
 alias danmodver="for repo in \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*; do ( cd \$(realpath \$repo); printf \"%s\t%s\n\" \"\$( git tag --list | sort --version-sort | tail -n 1 )\" \"\$repo\" ); done"
 alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
 
+function gocover (){
+    local t
+    t=$(mktemp -t gocover)
+    go test "$COVERFLAGS" -coverprofile="$t" "$@" \
+        && go tool cover -func="$t" \
+        && unlink "$t"
+}
+
 function stashcheck(){
     while IFS= read -r -d '' Git; do
         mapfile -t Stash < <(GIT_DIR=$Git git stash list)
