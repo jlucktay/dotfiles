@@ -159,6 +159,7 @@
 /Users/jameslucktaylor/go/src/github.com/go-delve/delve
 /Users/jameslucktaylor/go/src/github.com/go-errors/errors
 /Users/jameslucktaylor/go/src/github.com/go-gl/glfw
+/Users/jameslucktaylor/go/src/github.com/go-london-user-group/study-group
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
 /Users/jameslucktaylor/go/src/github.com/go-spatial/tegola
 /Users/jameslucktaylor/go/src/github.com/go-sql-driver/mysql
@@ -340,6 +341,7 @@
 /Users/jameslucktaylor/go/src/google.golang.org/grpc
 /Users/jameslucktaylor/go/src/gopkg.in/urfave/cli.v1
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
+/Users/jameslucktaylor/go/src/gopl.io
 /Users/jameslucktaylor/go/src/k8s.io/api
 /Users/jameslucktaylor/go/src/k8s.io/apimachinery
 /Users/jameslucktaylor/go/src/k8s.io/client-go

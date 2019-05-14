@@ -44,6 +44,8 @@ imagemagick
 jpeg
 jq
 jx
+kops
+kubernetes-cli
 kubernetes-helm
 less
 lesspipe

@@ -19,6 +19,7 @@ keepingyouawake
 launchcontrol
 licecap
 microsoft-teams
+minikube
 owasp-zap
 pingmenu
 postman

@@ -14,7 +14,6 @@ mikestead.dotenv
 ms-mssql.mssql
 ms-python.python
 ms-vscode.azure-account
-ms-vscode.cpptools
 ms-vscode.Go
 ms-vscode.powershell
 ms-vsliveshare.vsliveshare
