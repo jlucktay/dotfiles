@@ -34,7 +34,6 @@
         ["bin/git-fix-remotes.sh"],
         ["bin/git-hub-out.sh"],
         ["Library/Application Support/Code/User/settings.json"],
-        ["Library/Preferences/com.googlecode.iterm2.plist"],
         ["xkpasswd.json"],
     ]
 
