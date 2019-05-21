@@ -12,7 +12,6 @@ grammarly
 inspec
 itsycal
 java
-joinme
 kdiff3
 keepassx
 keepingyouawake
@@ -34,8 +33,5 @@ spectacle
 steam
 tyke
 virtualbox
-viscosity
 vlc
-xquartz
-yed
 zoomus

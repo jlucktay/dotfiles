@@ -208,6 +208,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/adventofcode
 /Users/jameslucktaylor/go/src/github.com/jlucktay/azure-devops-helper
 /Users/jameslucktaylor/go/src/github.com/jlucktay/f1-go-scrape
+/Users/jameslucktaylor/go/src/github.com/jlucktay/go-getter
 /Users/jameslucktaylor/go/src/github.com/jlucktay/go-wfs
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gobyexample
 /Users/jameslucktaylor/go/src/github.com/jlucktay/golang-web-dev
