@@ -23,6 +23,7 @@
         ["bin/aws-owner-tag.sh"],
         ["bin/bash-tput-colours.sh"],
         ["bin/cron-monthly-cleanup.sh"],
+        ["bin/dan-init.sh"],
         ["bin/do-terraform-init.sh"],
         ["bin/docker-start.sh"],
         ["bin/func.Uninstall-AllModules.ps1"],
