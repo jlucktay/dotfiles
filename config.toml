@@ -13,6 +13,8 @@
         [".bashrc"],
         [".config/htop/htoprc"],
         [".config/nano/nanorc"],
+        [".config/powershell/Microsoft.PowerShell_profile.ps1"],
+        [".config/powershell/Microsoft.VSCode_profile.ps1"],
         [".nethackrc"],
         [".ssh/config"],
         [".vimrc"],
