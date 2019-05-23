@@ -79,8 +79,8 @@ function git-outdated-sync(){
 }
 
 # Bash ls
-alias ls='gls --color -h --group-directories-first'
-alias ll='gls --color -AFlh --group-directories-first'
+alias ls='gls --color --human-readable'
+alias ll='gls -l --color --almost-all --classify --human-readable'
 
 # Miscellaneous
 alias acsjl="awsume celab --session-name james.lucktaylor"
