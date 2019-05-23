@@ -82,6 +82,7 @@
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/nodejs-docs-samples
 /Users/jameslucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
+/Users/jameslucktaylor/git/github.com/jlucktay/gilded-rose-kata
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.page
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
