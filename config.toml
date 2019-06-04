@@ -36,6 +36,7 @@
         ["bin/git-branch-sync.sh"],
         ["bin/git-fix-remotes.sh"],
         ["bin/git-hub-out.sh"],
+        ["git-completion.bash"],
         ["Library/Application Support/Code/User/settings.json"],
         ["xkpasswd.json"],
     ]
