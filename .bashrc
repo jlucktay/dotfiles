@@ -24,6 +24,10 @@ export MANPATH
 # If I have to edit something in a terminal window, I like using Nano
 export EDITOR=/usr/bin/nano
 
+# GPG things
+GPG_TTY=$(tty)
+export GPG_TTY
+
 # Colourful terminal
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
