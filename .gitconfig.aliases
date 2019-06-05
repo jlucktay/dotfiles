@@ -59,7 +59,8 @@
 
 	pr = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}/compare/$(git rev-parse --abbrev-ref HEAD); }; f"
 
-	# Unstage a file
+	# Back out changes
+	undo = checkout -p --
 	unstage = reset -q HEAD --
 
 	up = !git pull --rebase --prune $@ && git submodule update --init --recursive
