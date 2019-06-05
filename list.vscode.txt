@@ -8,6 +8,7 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 ericadamski.carbon-now-sh
 GrapeCity.gc-excelviewer
+mathiasfrohlich.Kotlin
 mauve.terraform
 mechatroner.rainbow-csv
 mikestead.dotenv
