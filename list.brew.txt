@@ -11,7 +11,6 @@ chromedriver
 clang-format
 cmatrix
 coreutils
-dep
 dive
 elvish
 exercism
@@ -99,6 +98,7 @@ pcre2
 perl
 phantomjs
 pinentry
+pinentry-mac
 pkg-config
 pre-commit
 prettyping

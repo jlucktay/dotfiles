@@ -8,6 +8,7 @@ firefox
 font-fira-code
 google-cloud-sdk
 google-drive-file-stream
+gpg-suite-no-mail
 grammarly
 inspec
 itsycal
@@ -25,6 +26,7 @@ postman
 powershell
 qbittorrent
 robo-3t
+royal-tsx
 sequel-pro
 skype
 skype-for-business
