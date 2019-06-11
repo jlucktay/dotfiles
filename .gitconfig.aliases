@@ -8,7 +8,9 @@
 	surr = submodule update --recursive --remote
 
 	incoming = show --patch ..@{u}
+	inlog = log ..@{u}
 	outgoing = show --patch @{u}..
+	outlog = log @{u}..
 
 	change = codereview change
 	gofmt = codereview gofmt
