@@ -15,7 +15,7 @@ HomemakerTask=${1:-"default"}
 HomemakerCommand="homemaker"
 
 if [ "$HomemakerTask" == "gitconfig" ]; then
-    echo "Preserve any changes that may have been made in the interim, before clobbering '~/.gitconfig'!"
+    echo "$(tput setab 7; tput setaf 0)Preserve any changes that may have been made in the interim, before clobbering '~/.gitconfig'!$(tput sgr0)"
 fi
 
 eval "$HomemakerCommand" --task="$HomemakerTask" --verbose config.toml "$ScriptDirectory"
