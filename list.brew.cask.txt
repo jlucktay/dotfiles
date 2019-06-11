@@ -36,4 +36,5 @@ steam
 tyke
 virtualbox
 vlc
+whatsapp
 zoomus

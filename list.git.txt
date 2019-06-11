@@ -87,6 +87,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
 /Users/jameslucktaylor/git/github.com/jlucktay/pp2a-asg2
+/Users/jameslucktaylor/git/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/git/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
@@ -166,6 +167,7 @@
 /Users/jameslucktaylor/go/src/github.com/go-sql-driver/mysql
 /Users/jameslucktaylor/go/src/github.com/gobuffalo/envy
 /Users/jameslucktaylor/go/src/github.com/gobwas/glob
+/Users/jameslucktaylor/go/src/github.com/godoctor/godoctor
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/golang-web-dev
 /Users/jameslucktaylor/go/src/github.com/GoesToEleven/GolangTraining
 /Users/jameslucktaylor/go/src/github.com/gofrs/uuid
@@ -219,7 +221,6 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
-/Users/jameslucktaylor/go/src/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
@@ -334,6 +335,7 @@
 /Users/jameslucktaylor/go/src/golang.org/x/sync
 /Users/jameslucktaylor/go/src/golang.org/x/sys
 /Users/jameslucktaylor/go/src/golang.org/x/text
+/Users/jameslucktaylor/go/src/golang.org/x/time
 /Users/jameslucktaylor/go/src/golang.org/x/tools
 /Users/jameslucktaylor/go/src/golang.org/x/tour
 /Users/jameslucktaylor/go/src/google.golang.org/api
