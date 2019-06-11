@@ -8,6 +8,12 @@
 
 [tasks.default]
     deps = ["git"]
+    envs = [
+        ["ZipHere", "${HM_SRC}"]
+    ]
+    cmds = [
+        ["${HM_SRC}/bin/homemaker/eternal_history.sh"],
+    ]
     links = [
         [".bash_profile"],
         [".bashrc"],
