@@ -123,7 +123,7 @@ function stashcheck(){
         for StashLine in "${Stash[@]}"; do
             printf "\t%s\n" "$StashLine"
         done
-    done < <(find "$HOME/go/src" "$HOME/git" -type d -name ".git" -path "*jlucktay*" -print0)
+    done < <(find "$HOME/go/src" "$HOME/git" -type d -name ".git" -print0)
 }
 
 # http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
