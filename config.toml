@@ -78,12 +78,18 @@
         "$(curl --fail --location --show-error --silent $HOMEBREWINSTALL)"]]
 
 [tasks.lists]
-    deps = ["lists-git", "lists-homebrew", "lists-vscode"]
+    deps = ["lists-git", "lists-go-bin", "lists-homebrew", "lists-vscode"]
 
 [tasks.lists-git]
     deps = ["coreutils", "git"]
     cmds = [
         ["${HM_SRC}/bin/homemaker/list-git.sh"],
+    ]
+
+[tasks.lists-go-bin]
+    deps = ["coreutils", "golang"]
+    cmds = [
+        ["${HM_SRC}/bin/homemaker/list-go-bin.sh"],
     ]
 
 [tasks.lists-homebrew]

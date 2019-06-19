@@ -26,6 +26,7 @@
 /Users/jameslucktaylor/git/dev.azure.com/DANAzureDevOps/HelloDAN/HelloDAN
 /Users/jameslucktaylor/git/dev.azure.com/DANAzureDevOps/HelloDAN/HelloDAN2
 /Users/jameslucktaylor/git/dev.azure.com/JamesLucktaylor/DANMigFac
+/Users/jameslucktaylor/git/github.com/afex/graftorio
 /Users/jameslucktaylor/git/github.com/alextercete/practical-git
 /Users/jameslucktaylor/git/github.com/aws-quickstart/quickstart-enterprise-accelerator-pci
 /Users/jameslucktaylor/git/github.com/awslabs/aws-security-benchmark
@@ -116,6 +117,7 @@
 /Users/jameslucktaylor/go/src/github.com/adjust/go-wrk
 /Users/jameslucktaylor/go/src/github.com/alecthomas/chroma
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
+/Users/jameslucktaylor/go/src/github.com/alecthomas/units
 /Users/jameslucktaylor/go/src/github.com/andybalholm/cascadia
 /Users/jameslucktaylor/go/src/github.com/antonmedv/countdown
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/gotraining
@@ -165,6 +167,7 @@
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
 /Users/jameslucktaylor/go/src/github.com/go-spatial/tegola
 /Users/jameslucktaylor/go/src/github.com/go-sql-driver/mysql
+/Users/jameslucktaylor/go/src/github.com/go-yaml/yaml
 /Users/jameslucktaylor/go/src/github.com/gobuffalo/envy
 /Users/jameslucktaylor/go/src/github.com/gobwas/glob
 /Users/jameslucktaylor/go/src/github.com/godoctor/godoctor
@@ -229,6 +232,7 @@
 /Users/jameslucktaylor/go/src/github.com/jmuldoon/go-keychain
 /Users/jameslucktaylor/go/src/github.com/joefitzgerald/forecast
 /Users/jameslucktaylor/go/src/github.com/joho/godotenv
+/Users/jameslucktaylor/go/src/github.com/jondot/goweight
 /Users/jameslucktaylor/go/src/github.com/josharian/impl
 /Users/jameslucktaylor/go/src/github.com/jstemmer/go-junit-report
 /Users/jameslucktaylor/go/src/github.com/julienschmidt/httprouter
@@ -310,6 +314,7 @@
 /Users/jameslucktaylor/go/src/github.com/streamrail/concurrent-map
 /Users/jameslucktaylor/go/src/github.com/stretchr/testify
 /Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-azurerm
+/Users/jameslucktaylor/go/src/github.com/thoas/go-funk
 /Users/jameslucktaylor/go/src/github.com/thrasher-/gocryptotrader
 /Users/jameslucktaylor/go/src/github.com/thrasher-/socketio
 /Users/jameslucktaylor/go/src/github.com/tinylib/msgp
@@ -326,6 +331,9 @@
 /Users/jameslucktaylor/go/src/github.com/yosssi/ace
 /Users/jameslucktaylor/go/src/go.mongodb.org/mongo-driver
 /Users/jameslucktaylor/go/src/go.opencensus.io
+/Users/jameslucktaylor/go/src/go.uber.org/atomic
+/Users/jameslucktaylor/go/src/go.uber.org/multierr
+/Users/jameslucktaylor/go/src/go.uber.org/zap
 /Users/jameslucktaylor/go/src/golang.org/x/crypto
 /Users/jameslucktaylor/go/src/golang.org/x/image
 /Users/jameslucktaylor/go/src/golang.org/x/lint
@@ -343,6 +351,7 @@
 /Users/jameslucktaylor/go/src/google.golang.org/cloud
 /Users/jameslucktaylor/go/src/google.golang.org/genproto
 /Users/jameslucktaylor/go/src/google.golang.org/grpc
+/Users/jameslucktaylor/go/src/gopkg.in/alecthomas/kingpin.v2
 /Users/jameslucktaylor/go/src/gopkg.in/urfave/cli.v1
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
 /Users/jameslucktaylor/go/src/gopl.io
