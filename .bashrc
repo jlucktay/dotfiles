@@ -86,6 +86,10 @@ function git-outdated-sync(){
     find . -type d -name .git -not -path "*/.terraform/*" -execdir bash -c "pwd ; git pull --all ; git push --all ; echo" \;
 }
 
+function lb() {
+    code "$HOME/logbook/logbook.$(gdate '+%Y%m%d').md"
+}
+
 # Bash ls
 alias ls='gls --color --human-readable'
 alias ll='gls -l --color --almost-all --classify --human-readable'
