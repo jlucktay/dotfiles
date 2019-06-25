@@ -63,4 +63,5 @@
 /Users/jameslucktaylor/go/bin/server
 /Users/jameslucktaylor/go/bin/stringer
 /Users/jameslucktaylor/go/bin/structcheck
+/Users/jameslucktaylor/go/bin/super-hacker
 /Users/jameslucktaylor/go/bin/varcheck

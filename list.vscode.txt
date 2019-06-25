@@ -1,6 +1,7 @@
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
+darkriszty.markdown-table-prettify
 DavidAnson.vscode-markdownlint
 DotJoshJohnson.xml
 eamodio.gitlens

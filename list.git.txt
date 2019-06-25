@@ -129,6 +129,7 @@
 /Users/jameslucktaylor/go/src/github.com/beatgammit/turnpike
 /Users/jameslucktaylor/go/src/github.com/bep/gitmap
 /Users/jameslucktaylor/go/src/github.com/boombuler/barcode
+/Users/jameslucktaylor/go/src/github.com/briandowns/super-hacker
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
 /Users/jameslucktaylor/go/src/github.com/cavaliercoder/go-abs
 /Users/jameslucktaylor/go/src/github.com/census-instrumentation/opencensus-proto
