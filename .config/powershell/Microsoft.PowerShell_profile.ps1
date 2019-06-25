@@ -1,13 +1,14 @@
-$PRLO = @{
-    EditMode                   = "Emacs"
+$PSRLO = @{
+    # EditMode                   = "Emacs"
     HistoryNoDuplicates        = $true
+    HistorySaveStyle           = "SaveIncrementally"
+    HistorySearchCaseSensitive = $false
     # MaximumHistoryCount        = 0
     ShowToolTips               = $true
-    HistorySearchCaseSensitive = $false
-    HistorySaveStyle           = "SaveIncrementally"
 }
 
-Set-PSReadLineOption @PRLO
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadLineOption @PSRLO
 
 function prompt {
     # The @ sign creates an array in case only one history item exists
