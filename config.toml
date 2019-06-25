@@ -44,6 +44,7 @@
         ["bin/git-hub-out.sh"],
         ["git-completion.bash"],
         ["Library/Application Support/Code/User/settings.json"],
+        ["Library/Application Support/Code/User/snippets/"],
         ["xkpasswd.json"],
     ]
 
