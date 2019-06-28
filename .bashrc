@@ -113,8 +113,17 @@ alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
 
 # DAN
-alias danmodver="for repo in \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*; do ( cd \$(realpath \$repo); printf \"%s\t%s\n\" \"\$( git tag --list | sort --version-sort | tail -n 1 )\" \"\$repo\" ); done"
 alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
+
+function danmodver(){
+    for Repo in "$HOME"/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*
+    do
+        (
+            cd "$(realpath "$Repo")" || return
+            printf "%s?ref=%s\n" "$(echo $Repo | cut -d'/' -f5-)" "$(git tag --list | sort --version-sort | tail -n 1)"
+        )
+    done
+}
 
 function gocover (){
     local t
