@@ -54,20 +54,12 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "git.autofetch": true,
+  "git.autoRepositoryDetection": false,
+  "git.autoStash": true,
   "git.confirmSync": false,
+  "git.countBadge": "off",
   "git.fetchOnPull": true,
   "git.rebaseWhenSync": true,
-  "gitlens.advanced.messages": {
-    "suppressShowKeyBindingsNotice": true
-  },
-  "gitlens.views.compare.location": "gitlens",
-  "gitlens.views.fileHistory.enabled": true,
-  "gitlens.views.fileHistory.location": "gitlens",
-  "gitlens.views.lineHistory.enabled": true,
-  "gitlens.views.lineHistory.location": "gitlens",
-  "gitlens.views.repositories.location": "gitlens",
-  "gitlens.views.search.location": "gitlens",
   "go.enableCodeLens": {
     "references": false,
     "runtest": true
