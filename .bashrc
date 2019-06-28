@@ -87,7 +87,14 @@ function git-outdated-sync(){
 }
 
 function lb() {
-    code "$HOME/logbook/logbook.$(gdate '+%Y%m%d').md"
+    LogbooksDir="$HOME/logbooks"
+    if ! [[ -d "$LogbooksDir" ]]; then
+        mkdir -pv "$LogbooksDir"
+    fi
+    if ! [[ -f "$LogbooksDir/bin/loop.rsync.sh" ]]; then
+        gsutil cp -J gs://jlucktay-logbooks-eu/bin/loop.rsync.sh "$LogbooksDir/bin/loop.rsync.sh"
+    fi
+    code "$LogbooksDir/logbook.$(gdate '+%Y%m%d').md"
 }
 
 # Bash ls
