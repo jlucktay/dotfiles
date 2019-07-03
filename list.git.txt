@@ -338,6 +338,7 @@
 /Users/jameslucktaylor/go/src/golang.org/x/crypto
 /Users/jameslucktaylor/go/src/golang.org/x/image
 /Users/jameslucktaylor/go/src/golang.org/x/lint
+/Users/jameslucktaylor/go/src/golang.org/x/mobile
 /Users/jameslucktaylor/go/src/golang.org/x/net
 /Users/jameslucktaylor/go/src/golang.org/x/oauth2
 /Users/jameslucktaylor/go/src/golang.org/x/review

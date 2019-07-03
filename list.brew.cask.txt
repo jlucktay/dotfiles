@@ -1,4 +1,6 @@
 1password
+adoptopenjdk8
+android-sdk
 authy
 beyond-compare
 discord

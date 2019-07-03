@@ -258,6 +258,9 @@ shopt -s globstar
 # Perl
 eval "$(perl "-I$HOME/perl5/lib/perl5" "-Mlocal::lib=$HOME/perl5")"
 
+# Android SDK/NDK things
+export ANDROID_SDK_ROOT="/usr/local/share/android-sdk"
+
 # Cheat sheet - keep this second last
 if [ -f "$HOME/bash-cheat-sheet.txt" ]; then
     \cat "$HOME/bash-cheat-sheet.txt"

@@ -3,6 +3,7 @@ caskroom/fonts
 chef/chef
 go-delve/delve
 homebrew/cask
+homebrew/cask-versions
 homebrew/core
 homebrew/services
 isacikgoz/gitin
