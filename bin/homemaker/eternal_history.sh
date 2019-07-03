@@ -2,7 +2,12 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-ZipSecret=$(jq -r '.bash_eternal_history' "$HOME/.config/homemaker/secrets.json")
+# jq - commandline JSON processor [version 1.6]
+#
+#   -e               set the exit status code based on the output;
+#   -r               output raw strings, not JSON texts;
+
+ZipSecret=$(jq -er '.bash_eternal_history' "$HOME/.config/homemaker/secrets.json")
 
 # zip --version:
 
