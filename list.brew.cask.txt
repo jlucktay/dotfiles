@@ -22,6 +22,7 @@ launchcontrol
 licecap
 microsoft-teams
 minikube
+ngrok
 owasp-zap
 pingmenu
 postman
