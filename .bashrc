@@ -246,7 +246,7 @@ export HISTFILE=$HOME/.bash_eternal_history
 PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
 
 # https://ss64.com/bash/history.html
-export HISTCONTROL=erasedups
+export HISTCONTROL=erasedups:ignoreboth
 shopt -s histappend
 
 # https://www.linuxjournal.com/content/globstar-new-bash-globbing-option
