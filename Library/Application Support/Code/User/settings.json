@@ -26,9 +26,7 @@
   "editor.renderControlCharacters": true,
   "editor.renderWhitespace": "boundary",
   "editor.rulers": [
-    80,
-    120,
-    160
+    120
   ],
   "editor.wordWrap": "on",
   "explorer.confirmDragAndDrop": false,
@@ -64,6 +62,7 @@
     "references": false,
     "runtest": true
   },
+  "go.formatTool": "goimports",
   "go.gocodeAutoBuild": true,
   "go.lintFlags": [
     "--fast"
@@ -103,5 +102,6 @@
   "window.restoreWindows": "all",
   "window.zoomLevel": 0,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.renderIndentGuides": "always",
   "xmlTools.enforcePrettySelfClosingTagOnFormat": true
 }
