@@ -90,6 +90,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/pp2a-asg2
 /Users/jameslucktaylor/git/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/git/github.com/jlucktay/rest-api
+/Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
@@ -314,6 +315,7 @@
 /Users/jameslucktaylor/go/src/github.com/stamblerre/gocode
 /Users/jameslucktaylor/go/src/github.com/streamrail/concurrent-map
 /Users/jameslucktaylor/go/src/github.com/stretchr/testify
+/Users/jameslucktaylor/go/src/github.com/subosito/gotenv
 /Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-azurerm
 /Users/jameslucktaylor/go/src/github.com/thoas/go-funk
 /Users/jameslucktaylor/go/src/github.com/thrasher-/gocryptotrader

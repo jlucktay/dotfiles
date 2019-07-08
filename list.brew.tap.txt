@@ -2,6 +2,7 @@ alecthomas/tap
 caskroom/fonts
 chef/chef
 go-delve/delve
+goreleaser/tap
 homebrew/cask
 homebrew/cask-versions
 homebrew/core
