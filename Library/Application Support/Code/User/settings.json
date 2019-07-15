@@ -97,6 +97,7 @@
     "variables"
   ],
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.rendererType": "dom",
   "window.newWindowDimensions": "maximized",
   "window.openFilesInNewWindow": "default",
   "window.restoreWindows": "all",
