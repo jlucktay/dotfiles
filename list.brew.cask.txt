@@ -23,6 +23,7 @@ licecap
 microsoft-teams
 minikube
 ngrok
+oversight
 owasp-zap
 pingmenu
 postman
@@ -40,4 +41,5 @@ tyke
 virtualbox
 vlc
 whatsapp
+xmind
 zoomus

@@ -62,6 +62,7 @@
 /Users/jameslucktaylor/go/bin/movingtriangle
 /Users/jameslucktaylor/go/bin/pprof
 /Users/jameslucktaylor/go/bin/server
+/Users/jameslucktaylor/go/bin/stack
 /Users/jameslucktaylor/go/bin/stringer
 /Users/jameslucktaylor/go/bin/structcheck
 /Users/jameslucktaylor/go/bin/super-hacker

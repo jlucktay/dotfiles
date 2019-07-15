@@ -44,6 +44,7 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-nsg-default
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-nsg-dmz
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-public-ip
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-resource-group
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-rsv
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-storage
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-storage-diag
@@ -84,6 +85,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
 /Users/jameslucktaylor/git/github.com/jlucktay/gilded-rose-kata
+/Users/jameslucktaylor/git/github.com/jlucktay/homebrew-tap
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.page
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mhw-builder
