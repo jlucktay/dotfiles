@@ -9,4 +9,5 @@ homebrew/core
 homebrew/services
 isacikgoz/gitin
 jenkins-x/jx
+jlucktay/tap
 wagoodman/dive

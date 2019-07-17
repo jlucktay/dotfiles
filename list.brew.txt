@@ -116,6 +116,7 @@ shared-mime-info
 shellcheck
 shellharden
 sqlite
+stack
 teleport
 telnet
 terraform
