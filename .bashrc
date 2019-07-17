@@ -120,7 +120,7 @@ function danmodver(){
     do
         (
             cd "$(realpath "$Repo")" || return
-            printf "%s?ref=%s\n" "$(echo $Repo | cut -d'/' -f5-)" "$(git tag --list | sort --version-sort | tail -n 1)"
+            printf "%s?ref=%s\n" "$(echo "$Repo" | cut -d'/' -f5-)" "$(git tag --list | sort --version-sort | tail -n 1)"
         )
     done
 }
