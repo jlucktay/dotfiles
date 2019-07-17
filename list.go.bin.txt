@@ -58,10 +58,14 @@
 /Users/jameslucktaylor/go/bin/kube-golint-todo
 /Users/jameslucktaylor/go/bin/linkcheck
 /Users/jameslucktaylor/go/bin/mage
+/Users/jameslucktaylor/go/bin/micro
 /Users/jameslucktaylor/go/bin/mockgen
 /Users/jameslucktaylor/go/bin/movingtriangle
 /Users/jameslucktaylor/go/bin/pprof
+/Users/jameslucktaylor/go/bin/protoc-gen-grpc-gateway
+/Users/jameslucktaylor/go/bin/protoc-gen-micro
 /Users/jameslucktaylor/go/bin/server
+/Users/jameslucktaylor/go/bin/srv
 /Users/jameslucktaylor/go/bin/stringer
 /Users/jameslucktaylor/go/bin/structcheck
 /Users/jameslucktaylor/go/bin/super-hacker
