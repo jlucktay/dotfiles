@@ -33,6 +33,7 @@ go
 gometalinter
 goreleaser
 graphviz
+gts
 hadolint
 hexyl
 htop
@@ -41,6 +42,7 @@ hugo
 icu4c
 ilmbase
 imagemagick
+jasper
 jpeg
 jq
 jx
@@ -67,6 +69,7 @@ libtiff
 libtool
 libunistring
 libusb
+libxml2
 libxmlsec1
 libyaml
 libzip
@@ -81,6 +84,7 @@ nano
 ncdu
 ncurses
 nethack
+netpbm
 nettle
 nmap
 node
