@@ -119,9 +119,9 @@ sqlite
 stack
 teleport
 telnet
-terraform
 terraform-docs
 terraform_landscape
+tfenv
 tldr
 trash
 tree
