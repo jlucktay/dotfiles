@@ -72,10 +72,10 @@ echo "done."
 
 # Announce init
 echo "Initialising Terraform with following dynamic values:"
-# printf '\taccess_key:\t%s\n' "$AccessKey"
-printf '\tcontainer_name:\t\t%s\n' "$TargetSubscription" # Container name matches target sub GUID
-printf '\tkey:\t\t\t%s\n' "$DesiredStateKey"
-printf '\tstorage_account:\t%s\n' "$StorageAccount"
+# printf '\taccess_key:\t\t"%s"\n' "$AccessKey"
+printf '\tcontainer_name:\t\t"%s"\n' "$TargetSubscription" # Container name matches target sub GUID
+printf '\tkey:\t\t\t"%s"\n' "$DesiredStateKey"
+printf '\tstorage_account:\t"%s"\n' "$StorageAccount"
 
 # Run the initialisation
 terraform init \
