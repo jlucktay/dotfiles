@@ -62,7 +62,7 @@ az account set --subscription=a069efd3-76b7-49b5-a71f-f38dc1956b83
 echo "done."
 
 echo -n "Retrieving storage account key... "
-AccessKey=$(az storage account keys list --account-name $StorageAccount --query "[?keyName == 'key2'].value | [0]")
+AccessKey=$(az storage account keys list --account-name $StorageAccount | jq -r '.[0].value')
 echo "done."
 
 # Switch subscriptions to given target
