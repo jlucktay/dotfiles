@@ -113,7 +113,31 @@ alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
 
 # DAN
+DANADGuid="defecd80-a314-44a2-9427-cea2732d22af"
+
 alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
+
+function dankvperms(){
+    for Subscription in $(jq -r '.[] | select( .name | startswith("VDC") )' \
+    "$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology/dan-migration-factory/subscriptions.json" \
+    | jq -r '(.name[0:9] + "/" + .id)')
+    do
+        (
+            echo "$(gdn) - CLZID ${Subscription:0:9} - GUID ${Subscription:10}"
+            az account set --subscription="${Subscription:10}"
+            az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-vm" \
+                --object-id $DANADGuid \
+                --secret-permissions get list delete \
+                --key-permissions get list delete \
+                | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
+            az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-disks" \
+                --object-id $DANADGuid \
+                --secret-permissions get list delete \
+                --key-permissions get list delete \
+                | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
+        )
+    done
+}
 
 function danmodver(){
     for Repo in "$HOME"/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*
