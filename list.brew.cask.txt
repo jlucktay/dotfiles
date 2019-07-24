@@ -23,7 +23,6 @@ licecap
 microsoft-teams
 minikube
 ngrok
-oversight
 owasp-zap
 pingmenu
 postman
