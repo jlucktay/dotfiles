@@ -119,6 +119,7 @@ screenfetch
 shared-mime-info
 shellcheck
 shellharden
+skaffold
 sqlite
 stack
 teleport

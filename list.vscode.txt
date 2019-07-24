@@ -8,6 +8,7 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
 ericadamski.carbon-now-sh
+googlecloudtools.cloudcode
 GrapeCity.gc-excelviewer
 mathiasfrohlich.Kotlin
 mauve.terraform
