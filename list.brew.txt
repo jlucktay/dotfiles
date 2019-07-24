@@ -3,6 +3,7 @@ autojump
 awscli
 azure-cli
 bash
+bash-completion@2
 bashdb
 bat
 bazaar
