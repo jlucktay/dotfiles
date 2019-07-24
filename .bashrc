@@ -183,16 +183,15 @@ alias chrome_cloudreach='open --new -a "Google Chrome" --args --profile-director
 alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Profile 5"'
 
+# AWS things, like labs
+export AWS_DEFAULT_PROFILE=cr-labs-jlucktay-direct
+
 function awsregions(){
     aws ec2 describe-regions | jq -r '.Regions[].RegionName' | sort -f
 }
 export -f awsregions
 
-function azlablogin(){
-    az account set --subscription="$(az account list | jq -r '.[] | select( .name == "Cloudreach Lab") | .id')"
-}
-export -f azlablogin
-
+# Azure things, also lab-esque
 function azregions(){
     az account list-locations | jq -r '.[].name' | sort -f
 }
