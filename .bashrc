@@ -184,7 +184,7 @@ alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory=
 alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Profile 5"'
 
 # AWS things, like labs
-export AWS_DEFAULT_PROFILE=cr-labs-jlucktay-direct
+export AWS_DEFAULT_PROFILE=cr-labs-jlucktay
 
 function awsregions(){
     aws ec2 describe-regions | jq -r '.Regions[].RegionName' | sort -f
