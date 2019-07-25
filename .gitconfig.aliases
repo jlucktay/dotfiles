@@ -5,6 +5,7 @@
 	dt = difftool --no-prompt
 	remotes = remote --verbose
 	rup = remote update --prune
+	s = status .
 	surr = submodule update --recursive --remote
 
 	incoming = show --patch ..@{u}
