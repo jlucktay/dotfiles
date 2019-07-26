@@ -1,6 +1,7 @@
 [alias]
 	ap = add --patch
 	branches = branch --all # Lists all branches including remote branches
+	d = diff .
 	diffs = diff --staged
 	dt = difftool --no-prompt
 	remotes = remote --verbose
