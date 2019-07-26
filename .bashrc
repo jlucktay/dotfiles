@@ -34,7 +34,8 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 # Terraform
 export TF_VAR_region="eu-west-2" # London
-export TF_VAR_state_dynamodb="jlucktay.terraform.state"
+export TF_VAR_aws_region=$TF_VAR_region
+export TF_VAR_state_dynamodb="jlucktay.tfstate"
 export TF_VAR_state_bucket="$TF_VAR_state_dynamodb.london"
 
 # AWS SDK for Go
@@ -187,7 +188,7 @@ alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Prof
 export AWS_DEFAULT_PROFILE=cr-labs-jlucktay
 
 function awsregions(){
-    aws ec2 describe-regions | jq -r '.Regions[].RegionName' | sort -f
+    aws ec2 describe-regions --region $TF_VAR_aws_region | jq -r '.Regions[].RegionName' | sort -f
 }
 export -f awsregions
 
