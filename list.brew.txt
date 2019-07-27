@@ -12,6 +12,7 @@ chromedriver
 clang-format
 cmatrix
 coreutils
+dep
 dive
 elvish
 exercism
@@ -110,6 +111,7 @@ pre-commit
 prettyping
 protobuf
 protoc-gen-go
+prototool
 python
 python3
 python@2

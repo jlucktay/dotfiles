@@ -243,7 +243,6 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
-/Users/jameslucktaylor/go/src/github.com/jlucktay/terratest
 /Users/jameslucktaylor/go/src/github.com/jlucktay/wyag
 /Users/jameslucktaylor/go/src/github.com/jlucktay/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/jmuldoon/go-keychain
