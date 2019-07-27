@@ -1,0 +1,8 @@
+# https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
+# http://tiswww.case.edu/php/chet/readline/readline.html#SEC9
+
+set colored-stats on
+set completion-ignore-case on
+set completion-map-case on
+set mark-symlinked-directories on
+set show-all-if-ambiguous on
