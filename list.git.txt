@@ -2,6 +2,7 @@
 /Users/jameslucktaylor/git/azcloudreach.visualstudio.com/TerraformMultiDeployTrial
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/app-demo-teleport
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/aws-lambda-backup
+/Users/jameslucktaylor/git/bitbucket.org/cloudreach/azure-clz-terraform
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/cloud-foundation
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-packer
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-sceptre
@@ -98,6 +99,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/jameslucktaylor/git/github.com/lyze/posh-git-sh
+/Users/jameslucktaylor/git/github.com/micro/micro
 /Users/jameslucktaylor/git/github.com/mzazon/php-apache-mysql-containerized
 /Users/jameslucktaylor/git/github.com/NetHack/NetHack
 /Users/jameslucktaylor/git/github.com/nozaq/terraform-aws-secure-baseline
@@ -210,6 +212,7 @@
 /Users/jameslucktaylor/go/src/github.com/grpc-ecosystem/grpc-gateway
 /Users/jameslucktaylor/go/src/github.com/gruntwork-io/gruntwork-cli
 /Users/jameslucktaylor/go/src/github.com/gruntwork-io/terratest
+/Users/jameslucktaylor/go/src/github.com/hailocab/go-geoindex
 /Users/jameslucktaylor/go/src/github.com/hashicorp/consul
 /Users/jameslucktaylor/go/src/github.com/hashicorp/errwrap
 /Users/jameslucktaylor/go/src/github.com/hashicorp/go-immutable-radix
