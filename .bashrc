@@ -136,14 +136,31 @@ function dankvperms(){
             az account set --subscription="${Subscription:10}"
             az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-vm" \
                 --object-id $DANADGuid \
-                --secret-permissions get list delete \
-                --key-permissions get list delete \
+                --secret-permissions delete get list set \
+                --key-permissions create delete get list \
                 | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
             az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-disks" \
                 --object-id $DANADGuid \
-                --secret-permissions get list delete \
-                --key-permissions get list delete \
+                --secret-permissions delete get list set \
+                --key-permissions create delete get list \
                 | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
+        )
+    done
+}
+
+# Thank you: https://wiki-dev.bash-hackers.org/syntax/pe
+function danchangelog(){
+    for Repo in "$HOME"/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*
+    do
+        (
+            cd "$(realpath "$Repo")" || return
+            git --no-pager \
+                log --color \
+                --after="$(date --iso-8601=date --date='last Monday')T00:00:00+00:00" \
+                --before="$(date --iso-8601=date)T00:00:00+00:00" \
+                --format=format:"%Cgreen[${Repo##*/}] %C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" \
+                master \
+                | sed  '/^$/d'
         )
     done
 }
