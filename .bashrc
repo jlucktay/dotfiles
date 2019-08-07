@@ -121,6 +121,12 @@ alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_module
 alias tb="nc termbin.com 9999"
 alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
 
+# Kubernetes/K8s
+function k8staints(){
+    # shellcheck disable=SC2016
+    kubectl get nodes -o go-template='{{printf "%-47s %-12s\n" "Node" "Taint"}}{{- range .items}}{{- if $taint := (index .spec "taints") }}{{- .metadata.name }}{{ "\t" }}{{- range $taint }}{{- .key }}={{ .value }}:{{ .effect }}{{ "\t" }}{{- end }}{{- "\n" }}{{- end}}{{- end}}'
+}
+
 # DAN
 DANADGuid="defecd80-a314-44a2-9427-cea2732d22af"
 
