@@ -34,6 +34,7 @@
 /Users/jameslucktaylor/git/github.com/boto/boto3
 /Users/jameslucktaylor/git/github.com/cloudreach/ce-azure-dan-plaster
 /Users/jameslucktaylor/git/github.com/cloudreach/sceptre
+/Users/jameslucktaylor/git/github.com/CrunchyData/postgres-operator
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-automation-account
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-firewall-multigeo
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-keyvaults
@@ -98,6 +99,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
+/Users/jameslucktaylor/git/github.com/kubernetes-retired/heapster
 /Users/jameslucktaylor/git/github.com/lyze/posh-git-sh
 /Users/jameslucktaylor/git/github.com/micro/micro
 /Users/jameslucktaylor/git/github.com/mzazon/php-apache-mysql-containerized
