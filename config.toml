@@ -8,12 +8,8 @@
 
 [tasks.default]
     deps = ["git"]
-    envs = [
-        ["ZipHere", "${HM_SRC}"]
-    ]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/eternal_history.sh"],
-    ]
+    envs = [["ZipHere", "${HM_SRC}"]]
+    cmds = [["${HM_SRC}/bin/homemaker/eternal_history.sh"]]
     links = [
         [".bash_profile"],
         [".bashrc"],
@@ -55,10 +51,7 @@
 
 [tasks.homebrew]
     rejects = [["command", "-v", "brew"]]
-    envs = [[
-        "HOMEBREWINSTALL",
-        "https://raw.githubusercontent.com/Homebrew/install/master/install"
-    ]]
+    envs = [["HOMEBREWINSTALL", "https://raw.githubusercontent.com/Homebrew/install/master/install"]]
     cmds = [["/usr/bin/ruby", "-e",
         "$(curl --fail --location --show-error --silent $HOMEBREWINSTALL)"]]
 
@@ -67,21 +60,15 @@
 
 [tasks.lists-git]
     deps = ["coreutils", "git"]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/list-git.sh"],
-    ]
+    cmds = [["${HM_SRC}/bin/homemaker/list-git.sh"]]
 
 [tasks.lists-go-bin]
     deps = ["coreutils", "golang"]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/list-go-bin.sh"],
-    ]
+    cmds = [["${HM_SRC}/bin/homemaker/list-go-bin.sh"]]
 
 [tasks.lists-homebrew]
     deps = ["coreutils", "homebrew"]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
-    ]
+    cmds = [["${HM_SRC}/bin/homemaker/list-homebrew.sh"]]
 
 [tasks.lists-npm]
     deps = ["coreutils", "node"]
@@ -89,9 +76,7 @@
 
 [tasks.lists-vscode]
     deps = ["coreutils", "vscode"]
-    cmds = [
-        ["${HM_SRC}/bin/homemaker/list-vscode.sh"],
-    ]
+    cmds = [["${HM_SRC}/bin/homemaker/list-vscode.sh"]]
 
 [tasks.node]
     rejects = [["stat", "/usr/local/bin/node"]]
