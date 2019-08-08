@@ -63,7 +63,7 @@
         "$(curl --fail --location --show-error --silent $HOMEBREWINSTALL)"]]
 
 [tasks.lists]
-    deps = ["lists-git", "lists-go-bin", "lists-homebrew", "lists-vscode"]
+    deps = ["lists-git", "lists-go-bin", "lists-homebrew", "lists-npm", "lists-vscode"]
 
 [tasks.lists-git]
     deps = ["coreutils", "git"]
@@ -83,11 +83,19 @@
         ["${HM_SRC}/bin/homemaker/list-homebrew.sh"],
     ]
 
+[tasks.lists-npm]
+    deps = ["coreutils", "node"]
+    cmds = [["${HM_SRC}/bin/homemaker/list-npm.sh"]]
+
 [tasks.lists-vscode]
     deps = ["coreutils", "vscode"]
     cmds = [
         ["${HM_SRC}/bin/homemaker/list-vscode.sh"],
     ]
+
+[tasks.node]
+    rejects = [["stat", "/usr/local/bin/node"]]
+    cmds = [["@install", "node"]]
 
 [tasks.vscode]
     rejects = [["stat", "/Applications/Visual Studio Code.app"]]

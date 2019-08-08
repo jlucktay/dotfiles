@@ -1,0 +1,8 @@
+/usr/local/lib
+/usr/local/lib/node_modules/catj
+/usr/local/lib/node_modules/commitizen
+/usr/local/lib/node_modules/firebase-tools
+/usr/local/lib/node_modules/jsonlint
+/usr/local/lib/node_modules/lighthouse
+/usr/local/lib/node_modules/npm
+/usr/local/lib/node_modules/surge
