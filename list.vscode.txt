@@ -8,6 +8,7 @@ eamodio.gitlens
 EditorConfig.EditorConfig
 eg2.vscode-npm-script
 ericadamski.carbon-now-sh
+gitduck.code-streaming
 googlecloudtools.cloudcode
 GrapeCity.gc-excelviewer
 mauve.terraform
@@ -23,11 +24,13 @@ ms-vsliveshare.vsliveshare
 msazurermtools.azurerm-vscode-tools
 oderwat.indent-rainbow
 PKief.material-icon-theme
+redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rogalmic.bash-debug
 secanis.jenkinsfile-support
 sidneys1.gitconfig
 timonwong.shellcheck
+tsandall.opa
 Tyriar.sort-lines
 WakaTime.vscode-wakatime
 xaver.clang-format

@@ -7,6 +7,7 @@ discord
 docker
 filezilla
 firefox
+fly
 font-fira-code
 google-cloud-sdk
 google-drive-file-stream

@@ -5,6 +5,7 @@
 /Users/jameslucktaylor/go/bin/build-stack
 /Users/jameslucktaylor/go/bin/cfssl
 /Users/jameslucktaylor/go/bin/cfssljson
+/Users/jameslucktaylor/go/bin/cobra
 /Users/jameslucktaylor/go/bin/countdown
 /Users/jameslucktaylor/go/bin/cover
 /Users/jameslucktaylor/go/bin/deadcode

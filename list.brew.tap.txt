@@ -7,6 +7,7 @@ homebrew/cask
 homebrew/cask-versions
 homebrew/core
 homebrew/services
+instrumenta/instrumenta
 isacikgoz/gitin
 jenkins-x/jx
 jlucktay/tap

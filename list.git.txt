@@ -42,6 +42,7 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-sql
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-sql-mi
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-azure-waf
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-mariadb
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-mysql
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-nsg-default
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-nsg-dmz
@@ -55,6 +56,7 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-backup
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-devops
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-linux
+/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-os
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-secrets-gen
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-windows
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vnet-multigeo
@@ -246,6 +248,7 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
+/Users/jameslucktaylor/go/src/github.com/jlucktay/stack
 /Users/jameslucktaylor/go/src/github.com/jlucktay/stringutil
 /Users/jameslucktaylor/go/src/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/wyag
