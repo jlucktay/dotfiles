@@ -38,7 +38,10 @@
 
 [tasks.gitconfig]
     deps = ["git"]
-    links = [[".gitconfig.aliases"]]
+    links = [
+        [".gitconfig.aliases"],
+        [".gitmessage"],
+    ]
     templates = [[".gitconfig"]]
 
 [tasks.golang]
