@@ -14,7 +14,7 @@ export GOPATH
 GOROOT=$(go env GOROOT)
 export GOROOT
 
-PATH="$HOME/bin:$GOPATH/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
+PATH="$HOME/bin:$GOPATH/bin:/usr/local/sbin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
 export PATH
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
