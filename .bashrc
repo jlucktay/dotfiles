@@ -137,20 +137,23 @@ function dankvperms(){
     "$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology/dan-migration-factory/subscriptions.json" \
     | jq -r '(.name[0:9] + "/" + .id)')
     do
+        for Region in brs1 euw1
+        do
         (
-            echo "$(gdn) - CLZID ${Subscription:0:9} - GUID ${Subscription:10}"
+            echo "$(gdn) - CLZID ${Subscription:0:9} - GUID ${Subscription:10} - Region $Region"
             az account set --subscription="${Subscription:10}"
-            az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-vm" \
+            az keyvault set-policy --name "${Subscription:0:9}-kv-$Region-vm" \
                 --object-id $DANADGuid \
                 --secret-permissions delete get list set \
                 --key-permissions create delete get list \
                 | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
-            az keyvault set-policy --name "${Subscription:0:9}-kv-euw1-disks" \
+            az keyvault set-policy --name "${Subscription:0:9}-kv-$Region-disks" \
                 --object-id $DANADGuid \
                 --secret-permissions delete get list set \
                 --key-permissions create delete get list \
                 | jq ".properties.accessPolicies[] | select(.objectId == \"$DANADGuid\") | .permissions"
         )
+        done
     done
 }
 
