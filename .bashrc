@@ -8,13 +8,19 @@ if (( RANDOM < 6553 )); then
     screenfetch
 fi
 
-# Wire up my Go, Bash (+coreutils), and Python scripts directories
+# Wire up Go, Bash, Python, etc binary/script directories
 GOPATH=$(go env GOPATH)
 export GOPATH
 GOROOT=$(go env GOROOT)
 export GOROOT
 
-PATH="$HOME/bin:$GOPATH/bin:/usr/local/sbin:/usr/local/opt/go/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/make/libexec/gnubin:$HOME/Library/Python/3.7/bin:$PATH"
+# Build up PATH
+PATH="$HOME/Library/Python/3.7/bin:$PATH"
+PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+PATH="/usr/local/opt/go/libexec/bin:$PATH"
+PATH="$HOME/bin:$GOPATH/bin:/usr/local/sbin:$PATH"
 export PATH
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
