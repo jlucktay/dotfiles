@@ -2,6 +2,7 @@
 /Users/jameslucktaylor/go/bin/aedeploy
 /Users/jameslucktaylor/go/bin/aefix
 /Users/jameslucktaylor/go/bin/aligncheck
+/Users/jameslucktaylor/go/bin/benchstat
 /Users/jameslucktaylor/go/bin/build-stack
 /Users/jameslucktaylor/go/bin/cfssl
 /Users/jameslucktaylor/go/bin/cfssljson
@@ -66,6 +67,8 @@
 /Users/jameslucktaylor/go/bin/protoc-gen-go
 /Users/jameslucktaylor/go/bin/protoc-gen-grpc-gateway
 /Users/jameslucktaylor/go/bin/protoc-gen-micro
+/Users/jameslucktaylor/go/bin/scc
+/Users/jameslucktaylor/go/bin/semver-bump
 /Users/jameslucktaylor/go/bin/server
 /Users/jameslucktaylor/go/bin/srv
 /Users/jameslucktaylor/go/bin/stringer

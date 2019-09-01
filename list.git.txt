@@ -99,8 +99,10 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
+/Users/jameslucktaylor/git/github.com/jlucktay/template-go
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-gettingstarted
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/kubernetes-retired/heapster
 /Users/jameslucktaylor/git/github.com/lyze/posh-git-sh
 /Users/jameslucktaylor/git/github.com/micro/micro
@@ -134,6 +136,7 @@
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/gotraining
 /Users/jameslucktaylor/go/src/github.com/ardanlabs/service
 /Users/jameslucktaylor/go/src/github.com/armon/go-metrics
+/Users/jameslucktaylor/go/src/github.com/auth0/go-jwt-middleware
 /Users/jameslucktaylor/go/src/github.com/aws/aws-sdk-go
 /Users/jameslucktaylor/go/src/github.com/azure-samples/azure-sdk-for-go-samples
 /Users/jameslucktaylor/go/src/github.com/Azure/azure-sdk-for-go
@@ -141,6 +144,7 @@
 /Users/jameslucktaylor/go/src/github.com/beatgammit/turnpike
 /Users/jameslucktaylor/go/src/github.com/bep/gitmap
 /Users/jameslucktaylor/go/src/github.com/boombuler/barcode
+/Users/jameslucktaylor/go/src/github.com/boyter/scc
 /Users/jameslucktaylor/go/src/github.com/briandowns/super-hacker
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
 /Users/jameslucktaylor/go/src/github.com/bwmarrin/discordgo
@@ -153,6 +157,7 @@
 /Users/jameslucktaylor/go/src/github.com/cloudflare/cfssl
 /Users/jameslucktaylor/go/src/github.com/codegangsta/envy
 /Users/jameslucktaylor/go/src/github.com/codegangsta/gin
+/Users/jameslucktaylor/go/src/github.com/codegangsta/negroni
 /Users/jameslucktaylor/go/src/github.com/cpuguy83/go-md2man
 /Users/jameslucktaylor/go/src/github.com/cweill/gotests
 /Users/jameslucktaylor/go/src/github.com/danwakefield/fnmatch
@@ -180,7 +185,6 @@
 /Users/jameslucktaylor/go/src/github.com/go-errors/errors
 /Users/jameslucktaylor/go/src/github.com/go-gl/glfw
 /Users/jameslucktaylor/go/src/github.com/go-log/log
-/Users/jameslucktaylor/go/src/github.com/go-london-user-group/study-group
 /Users/jameslucktaylor/go/src/github.com/go-spatial/go-wfs
 /Users/jameslucktaylor/go/src/github.com/go-spatial/tegola
 /Users/jameslucktaylor/go/src/github.com/go-sql-driver/mysql
@@ -202,6 +206,8 @@
 /Users/jameslucktaylor/go/src/github.com/golangci/golangci-lint
 /Users/jameslucktaylor/go/src/github.com/google/btree
 /Users/jameslucktaylor/go/src/github.com/google/go-cmp
+/Users/jameslucktaylor/go/src/github.com/google/go-github
+/Users/jameslucktaylor/go/src/github.com/google/go-querystring
 /Users/jameslucktaylor/go/src/github.com/google/gofuzz
 /Users/jameslucktaylor/go/src/github.com/google/pprof
 /Users/jameslucktaylor/go/src/github.com/google/protobuf
@@ -270,9 +276,11 @@
 /Users/jameslucktaylor/go/src/github.com/kyokomi/emoji
 /Users/jameslucktaylor/go/src/github.com/leanovate/gopter
 /Users/jameslucktaylor/go/src/github.com/lib/pq
+/Users/jameslucktaylor/go/src/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/go/src/github.com/magefile/mage
 /Users/jameslucktaylor/go/src/github.com/magiconair/properties
 /Users/jameslucktaylor/go/src/github.com/markbates/inflect
+/Users/jameslucktaylor/go/src/github.com/markbates/randx
 /Users/jameslucktaylor/go/src/github.com/marstr/collection
 /Users/jameslucktaylor/go/src/github.com/marstr/guid
 /Users/jameslucktaylor/go/src/github.com/Masterminds/glide
@@ -387,6 +395,7 @@
 /Users/jameslucktaylor/go/src/golang.org/x/mobile
 /Users/jameslucktaylor/go/src/golang.org/x/net
 /Users/jameslucktaylor/go/src/golang.org/x/oauth2
+/Users/jameslucktaylor/go/src/golang.org/x/perf
 /Users/jameslucktaylor/go/src/golang.org/x/review
 /Users/jameslucktaylor/go/src/golang.org/x/sync
 /Users/jameslucktaylor/go/src/golang.org/x/sys
@@ -412,3 +421,5 @@
 /Users/jameslucktaylor/go/src/rsc.io/letsencrypt
 /Users/jameslucktaylor/go/src/sourcegraph.com/sqs/goreturns
 /Users/jameslucktaylor/Library/Containers/com.docker.docker/Data/database
+/Users/jameslucktaylor/tmp/git_training
+/Users/jameslucktaylor/tmp/rebase-sandbox

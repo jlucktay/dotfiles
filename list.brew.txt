@@ -132,6 +132,7 @@ telnet
 terraform-docs
 terraform_landscape
 tfenv
+tflint
 tldr
 trash
 tree

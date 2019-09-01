@@ -5,6 +5,7 @@ authy
 beyond-compare
 discord
 docker
+epic-games
 filezilla
 firefox
 fly
