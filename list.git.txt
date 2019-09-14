@@ -204,6 +204,7 @@
 /Users/jameslucktaylor/go/src/github.com/golang/mock
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/golangci/golangci-lint
+/Users/jameslucktaylor/go/src/github.com/gomodule/redigo
 /Users/jameslucktaylor/go/src/github.com/google/btree
 /Users/jameslucktaylor/go/src/github.com/google/go-cmp
 /Users/jameslucktaylor/go/src/github.com/google/go-github

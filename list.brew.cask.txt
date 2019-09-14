@@ -22,7 +22,6 @@ keepassx
 keepingyouawake
 launchcontrol
 licecap
-microsoft-teams
 minikube
 ngrok
 owasp-zap
