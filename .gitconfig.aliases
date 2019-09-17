@@ -21,6 +21,9 @@
 	submit = codereview submit
 	sync = codereview sync
 
+	### Lines of code per author
+	lines = "!f() { git ls-files | while read f; do git blame -w -M -C -C --line-porcelain \"$f\" | grep '^author '; done | sort -f | uniq -ic | sort -n; }; f"
+
 	# Push a new branch upstream
 	psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
 

@@ -172,7 +172,7 @@ function danchangelog(){
             git --no-pager \
                 log --color \
                 --after="$(date --iso-8601=date --date='last Monday')T00:00:00+00:00" \
-                --before="$(date --iso-8601=date)T00:00:00+00:00" \
+                --before="$(date --iso-8601=date)T18:00:00+00:00" \
                 --format=format:"%Cgreen[${Repo##*/}] %C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)" \
                 master \
                 | sed  '/^$/d'

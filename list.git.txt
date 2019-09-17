@@ -33,6 +33,7 @@
 /Users/jameslucktaylor/git/github.com/awslabs/aws-security-benchmark
 /Users/jameslucktaylor/git/github.com/boto/boto3
 /Users/jameslucktaylor/git/github.com/cloudreach/ce-azure-dan-plaster
+/Users/jameslucktaylor/git/github.com/cloudreach/dentsu-azure-clz
 /Users/jameslucktaylor/git/github.com/cloudreach/sceptre
 /Users/jameslucktaylor/git/github.com/CrunchyData/postgres-operator
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-automation-account

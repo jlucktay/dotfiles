@@ -102,9 +102,10 @@
     "variables"
   ],
   "terminal.integrated.cursorBlinking": true,
+  "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "maximized",
-  "window.openFilesInNewWindow": "default",
   "window.restoreWindows": "all",
+  "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "window.zoomLevel": 0,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always",
