@@ -51,8 +51,8 @@ export TF_VAR_state_bucket="$TF_VAR_state_dynamodb.london"
 # AWS SDK for Go
 export AWS_SDK_LOAD_CONFIG=true
 
-# Homebrew should clean up after itself
-export HOMEBREW_INSTALL_CLEANUP=1
+# Homebrew - show off timings
+export HOMEBREW_DISPLAY_INSTALL_TIMES=1
 
 ### Bash setup
 # Fix for searching forward through command history
