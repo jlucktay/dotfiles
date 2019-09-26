@@ -50,6 +50,7 @@
   },
   "files.autoSave": "onFocusChange",
   "files.enableTrash": false,
+  "files.eol": "\n",
   "files.exclude": {
     "**/*.js": {
       "when": "$(basename).ts"

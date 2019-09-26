@@ -329,6 +329,7 @@
 /Users/jameslucktaylor/go/src/github.com/onsi/gomega
 /Users/jameslucktaylor/go/src/github.com/op/go-logging
 /Users/jameslucktaylor/go/src/github.com/opennota/check
+/Users/jameslucktaylor/go/src/github.com/orcaman/concurrent-map
 /Users/jameslucktaylor/go/src/github.com/pelletier/go-toml
 /Users/jameslucktaylor/go/src/github.com/philhofer/fwd
 /Users/jameslucktaylor/go/src/github.com/pkg/errors
@@ -386,6 +387,7 @@
 /Users/jameslucktaylor/go/src/github.com/xlab/treeprint
 /Users/jameslucktaylor/go/src/github.com/yhat/scrape
 /Users/jameslucktaylor/go/src/github.com/yosssi/ace
+/Users/jameslucktaylor/go/src/github.com/yosssi/gohtml
 /Users/jameslucktaylor/go/src/go.mongodb.org/mongo-driver
 /Users/jameslucktaylor/go/src/go.opencensus.io
 /Users/jameslucktaylor/go/src/go.uber.org/atomic
