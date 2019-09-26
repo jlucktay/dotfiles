@@ -1,4 +1,11 @@
 {
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "editor.snippetSuggestions": "none"
+  },
   "[markdown]": {
     "editor.tabSize": 2
   },
@@ -73,6 +80,13 @@
     "--fast"
   ],
   "go.lintTool": "golangci-lint",
+  "go.useLanguageServer": true,
+  "gopls": {
+    "completeUnimported": true,
+    "deepCompletion": true,
+    "usePlaceholders": true,
+    "watchChangedFiles": true
+  },
   "liveshare.featureSet": "stable",
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
