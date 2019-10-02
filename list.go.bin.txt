@@ -60,7 +60,6 @@
 /Users/jameslucktaylor/go/bin/jrams
 /Users/jameslucktaylor/go/bin/kube-golint-todo
 /Users/jameslucktaylor/go/bin/linkcheck
-/Users/jameslucktaylor/go/bin/mage
 /Users/jameslucktaylor/go/bin/micro
 /Users/jameslucktaylor/go/bin/mockgen
 /Users/jameslucktaylor/go/bin/movingtriangle

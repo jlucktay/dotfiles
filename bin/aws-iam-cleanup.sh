@@ -6,5 +6,5 @@ IFS=$'\n\t'
 
 while IFS= read -r line; do
 #   echo "role: '$line'"
-  echo "aws iam delete-role --role-name $line"
+    echo "aws iam delete-role --role-name $line"
 done < "$HOME/roles.head.txt"

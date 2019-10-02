@@ -279,7 +279,6 @@
 /Users/jameslucktaylor/go/src/github.com/leanovate/gopter
 /Users/jameslucktaylor/go/src/github.com/lib/pq
 /Users/jameslucktaylor/go/src/github.com/LondonGophers/StudyGroup
-/Users/jameslucktaylor/go/src/github.com/magefile/mage
 /Users/jameslucktaylor/go/src/github.com/magiconair/properties
 /Users/jameslucktaylor/go/src/github.com/markbates/inflect
 /Users/jameslucktaylor/go/src/github.com/markbates/randx

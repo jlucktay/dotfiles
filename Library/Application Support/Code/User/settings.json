@@ -89,6 +89,7 @@
     "watchChangedFiles": true
   },
   "liveshare.featureSet": "stable",
+  "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
   "mssql.connections": [

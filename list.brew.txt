@@ -78,6 +78,7 @@ libyaml
 libzip
 little-cms2
 lua
+mage
 make
 mas
 mkcert
