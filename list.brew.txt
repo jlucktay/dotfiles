@@ -120,6 +120,8 @@ python3
 python@2
 readline
 redis
+rsync
+rsync-time-backup
 ruby
 screenfetch
 shared-mime-info

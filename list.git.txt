@@ -56,10 +56,8 @@
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-tags
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-backup
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-devops
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-linux
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-os
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-secrets-gen
-/Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vm-windows
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-base-vnet-multigeo
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-region-conversion
 /Users/jameslucktaylor/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-storage-account-sse
@@ -98,6 +96,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/pp2a-asg2
 /Users/jameslucktaylor/git/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/git/github.com/jlucktay/rest-api
+/Users/jameslucktaylor/git/github.com/jlucktay/rsync-time-backup
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/surge
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
@@ -144,9 +143,11 @@
 /Users/jameslucktaylor/go/src/github.com/Azure/go-autorest
 /Users/jameslucktaylor/go/src/github.com/beatgammit/turnpike
 /Users/jameslucktaylor/go/src/github.com/bep/gitmap
+/Users/jameslucktaylor/go/src/github.com/bmatcuk/doublestar
 /Users/jameslucktaylor/go/src/github.com/boombuler/barcode
 /Users/jameslucktaylor/go/src/github.com/boyter/scc
 /Users/jameslucktaylor/go/src/github.com/briandowns/super-hacker
+/Users/jameslucktaylor/go/src/github.com/buildkite/yaml
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
 /Users/jameslucktaylor/go/src/github.com/bwmarrin/discordgo
 /Users/jameslucktaylor/go/src/github.com/cavaliercoder/go-abs
@@ -171,6 +172,10 @@
 /Users/jameslucktaylor/go/src/github.com/dimchansky/utfbom
 /Users/jameslucktaylor/go/src/github.com/disintegration/imaging
 /Users/jameslucktaylor/go/src/github.com/dlclark/regexp2
+/Users/jameslucktaylor/go/src/github.com/docker/distribution
+/Users/jameslucktaylor/go/src/github.com/docker/go-units
+/Users/jameslucktaylor/go/src/github.com/drone/drone-runtime
+/Users/jameslucktaylor/go/src/github.com/drone/drone-yaml
 /Users/jameslucktaylor/go/src/github.com/dustin/go-humanize
 /Users/jameslucktaylor/go/src/github.com/dvyukov/go-fuzz
 /Users/jameslucktaylor/go/src/github.com/eknkc/amber
@@ -379,6 +384,7 @@
 /Users/jameslucktaylor/go/src/github.com/ugorji/go
 /Users/jameslucktaylor/go/src/github.com/urfave/cli
 /Users/jameslucktaylor/go/src/github.com/uudashr/gopkgs
+/Users/jameslucktaylor/go/src/github.com/vinzenz/yaml
 /Users/jameslucktaylor/go/src/github.com/wfscheper/xkcdpwd
 /Users/jameslucktaylor/go/src/github.com/xeipuuv/gojsonpointer
 /Users/jameslucktaylor/go/src/github.com/xeipuuv/gojsonreference

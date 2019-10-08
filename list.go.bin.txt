@@ -11,6 +11,7 @@
 /Users/jameslucktaylor/go/bin/cover
 /Users/jameslucktaylor/go/bin/deadcode
 /Users/jameslucktaylor/go/bin/dlv
+/Users/jameslucktaylor/go/bin/drone-yaml
 /Users/jameslucktaylor/go/bin/dupl
 /Users/jameslucktaylor/go/bin/errcheck
 /Users/jameslucktaylor/go/bin/fillstruct
