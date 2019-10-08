@@ -104,6 +104,10 @@
       "user": "FranceContract"
     }
   ],
+  "powershell.codeFormatting.autoCorrectAliases": true,
+  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
+  "powershell.codeFormatting.preset": "OTBS",
+  "powershell.codeFormatting.useCorrectCasing": true,
   "powershell.integratedConsole.showOnStartup": false,
   "shellcheck.customArgs": [
     "-s",
