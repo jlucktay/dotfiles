@@ -1,0 +1,16 @@
+# Go - keep source but nothing else
+- go/
++ go/src/
+
+# MacOS Finder metadata
+- .DS_Store
+
+# Everything else
+- *Cache*/
+- *cache*/
+- .Trash/
+- .cache/
+- .cpan/build/*
+- Library/Application Support/Google/Chrome/
+- Library/Application Support/Steam/
+- node_modules/
