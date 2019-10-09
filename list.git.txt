@@ -87,6 +87,7 @@
 /Users/jameslucktaylor/git/github.com/googleCloudPlatform/nodejs-docs-samples
 /Users/jameslucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
+/Users/jameslucktaylor/git/github.com/jlucktay/factorio-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/gilded-rose-kata
 /Users/jameslucktaylor/git/github.com/jlucktay/hello-micro
 /Users/jameslucktaylor/git/github.com/jlucktay/homebrew-tap
