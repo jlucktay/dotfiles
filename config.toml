@@ -21,6 +21,7 @@
         [".nethackrc"],
         [".ssh/config"],
         [".vimrc"],
+        ["bash-cheat-sheet.txt"],
         ["bin/"],
         ["git-completion.bash"],
         ["Library/Application Support/Code/User/settings.json"],
