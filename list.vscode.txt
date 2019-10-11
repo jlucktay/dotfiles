@@ -1,3 +1,4 @@
+aws-scripting-guy.cform
 bungcip.better-toml
 casualjim.gotemplate
 CoenraadS.bracket-pair-colorizer
@@ -9,7 +10,6 @@ EditorConfig.EditorConfig
 eg2.vscode-npm-script
 ericadamski.carbon-now-sh
 gitduck.code-streaming
-googlecloudtools.cloudcode
 GrapeCity.gc-excelviewer
 mauve.terraform
 mechatroner.rainbow-csv
