@@ -10,7 +10,7 @@ https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lea
 https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
     git commit --fixup <commit>
     - where <commit> is the original goofed commit you want to.. fix.. up...
-    git rebase -i --autosquash <commit>
+    git rebase -i --autosquash <commit> (probably 'origin/master')
     - where <commit> is the last commit you want to retain as-is, not the first one you want to change
 
 K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit)
