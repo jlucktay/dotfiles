@@ -1,9 +1,22 @@
+# Chrome
+- Library/Application Support/Google/Chrome/
+
+# Docker
+- Library/Containers/com.docker.docker/Data/*.sock
+
 # Go - keep source but nothing else
-- go/
 + go/src/
+- go/
+
+# Google Drive
+- Library/Application Support/Google/Drive/user_default/lockfile
+- Library/Group Containers/google_drive/tmp*
 
 # MacOS Finder metadata
 - .DS_Store
+
+# Zoom
+- .zoomus/
 
 # Everything else
 - *Cache*/
@@ -11,6 +24,7 @@
 - .Trash/
 - .cache/
 - .cpan/build/*
-- Library/Application Support/Google/Chrome/
+- Library/Application Support/Code/*-shared.sock
 - Library/Application Support/Steam/
+- Library/Google/GoogleSoftwareUpdate/Stats/Keystone.stats
 - node_modules/

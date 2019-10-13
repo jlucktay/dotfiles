@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
 
 ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-rsync_tmbackup.sh /Users/jameslucktaylor /Volumes/Sgte-ExFAT/home "${ScriptDirectory}/exclude.txt"
+Flags=$(rsync_tmbackup.sh --rsync-get-flags)
+Flags+=" --no-devices --no-specials"
+
+rsync_tmbackup.sh \
+    --rsync-set-flags "$Flags" \
+    /Users/jameslucktaylor \
+    /Volumes/Sgte-ExFAT/home \
+    "${ScriptDirectory}/exclude.txt"
