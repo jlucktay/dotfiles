@@ -16,7 +16,7 @@
 - .DS_Store
 
 # Zoom
-- .zoomus/
+- .zoomus
 
 # Everything else
 - *Cache*/
