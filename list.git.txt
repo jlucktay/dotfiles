@@ -8,7 +8,6 @@
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-sceptre
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/content-terraform
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/cr-aws-landing-zone
-/Users/jameslucktaylor/git/bitbucket.org/cloudreach/cr-lab-form-automation
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/gameday-repo
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/gatekeeper
 /Users/jameslucktaylor/git/bitbucket.org/cloudreach/golden-terraform-resources
@@ -250,7 +249,6 @@
 /Users/jameslucktaylor/go/src/github.com/jban332/kin-test
 /Users/jameslucktaylor/go/src/github.com/jdkato/prose
 /Users/jameslucktaylor/go/src/github.com/jlucktay/adventofcode
-/Users/jameslucktaylor/go/src/github.com/jlucktay/azure-devops-helper
 /Users/jameslucktaylor/go/src/github.com/jlucktay/f1-go-scrape
 /Users/jameslucktaylor/go/src/github.com/jlucktay/go-getter
 /Users/jameslucktaylor/go/src/github.com/jlucktay/go-wfs
@@ -258,7 +256,6 @@
 /Users/jameslucktaylor/go/src/github.com/jlucktay/golang-web-dev
 /Users/jameslucktaylor/go/src/github.com/jlucktay/golang-workbench
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gophercises
-/Users/jameslucktaylor/go/src/github.com/jlucktay/goreadme
 /Users/jameslucktaylor/go/src/github.com/jlucktay/howistart-go
 /Users/jameslucktaylor/go/src/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/go/src/github.com/jlucktay/kube-golint-todo
