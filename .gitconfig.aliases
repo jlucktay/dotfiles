@@ -21,6 +21,10 @@
 	submit = codereview submit
 	sync = codereview sync
 
+	# Unpushed branches/commits
+	# With thanks to: https://stackoverflow.com/questions/39220870/in-git-list-names-of-branches-with-unpushed-commits
+	unpushed = log --branches --not --remotes --no-walk --decorate --oneline
+
 	### Lines of code per author
 	lines = "!f() { git ls-files | while read f; do git blame -w -M -C -C --line-porcelain \"$f\" | grep '^author '; done | sort -f | uniq -ic | sort -n; }; f"
 
