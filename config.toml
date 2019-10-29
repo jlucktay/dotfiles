@@ -11,14 +11,16 @@
     envs = [["ZipGoesHere", "${HM_SRC}"]]
     cmds = [["${HM_SRC}/bin/homemaker/eternal_history.sh"]]
     links = [
-        [".bash_profile"],
         [".bashrc"],
+        [".config/bashrc.d/"],
         [".config/htop/htoprc"],
         [".config/nano/nanorc"],
         [".config/powershell/Microsoft.PowerShell_profile.ps1"],
         [".config/powershell/Microsoft.VSCode_profile.ps1"],
+        [".config/profile.d/"],
         [".inputrc"],
         [".nethackrc"],
+        [".profile"],
         [".ssh/config"],
         [".vimrc"],
         ["bash-cheat-sheet.txt"],
