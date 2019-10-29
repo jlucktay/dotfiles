@@ -1,134 +1,81 @@
 {
-  "[go]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+    "[markdown]": {
+        "editor.tabSize": 2
     },
+    "[proto3]": {
+        "editor.defaultFormatter": "xaver.clang-format",
+        "editor.tabSize": 2
+    },
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.tabSize": 2
+    },
+    "breadcrumbs.enabled": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorStyle": "line-thin",
+    "editor.fontFamily": "FiraCode-Retina",
+    "editor.fontLigatures": true,
     "editor.formatOnSave": true,
-    "editor.snippetSuggestions": "none"
-  },
-  "[markdown]": {
-    "editor.tabSize": 2
-  },
-  "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    "editor.tabSize": 2
-  },
-  "[terraform]": {
-    "editor.tabSize": 2
-  },
-  "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.tabSize": 2
-  },
-  "azure.resourceFilter": [
-    "152e4c75-3657-4284-bb2c-0d825873d72b/f43108ec-f2eb-4cb0-a6b0-37d635f13dfd"
-  ],
-  "breadcrumbs.enabled": false,
-  "cloudcode.gke": {
-    "projectIds": [
-      "jameslucktaylor-info"
-    ]
-  },
-  "editor.cursorBlinking": "phase",
-  "editor.cursorStyle": "line-thin",
-  "editor.fontFamily": "FiraCode-Retina",
-  "editor.fontLigatures": true,
-  "editor.formatOnSave": true,
-  "editor.minimap.showSlider": "always",
-  "editor.multiCursorModifier": "alt",
-  "editor.renderControlCharacters": true,
-  "editor.renderWhitespace": "boundary",
-  "editor.rulers": [
-    120
-  ],
-  "editor.wordWrap": "on",
-  "explorer.confirmDragAndDrop": false,
-  "explorer.sortOrder": "type",
-  "files.associations": {
-    ".gitconfig": "gitconfig",
-    ".gitconfig.aliases": "gitconfig",
-    "htoprc": "properties"
-  },
-  "files.autoSave": "onFocusChange",
-  "files.enableTrash": false,
-  "files.eol": "\n",
-  "files.exclude": {
-    "**/*.js": {
-      "when": "$(basename).ts"
+    "editor.minimap.showSlider": "always",
+    "editor.multiCursorModifier": "alt",
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "boundary",
+    "editor.rulers": [
+        120
+    ],
+    "editor.wordWrap": "on",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.sortOrder": "type",
+    "files.associations": {
+        ".gitconfig": "gitconfig",
+        ".gitconfig.aliases": "gitconfig",
+        "htoprc": "properties"
     },
-    "**/.DS_Store": true,
-    "**/.git": true,
-    "**/.hg": true,
-    "**/.svn": true,
-    "**/CVS": true
-  },
-  "files.hotExit": "onExitAndWindowClose",
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "git.autoRepositoryDetection": false,
-  "git.autoStash": true,
-  "git.confirmSync": false,
-  "git.countBadge": "off",
-  "git.fetchOnPull": true,
-  "git.rebaseWhenSync": true,
-  "go.enableCodeLens": {
-    "references": false,
-    "runtest": true
-  },
-  "go.formatTool": "goimports",
-  "go.gocodeAutoBuild": true,
-  "go.lintFlags": [
-    "--fast"
-  ],
-  "go.lintTool": "golangci-lint",
-  "go.useLanguageServer": true,
-  "gopls": {
-    "completeUnimported": true,
-    "deepCompletion": true,
-    "usePlaceholders": true,
-    "watchChangedFiles": true
-  },
-  "liveshare.featureSet": "stable",
-  "markdown.preview.doubleClickToSwitchToEditor": false,
-  "markdown.preview.scrollEditorWithPreview": false,
-  "material-icon-theme.showUpdateMessage": false,
-  "mssql.connections": [
-    {
-      "authenticationType": "SqlLogin",
-      "database": "AZEUW1SQDBFCT01",
-      "emptyPasswordInput": false,
-      "password": "",
-      "profileName": "clzmf-176.FranceContract",
-      "savePassword": true,
-      "server": "azeuw1sqfct01.database.windows.net",
-      "user": "FranceContract"
-    }
-  ],
-  "powershell.codeFormatting.autoCorrectAliases": true,
-  "powershell.codeFormatting.pipelineIndentationStyle": "IncreaseIndentationForFirstPipeline",
-  "powershell.codeFormatting.preset": "OTBS",
-  "powershell.codeFormatting.useCorrectCasing": true,
-  "powershell.integratedConsole.showOnStartup": false,
-  "shellcheck.customArgs": [
-    "-s",
-    "bash",
-    "-x"
-  ],
-  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
-  "sortJSON.orderOverride": [
-    "$schema",
-    "contentVersion",
-    "parameters",
-    "variables"
-  ],
-  "terminal.integrated.cursorBlinking": true,
-  "window.closeWhenEmpty": true,
-  "window.newWindowDimensions": "maximized",
-  "window.restoreWindows": "all",
-  "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
-  "window.zoomLevel": 0,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.tree.renderIndentGuides": "always",
-  "xmlTools.enforcePrettySelfClosingTagOnFormat": true
+    "files.autoSave": "onFocusChange",
+    "files.enableTrash": false,
+    "files.eol": "\n",
+    "files.exclude": {
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/.DS_Store": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.svn": true,
+        "**/CVS": true
+    },
+    "files.hotExit": "onExitAndWindowClose",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "git.autoRepositoryDetection": false,
+    "git.autoStash": true,
+    "git.confirmSync": false,
+    "git.countBadge": "off",
+    "git.fetchOnPull": true,
+    "git.rebaseWhenSync": true,
+    "markdown.preview.doubleClickToSwitchToEditor": false,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "material-icon-theme.showUpdateMessage": false,
+    "shellcheck.customArgs": [
+        "-s",
+        "bash",
+        "-x"
+    ],
+    "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+    "sortJSON.orderOverride": [
+        "$schema",
+        "contentVersion",
+        "parameters",
+        "variables"
+    ],
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.shell.osx": "/usr/local/bin/bash",
+    "window.closeWhenEmpty": true,
+    "window.newWindowDimensions": "maximized",
+    "window.restoreWindows": "all",
+    "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.renderIndentGuides": "always"
 }
