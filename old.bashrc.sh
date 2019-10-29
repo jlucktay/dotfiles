@@ -1,19 +1,5 @@
 #!/usr/bin/env bash
 
-# Start the clock - check this at the end, to see how long .bashrc takes to run through
-TimeStart=$(gdate +%s%N)
-
-# Don't run this for every single terminal because it's pretty slow
-if (( RANDOM < 6553 )); then
-    screenfetch
-fi
-
-# Wire up Go, Bash, Python, etc binary/script directories
-GOPATH=$(go env GOPATH)
-export GOPATH
-GOROOT=$(go env GOROOT)
-export GOROOT
-
 # Build up PATH
 PATH="$HOME/Library/Python/3.7/bin:$PATH"
 PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
@@ -82,16 +68,6 @@ source "$HOME/git-completion.bash"
 # shellcheck source=/Users/jameslucktaylor/git/cloudreach/sceptre-bash-autocomplete/sceptre_completion.sh
 # source ~/git/cloudreach/sceptre-bash-autocomplete/sceptre_completion.sh
 
-### Useful aliases/functions
-alias cp='cp -iv'
-alias mv='mv -iv'
-alias rm='rm -iv'
-
-# Alternative commands (thank you: https://remysharp.com/2018/08/23/cli-improved)
-alias cat=bat
-alias du="ncdu --color dark -rr -x --exclude .git --exclude node_modules"
-alias ping='prettyping --nolegend'
-
 export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
 
 # shellcheck source=/Users/jameslucktaylor/.fzf.bash
@@ -112,31 +88,11 @@ function lb() {
     code "$LogbooksDir/logbook.$(gdate '+%Y%m%d').md"
 }
 
-# Bash ls
-alias ls='gls --color --human-readable'
-alias ll='gls -l --color --almost-all --classify --human-readable'
-
-# Miscellaneous
-alias acsjl="awsume celab --session-name james.lucktaylor"
-alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
-alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
-alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
-alias hlh='find $HOME -type f -name Dockerfile -path "*/jlucktay/*" -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
-alias jq='jq --sort-keys'
-alias sauron='sudo ncdu --color dark -rr -x --exclude .git --exclude node_modules /'
-alias tb="nc termbin.com 9999"
-alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
-
 # Kubernetes/K8s
 function k8staints(){
     # shellcheck disable=SC2016
     kubectl get nodes -o go-template='{{printf "%-47s %-12s\n" "Node" "Taint"}}{{- range .items}}{{- if $taint := (index .spec "taints") }}{{- .metadata.name }}{{ "\t" }}{{- range $taint }}{{- .key }}={{ .value }}:{{ .effect }}{{ "\t" }}{{- end }}{{- "\n" }}{{- end}}{{- end}}'
 }
-
-# DAN
-DANADGuid="defecd80-a314-44a2-9427-cea2732d22af"
-
-alias dantfclean="find \$HOME/go/src/github.com/Dentsu-Aegis-Network-Global-Technology \$HOME/git/github.com/Dentsu-Aegis-Network-Global-Technology \( \( -type d -name \".terraform\" \) -o \( -type f -iname \"terraform*.*tfstate*\" \) \) -exec rm -rfv -- \"{}\" + | grep -vE \"\/[0-9a-f]{32}\" | grep -E \"^removed directory '\""
 
 function dankvperms(){
     for Subscription in $(jq -r '.[] | select( .name | startswith("VDC") )' \
@@ -216,10 +172,6 @@ function top10(){
     HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
 }
 
-alias chrome_cloudreach='open --new -a "Google Chrome" --args --profile-directory=Default'
-alias chrome_personal='open --new -a "Google Chrome" --args --profile-directory="Profile 1"'
-alias chrome_dad='open --new -a "Google Chrome" --args --profile-directory="Profile 5"'
-
 # AWS things, like labs
 export AWS_DEFAULT_PROFILE=cr-labs-jlucktay
 
@@ -238,9 +190,6 @@ export -f azregions
 function mmfa(){
     oathtool --base32 --totp "$1" ;
 }
-
-# AWSume alias to source the AWSume script
-alias awsume=". awsume"
 
 # Auto-Complete function for AWSume
 function _awsume(){
@@ -331,7 +280,3 @@ if [ -f "$HOME/bash-cheat-sheet.txt" ]; then
 else
     echo "'$HOME/bash-cheat-sheet.txt' not available"
 fi
-
-# Stop the clock - keep this last
-TimeTaken=$((($(gdate +%s%N) - TimeStart)/1000000))
-echo ".bashrc: ${TimeTaken}ms"
