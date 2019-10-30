@@ -1,4 +1,6 @@
 ### Useful aliases/functions
+
+# Interactive and verbose
 alias cp='gcp -iv'
 alias mv='gmv -iv'
 alias rm='grm -iv'

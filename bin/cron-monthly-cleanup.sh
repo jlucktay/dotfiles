@@ -2,7 +2,7 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-CronLogDir="/Users/jameslucktaylor/log"
+CronLogDir="$HOME/log"
 mkdir -p "$CronLogDir"
 
 CronLog="$CronLogDir/cron.$(gdate '+%Y%m%d.%H%M%S.%N%z').log"

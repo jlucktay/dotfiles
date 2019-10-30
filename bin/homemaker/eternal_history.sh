@@ -2,6 +2,16 @@
 set -euo pipefail
 IFS=$'\n\t'
 
+ScriptName=$(basename "$0")
+
+### Check for presence of other tools
+
+# JQ
+hash jq 2>/dev/null || {
+    echo >&2 "$ScriptName requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
+    exit 1
+}
+
 # jq - commandline JSON processor [version 1.6]
 #
 #   -e               set the exit status code based on the output;

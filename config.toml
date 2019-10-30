@@ -7,7 +7,7 @@
     prefix = ["brew", "cask", "install"]
 
 [tasks.default]
-    deps = ["git"]
+    deps = ["git", "jq"]
     envs = [["ZipGoesHere", "${HM_SRC}"]]
     cmds = [["${HM_SRC}/bin/homemaker/eternal_history.sh"]]
     links = [
@@ -23,11 +23,12 @@
         [".profile"],
         [".ssh/config"],
         [".vimrc"],
+        ["Library/Application Support/Code/User/settings.json"],
+        ["Library/Application Support/Code/User/snippets/"],
         ["bash-cheat-sheet.txt"],
         ["bin/"],
         ["git-completion.bash"],
-        ["Library/Application Support/Code/User/settings.json"],
-        ["Library/Application Support/Code/User/snippets/"],
+        ["posh-git-prompt.sh"],
     ]
 
 [tasks.coreutils]
@@ -59,6 +60,10 @@
     envs = [["HOMEBREWINSTALL", "https://raw.githubusercontent.com/Homebrew/install/master/install"]]
     cmds = [["/usr/bin/ruby", "-e",
         "$(curl --fail --location --show-error --silent $HOMEBREWINSTALL)"]]
+
+[tasks.jq]
+    rejects = [["stat", "/usr/local/bin/jq"]]
+    cmds = [["@install", "jq"]]
 
 [tasks.lists]
     deps = ["lists-git", "lists-go-bin", "lists-homebrew", "lists-npm", "lists-vscode"]

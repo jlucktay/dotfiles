@@ -1,4 +1,5 @@
 # Managed by homemaker, so edit this file in the 'dotfiles' repo, not locally
+# This is Git's per-user configuration file.
 
 [color]
 	branch = auto
@@ -22,3 +23,15 @@
 [user]
 	name = James Lucktaylor
 	useConfigOnly = true
+
+# https://github.com/lyze/posh-git-sh#configuration-options
+
+[bash]
+	branchBehindAndAheadDisplay = full
+	describeStyle = default
+	enableFileStatus = true
+	enableGitStatus = true
+	enableStashStatus = true
+	showStatusWhenZero = false
+	showUpstream = git
+	enableStatusSymbol = true

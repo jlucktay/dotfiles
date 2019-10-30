@@ -27,8 +27,8 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
     "files.associations": {
-        ".gitconfig": "gitconfig",
-        ".gitconfig.aliases": "gitconfig",
+        ".gitconfig": "properties",
+        ".gitconfig.aliases": "properties",
         "htoprc": "properties"
     },
     "files.autoSave": "onFocusChange",
@@ -58,9 +58,10 @@
     "markdown.preview.scrollEditorWithPreview": false,
     "material-icon-theme.showUpdateMessage": false,
     "shellcheck.customArgs": [
-        "-s",
-        "bash",
-        "-x"
+        "--enable=add-default-case,avoid-nullary-conditions,check-unassigned-uppercase,quote-safe-variables",
+        "--external-sources",
+        "--severity=style",
+        "--shell=bash",
     ],
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "sortJSON.orderOverride": [

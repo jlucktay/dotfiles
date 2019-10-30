@@ -11,7 +11,7 @@ TimeStart=$(gdate +%s%N)
 
 rsync_tmbackup.sh \
     --rsync-set-flags "$Flags" \
-    /Users/jameslucktaylor \
+    "$HOME" \
     /Volumes/Sgte-ExFAT/home \
     "${ScriptDirectory}/exclude.txt"
 
