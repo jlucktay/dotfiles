@@ -79,15 +79,6 @@ complete -F _awsume awsume
 # AWSume alias to source the AWSume script
 alias awsume=". awsume"
 
-### iTerm2 shell integration
-# shellcheck source=/Users/jameslucktaylor/.iterm2_shell_integration.bash
-[[ -e "${HOME}/.iterm2_shell_integration.bash" ]] && source "${HOME}/.iterm2_shell_integration.bash"
-
-# Used for the badge
-function iterm2_print_user_vars(){
-    iterm2_set_user_var currentDir "${PWD##*/}"
-}
-
 # GCP SDK integration
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
