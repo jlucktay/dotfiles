@@ -18,12 +18,6 @@ function lb() {
     code "$LogbooksDir/logbook.$(gdate '+%Y%m%d').md"
 }
 
-# Kubernetes/K8s
-function k8staints(){
-    # shellcheck disable=SC2016
-    kubectl get nodes -o go-template='{{printf "%-47s %-12s\n" "Node" "Taint"}}{{- range .items}}{{- if $taint := (index .spec "taints") }}{{- .metadata.name }}{{ "\t" }}{{- range $taint }}{{- .key }}={{ .value }}:{{ .effect }}{{ "\t" }}{{- end }}{{- "\n" }}{{- end}}{{- end}}'
-}
-
 # Thank you: https://wiki-dev.bash-hackers.org/syntax/pe
 function danchangelog(){
     for Repo in "$HOME"/git/github.com/Dentsu-Aegis-Network-Global-Technology/clz-tfmodule-*
@@ -57,24 +51,6 @@ function gocover (){
     go test "$COVERFLAGS" -coverprofile="$t" "$@" \
         && go tool cover -func="$t" \
         && unlink "$t"
-}
-
-function stashcheck(){
-    while IFS= read -r -d '' Git; do
-        mapfile -t Stash < <(GIT_DIR=$Git git stash list)
-
-        if (( ${#Stash[@]} > 0 )); then
-            realpath "$Git/.."
-        fi
-        for StashLine in "${Stash[@]}"; do
-            printf "\t%s\n" "$StashLine"
-        done
-    done < <(find "$HOME/go/src" "$HOME/git" -type d -name ".git" -print0)
-}
-
-# http://linux.byexamples.com/archives/332/what-is-your-10-common-linux-commands/
-function top10(){
-    HISTTIMEFORMAT="" history | awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl | head -n10
 }
 
 function awsregions(){
@@ -120,29 +96,3 @@ function iterm2_print_user_vars(){
 # GCP SDK integration
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc
 . /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc
-
-# Eternal bash history
-# --------------------
-# Undocumented feature which sets the size to "unlimited".
-# http://stackoverflow.com/questions/9457233/unlimited-bash-history
-export HISTFILESIZE=
-export HISTSIZE=
-export HISTTIMEFORMAT="[%F %T] "
-
-# Change the file location because certain bash sessions truncate .bash_history file upon close.
-# http://superuser.com/questions/575479/bash-history-truncated-to-500-lines-on-each-login
-export HISTFILE=$HOME/.bash_eternal_history
-
-# Force prompt to write history after every command.
-# http://superuser.com/questions/20900/bash-history-loss
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-# https://ss64.com/bash/history.html
-export HISTCONTROL=erasedups:ignoreboth
-shopt -s histappend
-
-# https://www.linuxjournal.com/content/globstar-new-bash-globbing-option
-shopt -s globstar
-
-# Autojump!
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
