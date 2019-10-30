@@ -1,8 +1,3 @@
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
-
-# shellcheck source=/Users/jameslucktaylor/.fzf.bash
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
 function git-outdated-sync(){
     find . -type d -name .git -not -path "*/.terraform/*" -execdir bash -c "pwd ; git pull --all ; git push --all ; echo" \;
 }
