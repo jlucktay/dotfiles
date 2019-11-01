@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-# shellcheck source=/dev/null
+# shellcheck disable=SC1090
 . "$(realpath "$ScriptDirectory/func.processList.sh")"
 
 HomebrewTapList=$(realpath "$ScriptDirectory/../../list.brew.tap.txt")
