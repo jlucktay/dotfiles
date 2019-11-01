@@ -1,4 +1,11 @@
 {
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+        "editor.formatOnSave": true,
+        "editor.snippetSuggestions": "none"
+    },
     "[markdown]": {
         "editor.tabSize": 2
     },
@@ -57,6 +64,14 @@
     "git.countBadge": "off",
     "git.fetchOnPull": true,
     "git.rebaseWhenSync": true,
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "gopls": {
+        "completeUnimported": true,
+        "deepCompletion": true,
+        "usePlaceholders": true,
+        "watchFileChanges": true
+    },
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "markdown.preview.scrollEditorWithPreview": false,
     "material-icon-theme.showUpdateMessage": false,
