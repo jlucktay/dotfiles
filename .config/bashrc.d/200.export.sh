@@ -8,6 +8,7 @@ export GOROOT
 
 # Build up PATH
 PATH="$HOME/bin:$GOPATH/bin:$PATH"
+PATH="/usr/local/opt/curl/bin:$PATH"
 export PATH
 
 # If I have to edit something in a terminal window, I like using Nano. The up-to-date version, from Homebrew.
