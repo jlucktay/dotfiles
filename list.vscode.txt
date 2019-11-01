@@ -1,0 +1,9 @@
+bungcip.better-toml
+DavidAnson.vscode-markdownlint
+ms-azuretools.vscode-docker
+ms-vscode.Go
+PKief.material-icon-theme
+redhat.vscode-yaml
+richie5um2.vscode-sort-json
+timonwong.shellcheck
+Tyriar.sort-lines
