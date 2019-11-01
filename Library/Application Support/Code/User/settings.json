@@ -13,6 +13,8 @@
     "breadcrumbs.enabled": false,
     "editor.cursorBlinking": "phase",
     "editor.cursorStyle": "line-thin",
+    "editor.detectIndentation": false,
+    "editor.emptySelectionClipboard": false,
     "editor.fontFamily": "FiraCode-Retina",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
@@ -23,7 +25,8 @@
     "editor.rulers": [
         120
     ],
-    "editor.wordWrap": "on",
+    "editor.wordWrap": "bounded",
+    "editor.wordWrapColumn": 120,
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
     "files.associations": {
@@ -61,7 +64,7 @@
         "--enable=add-default-case,avoid-nullary-conditions,check-unassigned-uppercase,quote-safe-variables",
         "--external-sources",
         "--severity=style",
-        "--shell=bash",
+        "--shell=bash"
     ],
     "shellcheck.executablePath": "/usr/local/bin/shellcheck",
     "sortJSON.orderOverride": [
