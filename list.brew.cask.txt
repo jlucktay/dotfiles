@@ -1,9 +1,11 @@
 1password
+1password-cli
 docker
 font-fira-code
 goland
 google-chrome
 google-cloud-sdk
+gpg-suite-no-mail
 iterm2
 itsycal
 keepingyouawake

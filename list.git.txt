@@ -1,6 +1,11 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
+/Users/jameslucktaylor/git/github.com/jlucktay/factorio-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/stack
+/Users/jameslucktaylor/git/github.com/jlucktay/tyk-docs
+/Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/franela/goreq
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata

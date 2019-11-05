@@ -7,10 +7,12 @@
 /Users/jameslucktaylor/go/bin/gocode-gomod
 /Users/jameslucktaylor/go/bin/godef
 /Users/jameslucktaylor/go/bin/godoctor
+/Users/jameslucktaylor/go/bin/goimports
 /Users/jameslucktaylor/go/bin/golint
 /Users/jameslucktaylor/go/bin/gomodifytags
 /Users/jameslucktaylor/go/bin/gopkgs
 /Users/jameslucktaylor/go/bin/goplay
+/Users/jameslucktaylor/go/bin/gopls
 /Users/jameslucktaylor/go/bin/goplugins
 /Users/jameslucktaylor/go/bin/gorename
 /Users/jameslucktaylor/go/bin/goreturns
