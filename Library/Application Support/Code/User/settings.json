@@ -37,6 +37,7 @@
     "explorer.confirmDragAndDrop": false,
     "explorer.sortOrder": "type",
     "files.associations": {
+        "*.mmark": "markdown",
         ".gitconfig": "properties",
         ".gitconfig.aliases": "properties",
         "htoprc": "properties"
