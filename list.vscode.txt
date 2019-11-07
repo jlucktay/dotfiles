@@ -8,3 +8,4 @@ richie5um2.vscode-sort-json
 timonwong.shellcheck
 Tyriar.sort-lines
 WakaTime.vscode-wakatime
+yzhang.markdown-all-in-one
