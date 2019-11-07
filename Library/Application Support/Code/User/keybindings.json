@@ -1,0 +1,16 @@
+// Place your key bindings in this file to override the defaults
+[
+    {
+        "key": "ctrl+alt+cmd+j",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "ctrl+alt+cmd+k",
+        "command": "workbench.action.terminal.focusPrevious"
+    },
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    }
+]
