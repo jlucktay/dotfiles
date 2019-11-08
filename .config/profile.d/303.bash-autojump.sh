@@ -1,2 +1,4 @@
 # Autojump!
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+if test -r /usr/local/etc/profile.d/autojump.sh; then
+    source /usr/local/etc/profile.d/autojump.sh
+fi

@@ -1,9 +1,10 @@
 # Profile-specific exports
-
 function prefix_path() {
     # if [[ ! ":${PATH}:" == *":${1}:"* ]]; then
-        export PATH="${1}${PATH:+:${PATH}}"
     # fi
+    if test -d "$1"; then
+        export PATH="${1}${PATH:+:${PATH}}"
+    fi
 }
 
 # Build up PATH

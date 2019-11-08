@@ -1,2 +1,4 @@
 # shellcheck disable=SC1090
-test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+if test -r "$HOME/.iterm2_shell_integration.bash"; then
+    source "$HOME/.iterm2_shell_integration.bash"
+fi

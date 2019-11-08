@@ -1,13 +1,19 @@
 ### Environment variables
 
 # Go
-GOPATH=$(go env GOPATH)
-export GOPATH
-GOROOT=$(go env GOROOT)
-export GOROOT
+if hash go 2>/dev/null; then
+    GOPATH=$(go env GOPATH)
+    export GOPATH
+    GOROOT=$(go env GOROOT)
+    export GOROOT
+fi
 
-# If I have to edit something in a terminal window, I like using Nano. The up-to-date version, from Homebrew.
-export EDITOR=/usr/local/bin/nano
+# If I have to edit something in a terminal window, I like using Nano. The up-to-date version from Homebrew if present.
+if test -x /usr/local/bin/nano; then
+    export EDITOR=/usr/local/bin/nano
+else
+    export EDITOR=/usr/bin/nano
+fi
 
 # GPG things
 GPG_TTY=$(tty)
@@ -21,4 +27,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export AWS_SDK_LOAD_CONFIG=true
 
 # Homebrew - show off timings
-export HOMEBREW_DISPLAY_INSTALL_TIMES=1
+if hash brew 2>/dev/null; then
+    export HOMEBREW_DISPLAY_INSTALL_TIMES=1
+fi
