@@ -15,7 +15,7 @@
     },
     "[yaml]": {
         "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.tabSize": 2
+        "editor.tabSize": 4
     },
     "breadcrumbs.enabled": false,
     "editor.cursorBlinking": "phase",
@@ -73,6 +73,7 @@
         "usePlaceholders": true,
         "watchFileChanges": true
     },
+    "markdown.extension.orderedList.autoRenumber": false,
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "markdown.preview.scrollEditorWithPreview": false,
     "material-icon-theme.showUpdateMessage": false,
@@ -89,6 +90,7 @@
         "variables"
     ],
     "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.shell.osx": "/usr/local/bin/bash",
     "terminal.integrated.shellArgs.osx": [
         "-i",

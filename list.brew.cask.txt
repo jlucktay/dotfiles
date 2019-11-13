@@ -9,6 +9,7 @@ gpg-suite-no-mail
 iterm2
 itsycal
 keepingyouawake
+pingmenu
 slack
 spectacle
 the-unarchiver

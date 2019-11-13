@@ -4,6 +4,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-docs
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
@@ -38,3 +39,4 @@
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
 /Users/jameslucktaylor/Library/Caches/Homebrew/brew-caveats--git
+/Users/jameslucktaylor/tmp/posh-git-sh
