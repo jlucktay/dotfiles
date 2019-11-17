@@ -1,5 +1,6 @@
 1password
 1password-cli
+discord
 docker
 font-fira-code
 goland
@@ -12,6 +13,7 @@ keepingyouawake
 pingmenu
 slack
 spectacle
+steam
 the-unarchiver
 tyke
 visual-studio-code
