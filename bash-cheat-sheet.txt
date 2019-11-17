@@ -19,4 +19,4 @@ K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-int
     git push -f
 
 Bash-based port check:
-(echo > /dev/tcp/google.com/80) >/dev/null 2>&1 && echo "It's up" || echo "It's down"
+    (echo > /dev/tcp/google.com/80) >/dev/null 2>&1 && echo "It's up" || echo "It's down"

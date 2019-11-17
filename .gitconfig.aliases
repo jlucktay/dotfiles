@@ -21,6 +21,9 @@
 	submit = codereview submit
 	sync = codereview sync
 
+	# Best used in tandem with 'git commit --fixup <commit>'
+	ram = rebase --autosquash --autostash --interactive origin/master
+
 	# Unpushed branches/commits
 	# With thanks to: https://stackoverflow.com/questions/39220870/in-git-list-names-of-branches-with-unpushed-commits
 	unpushed = log --branches --not --remotes --no-walk --decorate --oneline
