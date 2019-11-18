@@ -5,6 +5,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-docs
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
+/Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env

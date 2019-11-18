@@ -30,6 +30,7 @@
     "editor.renderControlCharacters": true,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
+        80,
         120
     ],
     "editor.wordWrap": "bounded",
@@ -65,7 +66,9 @@
     "git.countBadge": "off",
     "git.fetchOnPull": true,
     "git.rebaseWhenSync": true,
+    "go.buildOnSave": "workspace",
     "go.formatTool": "goimports",
+    "go.lintTool": "golangci-lint",
     "go.useLanguageServer": true,
     "gopls": {
         "completeUnimported": true,
