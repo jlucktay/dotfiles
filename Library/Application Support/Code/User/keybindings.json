@@ -1,16 +1,21 @@
 // Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+alt+cmd+j",
-        "command": "workbench.action.terminal.focusNext"
+        "command": "workbench.action.terminal.focusNext",
+        "key": "ctrl+alt+cmd+j"
     },
     {
-        "key": "ctrl+alt+cmd+k",
-        "command": "workbench.action.terminal.focusPrevious"
+        "command": "workbench.action.terminal.focusPrevious",
+        "key": "ctrl+alt+cmd+k"
     },
     {
-        "key": "cmd+b",
         "command": "-markdown.extension.editing.toggleBold",
+        "key": "cmd+b",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "command": "-sortLines.sortLines",
+        "key": "f9",
+        "when": "editorTextFocus"
     }
 ]

@@ -5,6 +5,8 @@ bat
 brew-caveats
 coreutils
 curl
+docker-completion
+docker-compose-completion
 fontconfig
 freetype
 fzf
@@ -24,6 +26,7 @@ jasper
 jpeg
 jq
 kubernetes-cli
+lefthook
 lesspipe
 libffi
 libidn2
@@ -31,6 +34,7 @@ libpng
 libtiff
 libtool
 libunistring
+mage
 minikube
 mongodb-community
 nano

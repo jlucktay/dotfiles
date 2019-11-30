@@ -18,6 +18,7 @@
 /Users/jameslucktaylor/go/bin/gorename
 /Users/jameslucktaylor/go/bin/goreturns
 /Users/jameslucktaylor/go/bin/gotests
+/Users/jameslucktaylor/go/bin/gotype-live
 /Users/jameslucktaylor/go/bin/guru
 /Users/jameslucktaylor/go/bin/homemaker
 /Users/jameslucktaylor/go/bin/impl
@@ -25,3 +26,4 @@
 /Users/jameslucktaylor/go/bin/tyk-analytics
 /Users/jameslucktaylor/go/bin/tyk-identity-broker
 /Users/jameslucktaylor/go/bin/tyk-pump
+/Users/jameslucktaylor/go/bin/tyk-sink

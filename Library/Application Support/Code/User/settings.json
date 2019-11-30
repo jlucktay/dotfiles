@@ -25,6 +25,7 @@
     "editor.fontFamily": "FiraCode-Retina",
     "editor.fontLigatures": true,
     "editor.formatOnSave": true,
+    "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
     "editor.multiCursorModifier": "alt",
     "editor.renderControlCharacters": true,
@@ -39,6 +40,7 @@
     "explorer.sortOrder": "type",
     "files.associations": {
         "*.mmark": "markdown",
+        ".gcloudignore": "ignore",
         ".gitconfig": "properties",
         ".gitconfig.aliases": "properties",
         "htoprc": "properties"
@@ -66,9 +68,17 @@
     "git.countBadge": "off",
     "git.fetchOnPull": true,
     "git.rebaseWhenSync": true,
-    "go.buildOnSave": "workspace",
     "go.formatTool": "goimports",
     "go.lintTool": "golangci-lint",
+    "go.liveErrors": {
+        "delay": 500,
+        "enabled": true
+    },
+    "go.testFlags": [
+        "-count=1",
+        "-failfast",
+        "-v"
+    ],
     "go.useLanguageServer": true,
     "gopls": {
         "completeUnimported": true,
@@ -77,6 +87,7 @@
         "watchFileChanges": true
     },
     "markdown.extension.orderedList.autoRenumber": false,
+    "markdown.extension.orderedList.marker": "one",
     "markdown.preview.doubleClickToSwitchToEditor": false,
     "markdown.preview.scrollEditorWithPreview": false,
     "material-icon-theme.showUpdateMessage": false,

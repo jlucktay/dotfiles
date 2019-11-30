@@ -5,6 +5,8 @@ find . -type f -iname "*.code-workspace" 2>/dev/null
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
 
+The golden rule of git rebase is to never use it on public branches.
+
 https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lease
 
 https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
@@ -19,4 +21,4 @@ K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-int
     git push -f
 
 Bash-based port check:
-    (echo > /dev/tcp/google.com/80) >/dev/null 2>&1 && echo "It's up" || echo "It's down"
+    (echo > /dev/tcp/google.com/80) &>/dev/null && echo "It's up" || echo "It's down"

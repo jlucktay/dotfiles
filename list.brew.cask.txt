@@ -1,5 +1,6 @@
 1password
 1password-cli
+adoptopenjdk
 discord
 docker
 font-fira-code
@@ -10,8 +11,10 @@ gpg-suite-no-mail
 iterm2
 itsycal
 keepingyouawake
+keybase
 pingmenu
 slack
+sony-ps4-remote-play
 spectacle
 steam
 the-unarchiver
