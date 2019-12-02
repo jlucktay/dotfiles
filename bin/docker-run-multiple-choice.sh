@@ -11,19 +11,19 @@ fi
 shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptName=$(basename "$0")
+script_name=$(basename "$0")
 
 ### Check for presence of other tools
 
 # Azure CLI
 hash az 2>/dev/null || {
-    echo >&2 "$ScriptName requires 'az' but it's not installed: https://docs.microsoft.com/cli/azure/install-azure-cli"
+    echo >&2 "$script_name requires 'az' but it's not installed: https://docs.microsoft.com/cli/azure/install-azure-cli"
     exit 1
 }
 
 # JQ
 hash jq 2>/dev/null || {
-    echo >&2 "$ScriptName requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
+    echo >&2 "$script_name requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
     exit 1
 }
 
@@ -31,7 +31,7 @@ hash jq 2>/dev/null || {
 function usage() {
     cat << HEREDOC
 
-    Usage: $ScriptName [--help] [--interactive] [--local|--remote]
+    Usage: $script_name [--help] [--interactive] [--local|--remote]
 
     Optional arguments:
         -h, --help          show this help message and exit
@@ -45,61 +45,61 @@ HEREDOC
 }
 
 ### Get flags ready to parse given arguments
-INTERACTIVE=0
-LOCAL=0
-REMOTE=0
+interactive=0
+local=0
+remote=0
 
 for i in "$@"; do
     case $i in
         -h|--help)
             usage;          exit 0;;
         -i|--interactive)
-            INTERACTIVE=1;  shift;;
+            interactive=1;  shift;;
         -l|--local)
-            LOCAL=1;        shift;;
+            local=1;        shift;;
         -r|--remote)
-            REMOTE=1;       shift;;
+            remote=1;       shift;;
         *) # unknown option
             usage;          exit 1;;
     esac
 done
 
-if [ $LOCAL -eq 1 ] && [ $REMOTE -eq 1 ]; then
+if [ "$local" -eq 1 ] && [ "$remote" -eq 1 ]; then
     echo "'--local' and '--remote' are mutually exclusive!"
     exit 1
 fi
 
-# $LOCAL is default behaviour
-IMAGE="jlucktay/hello-world:local-dev"
+# $local is default behaviour
+image="jlucktay/hello-world:local-dev"
 
-if [ $REMOTE -eq 1 ]; then
-    IMAGE="jlucktay/hello-world:latest"
-    echo "Running image with 'latest' tag: $IMAGE"
+if [ "$remote" -eq 1 ]; then
+    image="jlucktay/hello-world:latest"
+    echo "Running image with 'latest' tag: $image"
 else
-    echo "Running local dev image: $IMAGE"
+    echo "Running local dev image: $image"
 fi
 
 ### Secrets
-echo -n "Fetching a secret ... "
-MY_SECRET=$(az keyvault secret show \
+echo -n "Fetching a secret... "
+MY_SECRET=$( az keyvault secret show \
     --id="https://secrets-store.vault.azure.net/secrets/my-secret" \
-    | jq -r '.value')
+    | jq -r '.value' )
 echo "Done."
 export MY_SECRET
 
 echo "Exported secret(s) to environment. (MY_SECRET)."
 
 ### Build arguments list for Docker
-DockerArgs=(run --env MY_SECRET)
+docker_args=(run --env MY_SECRET)
 
-if [ $INTERACTIVE -eq 1 ]; then
-    DockerArgs+=(--entrypoint /bin/sh --interactive --tty)
+if [ "$interactive" -eq 1 ]; then
+    docker_args+=(--entrypoint /bin/sh --interactive --tty)
 fi
 
-DockerArgs+=(--rm --volume "$(pwd):/gitrepo" "$IMAGE")
+docker_args+=(--rm --volume "$( pwd ):/gitrepo" "$image")
 
 ### Show arguments and execute with them
 echo "Running Docker with following arguments:"
-echo "${DockerArgs[@]}"
+echo "${docker_args[@]}"
 
-docker "${DockerArgs[@]}"
+docker "${docker_args[@]}"
