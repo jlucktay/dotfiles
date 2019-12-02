@@ -9,6 +9,7 @@ function prefix_path() {
 
 # Build up PATH
 prefix_path "/usr/local/opt/curl/bin"
+prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "${GOPATH:-}/bin"
 prefix_path "$HOME/bin"
 
