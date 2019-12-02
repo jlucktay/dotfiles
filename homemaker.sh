@@ -14,7 +14,7 @@ ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd
 HomemakerTask=${1:-"default"}
 HomemakerCommand="$HOME/go/bin/homemaker"
 
-if [ "$HomemakerTask" == "gitconfig" ]; then
+if [ "$HomemakerTask" = "gitconfig" ]; then
     echo "$(tput setab 7; tput setaf 0)Preserve any changes that may have been made in the interim, before clobbering '~/.gitconfig'!$(tput sgr0)"
 fi
 

@@ -15,13 +15,13 @@ TopLevelBefore="$TopLevel"
 while [ ! -d "$TopLevel/.git" ]; do
     TopLevel="$(grealpath "$TopLevel/..")"
 
-    if [ "$TopLevel" == "/" ]; then
+    if [ "$TopLevel" = "/" ]; then
         echo "Root hit, returning!"
         exit 2
     fi
 done
 
-if [ "$TopLevelBefore" == "$TopLevel" ]; then
+if [ "$TopLevelBefore" = "$TopLevel" ]; then
     echo "You're already at the top level of the repo!"
     exit 3
 fi

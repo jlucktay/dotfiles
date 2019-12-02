@@ -21,7 +21,7 @@ for Region in $(awsregions); do
     AwsResult=$?
     set -e
 
-    if [[ $AwsResult == 0 ]]; then
+    if [[ $AwsResult -eq 0 ]]; then
         # Successfully created
         VpcId=$(echo "$AwsCreateOutput" | jq '.Vpc.VpcId')
         echo "$VpcId"

@@ -7,7 +7,7 @@ mapfile -t Projects < <(gcloud projects list --format=json | jq -r '.[].projectI
 for Project in "${Projects[@]}"; do
     mapfile -t Buckets < <(gsutil ls -p "$Project")
 
-    if ((${#Buckets[@]} == 0)); then
+    if ((${#Buckets[@]} -eq 0)); then
         echo "Project '$Project' has no storage buckets."
         continue
     fi

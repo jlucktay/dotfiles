@@ -7,7 +7,7 @@ ColoursHighlight="$(tput setab 7 ; tput setaf 0)"
 ColoursReset="$(tput sgr0)"
 
 mapfile -t RemoteLines < <(git remote -v 2>/dev/null)
-if (( ${#RemoteLines[@]} == 0 )); then
+if (( ${#RemoteLines[@]} -eq 0 )); then
     exit 0
 fi
 
