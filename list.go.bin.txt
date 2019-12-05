@@ -1,3 +1,4 @@
+/Users/jameslucktaylor/go/bin/cobra
 /Users/jameslucktaylor/go/bin/dlv
 /Users/jameslucktaylor/go/bin/fillstruct
 /Users/jameslucktaylor/go/bin/go-bindata
@@ -19,6 +20,7 @@
 /Users/jameslucktaylor/go/bin/goreturns
 /Users/jameslucktaylor/go/bin/gotests
 /Users/jameslucktaylor/go/bin/gotype-live
+/Users/jameslucktaylor/go/bin/graphql-go-tools
 /Users/jameslucktaylor/go/bin/guru
 /Users/jameslucktaylor/go/bin/homemaker
 /Users/jameslucktaylor/go/bin/impl

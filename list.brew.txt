@@ -52,6 +52,7 @@ python
 readline
 redis
 shellcheck
+shfmt
 sqlite
 tree
 watch
