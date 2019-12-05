@@ -1,120 +1,138 @@
 {
-    "[go]": {
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-        "editor.formatOnSave": true,
-        "editor.snippetSuggestions": "none"
+  "[dockerfile]": {
+    "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+  },
+  "[go]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     },
-    "[markdown]": {
-        "editor.tabSize": 2
-    },
-    "[proto3]": {
-        "editor.defaultFormatter": "xaver.clang-format",
-        "editor.tabSize": 2
-    },
-    "[yaml]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml",
-        "editor.tabSize": 4
-    },
-    "breadcrumbs.enabled": false,
-    "editor.cursorBlinking": "phase",
-    "editor.cursorStyle": "line-thin",
-    "editor.detectIndentation": false,
-    "editor.emptySelectionClipboard": false,
-    "editor.fontFamily": "FiraCode-Retina",
-    "editor.fontLigatures": true,
     "editor.formatOnSave": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "always",
-    "editor.multiCursorModifier": "alt",
-    "editor.renderControlCharacters": true,
-    "editor.renderWhitespace": "boundary",
-    "editor.rulers": [
-        80,
-        120
-    ],
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 120,
-    "explorer.confirmDragAndDrop": false,
-    "explorer.sortOrder": "type",
-    "files.associations": {
-        "*.mmark": "markdown",
-        ".gcloudignore": "ignore",
-        ".gitconfig": "properties",
-        ".gitconfig.aliases": "properties",
-        "htoprc": "properties"
+    "editor.snippetSuggestions": "none"
+  },
+  "[markdown]": {
+    // "editor.tabSize": 2
+  },
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format",
+    // "editor.tabSize": 2
+  },
+  "[shellscript]": {
+    // "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml",
+    // "editor.tabSize": 4
+  },
+  "breadcrumbs.enabled": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorStyle": "line-thin",
+  "editor.detectIndentation": false,
+  "editor.emptySelectionClipboard": false,
+  "editor.fontFamily": "FiraCode-Retina",
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.multiCursorModifier": "alt",
+  "editor.renderControlCharacters": true,
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.tabSize": 2,
+  "editor.wordWrap": "bounded",
+  "editor.wordWrapColumn": 120,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.sortOrder": "type",
+  "files.associations": {
+    "*.mmark": "markdown",
+    ".gcloudignore": "ignore",
+    ".gitconfig": "properties",
+    ".gitconfig.aliases": "properties",
+    "htoprc": "properties"
+  },
+  "files.autoSave": "onFocusChange",
+  "files.enableTrash": false,
+  "files.eol": "\n",
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
     },
-    "files.autoSave": "onFocusChange",
-    "files.enableTrash": false,
-    "files.eol": "\n",
-    "files.exclude": {
-        "**/*.js": {
-            "when": "$(basename).ts"
-        },
-        "**/.DS_Store": true,
-        "**/.git": true,
-        "**/.hg": true,
-        "**/.svn": true,
-        "**/CVS": true
-    },
-    "files.hotExit": "onExitAndWindowClose",
-    "files.insertFinalNewline": true,
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "git.autoRepositoryDetection": false,
-    "git.autoStash": true,
-    "git.confirmSync": false,
-    "git.countBadge": "off",
-    "git.fetchOnPull": true,
-    "git.rebaseWhenSync": true,
-    "go.formatTool": "goimports",
-    "go.lintTool": "golangci-lint",
-    "go.liveErrors": {
-        "delay": 500,
-        "enabled": true
-    },
-    "go.testFlags": [
-        "-count=1",
-        "-failfast",
-        "-v"
-    ],
-    "go.useLanguageServer": true,
-    "gopls": {
-        "completeUnimported": true,
-        "deepCompletion": true,
-        "usePlaceholders": true,
-        "watchFileChanges": true
-    },
-    "markdown.extension.orderedList.autoRenumber": false,
-    "markdown.extension.orderedList.marker": "one",
-    "markdown.preview.doubleClickToSwitchToEditor": false,
-    "markdown.preview.scrollEditorWithPreview": false,
-    "material-icon-theme.showUpdateMessage": false,
-    "shellcheck.customArgs": [
-        "--enable=add-default-case,avoid-nullary-conditions,check-unassigned-uppercase,quote-safe-variables",
-        "--external-sources",
-        "--severity=style",
-        "--shell=bash"
-    ],
-    "sortJSON.orderOverride": [
-        "$schema",
-        "contentVersion",
-        "parameters",
-        "variables"
-    ],
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.shell.osx": "/usr/local/bin/bash",
-    "terminal.integrated.shellArgs.osx": [
-        "-i",
-        "-l"
-    ],
-    "window.closeWhenEmpty": true,
-    "window.newWindowDimensions": "maximized",
-    "window.restoreWindows": "all",
-    "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
-    "window.zoomLevel": 0,
-    "workbench.iconTheme": "material-icon-theme",
-    "workbench.tree.renderIndentGuides": "always"
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/CVS": true
+  },
+  "files.hotExit": "onExitAndWindowClose",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "git.autoRepositoryDetection": false,
+  "git.autoStash": true,
+  "git.confirmSync": false,
+  "git.countBadge": "off",
+  "git.fetchOnPull": true,
+  "git.rebaseWhenSync": true,
+  "go.formatTool": "goimports",
+  "go.lintTool": "golangci-lint",
+  "go.liveErrors": {
+    "delay": 500,
+    "enabled": true
+  },
+  "go.testFlags": [
+    "-count=1",
+    "-failfast",
+    "-v"
+  ],
+  "go.useLanguageServer": true,
+  "gopls": {
+    "completeUnimported": true,
+    "deepCompletion": true,
+    "usePlaceholders": true,
+    "watchFileChanges": true
+  },
+  "markdown.extension.orderedList.autoRenumber": false,
+  "markdown.extension.orderedList.marker": "one",
+  "markdown.preview.doubleClickToSwitchToEditor": false,
+  "markdown.preview.scrollEditorWithPreview": false,
+  "material-icon-theme.showUpdateMessage": false,
+  "shellcheck.customArgs": [
+    "--enable=add-default-case,avoid-nullary-conditions,check-unassigned-uppercase,quote-safe-variables",
+    "--external-sources",
+    "--severity=style",
+    "--shell=bash"
+  ],
+  "shellformat.effectLanguages": [
+    "azcli",
+    "dotenv",
+    "gitignore",
+    "hosts",
+    "ignore",
+    "jvmoptions",
+    "properties",
+    "shellscript",
+    "spring-boot-properties"
+  ],
+  "shellformat.flag": "-bn -s -sr",
+  "sortJSON.orderOverride": [
+    "$schema",
+    "contentVersion",
+    "parameters",
+    "variables"
+  ],
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.shell.osx": "/usr/local/bin/bash",
+  "terminal.integrated.shellArgs.osx": [
+    "-i",
+    "-l"
+  ],
+  "window.closeWhenEmpty": true,
+  "window.newWindowDimensions": "maximized",
+  "window.restoreWindows": "all",
+  "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
+  "window.zoomLevel": 0,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.tree.renderIndentGuides": "always"
 }
