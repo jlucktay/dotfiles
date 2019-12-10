@@ -2,6 +2,6 @@
 #            Displays paginated result with colored search terms and two lines surrounding each hit.
 #   Example: mans mplayer codec
 #   --------------------------------------------------------------------
-function mans(){
-    man "$1" | grep -iC2 "$2" | less
+function mans() {
+  man "$1" | grep -iC2 "$2" | less
 }
