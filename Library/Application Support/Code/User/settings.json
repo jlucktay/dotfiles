@@ -9,19 +9,11 @@
     "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
   },
-  "[markdown]": {
-    // "editor.tabSize": 2
-  },
   "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format",
-    // "editor.tabSize": 2
-  },
-  "[shellscript]": {
-    // "editor.tabSize": 2
+    "editor.defaultFormatter": "xaver.clang-format"
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    // "editor.tabSize": 4
+    "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "breadcrumbs.enabled": false,
   "editor.cursorBlinking": "phase",
@@ -92,6 +84,7 @@
     "usePlaceholders": true,
     "watchFileChanges": true
   },
+  "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.orderedList.marker": "one",
   "markdown.preview.doubleClickToSwitchToEditor": false,
