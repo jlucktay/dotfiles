@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # shellcheck disable=SC1090
-. "$(realpath "$ScriptDirectory/func.processList.sh")"
+. "$(realpath "$script_dir/func.processList.sh")"
 
-GoBinListCmd="find $GOPATH/bin -type f"
-GoBinList=$(realpath "$ScriptDirectory/../../list.go.bin.txt")
+go_bin_list_cmd="find ${GOPATH:-}/bin -type f"
+go_bin_list=$(realpath "$script_dir/../../list.go.bin.txt")
 
-processList "$GoBinListCmd" "$GoBinList"
+processList "$go_bin_list_cmd" "$go_bin_list"

@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
-Flags=$(rsync_tmbackup.sh --rsync-get-flags)
-Flags+=" --no-devices --no-specials"
+flags=$(rsync_tmbackup.sh --rsync-get-flags)
+flags+=" --no-devices --no-specials"
 
-TimeStart=$(gdate +%s%N)
+time_start=$(gdate +%s%N)
 
 rsync_tmbackup.sh \
-    --rsync-set-flags "$Flags" \
-    "$HOME" \
-    /Volumes/Sgte-ExFAT/home \
-    "${ScriptDirectory}/exclude.txt"
+  --rsync-set-flags "$flags" \
+  "$HOME" \
+  /Volumes/Sgte-ExFAT/home \
+  "${script_dir}/exclude.txt"
 
-TimeTaken=$((($(gdate +%s%N) - TimeStart)/1000000))
-echo "Time taken: ${TimeTaken}ms"
+time_taken=$((($(gdate +%s%N) - time_start) / 1000000))
+echo "Time taken: ${time_taken}ms"

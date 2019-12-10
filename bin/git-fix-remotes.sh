@@ -1,22 +1,29 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-# Background = white, foreground = black
-ColoursHighlight="$(tput setab 7 ; tput setaf 0)"
-ColoursReset="$(tput sgr0)"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+script_name=$(basename "${BASH_SOURCE[-1]}")
 
-mapfile -t RemoteLines < <(git remote -v 2>/dev/null)
-if (( ${#RemoteLines[@]} -eq 0 )); then
-    exit 0
+# Background = white, foreground = black
+colours_highlight="$(
+  tput setab 7
+  tput setaf 0
+)"
+colours_reset="$(tput sgr0)"
+
+mapfile -t remote_lines < <(git remote -v 2> /dev/null)
+if [[ ${#remote_lines[@]} -eq 0 ]]; then
+  exit 0
 fi
 
-Path="$(realpath . | cut -d'/' -f5-)"
-Repo="https://${Path}.git"
+path="$(realpath . | cut -d'/' -f5-)"
+repo="https://${path}.git"
 
-echo "Repo: '${ColoursHighlight}${Repo}${ColoursReset}'"
+echo "Repo: '${colours_highlight}${repo}${colours_reset}'"
 
-echo "git remote set-url origin $Repo"
-git remote set-url origin "$Repo"
-echo "git remote set-url --push origin $Repo"
-git remote set-url --push origin "$Repo"
+echo "git remote set-url origin $repo"
+git remote set-url origin "$repo"
+echo "git remote set-url --push origin $repo"
+git remote set-url --push origin "$repo"

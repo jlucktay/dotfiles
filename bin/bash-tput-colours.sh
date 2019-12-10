@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
 # Background = white

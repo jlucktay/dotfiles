@@ -8,7 +8,7 @@
 
 [tasks.default]
     deps = ["git", "jq"]
-    envs = [["ZipGoesHere", "${HM_SRC}"]]
+    envs = [["zip_goes_here", "${HM_SRC}"]]
     cmds = [["${HM_SRC}/bin/homemaker/eternal_history.sh"]]
     links = [
         [".bashrc"],

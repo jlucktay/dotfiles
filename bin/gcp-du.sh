@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-mapfile -t Projects < <(gcloud projects list --format=json | jq -r '.[].projectId')
+mapfile -t projects < <(gcloud projects list --format=json | jq -r '.[].projectId')
 
-for Project in "${Projects[@]}"; do
-    mapfile -t Buckets < <(gsutil ls -p "$Project")
+for project in "${projects[@]}"; do
+  mapfile -t buckets < <(gsutil ls -p "$project")
 
-    if ((${#Buckets[@]} -eq 0)); then
-        echo "Project '$Project' has no storage buckets."
-        continue
-    fi
+  if [[ ${#buckets[@]} -eq 0 ]]; then
+    echo "Project '$project' has no storage buckets."
+    continue
+  fi
 
-    echo "Project '$Project':"
+  echo "Project '$project':"
 
-    for Bucket in "${Buckets[@]}"; do
-        gsutil du -h -s "$Bucket"
-    done
+  for bucket in "${buckets[@]}"; do
+    gsutil du -h -s "$bucket"
+  done
 done

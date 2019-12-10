@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # shellcheck disable=SC1090
-. "$(realpath "$ScriptDirectory/func.processList.sh")"
+. "$(realpath "$script_dir/func.processList.sh")"
 
-HomebrewTapList=$(realpath "$ScriptDirectory/../../list.brew.tap.txt")
-HomebrewList=$(realpath "$ScriptDirectory/../../list.brew.txt")
-HomebrewCaskList=$(realpath "$ScriptDirectory/../../list.brew.cask.txt")
+homebrew_tap_list=$(realpath "$script_dir/../../list.brew.tap.txt")
+homebrew_list=$(realpath "$script_dir/../../list.brew.txt")
+homebrew_cask_list=$(realpath "$script_dir/../../list.brew.cask.txt")
 
 # Make sure we're current before kicking off the lists
 brew update
 
-processList "brew tap" "$HomebrewTapList"
-processList "brew list -1" "$HomebrewList"
-processList "brew cask list -1" "$HomebrewCaskList"
+processList "brew tap" "$homebrew_tap_list"
+processList "brew list -1" "$homebrew_list"
+processList "brew cask list -1" "$homebrew_cask_list"

@@ -1,21 +1,18 @@
 #!/usr/bin/env bash
-# Thank you: https://github.com/anordal/shellharden/blob/master/how_to_do_things_safely_in_bash.md#how-to-begin-a-bash-script
-if test "$BASH" = "" || "$BASH" -uc "a=();true \"\${a[@]}\"" 2>/dev/null; then
-    # Bash 4.4, Zsh
-    set -euo pipefail
-else
-    # Bash 4.3 and older chokes on empty arrays with set -u.
-    set -eo pipefail
-fi
+set -euo pipefail
 shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-HomemakerTask=${1:-"default"}
-HomemakerCommand="$HOME/go/bin/homemaker"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
-if [ "$HomemakerTask" = "gitconfig" ]; then
-    echo "$(tput setab 7; tput setaf 0)Preserve any changes that may have been made in the interim, before clobbering '~/.gitconfig'!$(tput sgr0)"
+homemaker_task=${1:-"default"}
+
+reset_colour='\e[0m' # Text Reset
+foreground_black='\e[0;30m'
+background_white='\e[47m'
+
+if [ "$homemaker_task" = "gitconfig" ]; then
+  echo -e "${background_white}${foreground_black}Preserve any changes that may have been made in the interim, before clobbering '~/.gitconfig'!${reset_colour}"
 fi
 
-eval "$HomemakerCommand" --task="$HomemakerTask" --verbose config.toml "$ScriptDirectory"
+"$HOME/go/bin/homemaker" --task="$homemaker_task" --verbose config.toml "$script_dir"

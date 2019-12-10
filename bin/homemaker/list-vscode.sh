@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptDirectory="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
 
 # shellcheck disable=SC1090
-. "$(realpath "$ScriptDirectory/func.processList.sh")"
+. "$(realpath "$script_dir/func.processList.sh")"
 
-VsCodeList=$(realpath "$ScriptDirectory/../../list.vscode.txt")
+vscode_list=$(realpath "$script_dir/../../list.vscode.txt")
 
-processList "code --list-extensions" "$VsCodeList"
+processList "code --list-extensions" "$vscode_list"

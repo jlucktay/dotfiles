@@ -1,15 +1,16 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-ScriptName=$(basename "$0")
+script_name=$(basename "${BASH_SOURCE[-1]}")
 
 ### Check for presence of other tools
 
 # JQ
-hash jq 2>/dev/null || {
-    echo >&2 "$ScriptName requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
-    exit 1
+hash jq 2> /dev/null || {
+  echo >&2 "$script_name requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
+  exit 1
 }
 
 # jq - commandline JSON processor [version 1.6]
@@ -17,7 +18,7 @@ hash jq 2>/dev/null || {
 #   -e               set the exit status code based on the output;
 #   -r               output raw strings, not JSON texts;
 
-ZipSecret=$(jq -er '.bash_eternal_history' "$HOME/.config/homemaker/secrets.json")
+zip_secret=$(jq -er '.bash_eternal_history' "$HOME/.config/homemaker/secrets.json")
 
 # zip --version:
 
@@ -41,4 +42,4 @@ ZipSecret=$(jq -er '.bash_eternal_history' "$HOME/.config/homemaker/secrets.json
 #   -P pswd   use standard encryption, password is pswd
 
 #   zip options archive_name file file ...
-zip -u -j -v -o -9 -P "$ZipSecret" "${ZipGoesHere-}/bash_eternal_history.zip" "$HOME/.bash_eternal_history"
+zip -u -j -v -o -9 -P "$zip_secret" "${zip_goes_here:-}/bash_eternal_history.zip" "$HOME/.bash_eternal_history"

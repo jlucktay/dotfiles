@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
+
+script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+script_name=$(basename "${BASH_SOURCE[-1]}")
 
 cd /Users/jameslucktaylor/git || return
 
@@ -8,31 +12,31 @@ Base="$PWD"
 Gits="$(find . -type d -depth 2)"
 
 for Git in $Gits; do
-    echo "Git: $Base/$Git"
-    cd "$Base/$Git" || return
+  echo "Git: $Base/$Git"
+  cd "$Base/$Git" || return
 
-    # git remote -v | grep -i "github\\.com" >/dev/null
+  # git remote -v | grep -i "github\\.com" >/dev/null
 
-    if [[ -d ".git" ]]; then
-        git remote -v
-    #     # echo "Git repo!"
-    #     echo "pwd: $(pwd)"
-    #     # echo "basename: $(basename "$(pwd)")"
-    #     Repo=$(basename "$(pwd)")
-    #     cd ../.. || return
-    #     gmv -iv "${Repo}" "${Repo}.1"
-    #     gmv -iv "${Repo}.1/${Repo}" "${Repo}"
-    #     grmdir -v "${Repo}.1"
+  if [[ -d ".git" ]]; then
+    git remote -v
+  #     # echo "Git repo!"
+  #     echo "pwd: $(pwd)"
+  #     # echo "basename: $(basename "$(pwd)")"
+  #     Repo=$(basename "$(pwd)")
+  #     cd ../.. || return
+  #     gmv -iv "${Repo}" "${Repo}.1"
+  #     gmv -iv "${Repo}.1/${Repo}" "${Repo}"
+  #     grmdir -v "${Repo}.1"
 
-    #     # gmkdir --parents --verbose "${Base}/github.com/${Git}"
+  #     # gmkdir --parents --verbose "${Base}/github.com/${Git}"
 
-    #     # strip one /section/ back from $Git before running 'gmv'
-    #     # gmv -iv "${Base}/${Git}" "${Base}/github.com/${Git}"
-    # # else
-    #     # echo "NOT a repo :("
-    fi
+  #     # strip one /section/ back from $Git before running 'gmv'
+  #     # gmv -iv "${Base}/${Git}" "${Base}/github.com/${Git}"
+  # # else
+  #     # echo "NOT a repo :("
+  fi
 
-    echo
+  echo
 done
 
 # currentBranch=$(git branch 2>/dev/null | grep "\\*" | cut -d ' ' -f2)

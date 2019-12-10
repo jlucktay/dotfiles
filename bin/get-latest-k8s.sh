@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-GithubApiOutput="$(curl --silent https://api.github.com/repos/kubernetes/kubernetes/releases)"
-K8sLatestVersion="$(echo "$GithubApiOutput" | jq --compact-output --monochrome-output --raw-output '.[].name' | grep '^v1\.[0-9]*\.[0-9]*$' | sort --version-sort | tail -n 1)"
-K8sFile="$HOME/kubernetes.$K8sLatestVersion.tar.gz"
-DownloadUrl="$(echo "$GithubApiOutput" | jq --raw-output '.[] | select( .name == "'"$K8sLatestVersion"'" ) | .assets[].browser_download_url')"
-WgetCmd="wget --no-clobber --output-document=\"$K8sFile\" \"$DownloadUrl\""
+github_api_output="$(curl --silent https://api.github.com/repos/kubernetes/kubernetes/releases)"
+k8s_latest_version="$(echo "$github_api_output" | jq --compact-output --monochrome-output --raw-output '.[].name' | grep '^v1\.[0-9]*\.[0-9]*$' | sort --version-sort | tail -n 1)"
+k8s_file="$HOME/kubernetes.$k8s_latest_version.tar.gz"
+download_url="$(echo "$github_api_output" | jq --raw-output '.[] | select( .name == "'"$k8s_latest_version"'" ) | .assets[].browser_download_url')"
 
-# echo "wget command: '$WgetCmd'"
+wget_args=(--no-clobber "--output-document=$k8s_file" "$download_url")
 
-eval "$WgetCmd"
+wget "${wget_args[@]}"

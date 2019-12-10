@@ -1,29 +1,27 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s nullglob globstar
 IFS=$'\n\t'
 
-# Background = white
-coloursBackgroundWhite="$(tput setab 7)"
-# Foreground = black
-coloursForegroundBlack="$(tput setaf 0)"
-# Reset colours
-coloursReset="$(tput sgr0)"
+background_white="$(tput setab 7)"
+foreground_black="$(tput setaf 0)"
+reset_colours="$(tput sgr0)"
 
-echo "$coloursBackgroundWhite${coloursForegroundBlack}PATH unsorted:$coloursReset"
+echo "$background_white${foreground_black}PATH unsorted:$reset_colours"
 
-while IFS=':' read -ra SPLITPATH; do
-    # Split off sorted $PATH array for later output
-    IFS=$'\n' mapfile -t SORTEDPATH < <(sort -f <<< "${SPLITPATH[*]}")
+while IFS=':' read -ra split_path; do
+  # Split off sorted $PATH array for later output
+  IFS=$'\n' mapfile -t sorted_path < <(sort -f <<< "${split_path[*]}")
 
-    # Show unsorted $PATH now
-    for i in "${SPLITPATH[@]}"; do
-        echo "$i"
-    done
+  # Show unsorted $PATH now
+  for i in "${split_path[@]}"; do
+    echo "$i"
+  done
 done <<< "$PATH"
 
 echo
-echo "$coloursBackgroundWhite${coloursForegroundBlack}PATH sorted:$coloursReset"
+echo "$background_white${foreground_black}PATH sorted:$reset_colours"
 
-for i in "${SORTEDPATH[@]}"; do
-    echo "$i"
+for i in "${sorted_path[@]}"; do
+  echo "$i"
 done
