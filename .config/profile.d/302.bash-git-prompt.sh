@@ -25,9 +25,8 @@ __prompt_command() {
   local ICya='\[\e[0;96m\]'
   local IWhi='\[\e[0;97m\]'
 
-  PROMPT_DIRTRIM=2
   PS1="${ICya}\u${IWhi}@${IPur}\h ${IGre}\t" # Username at host, time (24h)
-  PS1+=" ${IWhi}[${IYel}\w${IWhi}]${Reset}"  # Working directory, trimmed
+  PS1+=" ${IWhi}[${IYel}\W${IWhi}]${Reset}"  # Working directory, trimmed
 
   # Git status
   pge=$(__posh_git_echo)
