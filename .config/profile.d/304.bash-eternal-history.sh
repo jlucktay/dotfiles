@@ -12,7 +12,9 @@ export HISTFILE=$HOME/.bash_eternal_history
 
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
-PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+#
+# Important to append rather than prepend, as the __prompt_command func checks $?
+PROMPT_COMMAND+="; history -a"
 
 # https://ss64.com/bash/history.html
 export HISTCONTROL=erasedups:ignoreboth
