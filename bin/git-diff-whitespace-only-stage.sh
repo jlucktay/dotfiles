@@ -9,4 +9,4 @@ while read -r diff_file; do
   if test -z "$diff_without_whitespace"; then
     git add "$diff_file"
   fi
-done < <(git diff --name-only)
+done < <(git diff --name-only --relative)
