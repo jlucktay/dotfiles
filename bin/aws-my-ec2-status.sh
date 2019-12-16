@@ -18,11 +18,11 @@ for region in $(awsregions); do
 
   aws ec2 describe-instances --region "$region" \
     | jq '.Reservations[].Instances[] |
-            {
-                n: (.Tags[] | select(.Key == "Name") | .Value),
-                id: .InstanceId,
-                az: .Placement.AvailabilityZone,
-                ip: .PublicIpAddress,
-                up: .State.Name
-            }'
+      {
+          n: (.Tags[] | select(.Key == "Name") | .Value),
+          id: .InstanceId,
+          az: .Placement.AvailabilityZone,
+          ip: .PublicIpAddress,
+          up: .State.Name
+      }'
 done
