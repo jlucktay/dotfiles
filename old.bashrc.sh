@@ -46,11 +46,6 @@ function gocover() {
     && unlink "$t"
 }
 
-function awsregions() {
-  aws ec2 describe-regions --region $TF_VAR_aws_region | jq -r '.Regions[].RegionName' | sort -f
-}
-export -f awsregions
-
 # Azure things, also lab-esque
 function azregions() {
   az account list-locations | jq -r '.[].name' | sort -f
