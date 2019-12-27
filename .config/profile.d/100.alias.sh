@@ -38,6 +38,10 @@ else
   alias ll='ls -AFGlh'
 fi
 
+# Open specific Chrome profiles
+alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
+alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
+
 # Miscellaneous
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 
