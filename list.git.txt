@@ -1,3 +1,4 @@
+/Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-workbench

@@ -1,4 +1,5 @@
 autojump
+awscli
 bash
 bash-completion@2
 bat
@@ -45,6 +46,8 @@ nmap
 node
 oniguruma
 openssl@1.1
+packer
+packer-completion
 pcre
 pcre2
 prettyping
