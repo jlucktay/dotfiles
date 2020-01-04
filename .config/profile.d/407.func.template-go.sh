@@ -58,6 +58,7 @@ HEREDOC
 
   rsync_args+=(
     "--exclude=.git"
+    "--exclude=LICENSE"
     --itemize-changes
     --recursive
     "$template_go_repo"
