@@ -15,6 +15,11 @@ function template_go() {
     git clone https://github.com/jlucktay/template-go.git "$template_go_repo"
   fi
 
+  if ! git --git-dir="${template_go_repo}.git" --work-tree="$template_go_repo" diff-index --quiet HEAD --; then
+    echo "$func_name: the 'template-go' repo at '$template_go_repo' is dirty"
+    return 1
+  fi
+
   function usage() {
     \cat << HEREDOC
 
