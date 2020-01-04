@@ -51,6 +51,7 @@ HEREDOC
   done
 
   local -a rsync_args
+  rsync_args+=(--checksum)
 
   if ((confirmed != 1)); then
     rsync_args+=(--dry-run)
