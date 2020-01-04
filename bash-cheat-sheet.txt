@@ -20,5 +20,8 @@ K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-int
     git checkout golint_pkg/auth/authorizer/abac && git rebase -i master
     git push -f
 
-Bash-based port check:
+Bash:
+  Port check:
     (echo > /dev/tcp/google.com/80) &>/dev/null && echo "It's up" || echo "It's down"
+  Brace expansion:
+    echo *.{pn,jp{e,}}g -> *.png *.jpeg *.jpg

@@ -1,6 +1,7 @@
 bungcip.better-toml
 casualjim.gotemplate
 DavidAnson.vscode-markdownlint
+EditorConfig.EditorConfig
 foxundermoon.shell-format
 ms-azuretools.vscode-docker
 ms-vscode.cpptools

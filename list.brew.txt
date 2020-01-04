@@ -21,6 +21,7 @@ graphviz
 gts
 hadolint
 htop
+hub
 hugo
 icu4c
 jasper
@@ -54,9 +55,11 @@ prettyping
 python
 readline
 redis
+rsync
 shellcheck
 shfmt
 sqlite
+stack
 tree
 watch
 webp

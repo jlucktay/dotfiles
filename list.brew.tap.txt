@@ -6,5 +6,6 @@ homebrew/cask-fonts
 homebrew/cask-versions
 homebrew/core
 homebrew/services
+jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats

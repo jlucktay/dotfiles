@@ -108,6 +108,7 @@
     "spring-boot-properties"
   ],
   "shellformat.flag": "-bn -s -sr",
+  "shellformat.path": "/usr/local/bin/shfmt",
   "sortJSON.orderOverride": [
     "$schema",
     "contentVersion",
