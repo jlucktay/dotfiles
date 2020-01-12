@@ -73,4 +73,9 @@ HEREDOC
   echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
 
   rsync "${rsync_args[@]}"
+
+  if ((confirmed != 1)); then
+    echo
+    echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed rsync."
+  fi
 }
