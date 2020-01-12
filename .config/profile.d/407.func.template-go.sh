@@ -9,8 +9,8 @@ function template_go() {
   fi
 
   if [ ! -d "$template_go_repo" ]; then
-    echo "${FUNCNAME[0]}: the 'template-go' repo has not been checked out to '$template_go_repo'"
-    mkdir -pv "$template_go_repo"
+    echo "${FUNCNAME[0]}: the 'template-go' repo has not been checked out to '$template_go_repo'; remedying..."
+    gmkdir --parents --verbose "$template_go_repo"
     git clone https://github.com/jlucktay/template-go.git "$template_go_repo"
   fi
 
