@@ -57,6 +57,7 @@ readline
 redis
 rsync
 shellcheck
+shellharden
 shfmt
 sqlite
 stack

@@ -5,6 +5,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/golang-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
+/Users/jameslucktaylor/git/github.com/jlucktay/katkas-website
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-docs
@@ -68,7 +69,5 @@
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
 /Users/jameslucktaylor/Library/Caches/Homebrew/brew-caveats--git
 /Users/jameslucktaylor/Library/Caches/Homebrew/docker-completion--git
-/Users/jameslucktaylor/tmp/factorio-workbench
 /Users/jameslucktaylor/tmp/gql-hack
 /Users/jameslucktaylor/tmp/posh-git-sh
-/Users/jameslucktaylor/tmp/syna-start
