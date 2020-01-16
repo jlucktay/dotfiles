@@ -31,6 +31,7 @@
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/franela/goreq
 /Users/jameslucktaylor/go/src/github.com/ghodss/yaml
+/Users/jameslucktaylor/go/src/github.com/go-bindata/go-bindata
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gopukku
 /Users/jameslucktaylor/go/src/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata

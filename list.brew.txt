@@ -8,6 +8,7 @@ coreutils
 curl
 docker-completion
 docker-compose-completion
+drone-cli
 fontconfig
 freetype
 fzf

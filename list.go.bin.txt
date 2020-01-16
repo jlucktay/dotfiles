@@ -1,6 +1,5 @@
 /Users/jameslucktaylor/go/bin/cobra
 /Users/jameslucktaylor/go/bin/dlv
-/Users/jameslucktaylor/go/bin/drone-yaml
 /Users/jameslucktaylor/go/bin/fillstruct
 /Users/jameslucktaylor/go/bin/go-bindata
 /Users/jameslucktaylor/go/bin/go-outline
