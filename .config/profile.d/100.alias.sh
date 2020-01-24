@@ -38,6 +38,11 @@ else
   alias ll='ls -AFGlh'
 fi
 
+# Visual Studio Code
+if hash code 2> /dev/null; then
+  alias killcode="ps -Af | grep 'Visual Studio Code' | grep -v grep | cut -d' ' -f4 | xargs kill -9"
+fi
+
 # Open specific Chrome profiles
 alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
