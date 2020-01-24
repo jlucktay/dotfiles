@@ -119,10 +119,11 @@
   "shellformat.flag": "-s -ln=bash -i=2 -bn -ci -sr",
   "shellformat.path": "/usr/local/bin/shfmt",
   "sortJSON.orderOverride": [
-    "$schema",
-    "contentVersion",
-    "parameters",
-    "variables"
+    "description",
+    "variables",
+    "builders",
+    "provisioners",
+    "post-processors"
   ],
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
