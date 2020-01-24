@@ -73,11 +73,17 @@
     "delay": 500,
     "enabled": true
   },
+  "go.testEnvVars": {
+    "GO111MODULE": "on"
+  },
   "go.testFlags": [
     "-count=1",
     "-failfast",
     "-v"
   ],
+  "go.toolsEnvVars": {
+    "GO111MODULE": "on"
+  },
   "go.useLanguageServer": true,
   "gopls": {
     "completeUnimported": true,
