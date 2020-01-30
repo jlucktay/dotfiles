@@ -136,6 +136,24 @@
     "-i",
     "-l"
   ],
+  "terraform.format": {
+    "ignoreExtensionsOnSave": [
+      ".tfsmurf"
+    ]
+  },
+  "terraform.indexing": {
+    "delay": 500,
+    "enabled": false,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ],
+    "liveIndexing": false
+  },
+  "terraform.languageServer": {
+    "args": [],
+    "enabled": true
+  },
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
