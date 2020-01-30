@@ -61,7 +61,10 @@ if hash gofmt 2> /dev/null; then
 fi
 
 if hash hadolint 2> /dev/null; then
-  alias hlh='find . -type f -name Dockerfile -not -path "*/.terraform/*" -exec hadolint "{}" + 2>/dev/null'
+  alias hlh="find . -type f -name Dockerfile \
+    -not -path \"*/.terraform/*\" \
+    -not -path \"*/vendor/*\" \
+    -exec hadolint \"{}\" + 2>/dev/null"
 fi
 
 if hash jq 2> /dev/null; then
