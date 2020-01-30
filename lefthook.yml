@@ -1,0 +1,5 @@
+pre-push:
+  parallel: true
+  commands:
+    bash-lint:
+      run: lint-bash.sh
