@@ -67,6 +67,9 @@
   "git.countBadge": "off",
   "git.fetchOnPull": true,
   "git.rebaseWhenSync": true,
+  "go.alternateTools": {
+    "gometalinter": "/usr/local/bin/golangci-lint"
+  },
   "go.formatTool": "goimports",
   "go.lintTool": "golangci-lint",
   "go.liveErrors": {
