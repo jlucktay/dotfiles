@@ -2,4 +2,7 @@ pre-push:
   parallel: true
   commands:
     bash-lint:
-      run: lint-bash.sh
+      files: git diff --name-only HEAD @{push}
+      glob: "*.sh"
+      root: "/"
+      run: ./lint-bash.sh
