@@ -7,25 +7,25 @@ default=NO
 
 for i in "$@"; do
   case $i in
-  -e=* | --extension=*)
-    extension="${i#*=}"
-    shift # past argument=value
-    ;;
-  -s=* | --searchpath=*)
-    search_path="${i#*=}"
-    shift # past argument=value
-    ;;
-  -l=* | --lib=*)
-    lib_path="${i#*=}"
-    shift # past argument=value
-    ;;
-  --default)
-    default=YES
-    shift # past argument with no value
-    ;;
-  *)
-    # unknown option
-    ;;
+    -e=* | --extension=*)
+      extension="${i#*=}"
+      shift # past argument=value
+      ;;
+    -s=* | --searchpath=*)
+      search_path="${i#*=}"
+      shift # past argument=value
+      ;;
+    -l=* | --lib=*)
+      lib_path="${i#*=}"
+      shift # past argument=value
+      ;;
+    --default)
+      default=YES
+      shift # past argument with no value
+      ;;
+    *)
+      # unknown option
+      ;;
   esac
 done
 

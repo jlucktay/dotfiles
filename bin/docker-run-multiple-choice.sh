@@ -43,26 +43,26 @@ remote=0
 
 for i in "$@"; do
   case $i in
-  -h | --help)
-    usage
-    exit 0
-    ;;
-  -i | --interactive)
-    interactive=1
-    shift
-    ;;
-  -l | --local)
-    local=1
-    shift
-    ;;
-  -r | --remote)
-    remote=1
-    shift
-    ;;
-  *) # unknown option
-    usage
-    exit 1
-    ;;
+    -h | --help)
+      usage
+      exit 0
+      ;;
+    -i | --interactive)
+      interactive=1
+      shift
+      ;;
+    -l | --local)
+      local=1
+      shift
+      ;;
+    -r | --remote)
+      remote=1
+      shift
+      ;;
+    *) # unknown option
+      usage
+      exit 1
+      ;;
   esac
 done
 

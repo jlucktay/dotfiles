@@ -38,19 +38,19 @@ HEREDOC
 
   for arg in "$@"; do
     case $arg in
-    -h | --help)
-      usage
-      return 0
-      ;;
-    -c | --confirm)
-      confirmed=1
-      shift
-      ;;
-    *) # unknown option
-      echo "${FUNCNAME[0]}: argument '$arg' unknown"
-      usage
-      return 1
-      ;;
+      -h | --help)
+        usage
+        return 0
+        ;;
+      -c | --confirm)
+        confirmed=1
+        shift
+        ;;
+      *) # unknown option
+        echo "${FUNCNAME[0]}: argument '$arg' unknown"
+        usage
+        return 1
+        ;;
     esac
   done
 
