@@ -20,13 +20,14 @@ __prompt_command() {
   local IRed='\[\e[0;91m\]'
   local IGre='\[\e[0;92m\]'
   local IYel='\[\e[0;93m\]'
-  local IBlu='\[\e[0;94m\]'
+  # local IBlu='\[\e[0;94m\]'
   local IPur='\[\e[0;95m\]'
   local ICya='\[\e[0;96m\]'
   local IWhi='\[\e[0;97m\]'
 
-  PS1="${ICya}\u${IWhi}@${IPur}\h ${IGre}\t" # Username at host, time (24h)
-  PS1+=" ${IWhi}[${IYel}\W${IWhi}]${Reset}"  # Working directory, trimmed
+  PS1="$ICya\u$IWhi@$IPur\h $IGre\t"    # Username at host, time (24h)
+  PS1+=" $IWhi"'['"$IYel\W$IWhi]$Reset" # Working directory, trimmed
+  # The '[' on the line above gets special treatment to avoid shellharden's zealotry
 
   # Git status
   pge=$(__posh_git_echo)
@@ -41,7 +42,7 @@ __prompt_command() {
     PS1+=" ❌ $IRed$last_exit_code$Reset"
   fi
 
-  PS1+="\n${IWhi}\$${Reset} "
+  PS1+="\n$IWhi\$$Reset "
 }
 
 PROMPT_COMMAND=__prompt_command

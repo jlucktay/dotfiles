@@ -8,21 +8,23 @@ current_branch="$(git branch 2> /dev/null | grep '\*' | cut -d ' ' -f2)"
 if [[ $current_branch == "" ]]; then exit 0; fi
 
 # Background = white, foreground = black
-ColoursHighlight="$(
+colours_highlight="$(
   tput setab 7
   tput setaf 0
 )"
-ColoursReset="$(tput sgr0)"
+colours_reset="$(tput sgr0)"
 
 git fetch --all
 
-for Branch in $(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-); do
-  echo "Start  - $ColoursHighlight$Branch$ColoursReset"
+mapfile -t branches < <(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-)
 
-  git checkout "$Branch"
+for branch in "${branches[@]}"; do
+  echo "Start  - $colours_highlight$branch$colours_reset"
+
+  git checkout "$branch"
   git status
 
-  echo "Finish - $ColoursHighlight$Branch$ColoursReset"
+  echo "Finish - $colours_highlight$branch$colours_reset"
 done
 
 git checkout "$current_branch"

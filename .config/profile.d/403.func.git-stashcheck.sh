@@ -1,6 +1,6 @@
 function stashcheck() {
   while IFS= read -d '' -r git; do
-    mapfile -t stash < <(GIT_DIR=$git git stash list)
+    mapfile -t stash < <(GIT_DIR="$git" git stash list)
 
     if ((${#stash[@]} > 0)); then
       realpath "$git/.."

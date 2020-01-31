@@ -10,7 +10,7 @@ while IFS= read -r line; do
   command=$(echo "$line" | gcut --characters=30-)
   epoch=$(gdate -d"$timestamp" +%s)
 
-  cmd_history[$epoch]=$command
+  cmd_history["$epoch"]="$command"
 done < eternal.main.txt
 
 # https://www.reddit.com/r/bash/comments/5wma5k/is_there_a_way_to_sort_an_associative_array_by/debbjsp/

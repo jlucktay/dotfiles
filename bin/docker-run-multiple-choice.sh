@@ -98,7 +98,7 @@ if [ "$interactive" -eq 1 ]; then
   docker_args+=(--entrypoint /bin/sh --interactive --tty)
 fi
 
-docker_args+=(--rm --volume "$(pwd):/gitrepo" "$image")
+docker_args+=(--rm --volume "$PWD:/gitrepo" "$image")
 
 ### Show arguments and execute with them
 echo "Running Docker with following arguments:"

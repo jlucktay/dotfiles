@@ -29,13 +29,15 @@ for i in "$@"; do
   esac
 done
 
-echo "File extension  = ${extension}"
-echo "Search path     = ${search_path}"
-echo "Library path    = ${lib_path}"
-echo "Default         = ${default}"
-echo "Number files in SEARCH PATH with extension: $(find "${search_path}/" -maxdepth 1 -iname "*.${extension}" -not -type d | wc -l)"
+echo "File extension                             = $extension"
+echo "Search path                                = $search_path"
+echo "Library path                               = $lib_path"
+echo "Default                                    = $default"
+echo "Number files in SEARCH PATH with extension = \
+$(find "$search_path/" -maxdepth 1 -iname "*.$extension" -not -type d | wc -l | xargs)"
 
 if [[ -n $1 ]]; then
+  echo
   echo "Last line of file specified as non-opt/last argument:"
   tail -1 "$1"
 fi

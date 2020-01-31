@@ -25,13 +25,15 @@ fi
 
 echo "Account,Region,EC2Count"
 
-awsume_output="$(awsume --list | grep "^$1")"
+mapfile -t awsume_output < <(awsume --list | grep "^$1")
 
-for ao_line in $awsume_output; do
+for ao_line in "${awsume_output[@]}"; do
   IFS=$' \t' read -ra account_line <<< "$ao_line"
   eval "$(awsume -s "${account_line[0]}" 2> /dev/null)"
 
-  for region in $(awsregions); do
+  mapfile -t aws_regions < <(awsregions)
+
+  for region in "${aws_regions[@]}"; do
     jq_result="$(aws ec2 describe-instances --region "$region" --filter "Name=instance-state-name,Values=running" \
       | jq '.Reservations[].Instances[].InstanceId' | wc -l)"
 

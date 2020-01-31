@@ -32,7 +32,7 @@ find -x "$script_dir" -type f -iname "*sh" \
   -not -name "posh-git-prompt.sh" \
   -not -path "*/.git/*" \
   -print0 \
-  | xargs -0 -n 1 shellcheck --enable=all --exclude=SC2250 --severity=style --shell=bash --
+  | xargs -0 -n 1 shellcheck --enable=all --exclude=SC2250 --severity=style --shell=bash --external-sources --
 
 # Exclude: https://www.shellcheck.net/wiki/SC2250
 # Prefer putting braces around variable references even when not strictly required.

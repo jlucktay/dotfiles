@@ -4,7 +4,7 @@ function git-outdated-sync() {
 
 function lb() {
   LogbooksDir="$HOME/logbooks"
-  if ! [[ -d $LogbooksDir ]]; then
+  if ! [[ -d "$LogbooksDir" ]]; then
     mkdir -pv "$LogbooksDir"
   fi
   if ! [[ -f "$LogbooksDir/bin/loop.rsync.sh" ]]; then
@@ -41,7 +41,7 @@ function danmodver() {
 function gocover() {
   local t
   t=$(mktemp -t gocover)
-  go test "$COVERFLAGS" -coverprofile="$t" "$@" \
+  go test "${COVERFLAGS:-}" -coverprofile="$t" "$@" \
     && go tool cover -func="$t" \
     && unlink "$t"
 }
@@ -62,9 +62,10 @@ function _awsume() {
   local cur prev opts
   COMPREPLY=()
   cur="${COMP_WORDS[COMP_CWORD]}"
+  #shellcheck disable=SC2034
   prev="${COMP_WORDS[COMP_CWORD - 1]}"
   opts=$(awsumepy --rolesusers)
-  COMPREPLY=($(compgen -W "${opts}" -- "${cur}"))
+  COMPREPLY=("$(compgen -W "$opts" -- "$cur")")
   return 0
 }
 complete -F _awsume awsume

@@ -13,7 +13,9 @@ if ! command -v jq > /dev/null; then
   exit 1
 fi
 
-for region in $(awsregions); do
+mapfile -t aws_regions < <(awsregions)
+
+for region in "${aws_regions[@]}"; do
   echo -n "Region: $region... "
 
   # Attempt to create the Default VPC

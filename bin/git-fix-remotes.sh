@@ -3,9 +3,6 @@ set -euo pipefail
 shopt -s nullglob globstar
 IFS=$'\n\t'
 
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
-script_name=$(basename "${BASH_SOURCE[-1]}")
-
 # Background = white, foreground = black
 colours_highlight="$(
   tput setab 7
@@ -19,9 +16,9 @@ if [[ ${#remote_lines[@]} -eq 0 ]]; then
 fi
 
 path="$(realpath . | cut -d'/' -f5-)"
-repo="https://${path}.git"
+repo="https://$path.git"
 
-echo "Repo: '${colours_highlight}${repo}${colours_reset}'"
+echo "Repo: '$colours_highlight$repo$colours_reset'"
 
 echo "git remote set-url origin $repo"
 git remote set-url origin "$repo"
