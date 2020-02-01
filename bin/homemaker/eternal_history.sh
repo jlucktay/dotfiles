@@ -42,4 +42,4 @@ zip_secret=$(jq -er '.bash_eternal_history' "$HOME/.config/homemaker/secrets.jso
 #   -P pswd   use standard encryption, password is pswd
 
 #   zip options archive_name file file ...
-zip -u -j -v -o -9 -P "$zip_secret" "${zip_goes_here:-}/bash_eternal_history.zip" "$HOME/.bash_eternal_history"
+zip -u -j -v -o -9 -P "$zip_secret" "${zip_goes_here:?}/bash_eternal_history.zip" "$HOME/.bash_eternal_history"

@@ -41,7 +41,7 @@ function danmodver() {
 function gocover() {
   local t
   t=$(mktemp -t gocover)
-  go test "${COVERFLAGS:-}" -coverprofile="$t" "$@" \
+  go test "${COVERFLAGS:?}" -coverprofile="$t" "$@" \
     && go tool cover -func="$t" \
     && unlink "$t"
 }
