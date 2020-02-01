@@ -4,7 +4,7 @@ function git-outdated-sync() {
 
 function lb() {
   LogbooksDir="$HOME/logbooks"
-  if ! [[ -d "$LogbooksDir" ]]; then
+  if ! [[ -d $LogbooksDir ]]; then
     mkdir -pv "$LogbooksDir"
   fi
   if ! [[ -f "$LogbooksDir/bin/loop.rsync.sh" ]]; then
