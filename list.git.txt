@@ -6,12 +6,15 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/git/github.com/jlucktay/katkas-website
+/Users/jameslucktaylor/git/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-docs
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
+/Users/jameslucktaylor/git/github.com/Microsoft/vscode-go
+/Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
@@ -24,6 +27,7 @@
 /Users/jameslucktaylor/go/src/github.com/bmatcuk/doublestar
 /Users/jameslucktaylor/go/src/github.com/buildkite/yaml
 /Users/jameslucktaylor/go/src/github.com/clbanning/mxj
+/Users/jameslucktaylor/go/src/github.com/davecheney/gcvis
 /Users/jameslucktaylor/go/src/github.com/docker/distribution
 /Users/jameslucktaylor/go/src/github.com/docker/go-units
 /Users/jameslucktaylor/go/src/github.com/drone/drone-runtime
@@ -32,6 +36,7 @@
 /Users/jameslucktaylor/go/src/github.com/franela/goreq
 /Users/jameslucktaylor/go/src/github.com/ghodss/yaml
 /Users/jameslucktaylor/go/src/github.com/go-bindata/go-bindata
+/Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gopukku
 /Users/jameslucktaylor/go/src/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata
@@ -43,6 +48,7 @@
 /Users/jameslucktaylor/go/src/github.com/mgutz/ansi
 /Users/jameslucktaylor/go/src/github.com/naoina/go-stringutil
 /Users/jameslucktaylor/go/src/github.com/naoina/toml
+/Users/jameslucktaylor/go/src/github.com/pkg/browser
 /Users/jameslucktaylor/go/src/github.com/sendgrid/smtpapi-go
 /Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/sourcegraph/go-ses
@@ -64,11 +70,14 @@
 /Users/jameslucktaylor/go/src/github.com/xeipuuv/gojsonreference
 /Users/jameslucktaylor/go/src/golang.org/x/crypto
 /Users/jameslucktaylor/go/src/golang.org/x/sys
+/Users/jameslucktaylor/go/src/golang.org/x/text
 /Users/jameslucktaylor/go/src/golang.org/x/time
+/Users/jameslucktaylor/go/src/google.golang.org/genproto
+/Users/jameslucktaylor/go/src/google.golang.org/grpc
 /Users/jameslucktaylor/go/src/gopkg.in/alecthomas/kingpin.v2
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
 /Users/jameslucktaylor/Library/Caches/Homebrew/brew-caveats--git
 /Users/jameslucktaylor/Library/Caches/Homebrew/docker-completion--git
+/Users/jameslucktaylor/tmp/ara/wiki
 /Users/jameslucktaylor/tmp/gql-hack
-/Users/jameslucktaylor/tmp/posh-git-sh

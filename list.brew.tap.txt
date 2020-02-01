@@ -1,5 +1,6 @@
 adoptopenjdk/openjdk
 arkweid/lefthook
+golangci/tap
 homebrew/cask
 homebrew/cask-drivers
 homebrew/cask-fonts

@@ -18,6 +18,7 @@ gettext
 git
 glib
 go
+golangci-lint
 graphviz
 gts
 hadolint
@@ -54,6 +55,7 @@ pcre
 pcre2
 prettyping
 python
+python@3.8
 readline
 redis
 rsync
@@ -62,6 +64,8 @@ shellharden
 shfmt
 sqlite
 stack
+terraform
+tflint
 tree
 watch
 webp

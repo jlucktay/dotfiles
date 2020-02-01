@@ -3,9 +3,11 @@ casualjim.gotemplate
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 foxundermoon.shell-format
+mauve.terraform
 ms-azuretools.vscode-docker
 ms-vscode.cpptools
 ms-vscode.Go
+ms-vsliveshare.vsliveshare
 msysyamamoto.vscode-fluentd
 PKief.material-icon-theme
 redhat.vscode-yaml
