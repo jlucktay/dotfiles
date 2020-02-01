@@ -73,7 +73,7 @@
   "go.formatTool": "goimports",
   "go.lintTool": "golangci-lint",
   "go.liveErrors": {
-    "delay": 500,
+    "delay": 250,
     "enabled": true
   },
   "go.testEnvVars": {
@@ -87,6 +87,7 @@
   "go.toolsEnvVars": {
     "GO111MODULE": "on"
   },
+  "go.toolsGopath": "~/vscode-go",
   "go.useLanguageServer": true,
   "gopls": {
     "completeUnimported": true,
