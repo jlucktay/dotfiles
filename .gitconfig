@@ -2,36 +2,44 @@
 # This is Git's per-user configuration file.
 
 [color]
-	branch = auto
-	diff = auto
-	status = auto
-	ui = auto
+branch = auto
+diff = auto
+status = auto
+ui = auto
+
 [commit]
-	template = ~/.gitmessage
+template = ~/.gitmessage
+
 [core]
-	editor = nano
+editor = nano
+
 [credential]
-	helper = osxkeychain
+helper = osxkeychain
+
 [http]
-	cookiefile = {{.Env.HOME}}/.gitcookies
+cookiefile = {{.Env.HOME}}/.gitcookies
+
 [include]
-	path = ~/.gitconfig.aliases
+path = ~/.gitconfig.aliases
+
 [merge]
-	tool = kdiff3
+tool = kdiff3
+
 [push]
-	followTags = true
+followTags = true
+
 [user]
-	name = James Lucktaylor
-	useConfigOnly = true
+name = James Lucktaylor
+useConfigOnly = true
 
 # https://github.com/lyze/posh-git-sh#configuration-options
 
 [bash]
-	branchBehindAndAheadDisplay = full
-	describeStyle = default
-	enableFileStatus = true
-	enableGitStatus = true
-	enableStashStatus = true
-	showStatusWhenZero = false
-	showUpstream = git
-	enableStatusSymbol = true
+branchBehindAndAheadDisplay = full
+describeStyle = default
+enableFileStatus = true
+enableGitStatus = true
+enableStashStatus = true
+showStatusWhenZero = false
+showUpstream = git
+enableStatusSymbol = true
