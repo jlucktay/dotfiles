@@ -3,6 +3,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/dotfiles
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/golang-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/graftorio
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/git/github.com/jlucktay/katkas-website
