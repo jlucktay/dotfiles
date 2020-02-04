@@ -92,8 +92,7 @@
   "gopls": {
     "completeUnimported": true,
     "deepCompletion": true,
-    "usePlaceholders": true,
-    "watchFileChanges": true
+    "usePlaceholders": true
   },
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
