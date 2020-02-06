@@ -48,6 +48,19 @@ if hash gofmt &> /dev/null; then
   alias gofmtsw='find . -type f -iname "*.go" -not -path "*/vendor/*" -exec gofmt -s -w "{}" +'
 fi
 
+if hash golangci-lint &> /dev/null; then
+  #shellcheck disable=SC2139
+  alias golintenableall="golangci-lint run $(
+    golangci-lint linters \
+      | grep -A999 "^Disabled" \
+      | tail -n +2 \
+      | cut -d':' -f1 \
+      | cut -d' ' -f1 \
+      | xargs -n 1 echo "--enable" \
+      | xargs
+  ) --new-from-rev="
+fi
+
 # Open specific Chrome profiles
 alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
