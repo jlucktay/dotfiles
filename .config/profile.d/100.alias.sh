@@ -43,6 +43,11 @@ if hash code &> /dev/null; then
   alias killcode="ps -Af | grep 'Visual Studio Code' | grep -v grep | cut -d' ' -f4 | xargs kill -9"
 fi
 
+# Go
+if hash gofmt &> /dev/null; then
+  alias gofmtsw='find . -type f -iname "*.go" -not -path "*/vendor/*" -exec gofmt -s -w "{}" +'
+fi
+
 # Open specific Chrome profiles
 alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
@@ -54,10 +59,6 @@ if hash gdate &> /dev/null; then
   alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
 else
   alias gdn="date '+%Y%m%d.%H%M%S%z'"
-fi
-
-if hash gofmt 2> /dev/null; then
-  alias gofmtsw='find . -type f -iname "*.go" -exec gofmt -s -w "{}" +'
 fi
 
 if hash hadolint &> /dev/null; then
