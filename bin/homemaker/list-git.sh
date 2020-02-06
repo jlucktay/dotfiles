@@ -13,6 +13,7 @@ git_list_cmd="find \"$HOME\" -type d -name \".git\" \
     -not -path \"*/.glide/cache/*\" \
     -not -path \"*/.terraform/*\" \
     -not -path \"*/go/pkg/dep/sources/*\" \
+    -not -path \"*/Library/Caches/*\" \
     -execdir pwd \\; 2>/dev/null"
 git_list=$(realpath "$script_dir/../../list.git.txt")
 
