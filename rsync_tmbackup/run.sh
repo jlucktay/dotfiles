@@ -3,7 +3,7 @@ set -euo pipefail
 shopt -s globstar nullglob
 IFS=$'\n\t'
 
-script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"
+script_dir="$(cd "$(dirname "${BASH_SOURCE[-1]}")" &> /dev/null && pwd)"
 
 flags=$(rsync_tmbackup.sh --rsync-get-flags)
 flags+=" --no-devices --no-specials"
