@@ -79,5 +79,3 @@
 /Users/jameslucktaylor/go/src/gopkg.in/alecthomas/kingpin.v2
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
-/Users/jameslucktaylor/Library/Caches/Homebrew/brew-caveats--git
-/Users/jameslucktaylor/Library/Caches/Homebrew/docker-completion--git
