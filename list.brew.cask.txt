@@ -14,6 +14,7 @@ itsycal
 keepingyouawake
 keybase
 pingmenu
+robo-3t
 slack
 sony-ps4-remote-play
 spectacle
