@@ -16,6 +16,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "breadcrumbs.enabled": false,
+  "diffEditor.ignoreTrimWhitespace": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
