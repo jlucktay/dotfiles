@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s nullglob globstar
+shopt -s globstar nullglob
 IFS=$'\n\t'
 
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &> /dev/null && pwd)"

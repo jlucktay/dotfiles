@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s nullglob globstar
+shopt -s globstar nullglob
 IFS=$'\n\t'
 
 current_branch="$(git branch 2> /dev/null | grep '\*' | cut -d ' ' -f2)"

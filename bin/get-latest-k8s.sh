@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s nullglob globstar
+shopt -s globstar nullglob
 IFS=$'\n\t'
 
 github_api_output="$(curl --silent https://api.github.com/repos/kubernetes/kubernetes/releases)"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s nullglob globstar
+shopt -s globstar nullglob
 IFS=$'\n\t'
 
 while read -r diff_file; do
