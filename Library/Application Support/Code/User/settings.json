@@ -46,6 +46,7 @@
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
+  "files.defaultLanguage": "${activeEditorLanguage}",
   "files.enableTrash": false,
   "files.eol": "\n",
   "files.exclude": {
