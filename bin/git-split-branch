@@ -1,0 +1,309 @@
+#!/bin/bash
+
+map()
+{
+	# if it was not rewritten, take the original
+	if test -r "$workdir/../map-$1/$2"
+	then
+		cat "$workdir/../map-$1/$2"
+	else
+		echo "$2"
+	fi
+}
+
+# skip commits that leave the tree untouched, commit others
+git_commit_non_empty_tree()
+{
+	mapbranch=$1
+	shift
+	if test $# = 3 && test "$1" = $(git rev-parse "$3^{tree}"); then
+		map "$mapbranch" "$3"
+	elif test $# = 1 && test "$1" = 4b825dc642cb6eb9a060e54bf8d69288fbee4904; then
+		:
+	else
+		git commit-tree "$@"
+	fi
+}
+
+# override die(): this version puts in an extra line break, so that
+# the progress is still visible
+die()
+{
+	echo >&2
+	echo "$*" >&2
+	exit 1
+}
+
+finish_ident() {
+	# Ensure non-empty id name.
+	echo "case \"\$GIT_$1_NAME\" in \"\") GIT_$1_NAME=\"\${GIT_$1_EMAIL%%@*}\" && export GIT_$1_NAME;; esac"
+	# And make sure everything is exported.
+	echo "export GIT_$1_NAME"
+	echo "export GIT_$1_EMAIL"
+	echo "export GIT_$1_DATE"
+}
+
+set_ident() {
+	parse_ident_from_commit author AUTHOR committer COMMITTER
+	finish_ident AUTHOR
+	finish_ident COMMITTER
+}
+
+get_reparents() {
+	local parentstr=
+	mapbranch=$1
+	shift
+	for parent in "$@"; do
+		for reparent in $(map "$mapbranch" "$parent"); do
+			case "$parentstr " in
+			*" -p $reparent "*)
+				;;
+			*)
+				parentstr="$parentstr -p $reparent"
+				;;
+			esac
+		done
+	done
+	printf '%s\n' "$parentstr"
+}
+
+USAGE="[-d <workdir>] [-r <remainder>] <source>
+	<dest1> <files>... [-- <dest2> <files>...]..."
+OPTIONS_SPEC=
+. git-sh-setup
+
+if [ "$(is_bare_repository)" = false ]; then
+	require_clean_work_tree 'split a branch'
+fi
+
+tempdir=.git-rewrite
+rembr=
+srcbr=
+while arg=$1; shift
+do
+	case "$arg" in
+	--)
+		break
+		;;
+	-d*)
+		tempdir=${arg:2}
+		if [ -z "$tempdir" ]; then
+			tempdir=$1
+			shift || usage
+		fi
+		;;
+	-r*)
+		rembr=${arg:2}
+		if [ -z "$rembr" ]; then
+			rembr=$1
+			shift || usage
+		fi
+		;;
+	-?*)
+		usage
+		;;
+	*)
+		srcbr=$arg
+		break
+		;;
+	esac
+done
+
+[ -n "$srcbr" ] || usage
+
+# By default, rewrite source branch to remainder in place
+: ${rembr:=$srcbr}
+
+# Set up and change to temporary directory
+orig_dir=$(pwd)
+mkdir -p "$tempdir/t" &&
+tempdir="$(cd "$tempdir"; pwd)" &&
+	cd "$tempdir/t" &&
+	workdir="$(pwd)" ||
+	die ""
+
+# Remove tempdir on exit
+trap 'cd "$orig_dir"; rm -rf "$tempdir"' 0
+
+# Now read and parse destination specs
+dstbrs=
+declare -A dstfiles=()
+while branch=$1 && shift; do
+	dstbrs+=$(git rev-parse --sq-quote "$branch")
+	dstfiles[$branch]=
+	while arg=$1 && shift; do
+		case $arg in
+			--)
+				break
+				;;
+			*)
+				dstfiles[$branch]+=$(git rev-parse --sq-quote "$arg")
+				;;
+		esac
+	done
+done
+
+ORIG_GIT_DIR="$GIT_DIR"
+ORIG_GIT_WORK_TREE="$GIT_WORK_TREE"
+ORIG_GIT_INDEX_FILE="$GIT_INDEX_FILE"
+GIT_WORK_TREE=.
+export GIT_DIR GIT_WORK_TREE
+
+GIT_INDEX_FILE="$(pwd)/../index"
+export GIT_INDEX_FILE
+
+# Set up ID map for rewriting parents on each branch
+eval set -- "$dstbrs" "$rembr"
+for branch in "$@"; do
+	mkdir -p ../map-"$branch" || die "Could not create map-$branch/ directory"
+done
+
+srcrev=$(git rev-parse "$srcbr")
+git rev-list --reverse --topo-order --default HEAD \
+	--parents --simplify-merges "$srcrev" >../revs ||
+	die "Could not get the commits"
+commits=$(wc -l <../revs | tr -d " ")
+
+test $commits -eq 0 && die "Found nothing to rewrite"
+
+# Rewrite the commits
+report_progress ()
+{
+	if test -n "$progress" &&
+		test $git_filter_branch__commit_count -gt $next_sample_at
+	then
+		count=$git_filter_branch__commit_count
+
+		now=$(date +%s)
+		elapsed=$(($now - $start_timestamp))
+		remaining=$(( ($commits - $count) * $elapsed / $count ))
+		if test $elapsed -gt 0
+		then
+			next_sample_at=$(( ($elapsed + 1) * $count / $elapsed ))
+		else
+			next_sample_at=$(($next_sample_at + 1))
+		fi
+		progress=" ($elapsed seconds passed, remaining $remaining predicted)"
+	fi
+	printf "\rRewrite $commit ($count/$commits)$progress    "
+}
+
+git_filter_branch__commit_count=0
+
+progress= start_timestamp=
+if date '+%s' 2>/dev/null | grep -q '^[0-9][0-9]*$'
+then
+	next_sample_at=0
+	progress="dummy to ensure this is not empty"
+	start_timestamp=$(date '+%s')
+fi
+
+while read commit parents; do
+	git_filter_branch__commit_count=$(($git_filter_branch__commit_count+1))
+
+	report_progress
+
+	git cat-file commit "$commit" >../commit ||
+		die "Cannot read commit $commit"
+
+	eval "$(set_ident <../commit)" ||
+		die "setting author/committer failed for commit $commit"
+
+	{
+		while IFS='' read -r header_line && test -n "$header_line"
+		do
+			# skip header lines...
+			:;
+		done
+		# and output the actual commit message
+		cat
+	} <../commit >../message
+
+	GIT_INDEX_FILE=$GIT_INDEX_FILE-rem GIT_ALLOW_NULL_SHA1=1 git read-tree -i -m $commit ||
+		die "Could not initialize the index"
+
+	eval set -- "$dstbrs"
+	for branch in "$@"; do
+		# Get just the specified files into the index
+		eval set -- "${dstfiles[$branch]}"
+		GIT_INDEX_FILE=$GIT_INDEX_FILE-rem git rm -qr --cached --ignore-unmatch -- "$@"
+		git read-tree --empty
+		git reset -q $commit -- "$@"
+
+		parentstr=$(get_reparents "$branch" $parents)
+		newtree=$(git write-tree)
+		git_commit_non_empty_tree "$branch" "$newtree" $parentstr < ../message > "../map-$branch/$commit" ||
+			die "could not write rewritten commit"
+	done
+
+	parentstr=$(get_reparents "$rembr" $parents)
+	remtree=$(GIT_INDEX_FILE=$GIT_INDEX_FILE-rem git write-tree)
+	git_commit_non_empty_tree "$rembr" "$remtree" $parentstr < ../message > "../map-$rembr/$commit" ||
+		die "could not write rewritten commit"
+done <../revs
+
+echo
+
+eval set -- "$dstbrs"
+{
+	# Create refs for our split branches
+	for branch in "$@"; do
+		sha1=$(map "$branch" "$srcrev")
+		if [ -z "$sha1" ]; then
+			echo "$branch: matched no files, not creating" >&2
+			continue
+		fi
+		echo "$branch: creating at $(git rev-parse --short "$sha1")" >&2
+		printf 'create refs/heads/%s %s\n' "$branch" "$sha1"
+	done
+
+	# Create or update the ref for our remainder
+	sha1=$(map "$rembr" "$srcrev")
+	if [ "$rembr" != "$srcbr" ]; then
+		if [ -z "$sha1" ]; then
+			echo "$rembr: no files remained, not creating" >&2
+		else
+			echo "$rembr: creating at $(git rev-parse --short "$sha1")" >&2
+			printf 'create refs/heads/%s %s\n' "$rembr" "$sha1"
+		fi
+	else
+		if [ -z "$sha1" ]; then
+			echo "$rembr: no files remained, deleting" >&2
+			printf 'delete refs/heads/%s %s\n' "$rembr" "$srcrev"
+		else
+			echo "$rembr: rewriting to $(git rev-parse --short "$sha1")" >&2
+			printf 'update refs/heads/%s %s %s\n' "$rembr" "$sha1" "$srcrev"
+		fi
+	fi
+} | git update-ref --stdin
+
+# Store our potential final destination before deleting the map
+sha1=$(map "$rembr" "$srcrev")
+
+cd "$orig_dir"
+rm -rf "$tempdir"
+
+trap - 0
+
+unset GIT_DIR GIT_WORK_TREE GIT_INDEX_FILE
+test -z "$ORIG_GIT_DIR" || {
+	GIT_DIR="$ORIG_GIT_DIR" && export GIT_DIR
+}
+test -z "$ORIG_GIT_WORK_TREE" || {
+	GIT_WORK_TREE="$ORIG_GIT_WORK_TREE" &&
+	export GIT_WORK_TREE
+}
+test -z "$ORIG_GIT_INDEX_FILE" || {
+	GIT_INDEX_FILE="$ORIG_GIT_INDEX_FILE" &&
+	export GIT_INDEX_FILE
+}
+
+if [ "$(is_bare_repository)" = false ] && [ "$rembr" = "$srcbr" ]; then
+	if [ -n "$sha1" ]; then
+		git read-tree -u -m "$srcbr" || exit
+	else
+		git read-tree -u -m 4b825dc642cb6eb9a060e54bf8d69288fbee4904 || exit
+	fi
+fi
+
+exit 0
