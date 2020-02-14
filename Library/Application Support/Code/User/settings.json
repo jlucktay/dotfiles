@@ -37,6 +37,7 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
   "explorer.confirmDragAndDrop": false,
+  "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
   "files.associations": {
     "*.mmark": "markdown",
