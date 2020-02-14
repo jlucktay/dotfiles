@@ -103,6 +103,7 @@
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
+  "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
     "--exclude=SC2250",
