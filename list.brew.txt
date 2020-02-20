@@ -17,7 +17,10 @@ fzf
 gd
 gdbm
 gettext
+gh
 git
+git-filter-repo
+git-gui
 glib
 go
 golangci-lint
@@ -68,6 +71,7 @@ shellharden
 shfmt
 sqlite
 stack
+tcl-tk
 terraform
 tflint
 tree

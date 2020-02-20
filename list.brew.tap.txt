@@ -1,5 +1,6 @@
 adoptopenjdk/openjdk
 arkweid/lefthook
+github/gh
 golangci/tap
 homebrew/cask
 homebrew/cask-drivers

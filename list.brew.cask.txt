@@ -13,6 +13,7 @@ iterm2
 itsycal
 keepingyouawake
 keybase
+ngrok
 pingmenu
 robo-3t
 slack
