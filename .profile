@@ -5,7 +5,7 @@
 # shellcheck disable=SC1090
 source ~/.bashrc
 
-for profile in "$HOME"/.config/profile.d/*.sh ; do
-    # shellcheck disable=SC1090
-    source "$profile"
+for profile in "$HOME"/.config/profile.d/*.sh; do
+  # shellcheck disable=SC1090
+  source "$profile"
 done
