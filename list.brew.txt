@@ -1,5 +1,6 @@
 autojump
 awscli
+bandwhich
 bash
 bash-completion@2
 bat
@@ -41,9 +42,11 @@ lesspipe
 libffi
 libidn2
 libpng
+libssh2
 libtiff
 libtool
 libunistring
+libzip
 mage
 minikube
 mongodb-community
@@ -65,7 +68,9 @@ python
 python@3.8
 readline
 redis
+ripgrep
 rsync
+rustup-init
 shellcheck
 shellharden
 shfmt
@@ -74,6 +79,7 @@ stack
 tcl-tk
 terraform
 tflint
+tldr
 tree
 watch
 webp

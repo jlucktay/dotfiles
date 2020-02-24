@@ -80,3 +80,5 @@
 /Users/jameslucktaylor/go/src/gopkg.in/alecthomas/kingpin.v2
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
+/Users/jameslucktaylor/Library/Application Support/tldr
+/Users/jameslucktaylor/tmp/lists
