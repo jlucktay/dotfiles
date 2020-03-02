@@ -51,7 +51,7 @@ fi
 # https://github.com/golangci/golangci-lint
 if hash golangci-lint &> /dev/null; then
   function golint_enable_all() {
-    local -a disabled enable
+    local -a disabled enabled
     mapfile -t disabled < <(
       golangci-lint linters \
         | grep -A999 "^Disabled" \
@@ -61,10 +61,10 @@ if hash golangci-lint &> /dev/null; then
     )
 
     for ((i = 0; i < ${#disabled[@]}; i += 1)); do
-      enable+=("--enable=${disabled[$i]}")
+      enabled+=("--enable=${disabled[$i]}")
     done
 
-    golangci-lint run "${enable[@]}" "$@"
+    golangci-lint run "${enabled[@]}" "$@"
   }
 fi
 
