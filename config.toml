@@ -38,7 +38,7 @@
     cmds = [["@install", "coreutils"]]
 
 [tasks.git]
-    rejects = [["stat", "/usr/local/bin/git"]]
+    rejects = [["hash", "git"]]
     cmds = [["@install", "git"]]
 
 [tasks.gitconfig]
