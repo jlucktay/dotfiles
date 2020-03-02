@@ -84,7 +84,6 @@
   },
   "go.testFlags": [
     "-count=1",
-    "-failfast",
     "-v"
   ],
   "go.toolsEnvVars": {
