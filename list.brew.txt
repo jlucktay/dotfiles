@@ -69,6 +69,7 @@ python@3.8
 readline
 redis
 ripgrep
+rpm2cpio
 rsync
 rustup-init
 shellcheck

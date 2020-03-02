@@ -22,7 +22,6 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
-/Users/jameslucktaylor/git/github.com/uudashr/gopkgs
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
 /Users/jameslucktaylor/go/src/cloud.google.com/go
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
