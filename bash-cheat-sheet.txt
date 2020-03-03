@@ -7,8 +7,6 @@ Cross-compile Go for all available platforms and architectures (in a tweet sized
 
 The golden rule of git rebase is to never use it on public branches.
 
-https://git-scm.com/docs/git-push#Documentation/git-push.txt---no-force-with-lease
-
 https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
     git commit --fixup <commit>
     - where <commit> is the original goofed commit you want to.. fix.. up...
