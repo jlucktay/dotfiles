@@ -79,6 +79,11 @@ fi
 alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
 
+# Chezmoi
+if hash chezmoi &> /dev/null; then
+  alias cg='chezmoi git --'
+fi
+
 # Miscellaneous
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 

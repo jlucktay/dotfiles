@@ -1,4 +1,4 @@
-Don't forget about autojump (`j`) and `shellharden` and `elvish` and `mage` and `homemaker`!
+Don't forget about autojump (`j`) and `shellharden` and `elvish` and `mage` and `chezmoi`!
 
 find . -type f -iname "*.code-workspace" 2>/dev/null
 
