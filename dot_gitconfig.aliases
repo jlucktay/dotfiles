@@ -1,0 +1,81 @@
+[alias]
+ap = add --patch
+branches = branch --all # Lists all branches including remote branches
+d = diff .
+diffs = diff --staged
+dt = difftool --no-prompt
+remotes = remote --verbose
+rup = remote update --prune
+s = status .
+surr = submodule update --recursive --remote
+
+incoming = show --patch ..@{u}
+inlog = log ..@{u}
+outgoing = show --patch @{u}..
+outlog = log @{u}..
+
+change = codereview change
+gofmt = codereview gofmt
+mail = codereview mail
+pending = codereview pending
+submit = codereview submit
+sync = codereview sync
+
+# Best used in tandem with 'git commit --fixup <commit>'
+ram = rebase --autosquash --autostash --interactive origin/master
+
+# Unpushed branches/commits
+# With thanks to: https://stackoverflow.com/questions/39220870/in-git-list-names-of-branches-with-unpushed-commits
+unpushed = log --branches --not --remotes --no-walk --decorate --oneline
+
+### Lines of code per author
+lines = "!f() { git ls-files | while read f; do git blame -w -M -C -C --line-porcelain \"$f\" | grep '^author '; done | sort -f | uniq -ic | sort -n; }; f"
+
+# Push a new branch upstream
+psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
+
+### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
+
+aliases = "!git config --list | grep -E '^alias.' | cut -c 7-"
+
+# Deletes all branches merged with specified branch (or master if no branch is specified)
+bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+
+# Switches to specified branch (or master if no branch is specified), runs git up, then runs bclean.
+bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+
+# Lists the files with the most churn
+churn = !git --no-pager log --name-only --oneline | grep -v ' ' | sort | uniq -c | sort -nr | head
+
+# Show list of files in a conflict state.
+conflicts = !git diff --name-only --diff-filter=U
+
+find = "!git ls-files | grep -i"
+
+graph = log --graph -25 --branches --remotes --tags --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%aN, %ar) %Cred%d' --author-date-order
+lograph = log --graph --branches --remotes --tags --format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%aN, %ar) %Cred%d' --author-date-order
+
+hist = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+history = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+
+# Shows the latest commit message
+latest = "!git ls -1"
+
+lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+# A better git log.
+ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+
+# Moves a set of commits from the current branch to another
+migrate = "!f() { CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-$CURRENT@{u}} && git rebase --onto ${2-master} $CURRENT; }; f"
+
+open = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}; }; f"
+
+pr = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}/compare/$(git rev-parse --abbrev-ref HEAD); }; f"
+
+# Back out changes
+undo = checkout -p --
+unstage = reset -q HEAD --
+
+up = !git pull --rebase --prune $@ && git submodule update --init --recursive
