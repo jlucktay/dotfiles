@@ -14,5 +14,5 @@ if hash go &> /dev/null && hash goimports &> /dev/null; then
       -execdir goimports -l -local "$loc" -w {} \;
   }
 
-  export -f goimportslw
+  export -f goimplvw
 fi
