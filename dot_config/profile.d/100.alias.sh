@@ -32,11 +32,11 @@ fi
 # (GNU) ls
 if hash gls &> /dev/null; then
   alias ls='gls --color --human-readable'
-  alias ll='gls -l --almost-all --color --classify --human-readable'
 else
-  alias ls='ls -Gh'
-  alias ll='ls -AFGlh'
+  alias ls='ls --color --human-readable'
 fi
+
+alias ll='ls -l --almost-all --classify'
 
 # Visual Studio Code
 if hash code &> /dev/null; then
