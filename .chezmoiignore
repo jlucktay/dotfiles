@@ -3,6 +3,7 @@ rsync_tmbackup/
 vscode/
 
 bash_eternal_history.zip
+bootstrap.sh
 Brewfile
 fix-eternal.sh
 lefthook.yml
