@@ -17,8 +17,9 @@ function process_list() {
     brew update
   fi
 
-  # Need this set so that when 'find' hits directories with permission errors, they don't cause a stop on the non-zero
-  # exit status
-  set +e
-  eval "$1" | sort --ignore-case > "$2"
+  if ! cmd_output="$(eval "$1")"; then
+    : # No-op; skipping errors
+  fi
+
+  sort --ignore-case <<< "$cmd_output" > "$2"
 }
