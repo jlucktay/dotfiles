@@ -1,0 +1,49 @@
+# Managed by chezmoi, so edit this file in the 'dotfiles' repo, not
+# locally.
+#
+# This is Git's per-user configuration file.
+
+[color]
+branch = auto
+diff = auto
+status = auto
+ui = auto
+
+[commit]
+template = ~/.gitmessage
+
+[core]
+editor = nano
+
+[credential]
+helper = osxkeychain
+
+[http]
+cookiefile = {{ .chezmoi.homedir }}/.gitcookies
+
+[include]
+path = ~/.gitconfig.aliases
+
+[merge]
+tool = kdiff3
+
+[push]
+followTags = true
+
+[user]
+name = James Lucktaylor
+useConfigOnly = true
+
+# https://github.com/lyze/posh-git-sh#configuration-options
+[bash]
+branchBehindAndAheadDisplay = full
+describeStyle = default
+enableFileStatus = true
+enableGitStatus = true
+enableStashStatus = true
+showStatusWhenZero = false
+showUpstream = git
+enableStatusSymbol = true
+
+[hub]
+protocol = https
