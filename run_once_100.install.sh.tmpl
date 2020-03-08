@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+shopt -s globstar nullglob
+
+{{ if eq .chezmoi.os "linux" -}}
+sudo apt install jq
+{{ else if eq .chezmoi.os "darwin" -}}
+HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle --no-lock
+{{ end -}}
