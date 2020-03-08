@@ -74,6 +74,9 @@
     "gometalinter": "/usr/local/bin/golangci-lint"
   },
   "go.formatTool": "goimports",
+  "go.languageServerExperimentalFeatures": {
+    "documentLink": false
+  },
   "go.lintTool": "golangci-lint",
   "go.liveErrors": {
     "delay": 250,
@@ -92,8 +95,8 @@
   "go.toolsGopath": "~/vscode-go",
   "go.useLanguageServer": true,
   "gopls": {
-    "completeUnimported": true,
-    "deepCompletion": true,
+    "staticcheck": false,
+    "tempModfile": true,
     "usePlaceholders": true
   },
   "markdown.extension.list.indentationSize": "inherit",
