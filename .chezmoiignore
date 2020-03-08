@@ -1,4 +1,5 @@
 vscode/
 
+fix-eternal.sh
 lefthook.yml
 lint-bash.sh
