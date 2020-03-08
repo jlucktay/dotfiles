@@ -1,8 +1,0 @@
-# https://nethackwiki.com/wiki/Options
-# https://nethackwiki.com/wiki/Menucolors
-
-OPTIONS=color
-OPTIONS=hilite_pet
-OPTIONS=hilite_pile
-OPTIONS=lit_corridor
-OPTIONS=symset:DECgraphics

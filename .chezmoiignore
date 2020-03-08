@@ -1,5 +1,9 @@
+homemaker/
+rsync_tmbackup/
 vscode/
 
+bash_eternal_history.zip
 fix-eternal.sh
 lefthook.yml
 lint-bash.sh
+README.md
