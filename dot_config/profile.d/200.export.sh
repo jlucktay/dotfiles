@@ -11,7 +11,11 @@ function prefix_path() {
 prefix_path "/usr/local/opt/curl/bin"
 prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.cargo/bin"
-prefix_path "${GOPATH:?}/bin"
+
+if [[ -v GOPATH ]]; then
+  prefix_path "$GOPATH/bin"
+fi
+
 prefix_path "$HOME/bin"
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/

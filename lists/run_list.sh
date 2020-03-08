@@ -43,9 +43,11 @@ git_list_cmd="find \"$HOME\" -type d -name \".git\" \
 process_list "$git_list_cmd" "git"
 
 # Go binaries
-go_bin_list_cmd="find ${GOPATH:?}/bin -type f"
+if [[ -v GOPATH ]]; then
+  go_bin_list_cmd="find $GOPATH/bin -type f"
 
-process_list "$go_bin_list_cmd" "go.bin"
+  process_list "$go_bin_list_cmd" "go.bin"
+fi
 
 # Homebrew
 process_list "brew tap" "brew.tap"
