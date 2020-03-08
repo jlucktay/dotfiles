@@ -27,9 +27,16 @@ hash zip 2> /dev/null || {
   exit 1
 }
 
-if ! zip_secret="$(chezmoi data | jq --exit-status --raw-output '.bash_eternal_history.zip_secret')"; then
-  echo "$script_name: couldn't fetch zip secret from 'chezmoi data'"
+chezmoi_data=$(chezmoi data)
+
+if ! zip_destination="$(jq --exit-status --raw-output '.chezmoi.sourceDir' <<< "$chezmoi_data")"; then
+  echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
   exit 1
+fi
+
+if ! zip_secret="$(jq --exit-status --raw-output '.bash_eternal_history.zip_secret' <<< "$chezmoi_data")"; then
+  echo "$script_name: couldn't fetch zip secret from 'chezmoi data'; aborting"
+  exit 0
 fi
 
 # zip --version:
@@ -48,9 +55,4 @@ fi
 #   -P pswd   use standard encryption, password is pswd
 
 #   zip options archive_name file file ...
-if ! zip_destination="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')"; then
-  echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
-  exit 1
-fi
-
 zip -u -j -v -o -9 -P "$zip_secret" "$zip_destination/bash_eternal_history.zip" "$HOME/.bash_eternal_history"
