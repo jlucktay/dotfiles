@@ -12,9 +12,6 @@ homebrew_tap_list=$(realpath "$script_dir/list.brew.tap.txt")
 homebrew_list=$(realpath "$script_dir/list.brew.txt")
 homebrew_cask_list=$(realpath "$script_dir/list.brew.cask.txt")
 
-# Make sure we're current before kicking off the lists
-brew update
-
 process_list "brew tap" "$homebrew_tap_list"
 process_list "brew list -1" "$homebrew_list"
 process_list "brew cask list -1" "$homebrew_cask_list"
