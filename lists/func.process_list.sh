@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-function processList() {
+function process_list() {
   # Parameter #1 is the command to generate the list
   # Parameter #2 is the filename of the old archived list
 

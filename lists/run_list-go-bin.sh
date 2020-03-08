@@ -6,9 +6,9 @@ IFS=$'\n\t'
 script_dir="$(cd "$(dirname "${BASH_SOURCE[-1]}")" &> /dev/null && pwd)"
 
 # shellcheck disable=SC1090
-source "$script_dir/func.processList.sh"
+source "$script_dir/func.process_list.sh"
 
 go_bin_list_cmd="find ${GOPATH:?}/bin -type f"
-go_bin_list=$(realpath "$script_dir/../../list.go.bin.txt")
+go_bin_list=$(realpath "$script_dir/list.go.bin.txt")
 
-processList "$go_bin_list_cmd" "$go_bin_list"
+process_list "$go_bin_list_cmd" "$go_bin_list"
