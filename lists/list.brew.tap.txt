@@ -1,0 +1,14 @@
+adoptopenjdk/openjdk
+arkweid/lefthook
+github/gh
+golangci/tap
+homebrew/cask
+homebrew/cask-drivers
+homebrew/cask-fonts
+homebrew/cask-versions
+homebrew/core
+homebrew/services
+jlucktay/tap
+mongodb/brew
+rafaelgarrido/caveats
+twpayne/taps
