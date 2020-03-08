@@ -2,7 +2,6 @@
 set -euo pipefail
 shopt -s globstar nullglob
 
-cd "$HOME"
-curl --fail --location --silent https://git.io/chezmoi | BINDIR=/usr/local/bin sudo --preserve-env=BINDIR sh
-PATH=$HOME/bin:$PATH
+curl --fail --location --silent https://git.io/chezmoi | BINDIR="$HOME/bin" sh
+sudo mv "$HOME"/bin/chezmoi /usr/local/bin
 chezmoi init --apply --verbose https://github.com/jlucktay/dotfiles.git
