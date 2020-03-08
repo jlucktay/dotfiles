@@ -2,6 +2,7 @@ adoptopenjdk/openjdk
 arkweid/lefthook
 github/gh
 golangci/tap
+homebrew/bundle
 homebrew/cask
 homebrew/cask-drivers
 homebrew/cask-fonts
