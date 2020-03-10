@@ -6,5 +6,5 @@ shopt -s globstar nullglob
 sudo apt update
 sudo apt install --assume-yes --no-install-recommends jq zip
 {{ else if eq .chezmoi.os "darwin" -}}
-HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle --no-lock
+HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle install --no-lock
 {{ end -}}
