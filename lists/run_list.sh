@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+set -euo pipefail
+shopt -s globstar nullglob
+IFS=$'\n\t'
 
 script_name=$(basename "${BASH_SOURCE[-1]}")
 
@@ -36,20 +39,16 @@ function process_list() {
 }
 
 # Git repos I have checked out locally
-git_list_cmd="find \"$HOME\" -type d -name \".git\" \
-    -not -path \"*/.cache/*\" \
-    -not -path \"*/.glide/cache/*\" \
-    -not -path \"*/.terraform/*\" \
-    -not -path \"*/go/pkg/dep/sources/*\" \
-    -not -path \"*/Library/*\" \
-    -execdir pwd \\; 2>/dev/null"
+git_list_cmd="fd '^\.git$' \"$HOME\" \
+  --hidden --type d \
+  --exec git -C '{//}' rev-parse --show-toplevel \
+  | grep -v \"\/Library\/\" "
 
 process_list "$git_list_cmd" "git"
 
 # Go binaries
 if [[ -v GOPATH ]]; then
   go_bin_list_cmd="find $GOPATH/bin -type f"
-
   process_list "$go_bin_list_cmd" "go.bin"
 fi
 
@@ -60,10 +59,8 @@ process_list "brew cask list -1" "brew.cask"
 
 # NPM
 npm_list_cmd="npm list --depth=0 --global --parseable"
-
 process_list "$npm_list_cmd" "npm"
 
 # VSCode extensions
 vscode_list_cmd="code --list-extensions"
-
 process_list "$vscode_list_cmd" "vscode"

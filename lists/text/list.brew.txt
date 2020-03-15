@@ -13,6 +13,7 @@ docker-completion
 docker-compose-completion
 docker-slim
 drone-cli
+fd
 fontconfig
 freetype
 fzf
