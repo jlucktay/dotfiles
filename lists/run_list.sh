@@ -19,6 +19,9 @@ function process_list() {
     return
   fi
 
+  # Print command and first argument
+  awk '{print $1, $2}' <<< "$1"
+
   # If the command is 'brew' then make sure we're current before kicking off the lists
   if [ "$cmd_name" == "brew" ]; then
     brew update
