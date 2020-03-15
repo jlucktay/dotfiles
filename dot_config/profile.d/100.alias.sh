@@ -87,12 +87,6 @@ fi
 # Miscellaneous
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 
-if hash gdate &> /dev/null; then
-  alias gdn="gdate '+%Y%m%d.%H%M%S.%N%z'"
-else
-  alias gdn="date '+%Y%m%d.%H%M%S%z'"
-fi
-
 if hash hadolint &> /dev/null; then
   alias hlh="find . -type f -name Dockerfile \
     -not -path \"*/.terraform/*\" \

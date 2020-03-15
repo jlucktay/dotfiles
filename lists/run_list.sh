@@ -20,6 +20,7 @@ function process_list() {
   fi
 
   # Print command and first argument
+  printf "%s: [%s] " "$script_name" "$(gdn)"
   awk '{print $1, $2}' <<< "$1"
 
   # If the command is 'brew' then make sure we're current before kicking off the lists
