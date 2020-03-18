@@ -22,8 +22,7 @@ if hash brew 2> /dev/null; then
   lesspipe_path="$(brew --prefix)/bin/lesspipe.sh"
 
   if test -x "$lesspipe_path"; then
-    LESSOPEN="|$lesspipe_path %s"
-    export LESSOPEN
+    export LESSOPEN="|$lesspipe_path %s"
     export LESS_ADVANCED_PREPROCESSOR=1
   fi
 fi
