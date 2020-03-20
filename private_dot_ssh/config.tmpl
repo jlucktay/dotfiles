@@ -1,6 +1,6 @@
 Host tilde.club
     AddKeysToAgent yes
-    IdentityFile ~/.ssh/id_rsa_jlucktay
+    IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_jlucktay
     UseKeychain yes
     User jlucktay
 
@@ -8,7 +8,7 @@ Host tilde.club
 Host danjump
     CheckHostIP no
     HostName 10.19.58.64
-    IdentityFile ~/.ssh/id_rsa_jlucktayjump
+    IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_jlucktayjump
     StrictHostKeyChecking no
     UpdateHostKeys yes
     User jlucktay
@@ -20,7 +20,7 @@ Host *
     AddKeysToAgent yes
     Cipher aes128-ctr
     ControlMaster auto
-    ControlPath ~/.ssh/%C.sock
+    ControlPath {{ .chezmoi.homedir }}/.ssh/%C.sock
     ControlPersist 10m
-    IdentityFile ~/.ssh/id_rsa
+    IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa
     UseKeychain yes

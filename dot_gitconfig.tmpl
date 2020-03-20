@@ -9,7 +9,7 @@ status = auto
 ui = auto
 
 [commit]
-template = ~/.gitmessage
+template = {{ .chezmoi.homedir }}/.gitmessage
 
 [core]
 editor = nano
@@ -21,7 +21,7 @@ helper = osxkeychain
 cookiefile = {{ .chezmoi.homedir }}/.gitcookies
 
 [include]
-path = ~/.gitconfig.aliases
+path = {{ .chezmoi.homedir }}/.gitconfig.aliases
 
 [merge]
 tool = p4merge
