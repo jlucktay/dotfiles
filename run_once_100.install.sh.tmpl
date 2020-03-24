@@ -2,9 +2,9 @@
 set -euo pipefail
 shopt -s globstar nullglob
 
-{{ if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.os "darwin" -}}
+HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle install --no-lock
+{{- else if eq .chezmoi.os "linux" -}}
 sudo apt update
 sudo apt install --assume-yes --no-install-recommends jq zip
-{{ else if eq .chezmoi.os "darwin" -}}
-HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle install --no-lock
-{{ end -}}
+{{- end }}
