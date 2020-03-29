@@ -1,6 +1,7 @@
 adoptopenjdk/openjdk
 arkweid/lefthook
 github/gh
+go-swagger/go-swagger
 golangci/tap
 homebrew/bundle
 homebrew/cask
@@ -12,4 +13,5 @@ homebrew/services
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats
+tidwall/jj
 twpayne/taps

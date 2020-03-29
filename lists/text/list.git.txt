@@ -10,6 +10,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/rest-api
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
+/Users/jameslucktaylor/git/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
@@ -35,6 +36,7 @@
 /Users/jameslucktaylor/go/src/github.com/docker/go-units
 /Users/jameslucktaylor/go/src/github.com/drone/drone-runtime
 /Users/jameslucktaylor/go/src/github.com/drone/drone-yaml
+/Users/jameslucktaylor/go/src/github.com/fogleman/gg
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/franela/goreq
 /Users/jameslucktaylor/go/src/github.com/ghodss/yaml
@@ -42,6 +44,7 @@
 /Users/jameslucktaylor/go/src/github.com/go-kit/kit
 /Users/jameslucktaylor/go/src/github.com/go-logfmt/logfmt
 /Users/jameslucktaylor/go/src/github.com/go-stack/stack
+/Users/jameslucktaylor/go/src/github.com/golang/freetype
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
 /Users/jameslucktaylor/go/src/github.com/jlucktay/gopukku
 /Users/jameslucktaylor/go/src/github.com/jlucktay/rate-limit
@@ -84,6 +87,7 @@
 /Users/jameslucktaylor/go/src/go.uber.org/multierr
 /Users/jameslucktaylor/go/src/go.uber.org/zap
 /Users/jameslucktaylor/go/src/golang.org/x/crypto
+/Users/jameslucktaylor/go/src/golang.org/x/image
 /Users/jameslucktaylor/go/src/golang.org/x/sys
 /Users/jameslucktaylor/go/src/golang.org/x/text
 /Users/jameslucktaylor/go/src/golang.org/x/time
