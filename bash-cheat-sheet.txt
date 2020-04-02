@@ -1,17 +1,20 @@
 Don't forget about autojump (`j`) and `shellharden` and `elvish` and `mage` and `chezmoi`!
 
-find . -type f -iname "*.code-workspace" 2>/dev/null
-
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
 
-The golden rule of git rebase is to never use it on public branches.
+=== The golden rule of git rebase is to never use it on public branches ===
 
 https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
     git commit --fixup <commit>
     - where <commit> is the original goofed commit you want to.. fix.. up...
     git rebase -i --autosquash <commit> (probably 'origin/master')
     - where <commit> is the last commit you want to retain as-is, not the first one you want to change
+
+Partial pull:                          Partial push:
+- git rup                              - git push <remote> <src>:<dst>
+- git merge <target>                   - src e.g. HEAD~3, a1b2c3
+                                       - dst == branch name
 
 K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit)
     git remote add upstream https://github.com/kubernetes/kubernetes.git && git remote set-url --push upstream no_push
