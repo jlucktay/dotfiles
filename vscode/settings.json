@@ -4,6 +4,7 @@
   },
   "[go]": {
     "editor.codeActionsOnSave": {
+      "source.fixAll": true,
       "source.organizeImports": true
     },
     "editor.formatOnSave": true,
@@ -95,6 +96,12 @@
   "go.toolsGopath": "~/vscode-go",
   "go.useLanguageServer": true,
   "gopls": {
+    "analyses": {
+      "fillreturns": true,
+      "nonewvars": true,
+      "undeclaredname": true,
+      "unusedparams": true,
+    },
     "staticcheck": false,
     "tempModfile": true,
     "usePlaceholders": true
