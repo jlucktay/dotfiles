@@ -1,4 +1,3 @@
 /Users/jameslucktaylor/go/bin/go-bindata
 /Users/jameslucktaylor/go/bin/godoc
 /Users/jameslucktaylor/go/bin/goimports
-/Users/jameslucktaylor/go/bin/homemaker

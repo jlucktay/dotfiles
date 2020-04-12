@@ -15,6 +15,7 @@ docker-compose-completion
 docker-slim
 drone-cli
 fd
+firebase-cli
 fontconfig
 freetype
 fzf
