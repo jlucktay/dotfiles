@@ -41,10 +41,11 @@
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
   "files.associations": {
-    "*.mmark": "markdown",
+    ".firebaserc": "json",
     ".gcloudignore": "ignore",
-    ".gitconfig": "properties",
     ".gitconfig.aliases": "properties",
+    ".gitconfig": "properties",
+    "*.mmark": "markdown",
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
