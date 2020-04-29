@@ -9,6 +9,9 @@ rup = remote update --prune
 s = status .
 surr = submodule update --recursive --remote
 
+# rup && surr, because I tend to run them both back-to-back anyway in some repos
+rs = "!f() { git remote update --prune && git submodule update --recursive --remote; }; f"
+
 incoming = show --patch ..@{u}
 inlog = log ..@{u}
 outgoing = show --patch @{u}..
