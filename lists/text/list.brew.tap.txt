@@ -13,5 +13,6 @@ homebrew/services
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats
+stripe/stripe-cli
 tidwall/jj
 twpayne/taps

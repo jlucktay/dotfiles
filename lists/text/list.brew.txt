@@ -26,6 +26,7 @@ gh
 git
 git-filter-repo
 git-gui
+git-lfs
 glib
 go
 go-swagger
@@ -84,10 +85,12 @@ shellharden
 shfmt
 sqlite
 stack
+stripe
 tcl-tk
 terraform
 tflint
 tldr
+travis
 tree
 watch
 webp

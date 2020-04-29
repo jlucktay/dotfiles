@@ -15,6 +15,7 @@ iterm2
 itsycal
 keepingyouawake
 keybase
+miro-formerly-realtimeboard
 ngrok
 p4v
 pingmenu
