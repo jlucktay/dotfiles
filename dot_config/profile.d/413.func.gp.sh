@@ -4,6 +4,9 @@ if hash git &> /dev/null && hash rg &> /dev/null && hash awk &> /dev/null && has
 
     if [ -n "$git_wip" ]; then
       echo "WIP!"
+      echo
+      echo "$git_wip"
+
       return 1
     fi
 
