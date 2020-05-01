@@ -7,7 +7,7 @@ if hash git &> /dev/null && hash rg &> /dev/null && hash awk &> /dev/null && has
       return 1
     fi
 
-    git push
+    git push "$@"
   }
 
   export -f gp
