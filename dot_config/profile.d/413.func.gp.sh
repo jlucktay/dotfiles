@@ -1,6 +1,6 @@
 if hash git &> /dev/null && hash rg &> /dev/null && hash awk &> /dev/null && hash xargs &> /dev/null; then
   function gp() {
-    git_wip=$(git log --oneline origin/master.. | rg --fixed-strings "WIP: " | awk '{ print $1 }' | xargs git show)
+    git_wip=$(git log --oneline origin/master.. | rg '(WIP:|fixup!) ' | awk '{ print $1 }' | xargs git show)
 
     if [ -n "$git_wip" ]; then
       echo "WIP!"
