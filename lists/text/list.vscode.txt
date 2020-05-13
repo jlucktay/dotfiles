@@ -5,6 +5,7 @@ EditorConfig.EditorConfig
 foxundermoon.shell-format
 mauve.terraform
 ms-azuretools.vscode-docker
+ms-python.python
 ms-vscode.cpptools
 ms-vscode.Go
 ms-vsliveshare.vsliveshare

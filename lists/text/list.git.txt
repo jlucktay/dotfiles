@@ -17,7 +17,9 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/git/github.com/Microsoft/vscode-go
+/Users/jameslucktaylor/git/github.com/natcoutts/tomtom_live_traffic_scrape
 /Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
+/Users/jameslucktaylor/git/github.com/rancher/quickstart
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket

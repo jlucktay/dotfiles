@@ -6,7 +6,6 @@ discord
 docker
 font-fira-code
 font-jetbrains-mono
-goland
 google-chrome
 google-cloud-sdk
 google-drive-file-stream

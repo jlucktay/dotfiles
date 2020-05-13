@@ -6,9 +6,11 @@ bash
 bash-completion@2
 bat
 brew-caveats
+cairo
 chezmoi
 coreutils
 curl
+curlie
 dbus
 docker-completion
 docker-compose-completion
@@ -18,6 +20,7 @@ fd
 firebase-cli
 fontconfig
 freetype
+fribidi
 fzf
 gd
 gdbm
@@ -31,9 +34,11 @@ glib
 go
 go-swagger
 golangci-lint
+graphite2
 graphviz
 gts
 hadolint
+harfbuzz
 hey
 htop
 hub
@@ -54,7 +59,9 @@ libssh2
 libtiff
 libtool
 libunistring
+libyaml
 libzip
+lzo
 mage
 minikube
 mongodb-community
@@ -68,8 +75,10 @@ oniguruma
 openssl@1.1
 packer
 packer-completion
+pango
 pcre
 pcre2
+pixman
 pkg-config
 prettyping
 python
@@ -79,6 +88,7 @@ redis
 ripgrep
 rpm2cpio
 rsync
+ruby
 rustup-init
 shellcheck
 shellharden
