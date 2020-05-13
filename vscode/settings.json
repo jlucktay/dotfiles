@@ -41,11 +41,11 @@
   "explorer.incrementalNaming": "smart",
   "explorer.sortOrder": "type",
   "files.associations": {
+    "*.mmark": "markdown",
     ".firebaserc": "json",
     ".gcloudignore": "ignore",
-    ".gitconfig.aliases": "properties",
     ".gitconfig": "properties",
-    "*.mmark": "markdown",
+    ".gitconfig.aliases": "properties",
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
@@ -71,6 +71,7 @@
   "git.confirmSync": false,
   "git.countBadge": "off",
   "git.fetchOnPull": true,
+  "git.ignoreLimitWarning": true,
   "git.rebaseWhenSync": true,
   "go.alternateTools": {
     "gometalinter": "/usr/local/bin/golangci-lint"
@@ -101,7 +102,7 @@
       "fillreturns": true,
       "nonewvars": true,
       "undeclaredname": true,
-      "unusedparams": true,
+      "unusedparams": true
     },
     "staticcheck": false,
     "tempModfile": true,
@@ -113,6 +114,7 @@
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
+  "python.dataScience.askForKernelRestart": false,
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
