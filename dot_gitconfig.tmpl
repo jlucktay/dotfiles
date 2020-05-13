@@ -3,50 +3,51 @@
 # This is Git's per-user configuration file.
 
 [color]
-branch = auto
-diff = auto
-status = auto
-ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
 
 [commit]
-template = {{ .chezmoi.homedir }}/.gitmessage
+	template = {{ .chezmoi.homedir }}/.gitmessage
 
 [core]
-editor = nano
+	autocrlf = true
+	editor = nano
 
 [credential]
-{{ if eq .chezmoi.os "darwin" -}}
-helper = osxkeychain
+{{- if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
 {{- else if eq .chezmoi.os "linux" -}}
-helper = cache
+	helper = cache
 {{- end }}
 
 [http]
-cookiefile = {{ .chezmoi.homedir }}/.gitcookies
+	cookiefile = {{ .chezmoi.homedir }}/.gitcookies
 
 [include]
-path = {{ .chezmoi.homedir }}/.gitconfig.aliases
+	path = {{ .chezmoi.homedir }}/.gitconfig.aliases
 
 [merge]
-tool = p4merge
+	tool = p4merge
 
 [push]
-followTags = true
+	followTags = true
 
 [user]
-name = James Lucktaylor
-useConfigOnly = true
+	name = James Lucktaylor
+	useConfigOnly = true
 
 # https://github.com/lyze/posh-git-sh#configuration-options
 [bash]
-branchBehindAndAheadDisplay = full
-describeStyle = default
-enableFileStatus = true
-enableGitStatus = true
-enableStashStatus = true
-showStatusWhenZero = false
-showUpstream = git
-enableStatusSymbol = true
+	branchBehindAndAheadDisplay = full
+	describeStyle = default
+	enableFileStatus = true
+	enableGitStatus = true
+	enableStashStatus = true
+	enableStatusSymbol = true
+	showStatusWhenZero = false
+	showUpstream = git
 
 [hub]
-protocol = https
+	protocol = https
