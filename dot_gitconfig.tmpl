@@ -12,7 +12,11 @@
 	template = {{ .chezmoi.homedir }}/.gitmessage
 
 [core]
+{{- if eq .chezmoi.os "windows" }}
 	autocrlf = true
+{{- else }}
+	autocrlf = input
+{{- end }}
 	editor = nano
 
 [credential]
