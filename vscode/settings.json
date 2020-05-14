@@ -70,9 +70,10 @@
   "git.autoStash": true,
   "git.confirmSync": false,
   "git.countBadge": "off",
+  "git.defaultCloneDirectory": "~/git",
+  "git.enableStatusBarSync": false,
   "git.fetchOnPull": true,
   "git.ignoreLimitWarning": true,
-  "git.rebaseWhenSync": true,
   "go.alternateTools": {
     "gometalinter": "/usr/local/bin/golangci-lint"
   },
