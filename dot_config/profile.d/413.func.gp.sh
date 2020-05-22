@@ -14,4 +14,10 @@ if hash git &> /dev/null && hash rg &> /dev/null && hash awk &> /dev/null && has
   }
 
   export -f gp
+
+  function gpsu() {
+    gp --set-upstream origin "$(git symbolic-ref --short HEAD)" "$@"
+  }
+
+  export -f gpsu
 fi
