@@ -2,7 +2,6 @@
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
-/Users/jameslucktaylor/git/github.com/jlucktay/golang-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/graftorio
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
@@ -27,6 +26,9 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
+/Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
+/Users/jameslucktaylor/git/go.jlucktay.dev/gopukku
+/Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
 /Users/jameslucktaylor/go/src/cloud.google.com/go
@@ -53,8 +55,6 @@
 /Users/jameslucktaylor/go/src/github.com/go-stack/stack
 /Users/jameslucktaylor/go/src/github.com/golang/freetype
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
-/Users/jameslucktaylor/go/src/github.com/jlucktay/gopukku
-/Users/jameslucktaylor/go/src/github.com/jlucktay/rate-limit
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata
 /Users/jameslucktaylor/go/src/github.com/juju/ansiterm
 /Users/jameslucktaylor/go/src/github.com/keighl/mandrill

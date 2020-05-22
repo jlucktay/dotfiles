@@ -4,6 +4,8 @@ adoptopenjdk
 alacritty
 discord
 docker
+epic-games
+firefox
 font-fira-code
 font-jetbrains-mono
 google-chrome
