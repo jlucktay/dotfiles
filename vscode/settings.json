@@ -68,7 +68,8 @@
   "files.trimTrailingWhitespace": true,
   "git.autoRepositoryDetection": false,
   "git.autoStash": true,
-  "git.confirmSync": false,
+  "git.autofetch": true,
+  "git.autofetchPeriod": 30,
   "git.countBadge": "off",
   "git.defaultCloneDirectory": "~/git",
   "git.enableStatusBarSync": false,
@@ -171,6 +172,7 @@
     "args": [],
     "enabled": true
   },
+  "typescript.tsserver.log": "verbose",
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
