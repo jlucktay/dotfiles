@@ -1,4 +1,6 @@
 /Users/jameslucktaylor/.local/share/chezmoi
+/Users/jameslucktaylor/.pulumi/templates
+/Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
@@ -28,6 +30,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
 /Users/jameslucktaylor/git/go.jlucktay.dev/gopukku
+/Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
