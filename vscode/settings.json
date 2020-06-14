@@ -169,8 +169,11 @@
     "liveIndexing": false
   },
   "terraform.languageServer": {
-    "args": [],
-    "enabled": true
+    "args": [
+      "serve"
+    ],
+    "enabled": true,
+    "external": true
   },
   "typescript.tsserver.log": "verbose",
   "window.closeWhenEmpty": true,
