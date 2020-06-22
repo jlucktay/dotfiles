@@ -2,6 +2,7 @@
 1password-cli
 adoptopenjdk
 alacritty
+countdown
 discord
 docker
 epic-games

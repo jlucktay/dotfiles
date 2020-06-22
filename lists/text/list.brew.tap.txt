@@ -1,7 +1,9 @@
 adoptopenjdk/openjdk
 arkweid/lefthook
+azure/draft
 github/gh
 go-swagger/go-swagger
+go-task/tap
 golangci/tap
 homebrew/bundle
 homebrew/cask

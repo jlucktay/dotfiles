@@ -6,6 +6,7 @@ bandwhich
 bash
 bash-completion@2
 bat
+bats-core
 brew-caveats
 cairo
 chezmoi
@@ -17,6 +18,7 @@ dbus
 docker-completion
 docker-compose-completion
 docker-slim
+draft
 drone-cli
 fd
 ffmpeg
@@ -42,6 +44,7 @@ gmp
 gnutls
 go
 go-swagger
+go-task
 golangci-lint
 goreleaser
 graphite2

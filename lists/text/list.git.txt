@@ -9,7 +9,9 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.dev
 /Users/jameslucktaylor/git/github.com/jlucktay/katkas-website
+/Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mage
+/Users/jameslucktaylor/git/github.com/jlucktay/packer-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/stack
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-workbench
@@ -33,6 +35,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
+/Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
 /Users/jameslucktaylor/go/src/cloud.google.com/go
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
@@ -58,9 +61,12 @@
 /Users/jameslucktaylor/go/src/github.com/go-stack/stack
 /Users/jameslucktaylor/go/src/github.com/golang/freetype
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
+/Users/jameslucktaylor/go/src/github.com/gruntwork-io/terratest
+/Users/jameslucktaylor/go/src/github.com/ifrim/go-haikunator
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata
 /Users/jameslucktaylor/go/src/github.com/juju/ansiterm
 /Users/jameslucktaylor/go/src/github.com/keighl/mandrill
+/Users/jameslucktaylor/go/src/github.com/kelseyhightower/envconfig
 /Users/jameslucktaylor/go/src/github.com/lonelycode/go-uuid
 /Users/jameslucktaylor/go/src/github.com/lonelycode/osin
 /Users/jameslucktaylor/go/src/github.com/lunixbochs/vtclean
@@ -70,6 +76,7 @@
 /Users/jameslucktaylor/go/src/github.com/mgutz/ansi
 /Users/jameslucktaylor/go/src/github.com/naoina/go-stringutil
 /Users/jameslucktaylor/go/src/github.com/naoina/toml
+/Users/jameslucktaylor/go/src/github.com/nbutton23/zxcvbn-go
 /Users/jameslucktaylor/go/src/github.com/pkg/browser
 /Users/jameslucktaylor/go/src/github.com/pkg/errors
 /Users/jameslucktaylor/go/src/github.com/rs/zerolog
@@ -78,6 +85,7 @@
 /Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/sourcegraph/go-ses
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/ara
+/Users/jameslucktaylor/go/src/github.com/TykTechnologies/go-haikunator
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/gojsonschema
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/logrus
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/logrus-prefixed-formatter
