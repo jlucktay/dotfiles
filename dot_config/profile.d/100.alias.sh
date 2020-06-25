@@ -73,6 +73,8 @@ if hash golangci-lint &> /dev/null; then
 
     "$glcl_binary" run "${enabled[@]}" "$@"
   }
+
+  export -f golint_enable_all
 fi
 
 # Open specific Chrome profiles
