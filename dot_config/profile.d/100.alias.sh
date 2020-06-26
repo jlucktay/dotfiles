@@ -59,13 +59,11 @@ if hash golangci-lint &> /dev/null; then
       shift
     fi
 
-    mapfile -t disabled < <(
-      "$glcl_binary" linters \
-        | grep -A999 "^Disabled" \
-        | tail -n +2 \
-        | cut -d':' -f1 \
-        | cut -d' ' -f1
-    )
+    mapfile -t disabled < <("$glcl_binary" linters \
+      | grep -A999 "^Disabled" \
+      | tail -n +2 \
+      | cut -d':' -f1 \
+      | cut -d' ' -f1)
 
     for ((i = 0; i < ${#disabled[@]}; i += 1)); do
       enabled+=("--enable=${disabled[$i]}")
