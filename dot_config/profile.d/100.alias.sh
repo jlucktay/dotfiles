@@ -48,33 +48,6 @@ if hash gofmt &> /dev/null; then
   alias gofmtsw='find . -type f -iname "*.go" -not -path "*/vendor/*" -exec gofmt -s -w "{}" +'
 fi
 
-# https://github.com/golangci/golangci-lint
-if hash golangci-lint &> /dev/null; then
-  function golint_enable_all() {
-    local -a disabled enabled
-    local glcl_binary="golangci-lint"
-
-    if [ -n "$1" ] && [ -x "$1" ]; then
-      glcl_binary=$1
-      shift
-    fi
-
-    mapfile -t disabled < <("$glcl_binary" linters \
-      | grep -A999 "^Disabled" \
-      | tail -n +2 \
-      | cut -d':' -f1 \
-      | cut -d' ' -f1)
-
-    for ((i = 0; i < ${#disabled[@]}; i += 1)); do
-      enabled+=("--enable=${disabled[$i]}")
-    done
-
-    "$glcl_binary" run "${enabled[@]}" "$@"
-  }
-
-  export -f golint_enable_all
-fi
-
 # Open specific Chrome profiles
 alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
 alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
