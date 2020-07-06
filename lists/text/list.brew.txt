@@ -7,6 +7,7 @@ bash
 bash-completion@2
 bat
 bats-core
+boost
 brew-caveats
 cairo
 chezmoi
@@ -20,6 +21,7 @@ docker-compose-completion
 docker-slim
 draft
 drone-cli
+entr
 fd
 ffmpeg
 firebase-cli
@@ -39,6 +41,7 @@ git
 git-filter-repo
 git-gui
 git-lfs
+glew
 glib
 gmp
 gnutls
@@ -47,6 +50,7 @@ go-swagger
 go-task
 golangci-lint
 goreleaser
+gource
 graphite2
 graphviz
 gts
@@ -89,6 +93,7 @@ libvpx
 libyaml
 libzip
 little-cms2
+lz4
 lzo
 mage
 minikube
@@ -100,6 +105,7 @@ netpbm
 nettle
 nmap
 node
+nvm
 oniguruma
 opencore-amr
 openjpeg
@@ -113,10 +119,11 @@ pcre
 pcre2
 pixman
 pkg-config
+popt
 prettyping
-pulumi
 python
 python@3.8
+rav1e
 readline
 redis
 ripgrep
@@ -127,6 +134,7 @@ rubberband
 ruby
 rustup-init
 sdl2
+sdl2_image
 shellcheck
 shellharden
 shfmt
@@ -151,4 +159,6 @@ wget
 x264
 x265
 xvid
+xxhash
 xz
+zstd

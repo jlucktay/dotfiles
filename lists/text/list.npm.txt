@@ -1,2 +1,2 @@
-/usr/local/lib
-/usr/local/lib/node_modules/npm
+/Users/jameslucktaylor/.nvm/versions/node/v10.21.0/lib
+/Users/jameslucktaylor/.nvm/versions/node/v10.21.0/lib/node_modules/npm

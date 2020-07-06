@@ -18,4 +18,3 @@ rafaelgarrido/caveats
 rs/tap
 stripe/stripe-cli
 tidwall/jj
-twpayne/taps

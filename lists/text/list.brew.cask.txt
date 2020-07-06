@@ -1,8 +1,8 @@
 1password
-1password-cli
 adoptopenjdk
 alacritty
 countdown
+dashlane
 discord
 docker
 epic-games
@@ -19,6 +19,7 @@ keepingyouawake
 keybase
 miro-formerly-realtimeboard
 ngrok
+obsidian
 pingmenu
 robo-3t
 screen

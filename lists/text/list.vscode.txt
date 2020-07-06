@@ -4,9 +4,10 @@ casualjim.gotemplate
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 foxundermoon.shell-format
-golang.Go
+golang.go
 hashicorp.terraform
 jetmartin.bats
+mongodb.mongodb-vscode
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python

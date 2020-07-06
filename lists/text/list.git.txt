@@ -30,9 +30,11 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
+/Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
 /Users/jameslucktaylor/git/go.jlucktay.dev/gopukku
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
+/Users/jameslucktaylor/git/go.jlucktay.dev/minikube
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
@@ -61,6 +63,7 @@
 /Users/jameslucktaylor/go/src/github.com/go-stack/stack
 /Users/jameslucktaylor/go/src/github.com/golang/freetype
 /Users/jameslucktaylor/go/src/github.com/golang/protobuf
+/Users/jameslucktaylor/go/src/github.com/gorilla/websocket
 /Users/jameslucktaylor/go/src/github.com/gruntwork-io/terratest
 /Users/jameslucktaylor/go/src/github.com/ifrim/go-haikunator
 /Users/jameslucktaylor/go/src/github.com/jteeuwen/go-bindata
