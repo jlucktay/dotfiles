@@ -9,6 +9,7 @@
 	ui = auto
 
 [commit]
+	gpgsign = true
 	template = {{ .chezmoi.homedir }}/.gitmessage
 
 [core]
@@ -26,6 +27,13 @@
 	helper = cache
 {{- end }}
 
+[diff]
+	renameLimit = 100000
+	renames = copies
+
+[help]
+	autocorrect = 3
+
 [http]
 	cookiefile = {{ .chezmoi.homedir }}/.gitcookies
 
@@ -36,7 +44,12 @@
 	tool = p4merge
 
 [push]
+	default = simple
 	followTags = true
+
+[stash]
+	showPatch = true
+	showStat = true
 
 [user]
 	name = James Lucktaylor
