@@ -6,7 +6,7 @@ export LESS="\
 --no-init \
 --quit-if-one-screen \
 --RAW-CONTROL-CHARS \
---tabs=4 \
+--tabs=2 \
 --window=-4"
 
 # Set colors for less. Borrowed from https://wiki.archlinux.org/index.php/Color_output_in_console#less .
