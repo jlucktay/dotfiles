@@ -11,6 +11,16 @@
 	status = auto
 	ui = auto
 
+[color "status"]
+	branch = brightmagenta
+	changed = red
+	header = white
+	localBranch = brightmagenta
+	remoteBranch = brightmagenta
+	unmerged = blue
+	untracked = yellow
+	updated = green
+
 [commit]
 	gpgsign = true
 	template = {{ .chezmoi.homedir }}/.gitmessage
@@ -75,5 +85,3 @@
 # https://hub.github.com/hub.1.html
 [hub]
 	protocol = https
-
-
