@@ -11,6 +11,21 @@
 	status = auto
 	ui = auto
 
+[color "branch"]
+	current = green reverse
+	local = green
+	plain = white
+	remote = yellow
+	upstream = blue
+
+[color "diff"]
+	frag = magenta bold
+	func = brightblue
+	new = brightgreen
+	newMoved = green
+	old = brightred
+	oldMoved = red
+
 [color "status"]
 	branch = brightmagenta
 	changed = red
@@ -45,7 +60,7 @@
 	renames = copies
 
 [help]
-	autocorrect = 3
+	autocorrect = 30
 
 [http]
 	cookiefile = {{ .chezmoi.homedir }}/.gitcookies
