@@ -1,10 +1,10 @@
 if hash gdate &> /dev/null; then
   function gdn() {
-    gdate '+%Y%m%d.%H%M%S.%N%z'
+    TZ=UTC gdate '+%Y-%m-%dT%H:%M:%SZ'
   }
 else
   function gdn() {
-    date '+%Y%m%d.%H%M%S%z'
+    TZ=UTC date '+%Y-%m-%dT%H:%M:%SZ'
   }
 fi
 
