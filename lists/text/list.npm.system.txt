@@ -1,0 +1,3 @@
+/usr/local/lib
+/usr/local/lib/node_modules/commitizen
+/usr/local/lib/node_modules/npm
