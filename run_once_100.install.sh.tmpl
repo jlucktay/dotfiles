@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
 
 {{ if eq .chezmoi.os "darwin" -}}
 HOMEBREW_BUNDLE_FILE={{ .chezmoi.sourceDir }}/Brewfile brew bundle install --no-lock
