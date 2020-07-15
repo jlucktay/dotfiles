@@ -3,6 +3,7 @@
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
+/Users/jameslucktaylor/git/github.com/jhead/phantom
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
 /Users/jameslucktaylor/git/github.com/jlucktay/graftorio
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools

@@ -2,6 +2,7 @@ budparr.language-hugo-vscode
 bungcip.better-toml
 casualjim.gotemplate
 DavidAnson.vscode-markdownlint
+dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
 foxundermoon.shell-format
 golang.go
@@ -12,7 +13,6 @@ ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-vscode.cpptools
-ms-vscode.vscode-typescript-tslint-plugin
 ms-vsliveshare.vsliveshare
 msysyamamoto.vscode-fluentd
 PKief.material-icon-theme

@@ -121,7 +121,6 @@ pixman
 pkg-config
 popt
 prettyping
-python
 python@3.8
 rav1e
 readline
