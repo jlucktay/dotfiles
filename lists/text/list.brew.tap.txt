@@ -14,6 +14,7 @@ homebrew/core
 homebrew/services
 jlucktay/tap
 mongodb/brew
+nektos/tap
 rafaelgarrido/caveats
 rs/tap
 stripe/stripe-cli

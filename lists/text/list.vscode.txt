@@ -4,6 +4,7 @@ casualjim.gotemplate
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
+esbenp.prettier-vscode
 foxundermoon.shell-format
 golang.go
 hashicorp.terraform
