@@ -110,6 +110,9 @@
   "markdown.extension.orderedList.marker": "one",
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
+  "material-icon-theme.folders.associations": {
+    "infra": "components"
+  },
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
   "python.dataScience.askForKernelRestart": false,
