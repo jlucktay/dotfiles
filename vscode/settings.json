@@ -30,10 +30,7 @@
   "editor.minimap.showSlider": "always",
   "editor.multiCursorModifier": "alt",
   "editor.renderControlCharacters": true,
-  "editor.rulers": [
-    80,
-    120
-  ],
+  "editor.rulers": [80, 120],
   "editor.tabSize": 2,
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
@@ -90,10 +87,7 @@
   "go.testEnvVars": {
     "GO111MODULE": "on"
   },
-  "go.testFlags": [
-    "-count=1",
-    "-v"
-  ],
+  "go.testFlags": ["-count=1", "-v"],
   "go.toolsEnvVars": {
     "GO111MODULE": "on"
   },
@@ -116,6 +110,7 @@
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.showUpdateMessage": false,
+  "prettier.printWidth": 120,
   "python.dataScience.askForKernelRestart": false,
   "search.searchOnType": false,
   "shellcheck.customArgs": [
@@ -139,40 +134,24 @@
   ],
   "shellformat.flag": "-s -ln=bash -i=2 -bn -ci -sr",
   "shellformat.path": "/usr/local/bin/shfmt",
-  "sortJSON.orderOverride": [
-    "description",
-    "variables",
-    "builders",
-    "provisioners",
-    "post-processors"
-  ],
+  "sortJSON.orderOverride": ["description", "variables", "builders", "provisioners", "post-processors"],
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
-  "terminal.integrated.shellArgs.osx": [
-    "-i",
-    "-l"
-  ],
+  "terminal.integrated.shellArgs.osx": ["-i", "-l"],
   "terraform.format": {
-    "ignoreExtensionsOnSave": [
-      ".tfsmurf"
-    ]
+    "ignoreExtensionsOnSave": [".tfsmurf"]
   },
   "terraform.indexing": {
     "delay": 500,
     "enabled": false,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ],
+    "exclude": [".terraform/**/*", "**/.terraform/**/*"],
     "liveIndexing": false
   },
   "terraform.languageServer": {
-    "external": true,
-    "args": [
-      "serve"
-    ]
+    "args": ["serve"],
+    "external": true
   },
   "typescript.tsserver.log": "verbose",
   "window.closeWhenEmpty": true,
