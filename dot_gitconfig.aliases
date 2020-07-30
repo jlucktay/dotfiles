@@ -41,6 +41,9 @@ psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }
 ### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
 aliases = "!git config --list | grep -E '^alias.' | cut -c 7-"
 
+# Feedback magic
+entr = !git ls-files --cached --deleted --exclude-standard --modified --others | entr -cd "$@"
+
 # Deletes all branches merged with specified branch (or master if no branch is specified)
 bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
 
