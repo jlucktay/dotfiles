@@ -46,6 +46,7 @@ git-lfs
 glew
 glib
 gmp
+gnu-typist
 gnutls
 go
 go-swagger
@@ -104,6 +105,7 @@ mongodb-community
 nano
 ncdu
 ncurses
+nethack
 netpbm
 nettle
 nmap
