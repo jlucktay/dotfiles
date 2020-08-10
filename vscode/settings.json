@@ -10,6 +10,12 @@
     "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
   },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[proto3]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },
