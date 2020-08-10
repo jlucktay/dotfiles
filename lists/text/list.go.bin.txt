@@ -3,4 +3,5 @@
 /Users/jameslucktaylor/go/bin/go1.12.17
 /Users/jameslucktaylor/go/bin/go1.13.11
 /Users/jameslucktaylor/go/bin/godoc
+/Users/jameslucktaylor/go/bin/gofumpt
 /Users/jameslucktaylor/go/bin/goimports

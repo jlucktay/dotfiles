@@ -20,7 +20,6 @@ keepingyouawake
 keybase
 miro-formerly-realtimeboard
 ngrok
-obsidian
 pingmenu
 robo-3t
 screen

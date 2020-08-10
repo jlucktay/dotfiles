@@ -20,9 +20,9 @@ dav1d
 dbus
 docker-completion
 docker-compose-completion
-docker-slim
 draft
 drone-cli
+elasticsearch-oss
 entr
 fd
 ffmpeg
@@ -51,6 +51,7 @@ gnutls
 go
 go-swagger
 go-task
+gobject-introspection
 golangci-lint
 goreleaser
 gource
@@ -70,6 +71,7 @@ jasper
 jj
 jpeg
 jq
+kibana-oss
 kubernetes-cli
 lame
 lefthook
@@ -100,8 +102,10 @@ lz4
 lzo
 mage
 make
+metricbeat-oss
 minikube
 mongodb-community
+mongodb-database-tools
 nano
 ncdu
 ncurses

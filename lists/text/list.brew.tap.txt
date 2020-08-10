@@ -1,6 +1,7 @@
 adoptopenjdk/openjdk
 arkweid/lefthook
 azure/draft
+elastic/tap
 github/gh
 go-swagger/go-swagger
 go-task/tap

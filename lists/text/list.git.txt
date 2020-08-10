@@ -1,5 +1,6 @@
 /Users/jameslucktaylor/.local/share/chezmoi
 /Users/jameslucktaylor/.pulumi/templates
+/Users/jameslucktaylor/git/github.com/benmurden/GB-Video-Grabber
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
 /Users/jameslucktaylor/git/github.com/go-task/task
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
@@ -38,6 +39,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.googlesource.com/go
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
+/Users/jameslucktaylor/git/go.jlucktay.dev/GB-Video-Grabber
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
 /Users/jameslucktaylor/git/go.jlucktay.dev/goppuku
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
@@ -51,6 +53,7 @@
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
 /Users/jameslucktaylor/go/src/github.com/alecthomas/units
 /Users/jameslucktaylor/go/src/github.com/apex/log
+/Users/jameslucktaylor/go/src/github.com/asoorm/tyk-rmq-middleware
 /Users/jameslucktaylor/go/src/github.com/bmatcuk/doublestar
 /Users/jameslucktaylor/go/src/github.com/buildkite/yaml
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
