@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+# If there is more than one initial commit, we take the first
 first_commit_hash=$(git rev-list --max-parents=0 HEAD | tail -n 1)
 
 declare -i slices=50
