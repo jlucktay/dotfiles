@@ -18,6 +18,7 @@ curl
 curlie
 dav1d
 dbus
+dnsmasq
 docker-completion
 docker-compose-completion
 draft
@@ -152,6 +153,7 @@ speex
 sqlite
 srt
 stack
+starship
 stripe
 tcl-tk
 terraform
