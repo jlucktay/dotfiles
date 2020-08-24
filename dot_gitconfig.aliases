@@ -34,7 +34,7 @@ raom = rebase --autosquash --autostash --interactive origin/master
 unpushed = log --branches --not --remotes --no-walk --decorate --oneline
 
 ### Lines of code per author
-lines = "!f() { git ls-files | while read f; do git --no-pager blame -w -M -C -C --line-porcelain \"$f\" | grep '^author '; done | sort -f | uniq -ci | sort -nr; }; f"
+lines = "!f() { git ls-files -- ':!vendor/**' | while read f; do git --no-pager blame -w -M -C -C --line-porcelain \"$f\" | grep '^author '; done | sort -f | uniq -ci | sort -nr; }; f"
 
 # Push a new branch upstream
 psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
