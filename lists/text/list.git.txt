@@ -1,3 +1,4 @@
+/Users/jameslucktaylor/.cargo/registry/index/github.com-1ecc6299db9ec823
 /Users/jameslucktaylor/.local/share/chezmoi
 /Users/jameslucktaylor/.pulumi/templates
 /Users/jameslucktaylor/git/github.com/benmurden/GB-Video-Grabber
@@ -17,6 +18,8 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/mage
 /Users/jameslucktaylor/git/github.com/jlucktay/meta-tf
 /Users/jameslucktaylor/git/github.com/jlucktay/packer-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/rust-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/rustlings
 /Users/jameslucktaylor/git/github.com/jlucktay/template-go
 /Users/jameslucktaylor/git/github.com/jlucktay/terraform-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
