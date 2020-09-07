@@ -26,6 +26,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/jameslucktaylor/git/github.com/kljensen/golang-html5-sse-example
+/Users/jameslucktaylor/git/github.com/kubernetes/kubectl
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/git/github.com/Microsoft/vscode-go
 /Users/jameslucktaylor/git/github.com/natcoutts/tomtom_live_traffic_scrape
@@ -55,6 +56,7 @@
 /Users/jameslucktaylor/go/src/cloud.google.com/go
 /Users/jameslucktaylor/go/src/github.com/alecthomas/template
 /Users/jameslucktaylor/go/src/github.com/alecthomas/units
+/Users/jameslucktaylor/go/src/github.com/alessio/shellescape
 /Users/jameslucktaylor/go/src/github.com/apex/log
 /Users/jameslucktaylor/go/src/github.com/asoorm/tyk-rmq-middleware
 /Users/jameslucktaylor/go/src/github.com/bmatcuk/doublestar
@@ -70,6 +72,7 @@
 /Users/jameslucktaylor/go/src/github.com/docker/go-units
 /Users/jameslucktaylor/go/src/github.com/drone/drone-runtime
 /Users/jameslucktaylor/go/src/github.com/drone/drone-yaml
+/Users/jameslucktaylor/go/src/github.com/evanphx/json-patch
 /Users/jameslucktaylor/go/src/github.com/facebookgo/clock
 /Users/jameslucktaylor/go/src/github.com/fogleman/gg
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
@@ -112,6 +115,7 @@
 /Users/jameslucktaylor/go/src/github.com/nbutton23/zxcvbn-go
 /Users/jameslucktaylor/go/src/github.com/oschwald/maxminddb-golang
 /Users/jameslucktaylor/go/src/github.com/paulbellamy/ratecounter
+/Users/jameslucktaylor/go/src/github.com/pelletier/go-toml
 /Users/jameslucktaylor/go/src/github.com/pkg/browser
 /Users/jameslucktaylor/go/src/github.com/pkg/errors
 /Users/jameslucktaylor/go/src/github.com/rs/cors
@@ -120,6 +124,8 @@
 /Users/jameslucktaylor/go/src/github.com/sergi/go-diff
 /Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/sourcegraph/go-ses
+/Users/jameslucktaylor/go/src/github.com/spf13/cobra
+/Users/jameslucktaylor/go/src/github.com/spf13/pflag
 /Users/jameslucktaylor/go/src/github.com/square/go-jose
 /Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-github
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/ara
@@ -164,7 +170,11 @@
 /Users/jameslucktaylor/go/src/gopkg.in/vmihailenco/msgpack.v2
 /Users/jameslucktaylor/go/src/gopkg.in/xmlpath.v2
 /Users/jameslucktaylor/go/src/gopkg.in/yaml.v2
+/Users/jameslucktaylor/go/src/gopkg.in/yaml.v3
 /Users/jameslucktaylor/go/src/honnef.co/go/tools
+/Users/jameslucktaylor/go/src/k8s.io/apimachinery
 /Users/jameslucktaylor/go/src/mvdan.cc/xurls
+/Users/jameslucktaylor/go/src/sigs.k8s.io/kind
+/Users/jameslucktaylor/go/src/sigs.k8s.io/yaml
 /Users/jameslucktaylor/tmp/algo
 /Users/jameslucktaylor/tmp/lists

@@ -125,6 +125,7 @@
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
   "python.dataScience.askForKernelRestart": false,
+  "rust.clippy_preference": "on",
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",

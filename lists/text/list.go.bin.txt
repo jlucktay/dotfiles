@@ -5,3 +5,4 @@
 /Users/jameslucktaylor/go/bin/godoc
 /Users/jameslucktaylor/go/bin/gofumpt
 /Users/jameslucktaylor/go/bin/goimports
+/Users/jameslucktaylor/go/bin/gopls-watchdog
