@@ -2,18 +2,20 @@
 if hash golangci-lint &> /dev/null; then
   function golint_enable_all() {
     golangci-lint linters \
-      | grep -A999 "^Disabled" \
-      | tail -n +2 \
-      | cut -d':' -f1 \
-      | cut -d' ' -f1 \
+      | awk 'BEGIN { FS = "[ :]" } ; $1 != "Enabled" && $1 != "Disabled" && length($1) > 0 { print $1 }' \
       | {
         local -a enable
 
-        while IFS= read -r disabled; do
-          enable+=("--enable=$disabled")
+        while IFS=$'\n' read -r linter; do
+          enable+=("$linter")
         done
 
-        golangci-lint run "${enable[@]}" "$@"
+        linters_joined="$(
+          IFS=','
+          echo "${enable[*]}"
+        )"
+
+        golangci-lint run --disable-all --enable="$linters_joined" "$@"
       }
   }
 
