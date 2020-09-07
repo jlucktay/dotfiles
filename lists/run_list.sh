@@ -53,7 +53,7 @@ fi
 # Homebrew
 process_list "brew tap" "brew.tap"
 process_list "brew list -1" "brew"
-process_list "brew cask list -1" "brew.cask"
+process_list "brew list -1 --cask" "brew.cask"
 
 # NPM
 ### If NVM is installed, use it to iterate across all available versions
