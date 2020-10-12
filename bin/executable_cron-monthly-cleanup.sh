@@ -6,12 +6,12 @@ cron_log_dir="$HOME/log"
 
 # Check for presence of other variables/tools
 command -v brew &> /dev/null || {
-  echo >&2: "$script_name: Homebrew has not been installed: https://brew.sh"
+  echo >&2 "$script_name: Homebrew has not been installed: https://brew.sh"
   exit 1
 }
 
 command -v docker &> /dev/null || {
-  echo >&2: "$script_name: Docker has not been installed via Homebrew: https://formulae.brew.sh/cask/docker"
+  echo >&2 "$script_name: Docker has not been installed via Homebrew: https://formulae.brew.sh/cask/docker"
   exit 1
 }
 
