@@ -8,12 +8,16 @@
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
+/Users/jameslucktaylor/git/github.com/jlucktay/go-mod-tidy-pr
 /Users/jameslucktaylor/git/github.com/jlucktay/graftorio
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
+/Users/jameslucktaylor/git/github.com/jlucktay/hello-react
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay
 /Users/jameslucktaylor/git/github.com/jlucktay/jlucktay.dev
 /Users/jameslucktaylor/git/github.com/jlucktay/katkas-website
+/Users/jameslucktaylor/git/github.com/jlucktay/keysocket
+/Users/jameslucktaylor/git/github.com/jlucktay/kind
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/mage
 /Users/jameslucktaylor/git/github.com/jlucktay/meta-tf
@@ -30,6 +34,7 @@
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/git/github.com/Microsoft/vscode-go
 /Users/jameslucktaylor/git/github.com/natcoutts/tomtom_live_traffic_scrape
+/Users/jameslucktaylor/git/github.com/OpenAPITools/openapi-generator
 /Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
 /Users/jameslucktaylor/git/github.com/rancher/quickstart
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
@@ -40,6 +45,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-gateway-docker
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-operator
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.googlesource.com/go
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
@@ -50,6 +56,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/minikube
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
+/Users/jameslucktaylor/git/go.jlucktay.dev/saw
 /Users/jameslucktaylor/git/go.jlucktay.dev/stack
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo

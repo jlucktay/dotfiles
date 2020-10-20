@@ -1,4 +1,5 @@
 /Users/jameslucktaylor/go/bin/cobra
+/Users/jameslucktaylor/go/bin/controller-gen
 /Users/jameslucktaylor/go/bin/go-bindata
 /Users/jameslucktaylor/go/bin/go1.12.17
 /Users/jameslucktaylor/go/bin/go1.13.11

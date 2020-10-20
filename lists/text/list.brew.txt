@@ -8,10 +8,12 @@ bash
 bash-completion@2
 bat
 bats-core
+bdw-gc
 boost
 brew-caveats
 cairo
 chezmoi
+conftest
 coreutils
 curl
 curlie
@@ -26,6 +28,7 @@ elasticsearch-oss
 entr
 fd
 ffmpeg
+filebeat-oss
 firebase-cli
 flac
 fontconfig
@@ -58,6 +61,7 @@ gource
 graphite2
 graphviz
 gts
+guile
 hadolint
 harfbuzz
 helm
@@ -117,6 +121,7 @@ nmap
 node
 nvm
 oniguruma
+openapi-generator
 opencore-amr
 openjdk
 openjpeg
@@ -133,6 +138,7 @@ pkg-config
 popt
 prettyping
 python@3.8
+python@3.9
 rav1e
 readline
 redis
@@ -143,6 +149,7 @@ rtmpdump
 rubberband
 ruby
 rustup-init
+saw
 sdl2
 sdl2_image
 shellcheck
@@ -156,8 +163,8 @@ stack
 starship
 stripe
 tcl-tk
-terraform
 tesseract
+tfenv
 tflint
 theora
 tldr

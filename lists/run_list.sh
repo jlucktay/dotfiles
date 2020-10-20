@@ -56,6 +56,8 @@ process_list "brew list -1" "brew"
 process_list "brew list -1 --cask" "brew.cask"
 
 # NPM
+npm_list_cmd="npm list --depth=0 --global --parseable"
+
 ### If NVM is installed, use it to iterate across all available versions
 # shellcheck disable=SC1090
 if [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh" &> /dev/null; then
@@ -63,14 +65,16 @@ if [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh" &> /d
 
   for nvm_version in "${nvm_versions[@]}"; do
     nvm use "$nvm_version" &> /dev/null
-    npm_list_cmd="npm list --depth=0 --global --parseable"
     process_list "$npm_list_cmd" "npm.$nvm_version"
   done
 else
-  npm_list_cmd="npm list --depth=0 --global --parseable"
   process_list "$npm_list_cmd" "npm"
 fi
 
 # VSCode extensions
 vscode_list_cmd="code --list-extensions"
 process_list "$vscode_list_cmd" "vscode"
+
+# Python packages
+pip_list_cmd="pip3 list --format freeze"
+process_list "$pip_list_cmd" "pip3"

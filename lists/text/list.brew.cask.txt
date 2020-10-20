@@ -3,7 +3,6 @@
 adoptopenjdk
 alacritty
 countdown
-dashlane
 discord
 docker
 epic-games
@@ -20,6 +19,7 @@ keepingyouawake
 keybase
 miro-formerly-realtimeboard
 ngrok
+now-tv-player
 pingmenu
 robo-3t
 screen
@@ -32,3 +32,4 @@ the-unarchiver
 turbo-boost-switcher
 tyke
 visual-studio-code
+vlc
