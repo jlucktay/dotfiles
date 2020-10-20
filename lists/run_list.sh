@@ -52,7 +52,7 @@ fi
 
 # Homebrew
 process_list "brew tap" "brew.tap"
-process_list "brew list -1" "brew"
+process_list "brew list -1 --formula" "brew"
 process_list "brew list -1 --cask" "brew.cask"
 
 # NPM
