@@ -45,7 +45,6 @@ gifsicle
 git
 git-filter-repo
 git-gui
-git-lfs
 glew
 glib
 gmp
