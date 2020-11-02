@@ -1,5 +1,6 @@
 allure
 aom
+augeas
 autojump
 awscli
 azure-cli
@@ -15,6 +16,7 @@ cairo
 chezmoi
 conftest
 coreutils
+cunit
 curl
 curlie
 dav1d
@@ -45,6 +47,7 @@ gifsicle
 git
 git-filter-repo
 git-gui
+git-lfs
 glew
 glib
 gmp
@@ -85,7 +88,10 @@ libass
 libbluray
 libevent
 libffi
+libgcrypt
+libgpg-error
 libidn2
+libiscsi
 libogg
 libpng
 libsamplerate
@@ -97,6 +103,7 @@ libtiff
 libtool
 libunistring
 libvidstab
+libvirt
 libvorbis
 libvpx
 libyaml
@@ -178,4 +185,5 @@ x265
 xvid
 xxhash
 xz
+yajl
 zstd

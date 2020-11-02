@@ -21,6 +21,7 @@ miro-formerly-realtimeboard
 ngrok
 now-tv-player
 pingmenu
+raspberry-pi-imager
 robo-3t
 screen
 skype

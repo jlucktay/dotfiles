@@ -1,9 +1,14 @@
 /Users/jameslucktaylor/go/bin/cobra
 /Users/jameslucktaylor/go/bin/controller-gen
 /Users/jameslucktaylor/go/bin/go-bindata
+/Users/jameslucktaylor/go/bin/go-fuzz
 /Users/jameslucktaylor/go/bin/go1.12.17
 /Users/jameslucktaylor/go/bin/go1.13.11
 /Users/jameslucktaylor/go/bin/godoc
 /Users/jameslucktaylor/go/bin/gofumpt
 /Users/jameslucktaylor/go/bin/goimports
+/Users/jameslucktaylor/go/bin/golint
 /Users/jameslucktaylor/go/bin/gopls-watchdog
+/Users/jameslucktaylor/go/bin/goyacc
+/Users/jameslucktaylor/go/bin/nex
+/Users/jameslucktaylor/go/bin/stringer

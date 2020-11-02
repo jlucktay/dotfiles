@@ -1,4 +1,5 @@
 /Users/jameslucktaylor/.nvm/versions/node/v12.18.4/lib
 /Users/jameslucktaylor/.nvm/versions/node/v12.18.4/lib/node_modules/@stoplight/prism-cli
 /Users/jameslucktaylor/.nvm/versions/node/v12.18.4/lib/node_modules/commitizen
+/Users/jameslucktaylor/.nvm/versions/node/v12.18.4/lib/node_modules/markdownlint-cli
 /Users/jameslucktaylor/.nvm/versions/node/v12.18.4/lib/node_modules/npm
