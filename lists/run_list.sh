@@ -76,7 +76,7 @@ vscode_list_cmd="code --list-extensions"
 process_list "$vscode_list_cmd" "vscode"
 
 # Python packages
-pip_list_cmd="pip3 list --format freeze"
+pip_list_cmd="python3 -m pip list --format freeze"
 process_list "$pip_list_cmd" "pip3"
 
 # Ruby gems
