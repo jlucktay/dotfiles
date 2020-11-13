@@ -1,0 +1,2 @@
+/Users/jameslucktaylor/.nvm/versions/node/v10.23.0/lib
+/Users/jameslucktaylor/.nvm/versions/node/v10.23.0/lib/node_modules/npm

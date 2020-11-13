@@ -13,6 +13,7 @@ bdw-gc
 boost
 brew-caveats
 cairo
+calicoctl
 chezmoi
 conftest
 coreutils
@@ -162,6 +163,7 @@ shellcheck
 shellharden
 shfmt
 snappy
+sonobuoy
 speex
 sqlite
 srt

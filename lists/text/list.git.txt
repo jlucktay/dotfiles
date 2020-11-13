@@ -42,6 +42,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
+/Users/jameslucktaylor/git/github.com/TykTechnologies/packagecloud-analytics
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-demo
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env

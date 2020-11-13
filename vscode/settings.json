@@ -2,18 +2,18 @@
   "[dockerfile]": {
     "editor.defaultFormatter": "ms-azuretools.vscode-docker"
   },
+  "[go.mod]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true
+  },
   "[go]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
     "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
-  },
-  "[go.mod]": {
-    "editor.codeActionsOnSave": {
-      "source.organizeImports": true
-    },
-    "editor.formatOnSave": true
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -102,6 +102,7 @@
   "go.languageServerExperimentalFeatures": {
     "documentLink": false
   },
+  "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
   "go.liveErrors": {
     "delay": 250,

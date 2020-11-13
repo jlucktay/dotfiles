@@ -28,9 +28,10 @@ skype
 slack
 sony-ps4-remote-play
 spectacle
+spotify
 steam
+telegram
 the-unarchiver
-turbo-boost-switcher
 tyke
 visual-studio-code
 vlc

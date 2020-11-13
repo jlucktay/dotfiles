@@ -1,0 +1,2 @@
+/Users/jameslucktaylor/.nvm/versions/node/v12.19.0/lib
+/Users/jameslucktaylor/.nvm/versions/node/v12.19.0/lib/node_modules/npm
