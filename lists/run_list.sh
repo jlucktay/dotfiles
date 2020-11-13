@@ -78,3 +78,7 @@ process_list "$vscode_list_cmd" "vscode"
 # Python packages
 pip_list_cmd="pip3 list --format freeze"
 process_list "$pip_list_cmd" "pip3"
+
+# Ruby gems
+gem_list_cmd="gem list --no-verbose"
+process_list "$gem_list_cmd" "gem"
