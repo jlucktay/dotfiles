@@ -27,7 +27,7 @@ sync = codereview sync
 
 # Best used in tandem with 'git commit --fixup <commit>'
 ram = rebase --autosquash --autostash --interactive master
-raom = rebase --autosquash --autostash --interactive origin/master
+raom = rebase --autosquash --autostash --interactive origin/HEAD
 
 # Unpushed branches/commits
 # With thanks to: https://stackoverflow.com/questions/39220870/in-git-list-names-of-branches-with-unpushed-commits
