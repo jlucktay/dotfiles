@@ -1,10 +1,17 @@
+# Directories
 rsync_tmbackup/
 vscode/
 
-bash_eternal_history.zip
+# Scripts
 bootstrap.sh
-Brewfile
 fix-eternal.sh
-lefthook.yml
 lint-bash.sh
+
+# Markdown
 README.md
+TODO.md
+
+# Miscellanea
+bash_eternal_history.zip
+Brewfile
+lefthook.yml
