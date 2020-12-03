@@ -1,4 +1,6 @@
 allure
+ansible
+ansible-lint
 aom
 augeas
 autojump
@@ -63,6 +65,7 @@ goreleaser
 gource
 graphite2
 graphviz
+gron
 gts
 guile
 hadolint
@@ -119,6 +122,7 @@ minikube
 mongodb-community
 mongodb-database-tools
 nano
+nanorc
 ncdu
 ncurses
 nethack

@@ -1,6 +1,7 @@
 /Users/jameslucktaylor/.cargo/registry/index/github.com-1ecc6299db9ec823
 /Users/jameslucktaylor/.local/share/chezmoi
 /Users/jameslucktaylor/.pulumi/templates
+/Users/jameslucktaylor/git/github.com/athens-artifacts/walkthrough
 /Users/jameslucktaylor/git/github.com/benmurden/GB-Video-Grabber
 /Users/jameslucktaylor/git/github.com/charmbracelet/bubbletea
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
@@ -8,6 +9,7 @@
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
+/Users/jameslucktaylor/git/github.com/jlucktay/ansible-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
 /Users/jameslucktaylor/git/github.com/jlucktay/go-mod-tidy-pr
 /Users/jameslucktaylor/git/github.com/jlucktay/graftorio
