@@ -16,4 +16,4 @@ unset nowrap
 bind M-B prevword all
 bind M-F nextword all
 
-Include /usr/local/var/homebrew/linked/nanorc/share/nanorc/*.nanorc
+include /usr/local/var/homebrew/linked/nanorc/share/nanorc/*.nanorc
