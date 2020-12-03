@@ -6,7 +6,7 @@ set fill 72
 set linenumbers
 set smarthome
 set softwrap
-set tabsize 4
+set tabsize 2
 set trimblanks
 
 unset casesensitive
@@ -15,3 +15,5 @@ unset nowrap
 
 bind M-B prevword all
 bind M-F nextword all
+
+Include /usr/local/var/homebrew/linked/nanorc/share/nanorc/*.nanorc
