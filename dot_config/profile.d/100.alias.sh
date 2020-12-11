@@ -57,6 +57,11 @@ if hash chezmoi &> /dev/null; then
   alias cg='chezmoi git --'
 fi
 
+# Kubernetes CLI
+if hash kubectl &> /dev/null; then
+  alias k=kubectl
+fi
+
 # Miscellaneous
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 

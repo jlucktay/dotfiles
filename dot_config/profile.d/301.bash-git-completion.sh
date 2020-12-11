@@ -9,3 +9,8 @@ if test -r "$HOME/git-completion.bash"; then
   # shellcheck disable=SC1090
   source "$HOME/git-completion.bash"
 fi
+
+# Kubernetes CLI
+if hash kubectl &> /dev/null; then
+  complete -F __start_kubectl k
+fi
