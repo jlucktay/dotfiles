@@ -58,6 +58,7 @@
   "editor.wordWrapColumn": 120,
   "explorer.confirmDragAndDrop": false,
   "explorer.incrementalNaming": "smart",
+  "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
   "files.associations": {
     "*.mmark": "markdown",
@@ -128,6 +129,7 @@
     "tempModfile": true,
     "usePlaceholders": true
   },
+  "jupyter.askForKernelRestart": false,
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.orderedList.marker": "one",
@@ -138,7 +140,7 @@
   },
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
-  "python.dataScience.askForKernelRestart": false,
+  "python.showStartPage": false,
   "rust.clippy_preference": "on",
   "search.searchOnType": false,
   "shellcheck.customArgs": [
