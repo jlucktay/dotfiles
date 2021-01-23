@@ -166,6 +166,7 @@
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.orderedList.marker": "one",
+  "markdown.extension.toc.levels": "2..6",
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "material-icon-theme.folders.associations": {
