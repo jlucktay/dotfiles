@@ -1,7 +1,6 @@
 1password
 1password-cli
 adoptopenjdk
-alacritty
 countdown
 discord
 docker
@@ -10,7 +9,6 @@ firefox
 font-jetbrains-mono
 google-chrome
 google-cloud-sdk
-google-drive-file-stream
 gpg-suite-no-mail
 iglance
 iterm2
@@ -21,6 +19,7 @@ miro-formerly-realtimeboard
 ngrok
 now-tv-player
 pingmenu
+postman
 raspberry-pi-imager
 robo-3t
 screen

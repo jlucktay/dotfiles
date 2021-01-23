@@ -1,18 +1,21 @@
 /Users/jameslucktaylor/.cargo/registry/index/github.com-1ecc6299db9ec823
 /Users/jameslucktaylor/.local/share/chezmoi
 /Users/jameslucktaylor/.pulumi/templates
+/Users/jameslucktaylor/git/github.com/AceFire6/ordered-arrowverse
+/Users/jameslucktaylor/git/github.com/ACloudGuru-Resources/Course_Introduction_to_Ansible
 /Users/jameslucktaylor/git/github.com/athens-artifacts/walkthrough
 /Users/jameslucktaylor/git/github.com/benmurden/GB-Video-Grabber
 /Users/jameslucktaylor/git/github.com/charmbracelet/bubbletea
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
+/Users/jameslucktaylor/git/github.com/dinofizz/picluster-ansible
 /Users/jameslucktaylor/git/github.com/go-task/task
+/Users/jameslucktaylor/git/github.com/golangci/golangci-lint
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
 /Users/jameslucktaylor/git/github.com/jlucktay/ansible-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
 /Users/jameslucktaylor/git/github.com/jlucktay/go-mod-tidy-pr
-/Users/jameslucktaylor/git/github.com/jlucktay/graftorio
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jlucktay/hello-react
 /Users/jameslucktaylor/git/github.com/jlucktay/jameslucktaylor.info
@@ -32,6 +35,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
+/Users/jameslucktaylor/git/github.com/jlucktay/zig-workbench
 /Users/jameslucktaylor/git/github.com/kljensen/golang-html5-sse-example
 /Users/jameslucktaylor/git/github.com/kubernetes/kubectl
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
@@ -43,6 +47,7 @@
 /Users/jameslucktaylor/git/github.com/rancher/quickstart
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
+/Users/jameslucktaylor/git/github.com/TykTechnologies/gromit
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
 /Users/jameslucktaylor/git/github.com/TykTechnologies/packagecloud-analytics
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
@@ -50,9 +55,12 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-gateway-docker
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-helm-chart
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-operator
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.googlesource.com/go
+/Users/jameslucktaylor/git/go.jlucktay.dev/adventofcode
+/Users/jameslucktaylor/git/go.jlucktay.dev/arrowverse
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
 /Users/jameslucktaylor/git/go.jlucktay.dev/GB-Video-Grabber
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
@@ -75,6 +83,7 @@
 /Users/jameslucktaylor/go/src/github.com/beorn7/perks
 /Users/jameslucktaylor/go/src/github.com/blynn/nex
 /Users/jameslucktaylor/go/src/github.com/bmatcuk/doublestar
+/Users/jameslucktaylor/go/src/github.com/bold-commerce/go-hubspot
 /Users/jameslucktaylor/go/src/github.com/buildkite/yaml
 /Users/jameslucktaylor/go/src/github.com/BurntSushi/toml
 /Users/jameslucktaylor/go/src/github.com/bwmarrin/discordgo
@@ -102,6 +111,7 @@
 /Users/jameslucktaylor/go/src/github.com/fogleman/gg
 /Users/jameslucktaylor/go/src/github.com/FooSoft/homemaker
 /Users/jameslucktaylor/go/src/github.com/franela/goreq
+/Users/jameslucktaylor/go/src/github.com/fsnotify/fsnotify
 /Users/jameslucktaylor/go/src/github.com/ghodss/yaml
 /Users/jameslucktaylor/go/src/github.com/go-bindata/go-bindata
 /Users/jameslucktaylor/go/src/github.com/go-kit/kit
@@ -119,6 +129,7 @@
 /Users/jameslucktaylor/go/src/github.com/hashicorp/consul
 /Users/jameslucktaylor/go/src/github.com/hashicorp/errwrap
 /Users/jameslucktaylor/go/src/github.com/hashicorp/go-multierror
+/Users/jameslucktaylor/go/src/github.com/hashicorp/hcl
 /Users/jameslucktaylor/go/src/github.com/hashicorp/hil
 /Users/jameslucktaylor/go/src/github.com/huandu/xstrings
 /Users/jameslucktaylor/go/src/github.com/iancoleman/strcase
@@ -139,6 +150,7 @@
 /Users/jameslucktaylor/go/src/github.com/lonelycode/go-uuid
 /Users/jameslucktaylor/go/src/github.com/lonelycode/osin
 /Users/jameslucktaylor/go/src/github.com/lunixbochs/vtclean
+/Users/jameslucktaylor/go/src/github.com/magiconair/properties
 /Users/jameslucktaylor/go/src/github.com/manifoldco/promptui
 /Users/jameslucktaylor/go/src/github.com/Masterminds/goutils
 /Users/jameslucktaylor/go/src/github.com/Masterminds/semver
@@ -175,10 +187,14 @@
 /Users/jameslucktaylor/go/src/github.com/sirupsen/logrus
 /Users/jameslucktaylor/go/src/github.com/sourcegraph/go-ses
 /Users/jameslucktaylor/go/src/github.com/spf13/afero
+/Users/jameslucktaylor/go/src/github.com/spf13/cast
 /Users/jameslucktaylor/go/src/github.com/spf13/cobra
+/Users/jameslucktaylor/go/src/github.com/spf13/jwalterweatherman
 /Users/jameslucktaylor/go/src/github.com/spf13/pflag
+/Users/jameslucktaylor/go/src/github.com/spf13/viper
 /Users/jameslucktaylor/go/src/github.com/square/go-jose
 /Users/jameslucktaylor/go/src/github.com/src-d/gcfg
+/Users/jameslucktaylor/go/src/github.com/subosito/gotenv
 /Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-github
 /Users/jameslucktaylor/go/src/github.com/tmthrgd/go-bindata
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/ara
@@ -188,6 +204,7 @@
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/logrus-prefixed-formatter
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk-analytics
+/Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk-email-driver
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk-identity-broker
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/tyk-pump
@@ -223,6 +240,7 @@
 /Users/jameslucktaylor/go/src/gopkg.in/alecthomas/kingpin.v2
 /Users/jameslucktaylor/go/src/gopkg.in/fsnotify.v1
 /Users/jameslucktaylor/go/src/gopkg.in/inconshreveable/log15.v2
+/Users/jameslucktaylor/go/src/gopkg.in/ini.v1
 /Users/jameslucktaylor/go/src/gopkg.in/Masterminds/sprig.v2
 /Users/jameslucktaylor/go/src/gopkg.in/mgo.v2
 /Users/jameslucktaylor/go/src/gopkg.in/sourcemap.v1

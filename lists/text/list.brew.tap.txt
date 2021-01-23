@@ -1,10 +1,10 @@
 adoptopenjdk/openjdk
+akitasoftware/akita
 arkweid/lefthook
 azure/draft
 elastic/tap
 github/gh
 go-swagger/go-swagger
-go-task/tap
 golangci/tap
 homebrew/bundle
 homebrew/cask
@@ -13,11 +13,9 @@ homebrew/cask-fonts
 homebrew/cask-versions
 homebrew/core
 homebrew/services
-instrumenta/instrumenta
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats
-rs/tap
 stripe/stripe-cli
 tidwall/jj
 tylerbrock/saw

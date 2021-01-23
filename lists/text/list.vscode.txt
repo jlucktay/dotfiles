@@ -5,6 +5,7 @@ DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
+exiasr.hadolint
 foxundermoon.shell-format
 golang.go
 hashicorp.terraform
@@ -21,6 +22,7 @@ PKief.material-icon-theme
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust
+tiehuis.zig
 timonwong.shellcheck
 Tyriar.sort-lines
 WakaTime.vscode-wakatime
