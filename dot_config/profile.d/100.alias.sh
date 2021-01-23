@@ -77,5 +77,6 @@ if hash jq &> /dev/null; then
 fi
 
 if hash terraform &> /dev/null; then
-  alias tfmt='find . -type f -iname "*.tf" -execdir terraform fmt --check=false --diff=false --list=true --write=true \;'
+  alias tfmt="find . -type f -iname \"*.tf\" -execdir \
+    terraform fmt --check=false --diff=false --list=true --write=true \;"
 fi
