@@ -29,13 +29,15 @@ if hash git &> /dev/null; then
     template-go repository (located at '$template_go_repo').
 
     Optional arguments:
-        -h, --help          show this help message and exit
         -c, --confirm       actually perform the rsync; don't do a dry run
+        -d, --diff          run a diff between the template and the current working directory
+        -h, --help          show this help message and exit
 
 HEREDOC
     }
 
     local confirmed=0
+    local run_diff=0
 
     for arg in "$@"; do
       case $arg in
@@ -45,6 +47,10 @@ HEREDOC
           ;;
         -c | --confirm)
           confirmed=1
+          shift
+          ;;
+        -d | --diff)
+          run_diff=1
           shift
           ;;
         *) # unknown option
@@ -75,9 +81,14 @@ HEREDOC
 
     rsync "${rsync_args[@]}"
 
+    if ((run_diff == 1)); then
+      fd --hidden --no-ignore --max-depth=1 --type=file --exclude "LICENSE" . "$template_go_repo" \
+        --exec git diff --color=always "{}" "$current_git_repo/{/}"
+    fi
+
     if ((confirmed != 1)); then
       echo
-      echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed rsync."
+      echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed diff/rsync."
     fi
   }
 fi
