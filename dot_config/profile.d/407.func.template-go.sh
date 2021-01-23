@@ -72,7 +72,6 @@ HEREDOC
       "--exclude=.git"
       "--exclude=LICENSE"
       --itemize-changes
-      --recursive
       "$template_go_repo"
       "$current_git_repo"
     )
