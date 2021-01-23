@@ -8,7 +8,7 @@ Cross-compile Go for all available platforms and architectures (in a tweet sized
 https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
     git commit --fixup <commit>
     - where <commit> is the original goofed commit you want to.. fix.. up...
-    git rebase -i --autosquash <commit> (probably 'origin/master')
+    git rebase -i --autosquash <commit> (probably 'origin/main')
     - where <commit> is the last commit you want to retain as-is, not the first one you want to change
 
 Partial pull:                          Partial push:
@@ -18,7 +18,7 @@ Partial pull:                          Partial push:
 
 K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-into-a-single-commit)
     git remote add upstream https://github.com/kubernetes/kubernetes.git && git remote set-url --push upstream no_push
-    git checkout golint_pkg/auth/authorizer/abac && git rebase -i master
+    git checkout golint_pkg/auth/authorizer/abac && git rebase -i main
     git push -f
 
 Bash:

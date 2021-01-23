@@ -26,7 +26,7 @@ submit = codereview submit
 sync = codereview sync
 
 # Best used in tandem with 'git commit --fixup <commit>'
-ram = rebase --autosquash --autostash --interactive master
+ram = rebase --autosquash --autostash --interactive main
 raom = rebase --autosquash --autostash --interactive origin/HEAD
 
 # Unpushed branches/commits
@@ -45,11 +45,11 @@ aliases = "!git config --list | grep -E '^alias.' | cut -c 7-"
 # Feedback magic
 entr = !cd -- ${GIT_PREFIX:-.} && git ls-files --cached --deleted --exclude-standard --modified --others -- '**/*.go' ':!vendor/**' | entr -cd
 
-# Deletes all branches merged with specified branch (or master if no branch is specified)
-bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs git branch -d; }; f"
+# Deletes all branches merged with specified branch (or main if no branch is specified)
+bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs git branch -d; }; f"
 
-# Switches to specified branch (or master if no branch is specified), runs git up, then runs bclean.
-bdone = "!f() { git checkout ${1-master} && git up && git bclean ${1-master}; }; f"
+# Switches to specified branch (or main if no branch is specified), runs git up, then runs bclean.
+bdone = "!f() { git checkout ${1-main} && git up && git bclean ${1-main}; }; f"
 
 # Lists the files with the most churn
 churn = !git --no-pager log --name-only --oneline | grep -v ' ' | sort | uniq -c | sort -nr | head
@@ -75,7 +75,7 @@ lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" 
 ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
 
 # Moves a set of commits from the current branch to another
-migrate = "!f() { CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-$CURRENT@{u}} && git rebase --onto ${2-master} $CURRENT; }; f"
+migrate = "!f() { CURRENT=$(git symbolic-ref --short HEAD); git checkout -b $1 && git branch --force $CURRENT ${3-$CURRENT@{u}} && git rebase --onto ${2-main} $CURRENT; }; f"
 
 open = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}; }; f"
 
