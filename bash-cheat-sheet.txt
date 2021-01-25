@@ -1,4 +1,4 @@
-Don't forget about autojump (`j`) and `shellharden` and `elvish` and `mage` and `chezmoi`!
+Don't forget about autojump (`j`) and `shellharden` and `elvish` and `gomod` and `chezmoi`!
 
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
