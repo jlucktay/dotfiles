@@ -209,7 +209,9 @@
   },
   "typescript.tsserver.log": "verbose",
   "vs-kubernetes": {
-    "checkForMinikubeUpgrade": false
+    "checkForMinikubeUpgrade": false,
+    "vs-kubernetes.knownKubeconfigs": ["/Users/jameslucktaylor/.kube/config"],
+    "vs-kubernetes.kubeconfig": "/Users/jameslucktaylor/.kube/config"
   },
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "maximized",
