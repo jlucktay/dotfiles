@@ -99,24 +99,15 @@
   "go.alternateTools": {
     "gometalinter": "/usr/local/bin/golangci-lint"
   },
-  "go.formatTool": "goimports",
-  "go.lintFlags": ["--fast"],
+  "go.coverShowCounts": true,
+  "go.formatTool": "gofumpt",
   "go.lintTool": "golangci-lint",
-  "go.liveErrors": {
-    "delay": 250,
-    "enabled": true
-  },
-  "go.testEnvVars": {
-    "GO111MODULE": "on"
-  },
   "go.testFlags": ["-count=1", "-v"],
-  "go.toolsEnvVars": {
-    "GO111MODULE": "on"
-  },
   "go.toolsGopath": "~/vscode-go",
   "go.useLanguageServer": true,
   "gopls": {
-    "analyses": {
+    "formatting.gofumpt": true,
+    "ui.diagnostic.analyses": {
       "asmdecl": true,
       "assign": true,
       "atomic": true,
@@ -157,10 +148,9 @@
       "unusedparams": true,
       "unusedresult": true
     },
-    "formatting.gofumpt": true,
-    "importShortcut": "Both",
-    "staticcheck": true,
-    "usePlaceholders": false
+    "ui.diagnostic.staticcheck": true,
+    "ui.navigation.importShortcut": "Both",
+    "usePlaceholders": true
   },
   "jupyter.askForKernelRestart": false,
   "markdown.extension.list.indentationSize": "inherit",
