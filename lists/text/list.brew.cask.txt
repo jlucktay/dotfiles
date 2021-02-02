@@ -1,6 +1,7 @@
 1password
 1password-cli
 adoptopenjdk
+alacritty
 countdown
 discord
 docker
@@ -15,6 +16,7 @@ iterm2
 itsycal
 keepingyouawake
 keybase
+krisp
 miro-formerly-realtimeboard
 ngrok
 now-tv-player

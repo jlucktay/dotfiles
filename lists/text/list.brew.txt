@@ -29,6 +29,7 @@ docker-compose-completion
 draft
 drone-cli
 elasticsearch-oss
+elvish
 entr
 fd
 ffmpeg
@@ -178,8 +179,10 @@ tfenv
 tflint
 theora
 tldr
+tmux
 tree
 unbound
+utf8proc
 watch
 webp
 wget
