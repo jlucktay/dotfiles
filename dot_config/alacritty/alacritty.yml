@@ -33,4 +33,5 @@ shell:
     - --login
 
 window:
+  decorations: buttonless
   startup_mode: Maximized
