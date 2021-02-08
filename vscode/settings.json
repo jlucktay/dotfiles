@@ -221,6 +221,7 @@
   "window.restoreWindows": "all",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "window.zoomLevel": 0,
+  "workbench.editor.decorations.colors": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always"
 }
