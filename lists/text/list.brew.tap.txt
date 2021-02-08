@@ -1,6 +1,5 @@
 adoptopenjdk/openjdk
 akitasoftware/akita
-arkweid/lefthook
 azure/draft
 elastic/tap
 github/gh
