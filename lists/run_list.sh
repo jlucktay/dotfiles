@@ -13,7 +13,7 @@ function process_list() {
   # Parameter #2 is the name of the list
 
   # Parse out the command name and make sure it is available
-  cmd_name=$(awk '{print $1}' <<< "$1")
+  cmd_name=$(awk '{ print $1 }' <<< "$1")
 
   if ! hash "$cmd_name" &> /dev/null; then
     echo "${BASH_SOURCE[-1]} > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
@@ -22,9 +22,9 @@ function process_list() {
 
   # Print command and first argument
   printf "%s: [%s] " "$script_name" "$(gdn)"
-  awk '{print $1, $2}' <<< "$1"
+  awk '{ print $1, $2 }' <<< "$1"
 
-  # If the command is 'brew' then make sure we're current before kicking off the lists
+  # If the command is 'brew' then make sure we're up to date before kicking off the lists
   if [ "$cmd_name" == "brew" ]; then
     brew update
   fi
@@ -65,6 +65,7 @@ if [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh" &> /d
 
   for nvm_version in "${nvm_versions[@]}"; do
     nvm use "$nvm_version" &> /dev/null
+    echo "Node: $nvm_version / npm: $(npm --version)"
     process_list "$npm_list_cmd" "npm.$nvm_version"
   done
 else
