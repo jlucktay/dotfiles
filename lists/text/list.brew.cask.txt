@@ -1,6 +1,5 @@
 1password
 1password-cli
-adoptopenjdk
 alacritty
 countdown
 discord

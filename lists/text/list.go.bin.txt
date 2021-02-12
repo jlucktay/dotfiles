@@ -9,6 +9,7 @@
 /Users/jameslucktaylor/go/bin/gomod
 /Users/jameslucktaylor/go/bin/gopls-watchdog
 /Users/jameslucktaylor/go/bin/goyacc
+/Users/jameslucktaylor/go/bin/mservctl
 /Users/jameslucktaylor/go/bin/nex
 /Users/jameslucktaylor/go/bin/stringer
 /Users/jameslucktaylor/go/bin/tyk

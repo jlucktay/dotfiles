@@ -42,6 +42,7 @@ fribidi
 fzf
 gd
 gdbm
+gdk-pixbuf
 gettext
 gh
 giflib
@@ -94,6 +95,7 @@ libiscsi
 libmetalink
 libogg
 libpng
+librsvg
 libsamplerate
 libsndfile
 libsodium
@@ -109,7 +111,6 @@ libvpx
 libyaml
 libzip
 little-cms2
-llvm
 lz4
 lzo
 make
@@ -192,6 +193,5 @@ xz
 yajl
 yq
 zeromq
-zig
 zimg
 zstd
