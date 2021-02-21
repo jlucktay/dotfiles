@@ -72,8 +72,9 @@ HEREDOC
       "--exclude=.git"
       "--exclude=LICENSE"
       --itemize-changes
+      --recursive
       "$template_go_repo"
-      "$current_git_repo"
+      "$current_git_repo"/
     )
 
     echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
