@@ -15,6 +15,7 @@ homebrew/services
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats
+snyk/tap
 stripe/stripe-cli
 tidwall/jj
 tylerbrock/saw

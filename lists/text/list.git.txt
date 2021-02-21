@@ -57,6 +57,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-gateway-docker
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-helm-chart
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-license-server-2
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-operator
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.googlesource.com/go

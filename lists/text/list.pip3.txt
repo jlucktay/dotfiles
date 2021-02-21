@@ -1,4 +1,7 @@
+autopep8==1.5.5
 crcmod==1.7
 pip==21.0.1
-setuptools==52.0.0
+pycodestyle==2.6.0
+setuptools==53.0.0
+toml==0.10.2
 wheel==0.36.2

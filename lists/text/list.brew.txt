@@ -167,6 +167,7 @@ shellcheck
 shellharden
 shfmt
 snappy
+snyk
 speex
 sqlite
 srt
@@ -191,6 +192,7 @@ xvid
 xxhash
 xz
 yajl
+yarn
 yq
 zeromq
 zimg
