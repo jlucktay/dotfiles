@@ -5,12 +5,6 @@ Cross-compile Go for all available platforms and architectures (in a tweet sized
 
 === The golden rule of git rebase is to never use it on public branches ===
 
-https://fle.github.io/git-tip-keep-your-branch-clean-with-fixup-and-autosquash.html
-    git commit --fixup <commit>
-    - where <commit> is the original goofed commit you want to.. fix.. up...
-    git rebase -i --autosquash <commit> (probably 'origin/main')
-    - where <commit> is the last commit you want to retain as-is, not the first one you want to change
-
 Partial pull:                          Partial push:
 - git rup                              - git push <remote> <src>:<dst>
 - git merge <target>                   - src e.g. HEAD~3, a1b2c3
@@ -21,8 +15,4 @@ K8s flow: (https://makandracards.com/makandra/527-squash-several-git-commits-int
     git checkout golint_pkg/auth/authorizer/abac && git rebase -i main
     git push -f
 
-Bash:
-  Port check:
-    (echo > /dev/tcp/google.com/80) &>/dev/null && echo "It's up" || echo "It's down"
-  Brace expansion:
-    echo *.{pn,jp{e,}}g -> *.png *.jpeg *.jpg
+Nano: toggle line comment with Ctrl+Option+Shift+3
