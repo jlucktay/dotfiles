@@ -8,6 +8,7 @@ function prefix_path() {
 }
 
 # Build up PATH
+prefix_path "/usr/local/sbin"
 prefix_path "/usr/local/opt/curl/bin"
 prefix_path "/usr/local/opt/make/libexec/gnubin"
 prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
@@ -20,5 +21,4 @@ fi
 prefix_path "$HOME/bin"
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
-CDPATH="."
-export CDPATH
+export CDPATH="."
