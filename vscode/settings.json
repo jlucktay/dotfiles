@@ -192,9 +192,10 @@
   "shellformat.path": "/usr/local/bin/shfmt",
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.inheritEnv": false,
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.shell.osx": "/usr/local/bin/bash",
-  "terminal.integrated.shellArgs.osx": ["-i", "-l"],
+  "terminal.integrated.shellArgs.osx": ["--login"],
   "terraform.format": {
     "ignoreExtensionsOnSave": [".tfsmurf"]
   },
@@ -218,7 +219,6 @@
   "window.newWindowDimensions": "maximized",
   "window.restoreWindows": "all",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
-  "window.zoomLevel": 0,
   "workbench.editor.decorations.colors": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always"
