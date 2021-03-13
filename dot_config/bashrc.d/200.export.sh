@@ -1,16 +1,5 @@
 ### Environment variables
 
-# Go
-if hash go 2> /dev/null; then
-  GOPATH=$(go env GOPATH)
-  export GOPATH
-  GOROOT=$(go env GOROOT)
-  export GOROOT
-
-  # All modules all the time
-  export GO111MODULE=on
-fi
-
 # If I have to edit something in a terminal window, I like using Nano. The up-to-date version from Homebrew if present.
 if test -x /usr/local/bin/nano; then
   export EDITOR=/usr/local/bin/nano

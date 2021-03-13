@@ -20,5 +20,19 @@ fi
 
 prefix_path "$HOME/bin"
 
+# Keep this last to have highest priority
+prefix_path "/usr/local/opt/go@1.15/bin"
+
+# Set up Go environment around v1.15
+if hash go 2> /dev/null; then
+  GOPATH=$(go env GOPATH)
+  export GOPATH
+  GOROOT=$(go env GOROOT)
+  export GOROOT
+
+  # All modules all the time
+  export GO111MODULE=on
+fi
+
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH="."
