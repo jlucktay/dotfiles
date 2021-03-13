@@ -1,8 +1,18 @@
 # Profile-specific exports
 function prefix_path() {
-  # if [[ ! ":${PATH}:" = *":${1}:"* ]]; then
-  # fi
-  if test -d "$1"; then
+  # If argument is not a directory which exists, return non-zero early
+  if ! test -d "${1:?}"; then
+    return 1
+  fi
+
+  # Populate "$split_path" array with $PATH
+  while IFS=':' read -ra split_path; do
+    : # no-op
+  done <<< "$PATH"
+
+  # Check if argument exists in the "$split_path" array
+  if ! [[ ${split_path[*]} =~ (^|[[:space:]])"$1"($|[[:space:]]) ]]; then
+    # Prefix PATH (if set) with argument, and export
     export PATH="${1}${PATH:+:${PATH}}"
   fi
 }
@@ -22,6 +32,9 @@ prefix_path "$HOME/bin"
 
 # Keep this last to have highest priority
 prefix_path "/usr/local/opt/go@1.15/bin"
+
+# Clean up the function and don't leave it lying around
+unset -f prefix_path
 
 # Set up Go environment around v1.15
 if hash go 2> /dev/null; then
