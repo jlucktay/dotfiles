@@ -1,20 +1,35 @@
 # Profile-specific exports
+
+# prefix_path takes 1 argument that is a directory.
+# If the given directory is already a part of PATH, it will be removed from its current position(s).
+# It is then set at the front of PATH, to take highest priority in the search order.
 function prefix_path() {
   # If argument is not a directory which exists, return non-zero early
   if ! test -d "${1:?}"; then
     return 1
   fi
 
-  # Populate "$split_path" array with $PATH
-  while IFS=':' read -ra split_path; do
-    : # no-op
-  done <<< "$PATH"
+  # Populate array with PATH
+  IFS=':' read -ra split_path <<< "$PATH"
 
-  # Check if argument exists in the "$split_path" array
-  if ! [[ ${split_path[*]} =~ (^|[[:space:]])"$1"($|[[:space:]]) ]]; then
-    # Prefix PATH (if set) with argument, and export
-    export PATH="${1}${PATH:+:${PATH}}"
-  fi
+  # If argument already present, remove from its current index(es)
+  for i in "${!split_path[@]}"; do
+    if [[ ${split_path[i]} == "$1" ]]; then
+      unset 'split_path[i]'
+    fi
+  done
+
+  # Prepend argument; this will also remove any gaps created by 'unset' above
+  split_path=("$1" "${split_path[@]}")
+
+  # Generate a variable from array contents which contains the updated PATH
+  set_path=$(
+    IFS=':'
+    echo "${split_path[*]}"
+  )
+
+  # Export updated PATH
+  export PATH="$set_path"
 }
 
 # Build up PATH
