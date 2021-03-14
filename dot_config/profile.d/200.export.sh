@@ -37,6 +37,12 @@ function prefix_path() {
 # 2) the files under the '/etc/paths.d/' directory
 
 prefix_path "/usr/local/sbin"
+
+# https://formulae.brew.sh/cask/google-cloud-sdk
+if test -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+fi
+
 prefix_path "/usr/local/opt/curl/bin"
 prefix_path "/usr/local/opt/make/libexec/gnubin"
 prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
