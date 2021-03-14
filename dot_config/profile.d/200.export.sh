@@ -32,35 +32,26 @@ function prefix_path() {
   export PATH="$set_path"
 }
 
-# Build up PATH
+# Build up PATH in last->first order, on top of existing values inherited from:
+# 1) the '/etc/paths' file, and
+# 2) the files under the '/etc/paths.d/' directory
+
 prefix_path "/usr/local/sbin"
 prefix_path "/usr/local/opt/curl/bin"
 prefix_path "/usr/local/opt/make/libexec/gnubin"
 prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.cargo/bin"
-
-if [[ -v GOPATH ]]; then
-  prefix_path "$GOPATH/bin"
-fi
-
 prefix_path "$HOME/bin"
 
-# Keep this last to have highest priority
-prefix_path "/usr/local/opt/go@1.15/bin"
+# Keep these Go paths last, to have highest priority
+prefix_path "/usr/local/opt/go@1.15/bin" # pin to 1.15 until late 2021 when 1.17 drops, and then we will go up to 1.16
+prefix_path "$(go env GOPATH)/bin"
 
 # Clean up the function and don't leave it lying around
 unset -f prefix_path
 
-# Set up Go environment around v1.15
-if hash go 2> /dev/null; then
-  GOPATH=$(go env GOPATH)
-  export GOPATH
-  GOROOT=$(go env GOROOT)
-  export GOROOT
-
-  # All modules all the time
-  export GO111MODULE=on
-fi
+# For Go, always use modules 👍
+export GO111MODULE=on
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH="."
