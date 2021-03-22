@@ -38,6 +38,7 @@
   },
   "breadcrumbs.enabled": true,
   "diffEditor.ignoreTrimWhitespace": true,
+  "docker.showStartPage": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
@@ -103,6 +104,7 @@
   "go.lintTool": "golangci-lint",
   "go.testFlags": ["-count=1", "-v"],
   "go.toolsGopath": "~/vscode-go",
+  "go.toolsManagement.autoUpdate": true,
   "go.useLanguageServer": true,
   "gopls": {
     "formatting.gofumpt": true,
