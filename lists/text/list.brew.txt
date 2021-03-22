@@ -57,6 +57,7 @@ gnu-typist
 gnutls
 go
 go-swagger
+go@1.15
 gobject-introspection
 golangci-lint
 goreleaser
