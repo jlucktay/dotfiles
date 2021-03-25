@@ -79,7 +79,6 @@ icu4c
 istioctl
 jasper
 jemalloc
-jj
 jpeg
 jq
 k9s
@@ -179,7 +178,6 @@ shellcheck
 shellharden
 shfmt
 snappy
-snyk
 speex
 sqlite
 srt

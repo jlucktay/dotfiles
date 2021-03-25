@@ -45,6 +45,7 @@
 /Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
 /Users/jameslucktaylor/git/github.com/purpleidea/mgmt
 /Users/jameslucktaylor/git/github.com/rancher/quickstart
+/Users/jameslucktaylor/git/github.com/TykTechnologies/ara
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
 /Users/jameslucktaylor/git/github.com/TykTechnologies/gromit
@@ -199,7 +200,6 @@
 /Users/jameslucktaylor/go/src/github.com/subosito/gotenv
 /Users/jameslucktaylor/go/src/github.com/terraform-providers/terraform-provider-github
 /Users/jameslucktaylor/go/src/github.com/tmthrgd/go-bindata
-/Users/jameslucktaylor/go/src/github.com/TykTechnologies/ara
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/go-haikunator
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/gojsonschema
 /Users/jameslucktaylor/go/src/github.com/TykTechnologies/logrus
