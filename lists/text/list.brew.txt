@@ -109,6 +109,7 @@ libtasn1
 libtiff
 libtool
 libunistring
+libuv
 libvidstab
 libvorbis
 libvpx
@@ -123,6 +124,7 @@ libzip
 little-cms2
 lz4
 lzo
+m4
 make
 metricbeat-oss
 minikube
@@ -172,6 +174,7 @@ rtmpdump
 rubberband
 rustup-init
 saw
+scc
 sdl2
 sdl2_image
 shellcheck

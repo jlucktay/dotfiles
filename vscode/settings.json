@@ -131,6 +131,7 @@
       "loopclosure": true,
       "lostcancel": true,
       "nilfunc": true,
+      "nilness": true,
       "nonewvars": true,
       "noresultvalues": true,
       "printf": true,
@@ -150,7 +151,8 @@
       "unreachable": true,
       "unsafeptr": true,
       "unusedparams": true,
-      "unusedresult": true
+      "unusedresult": true,
+      "unusedwrite": true
     },
     "ui.diagnostic.staticcheck": true,
     "ui.navigation.importShortcut": "Both",

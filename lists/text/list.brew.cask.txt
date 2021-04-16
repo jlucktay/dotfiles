@@ -15,7 +15,6 @@ iterm2
 itsycal
 keepingyouawake
 keybase
-krisp
 miro-formerly-realtimeboard
 ngrok
 now-tv-player
