@@ -37,7 +37,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "breadcrumbs.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": true,
+  "cloudcode.autoDependencies": "off",
   "docker.showStartPage": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
@@ -105,6 +105,7 @@
   "go.testFlags": ["-count=1", "-v"],
   "go.toolsGopath": "~/vscode-go",
   "go.toolsManagement.autoUpdate": true,
+  "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
   "gopls": {
     "formatting.gofumpt": true,
@@ -171,6 +172,7 @@
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
   "python.showStartPage": false,
+  "redhat.telemetry.enabled": true,
   "rust.clippy_preference": "on",
   "search.searchOnType": false,
   "shellcheck.customArgs": [
@@ -224,6 +226,12 @@
   "window.restoreWindows": "all",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "workbench.editor.decorations.colors": true,
+  "workbench.editorAssociations": [
+    {
+      "filenamePattern": "*.ipynb",
+      "viewType": "jupyter.notebook.ipynb"
+    }
+  ],
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always"
 }
