@@ -1,6 +1,9 @@
 /Users/jameslucktaylor/.cargo/registry/index/github.com-1ecc6299db9ec823
 /Users/jameslucktaylor/.local/share/chezmoi
 /Users/jameslucktaylor/.pulumi/templates
+/Users/jameslucktaylor/.tmux/plugins/tmux-continuum
+/Users/jameslucktaylor/.tmux/plugins/tmux-resurrect
+/Users/jameslucktaylor/.tmux/plugins/tpm
 /Users/jameslucktaylor/git/github.com/AceFire6/ordered-arrowverse
 /Users/jameslucktaylor/git/github.com/ACloudGuru-Resources/Course_Introduction_to_Ansible
 /Users/jameslucktaylor/git/github.com/athens-artifacts/walkthrough
@@ -8,12 +11,15 @@
 /Users/jameslucktaylor/git/github.com/charmbracelet/bubbletea
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
 /Users/jameslucktaylor/git/github.com/dinofizz/picluster-ansible
+/Users/jameslucktaylor/git/github.com/err0r500/Clean-Architecture-in-Golang
+/Users/jameslucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/jameslucktaylor/git/github.com/go-task/task
 /Users/jameslucktaylor/git/github.com/golangci/golangci-lint
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
 /Users/jameslucktaylor/git/github.com/jlucktay/ansible-workbench
+/Users/jameslucktaylor/git/github.com/jlucktay/cpp-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/factorio-server-kit
 /Users/jameslucktaylor/git/github.com/jlucktay/go-mod-tidy-pr
 /Users/jameslucktaylor/git/github.com/jlucktay/graphql-go-tools
@@ -45,6 +51,7 @@
 /Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
 /Users/jameslucktaylor/git/github.com/purpleidea/mgmt
 /Users/jameslucktaylor/git/github.com/rancher/quickstart
+/Users/jameslucktaylor/git/github.com/simonmonk/pi_starter_kit
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
@@ -52,6 +59,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
 /Users/jameslucktaylor/git/github.com/TykTechnologies/mserv
 /Users/jameslucktaylor/git/github.com/TykTechnologies/packagecloud-analytics
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-account-manager
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-demo
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-develop-env
@@ -64,9 +72,11 @@
 /Users/jameslucktaylor/git/go.googlesource.com/go
 /Users/jameslucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/jameslucktaylor/git/go.jlucktay.dev/arrowverse
+/Users/jameslucktaylor/git/go.jlucktay.dev/Clean-Architecture-in-Golang
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
 /Users/jameslucktaylor/git/go.jlucktay.dev/GB-Video-Grabber
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
+/Users/jameslucktaylor/git/go.jlucktay.dev/google-code-jam
 /Users/jameslucktaylor/git/go.jlucktay.dev/goppuku
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/jameslucktaylor/git/go.jlucktay.dev/minikube
@@ -260,5 +270,6 @@
 /Users/jameslucktaylor/go/src/sigs.k8s.io/kind
 /Users/jameslucktaylor/go/src/sigs.k8s.io/yaml
 /Users/jameslucktaylor/tmp/algo
+/Users/jameslucktaylor/tmp/aractl
 /Users/jameslucktaylor/tmp/docker-cache-vendor
 /Users/jameslucktaylor/tmp/lists

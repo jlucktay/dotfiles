@@ -30,6 +30,7 @@ drone-cli
 elasticsearch-oss
 elvish
 entr
+etcd
 fd
 ffmpeg
 filebeat-oss
@@ -159,6 +160,7 @@ pcre
 pcre2
 pixman
 pkg-config
+podman
 popt
 prettyping
 python@3.8
@@ -180,6 +182,7 @@ sdl2_image
 shellcheck
 shellharden
 shfmt
+skaffold
 snappy
 speex
 sqlite
