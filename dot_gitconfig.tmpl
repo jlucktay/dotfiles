@@ -18,20 +18,34 @@
 	remote = yellow
 	upstream = blue
 
+# Debian 10 -> git 2.20 apparently doesn't have bright colours, so we use bold there instead
+
 [color "diff"]
 	frag = magenta bold
+{{- if eq .chezmoi.os "linux" }}
+	func = blue bold
+	new = green bold
+	old = red bold
+{{- else }}
 	func = brightblue
 	new = brightgreen
-	newMoved = green
 	old = brightred
+{{- end }}
+	newMoved = green
 	oldMoved = red
 
 [color "status"]
+{{- if eq .chezmoi.os "linux" }}
+	branch = magenta bold
+	localBranch = magenta bold
+	remoteBranch = magenta bold
+{{- else }}
 	branch = brightmagenta
-	changed = red
-	header = white
 	localBranch = brightmagenta
 	remoteBranch = brightmagenta
+{{- end }}
+	changed = red
+	header = white
 	unmerged = blue
 	untracked = yellow
 	updated = green
