@@ -16,7 +16,7 @@ unset nowrap
 bind M-B prevword all
 bind M-F nextword all
 
-{{- if eq .chezmoi.os "darwin" }}
+{{ if eq .chezmoi.os "darwin" -}}
 include /usr/local/share/nanorc/*.nanorc
 {{- else if eq .chezmoi.os "linux" -}}
 include /usr/share/nano/*.nanorc
