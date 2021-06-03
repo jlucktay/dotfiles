@@ -51,7 +51,10 @@ prefix_path "$HOME/bin"
 
 # Keep these Go paths last, to have highest priority
 prefix_path "/usr/local/opt/go@1.15/bin" # pin to 1.15 until late 2021 when 1.17 drops, and then we will go up to 1.16
-prefix_path "$(go env GOPATH)/bin"
+
+if command -v go &> /dev/null; then
+  prefix_path "$(go env GOPATH)/bin"
+fi
 
 # Clean up the function and don't leave it lying around
 unset -f prefix_path
