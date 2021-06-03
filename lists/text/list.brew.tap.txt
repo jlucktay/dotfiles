@@ -12,6 +12,7 @@ homebrew/cask-fonts
 homebrew/cask-versions
 homebrew/core
 homebrew/services
+hudochenkov/sshpass
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats

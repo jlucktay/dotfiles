@@ -4,7 +4,6 @@ ansible-lint
 aom
 autojump
 awscli
-azure-cli
 bandwhich
 bash
 bash-completion@2
@@ -174,6 +173,7 @@ rpm2cpio
 rsync
 rtmpdump
 rubberband
+ruby
 rustup-init
 saw
 scc
@@ -187,6 +187,7 @@ snappy
 speex
 sqlite
 srt
+sshpass
 stack
 stripe
 tcl-tk

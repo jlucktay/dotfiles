@@ -233,5 +233,6 @@
     }
   ],
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "yaml.customTags": ["!encrypted/pkcs1-oaep scalar", "!vault scalar"]
 }
