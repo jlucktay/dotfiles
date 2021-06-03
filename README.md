@@ -7,5 +7,5 @@ My dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi).
 Run this to bootstrap a new environment:
 
 ``` shell
-curl -Lfs https://git.io/jlucktay-dotfiles | bash
+curl --fail --location --silent https://git.io/jlucktay-dotfiles | bash
 ```
