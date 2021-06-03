@@ -20,6 +20,6 @@ done <<< "$PATH"
 echo
 echo "$background_white${foreground_black}PATH sorted:$reset_colours"
 
-for i in "${sorted_path[@]}"; do
+for i in ${sorted_path[*]}; do
   echo "$i"
 done
