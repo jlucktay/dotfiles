@@ -32,7 +32,7 @@ while ((slices-- > 0)); do
 
   repo_commits=$((commit_count - rewind_count))
 
-  if ! check_this_out=$(git rev-list "$first_commit_hash"..master | tail -n "$rewind_count" | head -n 1); then
+  if ! check_this_out="$(git rev-list "$first_commit_hash"..master | tail -n "$rewind_count" | head -n 1)"; then
     : # no-op to dodge 141 exit status
   fi
 
@@ -42,7 +42,7 @@ while ((slices-- > 0)); do
 
   git checkout "$check_this_out" &> /dev/null
 
-  if ! linter_output=$(
+  if ! linter_output="$(
     golint_enable_all \
       --issues-exit-code=0 \
       --max-issues-per-linter=0 \
@@ -50,10 +50,10 @@ while ((slices-- > 0)); do
       --new-from-rev= \
       --out-format=json \
       2>&1
-  ); then
+  )"; then
     issue_count="error"
   else
-    if ! issue_count=$(jq --exit-status '.Issues | length' <<< "$linter_output"); then
+    if ! issue_count="$(jq --exit-status '.Issues | length' <<< "$linter_output")"; then
       echo "issue parsing with JQ; linter output: '$linter_output'"
       continue
     fi

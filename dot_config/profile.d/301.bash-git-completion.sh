@@ -6,7 +6,7 @@ fi
 
 # Git completion
 if test -r "$HOME/git-completion.bash"; then
-  # shellcheck disable=SC1090
+  # shellcheck disable=SC1091
   source "$HOME/git-completion.bash"
 fi
 

@@ -59,7 +59,7 @@ process_list "brew list -1 --cask" "brew.cask"
 npm_list_cmd="npm list --depth=0 --global --parseable"
 
 ### If NVM is installed, use it to iterate across all available versions
-# shellcheck disable=SC1090
+# shellcheck disable=SC1091
 if [ -s "$(brew --prefix nvm)/nvm.sh" ] && . "$(brew --prefix nvm)/nvm.sh" &> /dev/null; then
   mapfile -t nvm_versions < <(nvm ls --no-alias --no-colors | cut -c3-15 | tr -d ' ')
 
