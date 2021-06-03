@@ -6,18 +6,18 @@ if [ "$#" -ne 1 ]; then
   exit 1
 fi
 
-if ! command -v aws > /dev/null; then
-  echo "'aws' not found! Please install: https://aws.amazon.com/cli/"
+if ! command -v aws &> /dev/null; then
+  echo >&2 "'aws' not found! Please install: https://aws.amazon.com/cli/"
   exit 1
 fi
 
-if ! command -v awsume > /dev/null; then
-  echo "'awsume' not found! Please install: https://github.com/trek10inc/awsume"
+if ! command -v awsume &> /dev/null; then
+  echo >&2 "'awsume' not found! Please install: https://github.com/trek10inc/awsume"
   exit 1
 fi
 
-if ! command -v jq > /dev/null; then
-  echo "'jq' not found! Please install: https://stedolan.github.io/jq/download/"
+if ! command -v jq &> /dev/null; then
+  echo >&2 "'jq' not found! Please install: https://stedolan.github.io/jq/download/"
   exit 1
 fi
 

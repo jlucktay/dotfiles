@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if ! command -v aws > /dev/null; then
-  echo "'aws' not found! Please install: https://aws.amazon.com/cli/"
+if ! command -v aws &> /dev/null; then
+  echo >&2 "'aws' not found! Please install: https://aws.amazon.com/cli/"
   exit 1
 fi
 
-if ! command -v jq > /dev/null; then
-  echo "'jq' not found! Please install: https://stedolan.github.io/jq/download/"
+if ! command -v jq &> /dev/null; then
+  echo >&2 "'jq' not found! Please install: https://stedolan.github.io/jq/download/"
   exit 1
 fi
 

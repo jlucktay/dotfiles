@@ -11,6 +11,6 @@ if test -r "$HOME/git-completion.bash"; then
 fi
 
 # Kubernetes CLI
-if hash kubectl &> /dev/null; then
+if command -v kubectl &> /dev/null; then
   complete -F __start_kubectl k
 fi

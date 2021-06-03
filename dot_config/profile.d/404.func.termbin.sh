@@ -1,4 +1,4 @@
-if hash nc &> /dev/null; then
+if command -v nc &> /dev/null; then
   function tb() {
     echo "Sending '$*' to termbin..."
     nc termbin.com 9999 < "$*"

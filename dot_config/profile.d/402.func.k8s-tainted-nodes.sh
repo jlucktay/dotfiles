@@ -1,5 +1,5 @@
 # Kubernetes
-if hash kubectl 2> /dev/null; then
+if command -v kubectl &> /dev/null; then
   function k8sgetall() {
     for resource_type in $(kubectl api-resources --namespaced --output=name --verbs=list \
       | grep --invert-match "events" | sort --ignore-case --unique); do

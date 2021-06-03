@@ -18,7 +18,7 @@ export LESS_TERMCAP_so=$'\E[01;44;33m' # begin reverse video
 export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 
-if hash brew 2> /dev/null; then
+if command -v brew &> /dev/null; then
   lesspipe_path="$(brew --prefix)/bin/lesspipe.sh"
 
   if test -x "$lesspipe_path"; then

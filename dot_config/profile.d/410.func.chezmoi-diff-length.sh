@@ -1,4 +1,4 @@
-if hash chezmoi &> /dev/null; then
+if command -v chezmoi &> /dev/null; then
   function cdl() {
     local result
     result=$(chezmoi diff --exclude=scripts | wc -l)

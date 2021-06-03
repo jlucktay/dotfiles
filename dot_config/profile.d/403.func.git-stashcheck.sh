@@ -1,4 +1,4 @@
-if hash git &> /dev/null; then
+if command -v git &> /dev/null; then
   function stashcheck() {
     while IFS= read -d '' -r git; do
       mapfile -t stash < <(GIT_DIR="$git" git stash list)

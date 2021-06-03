@@ -1,4 +1,4 @@
-if hash git &> /dev/null; then
+if command -v git &> /dev/null; then
   function template_go() {
     local current_git_repo
     current_git_repo=$(get_git_root)

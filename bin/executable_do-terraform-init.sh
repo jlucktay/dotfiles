@@ -4,12 +4,12 @@ set -euo pipefail
 script_name=$(basename "${BASH_SOURCE[-1]}")
 
 # We might need to use JQ later; make sure it's present
-if ! command -v jq > /dev/null; then
-  echo >&2 "'jq' not found! Please install: https://stedolan.github.io/jq/download/"
+if ! command -v jq &> /dev/null; then
+  echo >&2 "$script_name: 'jq' not found! Please install: https://stedolan.github.io/jq/download/"
   exit 1
 fi
 
-if ! command -v grealpath > /dev/null; then
+if ! command -v grealpath &> /dev/null; then
   echo >&2 "$script_name: grealpath was not found; install GNU coreutils: https://formulae.brew.sh/formula/coreutils"
   exit 1
 fi

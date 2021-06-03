@@ -1,4 +1,4 @@
-if hash git &> /dev/null && hash rg &> /dev/null && hash awk &> /dev/null && hash xargs &> /dev/null; then
+if command -v git &> /dev/null && command -v rg &> /dev/null && command -v awk &> /dev/null && command -v xargs &> /dev/null; then
   function gp() {
     git_wip=$(git log --oneline origin/HEAD.. | rg '(WIP:|fixup!) ' | awk '{ print $1 }' | xargs git show)
 

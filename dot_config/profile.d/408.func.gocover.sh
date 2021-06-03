@@ -1,4 +1,4 @@
-if hash go &> /dev/null; then
+if command -v go &> /dev/null; then
   function gocover() {
     local t
     t=$(mktemp -t gocover)

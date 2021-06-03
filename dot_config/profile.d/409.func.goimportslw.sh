@@ -1,4 +1,4 @@
-if hash go &> /dev/null && hash goimports &> /dev/null; then
+if command -v go &> /dev/null && command -v goimports &> /dev/null; then
   function goimplvw() {
     local git_root
     git_root=$(get_git_root)

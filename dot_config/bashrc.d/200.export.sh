@@ -19,6 +19,6 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 export AWS_SDK_LOAD_CONFIG=true
 
 # Homebrew - show off timings
-if hash brew 2> /dev/null; then
+if command -v brew &> /dev/null; then
   export HOMEBREW_DISPLAY_INSTALL_TIMES=1
 fi

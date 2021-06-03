@@ -1,4 +1,4 @@
-if hash gdate &> /dev/null; then
+if command -v gdate &> /dev/null; then
   function gdn() {
     TZ=UTC gdate '+%Y%m%dT%H%M%SZ'
   }

@@ -6,16 +6,16 @@ script_name=$(basename "${BASH_SOURCE[-1]}")
 ### Check for presence of other tools
 
 # Azure CLI
-hash az 2> /dev/null || {
+if ! command -v az &> /dev/null; then
   echo >&2 "$script_name requires 'az' but it's not installed: https://docs.microsoft.com/cli/azure/install-azure-cli"
   exit 1
-}
+fi
 
 # JQ
-hash jq 2> /dev/null || {
+if ! command -v jq &> /dev/null; then
   echo >&2 "$script_name requires 'jq' but it's not installed: https://github.com/stedolan/jq/wiki/Installation"
   exit 1
-}
+fi
 
 ### Set up usage/help output
 function usage() {

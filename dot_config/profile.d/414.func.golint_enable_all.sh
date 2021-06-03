@@ -1,5 +1,5 @@
 # https://github.com/golangci/golangci-lint
-if hash golangci-lint &> /dev/null; then
+if command -v golangci-lint &> /dev/null; then
   function golint_enable_all() {
     local -a do_not_enable
 
