@@ -34,29 +34,3 @@ for sh_file in "${sh_files[@]}"; do
     dirty_files+=("$sh_file")
   fi
 done
-
-# https://github.com/anordal/shellharden
-shellharden_count=0
-
-for sh_file in "${sh_files[@]}"; do
-  if ! shellharden --check -- "$sh_file" &> /dev/null; then
-    already_dirty=0
-
-    for dirty_file in "${dirty_files[@]}"; do
-      if [ "$dirty_file" == "$sh_file" ]; then
-        already_dirty=1
-      fi
-    done
-
-    if ((already_dirty == 0)); then
-      ((++shellharden_count))
-      echo "Applying shellharden replacements to '$sh_file'..."
-    fi
-
-    shellharden --replace -- "$sh_file"
-  fi
-done
-
-if ((shellharden_count > 0)); then
-  exit "$shellharden_count"
-fi
