@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 # Linters called by this script are (where possible) configured to follow Google's shell style guide:
 # https://google.github.io/styleguide/shell.xml

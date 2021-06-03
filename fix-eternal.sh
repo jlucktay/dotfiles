@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 declare -A cmd_history
 

@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 if [ "$#" -ne 1 ]; then
   echo "Illegal number of parameters; please provide an AWS account name prefix, e.g.: 'cr-'"

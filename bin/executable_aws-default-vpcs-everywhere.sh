@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 if ! command -v aws > /dev/null; then
   echo "'aws' not found! Please install: https://aws.amazon.com/cli/"

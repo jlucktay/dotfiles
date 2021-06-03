@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 # aws ec2 describe-instances --filters "Name=tag:Owner,Values=james.lucktaylor"
 

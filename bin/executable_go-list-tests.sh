@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s globstar nullglob
-IFS=$'\n\t'
 
 for package in $(go list ./...); do
   test_name_pattern="^(Bench|Example|Test)"
