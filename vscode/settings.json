@@ -113,7 +113,7 @@
       "vendor": false
     },
     "ui.navigation.importShortcut": "Both",
-    "usePlaceholders": true
+    "ui.completion.usePlaceholders": true
   },
   "jupyter.askForKernelRestart": false,
   "markdown.extension.list.indentationSize": "inherit",
@@ -152,12 +152,19 @@
   ],
   "shellformat.flag": "-s -ln=bash -i=2 -bn -ci -sr",
   "shellformat.path": "/usr/local/bin/shfmt",
+  "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.defaultProfile.osx": "Bash (login)",
   "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.profiles.osx": {
+    "Bash (login)": {
+      "args": ["--login"],
+      "icon": "terminal-bash",
+      "path": "/usr/local/bin/bash"
+    }
+  },
   "terminal.integrated.scrollback": 999999,
-  "terminal.integrated.shell.osx": "/usr/local/bin/bash",
-  "terminal.integrated.shellArgs.osx": ["--login"],
   "terraform.format": {
     "ignoreExtensionsOnSave": [".tfsmurf"]
   },
