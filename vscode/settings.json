@@ -108,12 +108,13 @@
   "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
   "gopls": {
+    "build.buildFlags": ["-tags=test_stripe"],
     "formatting.gofumpt": true,
     "ui.codelenses": {
       "vendor": false
     },
-    "ui.navigation.importShortcut": "Both",
-    "ui.completion.usePlaceholders": true
+    "ui.completion.usePlaceholders": true,
+    "ui.navigation.importShortcut": "Both"
   },
   "jupyter.askForKernelRestart": false,
   "markdown.extension.list.indentationSize": "inherit",
