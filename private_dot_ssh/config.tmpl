@@ -2,7 +2,7 @@ Host tilde.club
   IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_jlucktay
   User jlucktay
 
-Host 192.168.86.181 192.168.86.121 192.168.86.122 192.168.86.123 rpi?-? rpi?-?.local pi.hole
+Host 192.168.86.181 192.168.86.121 192.168.86.122 192.168.86.123 rpi?-? rpi?-?.lan rpi?-?.local pi.hole
   IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_rpi
   User pi
 
@@ -20,7 +20,7 @@ Host danjump
 # This is the wildcard/apply-to-everything section
 Host *
   AddKeysToAgent yes
-  Cipher aes128-ctr
+  ConnectTimeout 5
   ControlMaster auto
   ControlPath {{ .chezmoi.homedir }}/.ssh/%C.sock
   ControlPersist 10m
