@@ -1,9 +1,10 @@
 # Eternal bash history
 # --------------------
-# Undocumented feature which sets the size to "unlimited".
+# Set the size to unlimited by preventing truncation.
 # http://stackoverflow.com/questions/9457233/unlimited-bash-history
-export HISTFILESIZE=
-export HISTSIZE=
+export HISTFILESIZE=-1
+export HISTSIZE=-1
+
 export HISTTIMEFORMAT="[%F %T] "
 
 # Change the file location because certain bash sessions truncate .bash_history file upon close.
@@ -17,5 +18,9 @@ export HISTFILE="$HOME"/.bash_eternal_history
 PROMPT_COMMAND+="; history -a"
 
 # https://ss64.com/bash/history.html
+## Setting the following makes Bash erase duplicate commands in your history.
 export HISTCONTROL=erasedups:ignoreboth
+
+## You definitely want to set histappend.
+## Otherwise, Bash overwrites your history when you exit.
 shopt -s histappend
