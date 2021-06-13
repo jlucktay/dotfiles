@@ -190,12 +190,9 @@
   "window.restoreWindows": "all",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "workbench.editor.decorations.colors": true,
-  "workbench.editorAssociations": [
-    {
-      "filenamePattern": "*.ipynb",
-      "viewType": "jupyter.notebook.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always",
   "yaml.customTags": ["!encrypted/pkcs1-oaep scalar", "!vault scalar"]
