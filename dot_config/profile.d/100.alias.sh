@@ -23,7 +23,7 @@ if command -v bat &> /dev/null; then
 fi
 if command -v ncdu &> /dev/null; then
   alias du="ncdu -rr -x --color dark --exclude .git --exclude node_modules"
-  alias sauron='sudo ncdu -rr -x --color dark --exclude .git --exclude node_modules /'
+  alias sauron='sudo ncdu -rr -x --color dark --exclude .git --exclude node_modules --exclude /System/Volumes/Data /'
 fi
 if command -v prettyping &> /dev/null; then
   alias ping='prettyping --nolegend'
