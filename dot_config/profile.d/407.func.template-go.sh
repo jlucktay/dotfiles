@@ -69,10 +69,9 @@ HEREDOC
     fi
 
     rsync_args+=(
-      "--exclude=.git"
-      "--exclude=LICENSE"
-      "--exclude=go.mod"
-      "--exclude=go.sum"
+      --exclude=.git
+      --exclude=go.mod
+      --exclude=go.sum
       --itemize-changes
       --recursive
       "$template_go_repo"
@@ -84,8 +83,8 @@ HEREDOC
     rsync "${rsync_args[@]}"
 
     if ((run_diff == 1)); then
-      fd --hidden --no-ignore --max-depth=1 --type=file --exclude "LICENSE" --exclude "go.mod" --exclude "go.sum" \
-        . "$template_go_repo" --exec git diff --color=always "{}" "$current_git_repo/{/}"
+      fd --hidden --no-ignore --max-depth=1 --type=file --exclude "go.mod" --exclude "go.sum" . "$template_go_repo" \
+        --exec git diff --color=always "{}" "$current_git_repo/{/}"
     fi
 
     if ((confirmed != 1)); then
