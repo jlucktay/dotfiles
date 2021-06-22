@@ -116,7 +116,6 @@
     "ui.completion.usePlaceholders": true,
     "ui.navigation.importShortcut": "Both"
   },
-  "jupyter.askForKernelRestart": false,
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.orderedList.marker": "one",
@@ -128,9 +127,7 @@
   },
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
-  "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
-  "rust.clippy_preference": "on",
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
@@ -166,15 +163,6 @@
     }
   },
   "terminal.integrated.scrollback": 999999,
-  "terraform.format": {
-    "ignoreExtensionsOnSave": [".tfsmurf"]
-  },
-  "terraform.indexing": {
-    "delay": 500,
-    "enabled": false,
-    "exclude": [".terraform/**/*", "**/.terraform/**/*"],
-    "liveIndexing": false
-  },
   "terraform.languageServer": {
     "args": ["serve"],
     "external": true
