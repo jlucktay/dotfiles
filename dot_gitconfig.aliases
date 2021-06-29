@@ -47,7 +47,7 @@ aliases = "!git config --list | grep -E '^alias.' | cut -c 7-"
 
 # Feedback magic
 entr = !cd -- ${GIT_PREFIX:-.} && git ls-files \
-  --cached --deleted --exclude-standard --modified --others -- '**/*.go' ':!vendor/**' | entr -cd
+  --cached --deleted --exclude-standard --modified --others -- '*.go' ':!vendor/**' | sort -fu | entr -c -d -r
 
 # Deletes all branches merged with specified branch (or main if no branch is specified)
 bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs git branch -d; }; f"
