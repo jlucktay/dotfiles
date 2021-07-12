@@ -13,6 +13,7 @@ googlecloudtools.cloudcode
 hashicorp.terraform
 jetmartin.bats
 matklad.rust-analyzer
+mikestead.dotenv
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python

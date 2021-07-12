@@ -89,7 +89,7 @@
   "files.trimTrailingWhitespace": true,
   "git.autoRepositoryDetection": false,
   "git.autoStash": true,
-  "git.autofetch": true,
+  "git.autofetch": "all",
   "git.autofetchPeriod": 30,
   "git.confirmSync": false,
   "git.countBadge": "off",
@@ -128,6 +128,7 @@
   },
   "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
+  "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
   "search.searchOnType": false,
   "shellcheck.customArgs": [
@@ -151,6 +152,7 @@
   ],
   "shellformat.flag": "-s -ln=bash -i=2 -bn -ci -sr",
   "shellformat.path": "/usr/local/bin/shfmt",
+  "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -168,7 +170,6 @@
     "args": ["serve"],
     "external": true
   },
-  "typescript.tsserver.log": "verbose",
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
     "vs-kubernetes.knownKubeconfigs": ["/Users/jameslucktaylor/.kube/config"],

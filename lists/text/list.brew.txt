@@ -1,3 +1,4 @@
+act
 akita-cli
 ansible
 ansible-lint
@@ -152,6 +153,7 @@ openldap
 openssl@1.1
 opus
 p11-kit
+pack
 packer
 packer-completion
 pango

@@ -12,6 +12,7 @@
 /Users/jameslucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/jameslucktaylor/git/github.com/go-task/task
 /Users/jameslucktaylor/git/github.com/golangci/golangci-lint
+/Users/jameslucktaylor/git/github.com/golangci/revgrep
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
@@ -63,6 +64,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-gateway-docker
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-helm-chart
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-infra
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-license-server-2
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-operator
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
@@ -79,8 +81,10 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/jameslucktaylor/git/go.jlucktay.dev/minikube
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
+/Users/jameslucktaylor/git/go.jlucktay.dev/recordscratch
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/go.jlucktay.dev/saw
+/Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games
 /Users/jameslucktaylor/git/go.jlucktay.dev/stack
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
