@@ -109,12 +109,14 @@
   "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
   "gopls": {
-    "build.buildFlags": ["-tags=test_stripe"],
     "formatting.gofumpt": true,
     "ui.codelenses": {
       "vendor": false
     },
     "ui.completion.usePlaceholders": true,
+    "ui.diagnostic.analyses": {
+      "fieldalignment": true
+    },
     "ui.navigation.importShortcut": "Both"
   },
   "markdown.extension.list.indentationSize": "inherit",
