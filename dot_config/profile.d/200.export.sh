@@ -63,4 +63,4 @@ unset -f prefix_path
 export GO111MODULE=on
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
-export CDPATH="."
+export CDPATH=":."
