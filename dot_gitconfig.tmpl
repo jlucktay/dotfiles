@@ -52,7 +52,7 @@
 
 [commit]
 	gpgsign = true
-	template = {{ .chezmoi.homedir }}/.gitmessage
+	template = {{ .chezmoi.homeDir }}/.gitmessage
 
 [core]
 {{- if eq .chezmoi.os "windows" }}
@@ -77,10 +77,10 @@
 	autocorrect = 30
 
 [http]
-	cookiefile = {{ .chezmoi.homedir }}/.gitcookies
+	cookiefile = {{ .chezmoi.homeDir }}/.gitcookies
 
 [include]
-	path = {{ .chezmoi.homedir }}/.gitconfig.aliases
+	path = {{ .chezmoi.homeDir }}/.gitconfig.aliases
 
 [merge]
 	tool = p4merge

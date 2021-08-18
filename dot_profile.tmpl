@@ -3,7 +3,7 @@
 # for example).
 
 # shellcheck disable=SC1090
-source {{ .chezmoi.homedir }}/.bashrc
+source {{ .chezmoi.homeDir }}/.bashrc
 
 for profile in "$HOME"/.config/profile.d/*.sh; do
   # shellcheck disable=SC1090

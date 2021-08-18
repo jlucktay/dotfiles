@@ -1,16 +1,16 @@
 Host tilde.club
-  IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_jlucktay
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa_jlucktay
   User jlucktay
 
 Host 192.168.86.181 192.168.86.121 192.168.86.122 192.168.86.123 rpi?-? rpi?-?.lan rpi?-?.local pi.hole
-  IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_rpi
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa_rpi
   User pi
 
 # This is how we configure throwaway VMs when we DGAF about what happens to them ¯\_(ツ)_/¯
 Host danjump
   CheckHostIP no
   HostName 10.19.58.64
-  IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa_jlucktayjump
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa_jlucktayjump
   StrictHostKeyChecking no
   UpdateHostKeys yes
   User jlucktay
@@ -22,7 +22,7 @@ Host *
   AddKeysToAgent yes
   ConnectTimeout 5
   ControlMaster auto
-  ControlPath {{ .chezmoi.homedir }}/.ssh/%C.sock
+  ControlPath {{ .chezmoi.homeDir }}/.ssh/%C.sock
   ControlPersist 10m
-  IdentityFile {{ .chezmoi.homedir }}/.ssh/id_rsa
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa
   UseKeychain yes
