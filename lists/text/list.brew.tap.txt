@@ -2,6 +2,7 @@ adoptopenjdk/openjdk
 akitasoftware/akita
 azure/draft
 buildpacks/tap
+cue-lang/tap
 elastic/tap
 github/gh
 go-swagger/go-swagger
@@ -17,6 +18,7 @@ hudochenkov/sshpass
 jlucktay/tap
 mongodb/brew
 rafaelgarrido/caveats
+rhysd/actionlint
 snyk/tap
 stripe/stripe-cli
 tidwall/jj

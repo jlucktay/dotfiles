@@ -1,4 +1,5 @@
 act
+actionlint
 akita-cli
 ansible
 ansible-lint
@@ -16,8 +17,10 @@ brotli
 c-ares
 cairo
 calicoctl
+chart-testing
 chezmoi
 coreutils
+cue
 cunit
 curl
 dav1d
@@ -102,14 +105,17 @@ libpng
 libpthread-stubs
 librsvg
 libsamplerate
+libslirp
 libsndfile
 libsodium
 libsoxr
+libssh
 libssh2
 libtasn1
 libtiff
 libtool
 libunistring
+libusb
 libuv
 libvidstab
 libvorbis
@@ -126,12 +132,14 @@ little-cms2
 lz4
 lzo
 m4
+macos-term-size
 make
 metricbeat-oss
 minikube
 mkcert
 mongodb-community
 mongodb-database-tools
+mongosh
 mpdecimal
 nano
 nanorc
@@ -143,6 +151,7 @@ nettle
 nghttp2
 nmap
 node
+node@14
 nvm
 oniguruma
 openapi-generator
@@ -166,6 +175,7 @@ popt
 prettyping
 python@3.8
 python@3.9
+qemu
 rav1e
 readline
 redis
@@ -202,6 +212,7 @@ tmux
 tree
 unbound
 utf8proc
+vde
 watch
 webp
 wget
