@@ -1,4 +1,4 @@
-Don't forget about `shellharden` and `elvish` and `gomod` and `make --jobs`!
+Don't forget about `shellharden` and `elvish` and `gomod`!
 
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
