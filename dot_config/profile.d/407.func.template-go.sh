@@ -78,18 +78,19 @@ HEREDOC
       "$current_git_repo"/
     )
 
-    echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
-
-    rsync "${rsync_args[@]}"
-
     if ((run_diff == 1)); then
-      fd --hidden --no-ignore --max-depth=1 --type=file --exclude "go.mod" --exclude "go.sum" . "$template_go_repo" \
-        --exec git diff --color=always "{}" "$current_git_repo/{/}"
+      fd --base-directory="$template_go_repo" --hidden --no-ignore --type=file \
+        --exclude .git --exclude "go.mod" --exclude "go.sum" . \
+        --exec git diff --color=always "{}" "$current_git_repo/{}"
     fi
 
     if ((confirmed != 1)); then
       echo
       echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed diff/rsync."
     fi
+
+    echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
+
+    rsync "${rsync_args[@]}"
   }
 fi
