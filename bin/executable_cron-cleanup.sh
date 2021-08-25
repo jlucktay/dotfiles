@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-script_name=$(basename "${BASH_SOURCE[-1]}")
-cron_log_dir="$HOME/log"
+script_name=$(basename "${BASH_SOURCE[0]}")
 
-# Check for presence of other variables/tools
+# Check for presence of required tools.
 command -v brew &> /dev/null || {
   echo >&2 "$script_name: Homebrew has not been installed: https://brew.sh"
   exit 1
@@ -20,25 +19,29 @@ test -d /usr/local/Cellar/coreutils || {
   exit 1
 }
 
-# Setup log and run cleanups
-gmkdir --parents --verbose "$cron_log_dir"
-cron_log="$cron_log_dir/cron.$(gdate '+%Y%m%d.%H%M%S.%N%z').log"
+# Setup log, and run cleanups.
+cron_log_dir="$HOME/log"
+mkdir -p "$cron_log_dir"
+cron_log="$cron_log_dir/cron.$(gdn).log"
 
 {
   echo "--- 'brew cleanup'"
   brew cleanup
 } &>> "$cron_log"
 
-{
-  echo "--- Starting Docker..."
-  open --background -a Docker
-} &>> "$cron_log"
+dsi_exit=0
+docker system info &> /dev/null || dsi_exit=$?
 
-until docker system info &> /dev/null; do
-  sleep 0.1s
-done
+if [ "$dsi_exit" -ne 0 ]; then
+  {
+    echo
+    echo "xxx Docker isn't running; can't prune."
+  } &>> "$cron_log"
+
+  exit
+fi
 
 {
-  echo "--- 'docker system prune --all --force'"
-  docker system prune --all --force
+  echo "--- 'docker system prune --force'"
+  docker system prune --force
 } &>> "$cron_log"
