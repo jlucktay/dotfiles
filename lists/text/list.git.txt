@@ -72,6 +72,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/google-code-jam
 /Users/jameslucktaylor/git/go.jlucktay.dev/goppuku
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
+/Users/jameslucktaylor/git/go.jlucktay.dev/my-github-repos
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/recordscratch
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
@@ -266,4 +267,5 @@
 /Users/jameslucktaylor/tmp/algo
 /Users/jameslucktaylor/tmp/aractl
 /Users/jameslucktaylor/tmp/docker-cache-vendor
+/Users/jameslucktaylor/tmp/golang-workbench
 /Users/jameslucktaylor/tmp/lists

@@ -5,6 +5,7 @@ anki
 countdown
 discord
 docker
+endless-sky
 epic-games
 firefox
 font-jetbrains-mono
@@ -35,3 +36,4 @@ the-unarchiver
 tyke
 visual-studio-code
 vlc
+whatsapp

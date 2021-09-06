@@ -38,6 +38,7 @@
   },
   "breadcrumbs.enabled": true,
   "cloudcode.autoDependencies": "off",
+  "devskim.enableBestPracticeRules": true,
   "docker.showStartPage": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
@@ -179,7 +180,8 @@
   },
   "window.closeWhenEmpty": true,
   "window.newWindowDimensions": "maximized",
-  "window.restoreWindows": "all",
+  "window.openWithoutArgumentsInNewWindow": "on",
+  "window.restoreWindows": "preserve",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "workbench.editor.decorations.colors": true,
   "workbench.editorAssociations": {

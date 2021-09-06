@@ -21,7 +21,6 @@ chart-testing
 chezmoi
 coreutils
 cue
-cunit
 curl
 dav1d
 dbus
@@ -29,7 +28,6 @@ dnsmasq
 docker-completion
 docker-compose-completion
 draft
-drone-cli
 elasticsearch-oss
 elvish
 entr
@@ -62,6 +60,7 @@ gnutls
 go
 go-swagger
 go@1.15
+go@1.16
 gobject-introspection
 golangci-lint
 goreleaser
@@ -98,8 +97,6 @@ libev
 libevent
 libffi
 libidn2
-libiscsi
-libmetalink
 libogg
 libpng
 libpthread-stubs
@@ -185,15 +182,15 @@ rpm2cpio
 rsync
 rtmpdump
 rubberband
-ruby
 rustup-init
 saw
 scc
 sdl2
-sdl2_image
+semgrep
 shellcheck
 shellharden
 shfmt
+six
 skaffold
 snappy
 speex
@@ -206,10 +203,12 @@ tcl-tk
 tesseract
 tfenv
 tflint
+tfsec
 theora
 tldr
 tmux
 tree
+tree-sitter
 unbound
 utf8proc
 vde
@@ -222,7 +221,6 @@ xorgproto
 xvid
 xxhash
 xz
-yajl
 yarn
 yq
 zeromq

@@ -15,10 +15,12 @@ jetmartin.bats
 matklad.rust-analyzer
 mikestead.dotenv
 ms-azuretools.vscode-docker
+MS-CST-E.vscode-devskim
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
 ms-vscode.cpptools
 ms-vsliveshare.vsliveshare
 PKief.material-icon-theme
