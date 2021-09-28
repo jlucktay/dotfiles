@@ -2,6 +2,7 @@
 budparr.language-hugo-vscode
 bungcip.better-toml
 casualjim.gotemplate
+ciarant.vscode-structurizr
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 EditorConfig.EditorConfig
@@ -15,7 +16,6 @@ jetmartin.bats
 matklad.rust-analyzer
 mikestead.dotenv
 ms-azuretools.vscode-docker
-MS-CST-E.vscode-devskim
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 ms-python.vscode-pylance

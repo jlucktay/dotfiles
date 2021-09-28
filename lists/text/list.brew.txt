@@ -24,7 +24,6 @@ cue
 curl
 dav1d
 dbus
-dnsmasq
 docker-completion
 docker-compose-completion
 draft
@@ -59,7 +58,6 @@ gnu-typist
 gnutls
 go
 go-swagger
-go@1.15
 go@1.16
 gobject-introspection
 golangci-lint
@@ -126,13 +124,13 @@ libxrender
 libyaml
 libzip
 little-cms2
+loc
 lz4
 lzo
 m4
 macos-term-size
 make
 metricbeat-oss
-minikube
 mkcert
 mongodb-community
 mongodb-database-tools
@@ -199,6 +197,7 @@ srt
 sshpass
 stack
 stripe
+structurizr-cli
 tcl-tk
 tesseract
 tfenv
