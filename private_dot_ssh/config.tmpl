@@ -24,5 +24,5 @@ Host *
   ControlMaster auto
   ControlPath {{ .chezmoi.homeDir }}/.ssh/%C.sock
   ControlPersist 10m
-  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ed25519_20211013
   UseKeychain yes
