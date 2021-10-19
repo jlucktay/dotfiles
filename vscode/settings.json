@@ -49,6 +49,7 @@
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": true,
   "editor.minimap.renderCharacters": false,
   "editor.minimap.showSlider": "always",
   "editor.multiCursorModifier": "alt",
@@ -133,6 +134,7 @@
   "prettier.printWidth": 120,
   "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
+  "rust-analyzer.checkOnSave.command": "clippy",
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
