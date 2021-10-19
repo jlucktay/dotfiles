@@ -15,6 +15,7 @@ bdw-gc
 brew-caveats
 brotli
 c-ares
+ca-certificates
 cairo
 calicoctl
 chart-testing
@@ -95,6 +96,7 @@ libev
 libevent
 libffi
 libidn2
+libnghttp2
 libogg
 libpng
 libpthread-stubs
@@ -168,6 +170,7 @@ pkg-config
 podman
 popt
 prettyping
+python@3.10
 python@3.8
 python@3.9
 qemu
