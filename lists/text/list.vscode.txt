@@ -28,7 +28,6 @@ PKief.material-icon-theme
 redhat.vscode-commons
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
-rust-lang.rust
 timonwong.shellcheck
 Tyriar.sort-lines
 WakaTime.vscode-wakatime

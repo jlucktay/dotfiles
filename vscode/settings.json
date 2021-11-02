@@ -30,6 +30,10 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
   "[proto3]": {
     "editor.defaultFormatter": "xaver.clang-format"
   },

@@ -32,6 +32,7 @@ elasticsearch-oss
 elvish
 entr
 etcd
+exercism
 fd
 ffmpeg
 filebeat-oss
@@ -78,10 +79,12 @@ hub
 hugo
 hyperfine
 icu4c
+imath
 istioctl
 jasper
 jemalloc
 jpeg
+jpeg-xl
 jq
 k9s
 kibana-oss
@@ -115,6 +118,7 @@ libunistring
 libusb
 libuv
 libvidstab
+libvmaf
 libvorbis
 libvpx
 libx11
@@ -153,10 +157,12 @@ nvm
 oniguruma
 openapi-generator
 opencore-amr
+openexr
 openjdk
 openjpeg
 openldap
 openssl@1.1
+operator-sdk
 opus
 p11-kit
 pack
@@ -214,6 +220,7 @@ tree-sitter
 unbound
 utf8proc
 vde
+vegeta
 watch
 webp
 wget
