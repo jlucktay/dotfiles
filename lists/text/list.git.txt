@@ -82,6 +82,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/saw
 /Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games
 /Users/jameslucktaylor/git/go.jlucktay.dev/stack
+/Users/jameslucktaylor/git/go.jlucktay.dev/version
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
 /Users/jameslucktaylor/go/src/cloud.google.com/go
