@@ -1,5 +1,5 @@
 # Cheat sheet
-if [[ $(hostname) =~ ^rpi[28]-[1-3]$ ]]; then
+if [[ "$(< /etc/hostname)" =~ ^rpi[28]-[1-3]$ ]]; then
   # No-op on my home Pi cluster
   :
 elif test -r "$HOME/bash-cheat-sheet.txt"; then
