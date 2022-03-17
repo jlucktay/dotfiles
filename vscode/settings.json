@@ -30,12 +30,15 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[proto3]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
   "[rust]": {
     "editor.formatOnSave": true,
     "editor.tabSize": 4
   },
-  "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+  "[terraform]": {
+    "editor.formatOnSave": true
   },
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
@@ -166,7 +169,9 @@
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.osx": "Bash (login)",
+  "terminal.integrated.enablePersistentSessions": false,
   "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.profiles.osx": {
     "Bash (login)": {
       "args": ["--login"],
@@ -175,6 +180,7 @@
     }
   },
   "terminal.integrated.scrollback": 999999,
+  "terminal.integrated.showExitAlert": false,
   "terraform.languageServer": {
     "args": ["serve"],
     "external": true
