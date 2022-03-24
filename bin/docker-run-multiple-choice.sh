@@ -64,7 +64,7 @@ for i in "$@"; do
   esac
 done
 
-if [ "$local" -eq 1 ] && [ "$remote" -eq 1 ]; then
+if [[ $local -eq 1 ]] && [[ $remote -eq 1 ]]; then
   echo "'--local' and '--remote' are mutually exclusive!"
   exit 1
 fi
@@ -72,7 +72,7 @@ fi
 # $local is default behaviour
 image="jlucktay/hello-world:local-dev"
 
-if [ "$remote" -eq 1 ]; then
+if [[ $remote -eq 1 ]]; then
   image="jlucktay/hello-world:latest"
   echo "Running image with 'latest' tag: $image"
 else
@@ -92,7 +92,7 @@ echo "Exported secret(s) to environment. (MY_SECRET)."
 ### Build arguments list for Docker
 docker_args=(run --env MY_SECRET)
 
-if [ "$interactive" -eq 1 ]; then
+if [[ $interactive -eq 1 ]]; then
   docker_args+=(--entrypoint /bin/sh --interactive --tty)
 fi
 
