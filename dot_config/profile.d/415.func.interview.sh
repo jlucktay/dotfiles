@@ -1,9 +1,12 @@
 function interview() {
+  if ! command -v gsed &> /dev/null; then
+    echo >&2 "can't find GNU sed!"
+    return 1
+  fi
+
   local stat_binary=stat
-  local tr_binary=tr
 
   if command -v gstat &> /dev/null; then stat_binary=gstat; fi
-  if command -v gtr &> /dev/null; then tr_binary=gtr; fi
 
   # Equivalent of macOS "open" for all the other modern *nixes.
   if ! command -v open &> /dev/null; then
@@ -25,10 +28,10 @@ function interview() {
 
   # Take the '$@' array of arguments, and 'tr' each arg to filter down to lowercase alphanumeric characters only.
   for arg in "$@"; do
-    local tr_alnum tr_lower
-    tr_alnum=$($tr_binary -cd "[:alnum:]" <<< "$arg")
-    tr_lower=$($tr_binary '[:upper:]' '[:lower:]' <<< "$tr_alnum")
-    filtered+=("$tr_lower")
+    local gs_alnum gs_lower
+    gs_alnum=$(gsed 's/[^[:alnum:]]//g' <<< "$arg")
+    gs_lower=$(gsed 's/[[:upper:]]/\l&/g' <<< "$gs_alnum")
+    filtered+=("$gs_lower")
   done
 
   # Set up a temporary function.
