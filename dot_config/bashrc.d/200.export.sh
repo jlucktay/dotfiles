@@ -15,6 +15,9 @@ export GPG_TTY
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
 
+# AWS CLI profile
+export AWS_PROFILE=personal
+
 # AWS SDK for Go
 export AWS_SDK_LOAD_CONFIG=true
 
