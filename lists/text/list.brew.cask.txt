@@ -19,6 +19,7 @@ keepingyouawake
 keybase
 miro-formerly-realtimeboard
 ngrok
+nordvpn
 now-tv-player
 pingmenu
 postman

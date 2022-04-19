@@ -45,6 +45,7 @@
   },
   "breadcrumbs.enabled": true,
   "cloudcode.autoDependencies": "off",
+  "cloudcode.minikubeStatusBar": false,
   "devskim.enableBestPracticeRules": true,
   "docker.showStartPage": false,
   "editor.cursorBlinking": "phase",

@@ -3,6 +3,7 @@ actionlint
 akita-cli
 ansible
 ansible-lint
+aom
 autojump
 awscli
 bandwhich
@@ -56,6 +57,7 @@ gnutls
 go
 go-swagger
 go@1.16
+go@1.17
 gobject-introspection
 golangci-lint
 goreleaser
@@ -67,6 +69,7 @@ gts
 guile
 hadolint
 harfbuzz
+haskell-stack
 helm
 hey
 htop
@@ -74,11 +77,13 @@ hub
 hugo
 hyperfine
 icu4c
+imath
 ipfs
 istioctl
 jasper
 jemalloc
 jpeg
+jpeg-xl
 jq
 k9s
 kibana-oss
@@ -86,6 +91,7 @@ kind
 kubernetes-cli
 lesspipe
 libass
+libavif
 libev
 libevent
 libffi
@@ -103,6 +109,7 @@ libtool
 libunistring
 libusb
 libuv
+libvmaf
 libx11
 libxau
 libxcb
@@ -123,6 +130,7 @@ mongodb-community
 mongodb-database-tools
 mongosh
 mpdecimal
+my-github-repos
 nano
 nanorc
 ncdu
@@ -137,6 +145,7 @@ node@14
 nvm
 oniguruma
 openapi-generator
+openexr
 openjdk
 openldap
 openssl@1.1
@@ -167,7 +176,6 @@ rtmpdump
 rustup-init
 saw
 scc
-semgrep
 shellcheck
 shellharden
 shfmt
@@ -176,7 +184,6 @@ skaffold
 snappy
 sqlite
 sshpass
-stack
 stripe
 structurizr-cli
 tcl-tk
@@ -191,12 +198,14 @@ unbound
 utf8proc
 vde
 vegeta
+viddy
 watch
 webp
 wget
 xorgproto
 xxhash
 xz
+yamale
 yarn
 yq
 zstd

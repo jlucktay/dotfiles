@@ -44,6 +44,7 @@
 /Users/jameslucktaylor/git/github.com/OpenAPITools/openapi-generator
 /Users/jameslucktaylor/git/github.com/photosol/meghna-hugo
 /Users/jameslucktaylor/git/github.com/purpleidea/mgmt
+/Users/jameslucktaylor/git/github.com/qor/qor
 /Users/jameslucktaylor/git/github.com/rancher/quickstart
 /Users/jameslucktaylor/git/github.com/simonmonk/pi_starter_kit
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
@@ -65,10 +66,13 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-infra
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-license-server-2
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-operator
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-terraform
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-terraform/modules/tyk-gateway/aws/.tfsec/downloaded-modules/module.asg
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk_quickstart
 /Users/jameslucktaylor/git/go.googlesource.com/go
 /Users/jameslucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/jameslucktaylor/git/go.jlucktay.dev/arrowverse
+/Users/jameslucktaylor/git/go.jlucktay.dev/clint
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
 /Users/jameslucktaylor/git/go.jlucktay.dev/go-pebkac
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
@@ -76,12 +80,15 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/goppuku
 /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/jameslucktaylor/git/go.jlucktay.dev/my-github-repos
+/Users/jameslucktaylor/git/go.jlucktay.dev/psychic-computing-machine
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/recordscratch
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/go.jlucktay.dev/saw
 /Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games
 /Users/jameslucktaylor/git/go.jlucktay.dev/stack
+/Users/jameslucktaylor/git/go.jlucktay.dev/terratest-tyk-aws
+/Users/jameslucktaylor/git/go.jlucktay.dev/tyk-k8s
 /Users/jameslucktaylor/git/go.jlucktay.dev/version
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/git/source.developers.google.com/katkas-website/hugo
