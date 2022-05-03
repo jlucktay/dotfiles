@@ -30,7 +30,6 @@ draft
 elasticsearch-oss
 elvish
 entr
-etcd
 exercism
 fd
 filebeat-oss
@@ -79,7 +78,6 @@ hyperfine
 icu4c
 imath
 ipfs
-istioctl
 jasper
 jemalloc
 jpeg

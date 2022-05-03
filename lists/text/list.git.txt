@@ -38,6 +38,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/zig-workbench
 /Users/jameslucktaylor/git/github.com/kljensen/golang-html5-sse-example
 /Users/jameslucktaylor/git/github.com/kubernetes/kubectl
+/Users/jameslucktaylor/git/github.com/laurent22/rsync-time-backup
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/git/github.com/Microsoft/vscode-go
 /Users/jameslucktaylor/git/github.com/natcoutts/tomtom_live_traffic_scrape
@@ -49,7 +50,6 @@
 /Users/jameslucktaylor/git/github.com/simonmonk/pi_starter_kit
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-helm-chart
-/Users/jameslucktaylor/git/github.com/TykTechnologies/ara.wiki
 /Users/jameslucktaylor/git/github.com/TykTechnologies/aractl
 /Users/jameslucktaylor/git/github.com/TykTechnologies/gromit
 /Users/jameslucktaylor/git/github.com/TykTechnologies/leakybucket
