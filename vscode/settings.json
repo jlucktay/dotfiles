@@ -110,8 +110,6 @@
   "go.alternateTools": {
     "gometalinter": "/usr/local/bin/golangci-lint"
   },
-  "go.formatFlags": ["-extra", "-s"],
-  "go.formatTool": "gofumpt",
   "go.lintTool": "golangci-lint",
   "go.testFlags": ["-count=1", "-v"],
   "go.toolsGopath": "~/vscode-go",
