@@ -1,0 +1,16 @@
+# For use with github.com/laurent22/rsync-time-backup/ e.g.:
+# $ rsync_tmbackup.sh "$HOME" "/Volumes/GoogleDrive/My Drive/rsync_tmbackup" "$HOME"/rsync_tmbackup_exclude.txt
+
+- */node_modules/
+- /.cargo/bin/
+- /.cargo/registry/cache/
+- /.cargo/registry/index/
+- /.kube/cache/
+- /.kube/http-cache/
+- /.npm/_cacache/
+- /.nvm/.cache/
+- /.rustup/toolchains/
+- /.Trash/
+- /go/pkg/
+- /Library/
+- /vscode-go/
