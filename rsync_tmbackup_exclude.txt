@@ -3,14 +3,18 @@
 
 - */node_modules/
 - /.cargo/bin/
-- /.cargo/registry/cache/
-- /.cargo/registry/index/
+- /.cargo/registry/
 - /.kube/cache/
 - /.kube/http-cache/
 - /.npm/_cacache/
 - /.nvm/.cache/
+- /.nvm/versions/
+- /.pulumi/plugins/
 - /.rustup/toolchains/
+- /.terraform.d/plugins/
 - /.Trash/
+- /.vscode/extensions/
 - /go/pkg/
 - /Library/
+- /Movies/
 - /vscode-go/
