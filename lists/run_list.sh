@@ -51,7 +51,9 @@ git_list_cmd="fd '^\.git$' \"$HOME\" \
 process_list "$git_list_cmd" "git"
 
 # Go binaries
-if [ -n ${GOPATH+x} ]; then
+if [ -z ${GOPATH+x} ]; then
+  echo "GOPATH is unset, skipping"
+else
   go_bin_list_cmd="find $GOPATH/bin -type f"
   process_list "$go_bin_list_cmd" "go.bin"
 fi
