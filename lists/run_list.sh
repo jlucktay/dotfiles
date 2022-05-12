@@ -15,6 +15,7 @@ if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.so
 fi
 
 if ! command -v realpath; then
+  # https://stackoverflow.com/a/3572105/380599
   function realpath() {
     [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
   }
