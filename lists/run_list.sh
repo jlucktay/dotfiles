@@ -51,6 +51,7 @@ git_list_cmd="fd '^\.git$' \"$HOME\" \
 process_list "$git_list_cmd" "git"
 
 # Go binaries
+# https://stackoverflow.com/a/13864829/380599
 if [ -z ${GOPATH+x} ]; then
   echo "GOPATH is unset, skipping"
 else
