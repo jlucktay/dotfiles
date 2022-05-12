@@ -11,6 +11,7 @@ firefox
 font-jetbrains-mono
 google-chrome
 google-cloud-sdk
+google-drive
 gpg-suite-no-mail
 iglance
 iterm2

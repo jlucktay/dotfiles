@@ -275,7 +275,6 @@
 /Users/jameslucktaylor/go/src/mvdan.cc/xurls
 /Users/jameslucktaylor/go/src/sigs.k8s.io/kind
 /Users/jameslucktaylor/go/src/sigs.k8s.io/yaml
-/Users/jameslucktaylor/tmp/algo
 /Users/jameslucktaylor/tmp/aractl
 /Users/jameslucktaylor/tmp/docker-cache-vendor
 /Users/jameslucktaylor/tmp/lists

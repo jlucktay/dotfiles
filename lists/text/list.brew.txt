@@ -1,8 +1,6 @@
 act
 actionlint
 akita-cli
-ansible
-ansible-lint
 aom
 autojump
 awscli
