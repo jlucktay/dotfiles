@@ -1,7 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-script_name=$(basename "${BASH_SOURCE[-1]}")
+# Bash before 4.4 (like the default one on Macs these days) doesn't have this option:
+# https://news.ycombinator.com/item?id=24738359
+shopt -s inherit_errexit 2>/dev/null || true
+
+# Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
+# https://stackoverflow.com/a/61345169/380599
+script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]}-1]}")
 
 if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')"; then
   echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
