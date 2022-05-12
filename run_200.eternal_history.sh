@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s inherit_errexit
+shopt -s inherit_errexit 2>/dev/null || true
 
 # Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
 # https://stackoverflow.com/a/61345169/380599
