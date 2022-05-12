@@ -22,7 +22,7 @@ function process_list() {
   cmd_name=$(awk '{ print $1 }' <<< "$1")
 
   if ! hash "$cmd_name" &> /dev/null; then
-    echo "${BASH_SOURCE[-1]} > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
+    echo "${BASH_SOURCE[${#BASH_SOURCE[@]}-1]} > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
     return
   fi
 
