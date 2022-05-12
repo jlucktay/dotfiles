@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
+shopt -s inherit_errexit
 
-script_name=$(basename "${BASH_SOURCE[-1]}")
+# Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
+# https://stackoverflow.com/a/61345169/380599
+script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]}-1]}")
 
 ### Check for presence of other tools
 
