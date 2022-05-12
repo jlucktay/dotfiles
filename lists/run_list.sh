@@ -14,6 +14,12 @@ if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.so
   exit 1
 fi
 
+if ! command -v realpath; then
+  function realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+  }
+fi
+
 function process_list() {
   # Parameter #1 is the command to generate the list
   # Parameter #2 is the name of the list
