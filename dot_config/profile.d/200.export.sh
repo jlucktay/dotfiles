@@ -66,3 +66,8 @@ export GO111MODULE=on
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH=":."
+
+# https://github.com/stedolan/jq/issues/1972
+if command -v jq &> /dev/null; then
+  export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
+fi
