@@ -110,7 +110,11 @@
   "go.alternateTools": {
     "gometalinter": "/usr/local/bin/golangci-lint"
   },
+  "go.editorContextMenuCommands": {
+    "fillStruct": true
+  },
   "go.lintTool": "golangci-lint",
+  "go.testExplorer.packageDisplayMode": "nested",
   "go.testFlags": ["-count=1", "-v"],
   "go.toolsGopath": "~/vscode-go",
   "go.toolsManagement.autoUpdate": true,
