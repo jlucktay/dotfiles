@@ -21,7 +21,7 @@ curl --fail --location --silent https://git.io/jlucktay-dotfiles | CHEZMOI_PURGE
 
 On macOS, after installing a modern version of Bash (probably with Homebrew) don't forget to (re)set the default shell, so that desktop/UI apps inherit all of the things from the Bash profile.
 
-First, append the path to the Homebrew-managed version of Bash to the list of available shells:
+First, append the path of the Homebrew-managed Bash binary to the list of available shells:
 
 ```
 echo /usr/local/bin/bash | sudo tee -a /etc/shells
@@ -32,3 +32,5 @@ Next, use `chsh` to set it as your new default:
 ```
 chsh -s /usr/local/bin/bash
 ```
+
+Finally, reboot, and rejoice!
