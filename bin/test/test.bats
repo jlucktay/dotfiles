@@ -20,4 +20,5 @@ teardown() {
 @test "run without arguments gives error" {
   run rsync-git-restore.sh
   assert_output 'Please provide a source directory as the first argument!'
+  assert [ "$status" -ne 0 ]
 }
