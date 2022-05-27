@@ -156,6 +156,7 @@
   "shellcheck.executablePath": "/usr/local/bin/shellcheck",
   "shellformat.effectLanguages": [
     "azcli",
+    "bats",
     "dotenv",
     "gitignore",
     "hosts",
@@ -165,7 +166,7 @@
     "shellscript",
     "spring-boot-properties"
   ],
-  "shellformat.flag": "-s -ln=bash -i=2 -bn -ci -sr",
+  "shellformat.flag": "-s -i=2 -bn -ci -sr",
   "shellformat.path": "/usr/local/bin/shfmt",
   "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
