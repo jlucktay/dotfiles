@@ -1,3 +1,5 @@
+#!/usr/bin/env bats
+
 setup() {
   load 'test_helper/bats-assert/load'
   load 'test_helper/bats-file/load'
