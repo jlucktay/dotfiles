@@ -9,9 +9,9 @@ setup() {
 
   test_temp_dir="$(temp_make)"
 
-  cp "$source_dir/../executable_rsync-git-restore.sh" "$test_temp_dir/rsync-git-restore.sh"
+  cp "$source_dir/../executable_rsync-tmbackup-git-restore.sh" "$test_temp_dir/rsync-tmbackup-git-restore.sh"
 
-  chmod u+x "$test_temp_dir/rsync-git-restore.sh"
+  chmod u+x "$test_temp_dir/rsync-tmbackup-git-restore.sh"
 
   PATH="$test_temp_dir:$PATH"
 }
@@ -21,7 +21,7 @@ teardown() {
 }
 
 @test "run without arguments gives error" {
-  run rsync-git-restore.sh
+  run rsync-tmbackup-git-restore.sh
   assert [ "$status" -ne 0 ]
   assert_output 'Please provide a source directory as the first argument!'
 }
