@@ -113,6 +113,7 @@
   "go.editorContextMenuCommands": {
     "fillStruct": true
   },
+  "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
   "go.testExplorer.packageDisplayMode": "nested",
   "go.testFlags": ["-count=1", "-v"],
@@ -129,8 +130,10 @@
     "ui.diagnostic.analyses": {
       "fieldalignment": true
     },
+    "ui.diagnostic.staticcheck": true,
     "ui.navigation.importShortcut": "Both"
   },
+  "keyboard.touchbar.ignored": ["workbench.action.debug.run", "workbench.action.debug.start"],
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
   "markdown.extension.orderedList.marker": "one",
