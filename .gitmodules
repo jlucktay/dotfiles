@@ -1,9 +1,15 @@
-[submodule "bin/test/test_helper/bats-support"]
-	path = bin/test/test_helper/bats-support
-	url = https://github.com/bats-core/bats-support.git
 [submodule "bin/test/test_helper/bats-assert"]
-	path = bin/test/test_helper/bats-assert
-	url = https://github.com/bats-core/bats-assert.git
+path = bin/test/test_helper/bats-assert
+url = https://github.com/bats-core/bats-assert.git
+
 [submodule "bin/test/test_helper/bats-file"]
-	path = bin/test/test_helper/bats-file
-	url = https://github.com/bats-core/bats-file
+path = bin/test/test_helper/bats-file
+url = https://github.com/bats-core/bats-file
+
+[submodule "test/test_helper/bats-mock"]
+path = bin/test/test_helper/bats-mock
+url = https://github.com/grayhemp/bats-mock.git
+
+[submodule "bin/test/test_helper/bats-support"]
+path = bin/test/test_helper/bats-support
+url = https://github.com/bats-core/bats-support.git
