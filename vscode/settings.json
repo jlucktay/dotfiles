@@ -149,13 +149,7 @@
   "redhat.telemetry.enabled": true,
   "rust-analyzer.checkOnSave.command": "clippy",
   "search.searchOnType": false,
-  "shellcheck.customArgs": [
-    "--enable=all",
-    "--exclude=SC2250",
-    "--external-sources",
-    "--severity=style",
-    "--shell=bash"
-  ],
+  "shellcheck.customArgs": ["--enable=all", "--external-sources", "--severity=style", "--shell=bash"],
   "shellcheck.executablePath": "/usr/local/bin/shellcheck",
   "shellformat.effectLanguages": [
     "azcli",
