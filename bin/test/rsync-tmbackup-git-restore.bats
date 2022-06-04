@@ -4,14 +4,29 @@ load "test_helper/bats-mock/load"
 load "test_helper/bats-support/load"
 
 setup() {
+  # Set up the SUT in its own per-test temporary directory
   source_dir="$(cd "$(dirname "$BATS_TEST_FILENAME")" &> /dev/null && pwd)"
-
   test_temp_dir="$(temp_make)"
-
   cp "$source_dir/../executable_rsync-tmbackup-git-restore.sh" "$test_temp_dir/rsync-tmbackup-git-restore.sh"
-
   chmod u+x "$test_temp_dir/rsync-tmbackup-git-restore.sh"
 
+  # Mock the 'find' command
+  mock_find=$(mock_create)
+
+  # Randomise the input order
+  mock_set_output "$mock_find" "$(
+    printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
+      "/home/user/git/repo-one/submodule-one/.git" \
+      "/home/user/git/repo-one/.git" \
+      "/home/user/git/repo-two/.git" \
+      "/home/user/git/repo-two/submodule/.git" \
+      "/home/user/git/repo-one/submodule-two/.git" \
+      "/home/user/git/repo-three/.git"
+  )"
+
+  ln -s "$mock_find" "$test_temp_dir/find"
+
+  # Add SUT and mock(s) to the front of PATH so they are all callable and up first
   PATH="$test_temp_dir:$PATH"
 }
 
@@ -25,13 +40,9 @@ teardown() {
   assert_output "Please provide a source directory as the first argument!"
 }
 
-@test "run with valid directory argument calls (mocked) 'find' against said directory" {
+@test "run with valid directory argument calls (mocked) 'find' once against said directory" {
   # Arrange
-  mock_find=$(mock_create)
-  mock_set_output "$mock_find" "mock find called"
-
-  ln -s "$mock_find" $BATS_RUN_TMPDIR/find
-  PATH="$BATS_RUN_TMPDIR:$PATH"
+  # handled in setup()
 
   # Act
   run rsync-tmbackup-git-restore.sh "$HOME/git"
@@ -40,4 +51,19 @@ teardown() {
   assert_equal "$status" 0
   assert_equal "$(mock_get_call_num "$mock_find")" 1
   assert_regex "$(mock_get_call_args "$mock_find")" "$HOME/git *"
+}
+
+@test "run against nested git repos only selects outermost non-submodule repos" {
+  # Arrange
+  # handled in setup()
+
+  # Act
+  run rsync-tmbackup-git-restore.sh "$HOME/git"
+
+  # Assert
+  assert_equal "$status" 0
+  assert_equal "$(echo "$output" | grep --count '^')" 3
+  assert_line --index 0 "/home/user/git/repo-one/.git"
+  assert_line --index 1 "/home/user/git/repo-three/.git"
+  assert_line --index 2 "/home/user/git/repo-two/.git"
 }
