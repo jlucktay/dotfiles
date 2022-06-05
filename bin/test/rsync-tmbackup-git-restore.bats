@@ -16,17 +16,17 @@ setup() {
   # Randomise the input order
   mock_set_output "$mock_find" "$(
     printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
-      "/home/user/git/repo-one/submodule-one/.git" \
-      "/home/user/git/repo-one/.git" \
-      "/home/user/git/repo-two/.git" \
-      "/home/user/git/repo-two/submodule/.git" \
-      "/home/user/git/repo-one/submodule-two/.git" \
-      "/home/user/git/repo-three/.git"
+      "/mnt/backup/git/host/user/repo-one/submodule-one/.git" \
+      "/mnt/backup/git/host/user/repo-one/.git" \
+      "/mnt/backup/git/host/user/repo-two/.git" \
+      "/mnt/backup/git/host/user/repo-two/submodule/.git" \
+      "/mnt/backup/git/host/user/repo-one/submodule-two/.git" \
+      "/mnt/backup/git/host/user/repo-three/.git"
   )"
 
   ln -s "$mock_find" "$test_temp_dir/find"
 
-  # Add SUT and mock(s) to the front of PATH so they are all callable and up first
+  # Add SUT and mock(s) to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
 }
 
@@ -63,7 +63,7 @@ teardown() {
   # Assert
   assert_equal "$status" 0
   assert_equal "$(echo "$output" | grep --count '^')" 3
-  assert_line --index 0 "/home/user/git/repo-one/.git"
-  assert_line --index 1 "/home/user/git/repo-three/.git"
-  assert_line --index 2 "/home/user/git/repo-two/.git"
+  assert_line --index 0 "/mnt/backup/git/host/user/repo-one/.git"
+  assert_line --index 1 "/mnt/backup/git/host/user/repo-three/.git"
+  assert_line --index 2 "/mnt/backup/git/host/user/repo-two/.git"
 }
