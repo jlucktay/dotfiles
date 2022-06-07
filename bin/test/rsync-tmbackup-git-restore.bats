@@ -10,23 +10,18 @@ setup() {
   cp "$source_dir/../executable_rsync-tmbackup-git-restore.sh" "$test_temp_dir/rsync-tmbackup-git-restore.sh"
   chmod u+x "$test_temp_dir/rsync-tmbackup-git-restore.sh"
 
-  # Mock the 'find' command
-  mock_find=$(mock_create)
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/submodule-one/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/submodule-two/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-two/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-two/submodule/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-three/.git"
 
-  # Randomise the input order
-  mock_set_output "$mock_find" "$(
-    printf "%s\n%s\n%s\n%s\n%s\n%s\n" \
-      "/mnt/backup/git/host/user/repo-one/submodule-one/.git" \
-      "/mnt/backup/git/host/user/repo-one/.git" \
-      "/mnt/backup/git/host/user/repo-two/.git" \
-      "/mnt/backup/git/host/user/repo-two/submodule/.git" \
-      "/mnt/backup/git/host/user/repo-one/submodule-two/.git" \
-      "/mnt/backup/git/host/user/repo-three/.git"
-  )"
+  # Mock the 'mkdir' command
+  mock_mkdir=$(mock_create)
+  ln -s "$mock_mkdir" "$test_temp_dir/mkdir"
 
-  ln -s "$mock_find" "$test_temp_dir/find"
-
-  # Add SUT and mock(s) to the front of PATH so they are all a) callable and b) take priority
+  # Add SUT and mocks to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
 }
 
@@ -34,36 +29,23 @@ teardown() {
   temp_del "$test_temp_dir"
 }
 
-@test "run without arguments gives error" {
+@test "run without arguments gives non-zero exit status and an error" {
   run rsync-tmbackup-git-restore.sh
   assert_not_equal "$status" 0
   assert_output "Please provide a source directory as the first argument!"
 }
 
-@test "run with valid directory argument calls (mocked) 'find' once against said directory" {
+@test "run with valid directory argument reports only outermost non-submodule repos" {
   # Arrange
   # handled in setup()
 
   # Act
-  run rsync-tmbackup-git-restore.sh "$HOME/git"
-
-  # Assert
-  assert_equal "$status" 0
-  assert_equal "$(mock_get_call_num "$mock_find")" 1
-  assert_regex "$(mock_get_call_args "$mock_find")" "$HOME/git *"
-}
-
-@test "run against nested git repos only selects outermost non-submodule repos" {
-  # Arrange
-  # handled in setup()
-
-  # Act
-  run rsync-tmbackup-git-restore.sh "$HOME/git"
+  run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
   assert_equal "$status" 0
   assert_equal "$(echo "$output" | grep --count '^')" 3
-  assert_line --index 0 "/mnt/backup/git/host/user/repo-one/.git"
-  assert_line --index 1 "/mnt/backup/git/host/user/repo-three/.git"
-  assert_line --index 2 "/mnt/backup/git/host/user/repo-two/.git"
+  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-one/.git"
+  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-two/.git"
+  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-three/.git"
 }

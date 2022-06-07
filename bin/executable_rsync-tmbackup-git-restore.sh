@@ -29,12 +29,22 @@ for ((i = 0; i < ${#sorted_repos[@]}; i++)); do
   done
 done
 
-# Compare the discovered submodules with the full list of all repos, and keep the elements that only appear in the
-# first of those two arrays, which are all of the repos that are not submodules of other repos
+# Compare the full list of all repos with the discovered submodules, and keep the elements that only appear exclusively
+# in the first of those two arrays, which are all of the repos that are not submodules of other repos
 compare_arrays=$(comm -23 <(printf '%s\n' "${sorted_repos[@]}") <(printf '%s\n' "${submodule_repos[@]}"))
 mapfile -t non_submodule_repos <<< "${compare_arrays}"
 
 for repo in "${non_submodule_repos[@]}"; do
-  # Print the non-submodule repositories that we are going to operate on
-  echo "${repo}"
+  # Print the non-submodule repository that we are going to operate on
+  echo "found backup: ${repo}"
+
+  ### TODO: subtract the base search directory from the start of each repo's location, to get the true repo name/path
+  # $ find ~/git -type d -name .git -depth 3
+  # /Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games/.git
+  # /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi/.git
+  # /Users/jameslucktaylor/git/go.jlucktay.dev/playstation-share-dedupe/.git
+  #                            ^--- this part only ------------------------^
+  target="${HOME}/git/${repo}"
+
+  mkdir -p "${target}"
 done
