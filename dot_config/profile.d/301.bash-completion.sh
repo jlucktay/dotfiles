@@ -5,9 +5,9 @@ if test -r "/usr/local/etc/profile.d/bash_completion.sh"; then
 fi
 
 # Git completion
-if test -r "$HOME/git-completion.bash"; then
+if test -r "${HOME}/git-completion.bash"; then
   # shellcheck disable=SC1091
-  source "$HOME/git-completion.bash"
+  source "${HOME}/git-completion.bash"
 fi
 
 # Kubernetes CLI
@@ -21,8 +21,13 @@ tfenv_prefix=$(brew --prefix tfenv)
 tfenv_list_exit=0
 tfenv list &> /dev/null || tfenv_list_exit=$?
 
-if [[ -d $tfenv_prefix ]] && [[ $tfenv_list_exit -eq 0 ]] && [[ -r "$tfenv_prefix"/version ]] \
+if [[ -d ${tfenv_prefix} ]] && [[ ${tfenv_list_exit} -eq 0 ]] && [[ -r "${tfenv_prefix}"/version ]] \
   && command -v terraform &> /dev/null; then
 
-  complete -C "$tfenv_prefix"/versions/"$(< "$tfenv_prefix"/version)"/terraform terraform
+  complete -C "${tfenv_prefix}"/versions/"$(< "${tfenv_prefix}"/version)"/terraform terraform
+fi
+
+# Nomad CLI
+if [[ -x /usr/local/bin/nomad ]]; then
+  complete -C /usr/local/bin/nomad nomad
 fi
