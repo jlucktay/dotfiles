@@ -10,7 +10,7 @@ function prefix_path() {
   fi
 
   # Populate array with PATH
-  IFS=':' read -ra split_path <<< "$PATH"
+  IFS=':' read -ra split_path <<< "${PATH}"
 
   # If argument already present, remove from its current index(es)
   for i in "${!split_path[@]}"; do
@@ -29,7 +29,7 @@ function prefix_path() {
   )
 
   # Export updated PATH
-  export PATH="$set_path"
+  export PATH="${set_path}"
 }
 
 # Build up PATH in last->first order, on top of existing values inherited from:
@@ -46,15 +46,15 @@ fi
 prefix_path "/usr/local/opt/curl/bin"
 prefix_path "/usr/local/opt/make/libexec/gnubin"
 prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
-prefix_path "$HOME/.cargo/bin"
-prefix_path "$HOME/bin"
+prefix_path "${HOME}/.cargo/bin"
+prefix_path "${HOME}/bin"
 
 # Keep these Go paths last, to have highest priority
 prefix_path "/usr/local/opt/go@1.17/bin" # pin to 1.17 until late 2022 when 1.19 drops, and then we will go up to 1.18
 
 if command -v go &> /dev/null; then
   tmp_gopath=$(go env GOPATH)
-  prefix_path "$tmp_gopath/bin"
+  prefix_path "${tmp_gopath}/bin"
   unset -v tmp_gopath
 fi
 
