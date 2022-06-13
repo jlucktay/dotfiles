@@ -34,7 +34,8 @@ function process_list() {
   fi
 
   # Print command and first argument
-  printf "%s: [%s] " "${script_name}" "$(gdn)"
+  current_timestamp=$(gdn)
+  printf "%s: [%s] " "${script_name}" "${current_timestamp}"
   awk '{ print $1, $2 }' <<< "$1"
 
   # If the command is 'brew' then make sure we're up to date before kicking off the lists
@@ -75,13 +76,18 @@ process_list "brew list -1 --cask" "brew.cask"
 npm_list_cmd="npm list --depth=0 --global --parseable"
 
 ### If NVM is installed, use it to iterate across all available versions
+brew_prefix_nvm=$(brew --prefix nvm)
 # shellcheck disable=SC1091
-if [[ -s "$(brew --prefix nvm)/nvm.sh" ]] && . "$(brew --prefix nvm)/nvm.sh" &> /dev/null; then
-  mapfile -t nvm_versions < <(nvm ls --no-alias --no-colors | cut -c3-15 | tr -d ' ')
+if [[ -s "${brew_prefix_nvm}/nvm.sh" ]] && . "${brew_prefix_nvm}/nvm.sh" &> /dev/null; then
+  nvm_ls=$(nvm ls --no-alias --no-colors)
+  nvm_ls_cut=$(cut -c3-15 <<< "${nvm_ls}")
+  nvm_ls_cut_tr=$(tr -d ' ' <<< "${nvm_ls_cut}")
+  mapfile -t nvm_versions <<< "${nvm_ls_cut_tr}"
 
   for nvm_version in "${nvm_versions[@]}"; do
     nvm use "${nvm_version}" &> /dev/null
-    echo "Node: ${nvm_version} / npm: $(npm --version)"
+    npm_version=$(npm --version)
+    echo "Node: ${nvm_version} / npm: ${npm_version}"
     process_list "${npm_list_cmd}" "npm.${nvm_version}"
   done
 else
