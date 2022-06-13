@@ -67,6 +67,14 @@ else
   process_list "${go_bin_list_cmd}" "go.bin"
 fi
 
+# Rust binaries
+if [[ ! -d ${HOME}/.cargo/bin ]]; then
+  echo "No '\$HOME.cargo/bin/' directory found, skipping"
+else
+  rust_bin_list_cmd="cargo install --list"
+  process_list "${rust_bin_list_cmd}" "rust.bin"
+fi
+
 # Homebrew
 process_list "brew tap" "brew.tap"
 process_list "brew list -1 --formula" "brew"
