@@ -63,9 +63,10 @@ setup() {
 
   mock_set_output "$mock_git" "$git_status_porcelain" 1
   mock_set_output "$mock_git" "$git_mod_file_1_output" 2
-  mock_set_output "$mock_git" "$git_mod_file_2_output" 3
-  mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"' 4
+  mock_set_side_effect "$mock_git" 'echo "git restore: $5"' 3
+  mock_set_output "$mock_git" "$git_mod_file_2_output" 4
   mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"' 5
+  mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"' 6
 
   # Add SUT and mocks to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
@@ -160,11 +161,11 @@ teardown() {
   # Assert
   assert_equal "$status" 0
   assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
-  assert_equal "$(mock_get_call_args "$mock_git" 4)" "-C $HOME/git/host/user/repo-2 status --porcelain"
-  assert_equal "$(mock_get_call_args "$mock_git" 5)" "-C $HOME/git/host/user/repo-3 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 5)" "-C $HOME/git/host/user/repo-2 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 6)" "-C $HOME/git/host/user/repo-3 status --porcelain"
 }
 
-@test "modified file in git repo is the only one that is diffed" {
+@test "in the git repo, the modified file with a different mode is the only one that is restored" {
   # Arrange
   # handled in setup()
 
@@ -175,6 +176,7 @@ teardown() {
   assert_equal "$status" 0
   assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
   assert_equal "$(mock_get_call_args "$mock_git" 2)" "-C $HOME/git/host/user/repo-1 diff -- modified.file"
-  assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-1 diff -- different.modified.file"
-  assert_equal "$(mock_get_call_args "$mock_git" 4)" "-C $HOME/git/host/user/repo-2 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-1 restore -- modified.file"
+  assert_equal "$(mock_get_call_args "$mock_git" 4)" "-C $HOME/git/host/user/repo-1 diff -- different.modified.file"
+  assert_equal "$(mock_get_call_args "$mock_git" 5)" "-C $HOME/git/host/user/repo-2 status --porcelain"
 }

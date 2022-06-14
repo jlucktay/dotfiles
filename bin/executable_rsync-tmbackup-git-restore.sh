@@ -63,5 +63,21 @@ for repo in "${non_submodule_repos[@]}"; do
 
     diff_file=$(git -C "${target}" diff -- "${git_file:3}")
     mapfile -t git_diff_lines <<< "${diff_file}"
+
+    # if length is 3
+    # and second line is old mode
+    # and third line is new mode
+    if [[ ${#git_diff_lines[@]} -ne 3 ]]; then
+      continue
+    fi
+
+    if [[ ${git_diff_lines[1]} != 'old mode 100755' || ${git_diff_lines[2]} != 'new mode 100644' ]]; then
+      continue
+    fi
+
+    echo "git -C \"${target}\" restore -- \"${git_file:3}\""
+    git -C "${target}" restore -- "${git_file:3}"
   done
+
+  echo
 done
