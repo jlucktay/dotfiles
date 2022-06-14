@@ -1,42 +1,42 @@
 #!/usr/bin/env bash
 set -euo pipefail
-shopt -s inherit_errexit 2>/dev/null || true
+shopt -s inherit_errexit 2> /dev/null || true
 
 # Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
 # https://stackoverflow.com/a/61345169/380599
-script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]}-1]}")
+script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
 
 ### Check for presence of other tools
 
 # chezmoi
 if ! command -v chezmoi &> /dev/null; then
-  echo >&2 "$script_name: 'chezmoi' is required but it's not installed:
+  echo >&2 "${script_name}: 'chezmoi' is required but it's not installed:
   https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md"
   exit 1
 fi
 
 # JQ
 if ! command -v jq &> /dev/null; then
-  echo >&2 "$script_name: 'jq' is required but it's not installed:
+  echo >&2 "${script_name}: 'jq' is required but it's not installed:
   https://github.com/stedolan/jq/wiki/Installation"
   exit 1
 fi
 
 # zip
 if ! command -v zip &> /dev/null; then
-  echo >&2 "$script_name: 'zip' is required but it's not installed"
+  echo >&2 "${script_name}: 'zip' is required but it's not installed"
   exit 1
 fi
 
 chezmoi_data=$(chezmoi data)
 
-if ! zip_destination="$(jq --exit-status --raw-output '.chezmoi.sourceDir' <<< "$chezmoi_data")"; then
-  echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
+if ! zip_destination="$(jq --exit-status --raw-output '.chezmoi.sourceDir' <<< "${chezmoi_data}")"; then
+  echo "${script_name}: couldn't fetch source directory from 'chezmoi data'"
   exit 1
 fi
 
-if ! zip_secret="$(jq --exit-status --raw-output '.bash_eternal_history.zip_secret' <<< "$chezmoi_data")"; then
-  echo "$script_name: couldn't fetch zip secret from 'chezmoi data'; aborting"
+if ! zip_secret="$(jq --exit-status --raw-output '.bash_eternal_history.zip_secret' <<< "${chezmoi_data}")"; then
+  echo "${script_name}: couldn't fetch zip secret from 'chezmoi data'; aborting"
   exit 0
 fi
 
@@ -56,4 +56,4 @@ fi
 #   -P pswd   use standard encryption, password is pswd
 
 #   zip options archive_name file file ...
-zip -u -j -v -o -9 -P "$zip_secret" "$zip_destination/bash_eternal_history.zip" "$HOME/.bash_eternal_history"
+zip -u -j -v -o -9 -P "${zip_secret}" "${zip_destination}/bash_eternal_history.zip" "${HOME}/.bash_eternal_history"
