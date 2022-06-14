@@ -48,4 +48,7 @@ for repo in "${non_submodule_repos[@]}"; do
     echo -n "create: "
     mkdir -pv "${target}"
   fi
+
+  rsync --chmod=Fuga-x --human-readable --itemize-changes --progress --recursive --stats --verbose \
+    "${repo%%"/.git"}/" "${target}"
 done

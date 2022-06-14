@@ -23,6 +23,11 @@ setup() {
   ln -s "$mock_mkdir" "$test_temp_dir/mkdir"
   mock_set_side_effect "$mock_mkdir" 'echo $2'
 
+  # Mock the 'rsync' command
+  mock_rsync=$(mock_create)
+  ln -s "$mock_rsync" "$test_temp_dir/rsync"
+  mock_set_side_effect "$mock_rsync" 'echo "rsync:  $8 $9"'
+
   # Add SUT and mocks to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
 }
@@ -69,4 +74,39 @@ teardown() {
   assert_output --partial "create: $HOME/git/host/user/repo-1"
   assert_output --partial "create: $HOME/git/host/user/repo-2"
   assert_output --partial "create: $HOME/git/host/user/repo-3"
+}
+
+@test "rsync from source to target" {
+  # Arrange
+  # handled in setup()
+
+  # Act
+  run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
+
+  # Assert
+  assert_equal "$status" 0
+  assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
+  assert_equal "$(mock_get_call_num "$mock_rsync")" 3
+  assert_regex "$(mock_get_call_args "$mock_rsync" 1)" \
+    "^.* $test_temp_dir/mnt/backup/git/host/user/repo-1/ $HOME/git/host/user/repo-1$"
+  assert_regex "$(mock_get_call_args "$mock_rsync" 2)" \
+    "^.* $test_temp_dir/mnt/backup/git/host/user/repo-2/ $HOME/git/host/user/repo-2$"
+  assert_regex "$(mock_get_call_args "$mock_rsync" 3)" \
+    "^.* $test_temp_dir/mnt/backup/git/host/user/repo-3/ $HOME/git/host/user/repo-3$"
+  assert_output --partial "rsync:  $test_temp_dir/mnt/backup/git/host/user/repo-1/ $HOME/git/host/user/repo-1"
+  assert_output --partial "rsync:  $test_temp_dir/mnt/backup/git/host/user/repo-2/ $HOME/git/host/user/repo-2"
+  assert_output --partial "rsync:  $test_temp_dir/mnt/backup/git/host/user/repo-3/ $HOME/git/host/user/repo-3"
+}
+
+@test "rsync flags" {
+  # Arrange
+  # handled in setup()
+
+  # Act
+  run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
+
+  # Assert
+  assert_equal "$status" 0
+  assert_regex "$(mock_get_call_args "$mock_rsync")" \
+    "^--chmod=Fuga-x --human-readable --itemize-changes --progress --recursive --stats --verbose .*$"
 }
