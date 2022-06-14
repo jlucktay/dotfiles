@@ -51,4 +51,7 @@ for repo in "${non_submodule_repos[@]}"; do
 
   rsync --chmod=Fuga-x --human-readable --itemize-changes --progress --recursive --stats --verbose \
     "${repo%%"/.git"}/" "${target}"
+
+  status_porcelain=$(git -C "${target}" status --porcelain)
+  mapfile -t git_files <<< "${status_porcelain}"
 done
