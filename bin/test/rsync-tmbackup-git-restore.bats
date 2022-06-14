@@ -31,7 +31,25 @@ setup() {
   # Mock the 'git' command
   mock_git=$(mock_create)
   ln -s "$mock_git" "$test_temp_dir/git"
-  mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"'
+
+  git_status_porcelain=$(
+    printf "%s\n%s\n" \
+      "?? new.file" \
+      " M modified.file" \
+      "?? another.new.file"
+  )
+
+  git_mod_file_output=$(
+    printf "%s\n%s\n%s\n" \
+      "diff --git a/modified.file b/modified.file" \
+      "old mode 100755" \
+      "new mode 100644"
+  )
+
+  mock_set_output "$mock_git" "$git_status_porcelain" 1
+  mock_set_output "$mock_git" "$git_mod_file_output" 2
+  mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"' 3
+  mock_set_side_effect "$mock_git" 'echo "git:  $8 $9"' 4
 
   # Add SUT and mocks to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
@@ -126,6 +144,20 @@ teardown() {
   # Assert
   assert_equal "$status" 0
   assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
-  assert_equal "$(mock_get_call_args "$mock_git" 2)" "-C $HOME/git/host/user/repo-2 status --porcelain"
-  assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-3 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-2 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 4)" "-C $HOME/git/host/user/repo-3 status --porcelain"
+}
+
+@test "modified file in git repo is the only one that is diffed" {
+  # Arrange
+  # handled in setup()
+
+  # Act
+  run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
+
+  # Assert
+  assert_equal "$status" 0
+  assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
+  assert_equal "$(mock_get_call_args "$mock_git" 2)" "-C $HOME/git/host/user/repo-1 diff -- modified.file"
+  assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-2 status --porcelain"
 }

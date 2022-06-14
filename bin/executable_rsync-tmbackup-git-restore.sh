@@ -54,4 +54,14 @@ for repo in "${non_submodule_repos[@]}"; do
 
   status_porcelain=$(git -C "${target}" status --porcelain)
   mapfile -t git_files <<< "${status_porcelain}"
+
+  # if second character is 'M' drill down, otherwise continue to next file
+  for git_file in "${git_files[@]}"; do
+    if [[ ${git_file:1:1} != "M" ]]; then
+      continue
+    fi
+
+    diff_file=$(git -C "${target}" diff -- "${git_file:3}")
+    mapfile -t git_diff_lines <<< "${diff_file}"
+  done
 done
