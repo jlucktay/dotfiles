@@ -36,15 +36,16 @@ mapfile -t non_submodule_repos <<< "${compare_arrays}"
 
 for repo in "${non_submodule_repos[@]}"; do
   # Print the non-submodule repository that we are going to operate on
-  echo "found backup: ${repo}"
+  echo "found:  ${repo}"
 
-  ### TODO: subtract the base search directory from the start of each repo's location, to get the true repo name/path
-  # $ find ~/git -type d -name .git -depth 3
-  # /Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games/.git
-  # /Users/jameslucktaylor/git/go.jlucktay.dev/hello-pulumi/.git
-  # /Users/jameslucktaylor/git/go.jlucktay.dev/playstation-share-dedupe/.git
-  #                            ^--- this part only ------------------------^
-  target="${HOME}/git/${repo}"
+  # Subtract the base search directory from the start of each repo's location, to get the true repo name/path
+  trimmed_repo=${repo##"${source}/"}
+  trimmed_repo=${trimmed_repo%%"/.git"}
+  target="${HOME}/git/${trimmed_repo}"
 
-  mkdir -p "${target}"
+  if [[ ! -d ${target} ]]; then
+    # Print the target directory for this repository
+    echo -n "create: "
+    mkdir -pv "${target}"
+  fi
 done

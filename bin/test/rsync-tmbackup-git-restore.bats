@@ -10,16 +10,18 @@ setup() {
   cp "$source_dir/../executable_rsync-tmbackup-git-restore.sh" "$test_temp_dir/rsync-tmbackup-git-restore.sh"
   chmod u+x "$test_temp_dir/rsync-tmbackup-git-restore.sh"
 
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/.git"
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/submodule-one/.git"
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-one/submodule-two/.git"
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-two/.git"
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-two/submodule/.git"
-  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-three/.git"
+  # Create some directories before we mock out 'mkdir'
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-1/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-1/submodule-one/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-1/submodule-two/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-2/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-2/submodule/.git"
+  mkdir -p "$test_temp_dir/mnt/backup/git/host/user/repo-3/.git"
 
   # Mock the 'mkdir' command
   mock_mkdir=$(mock_create)
   ln -s "$mock_mkdir" "$test_temp_dir/mkdir"
+  mock_set_side_effect "$mock_mkdir" 'echo $2'
 
   # Add SUT and mocks to the front of PATH so they are all a) callable and b) take priority
   PATH="$test_temp_dir:$PATH"
@@ -44,8 +46,27 @@ teardown() {
 
   # Assert
   assert_equal "$status" 0
-  assert_equal "$(echo "$output" | grep --count '^')" 3
-  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-one/.git"
-  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-two/.git"
-  assert_output --partial "found backup: $test_temp_dir/mnt/backup/git/host/user/repo-three/.git"
+  assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
+  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-1/.git"
+  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-2/.git"
+  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-3/.git"
+}
+
+@test "run creates necessary target directories" {
+  # Arrange
+  # handled in setup()
+
+  # Act
+  run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
+
+  # Assert
+  assert_equal "$status" 0
+  assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
+  assert_equal "$(mock_get_call_num "$mock_mkdir")" 3
+  assert_equal "$(mock_get_call_args "$mock_mkdir" 1)" "-pv $HOME/git/host/user/repo-1"
+  assert_equal "$(mock_get_call_args "$mock_mkdir" 2)" "-pv $HOME/git/host/user/repo-2"
+  assert_equal "$(mock_get_call_args "$mock_mkdir" 3)" "-pv $HOME/git/host/user/repo-3"
+  assert_output --partial "create: $HOME/git/host/user/repo-1"
+  assert_output --partial "create: $HOME/git/host/user/repo-2"
+  assert_output --partial "create: $HOME/git/host/user/repo-3"
 }
