@@ -133,6 +133,7 @@
     "ui.diagnostic.staticcheck": true,
     "ui.navigation.importShortcut": "Both"
   },
+  "hadolint.cliOptions": ["--no-color"],
   "keyboard.touchbar.ignored": ["workbench.action.debug.run", "workbench.action.debug.start"],
   "markdown.extension.list.indentationSize": "inherit",
   "markdown.extension.orderedList.autoRenumber": false,
@@ -163,7 +164,7 @@
     "shellscript",
     "spring-boot-properties"
   ],
-  "shellformat.flag": "-s -i=2 -bn -ci -sr",
+  "shellformat.flag": "--binary-next-line --case-indent --indent 2 --simplify --space-redirects",
   "shellformat.path": "/usr/local/bin/shfmt",
   "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
