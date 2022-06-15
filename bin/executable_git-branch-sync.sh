@@ -14,7 +14,8 @@ colours_reset="$(tput sgr0)"
 
 git fetch --all
 
-mapfile -t branches < <(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-)
+git_for_each_ref=$(git for-each-ref --format='%(refname)' refs/heads/ | cut -d"/" -f3-)
+mapfile -t branches <<< "$git_for_each_ref"
 
 for branch in "${branches[@]}"; do
   echo "Start  - $colours_highlight$branch$colours_reset"

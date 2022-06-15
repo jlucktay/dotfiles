@@ -14,7 +14,7 @@ chezmoi_args=(
   --force
 )
 
-if [ "${CHEZMOI_PURGE:-0}" == 1 ]; then
+if [[ ${CHEZMOI_PURGE:-0} == 1 ]]; then
   chezmoi_args+=(--purge)
 fi
 

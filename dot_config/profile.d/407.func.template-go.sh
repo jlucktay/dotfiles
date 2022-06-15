@@ -4,12 +4,12 @@ if command -v git &> /dev/null; then
     current_git_repo=$(get_git_root)
     local template_go_repo="$HOME/git/github.com/jlucktay/template-go/"
 
-    if [ -z "$current_git_repo" ]; then
+    if [[ $current_git_repo == "" ]]; then
       echo "${FUNCNAME[0]}: the current working directory is not inside a git repository"
       return 1
     fi
 
-    if [ ! -d "$template_go_repo" ]; then
+    if [[ ! -d $template_go_repo ]]; then
       echo "${FUNCNAME[0]}: the 'template-go' repo has not been checked out to '$template_go_repo'; remedying..."
       gmkdir --parents --verbose "$template_go_repo"
       git clone https://github.com/jlucktay/template-go.git "$template_go_repo"

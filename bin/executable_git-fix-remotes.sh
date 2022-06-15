@@ -8,7 +8,8 @@ colours_highlight="$(
 )"
 colours_reset="$(tput sgr0)"
 
-mapfile -t remote_lines < <(git remote -v 2> /dev/null)
+git_remotes=$(git remote -v 2> /dev/null)
+mapfile -t remote_lines <<< "$git_remotes"
 if [[ ${#remote_lines[@]} -eq 0 ]]; then
   exit 0
 fi

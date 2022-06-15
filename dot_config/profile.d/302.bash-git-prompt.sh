@@ -5,7 +5,7 @@ if ! test -f "$HOME/posh-git-prompt.sh"; then
   return 0
 fi
 
-# shellcheck disable=SC1090
+# shellcheck disable=SC1091
 source "$HOME/posh-git-prompt.sh"
 
 # Thanks to:
@@ -31,12 +31,12 @@ __prompt_command() {
 
   # Git status
   pge=$(__posh_git_echo)
-  if [ -n "$pge" ]; then
+  if [[ $pge != "" ]]; then
     PS1+=" $pge"
   fi
 
   # Optional exit code
-  if [ "$last_exit_code" -eq 0 ]; then
+  if [[ $last_exit_code -eq 0 ]]; then
     PS1+=" ✅"
   else
     PS1+=" ❌ $IRed$last_exit_code$Reset"

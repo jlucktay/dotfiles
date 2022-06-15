@@ -20,7 +20,7 @@ function interview() {
   # Stat the '_template.txt' file first, to make sure we can duplicate it later if necessary.
   template_file=$HOME/Documents/Notes/Candidates/_template.txt
 
-  if ! $stat_binary "$template_file" &> /dev/null; then
+  if ! "$stat_binary" "$template_file" &> /dev/null; then
     return 1
   fi
 
@@ -49,7 +49,7 @@ function interview() {
   unset join_by
 
   # Stat the target filename;  if it does not exist, use 'touch' to create.
-  if ! $stat_binary "$target_filename" &> /dev/null; then
+  if ! "$stat_binary" "$target_filename" &> /dev/null; then
     cp "$template_file" "$target_filename"
   fi
 

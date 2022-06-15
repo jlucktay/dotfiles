@@ -6,4 +6,4 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")" &> /dev/n
 bats \
   --jobs 8 \
   --print-output-on-failure \
-  "${script_dir}"
+  "$script_dir"

@@ -3,5 +3,11 @@
 #   Example: mans mplayer codec
 #   --------------------------------------------------------------------
 function mans() {
-  man "$1" | grep -iC2 "$2" | less
+  local man_output
+  man_output=$(man "$1")
+
+  local grep_output
+  grep_output=$(grep -iC2 "$2" <<< "$man_output")
+
+  less <<< "$grep_output"
 }

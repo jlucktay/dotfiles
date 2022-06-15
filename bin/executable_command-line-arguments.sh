@@ -31,8 +31,9 @@ echo "File extension                             = $extension"
 echo "Search path                                = $search_path"
 echo "Library path                               = $lib_path"
 echo "Default                                    = $default"
-echo "Number files in SEARCH PATH with extension = \
-$(find "$search_path/" -maxdepth 1 -iname "*.$extension" -not -type d | wc -l | xargs)"
+
+number_files=$(find "$search_path/" -maxdepth 1 -iname "*.$extension" -not -type d | wc -l | xargs)
+echo "Number files in SEARCH PATH with extension = $number_files"
 
 if [[ -n $1 ]]; then
   echo

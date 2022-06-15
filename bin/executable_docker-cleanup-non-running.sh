@@ -4,13 +4,15 @@
 
 set -euo pipefail
 
-mapfile -t images < <(docker images --no-trunc --quiet)
+docker_images=$(docker images --no-trunc --quiet)
+mapfile -t images <<< "$docker_images"
 
-for container in $(docker ps --all --quiet); do
+dps_all=$(docker ps --all --quiet)
+while IFS= read -r container; do
   image=$(docker inspect --format '{{.Image}}' "$container")
   images=("${images[@]/$image/}") # subtract container's image from array
-done
+done <<< "$dps_all"
 
-if [ ${#images[@]} -ge 1 ] && [ ${#images[0]} -gt 0 ]; then
+if [[ ${#images[@]} -ge 1 ]] && [[ ${#images[0]} -gt 0 ]]; then
   docker rmi --force "${images[@]}"
 fi

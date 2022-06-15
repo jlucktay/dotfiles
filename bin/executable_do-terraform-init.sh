@@ -18,36 +18,36 @@ fi
 top_level="$(grealpath .)"
 top_level_before="$top_level"
 
-while [ ! -d "$top_level/.git" ]; do
+while [[ ! -d "$top_level/.git" ]]; do
   top_level="$(grealpath "$top_level/..")"
 
-  if [ "$top_level" = "/" ]; then
+  if [[ $top_level == "/" ]]; then
     echo "Root hit, returning!"
     exit 2
   fi
 done
 
-if [ "$top_level_before" = "$top_level" ]; then
+if [[ $top_level_before == "$top_level" ]]; then
   echo "You're already at the top level of the repo!"
   exit 3
 fi
 
 top_level="$top_level/"
 key_base="$(gpwd)"
-key_base="${key_base#$top_level}"
+key_base="${key_base#"$top_level"}"
 desired_state_key="$(echo "$key_base/terraform.tfstate" | tr '[:upper:]' '[:lower:]')"
 
 # Before initialising anything else, we need to check for (and possibly remove) an existing Terraform directory
 current_state_key=""
 
 # TODO: update to handle GCP backend, in addition to AWS
-if [ -d ".terraform" ]; then
-  if [ -f ".terraform/terraform.tfstate" ]; then
+if [[ -d ".terraform" ]]; then
+  if [[ -f ".terraform/terraform.tfstate" ]]; then
     current_state_key="$(jq -r '.backend.config.key' .terraform/terraform.tfstate)"
   fi
 
   # Only remove if the current initialised state doesn't line up
-  if [ "$desired_state_key" != "$current_state_key" ] && [ "$current_state_key" != "" ]; then
+  if [[ $desired_state_key != "$current_state_key" ]] && [[ $current_state_key != "" ]]; then
     find .terraform -type d -not -path .terraform -not -iname "plugins" -exec rm -rfv -- {} +
     rm -fv .terraform/terraform.tfstate
   fi

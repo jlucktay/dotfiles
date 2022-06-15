@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ "$#" -ne 1 ]; then
+if [[ $# -ne 1 ]]; then
   echo "Illegal number of parameters; please provide an AWS account name prefix, e.g.: 'cr-'"
   exit 1
 fi
@@ -23,13 +23,16 @@ fi
 
 echo "Account,Region,EC2Count"
 
-mapfile -t awsume_output < <(awsume --list | grep "^$1")
+awsume_list=$(awsume --list | grep "^$1")
+mapfile -t awsume_output <<< "$awsume_list"
 
 for ao_line in "${awsume_output[@]}"; do
   IFS=$' \t' read -ra account_line <<< "$ao_line"
-  eval "$(awsume -s "${account_line[0]}" 2> /dev/null)"
+  awsume_s_cmd=$(awsume -s "${account_line[0]}" 2> /dev/null)
+  eval "$awsume_s_cmd"
 
-  mapfile -t aws_regions < <(awsregions)
+  awsregions_output=$(awsregions)
+  mapfile -t aws_regions <<< "$awsregions_output"
 
   for region in "${aws_regions[@]}"; do
     jq_result="$(aws ec2 describe-instances --region "$region" --filter "Name=instance-state-name,Values=running" \

@@ -32,7 +32,7 @@ cron_log="$cron_log_dir/cron.$(gdn).log"
 dsi_exit=0
 docker system info &> /dev/null || dsi_exit=$?
 
-if [ "$dsi_exit" -ne 0 ]; then
+if [[ $dsi_exit -ne 0 ]]; then
   {
     echo
     echo "xxx Docker isn't running; can't prune."

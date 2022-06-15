@@ -12,7 +12,8 @@ while IFS= read -r line; do
 done < eternal.main.txt
 
 # https://www.reddit.com/r/bash/comments/5wma5k/is_there_a_way_to_sort_an_associative_array_by/debbjsp/
-mapfile -d '' sorted_keys < <(printf '%s\0' "${!cmd_history[@]}" | sort -z)
+tmp_sorted_keys=$(printf '%s\0' "${!cmd_history[@]}" | sort -z)
+mapfile -d '' sorted_keys <<< "$tmp_sorted_keys"
 
 output_file=bash_eternal_history.$(gdate '+%Y%m%d.%H%M%S.%N%z')
 

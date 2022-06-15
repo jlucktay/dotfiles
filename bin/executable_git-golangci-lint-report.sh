@@ -6,7 +6,7 @@ first_commit_hash=$(git rev-list --max-parents=0 HEAD | tail -n 1)
 
 declare -i slices=50
 
-if [ $# -gt 0 ]; then
+if [[ $# -gt 0 ]]; then
   re='^[0-9]+$'
 
   if [[ $1 =~ $re ]]; then
@@ -36,7 +36,7 @@ while ((slices-- > 0)); do
     : # no-op to dodge 141 exit status
   fi
 
-  if [ -z "$check_this_out" ]; then
+  if [[ $check_this_out == "" ]]; then
     check_this_out=$(git rev-parse master)
   fi
 

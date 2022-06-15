@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-mapfile -t projects < <(gcloud projects list --format=json | jq -r '.[].projectId')
+gcloud_projects_list=$(gcloud projects list --format=json | jq -r '.[].projectId')
+mapfile -t projects <<< "$gcloud_projects_list"
 
 for project in "${projects[@]}"; do
-  mapfile -t buckets < <(gsutil ls -p "$project")
+  gsutil_ls=$(gsutil ls -p "$project")
+  mapfile -t buckets <<< "$gsutil_ls"
 
   if [[ ${#buckets[@]} -eq 0 ]]; then
     echo "Project '$project' has no storage buckets."

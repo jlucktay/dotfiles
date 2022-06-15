@@ -8,7 +8,7 @@ if ! command -v go; then
   exit 1
 fi
 
-for package in $(go list ./...); do
+go list ./... | while IFS= read -r package; do
   test_name_pattern="^(Bench|Example|Test)"
   go_test_output=$(go test -list="$test_name_pattern" "$package")
 

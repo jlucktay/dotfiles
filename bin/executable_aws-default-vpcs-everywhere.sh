@@ -11,7 +11,8 @@ if ! command -v jq &> /dev/null; then
   exit 1
 fi
 
-mapfile -t aws_regions < <(awsregions)
+tmp_aws_regions=$(awsregions)
+mapfile -t aws_regions <<< "$tmp_aws_regions"
 
 for region in "${aws_regions[@]}"; do
   echo -n "Region: $region... "

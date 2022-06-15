@@ -1,7 +1,13 @@
 export NVM_DIR="$HOME/.nvm"
 
-# This loads nvm
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+# This loads nvm, if nvm is installed.
+if [[ -s "/usr/local/opt/nvm/nvm.sh" ]]; then
+  # shellcheck source=/dev/null
+  source "/usr/local/opt/nvm/nvm.sh"
+fi
 
-# This loads nvm bash_completion
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+# This loads nvm bash_completion, if nvm is installed.
+if [[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ]]; then
+  # shellcheck source=/dev/null
+  source "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+fi
