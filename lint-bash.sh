@@ -9,13 +9,13 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[-1]}")" &> /dev/null && pwd)"
 
 # When calling 'find', some scripts that aren't mine are excluded.
 find_scripts=$(
-  find -x "${script_dir}" -type f -iname "*sh" \
+  find -x "$script_dir" -type f -iname "*sh" \
     -not -name "git-completion.bash" \
     -not -name "posh-git-prompt.sh" \
     -not -path "*/.git/*"
 )
 
-mapfile -t script_files <<< "${find_scripts}"
+mapfile -t script_files <<< "$find_scripts"
 
 # Roll up flags for 'shfmt', as there are quite a few.
 shfmt_flags=(
@@ -29,11 +29,12 @@ shfmt_flags=(
 
 for script_file in "${script_files[@]}"; do
   # https://github.com/mvdan/sh
-  shfmt "${shfmt_flags[@]}" -- "${script_file}"
+  shfmt "${shfmt_flags[@]}" -- "$script_file"
 
   # https://github.com/anordal/shellharden
-  shellharden --check --replace -- "${script_file}"
+  shellharden --check --replace -- "$script_file"
 
   # https://github.com/koalaman/shellcheck
-  shellcheck --enable=all --external-sources --severity=style --shell=bash -- "${script_file}"
+  # Awaiting https://github.com/anordal/shellharden/issues/43 to stop excluding SC2250 as they conflict.
+  shellcheck --enable=all --external-sources --severity=style --shell=bash --exclude=SC2250 -- "$script_file"
 done
