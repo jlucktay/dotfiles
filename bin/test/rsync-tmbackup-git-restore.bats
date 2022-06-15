@@ -78,7 +78,7 @@ teardown() {
 
 @test "run without arguments gives non-zero exit status and an error" {
   run rsync-tmbackup-git-restore.sh
-  assert_not_equal "$status" 0
+  assert_failure
   assert_output "Please provide a source directory as the first argument!"
 }
 
@@ -90,7 +90,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
   assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-1/.git"
   assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-2/.git"
@@ -105,7 +105,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
   assert_equal "$(mock_get_call_num "$mock_mkdir")" 3
   assert_equal "$(mock_get_call_args "$mock_mkdir" 1)" "-pv $HOME/git/host/user/repo-1"
@@ -124,7 +124,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
   assert_equal "$(mock_get_call_num "$mock_rsync")" 3
   assert_regex "$(mock_get_call_args "$mock_rsync" 1)" \
@@ -146,7 +146,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert_regex "$(mock_get_call_args "$mock_rsync")" \
     "^--chmod=Fuga-x --human-readable --itemize-changes --progress --recursive --stats --verbose .*$"
 }
@@ -159,7 +159,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
   assert_equal "$(mock_get_call_args "$mock_git" 5)" "-C $HOME/git/host/user/repo-2 status --porcelain"
   assert_equal "$(mock_get_call_args "$mock_git" 6)" "-C $HOME/git/host/user/repo-3 status --porcelain"
@@ -173,7 +173,7 @@ teardown() {
   run rsync-tmbackup-git-restore.sh "$test_temp_dir/mnt/backup/git"
 
   # Assert
-  assert_equal "$status" 0
+  assert_success
   assert_equal "$(mock_get_call_args "$mock_git" 1)" "-C $HOME/git/host/user/repo-1 status --porcelain"
   assert_equal "$(mock_get_call_args "$mock_git" 2)" "-C $HOME/git/host/user/repo-1 diff -- modified.file"
   assert_equal "$(mock_get_call_args "$mock_git" 3)" "-C $HOME/git/host/user/repo-1 restore -- modified.file"
