@@ -29,8 +29,5 @@ if command -v tfenv &> /dev/null && command -v keybase &> /dev/null; then
     # Close down Keybase.
     keybase ctl wait
     keybase ctl app-exit
-
-    # Install the upgraded Terraform version's shell completions.
-    terraform --install-autocomplete
   }
 fi
