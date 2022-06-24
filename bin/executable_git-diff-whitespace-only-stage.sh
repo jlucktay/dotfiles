@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-git_diff=$(git diff --name-only --relative)
-
-while read -r diff_file; do
+git diff --name-only --relative | while read -r diff_file; do
   if stat "$diff_file" &> /dev/null; then
     diff_without_whitespace=$(
       git diff \
@@ -19,4 +17,4 @@ while read -r diff_file; do
   else
     git rm "$diff_file"
   fi
-done <<< "$git_diff"
+done

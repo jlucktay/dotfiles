@@ -1,34 +1,36 @@
-function tfenv_upgrade() {
-  # Look up the latest Terraform version that matches the non-alpha/beta semver pattern on L5.
-  local tfenv_list grep_list sort_list latest_tf_ver
-  tfenv_list="$(tfenv list-remote)"
-  grep_list="$(grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' <<< "$tfenv_list")"
-  sort_list="$(gsort --version-sort <<< "$grep_list")"
-  latest_tf_ver="$(tail -n 1 <<< "$sort_list")"
+if command -v tfenv &> /dev/null && command -v keybase &> /dev/null; then
+  function tfenv_upgrade() {
+    local -
+    set -o pipefail
 
-  # Start getting Keybase up and running.
-  # It will verify the Terraform download later.
-  keybase ctl start &> /dev/null &
+    # Look up the latest Terraform version that matches the non-alpha/beta semver pattern on L5.
+    local latest_tf_ver
+    latest_tf_ver="$(tfenv list-remote | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | gsort --version-sort | tail -n 1)"
 
-  # Uninstall the current Terraform version, if one is currently installed.
-  # Note that every time tfenv itself is upgraded to a new version, it loses any installed Terraform version(s).
-  local tfenv_current
-  if tfenv_current="$(tfenv version-name)"; then
-    tfenv uninstall "$tfenv_current"
-  fi
+    # Start getting Keybase up and running.
+    # It will verify the Terraform download later.
+    keybase ctl start &> /dev/null &
 
-  # Make sure Keybase is ready to verify the Terraform install.
-  sleep 3
-  keybase ctl wait
+    # Uninstall the current Terraform version, if one is currently installed.
+    # Note that every time tfenv itself is upgraded to a new version, it loses any installed Terraform version(s).
+    local tfenv_current
+    if tfenv_current="$(tfenv version-name)"; then
+      tfenv uninstall "$tfenv_current"
+    fi
 
-  # Install the latest Terraform version we looked up earlier.
-  tfenv install "$latest_tf_ver"
-  tfenv use "$latest_tf_ver"
+    # Make sure Keybase is ready to verify the Terraform install.
+    sleep 3
+    keybase ctl wait
 
-  # Close down Keybase.
-  keybase ctl wait
-  keybase ctl app-exit
+    # Install the latest Terraform version we looked up earlier.
+    tfenv install "$latest_tf_ver"
+    tfenv use "$latest_tf_ver"
 
-  # Install the upgraded Terraform version's shell completions.
-  terraform --install-autocomplete
-}
+    # Close down Keybase.
+    keybase ctl wait
+    keybase ctl app-exit
+
+    # Install the upgraded Terraform version's shell completions.
+    terraform --install-autocomplete
+  }
+fi

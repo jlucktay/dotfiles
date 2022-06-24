@@ -1,16 +1,10 @@
-if command -v git &> /dev/null && command -v rg &> /dev/null && command -v awk &> /dev/null && command -v xargs &> /dev/null; then
+if command -v git &> /dev/null && command -v rg &> /dev/null && command -v awk &> /dev/null \
+  && command -v xargs &> /dev/null; then
   function gp() {
-    local git_log_oneline
-    git_log_oneline=$(git log --oneline origin/HEAD..)
+    local -
+    set -o pipefail
 
-    local rg_wip
-    rg_wip=$(rg '(WIP:|fixup!) ' <<< "$git_log_oneline")
-
-    local awk_output
-    awk_output=$(awk '{ print $1 }' <<< "$rg_wip")
-
-    local git_wip
-    git_wip=$(xargs git show <<< "$awk_output")
+    git_wip=$(git log --oneline origin/HEAD.. | rg '(WIP:|fixup!) ' | awk '{ print $1 }' | xargs git show)
 
     if [[ $git_wip != "" ]]; then
       echo "WIP!"

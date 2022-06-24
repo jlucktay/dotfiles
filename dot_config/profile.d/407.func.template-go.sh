@@ -1,7 +1,7 @@
 if command -v git &> /dev/null; then
   function template_go() {
     local current_git_repo
-    current_git_repo=$(get_git_root)
+    current_git_repo=$(git rev-parse --show-toplevel)
     local template_go_repo="$HOME/git/github.com/jlucktay/template-go/"
 
     if [[ $current_git_repo == "" ]]; then

@@ -1,9 +1,9 @@
 if command -v git &> /dev/null; then
   function stashcheck() {
-    local git_dirs
-    git_dirs=$(find "$HOME/go/src" "$HOME/git" -type d -name ".git" -print0)
+    local -
+    set -o pipefail
 
-    while IFS= read -d '' -r git; do
+    find "$HOME/git" -type d -name ".git" -print0 | while IFS= read -d '' -r git; do
       git_stash_list=$(GIT_DIR="$git" git stash list)
       mapfile -t stash <<< "$git_stash_list"
 
@@ -13,6 +13,6 @@ if command -v git &> /dev/null; then
       for stash_line in "${stash[@]}"; do
         printf "\t%s\n" "$stash_line"
       done
-    done <<< "$git_dirs"
+    done
   }
 fi

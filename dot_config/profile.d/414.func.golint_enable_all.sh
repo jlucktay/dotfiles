@@ -1,6 +1,9 @@
 # https://github.com/golangci/golangci-lint
 if command -v golangci-lint &> /dev/null; then
   function golint_enable_all() {
+    local -
+    set -o pipefail
+
     local -a do_not_enable
 
     for arg in "$@"; do
@@ -11,21 +14,18 @@ if command -v golangci-lint &> /dev/null; then
     done
 
     local golangci_lint_linters
-    golangci_lint_linters=$(golangci-lint linters)
+    golangci_lint_linters=$(golangci-lint linters \
+      | awk '$0 ~ /:/ && $1 !~ /^((En|Dis)abled)$/ { gsub(/:/, "", $1); print $1 }')
 
-    local awk_output
-    awk_output=$(awk '$0 ~ /:/ && $1 !~ /^((En|Dis)abled)$/ { gsub(/:/, "", $1); print $1 }' \
-      <<< "$golangci_lint_linters")
-
-    local -a enable
+    local -a enable_linter
 
     while IFS=$'\n' read -r linter; do
       if [[ ! " ${do_not_enable[*]} " =~ \ $linter\  ]]; then
-        enable+=("$linter")
+        enable_linter+=("$linter")
       fi
-    done <<< "$awk_output"
+    done <<< "$golangci_lint_linters"
 
-    IFS=',' linters_joined="${enable[*]}"
+    IFS=',' linters_joined="${enable_linter[*]}"
 
     golangci-lint run --disable-all --enable="$linters_joined" "$@"
   }

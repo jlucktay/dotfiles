@@ -1,10 +1,10 @@
 if command -v chezmoi &> /dev/null; then
   function cdl() {
-    local chezmoi_diff
-    chezmoi_diff=$(chezmoi diff --exclude=scripts)
+    local -
+    set -o pipefail
 
     local wc_output
-    wc_output=$(wc -l <<< "$chezmoi_diff")
+    wc_output=$(chezmoi diff --exclude=scripts | wc -l)
 
     if [[ $wc_output -gt 255 ]]; then
       wc_output=255
