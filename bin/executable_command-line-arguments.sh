@@ -2,6 +2,8 @@
 set -euo pipefail
 
 default=NO
+extension=txt
+search_path=.
 
 for i in "$@"; do
   case $i in
@@ -11,10 +13,6 @@ for i in "$@"; do
       ;;
     -s=* | --searchpath=*)
       search_path="${i#*=}"
-      shift # past argument=value
-      ;;
-    -l=* | --lib=*)
-      lib_path="${i#*=}"
       shift # past argument=value
       ;;
     --default)
@@ -29,13 +27,12 @@ done
 
 echo "File extension                             = $extension"
 echo "Search path                                = $search_path"
-echo "Library path                               = $lib_path"
 echo "Default                                    = $default"
 
 number_files=$(find "$search_path/" -maxdepth 1 -iname "*.$extension" -not -type d | wc -l | xargs)
 echo "Number files in SEARCH PATH with extension = $number_files"
 
-if [[ -n $1 ]]; then
+if [[ -n ${1:-} ]]; then
   echo
   echo "Last line of file specified as non-opt/last argument:"
   tail -1 "$1"
