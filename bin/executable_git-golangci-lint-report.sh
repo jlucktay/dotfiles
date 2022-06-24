@@ -15,7 +15,7 @@ if [[ $# -gt 0 ]]; then
 fi
 
 declare -i commit_count
-commit_count=$(git rev-list --count "$first_commit_hash"...master)
+commit_count=$(git rev-list --count "$first_commit_hash"...HEAD)
 
 echo "commit_count: '$commit_count'"
 echo "slices: '$slices'"
@@ -32,12 +32,12 @@ while ((slices-- > 0)); do
 
   repo_commits=$((commit_count - rewind_count))
 
-  if ! check_this_out="$(git rev-list "$first_commit_hash"..master | tail -n "$rewind_count" | head -n 1)"; then
+  if ! check_this_out="$(git rev-list "$first_commit_hash"..HEAD | tail -n "$rewind_count" | head -n 1)"; then
     : # no-op to dodge 141 exit status
   fi
 
   if [[ $check_this_out == "" ]]; then
-    check_this_out=$(git rev-parse master)
+    check_this_out=$(git rev-parse HEAD)
   fi
 
   git checkout "$check_this_out" &> /dev/null
