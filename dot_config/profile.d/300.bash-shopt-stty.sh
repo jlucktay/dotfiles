@@ -10,8 +10,3 @@ stty -ixon -ixoff
 
 ### Perform history expansion on the current line and insert a space
 bind 'Space: magic-space'
-
-### Replaces the word to be completed with a single match from the list of possible completions.
-### Repeated execution of menu-complete steps through the list of possible completions, inserting each match in turn.
-bind 'TAB: menu-complete'
-bind '"\e[Z": menu-complete-backward'
