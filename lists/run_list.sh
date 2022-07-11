@@ -14,7 +14,7 @@ if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.so
   exit 1
 fi
 
-if ! command -v realpath; then
+if ! hash realpath &> /dev/null; then
   # https://stackoverflow.com/a/3572105/380599
   function realpath() {
     [[ $1 == /* ]] && echo "$1" || echo "$PWD/${1#./}"
@@ -61,7 +61,7 @@ process_list "$git_list_cmd" "git"
 # Go binaries
 # https://stackoverflow.com/a/13864829/380599
 if [[ -z ${GOPATH+x} ]]; then
-  echo "GOPATH is unset, skipping"
+  echo "$script_name: GOPATH is unset, skipping"
 else
   go_bin_list_cmd="find $GOPATH/bin -type f"
   process_list "$go_bin_list_cmd" "go.bin"
@@ -69,7 +69,7 @@ fi
 
 # Rust binaries
 if [[ ! -d $HOME/.cargo/bin ]]; then
-  echo "No '\$HOME.cargo/bin/' directory found, skipping"
+  echo "$script_name: No '\$HOME.cargo/bin/' directory found, skipping"
 else
   rust_bin_list_cmd="cargo install --list"
   process_list "$rust_bin_list_cmd" "rust.bin"
@@ -83,23 +83,26 @@ process_list "brew list -1 --cask" "brew.cask"
 # NPM
 npm_list_cmd="npm list --depth=0 --global --parseable"
 
-### If NVM is installed, use it to iterate across all available versions
-brew_prefix_nvm=$(brew --prefix nvm)
-# shellcheck disable=SC1091
-if [[ -s "$brew_prefix_nvm/nvm.sh" ]] && . "$brew_prefix_nvm/nvm.sh" &> /dev/null; then
-  nvm_ls=$(nvm ls --no-alias --no-colors)
-  nvm_ls_cut=$(cut -c3-15 <<< "$nvm_ls")
-  nvm_ls_cut_tr=$(tr -d ' ' <<< "$nvm_ls_cut")
-  mapfile -t nvm_versions <<< "$nvm_ls_cut_tr"
+### If NVM is installed (via Homebrew) use it to iterate across all available versions
+if hash brew &> /dev/null; then
+  brew_prefix_nvm=$(brew --prefix nvm)
 
-  for nvm_version in "${nvm_versions[@]}"; do
-    nvm use "$nvm_version" &> /dev/null
-    npm_version=$(npm --version)
-    echo "Node: $nvm_version / npm: $npm_version"
-    process_list "$npm_list_cmd" "npm.$nvm_version"
-  done
-else
-  process_list "$npm_list_cmd" "npm"
+  # shellcheck disable=SC1091
+  if [[ -s "$brew_prefix_nvm/nvm.sh" ]] && . "$brew_prefix_nvm/nvm.sh" &> /dev/null; then
+    nvm_ls=$(nvm ls --no-alias --no-colors)
+    nvm_ls_cut=$(cut -c3-15 <<< "$nvm_ls")
+    nvm_ls_cut_tr=$(tr -d ' ' <<< "$nvm_ls_cut")
+    mapfile -t nvm_versions <<< "$nvm_ls_cut_tr"
+
+    for nvm_version in "${nvm_versions[@]}"; do
+      nvm use "$nvm_version" &> /dev/null
+      npm_version=$(npm --version)
+      echo "Node: $nvm_version / npm: $npm_version"
+      process_list "$npm_list_cmd" "npm.$nvm_version"
+    done
+  else
+    process_list "$npm_list_cmd" "npm"
+  fi
 fi
 
 # VSCode extensions
