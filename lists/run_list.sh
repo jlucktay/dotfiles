@@ -61,7 +61,7 @@ process_list "$git_list_cmd" "git"
 # Go binaries
 # https://stackoverflow.com/a/13864829/380599
 if [[ -z ${GOPATH+x} ]]; then
-  echo "$script_name: GOPATH is unset, skipping"
+  echo "$script_name: GOPATH is unset; skipping"
 else
   go_bin_list_cmd="find $GOPATH/bin -type f"
   process_list "$go_bin_list_cmd" "go.bin"
@@ -69,7 +69,7 @@ fi
 
 # Rust binaries
 if [[ ! -d $HOME/.cargo/bin ]]; then
-  echo "$script_name: No '\$HOME.cargo/bin/' directory found, skipping"
+  echo "$script_name: No '\$HOME.cargo/bin/' directory found; skipping"
 else
   rust_bin_list_cmd="cargo install --list"
   process_list "$rust_bin_list_cmd" "rust.bin"
@@ -84,7 +84,9 @@ process_list "brew list -1 --cask" "brew.cask"
 npm_list_cmd="npm list --depth=0 --global --parseable"
 
 ### If NVM is installed (via Homebrew) use it to iterate across all available versions
-if hash brew &> /dev/null; then
+if ! hash brew &> /dev/null; then
+  echo "$script_name: No Homebrew means no NVM; skipping"
+else
   brew_prefix_nvm=$(brew --prefix nvm)
 
   # shellcheck disable=SC1091
