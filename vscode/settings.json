@@ -43,7 +43,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "breadcrumbs.enabled": true,
   "cloudcode.autoDependencies": "off",
   "cloudcode.minikubeStatusBar": false,
   "devskim.enableBestPracticeRules": true,
@@ -200,6 +199,7 @@
     "vs-kubernetes.kubeconfig": "/Users/jameslucktaylor/.kube/config"
   },
   "window.closeWhenEmpty": true,
+  "window.commandCenter": true,
   "window.newWindowDimensions": "maximized",
   "window.openWithoutArgumentsInNewWindow": "on",
   "window.restoreWindows": "preserve",
