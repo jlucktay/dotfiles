@@ -34,7 +34,7 @@ function process_list() {
   fi
 
   # Print command and first argument
-  current_timestamp=$(gdn)
+  current_timestamp=$(TZ=UTC date '+%Y%m%dT%H%M%SZ')
   printf "%s: [%s] " "$script_name" "$current_timestamp"
   awk '{ print $1, $2 }' <<< "$1"
 
