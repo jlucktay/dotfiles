@@ -72,6 +72,8 @@ HEREDOC
       --exclude=.git
       --exclude=go.mod
       --exclude=go.sum
+      --exclude=out
+      --exclude=tmp
       --itemize-changes
       --recursive
       "$template_go_repo"
@@ -80,7 +82,7 @@ HEREDOC
 
     if ((run_diff == 1)); then
       fd --base-directory="$template_go_repo" --hidden --no-ignore --type=file \
-        --exclude .git --exclude "go.mod" --exclude "go.sum" . \
+        --exclude .git --exclude "go.mod" --exclude "go.sum" --exclude=out --exclude=tmp . \
         --exec git diff --color=always "{}" "$current_git_repo/{}"
     fi
 
