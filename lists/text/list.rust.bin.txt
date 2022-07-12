@@ -1,0 +1,2 @@
+    czkawka_cli
+czkawka_cli v4.1.0 (/Users/jameslucktaylor/git/github.com/qarmin/czkawka/czkawka_cli):
