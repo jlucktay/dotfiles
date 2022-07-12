@@ -61,7 +61,13 @@ process_list "$git_list_cmd" "git"
 # Go binaries
 # https://stackoverflow.com/a/13864829/380599
 if [[ -z ${GOPATH+x} ]]; then
-  echo "$script_name: GOPATH is unset; skipping"
+  if command -v go &> /dev/null; then
+    tmp_gopath=$(go env GOPATH)
+    export GOPATH="$tmp_gopath"
+    unset -v tmp_gopath
+  else
+    echo "$script_name: GOPATH is unset, and Go is not installed; skipping"
+  fi
 else
   go_bin_list_cmd="find $GOPATH/bin -type f"
   process_list "$go_bin_list_cmd" "go.bin"
