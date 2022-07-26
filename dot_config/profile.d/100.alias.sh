@@ -21,6 +21,12 @@ fi
 if command -v bat &> /dev/null; then
   alias cat=bat
 fi
+
+# The Debian package for 'bat' has a clash so it names the same binary 'batcat'.
+if command -v batcat &> /dev/null; then
+  alias cat=batcat
+fi
+
 if command -v ncdu &> /dev/null; then
   alias du="ncdu -rr -x --color dark --exclude .git --exclude node_modules"
   alias sauron='sudo ncdu -rr -x --color dark --exclude .git --exclude node_modules --exclude /System/Volumes/Data /'
