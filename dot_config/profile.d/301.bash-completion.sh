@@ -33,3 +33,8 @@ fi
 if [[ -x /usr/local/bin/nomad ]]; then
   complete -C /usr/local/bin/nomad nomad
 fi
+
+# SeaweedFS
+if [[ -x /usr/local/bin/weed ]]; then
+  complete -C /usr/local/bin/weed weed
+fi
