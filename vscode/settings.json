@@ -43,6 +43,7 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
+  "ansible.executionEnvironment.pull.policy": "always",
   "cloudcode.autoDependencies": "off",
   "cloudcode.minikubeStatusBar": false,
   "devskim.enableBestPracticeRules": true,
