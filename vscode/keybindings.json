@@ -1,10 +1,6 @@
 // Place your key bindings in this file to override the defaults
 [
   {
-    "command": "workbench.action.terminal.focusNext",
-    "key": "ctrl+alt+cmd+j"
-  },
-  {
     "command": "workbench.action.terminal.focusPrevious",
     "key": "ctrl+alt+cmd+k"
   },
@@ -21,5 +17,22 @@
   {
     "command": "workbench.action.tasks.test",
     "key": "ctrl+alt+t"
+  },
+  {
+    "key": "ctrl+alt+cmd+j",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.terminal.focusNext",
+    "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
+  },
+  {
+    "key": "shift+cmd+]",
+    "command": "-workbench.action.nextEditor"
   }
 ]

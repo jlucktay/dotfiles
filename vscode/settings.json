@@ -31,11 +31,11 @@
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
   "[proto3]": {
-    "editor.defaultFormatter": "xaver.clang-format"
+    "editor.defaultFormatter": "zxh404.vscode-proto3"
   },
   "[rust]": {
     "editor.formatOnSave": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 2
   },
   "[terraform]": {
     "editor.formatOnSave": true
@@ -150,6 +150,19 @@
   "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
   "rust-analyzer.checkOnSave.command": "clippy",
+  "rust-analyzer.checkOnSave.extraArgs": [
+    "--",
+    "--warn",
+    "clippy::pedantic",
+    "--warn",
+    "clippy::nursery",
+    "--warn",
+    "clippy::unwrap_used",
+    "--warn",
+    "clippy::expect_used",
+    "--forbid",
+    "unsafe_code"
+  ],
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
@@ -207,7 +220,7 @@
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
   "workbench.editor.decorations.colors": true,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter.notebook.ipynb"
+    "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.renderIndentGuides": "always",
