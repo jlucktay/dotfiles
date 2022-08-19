@@ -4,7 +4,9 @@ if command -v git &> /dev/null && command -v rg &> /dev/null && command -v awk &
     local -
     set -o pipefail
 
-    git_wip=$(git log --oneline origin/HEAD.. | rg '(WIP:|fixup!) ' | awk '{ print $1 }' | xargs git show)
+    if ! git_wip=$(git log --oneline origin/HEAD.. | rg '(WIP:|fixup!) ' | awk '{ print $1 }' | xargs git show); then
+      return
+    fi
 
     if [[ $git_wip != "" ]]; then
       echo "WIP!"
