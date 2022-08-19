@@ -1,10 +1,16 @@
 /Users/jameslucktaylor/.cargo/registry/index/github.com-1ecc6299db9ec823
 /Users/jameslucktaylor/.local/share/chezmoi
+/Users/jameslucktaylor/git/github.com/carbon-language/carbon-lang
+/Users/jameslucktaylor/git/github.com/chrislusf/seaweedfs
+/Users/jameslucktaylor/git/github.com/chrislusf/seaweedfs.wiki
 /Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
+/Users/jameslucktaylor/git/github.com/dtolnay/syn
 /Users/jameslucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/jameslucktaylor/git/github.com/golangci/golangci-lint
 /Users/jameslucktaylor/git/github.com/grpc/grpc-go
 /Users/jameslucktaylor/git/github.com/hashicorp/packer
+/Users/jameslucktaylor/git/github.com/hashicorp/terraform-provider-aws
+/Users/jameslucktaylor/git/github.com/helm/helm
 /Users/jameslucktaylor/git/github.com/jensneuse/graphql-go-tools
 /Users/jameslucktaylor/git/github.com/jhead/phantom
 /Users/jameslucktaylor/git/github.com/jlucktay/ansible-workbench
@@ -18,6 +24,7 @@
 /Users/jameslucktaylor/git/github.com/jlucktay/keysocket
 /Users/jameslucktaylor/git/github.com/jlucktay/kubernetes-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/meta-tf
+/Users/jameslucktaylor/git/github.com/jlucktay/newrustacean.com
 /Users/jameslucktaylor/git/github.com/jlucktay/packer-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/ruby-workbench
 /Users/jameslucktaylor/git/github.com/jlucktay/rust-workbench
@@ -31,6 +38,7 @@
 /Users/jameslucktaylor/git/github.com/laurent22/rsync-time-backup
 /Users/jameslucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/jameslucktaylor/git/github.com/qarmin/czkawka
+/Users/jameslucktaylor/git/github.com/rust-random/rand
 /Users/jameslucktaylor/git/github.com/tyklabs/tyk-pro
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-docs
 /Users/jameslucktaylor/git/github.com/TykTechnologies/ara-helm-chart
@@ -38,6 +46,7 @@
 /Users/jameslucktaylor/git/github.com/TykTechnologies/codecraft-day3-evilfizzbuzz
 /Users/jameslucktaylor/git/github.com/TykTechnologies/mserv
 /Users/jameslucktaylor/git/github.com/TykTechnologies/packagecloud-analytics
+/Users/jameslucktaylor/git/github.com/TykTechnologies/tf-aws-vpc
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-account-manager
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-analytics
 /Users/jameslucktaylor/git/github.com/TykTechnologies/tyk-cloud
@@ -59,6 +68,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/codecraft-tdd-property-viewer
 /Users/jameslucktaylor/git/go.jlucktay.dev/codecraft-tdd-rover
 /Users/jameslucktaylor/git/go.jlucktay.dev/codecraft-tdd-warehouse
+/Users/jameslucktaylor/git/go.jlucktay.dev/exporter-exercise
 /Users/jameslucktaylor/git/go.jlucktay.dev/FactoCord-3.0
 /Users/jameslucktaylor/git/go.jlucktay.dev/go-pebkac
 /Users/jameslucktaylor/git/go.jlucktay.dev/golang-workbench
@@ -69,6 +79,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/playstation-share-dedupe
 /Users/jameslucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/jameslucktaylor/git/go.jlucktay.dev/recordscratch
+/Users/jameslucktaylor/git/go.jlucktay.dev/redis_exporter
 /Users/jameslucktaylor/git/go.jlucktay.dev/rest-api
 /Users/jameslucktaylor/git/go.jlucktay.dev/saw
 /Users/jameslucktaylor/git/go.jlucktay.dev/servers.menagerie.games
@@ -78,6 +89,7 @@
 /Users/jameslucktaylor/git/go.jlucktay.dev/version
 /Users/jameslucktaylor/git/go.jlucktay.dev/zxcvbn-go
 /Users/jameslucktaylor/tmp/basic-caching-redis-demo-go-lang
+/Users/jameslucktaylor/tmp/exporter-exercise
 /Users/jameslucktaylor/tmp/fuzz
 /Users/jameslucktaylor/tmp/kafka
 /Users/jameslucktaylor/tmp/redis

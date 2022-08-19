@@ -1,7 +1,13 @@
+akitasoftware/akita
+ankitpokhrel/jira-cli
+goreleaser/tap
 hashicorp/tap
 homebrew/bundle
 homebrew/cask
 homebrew/cask-fonts
 homebrew/core
+homebrew/services
 mongodb/brew
+rafaelgarrido/caveats
 teamookla/speedtest
+virtuslab/git-machete

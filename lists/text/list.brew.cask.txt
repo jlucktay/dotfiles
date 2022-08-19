@@ -4,6 +4,7 @@ alacritty
 anki
 discord
 docker
+firefox
 font-jetbrains-mono
 google-cloud-sdk
 gpg-suite-no-mail
@@ -12,6 +13,8 @@ itsycal
 keepingyouawake
 keybase
 nordvpn
+now-tv-player
+obsidian
 pingmenu
 raspberry-pi-imager
 rectangle

@@ -1,3 +1,4 @@
+akita-cli
 ansible
 ansible-lint
 aom
@@ -7,7 +8,9 @@ bash
 bash-completion@2
 bat
 bats-core
+bazelisk
 binutils
+brew-caveats
 brotli
 c-ares
 ca-certificates
@@ -29,6 +32,7 @@ gh
 giflib
 git
 git-lfs
+git-machete
 glib
 gmp
 gnu-sed
@@ -36,6 +40,7 @@ go
 go@1.17
 gobject-introspection
 golangci-lint
+goreleaser
 graphite2
 graphviz
 grep
@@ -48,10 +53,14 @@ hyperfine
 icu4c
 imath
 jasper
+jira-cli
 jpeg
+jpeg-turbo
 jpeg-xl
 jq
+k9s
 kind
+kubernetes-cli
 lefthook
 libavif
 libffi
@@ -73,9 +82,12 @@ libxext
 libxrender
 libyaml
 libzip
+llvm
 lzo
 m4
+mage
 make
+mkcert
 mongodb-community-shell
 mongodb-database-tools
 mpdecimal
@@ -86,6 +98,8 @@ netpbm
 node
 node@16
 nomad
+nspr
+nss
 oniguruma
 openexr
 openssl@1.1
@@ -106,10 +120,13 @@ readline
 redis
 ripgrep
 rustup-init
+seaweedfs
 shellcheck
 shellharden
 shfmt
 six
+skaffold
+sops
 speedtest
 sqlite
 tfenv

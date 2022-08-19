@@ -4,6 +4,8 @@ esbenp.prettier-vscode
 exiasr.hadolint
 foxundermoon.shell-format
 golang.go
+googlecloudtools.cloudcode
+hangxingliu.vscode-systemd-support
 hashicorp.hcl
 hashicorp.terraform
 jetmartin.bats
@@ -20,6 +22,8 @@ redhat.ansible
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
+serayuzgur.crates
+tamasfe.even-better-toml
 timonwong.shellcheck
 Tyriar.sort-lines
 WakaTime.vscode-wakatime
