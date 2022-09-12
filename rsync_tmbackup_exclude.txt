@@ -4,6 +4,7 @@
 # $ "$HOME"/git/github.com/laurent22/rsync-time-backup/rsync_tmbackup.sh --rsync-append-flags "--no-devices --no-specials" "$HOME" "/Volumes/Sgte-ExFAT/rsync_tmbackup" "$HOME"/rsync_tmbackup_exclude.txt
 
 - */node_modules/
+- /.cache/carbon-lang-build-cache/
 - /.cargo/bin/
 - /.cargo/registry/
 - /.kube/cache/
