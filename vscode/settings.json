@@ -206,10 +206,7 @@
   },
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.showExitAlert": false,
-  "terraform.languageServer": {
-    "args": ["serve"],
-    "external": true
-  },
+  "terraform.languageServer.enable": true,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
     "vs-kubernetes.knownKubeconfigs": ["/Users/jameslucktaylor/.kube/config"],
