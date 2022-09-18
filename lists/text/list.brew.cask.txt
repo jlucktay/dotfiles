@@ -4,9 +4,11 @@ alacritty
 anki
 discord
 docker
+epic-games
 firefox
 font-jetbrains-mono
 google-cloud-sdk
+google-drive
 gpg-suite-no-mail
 iglance
 itsycal
@@ -18,7 +20,6 @@ obsidian
 pingmenu
 raspberry-pi-imager
 rectangle
-slack
 steam
 the-unarchiver
 tyke

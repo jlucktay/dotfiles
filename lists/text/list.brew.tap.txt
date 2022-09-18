@@ -1,5 +1,6 @@
 akitasoftware/akita
 ankitpokhrel/jira-cli
+charmbracelet/tap
 goreleaser/tap
 hashicorp/tap
 homebrew/bundle

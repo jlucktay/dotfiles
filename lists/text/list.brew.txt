@@ -15,6 +15,7 @@ brotli
 c-ares
 ca-certificates
 cairo
+charm
 chezmoi
 coreutils
 exercism
@@ -34,8 +35,10 @@ git
 git-lfs
 git-machete
 glib
+glow
 gmp
 gnu-sed
+gnuplot
 go
 go@1.17
 gobject-introspection
@@ -63,6 +66,7 @@ kind
 kubernetes-cli
 lefthook
 libavif
+libcerf
 libffi
 libidn2
 libnghttp2
@@ -83,6 +87,7 @@ libxrender
 libyaml
 libzip
 llvm
+lua
 lzo
 m4
 mage
@@ -116,6 +121,8 @@ protoc-gen-go
 protoc-gen-go-grpc
 python@3.10
 python@3.9
+pyyaml
+qt@5
 readline
 redis
 ripgrep
@@ -126,6 +133,7 @@ shellharden
 shfmt
 six
 skaffold
+skate
 sops
 speedtest
 sqlite

@@ -23,6 +23,7 @@ redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
 serayuzgur.crates
+stkb.rewrap
 tamasfe.even-better-toml
 timonwong.shellcheck
 Tyriar.sort-lines
