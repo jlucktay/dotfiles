@@ -71,8 +71,29 @@
 {{- end }}
 
 [delta]
-	navigate = true # use n and N to move between diff sections
+	hyperlinks = true
 	light = false   # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+	line-numbers = true
+	navigate = true # use n and N to move between diff sections
+	side-by-side = false
+
+	features = decorations line-numbers
+	syntax-theme = Dracula
+
+	plus-style = syntax "#003800"
+	minus-style = syntax "#3f0001"
+
+[delta "decorations"]
+	commit-decoration-style = bold yellow box ul
+	file-style = bold yellow ul
+	file-decoration-style = none
+	hunk-header-decoration-style = cyan box ul
+
+[delta "line-numbers"]
+	line-numbers-left-style = cyan
+	line-numbers-right-style = cyan
+	line-numbers-minus-style = 124
+	line-numbers-plus-style = 28
 
 [diff]
 	colorMoved = default
@@ -88,6 +109,9 @@
 [include]
 	path = {{ .chezmoi.homeDir }}/.gitconfig.aliases
 
+[init]
+	defaultBranch = main
+
 [interactive]
 	diffFilter = delta --color-only
 [add.interactive]
@@ -95,6 +119,10 @@
 
 [merge]
 	conflictstyle = diff3
+
+[pager]
+	blame = delta
+	grep = delta
 
 [pull]
 	rebase = false
@@ -125,6 +153,3 @@
 # https://hub.github.com/hub.1.html
 [hub]
 	protocol = https
-
-[init]
-	defaultBranch = main
