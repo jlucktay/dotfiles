@@ -1,0 +1,17 @@
+# Don't ask for confirmations
+#assume_yes = true
+
+# Disable specific steps - same options as the command line flag
+#disable = ["system", "emacs"]
+
+# Ignore failures for these steps
+#ignore_failures = ["powershell"]
+
+# Run specific steps - same options as the command line flag
+only = ["containers", "rustup", "cargo", "gcloud"]
+
+# Display the time in step titles
+display_time = true
+
+# Cleanup temporary or old files
+cleanup = true
