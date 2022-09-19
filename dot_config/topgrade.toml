@@ -8,7 +8,16 @@
 #ignore_failures = ["powershell"]
 
 # Run specific steps - same options as the command line flag
-only = ["containers", "rustup", "cargo", "gcloud"]
+# only = ["containers"]
+only = [
+  "brew_formula",
+  "brew_cask",
+  "rustup",
+  "cargo",
+  "pip3",
+  "gcloud",
+  "github_cli_extensions",
+]
 
 # Display the time in step titles
 display_time = true
