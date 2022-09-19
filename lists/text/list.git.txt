@@ -3,7 +3,6 @@
 /Users/jameslucktaylor/git/github.com/carbon-language/carbon-lang
 /Users/jameslucktaylor/git/github.com/chrislusf/seaweedfs
 /Users/jameslucktaylor/git/github.com/chrislusf/seaweedfs.wiki
-/Users/jameslucktaylor/git/github.com/davegarvey/tyk-pro-docker-demo-extended
 /Users/jameslucktaylor/git/github.com/dtolnay/syn
 /Users/jameslucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/jameslucktaylor/git/github.com/golangci/golangci-lint

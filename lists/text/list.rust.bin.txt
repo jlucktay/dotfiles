@@ -1,6 +1,11 @@
+    bacon
+    cargo-install-update
+    cargo-install-update-config
     czkawka_cli
     evcxr
     rustlings
-czkawka_cli v5.0.0:
+bacon v2.2.3:
+cargo-update v9.0.0:
+czkawka_cli v5.0.2:
 evcxr_repl v0.13.0:
 rustlings v5.2.0 (/Users/jameslucktaylor/git/github.com/jlucktay/rustlings):
