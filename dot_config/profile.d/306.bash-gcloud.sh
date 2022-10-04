@@ -1,5 +1,6 @@
 # https://formulae.brew.sh/cask/google-cloud-sdk
 # $ brew info google-cloud-sdk
-if test -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc'
+if test -r "${HOMEBREW_PREFIX:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"; then
+  # shellcheck disable=SC1091
+  source "${HOMEBREW_PREFIX:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
 fi

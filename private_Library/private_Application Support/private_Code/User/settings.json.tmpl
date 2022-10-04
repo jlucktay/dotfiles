@@ -111,7 +111,7 @@
   "git.fetchOnPull": true,
   "git.ignoreLimitWarning": true,
   "go.alternateTools": {
-    "gometalinter": "/usr/local/bin/golangci-lint"
+    "gometalinter": "{{ env "HOMEBREW_PREFIX" }}/bin/golangci-lint"
   },
   "go.editorContextMenuCommands": {
     "fillStruct": true
@@ -174,7 +174,7 @@
     "--severity=style",
     "--shell=bash"
   ],
-  "shellcheck.executablePath": "/usr/local/bin/shellcheck",
+  "shellcheck.executablePath": "{{ env "HOMEBREW_PREFIX" }}/bin/shellcheck",
   "shellformat.effectLanguages": [
     "azcli",
     "bats",
@@ -188,7 +188,7 @@
     "spring-boot-properties"
   ],
   "shellformat.flag": "--binary-next-line --case-indent --indent 2 --simplify --space-redirects",
-  "shellformat.path": "/usr/local/bin/shfmt",
+  "shellformat.path": "{{ env "HOMEBREW_PREFIX" }}/bin/shfmt",
   "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
@@ -201,7 +201,7 @@
     "Bash (login)": {
       "args": ["--login"],
       "icon": "terminal-bash",
-      "path": "/usr/local/bin/bash"
+      "path": "{{ env "HOMEBREW_PREFIX" }}/bin/bash"
     }
   },
   "terminal.integrated.scrollback": 999999,

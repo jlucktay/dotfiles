@@ -1,4 +1,5 @@
 # Autojump!
-if test -r /usr/local/etc/profile.d/autojump.sh; then
-  source /usr/local/etc/profile.d/autojump.sh
+if test -r "${HOMEBREW_PREFIX:?}/etc/profile.d/autojump.sh"; then
+  # shellcheck disable=SC1091
+  source "${HOMEBREW_PREFIX:?}/etc/profile.d/autojump.sh"
 fi

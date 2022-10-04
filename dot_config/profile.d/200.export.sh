@@ -39,13 +39,14 @@ function prefix_path() {
 prefix_path "/usr/local/sbin"
 
 # https://formulae.brew.sh/cask/google-cloud-sdk
-if test -d /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc'
+if test -r "${HOMEBREW_PREFIX:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"; then
+  # shellcheck disable=SC1091
+  source "${HOMEBREW_PREFIX:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
 fi
 
-prefix_path "/usr/local/opt/curl/bin"
-prefix_path "/usr/local/opt/make/libexec/gnubin"
-prefix_path "/usr/local/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
+prefix_path "${HOMEBREW_PREFIX:?}/opt/curl/bin"
+prefix_path "${HOMEBREW_PREFIX:?}/opt/make/libexec/gnubin"
+prefix_path "${HOMEBREW_PREFIX:?}/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.cargo/bin"
 prefix_path "$HOME/bin"
 

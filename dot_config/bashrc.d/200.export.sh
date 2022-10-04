@@ -1,8 +1,8 @@
 ### Environment variables
 
 # If I have to edit something in a terminal window, I like using Nano. The up-to-date version from Homebrew if present.
-if test -x /usr/local/bin/nano; then
-  export EDITOR=/usr/local/bin/nano
+if test -x "${HOMEBREW_PREFIX:?}/bin/nano"; then
+  export EDITOR="${HOMEBREW_PREFIX:?}/bin/nano"
 else
   export EDITOR=/usr/bin/nano
 fi

@@ -14,7 +14,7 @@ command -v docker &> /dev/null || {
   exit 1
 }
 
-test -d /usr/local/Cellar/coreutils || {
+test -d "${HOMEBREW_PREFIX:?}/Cellar/coreutils" || {
   echo >&2 "$script_name: 'coreutils' has not been installed via Homebrew: https://formulae.brew.sh/formula/coreutils"
   exit 1
 }
