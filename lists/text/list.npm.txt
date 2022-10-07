@@ -1,4 +1,5 @@
-/usr/local/lib
-/usr/local/lib/node_modules/commitizen
-/usr/local/lib/node_modules/git-cz
-/usr/local/lib/node_modules/npm
+/opt/homebrew/lib
+/opt/homebrew/lib/node_modules/commitizen
+/opt/homebrew/lib/node_modules/cz-conventional-changelog
+/opt/homebrew/lib/node_modules/git-cz
+/opt/homebrew/lib/node_modules/npm

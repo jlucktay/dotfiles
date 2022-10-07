@@ -3,8 +3,6 @@
 alacritty
 anki
 discord
-docker
-epic-games
 firefox
 font-jetbrains-mono
 google-cloud-sdk
@@ -13,15 +11,10 @@ gpg-suite-no-mail
 iglance
 itsycal
 keepingyouawake
-keybase
 nordvpn
-now-tv-player
-obsidian
 pingmenu
-raspberry-pi-imager
 rectangle
-steam
-the-unarchiver
+slack
 tyke
 visual-studio-code
 whatsapp
