@@ -1,5 +1,4 @@
 Host tilde.club
-  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa_jlucktay
   User jlucktay
 
 Host 192.168.86.181 192.168.86.121 192.168.86.122 192.168.86.123 rpi?-? rpi?-?.lan rpi?-?.local pi.hole
@@ -24,5 +23,5 @@ Host *
   ControlMaster auto
   ControlPath {{ .chezmoi.homeDir }}/.ssh/%C.sock
   ControlPersist 10m
-  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ed25519_20211013
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_rsa_jlucktay
   UseKeychain yes
