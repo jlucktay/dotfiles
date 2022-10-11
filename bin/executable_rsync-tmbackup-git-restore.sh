@@ -8,8 +8,13 @@ fi
 
 # Search the given directory for metadata subdirectories denoting git repositories, and save the results into an array
 source="$1"
+
+echo -n "Discovering repos under '$source'..."
+
 find_repos=$(find "$source" -type d -name ".git")
 mapfile -t mapped_repos <<< "$find_repos"
+
+echo -n " found ${#mapped_repos[@]}"
 
 # Iterate through found repos and create an array of sorted repos
 sort_result=$(printf '%s\n' "${mapped_repos[@]}" | sort | xargs -n 1)
@@ -34,9 +39,11 @@ done
 compare_arrays=$(comm -23 <(printf '%s\n' "${sorted_repos[@]}") <(printf '%s\n' "${submodule_repos[@]}"))
 mapfile -t non_submodule_repos <<< "$compare_arrays"
 
+echo " of which ${#non_submodule_repos[@]} will be restored."
+
 for repo in "${non_submodule_repos[@]}"; do
   # Print the non-submodule repository that we are going to operate on
-  echo "found:  $repo"
+  echo "Found:  $repo"
 
   # Subtract the base search directory from the start of each repo's location, to get the true repo name/path
   trimmed_repo=${repo##"${source}/"}
@@ -45,7 +52,7 @@ for repo in "${non_submodule_repos[@]}"; do
 
   if [[ ! -d $target ]]; then
     # Print the target directory for this repository
-    echo -n "create: "
+    echo -n "Create: "
     mkdir -pv "$target"
   fi
 

@@ -92,9 +92,10 @@ teardown() {
   # Assert
   assert_success
   assert [ "$(echo "$output" | grep --count '^')" -ge 3 ]
-  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-1/.git"
-  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-2/.git"
-  assert_output --partial "found:  $test_temp_dir/mnt/backup/git/host/user/repo-3/.git"
+  assert_output --partial "Discovering repos under '$test_temp_dir/mnt/backup/git'... found 6 of which 3 will be restored."
+  assert_output --partial "Found:  $test_temp_dir/mnt/backup/git/host/user/repo-1/.git"
+  assert_output --partial "Found:  $test_temp_dir/mnt/backup/git/host/user/repo-2/.git"
+  assert_output --partial "Found:  $test_temp_dir/mnt/backup/git/host/user/repo-3/.git"
 }
 
 @test "run creates necessary target directories" {
@@ -111,9 +112,9 @@ teardown() {
   assert_equal "$(mock_get_call_args "$mock_mkdir" 1)" "-pv $HOME/git/host/user/repo-1"
   assert_equal "$(mock_get_call_args "$mock_mkdir" 2)" "-pv $HOME/git/host/user/repo-2"
   assert_equal "$(mock_get_call_args "$mock_mkdir" 3)" "-pv $HOME/git/host/user/repo-3"
-  assert_output --partial "create: mkdir: $HOME/git/host/user/repo-1"
-  assert_output --partial "create: mkdir: $HOME/git/host/user/repo-2"
-  assert_output --partial "create: mkdir: $HOME/git/host/user/repo-3"
+  assert_output --partial "Create: mkdir: $HOME/git/host/user/repo-1"
+  assert_output --partial "Create: mkdir: $HOME/git/host/user/repo-2"
+  assert_output --partial "Create: mkdir: $HOME/git/host/user/repo-3"
 }
 
 @test "rsync from source to target" {
