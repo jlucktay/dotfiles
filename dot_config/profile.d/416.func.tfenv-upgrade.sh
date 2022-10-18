@@ -1,4 +1,4 @@
-if command -v tfenv &> /dev/null && command -v keybase &> /dev/null; then
+if command -v tfenv &> /dev/null; then
   function tfenv_upgrade() {
     local -
     set -o pipefail
@@ -7,9 +7,11 @@ if command -v tfenv &> /dev/null && command -v keybase &> /dev/null; then
     local latest_tf_ver
     latest_tf_ver="$(tfenv list-remote | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | gsort --version-sort | tail -n 1)"
 
-    # Start getting Keybase up and running.
+    # Start getting Keybase up and running, if it is installed.
     # It will verify the Terraform download later.
-    keybase ctl start &> /dev/null &
+    if command -v keybase &> /dev/null; then
+      keybase ctl start &> /dev/null &
+    fi
 
     # Uninstall the current Terraform version, if one is currently installed.
     # Note that every time tfenv itself is upgraded to a new version, it loses any installed Terraform version(s).
@@ -19,15 +21,19 @@ if command -v tfenv &> /dev/null && command -v keybase &> /dev/null; then
     fi
 
     # Make sure Keybase is ready to verify the Terraform install.
-    sleep 3
-    keybase ctl wait
+    if command -v keybase &> /dev/null; then
+      sleep 3
+      keybase ctl wait
+    fi
 
     # Install the latest Terraform version we looked up earlier.
     tfenv install "$latest_tf_ver"
     tfenv use "$latest_tf_ver"
 
-    # Close down Keybase.
-    keybase ctl wait
-    keybase ctl app-exit
+    if command -v keybase &> /dev/null; then
+      # Close down Keybase.
+      keybase ctl wait
+      keybase ctl app-exit
+    fi
   }
 fi
