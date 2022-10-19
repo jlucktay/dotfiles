@@ -69,7 +69,16 @@ if [[ -z ${GOPATH+x} ]]; then
     echo "$script_name: GOPATH is unset, and Go is not installed; skipping"
   fi
 else
-  go_bin_list_cmd="find $GOPATH/bin -type f"
+  IFS=":" read -ra gopaths <<< "$GOPATH"
+
+  go_bin_list_cmd="find "
+
+  for each in "${gopaths[@]}"; do
+    go_bin_list_cmd+="$each/bin "
+  done
+
+  go_bin_list_cmd+="-type f"
+
   process_list "$go_bin_list_cmd" "go.bin"
 fi
 
