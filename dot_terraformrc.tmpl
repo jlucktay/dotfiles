@@ -1,3 +1,7 @@
+credentials "terraform.ovotech.org.uk" {
+  token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" }}"
+}
+
 // Enables plugin caching and specifies, as a string, the location of the plugin cache directory.
 // https://developer.hashicorp.com/terraform/cli/config/config-file#provider-plugin-cache
 plugin_cache_dir = "{{ .chezmoi.homeDir }}/.terraform.d/plugin-cache"
@@ -6,10 +10,16 @@ plugin_cache_dir = "{{ .chezmoi.homeDir }}/.terraform.d/plugin-cache"
 provider_installation {
   filesystem_mirror {
     path    = "{{ .chezmoi.homeDir }}/m2tp3"
-    include = ["hashicorp/template"]
+    include = [
+      "hashicorp/random",
+      "hashicorp/template"
+    ]
   }
 
   direct {
-    exclude = ["hashicorp/template"]
+    exclude = [
+      "hashicorp/random",
+      "hashicorp/template"
+    ]
   }
 }
