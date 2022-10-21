@@ -12,9 +12,12 @@ c-ares
 ca-certificates
 capstone
 chezmoi
+cloudquery
 coreutils
 curl
 docker
+docker-compose
+docker-credential-helper
 fd
 fzf
 gdbm
@@ -22,6 +25,7 @@ gettext
 gh
 git
 git-delta
+git-lfs
 git-machete
 glib
 gmp
@@ -40,6 +44,7 @@ jpeg-turbo
 jq
 k9s
 kondo
+krb5
 kubernetes-cli
 libevent
 libidn2
@@ -68,9 +73,11 @@ oniguruma
 openldap
 openssl@1.1
 p11-kit
+parallel
 pcre2
 pixman
 pkg-config
+postgresql@14
 python@3.10
 qemu
 readline
@@ -85,6 +92,7 @@ snappy
 speedtest
 sqlite
 tfenv
+tfsec
 topgrade
 tree
 unbound

@@ -1,6 +1,9 @@
+chef/chef
+cloudquery/tap
 homebrew/bundle
 homebrew/cask
 homebrew/cask-fonts
 homebrew/core
+homebrew/services
 rafaelgarrido/caveats
 teamookla/speedtest

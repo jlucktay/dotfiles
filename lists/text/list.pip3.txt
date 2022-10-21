@@ -1,4 +1,7 @@
-pip==22.2.2
-setuptools==65.3.0
+attrs==22.1.0
+jsonschema==4.16.0
+pip==22.3
+pyrsistent==0.18.1
+setuptools==65.4.1
 six==1.16.0
 wheel==0.37.1

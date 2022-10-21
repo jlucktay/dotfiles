@@ -2,6 +2,7 @@
 1password-cli
 alacritty
 anki
+bartender
 discord
 firefox
 font-jetbrains-mono
@@ -9,12 +10,18 @@ google-cloud-sdk
 google-drive
 gpg-suite-no-mail
 iglance
+inspec
 itsycal
 keepingyouawake
 nordvpn
+obsidian
+pgadmin4
 pingmenu
 rectangle
+resilio-sync
 slack
 tyke
 visual-studio-code
+vlc
 whatsapp
+zoom
