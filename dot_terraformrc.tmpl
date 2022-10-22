@@ -12,14 +12,16 @@ provider_installation {
     path    = "{{ .chezmoi.homeDir }}/m2tp3"
     include = [
       "hashicorp/random",
-      "hashicorp/template"
+      "hashicorp/template",
+      "terraform.ovotech.org.uk/pe/aiven-kafka-users"
     ]
   }
 
   direct {
     exclude = [
       "hashicorp/random",
-      "hashicorp/template"
+      "hashicorp/template",
+      "terraform.ovotech.org.uk/pe/aiven-kafka-users"
     ]
   }
 }
