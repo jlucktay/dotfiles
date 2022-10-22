@@ -1,5 +1,5 @@
 credentials "terraform.ovotech.org.uk" {
-  token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" }}"
+  token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" | trim }}"
 }
 
 // Enables plugin caching and specifies, as a string, the location of the plugin cache directory.
