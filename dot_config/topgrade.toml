@@ -5,18 +5,19 @@
 #disable = ["system", "emacs"]
 
 # Ignore failures for these steps
-#ignore_failures = ["powershell"]
+ignore_failures = ["containers"]
 
 # Run specific steps - same options as the command line flag
 # only = ["containers"]
 only = [
-  "brew_formula",
   "brew_cask",
-  "rustup",
+  "brew_formula",
   "cargo",
-  "pip3",
+  "containers",
   "gcloud",
   "github_cli_extensions",
+  "pip3",
+  "rustup",
 ]
 
 # Display the time in step titles
