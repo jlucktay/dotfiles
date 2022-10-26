@@ -79,7 +79,6 @@ if command -v jq &> /dev/null; then
 fi
 
 if command -v terraform &> /dev/null; then
-  alias tfmt="find . -type f -iname \"*.tf\" \
-    -not -path \"*/.terraform/*\" \
-    -execdir terraform fmt --check=false --diff=false --list=true --write=true \;"
+  # Run 'terraform fmt' across all files in the current git repo.
+  alias tfmt='terraform fmt --check=false --diff=false --list --recursive --write "$(git rev-parse --show-toplevel)"'
 fi
