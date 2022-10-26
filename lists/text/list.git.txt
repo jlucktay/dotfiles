@@ -44,8 +44,11 @@
 /Users/james.lucktaylor/git/github.com/ovotech/team-cppe
 /Users/james.lucktaylor/git/github.com/ovotech/terraform-provider-aiven-kafka-users
 /Users/james.lucktaylor/git/github.com/ovotech/trading-infra
+/Users/james.lucktaylor/git/github.com/ovotech/trading_gutenberg_workflows
 /Users/james.lucktaylor/git/github.com/qarmin/czkawka
 /Users/james.lucktaylor/git/github.com/rust-random/rand
+/Users/james.lucktaylor/git/github.com/topgrade-rs/topgrade
+/Users/james.lucktaylor/git/github.com/unixorn/lima-xbar-plugin
 /Users/james.lucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/james.lucktaylor/git/go.jlucktay.dev/arrowverse
 /Users/james.lucktaylor/git/go.jlucktay.dev/clint
