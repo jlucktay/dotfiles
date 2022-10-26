@@ -54,10 +54,6 @@ if command -v gofmt &> /dev/null; then
   alias gofmtsw='find . -type f -iname "*.go" -not -path "*/vendor/*" -exec gofmt -s -w "{}" +'
 fi
 
-# Open specific Chrome profiles
-alias chrome_personal='open -n -a "Google Chrome" --args --profile-directory="Profile 1"'
-alias chrome_tyk='open -n -a "Google Chrome" --args --profile-directory="Default"'
-
 # Chezmoi
 if command -v chezmoi &> /dev/null; then
   alias cg='chezmoi git --'
