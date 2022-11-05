@@ -137,6 +137,8 @@
 
 [user]
 	name = James Lucktaylor
+	email = {{ onepasswordRead "op://Personal/GitHub/public e-mail address" "my.1password.com" | trim }}
+	signingkey = {{ onepasswordRead "op://Personal/GitHub/GPG signing key" "my.1password.com" | trim }}
 	useConfigOnly = true
 
 # https://github.com/lyze/posh-git-sh#configuration-options
