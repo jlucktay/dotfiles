@@ -69,3 +69,9 @@ export CDPATH=":."
 if command -v jq &> /dev/null; then
   export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
 fi
+
+# git-branchless
+# https://github.com/arxanas/git-branchless/wiki/Installation
+if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
+  alias git='git-branchless wrap --'
+fi
