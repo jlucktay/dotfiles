@@ -18,12 +18,12 @@ inlog = log ..@{u}
 outgoing = show --patch @{u}..
 outlog = log @{u}..
 
-change = codereview change
-gofmt = codereview gofmt
-mail = codereview mail
-pending = codereview pending
-submit = codereview submit
-sync = codereview sync
+# change = codereview change
+# gofmt = codereview gofmt
+# mail = codereview mail
+# pending = codereview pending
+# submit = codereview submit
+# sync = codereview sync
 
 # Best used in tandem with 'git commit --fixup <commit>'
 ram = rebase --autosquash --autostash --interactive main
@@ -98,7 +98,7 @@ open = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}; }; f"
 pr = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}/compare/$(git rev-parse --abbrev-ref HEAD); }; f"
 
 # Back out changes
-undo = checkout -p --
+discard = checkout -p --
 unstage = reset -q HEAD --
 
 up = !git pull --rebase --prune $@ && git submodule update --init --recursive
