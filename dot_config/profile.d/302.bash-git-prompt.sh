@@ -32,7 +32,7 @@ __prompt_command() {
   # Git status
   pge=$(__posh_git_echo)
   if [[ $pge != "" ]]; then
-    PS1+=" $pge"
+    PS1+="$pge"
   fi
 
   # Optional exit code
