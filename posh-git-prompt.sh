@@ -1,9 +1,19 @@
 # bash/zsh git prompt support
 #
-# Copyright (C) 2018 David Xu
+#    Copyright (C) 2021 David Xu
 #
-# Based on the earlier work by Shawn O. Pearce <spearce@spearce.org>
-# Distributed under the GNU General Public License, version 2.0.
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # This script allows you to see the current branch in your prompt,
 # posh-git style.
@@ -171,6 +181,12 @@ __posh_git_echo () {
     local BeforeStash='('
     local AfterStash=')'
 
+    local LocalDefaultStatusSymbol=''
+    local LocalWorkingStatusSymbol=' !'
+    local LocalWorkingStatusColor=$(__posh_color "$Red")
+    local LocalStagedStatusSymbol=' ~'
+    local LocalStagedStatusColor=$(__posh_color "$BrightCyan")
+
     local RebaseForegroundColor=$(__posh_color '\e[0m') # reset
     local RebaseBackgroundColor=
 
@@ -329,6 +345,9 @@ __posh_git_echo () {
                 M )
                     (( indexModified++ ))
                     ;;
+                T )
+                    (( indexModified++ ))
+                    ;;
                 R )
                     (( indexModified++ ))
                     ;;
@@ -350,6 +369,9 @@ __posh_git_echo () {
                     (( filesAdded++ ))
                     ;;
                 M )
+                    (( filesModified++ ))
+                    ;;
+                T )
                     (( filesModified++ ))
                     ;;
                 D )
@@ -400,10 +422,13 @@ __posh_git_echo () {
         gitstring+="$BranchBackgroundColor$BranchForegroundColor$branchstring$BranchIdenticalStatusSymbol"
     fi
 
+    gitstring+="${rebase:+$RebaseForegroundColor$RebaseBackgroundColor$rebase}"
+
     # index status
     if $EnableFileStatus; then
         local indexCount="$(( $indexAdded + $indexModified + $indexDeleted + $indexUnmerged ))"
         local workingCount="$(( $filesAdded + $filesModified + $filesDeleted + $filesUnmerged ))"
+
         if (( $indexCount != 0 )) || $ShowStatusWhenZero; then
             gitstring+="$IndexBackgroundColor$IndexForegroundColor +$indexAdded ~$indexModified -$indexDeleted"
         fi
@@ -419,16 +444,28 @@ __posh_git_echo () {
         if (( $filesUnmerged != 0 )); then
             gitstring+=" $WorkingBackgroundColor$WorkingForegroundColor!$filesUnmerged"
         fi
-    fi
-    gitstring+="${rebase:+$RebaseForegroundColor$RebaseBackgroundColor$rebase}"
 
-    if $EnableStashStatus && $hasStash; then
-        gitstring+="$DefaultBackgroundColor$DefaultForegroundColor $StashBackgroundColor$StashForegroundColor$BeforeStash$stashCount$AfterStash"
+        local localStatusSymbol=$LocalDefaultStatusSymbol
+        local localStatusColor=$DefaultForegroundColor
+       
+        if (( workingCount != 0 )); then
+            localStatusSymbol=$LocalWorkingStatusSymbol
+            localStatusColor=$LocalWorkingStatusColor
+        elif (( indexCount != 0 )); then
+            localStatusSymbol=$LocalStagedStatusSymbol
+            localStatusColor=$LocalStagedStatusColor
+        fi
+
+        gitstring+="$DefaultBackgroundColor$localStatusColor$localStatusSymbol$DefaultForegroundColor"
+
+        if $EnableStashStatus && $hasStash; then
+            gitstring+="$DefaultBackgroundColor$DefaultForegroundColor $StashBackgroundColor$StashForegroundColor$BeforeStash$stashCount$AfterStash"
+        fi
     fi
 
     # after-branch text
     gitstring+="$AfterBackgroundColor$AfterForegroundColor$AfterText$DefaultBackgroundColor$DefaultForegroundColor"
-    echo "$gitstring"
+    echo " $gitstring"
 }
 
 # Returns the location of the .git/ directory.
