@@ -48,3 +48,4 @@ __prompt_command() {
 PROMPT_COMMAND=__prompt_command
 
 ### https://github.com/lyze/posh-git-sh/issues/42
+### -> https://github.com/lyze/posh-git-sh/pull/61
