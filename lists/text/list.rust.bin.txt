@@ -3,9 +3,13 @@
     cargo-install-update
     cargo-install-update-config
     czkawka_cli
+    git-branchless
+    just
     rustlings
 bacon v2.2.5:
-cargo-careful v0.2.4:
-cargo-update v11.0.0:
+cargo-careful v0.3.0:
+cargo-update v11.1.0:
 czkawka_cli v5.0.2:
+git-branchless v0.6.0:
+just v1.8.0:
 rustlings v5.2.1 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):

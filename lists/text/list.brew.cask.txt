@@ -2,8 +2,8 @@
 1password-cli
 alacritty
 anki
-bartender
 discord
+figma
 firefox
 font-jetbrains-mono
 google-cloud-sdk
@@ -20,6 +20,7 @@ pgadmin4
 pingmenu
 rectangle
 resilio-sync
+setapp
 slack
 steam
 tyke

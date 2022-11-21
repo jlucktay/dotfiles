@@ -3,6 +3,7 @@ autopep8==1.7.0
 cachetools==5.2.0
 certifi==2022.9.24
 chardet==4.0.0
+crcmod==1.7
 google-api-core==1.33.2
 google-auth==2.13.0
 google-cloud-secret-manager==2.0.0
@@ -14,7 +15,7 @@ idna==2.10
 jsonschema==4.16.0
 libcst==0.4.7
 mypy-extensions==0.4.3
-pip==22.3
+pip==22.3.1
 proto-plus==1.22.1
 protobuf==3.20.3
 pyasn1-modules==0.2.8
@@ -26,6 +27,7 @@ requests==2.25.1
 rsa==4.9
 setuptools==65.4.1
 six==1.16.0
+tabulate==0.8.10
 toml==0.10.2
 typing-inspect==0.8.0
 typing_extensions==4.4.0

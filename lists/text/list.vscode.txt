@@ -8,6 +8,7 @@ hashicorp.hcl
 hashicorp.terraform
 jetmartin.bats
 ms-azuretools.vscode-docker
+ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter
@@ -15,6 +16,10 @@ ms-toolsai.jupyter-keymap
 ms-toolsai.jupyter-renderers
 ms-toolsai.vscode-jupyter-cell-tags
 ms-toolsai.vscode-jupyter-slideshow
+ms-vscode-remote.remote-ssh
+ms-vscode-remote.remote-ssh-edit
+ms-vscode.remote-explorer
+ms-vsliveshare.vsliveshare
 PKief.material-icon-theme
 redhat.vscode-yaml
 richie5um2.vscode-sort-json

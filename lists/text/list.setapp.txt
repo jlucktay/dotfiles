@@ -1,0 +1,3 @@
+/Applications/Setapp/Bartender.app/
+/Applications/Setapp/Beamer.app/
+/Applications/Setapp/CleanMyMac X.app/
