@@ -13,6 +13,11 @@ done
 # The real Dark Souls starts here.
 tool_check docker limactl
 
+if ! docker stats &> /dev/null; then
+  echo "Docker daemon is not running."
+  exit 0
+fi
+
 if ! dpa=$(docker ps --all --quiet | wc -l); then
   err "could not get running containers from host"
 fi
