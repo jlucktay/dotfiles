@@ -13,6 +13,9 @@ done
 # The real Dark Souls starts here.
 tool_check limactl topgrade
 
+# Refresh GitHub/OVO SSO for the day.
+open https://github.com/orgs/ovotech/people
+
 limactl start
 
 topgrade
