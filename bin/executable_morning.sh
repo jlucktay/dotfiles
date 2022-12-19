@@ -14,7 +14,7 @@ done
 tool_check limactl topgrade
 
 # Refresh GitHub/OVO SSO for the day.
-open https://github.com/orgs/ovotech/people
+open https://github.com/orgs/ovotech/teams/rdex
 
 limactl start
 
