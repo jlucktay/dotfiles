@@ -24,6 +24,7 @@ fi
 function process_list() {
   # Parameter #1 is the command to generate the list
   # Parameter #2 is the name of the list
+  # Parameter #3 (optional) will, if set to anything, skip sorting
 
   # Parse out the command name and make sure it is available
   cmd_name=$(awk '{ print $1 }' <<< "$1")
@@ -47,7 +48,11 @@ function process_list() {
     : # No-op; skipping errors
   fi
 
-  sort --ignore-case <<< "$cmd_output" > "$(realpath "$chezmoi_source/lists/text/list.$2.txt")"
+  if [[ -n ${3-} ]]; then
+    echo "$cmd_output" > "$(realpath "$chezmoi_source/lists/text/list.$2.txt")"
+  else
+    sort --ignore-case <<< "$cmd_output" > "$(realpath "$chezmoi_source/lists/text/list.$2.txt")"
+  fi
 }
 
 # Git repos I have checked out locally
@@ -83,7 +88,7 @@ if [[ ! -d $HOME/.cargo/bin ]]; then
   echo "$script_name: No '\$HOME.cargo/bin/' directory found; skipping"
 else
   rust_bin_list_cmd="cargo install --list"
-  process_list "$rust_bin_list_cmd" "rust.bin"
+  process_list "$rust_bin_list_cmd" "rust.bin" skipsort
 fi
 
 # Homebrew
