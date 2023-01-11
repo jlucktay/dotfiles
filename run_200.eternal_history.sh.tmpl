@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+set -euo pipefail
+shopt -s inherit_errexit 2> /dev/null || true
+
+# Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
+# https://stackoverflow.com/a/61345169/380599
+script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
+
+### Check for presence of other tools
+
+# chezmoi
+if ! command -v chezmoi &> /dev/null; then
+  echo >&2 "$script_name: 'chezmoi' is required but it's not installed:
+  https://github.com/twpayne/chezmoi/blob/master/docs/INSTALL.md"
+  exit 1
+fi
+
+# JQ
+if ! command -v jq &> /dev/null; then
+  echo >&2 "$script_name: 'jq' is required but it's not installed:
+  https://github.com/stedolan/jq/wiki/Installation"
+  exit 1
+fi
+
+# rage
+if ! command -v rage &> /dev/null; then
+  echo >&2 "$script_name: 'rage' is required but it's not installed:
+  https://github.com/str4d/rage#installation"
+  exit 1
+fi
+
+archive_destination=$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')
+rage_recipient='{{ onepasswordRead "op://Personal/bash-eternal - rage-keygen/Public key" "my.1password.com" | trim }}'
+
+# Tar, GZip, and encrypt (with (r)age) the eternal history file
+tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
+  | rage --recipient "$rage_recipient" > "$archive_destination/bash_eternal_history.tar.gz.age"
+
+### To restore this file:
+# rage --decrypt --identity key.txt --output bash_eternal_history.tar.gz bash_eternal_history.tar.gz.age
+# tar -zxvf bash_eternal_history.tar.gz
