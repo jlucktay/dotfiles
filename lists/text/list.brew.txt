@@ -1,3 +1,4 @@
+act
 autojump
 awscli
 bash
@@ -15,11 +16,13 @@ checkov
 chezmoi
 circleci
 cloudquery
+cmake
 coreutils
 curl
 docker
 docker-compose
 docker-credential-helper
+docutils
 fd
 fzf
 gdbm
@@ -34,6 +37,7 @@ gmp
 gnu-sed
 gnutls
 go
+gofumpt
 golangci-lint
 goreleaser
 grep
@@ -76,6 +80,7 @@ ncdu
 ncurses
 nettle
 node
+nvm
 oniguruma
 openldap
 openssl@1.1
@@ -86,6 +91,7 @@ pcre2
 pixman
 pkg-config
 postgresql@14
+python-tabulate
 python-typing-extensions
 python@3.10
 python@3.11

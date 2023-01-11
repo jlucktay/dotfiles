@@ -24,6 +24,7 @@ setapp
 slack
 steam
 tyke
+unofficial-wineskin
 visual-studio-code
 vlc
 whatsapp

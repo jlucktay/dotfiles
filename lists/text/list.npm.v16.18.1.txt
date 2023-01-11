@@ -1,0 +1,3 @@
+/Users/james.lucktaylor/.nvm/versions/node/v16.18.1/lib
+/Users/james.lucktaylor/.nvm/versions/node/v16.18.1/lib/node_modules/corepack
+/Users/james.lucktaylor/.nvm/versions/node/v16.18.1/lib/node_modules/npm
