@@ -11,6 +11,9 @@ lint-bash.sh
 README.md
 TODO.md
 
+# Symlinked elsewhere
+/chezmoi-config.json
+
 # Miscellanea
 bash_eternal_history.zip
 Brewfile
