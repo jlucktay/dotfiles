@@ -6,6 +6,13 @@ if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
   exit 1
 fi
 
+# Default logging, with date and script name.
+dslog() {
+  local log_date
+  log_date=$(date +'%Y-%m-%dT%H:%M:%S%z')
+  echo "[$log_date] ${SCRIPT_NAME:?}: $*"
+}
+
 # Error logging.
 err() {
   local err_date

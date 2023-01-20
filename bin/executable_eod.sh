@@ -11,6 +11,9 @@ for lib in "$script_directory"/lib/*.sh; do
 done
 
 # The real Dark Souls starts here.
+dslog "start"
+trap 'dslog "finish"' 0
+
 tool_check docker limactl
 
 if ! docker stats --no-stream &> /dev/null; then

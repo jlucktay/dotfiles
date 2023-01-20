@@ -11,11 +11,15 @@ for lib in "$script_directory"/lib/*.sh; do
 done
 
 # The real Dark Souls starts here.
+dslog "start"
+trap 'dslog "finish"' 0
+
 tool_check limactl topgrade
 
 # Refresh GitHub/OVO SSO for the day.
 open https://github.com/orgs/ovotech/teams/rdex
 
+# For Docker.
 limactl start
 
 topgrade
