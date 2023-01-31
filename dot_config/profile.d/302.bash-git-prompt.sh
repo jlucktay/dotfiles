@@ -36,9 +36,8 @@ __prompt_command() {
   fi
 
   # Git status
-  pge=$(__posh_git_echo)
-  if [[ $pge != "" ]]; then
-    PS1+="$pge"
+  if type __posh_git_echo &> /dev/null; then
+    PS1+="$(__posh_git_echo)"
   fi
 
   # Optional exit code
