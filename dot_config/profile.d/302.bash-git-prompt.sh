@@ -11,6 +11,7 @@ source "$HOME/posh-git-prompt.sh"
 # Thanks to:
 # https://github.com/demure/dotfiles/blob/master/subbash/prompt
 # https://brettterpstra.com/2009/11/17/my-new-favorite-bash-prompt/
+# https://github.com/jonmosco/kube-ps1
 
 # Func to generate prompt after each command
 __prompt_command() {
@@ -28,6 +29,11 @@ __prompt_command() {
   PS1="$ICya\u$IWhi@$IPur\h $IGre\t"    # Username at host, time (24h)
   PS1+=" $IWhi"'['"$IYel\W$IWhi]$Reset" # Working directory, trimmed
   # The '[' on the line above gets special treatment to avoid shellharden's zealotry
+
+  # Kubernetes status
+  if type kube_ps1 &> /dev/null; then
+    PS1+=' $(kube_ps1)'
+  fi
 
   # Git status
   pge=$(__posh_git_echo)
@@ -49,3 +55,26 @@ PROMPT_COMMAND=__prompt_command
 
 ### https://github.com/lyze/posh-git-sh/issues/42
 ### -> https://github.com/lyze/posh-git-sh/pull/61
+
+if test -r "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"; then
+  # shellcheck disable=SC1091
+  source "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"
+fi
+
+__kp_get_cluster() {
+  local output=$1
+
+  # Trim prefix/suffix, if present.
+  output=${output#"gke_"}
+  output=${output%"_europe-west1_trading-gke-cluster"}
+
+  echo "$output"
+}
+
+export KUBE_PS1_CLUSTER_FUNCTION=__kp_get_cluster
+export KUBE_PS1_CTX_COLOR='214'
+export KUBE_PS1_NS_COLOR=white
+export KUBE_PS1_PREFIX_COLOR='255'
+export KUBE_PS1_SEPARATOR=' '
+export KUBE_PS1_SUFFIX_COLOR='255'
+export KUBE_PS1_SYMBOL_USE_IMG=true
