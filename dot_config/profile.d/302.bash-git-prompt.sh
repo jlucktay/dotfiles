@@ -32,7 +32,10 @@ __prompt_command() {
 
   # Kubernetes status
   if type kube_ps1 &> /dev/null; then
-    PS1+=' $(kube_ps1)'
+    # Assume enabled by default
+    if [[ ${KUBE_PS1_ENABLED:-on} != "off" ]]; then
+      PS1+=' $(kube_ps1)'
+    fi
   fi
 
   # Git status
@@ -60,6 +63,7 @@ if test -r "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"; then
   source "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"
 fi
 
+# I'm pretty sure kube-ps1 refers to this as 'cluster' when it should say 'context'.
 __kp_get_cluster() {
   local output=$1
 
@@ -74,6 +78,5 @@ export KUBE_PS1_CLUSTER_FUNCTION=__kp_get_cluster
 export KUBE_PS1_CTX_COLOR='214'
 export KUBE_PS1_NS_COLOR=white
 export KUBE_PS1_PREFIX_COLOR='255'
-export KUBE_PS1_SEPARATOR=' '
 export KUBE_PS1_SUFFIX_COLOR='255'
-export KUBE_PS1_SYMBOL_USE_IMG=true
+export KUBE_PS1_SYMBOL_ENABLE=false
