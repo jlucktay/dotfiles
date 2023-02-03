@@ -1,5 +1,6 @@
 chef/chef
 cloudquery/tap
+fluxcd/tap
 gcenx/wine
 homebrew/bundle
 homebrew/cask

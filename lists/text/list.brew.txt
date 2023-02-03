@@ -24,6 +24,8 @@ docker-compose
 docker-credential-helper
 docutils
 fd
+flux
+fluxctl
 fzf
 gdbm
 gettext
@@ -44,6 +46,7 @@ grep
 gron
 guile
 hadolint
+helm
 hyperfine
 icu4c
 ipcalc
@@ -51,9 +54,10 @@ jpeg-turbo
 jq
 k9s
 kondo
-krb5
+kube-ps1
+kubeconform
+kubectx
 kubernetes-cli
-kubeval
 libevent
 libidn2
 libnghttp2
@@ -90,7 +94,6 @@ parallel
 pcre2
 pixman
 pkg-config
-postgresql@14
 python-tabulate
 python-typing-extensions
 python@3.10
@@ -117,6 +120,7 @@ unbound
 vde
 vegeta
 wget
+xq
 xz
 yamllint
 yarn

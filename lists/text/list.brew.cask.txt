@@ -1,7 +1,9 @@
 1password
 1password-cli
 alacritty
+amazon-chime
 anki
+audacity
 discord
 figma
 firefox
@@ -13,10 +15,10 @@ iglance
 inspec
 itsycal
 keepingyouawake
+microsoft-teams
 miro
 nordvpn
 obsidian
-pgadmin4
 pingmenu
 rectangle
 resilio-sync
