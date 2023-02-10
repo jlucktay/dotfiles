@@ -7,7 +7,7 @@ if test -r "${package_manager_prefix:?}/etc/profile.d/bash_completion.sh"; then
 fi
 
 # Git completion
-if test -r "$HOME/git-completion.bash"; then
+if command -v git &> /dev/null && test -r "$HOME/git-completion.bash"; then
   # shellcheck disable=SC1091
   source "$HOME/git-completion.bash"
 fi

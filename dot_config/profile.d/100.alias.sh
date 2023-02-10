@@ -78,7 +78,7 @@ if command -v jq &> /dev/null; then
   alias jq='jq --sort-keys'
 fi
 
-if command -v terraform &> /dev/null; then
+if command -v git &> /dev/null && command -v terraform &> /dev/null; then
   # Run 'terraform fmt' across all files in the current git repo.
   alias tfmt='terraform fmt --check=false --diff=false --list --recursive --write "$(git rev-parse --show-toplevel)"'
 fi

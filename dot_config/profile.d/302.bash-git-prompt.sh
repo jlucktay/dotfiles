@@ -1,6 +1,6 @@
 ## Prompt setup
 # Git info in the prompt
-if ! test -f "$HOME/posh-git-prompt.sh"; then
+if ! test -r "$HOME/posh-git-prompt.sh"; then
   echo "'$HOME/posh-git-prompt.sh' is not available: https://github.com/lyze/posh-git-sh"
   return 0
 fi
