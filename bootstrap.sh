@@ -12,6 +12,7 @@ chezmoi_args=(
   --apply
   --depth 1
   --force
+  --keep-going
 )
 
 if [[ ${CHEZMOI_PURGE:-0} == 1 ]]; then
