@@ -22,7 +22,7 @@ rage v0.9.0:
     rage-keygen
 rustlings v5.2.1 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
-sniffnet v1.0.1:
+sniffnet v1.1.0:
     sniffnet
 wasm-pack v0.10.3:
     wasm-pack

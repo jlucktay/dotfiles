@@ -48,7 +48,6 @@
 /Users/james.lucktaylor/git/github.com/ovotech/drs-filter-pwr
 /Users/james.lucktaylor/git/github.com/ovotech/go-sync
 /Users/james.lucktaylor/git/github.com/ovotech/hackathon_03_2022_ovo_reach
-/Users/james.lucktaylor/git/github.com/ovotech/interview
 /Users/james.lucktaylor/git/github.com/ovotech/ovo-backstage
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-go-vanity-imports
 /Users/james.lucktaylor/git/github.com/ovotech/ownership

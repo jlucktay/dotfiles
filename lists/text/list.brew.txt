@@ -1,4 +1,7 @@
 act
+ansible
+ansible-lint
+argocd
 autojump
 awscli
 bash
@@ -7,6 +10,7 @@ bat
 bats-core
 bdw-gc
 binutils
+black
 brew-caveats
 brotli
 c-ares
@@ -15,7 +19,6 @@ capstone
 checkov
 chezmoi
 circleci
-cloudquery
 cmake
 coreutils
 curl
@@ -26,6 +29,7 @@ docutils
 fd
 flux
 fluxctl
+fq
 fzf
 gdbm
 gettext
@@ -94,6 +98,7 @@ parallel
 pcre2
 pixman
 pkg-config
+pygments
 python-tabulate
 python-typing-extensions
 python@3.10

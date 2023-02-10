@@ -20,6 +20,7 @@ miro
 nordvpn
 obsidian
 pingmenu
+raspberry-pi-imager
 rectangle
 resilio-sync
 setapp

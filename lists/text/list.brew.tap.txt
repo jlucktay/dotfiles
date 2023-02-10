@@ -1,5 +1,4 @@
 chef/chef
-cloudquery/tap
 fluxcd/tap
 gcenx/wine
 homebrew/bundle
@@ -9,3 +8,4 @@ homebrew/core
 homebrew/services
 rafaelgarrido/caveats
 teamookla/speedtest
+wader/tap
