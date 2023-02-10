@@ -4,15 +4,15 @@
 # If the given directory is already a part of PATH, it will be removed from its current position(s).
 # It is then set at the front of PATH, to take highest priority in the search order.
 function prefix_path() {
-  # If argument is not a directory which exists, return non-zero early
+  # If argument is not a directory which exists, return early.
   if ! test -d "${1:?}"; then
-    return 1
+    return 0
   fi
 
-  # Populate array with PATH
+  # Populate array with PATH.
   IFS=':' read -ra split_path <<< "$PATH"
 
-  # If argument already present, remove from its current index(es)
+  # If argument already present, remove from its current index(es).
   for i in "${!split_path[@]}"; do
     if [[ ${split_path[i]} == "$1" ]]; then
       unset 'split_path[i]'
