@@ -1,13 +1,13 @@
 # Setup fzf
-if [[ $PATH != *${HOMEBREW_PREFIX:?}/opt/fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}${HOMEBREW_PREFIX:?}/opt/fzf/bin"
+if [[ $PATH != *${package_manager_prefix:?}/opt/fzf/bin* ]]; then
+  export PATH="${PATH:+${PATH}:}${package_manager_prefix:?}/opt/fzf/bin"
 fi
 
 # Auto-completion
 # shellcheck disable=SC1091
-[[ $- == *i* ]] && source "${HOMEBREW_PREFIX:?}/opt/fzf/shell/completion.bash" 2> /dev/null
+[[ $- == *i* ]] && source "${package_manager_prefix:?}/opt/fzf/shell/completion.bash" 2> /dev/null
 
 # Key bindings
 # shellcheck disable=SC1091
-[[ -r ${HOMEBREW_PREFIX:?}/opt/fzf/shell/key-bindings.bash ]] \
-  && source "${HOMEBREW_PREFIX:?}/opt/fzf/shell/key-bindings.bash"
+[[ -r ${package_manager_prefix:?}/opt/fzf/shell/key-bindings.bash ]] \
+  && source "${package_manager_prefix:?}/opt/fzf/shell/key-bindings.bash"

@@ -24,13 +24,13 @@ On macOS, after installing a modern version of Bash (probably with Homebrew) don
 First, append the path of the Homebrew-managed Bash binary to the list of available shells:
 
 ```
-echo "${HOMEBREW_PREFIX:?}/bin/bash" | sudo tee -a /etc/shells
+echo "${package_manager_prefix:?}/bin/bash" | sudo tee -a /etc/shells
 ```
 
 Next, use `chsh` to set it as your new default:
 
 ```
-chsh -s "${HOMEBREW_PREFIX:?}/bin/bash"
+chsh -s "${package_manager_prefix:?}/bin/bash"
 ```
 
 Finally, reboot, and rejoice!

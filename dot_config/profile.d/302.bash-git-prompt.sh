@@ -58,9 +58,9 @@ PROMPT_COMMAND=__prompt_command
 ### https://github.com/lyze/posh-git-sh/issues/42
 ### -> https://github.com/lyze/posh-git-sh/pull/61
 
-if test -r "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"; then
+if test -r "${package_manager_prefix:?}/opt/kube-ps1/share/kube-ps1.sh"; then
   # shellcheck disable=SC1091
-  source "${HOMEBREW_PREFIX:?}/opt/kube-ps1/share/kube-ps1.sh"
+  source "${package_manager_prefix:?}/opt/kube-ps1/share/kube-ps1.sh"
 fi
 
 # I'm pretty sure kube-ps1 refers to this as 'cluster' when it should say 'context'.

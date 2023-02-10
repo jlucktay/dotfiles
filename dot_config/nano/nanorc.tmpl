@@ -17,7 +17,7 @@ bind M-B prevword all
 bind M-F nextword all
 
 {{ if eq .chezmoi.os "darwin" -}}
-include {{ env "HOMEBREW_PREFIX" }}/share/nanorc/*.nanorc
+include {{ env "package_manager_prefix" }}/share/nanorc/*.nanorc
 {{- else if eq .chezmoi.os "linux" -}}
 include /usr/share/nano/*.nanorc
 {{- end }}

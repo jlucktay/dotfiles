@@ -1,9 +1,9 @@
 # Bash completion
-if test -r "${HOMEBREW_PREFIX:?}/etc/profile.d/bash_completion.sh"; then
+if test -r "${package_manager_prefix:?}/etc/profile.d/bash_completion.sh"; then
   # export BASH_COMPLETION_COMPAT_DIR="/usr/local/etc/bash_completion.d"
 
   # shellcheck disable=SC1091
-  source "${HOMEBREW_PREFIX:?}/etc/profile.d/bash_completion.sh"
+  source "${package_manager_prefix:?}/etc/profile.d/bash_completion.sh"
 fi
 
 # Git completion
@@ -32,11 +32,11 @@ if command -v brew &> /dev/null; then
 fi
 
 # Nomad CLI
-if [[ -x "${HOMEBREW_PREFIX:?}/bin/nomad" ]]; then
-  complete -C "${HOMEBREW_PREFIX:?}/bin/nomad" nomad
+if [[ -x "${package_manager_prefix:?}/bin/nomad" ]]; then
+  complete -C "${package_manager_prefix:?}/bin/nomad" nomad
 fi
 
 # SeaweedFS
-if [[ -x "${HOMEBREW_PREFIX:?}/bin/weed" ]]; then
-  complete -C "${HOMEBREW_PREFIX:?}/bin/weed" weed
+if [[ -x "${package_manager_prefix:?}/bin/weed" ]]; then
+  complete -C "${package_manager_prefix:?}/bin/weed" weed
 fi

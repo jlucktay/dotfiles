@@ -26,7 +26,7 @@ scrolling:
   history: 100000
 
 shell:
-  program: {{ env "HOMEBREW_PREFIX" }}/bin/bash
+  program: {{ env "package_manager_prefix" }}/bin/bash
   args:
     - --login
 
