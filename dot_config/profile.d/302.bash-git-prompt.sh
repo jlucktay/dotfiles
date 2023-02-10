@@ -1,10 +1,15 @@
-## Prompt setup
-# Git info in the prompt
+# Prompt setup
+if ! command -v git &> /dev/null; then
+  echo "'git' is not available."
+  return 0
+fi
+
 if ! test -r "$HOME/posh-git-prompt.sh"; then
   echo "'$HOME/posh-git-prompt.sh' is not available: https://github.com/lyze/posh-git-sh"
   return 0
 fi
 
+## Git info in the prompt
 # shellcheck disable=SC1091
 source "$HOME/posh-git-prompt.sh"
 
