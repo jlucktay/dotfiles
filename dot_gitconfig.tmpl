@@ -138,8 +138,10 @@
 
 [user]
 	name = James Lucktaylor
+{{- if (and (hasPrefix "ovo-" (lower .chezmoi.hostname)) (eq "darwin" (lower .chezmoi.os))) }}
 	email = {{ onepasswordRead "op://Personal/GitHub/public e-mail address" "my.1password.com" | trim }}
 	signingkey = {{ onepasswordRead "op://Personal/GitHub/GPG signing key" "my.1password.com" | trim }}
+{{- end }}
 	useConfigOnly = true
 
 # https://github.com/lyze/posh-git-sh#configuration-options

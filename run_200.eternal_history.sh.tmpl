@@ -2,6 +2,7 @@
 set -euo pipefail
 shopt -s inherit_errexit 2> /dev/null || true
 
+{{- if (and (hasPrefix "ovo-" (lower .chezmoi.hostname)) (eq "darwin" (lower .chezmoi.os))) }}
 # Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
 # https://stackoverflow.com/a/61345169/380599
 script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
@@ -39,3 +40,4 @@ tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
 ### To restore this file:
 # rage --decrypt --identity key.txt --output bash_eternal_history.tar.gz bash_eternal_history.tar.gz.age
 # tar -zxvf bash_eternal_history.tar.gz
+{{- end }}
