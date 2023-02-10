@@ -77,4 +77,6 @@ if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
 fi
 
 # Set the location of the Docker host socket so that various things can find Lima properly.
-export DOCKER_HOST="unix://$HOME/.lima/default/sock/docker.sock"
+if command -v limactl &> /dev/null; then
+  export DOCKER_HOST="unix://$HOME/.lima/default/sock/docker.sock"
+fi
