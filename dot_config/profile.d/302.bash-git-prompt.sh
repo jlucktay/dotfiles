@@ -1,17 +1,9 @@
 # Prompt setup
-if ! command -v git &> /dev/null; then
-  echo "'git' is not available."
-  return 0
+if command -v git &> /dev/null && test -r "$HOME/posh-git-prompt.sh"; then
+  ## Git info in the prompt
+  # shellcheck disable=SC1091
+  source "$HOME/posh-git-prompt.sh"
 fi
-
-if ! test -r "$HOME/posh-git-prompt.sh"; then
-  echo "'$HOME/posh-git-prompt.sh' is not available: https://github.com/lyze/posh-git-sh"
-  return 0
-fi
-
-## Git info in the prompt
-# shellcheck disable=SC1091
-source "$HOME/posh-git-prompt.sh"
 
 # Thanks to:
 # https://github.com/demure/dotfiles/blob/master/subbash/prompt
