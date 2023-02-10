@@ -1,4 +1,4 @@
-{{- if (and (hasPrefix "ovo-" (lower .chezmoi.hostname)) (eq "darwin" (lower .chezmoi.os))) -}}
+{{- if lookPath "op" -}}
 credentials "terraform.ovotech.org.uk" {
   token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" | trim }}"
 }
