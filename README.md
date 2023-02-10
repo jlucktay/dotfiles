@@ -7,14 +7,15 @@ My dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi).
 Run this to bootstrap a new environment:
 
 ``` shell
-curl --fail --location --silent https://git.io/jlucktay-dotfiles | bash
+curl --fail --location --silent https://raw.githubusercontent.com/jlucktay/dotfiles/main/bootstrap.sh | bash
 ```
 
 Set `CHEZMOI_PURGE=1` on the script execution to remove Chezmoi's source/config directories after initialising and
 applying:
 
 ``` shell
-curl --fail --location --silent https://git.io/jlucktay-dotfiles | CHEZMOI_PURGE=1 bash
+curl --fail --location --silent https://raw.githubusercontent.com/jlucktay/dotfiles/main/bootstrap.sh \
+  | CHEZMOI_PURGE=1 bash
 ```
 
 ### Reminders
