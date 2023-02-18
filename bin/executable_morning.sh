@@ -17,7 +17,7 @@ trap 'dslog "finish"' 0
 tool_check limactl topgrade
 
 # Refresh GitHub/OVO SSO for the day.
-open https://github.com/orgs/ovotech/teams/rdex
+open https://github.com/orgs/ovotech/teams/ovodevex/members
 
 # For Docker.
 limactl start
