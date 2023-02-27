@@ -44,7 +44,7 @@ fi
 
 # exa
 if command -v exa &> /dev/null; then
-  alias ll='exa --all --classify --colour-scale --colour=always --icons --long'
+  alias ll='exa --all --classify --colour-scale --colour=always --group-directories-first --icons --long'
 else
   alias ll='ls -l --almost-all --classify'
 fi
