@@ -42,7 +42,12 @@ else
   alias ls='ls --color --human-readable'
 fi
 
-alias ll='ls -l --almost-all --classify'
+# exa
+if command -v exa &> /dev/null; then
+  alias ll='exa --all --classify --colour-scale --colour=always --icons --long'
+else
+  alias ll='ls -l --almost-all --classify'
+fi
 
 # Visual Studio Code
 if command -v code &> /dev/null; then
