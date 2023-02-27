@@ -45,6 +45,7 @@ fi
 # exa
 if command -v exa &> /dev/null; then
   alias ll='exa --all --classify --colour-scale --colour=always --git --group-directories-first --icons --long'
+  alias lll='ll --grid'
 else
   alias ll='ls -l --almost-all --classify'
 fi
