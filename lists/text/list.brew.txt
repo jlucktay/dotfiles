@@ -20,12 +20,15 @@ checkov
 chezmoi
 circleci
 cmake
+consul
 coreutils
 curl
 docker
+docker-buildx
 docker-compose
 docker-credential-helper
 docutils
+exa
 fd
 flux
 fluxctl
@@ -51,6 +54,7 @@ gron
 guile
 hadolint
 helm
+httpie
 hyperfine
 icu4c
 ipcalc
@@ -63,6 +67,7 @@ kubeconform
 kubectx
 kubernetes-cli
 libevent
+libgit2
 libidn2
 libnghttp2
 libpng
@@ -80,6 +85,7 @@ lima
 lz4
 lzo
 m4
+mage
 make
 mpdecimal
 nano
@@ -88,6 +94,7 @@ ncdu
 ncurses
 nettle
 node
+nomad
 nvm
 oniguruma
 openldap

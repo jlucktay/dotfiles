@@ -5,6 +5,7 @@
 /Users/james.lucktaylor/git/github.com/dtolnay/syn
 /Users/james.lucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/james.lucktaylor/git/github.com/grpc/grpc-go
+/Users/james.lucktaylor/git/github.com/hashicorp/learn-nomad-cluster-setup
 /Users/james.lucktaylor/git/github.com/hashicorp/packer
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform-provider-aws
@@ -19,14 +20,17 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/cpp-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit
 /Users/james.lucktaylor/git/github.com/jlucktay/google-cloud-storage
+/Users/james.lucktaylor/git/github.com/jlucktay/hashicorp-homebrew-tap
 /Users/james.lucktaylor/git/github.com/jlucktay/hello-react
 /Users/james.lucktaylor/git/github.com/jlucktay/jameslucktaylor.info
 /Users/james.lucktaylor/git/github.com/jlucktay/jlucktay
 /Users/james.lucktaylor/git/github.com/jlucktay/jlucktay.dev
 /Users/james.lucktaylor/git/github.com/jlucktay/katkas-website
 /Users/james.lucktaylor/git/github.com/jlucktay/kubernetes-workbench
+/Users/james.lucktaylor/git/github.com/jlucktay/meilisearch
 /Users/james.lucktaylor/git/github.com/jlucktay/meta-tf
 /Users/james.lucktaylor/git/github.com/jlucktay/newrustacean.com
+/Users/james.lucktaylor/git/github.com/jlucktay/nomad
 /Users/james.lucktaylor/git/github.com/jlucktay/ovo-backstage
 /Users/james.lucktaylor/git/github.com/jlucktay/ovotech-interview
 /Users/james.lucktaylor/git/github.com/jlucktay/packer-workbench
@@ -41,6 +45,7 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/zig-workbench
 /Users/james.lucktaylor/git/github.com/laurent22/rsync-time-backup
 /Users/james.lucktaylor/git/github.com/LondonGophers/StudyGroup
+/Users/james.lucktaylor/git/github.com/meilisearch/meilisearch
 /Users/james.lucktaylor/git/github.com/mitsuhiko/insta
 /Users/james.lucktaylor/git/github.com/NickFitton/AdventOfCode
 /Users/james.lucktaylor/git/github.com/OpenFactorioServerManager/factorio-server-manager
@@ -49,6 +54,7 @@
 /Users/james.lucktaylor/git/github.com/ovotech/go-sync
 /Users/james.lucktaylor/git/github.com/ovotech/hackathon_03_2022_ovo_reach
 /Users/james.lucktaylor/git/github.com/ovotech/ovo-backstage
+/Users/james.lucktaylor/git/github.com/ovotech/ovodevex-github-actions
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-go-vanity-imports
 /Users/james.lucktaylor/git/github.com/ovotech/ownership
 /Users/james.lucktaylor/git/github.com/ovotech/route53-as-code
@@ -87,12 +93,10 @@
 /Users/james.lucktaylor/git/go.jlucktay.dev/playstation-share-dedupe
 /Users/james.lucktaylor/git/go.jlucktay.dev/rate-limit
 /Users/james.lucktaylor/git/go.jlucktay.dev/recordscratch
-/Users/james.lucktaylor/git/go.jlucktay.dev/redis_exporter
 /Users/james.lucktaylor/git/go.jlucktay.dev/rest-api
 /Users/james.lucktaylor/git/go.jlucktay.dev/saw
 /Users/james.lucktaylor/git/go.jlucktay.dev/servers.menagerie.games
 /Users/james.lucktaylor/git/go.jlucktay.dev/stack
-/Users/james.lucktaylor/git/go.jlucktay.dev/terratest-tyk-aws
 /Users/james.lucktaylor/git/go.jlucktay.dev/tyk-k8s
 /Users/james.lucktaylor/git/go.jlucktay.dev/version
 /Users/james.lucktaylor/git/go.jlucktay.dev/zxcvbn-go

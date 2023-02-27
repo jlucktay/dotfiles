@@ -8,6 +8,7 @@ discord
 figma
 firefox
 font-jetbrains-mono
+font-jetbrains-mono-nerd-font
 google-cloud-sdk
 google-drive
 gpg-suite-no-mail

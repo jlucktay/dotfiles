@@ -1,6 +1,7 @@
 chef/chef
 fluxcd/tap
 gcenx/wine
+hashicorp/tap
 homebrew/bundle
 homebrew/cask
 homebrew/cask-fonts

@@ -1,6 +1,6 @@
 autopep8==2.0.1
 docutils==0.19
-pip==23.0
+pip==23.0.1
 pycodestyle==2.10.0
 Pygments==2.14.0
 PyYAML==6.0
