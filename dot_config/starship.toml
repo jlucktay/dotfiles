@@ -1,0 +1,468 @@
+# Get editor completions based on the config schema.
+'$schema' = 'https://starship.rs/config-schema.json'
+
+# https://starship.rs/config/#default-prompt-format
+format = """($username\
+$hostname\
+$localip\
+$kubernetes\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$package\
+$golang\
+$nodejs\
+$python\
+$rust\
+$terraform\
+$os\
+$container\
+$shell\
+$shlvl\
+$jobs\
+$sudo\
+$cmd_duration\n)\
+$aws$gcloud\n\
+$time$directory$status$character"""
+
+# Inserts a blank line between shell prompts.
+add_newline = true
+
+### Programming languages.
+
+[golang]
+style = '#29beb0'
+symbol = ' '
+
+[nodejs]
+style = '#68a063'
+symbol = ' '
+
+[package]
+display_private = true
+symbol = ' '
+
+[python]
+style = '#68a063'
+symbol = ' '
+
+[rust]
+format = 'via [$symbol($numver )(\($toolchain\) )]($style)'
+style = '#f46623'
+symbol = ' '
+
+### Cloud platforms.
+
+[aws]
+format = 'on [$symbol($profile )(\([$region](#ffffff)\) )]($style)'
+style = 'bold #ff9900'
+symbol = '󰸏 '
+
+[aws.profile_aliases]
+
+[aws.region_aliases]
+# https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-available-regions
+af-south-1 = "Africa (Cape Town)"
+ap-east-1 = "Asia Pacific (Hong Kong)"
+ap-northeast-1 = "Asia Pacific (Tokyo)"
+ap-northeast-2 = "Asia Pacific (Seoul)"
+ap-northeast-3 = "Asia Pacific (Osaka)"
+ap-south-1 = "Asia Pacific (Mumbai)"
+ap-south-2 = "Asia Pacific (Hyderabad)"
+ap-southeast-1 = "Asia Pacific (Singapore)"
+ap-southeast-2 = "Asia Pacific (Sydney)"
+ap-southeast-3 = "Asia Pacific (Jakarta)"
+ap-southeast-4 = "Asia Pacific (Melbourne)"
+ca-central-1 = "Canada (Central)"
+eu-central-1 = "Europe (Frankfurt)"
+eu-central-2 = "Europe (Zurich)"
+eu-north-1 = "Europe (Stockholm)"
+eu-south-1 = "Europe (Milan)"
+eu-south-2 = "Europe (Spain)"
+eu-west-1 = "Europe (Ireland)"
+eu-west-2 = "Europe (London)"
+eu-west-3 = "Europe (Paris)"
+me-central-1 = "Middle East (UAE)"
+me-south-1 = "Middle East (Bahrain)"
+sa-east-1 = "South America (São Paulo)"
+us-east-1 = "US East (N. Virginia)"
+us-east-2 = "US East (Ohio)"
+us-west-1 = "US West (N. California)"
+us-west-2 = "US West (Oregon)"
+
+[azure]
+disabled = true
+
+[gcloud]
+format = 'on [$symbol$active (\($project[[/](#a0c2f9)$region](#ffffff)\))]($style) '
+style = 'bold #4285f4'
+symbol = '󱇶 '
+
+[gcloud.project_aliases]
+
+[gcloud.region_aliases]
+# curl --location --silent https://raw.githubusercontent.com/GoogleCloudPlatform/region-picker/main/data/regions.json \
+#   | gron | rg --fixed-strings '.name = '
+asia-east1 = "Taiwan, Republic of China"
+asia-east2 = "Hong Kong, People's Republic of China"
+asia-northeast1 = "Tokyo, Japan"
+asia-northeast2 = "Osaka, Japan"
+asia-northeast3 = "Seoul, South Korea"
+asia-south1 = "Mumbai, India"
+asia-south2 = "Delhi, India"
+asia-southeast1 = "Singapore"
+asia-southeast2 = "Jakarta, Indonesia"
+australia-southeast1 = "Sydney, Australia"
+australia-southeast2 = "Melbourne, Australia"
+europe-central2 = "Warsaw, Poland"
+europe-north1 = "Hamina, Finland"
+europe-southwest1 = "Madrid, Spain"
+europe-west1 = "Belgium"
+europe-west2 = "London, UK"
+europe-west3 = "Frankfurt, Germany"
+europe-west4 = "Netherlands"
+europe-west6 = "Zurich, Switzerland"
+europe-west8 = "Milan, Italy"
+europe-west9 = "Paris, France"
+northamerica-northeast1 = "Montréal, Canada"
+northamerica-northeast2 = "Toronto, Canada"
+southamerica-east1 = "São Paulo, Brazil"
+southamerica-west1 = "Santiago, Chile"
+us-central1 = "Iowa, USA"
+us-east1 = "South Carolina, USA"
+us-east4 = "Northern Virginia, USA"
+us-east5 = "Columbus, Ohio, USA"
+us-south1 = "Dallas, Texas, USA"
+us-west1 = "Oregon, USA"
+us-west2 = "Los Angeles, California, USA"
+us-west3 = "Salt Lake City, Utah, USA"
+us-west4 = "Las Vegas, Nevada, USA"
+
+### Git.
+
+[git_branch]
+always_show_remote = true
+ignore_branches = ['main']
+symbol = ' '
+truncation_length = 16
+
+[git_commit]
+tag_disabled = false
+
+[git_metrics]
+disabled = false
+
+[git_state]
+
+[git_status]
+ahead = '[⇡${count}](green)'
+behind = '[⇣${count}](red)'
+diverged = '[↕️ ⇡${ahead_count} ⇣${behind_count}](yellow)'
+up_to_date = '[≡](cyan)'
+
+conflicted = '!'
+deleted = '-'
+modified = '~'
+renamed = '»'
+staged = '+'
+stashed = '📦'
+untracked = '?'
+
+format = '$ahead_behind[$staged$renamed$deleted$conflicted](green)[$untracked$modified](red)$stashed '
+
+### Miscellaneous prompt/shell things.
+
+[character]
+format = '$symbol '
+error_symbol = '[>](bold red)'
+success_symbol = '[✅>](bright-green)'
+
+[cmd_duration]
+show_milliseconds = true
+show_notifications = false
+style = 'cyan'
+
+[directory]
+read_only = ' '
+truncate_to_repo = true
+truncation_length = 3
+
+[jobs]
+
+[shell]
+bash_indicator = 'bash'
+
+[shlvl]
+disabled = false
+repeat = true
+
+[status]
+disabled = false
+format = '[$symbol$status]($style) '
+pipestatus = true
+style = 'bright-red'
+
+[sudo]
+disabled = false
+
+[time]
+disabled = false
+format = '[$time]($style) '
+time_format = '%FT%R'
+
+### Current system details.
+
+[hostname]
+style = 'bold green'
+
+[localip]
+
+[memory_usage]
+disabled = true
+# format = 'with $symbol[${ram}( | ${swap})]($style) '
+# symbol = ' '
+# threshold = 50
+
+[os]
+
+[os.symbols]
+Alpine = ' '
+Amazon = ' '
+Android = ' '
+Arch = ' '
+CentOS = ' '
+Debian = ' '
+DragonFly = ' '
+Emscripten = ' '
+EndeavourOS = ' '
+Fedora = ' '
+FreeBSD = ' '
+Garuda = '﯑ '
+Gentoo = ' '
+HardenedBSD = 'ﲊ '
+Illumos = ' '
+Linux = ' '
+Macos = ' '
+Manjaro = ' '
+Mariner = ' '
+MidnightBSD = ' '
+Mint = ' '
+NetBSD = ' '
+NixOS = ' '
+OpenBSD = ' '
+openSUSE = ' '
+OpenCloudOS = '☁️ '
+openEuler = '🦉 '
+OracleLinux = ' '
+Pop = ' '
+Raspbian = ' '
+Redhat = ' '
+RedHatEnterprise = ' '
+Redox = ' '
+Solus = 'ﴱ '
+SUSE = ' '
+Ubuntu = ' '
+Unknown = ' '
+Windows = ' '
+
+[username]
+format = '[$user]($style) on '
+
+### Kubernetes.
+
+[kubernetes]
+disabled = false
+# format = '[$symbol$context:$namespace \($user|$cluster\)]($style) '
+format = '[$symbol$context:$namespace]($style) '
+style = 'fg:#326ce5 bg:#ffffff'
+symbol = '󱃾 '
+
+detect_extensions = []
+detect_files = []
+detect_folders = ['clusters']
+
+[kubernetes.context_aliases]
+'^gke_(?P<var_context>[^_]+)_[^_]+_[^_]+$' = '$var_context'
+# '^gke_(?P<var_context>[^_]+)_(?P<var_region>[^_]+)_[^_]+$' = '$var_context@$var_region'
+
+[kubernetes.user_aliases]
+'^gke_(?P<var_user>[^_]+)_[^_]+_[^_]+$' = '$var_user'
+
+### Terraform.
+
+[terraform]
+format = 'via [$symbol$workspace (\($version\))]($style) '
+style = '#844fba'
+symbol = '󱁢 '
+
+### Disabled modules.
+
+[battery]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[c]
+disabled = true
+
+[cmake]
+disabled = true
+
+[cobol]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[dart]
+disabled = true
+
+[deno]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[dotnet]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[env_var]
+# disabled = true
+
+[erlang]
+disabled = true
+
+[fennel]
+disabled = true
+
+[fill]
+disabled = true
+
+[fossil_branch]
+disabled = true
+
+[guix_shell]
+disabled = true
+
+[gradle]
+disabled = true
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[helm]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[java]
+disabled = true
+
+[julia]
+disabled = true
+
+[kotlin]
+disabled = true
+
+[line_break]
+disabled = true
+
+[lua]
+disabled = true
+
+[meson]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[opa]
+disabled = true
+
+[openstack]
+disabled = true
+
+[perl]
+disabled = true
+
+[php]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[rlang]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[ruby]
+disabled = true
+
+[scala]
+disabled = true
+
+[singularity]
+disabled = true
+
+[spack]
+disabled = true
+
+[swift]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vcsh]
+disabled = true
+
+[vlang]
+disabled = true
+
+[zig]
+disabled = true
+
+### ???
+
+[container]
+disabled = false
+symbol = '⬢'
