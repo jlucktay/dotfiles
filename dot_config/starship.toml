@@ -157,6 +157,8 @@ added_style = 'green'
 deleted_style = 'red'
 
 [git_state]
+disabled = false
+format = '([$state( $progress_current/$progress_total)]($style) )'
 
 [git_status]
 ahead = '[⇡${count}](bold bright-green)'
@@ -172,7 +174,7 @@ staged = '+'
 stashed = '📦'
 untracked = '?'
 
-format = '$ahead_behind[$staged$renamed$deleted$conflicted](green)[$untracked$modified](red)$stashed '
+format = '($ahead_behind[$staged$renamed$deleted$conflicted](green)[$untracked$modified](red)$stashed )'
 
 ### Miscellaneous prompt/shell things.
 
