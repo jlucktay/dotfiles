@@ -174,7 +174,7 @@ staged = '+'
 stashed = '📦'
 untracked = '?'
 
-format = '($ahead_behind[$staged$renamed$deleted$conflicted](green)[$untracked$modified](red)$stashed )'
+format = '($ahead_behind[$staged$renamed$deleted$conflicted](green)[$modified$untracked](red)$stashed )'
 
 ### Miscellaneous prompt/shell things.
 
