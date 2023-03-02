@@ -182,6 +182,7 @@ error_symbol = '[>](bold red)'
 success_symbol = '[✅>](bright-green)'
 
 [cmd_duration]
+disabled = true
 show_milliseconds = true
 show_notifications = false
 style = 'cyan'
