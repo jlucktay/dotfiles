@@ -24,8 +24,8 @@ $shlvl\
 $jobs\
 $sudo\
 $cmd_duration\n)\
-$aws$gcloud\n\
-$time$directory$status$character"""
+$aws$gcloud$status\n\
+$time$directory$character"""
 
 # Inserts a blank line between shell prompts.
 add_newline = true
@@ -181,7 +181,7 @@ format = '($ahead_behind[$staged$renamed$deleted$conflicted](green)[$modified$un
 [character]
 format = '$symbol '
 error_symbol = '[>](bold red)'
-success_symbol = '[✅>](bright-green)'
+success_symbol = '[>](bright-green)'
 
 [cmd_duration]
 disabled = true
@@ -206,9 +206,18 @@ repeat = true
 
 [status]
 disabled = false
-format = '[$symbol$status]($style) '
+format = '$symbol'
 pipestatus = true
-style = 'bright-red'
+style = ''
+
+map_symbol = true
+
+not_executable_symbol = '🚫'
+not_found_symbol = '🔍'
+sigint_symbol = '🧱'
+signal_symbol = '🚦'
+success_symbol = '✅'
+symbol = '❌[$status](bright-red)'
 
 [sudo]
 disabled = true
