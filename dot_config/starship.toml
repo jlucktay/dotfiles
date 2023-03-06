@@ -212,10 +212,10 @@ style = ''
 
 map_symbol = true
 
-not_executable_symbol = '🚫'
-not_found_symbol = '🔍'
-sigint_symbol = '🧱'
-signal_symbol = '🚦'
+not_executable_symbol = '🚫[$common_meaning$signal_name$maybe_int](bright-purple)'
+not_found_symbol = '🔍[$common_meaning$signal_name$maybe_int](bright-purple)'
+sigint_symbol = '🧱[$common_meaning$signal_name$maybe_int](bright-purple)'
+signal_symbol = '🚦[$common_meaning$signal_name$maybe_int](bright-purple)'
 success_symbol = '✅'
 symbol = '❌[$status](bright-red)'
 
