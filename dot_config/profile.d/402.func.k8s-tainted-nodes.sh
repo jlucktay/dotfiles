@@ -21,33 +21,37 @@ if command -v kubectl &> /dev/null; then
     mapfile -t sort_arr <<< "$sort_result"
 
     for resource_type in "${sort_arr[@]}"; do
-      echo -n "Resource type '$resource_type'"
-
-      local -a kubectl_flags=()
-
-      if [[ -n $1 ]]; then
-        kubectl_flags+=("--namespace=$1")
-        echo " in namespace '$1'."
-      fi
-
-      kubectl_flags+=("get")
-
-      if [[ -z $1 ]]; then
-        kubectl_flags+=("--all-namespaces")
-        echo " in all namespaces."
-      fi
-
-      kubectl_flags+=(
-        "--output=wide"
+      local headline="Resource type '$resource_type'"
+      local -a kubectl_flags=(
+        "get"
         "$resource_type"
-        "--ignore-not-found"
-        "--show-kind"
-        "--show-labels"
       )
 
       # If a namespace was given as the optional first argument, filter by that.
-      kubectl "${kubectl_flags[@]}"
-      echo
+      if [[ -n $1 ]]; then
+        kubectl_flags+=("--namespace=$1")
+        headline+=" in namespace '$1'."
+      else
+        kubectl_flags+=("--all-namespaces")
+        headline+=" in all namespaces."
+      fi
+
+      kubectl_flags+=(
+        "--ignore-not-found"
+        "--show-kind"
+      )
+
+      local kubectl_get_output
+      local -a kubectl_get_output_arr
+      kubectl_get_output=$(kubectl "${kubectl_flags[@]}")
+      mapfile -t kubectl_get_output_arr <<< "$kubectl_get_output"
+
+      if [[ ${#kubectl_get_output_arr[@]} -gt 0 ]] && [[ ${#kubectl_get_output_arr[0]} -gt 0 ]]; then
+        printf "%s\n%s\n\n" "$headline" "$kubectl_get_output"
+      else
+        echo -n .
+      fi
+
     done
   }
 
