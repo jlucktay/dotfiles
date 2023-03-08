@@ -207,7 +207,6 @@ repeat = true
 [status]
 disabled = false
 format = '$symbol'
-pipestatus = true
 style = ''
 
 map_symbol = true
@@ -218,6 +217,9 @@ sigint_symbol = '🧱[$common_meaning$signal_name$maybe_int](bright-purple)'
 signal_symbol = '🚦[$common_meaning$signal_name$maybe_int](bright-purple)'
 success_symbol = '✅'
 symbol = '❌[$status](bright-red)'
+
+pipestatus = true
+pipestatus_format = '[\[$pipestatus\] => $symbol](fg:#ffffff bg:#444444)'
 
 [sudo]
 disabled = true
