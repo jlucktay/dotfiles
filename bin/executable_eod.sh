@@ -29,4 +29,5 @@ if [[ ${dpa//[[:blank:]]/} != "0" ]]; then
   err "non-zero number of containers still running"
 fi
 
+dslog "limactl stop"
 limactl stop

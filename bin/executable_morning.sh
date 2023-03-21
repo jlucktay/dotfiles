@@ -20,6 +20,9 @@ tool_check limactl topgrade
 open https://github.com/orgs/ovotech/teams/ovodevex/members
 
 # For Docker.
-limactl start
+dslog "limactl start default"
+limactl start default
 
+# Update all of the things.
+dslog "topgrade"
 topgrade
