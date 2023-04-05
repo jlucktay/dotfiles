@@ -14,7 +14,7 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check ffmpeg
+tool_check ffmpeg ffprobe jq
 
 ### Set up usage/help output
 function usage() {
@@ -33,7 +33,6 @@ HEREDOC
 
 ### Get flags ready to parse given arguments
 declare input_file=""
-declare output_file=""
 
 for i in "$@"; do
   case $i in
@@ -47,17 +46,13 @@ for i in "$@"; do
   esac
 done
 
-if [[ $# -ne 2 ]]; then
+if [[ $# -ne 1 ]]; then
   usage
-  err "need exactly two arguments; input file, and output file"
+  err "need exactly one argument; input file"
 fi
 
 input_file=$1
 readonly input_file
-shift
-
-output_file=$1
-readonly output_file
 shift
 
 if [[ -z $input_file ]]; then
@@ -68,8 +63,35 @@ if [[ ! -r $input_file ]]; then
   err "can't read input file '$input_file'"
 fi
 
+# Derive name of output file based on input file, and maybe replace the video codec while we're at it.
+declare output_file=""
+
+codec_name=$(
+  ffprobe -i "$input_file" -print_format json -show_streams 2> /dev/null \
+    | jq --raw-output '.streams[] | select( .codec_type == "video" ) | .codec_name'
+)
+
+# Save current state of the 'nocasematch' shell option.
+if ! current_ncm_setting=$(shopt -p nocasematch); then
+  :
+fi
+
+# Do case-insensitive string replacement of old codec name with new.
+shopt -s nocasematch
+output_file=${input_file//$codec_name/"VP9"}
+
+# Revert to the saved/previous state of the 'nocasematch' shell option.
+eval "$current_ncm_setting"
+
+# Fix up output file extension.
+output_file=${output_file%.*}.webm
+
 if [[ -z $output_file ]]; then
   err "no output file"
+fi
+
+if [[ $output_file == "$input_file" ]]; then
+  err "output file '$output_file' exactly matches input file '$input_file'"
 fi
 
 if [[ -f $output_file ]]; then
@@ -80,7 +102,10 @@ if [[ ${#output_file} -lt 5 ]] || [[ ${output_file: -5} != '.webm' ]]; then
   err "output file '$output_file' should end with the '.webm' extension"
 fi
 
-plf_prefix="ffmpeg-passlogfile-$(gdn)"
+input_file_base=$(basename "$input_file")
+readonly input_file_base
+
+plf_prefix="ffmpeg-passlogfile-${input_file_base// /_}-$(gdn)"
 readonly plf_prefix
 
 common_flags=(
@@ -109,7 +134,7 @@ common_flags=(
 #
 # The two-pass logfile is generated in this first run.
 (
-  set -vx
+  set -x
   ffmpeg "${common_flags[@]}" -pass 1 -an -f null /dev/null
 )
 
@@ -121,6 +146,6 @@ common_flags=(
 #
 # The two-pass logfile is consumed in this second run.
 (
-  set -vx
+  set -x
   ffmpeg "${common_flags[@]}" -pass 2 -codec:a libopus "$output_file"
 )
