@@ -76,7 +76,7 @@ if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
   alias git='git-branchless wrap --'
 fi
 
-# Set the location of the Docker host socket so that various things can find Lima properly.
+# Set the location of the Docker host socket so that various things can find Lima's Docker VM properly.
 if command -v limactl &> /dev/null; then
-  export DOCKER_HOST="unix://$HOME/.lima/default/sock/docker.sock"
+  export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
 fi
