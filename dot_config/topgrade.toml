@@ -17,6 +17,7 @@ only = [
   "gcloud",
   "github_cli_extensions",
   "go",
+  "krew",
   "pip3",
   "rustup",
 ]

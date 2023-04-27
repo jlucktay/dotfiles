@@ -36,6 +36,11 @@ function prefix_path() {
 # 1) the '/etc/paths' file, and
 # 2) the files under the '/etc/paths.d/' directory
 
+# To be able to run kubectl plugins.
+if command -v kubectl-krew &> /dev/null; then
+  prefix_path "$HOME/.krew/bin"
+fi
+
 prefix_path "/usr/local/sbin"
 
 # https://formulae.brew.sh/cask/google-cloud-sdk
