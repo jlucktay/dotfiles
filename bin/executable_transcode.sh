@@ -122,21 +122,29 @@ common_flags=(
 
   # Enable row-based multithreading.
   -row-mt 1
+)
 
+prefix_without_timestamp=${plf_prefix%-*}
+
+# If the log file already exists (e.g. from a previous run) then skip pass 1 and use the found log file for pass 2.
+if compgen_result=$(compgen -G "$prefix_without_timestamp"*); then
+  existing_plf=${compgen_result%-*}
+  common_flags+=(-passlogfile "$existing_plf")
+else
   # Set filename prefix of log file for pass 1 to generate and pass 2 to consume.
-  -passlogfile "$plf_prefix"
-)
+  common_flags+=(-passlogfile "$plf_prefix")
 
-# Pass 1 of 2:
-#   '-an' skips audio.
-#   '-f null' sets output file format to null.
-#   '/dev/null' is where the output goes  i.e. nowhere.
-#
-# The two-pass logfile is generated in this first run.
-(
-  set -x
-  ffmpeg "${common_flags[@]}" -pass 1 -an -f null /dev/null
-)
+  # Pass 1 of 2:
+  #   '-an' skips audio.
+  #   '-f null' sets output file format to null.
+  #   '/dev/null' is where the output goes  i.e. nowhere.
+  #
+  # The two-pass logfile is generated in this first run.
+  (
+    set -x
+    ffmpeg "${common_flags[@]}" -pass 1 -an -f null /dev/null
+  )
+fi
 
 # Pass 2 of 2:
 #   '-codec:a libopus' sets audio codec to transcode into.
