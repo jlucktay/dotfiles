@@ -206,18 +206,24 @@
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.showExitAlert": false,
   "terraform.codelens.referenceCount": true,
-  "update.showReleaseNotes": false,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
-    "vs-kubernetes.knownKubeconfigs": ["/Users/jameslucktaylor/.kube/config"],
-    "vs-kubernetes.kubeconfig": "/Users/jameslucktaylor/.kube/config"
+    "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
+    "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
+    "vscode-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
+    "vscode-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
+    "vscode-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
   },
+  "vscode-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
+  "vscode-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
+  "vscode-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
   "window.closeWhenEmpty": true,
   "window.commandCenter": true,
   "window.newWindowDimensions": "maximized",
   "window.openWithoutArgumentsInNewWindow": "on",
   "window.restoreWindows": "preserve",
   "window.title": "${activeFolderMedium}/${activeEditorShort}${separator}${rootName}",
+  "workbench.colorTheme": "Default Dark+",
   "workbench.editor.decorations.colors": true,
   "workbench.editorAssociations": {
     "*.ipynb": "jupyter-notebook"

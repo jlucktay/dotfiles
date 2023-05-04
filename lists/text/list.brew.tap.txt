@@ -1,5 +1,4 @@
-chef/chef
-fluxcd/tap
+fairwindsops/tap
 gcenx/wine
 hashicorp/tap
 homebrew/bundle
@@ -7,6 +6,7 @@ homebrew/cask
 homebrew/cask-fonts
 homebrew/core
 homebrew/services
+kubescape/tap
 rafaelgarrido/caveats
 teamookla/speedtest
 wader/tap

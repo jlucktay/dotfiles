@@ -4,6 +4,7 @@ alacritty
 amazon-chime
 anki
 audacity
+bartender
 discord
 figma
 firefox
@@ -13,7 +14,6 @@ google-cloud-sdk
 google-drive
 gpg-suite-no-mail
 iglance
-inspec
 itsycal
 keepingyouawake
 microsoft-teams
@@ -24,7 +24,6 @@ pingmenu
 raspberry-pi-imager
 rectangle
 resilio-sync
-setapp
 slack
 steam
 tyke

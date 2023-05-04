@@ -134,7 +134,3 @@ process_list "$pip_list_cmd" "pip3"
 # Ruby gems
 gem_list_cmd="gem list --no-verbose"
 process_list "$gem_list_cmd" "gem"
-
-# SetApp applications
-setapp_list_cmd="fd --max-depth 1 --type directory '.*' /Applications/Setapp/"
-process_list "$setapp_list_cmd" "setapp"

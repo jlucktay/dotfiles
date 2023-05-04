@@ -1,17 +1,17 @@
-bacon v2.7.0:
+bacon v2.8.1:
     bacon
 cargo-cache v0.8.3:
     cargo-cache
-cargo-careful v0.3.0:
+cargo-careful v0.3.2:
     cargo-careful
 cargo-info v0.7.3:
     cargo-info
-cargo-semver-checks v0.18.3:
+cargo-semver-checks v0.20.0:
     cargo-semver-checks
-cargo-update v12.0.0:
+cargo-update v13.0.1:
     cargo-install-update
     cargo-install-update-config
-code-radio-cli v1.0.2:
+code-radio-cli v1.0.3:
     code-radio
 czkawka_cli v5.1.0:
     czkawka_cli
@@ -21,18 +21,18 @@ git-branchless v0.7.0:
     git-branchless
 just v1.13.0:
     just
-miniserve v0.23.0:
+miniserve v0.23.2:
     miniserve
-rage v0.9.0:
+rage v0.9.1:
     rage
     rage-keygen
 rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
-sniffnet v1.1.1:
+sniffnet v1.1.4:
     sniffnet
-starship v1.13.1:
+starship v1.14.2:
     starship
-wasm-pack v0.10.3:
+wasm-pack v0.11.0:
     wasm-pack
 wiki-tui v0.6.4:
     wiki-tui
