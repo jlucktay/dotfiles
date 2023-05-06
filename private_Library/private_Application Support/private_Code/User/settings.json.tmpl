@@ -208,11 +208,11 @@
   "terraform.codelens.referenceCount": true,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
+    "vs-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
     "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
     "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
-    "vscode-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
-    "vscode-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
-    "vscode-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    "vs-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
+    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
   },
   "vscode-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
   "vscode-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
