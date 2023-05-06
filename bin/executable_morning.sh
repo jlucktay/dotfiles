@@ -16,6 +16,9 @@ trap 'dslog "finish"' 0
 
 tool_check limactl topgrade
 
+# Check the MLB.TV schedule.
+open https://www.mlb.com/live-stream-games
+
 # Refresh GitHub/OVO SSO for the day.
 open https://github.com/orgs/ovotech/teams/ovodevex/members
 
