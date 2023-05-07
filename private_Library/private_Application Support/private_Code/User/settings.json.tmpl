@@ -106,13 +106,18 @@
   "git.autofetchPeriod": 30,
   "git.confirmSync": false,
   "git.countBadge": "off",
-  "git.defaultCloneDirectory": "~/git",
+  "git.defaultCloneDirectory": "{{ .chezmoi.homeDir }}/git",
   "git.enableStatusBarSync": false,
   "git.fetchOnPull": true,
   "git.ignoreLimitWarning": true,
   "git.openRepositoryInParentFolders": "always",
   "go.alternateTools": {
-    "gometalinter": "{{ env "package_manager_prefix" }}/bin/golangci-lint"
+    {{- if lookPath "go" }}
+    "go": "{{ lookPath "go" }}",
+    {{- end }}
+    {{- if lookPath "golangci-lint" }}
+    "gometalinter": "{{ lookPath "golangci-lint" }}",
+    {{- end }}
   },
   "go.editorContextMenuCommands": {
     "fillStruct": true
@@ -121,7 +126,7 @@
   "go.lintTool": "golangci-lint",
   "go.testExplorer.packageDisplayMode": "nested",
   "go.testFlags": ["-count=1", "-v"],
-  "go.toolsGopath": "~/vscode-go",
+  "go.toolsGopath": "{{ .chezmoi.homeDir }}/vscode-go",
   "go.toolsManagement.autoUpdate": true,
   "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
