@@ -14,14 +14,27 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check topgrade
+declare -ar morning_commands=(
+  # Check the MLB.TV schedule.
+  "open 'https://www.mlb.com/live-stream-games'"
 
-# Check the MLB.TV schedule.
-open https://www.mlb.com/live-stream-games
+  # Refresh GitHub/OVO SSO for the day.
+  "open 'https://github.com/orgs/ovotech/teams/ovodevex/members'"
 
-# Refresh GitHub/OVO SSO for the day.
-open https://github.com/orgs/ovotech/teams/ovodevex/members
+  # Update all of the things.
+  topgrade
+)
 
-# Update all of the things.
-dslog "topgrade"
-topgrade
+tf_od=$(terraform version --json | jq '.terraform_outdated')
+
+if [[ $tf_od == "true" ]]; then
+  # Upgrade Terraform if it is out of date.
+  morning_commands+=(tfenv_upgrade)
+fi
+
+tool_check "${morning_commands[@]}"
+
+for mc in "${morning_commands[@]}"; do
+  dslog "$mc"
+  eval "$mc"
+done
