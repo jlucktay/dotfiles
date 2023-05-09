@@ -14,7 +14,7 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check docker limactl
+tool_check docker
 
 if ! docker stats --no-stream &> /dev/null; then
   echo "Docker daemon is not running."
@@ -28,6 +28,3 @@ fi
 if [[ ${dpa//[[:blank:]]/} != "0" ]]; then
   err "non-zero number of containers still running"
 fi
-
-dslog "limactl stop docker"
-limactl stop docker

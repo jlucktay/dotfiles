@@ -14,17 +14,13 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check limactl topgrade
+tool_check topgrade
 
 # Check the MLB.TV schedule.
 open https://www.mlb.com/live-stream-games
 
 # Refresh GitHub/OVO SSO for the day.
 open https://github.com/orgs/ovotech/teams/ovodevex/members
-
-# For Docker.
-dslog "limactl start docker"
-limactl start docker
 
 # Update all of the things.
 dslog "topgrade"

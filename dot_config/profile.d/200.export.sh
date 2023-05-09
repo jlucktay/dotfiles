@@ -52,9 +52,17 @@ fi
 prefix_path "${package_manager_prefix:?}/opt/curl/bin"
 prefix_path "${package_manager_prefix:?}/opt/make/libexec/gnubin"
 prefix_path "${package_manager_prefix:?}/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
+prefix_path "$HOME/.rd/bin"
+
+# Get 'kubectl' from Homebrew's 'kubernetes-cli' formula in front of Rancher Desktop's much older 'kubectl'.
+prefix_path "${package_manager_prefix:?}/bin"
+
+# Rust.
 prefix_path "$HOME/.cargo/bin"
+
 prefix_path "$HOME/bin"
 
+# Go.
 if command -v go &> /dev/null; then
   tmp_gopath=$(go env GOPATH)
   prefix_path "$tmp_gopath/bin"
@@ -79,9 +87,4 @@ fi
 # https://github.com/arxanas/git-branchless/wiki/Installation
 if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
   alias git='git-branchless wrap --'
-fi
-
-# Set the location of the Docker host socket so that various things can find Lima's Docker VM properly.
-if command -v limactl &> /dev/null; then
-  export DOCKER_HOST="unix://$HOME/.lima/docker/sock/docker.sock"
 fi
