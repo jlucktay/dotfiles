@@ -178,7 +178,9 @@
     "--severity=style",
     "--shell=bash"
   ],
-  "shellcheck.executablePath": "{{ env "package_manager_prefix" }}/bin/shellcheck",
+  {{- if lookPath "shellcheck" }}
+  "shellcheck.executablePath": "{{ lookPath "shellcheck" }}",
+  {{- end }}
   "shellformat.effectLanguages": [
     "azcli",
     "bats",
@@ -192,7 +194,9 @@
     "spring-boot-properties"
   ],
   "shellformat.flag": "--binary-next-line --case-indent --indent 2 --simplify --space-redirects",
-  "shellformat.path": "{{ env "package_manager_prefix" }}/bin/shfmt",
+  {{- if lookPath "shfmt" }}
+  "shellformat.path": "{{ lookPath "shfmt" }}",
+  {{- end }}
   "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
@@ -205,7 +209,9 @@
     "Bash (login)": {
       "args": ["--login"],
       "icon": "terminal-bash",
-      "path": "{{ env "package_manager_prefix" }}/bin/bash"
+      {{- if lookPath "bash" }}
+      "path": "{{ lookPath "bash" }}",
+      {{- end }}
     }
   },
   "terminal.integrated.scrollback": 999999,
@@ -213,15 +219,31 @@
   "terraform.codelens.referenceCount": true,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
-    "vs-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
+    {{- if lookPath "helm" }}
+    "vs-kubernetes.helm-path.mac": "{{ lookPath "helm" }}",
+    {{- end }}
     "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
     "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
-    "vs-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
-    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+    {{- if lookPath "kubectl" }}
+    "vs-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" }}",
+    {{- end }}
+    {{- if lookPath "minikube" }}
+    "vs-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
+    {{- else }}
+    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+    {{- end }}
   },
-  "vscode-kubernetes.helm-path.mac": "{{ env "package_manager_prefix" }}/bin/helm",
-  "vscode-kubernetes.kubectl-path.mac": "{{ env "package_manager_prefix" }}/bin/kubectl",
+  {{- if lookPath "helm" }}
+  "vscode-kubernetes.helm-path.mac": "{{ lookPath "helm" }}",
+  {{- end }}
+  {{- if lookPath "kubectl" }}
+  "vscode-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" }}",
+  {{- end }}
+  {{- if lookPath "minikube" }}
+  "vscode-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
+  {{- else }}
   "vscode-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+  {{- end }}
   "window.closeWhenEmpty": true,
   "window.commandCenter": true,
   "window.newWindowDimensions": "maximized",
