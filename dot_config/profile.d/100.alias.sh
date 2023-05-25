@@ -70,6 +70,11 @@ if command -v kubectl &> /dev/null; then
   alias k=kubectl
 fi
 
+# Better process view with 'btop' than macOS 'top'
+if command -v btop &> /dev/null; then
+  alias top=btop
+fi
+
 # Miscellaneous
 alias did='vim +"normal Go" +"r!date" +"normal Go" $HOME/did.txt'
 
