@@ -44,11 +44,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.executionEnvironment.pull.policy": "always",
-  "cloudcode.autoDependencies": "off",
-  "cloudcode.minikubeStatusBar": false,
-  "devskim.enableBestPracticeRules": true,
   "diffEditor.ignoreTrimWhitespace": false,
-  "docker.showStartPage": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
@@ -151,18 +147,15 @@
   "material-icon-theme.folders.associations": {
     "infra": "components"
   },
-  "material-icon-theme.showUpdateMessage": false,
   "prettier.printWidth": 120,
   "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
-  "rust-analyzer.checkOnSave.command": "clippy",
-  "rust-analyzer.checkOnSave.extraArgs": [
+  "rust-analyzer.check.command": "clippy",
+  "rust-analyzer.check.extraArgs": [
     "--no-deps",
     "--",
     "--warn",
     "clippy::pedantic",
-    "--warn",
-    "clippy::nursery",
     "--warn",
     "clippy::unwrap_used",
     "--warn",
