@@ -116,7 +116,7 @@
     "go": "{{ lookPath "go" }}",
     {{- end }}
     {{- if lookPath "golangci-lint" }}
-    "gometalinter": "{{ lookPath "golangci-lint" }}",
+    "gometalinter": "{{ lookPath "golangci-lint" }}"
     {{- end }}
   },
   "go.editorContextMenuCommands": {
@@ -210,15 +210,17 @@
       "args": ["--login"],
       "icon": "terminal-bash",
       {{- if lookPath "bash" }}
-      "path": "{{ lookPath "bash" }}",
+      "path": "{{ lookPath "bash" }}"
       {{- end }}
     }
   },
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.showExitAlert": false,
   "terraform.codelens.referenceCount": true,
+  "terraform.languageServer.enable": true,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
+    "vs-kubernetes.crd-code-completion": "enabled",
     {{- if lookPath "helm" }}
     "vs-kubernetes.helm-path.mac": "{{ lookPath "helm" }}",
     {{- end }}
@@ -230,7 +232,7 @@
     {{- if lookPath "minikube" }}
     "vs-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
     {{- else }}
-    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
     {{- end }}
   },
   {{- if lookPath "helm" }}

@@ -7,6 +7,7 @@
 /Users/james.lucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/james.lucktaylor/git/github.com/grpc/grpc-go
 /Users/james.lucktaylor/git/github.com/gtramontina/ooze
+/Users/james.lucktaylor/git/github.com/hashicorp/http-echo
 /Users/james.lucktaylor/git/github.com/hashicorp/learn-nomad-cluster-setup
 /Users/james.lucktaylor/git/github.com/hashicorp/packer
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform

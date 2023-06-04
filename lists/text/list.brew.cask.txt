@@ -6,6 +6,7 @@ anki
 audacity
 bartender
 discord
+epic-games
 figma
 firefox
 font-jetbrains-mono
@@ -21,6 +22,7 @@ miro
 nordvpn
 obsidian
 pingmenu
+rancher
 raspberry-pi-imager
 rectangle
 resilio-sync
@@ -31,5 +33,4 @@ unofficial-wineskin
 visual-studio-code
 vlc
 whatsapp
-xbar
 zoom
