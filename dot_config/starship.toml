@@ -42,7 +42,7 @@ symbol = ' '
 
 [package]
 display_private = true
-symbol = ' '
+symbol = '󰏗 '
 
 [python]
 style = '#68a063'
