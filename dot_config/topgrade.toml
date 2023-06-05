@@ -17,9 +17,11 @@ only = [
   "gcloud",
   "github_cli_extensions",
   "go",
+  "helm",
   "krew",
   "pip3",
   "rustup",
+  "system",
 ]
 
 # Display the time in step titles
