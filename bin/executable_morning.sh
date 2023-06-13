@@ -15,8 +15,9 @@ dslog "start"
 trap 'dslog "finish"' 0
 
 declare -ar morning_commands=(
-  # Check the MLB.TV schedule.
+  # Check the MLB.TV and MiLB.TV schedules.
   "open 'https://www.mlb.com/live-stream-games'"
+  "open 'https://www.milb.com/live-stream-games'"
 
   # Refresh GitHub/OVO SSO for the day.
   "open 'https://github.com/orgs/ovotech/teams/ovodevex/members'"
