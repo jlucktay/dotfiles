@@ -30,6 +30,10 @@ tf_od=$(terraform version --json | jq '.terraform_outdated')
 
 if [[ $tf_od == "true" ]]; then
   # Upgrade Terraform if it is out of date.
+
+  # shellcheck disable=SC1091
+  source "$HOME/.config/profile.d/416.func.tfenv-upgrade.sh"
+
   morning_commands+=(tfenv_upgrade)
 fi
 

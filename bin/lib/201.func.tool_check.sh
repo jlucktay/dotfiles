@@ -11,14 +11,17 @@ fi
 tool_check() {
   for tool in "$@"; do
     tool_first_word=${tool%% *}
-    tool_command=$(command -v "$tool_first_word" || true)
 
-    if [[ -z $tool_command ]]; then
-      err "Can't find command for '$tool'!"
+    if [[ -z $tool_first_word ]]; then
+      err "Can't find command from first word of '$tool'!"
     fi
 
-    if ! [[ -x $tool_command ]]; then
-      err "Can't execute command for '$tool'!"
+    if ! type -t "$tool_first_word" &> /dev/null; then
+      err "Can't find type for '$tool_first_word'!"
+    fi
+
+    if ! hash "$tool_first_word" &> /dev/null; then
+      err "Can't determine path for '$tool'!"
     fi
   done
 }
