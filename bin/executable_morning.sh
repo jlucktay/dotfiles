@@ -14,7 +14,7 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-declare -ar morning_commands=(
+declare -a morning_commands=(
   # Check the MLB.TV and MiLB.TV schedules.
   "open 'https://www.mlb.com/live-stream-games'"
   "open 'https://www.milb.com/live-stream-games'"
