@@ -44,6 +44,7 @@ gh
 giflib
 git
 git-delta
+git-filter-repo
 git-lfs
 git-machete
 glib
@@ -148,6 +149,7 @@ parallel
 pcre
 pcre2
 pixman
+pnpm
 prettyping
 pycparser
 pygments
@@ -193,7 +195,6 @@ xq
 xvid
 xz
 yamllint
-yarn
 youtube-dl
 yq
 zeromq

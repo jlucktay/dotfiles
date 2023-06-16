@@ -1,3 +1,4 @@
+/Users/james.lucktaylor/git/github.com/adonovan/gopl.io
 /Users/james.lucktaylor/git/github.com/bitfield/script
 /Users/james.lucktaylor/git/github.com/carbon-language/carbon-lang
 /Users/james.lucktaylor/git/github.com/chrislusf/seaweedfs

@@ -3,6 +3,7 @@ EditorConfig.EditorConfig
 esbenp.prettier-vscode
 exiasr.hadolint
 foxundermoon.shell-format
+github.vscode-github-actions
 golang.go
 hashicorp.hcl
 hashicorp.terraform

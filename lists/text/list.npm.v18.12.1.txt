@@ -1,4 +1,5 @@
 /Users/james.lucktaylor/.nvm/versions/node/v18.12.1/lib
 /Users/james.lucktaylor/.nvm/versions/node/v18.12.1/lib/node_modules/corepack
 /Users/james.lucktaylor/.nvm/versions/node/v18.12.1/lib/node_modules/npm
+/Users/james.lucktaylor/.nvm/versions/node/v18.12.1/lib/node_modules/prettier
 /Users/james.lucktaylor/.nvm/versions/node/v18.12.1/lib/node_modules/yarn
