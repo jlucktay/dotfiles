@@ -5,7 +5,7 @@ if command -v tfenv &> /dev/null; then
 
     # Look up the latest Terraform version that matches the non-alpha/beta semver pattern on L5.
     local latest_tf_ver
-    latest_tf_ver="$(tfenv list-remote | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | gsort --version-sort | tail -n 1)"
+    latest_tf_ver="$(tfenv list-remote | grep -E '^[0-9]+\.[0-9]+\.[0-9]+$' | sort --version-sort | tail -n 1)"
 
     # Start getting Keybase up and running, if it is installed.
     # It will verify the Terraform download later.
