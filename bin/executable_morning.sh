@@ -28,6 +28,9 @@ declare -a morning_commands=(
 
   # Update all of the things.
   topgrade
+
+  # Is Big Innings on at a reasonable hour tonight/soon?
+  biginns
 )
 
 # Upgrade Terraform if it is out of date.
