@@ -26,6 +26,9 @@ declare -a morning_commands=(
   # Refresh GitHub/OVO SSO for the day.
   "open 'https://github.com/orgs/ovotech/teams/ovodevex/members'"
 
+  # Check PR review requests.
+  "open 'https://github.com/notifications?query=reason%3Areview-requested'"
+
   # Update all of the things.
   topgrade
 
