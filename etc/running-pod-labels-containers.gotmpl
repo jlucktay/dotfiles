@@ -1,0 +1,11 @@
+{{- range .items }}
+  {{- if eq .status.phase "Running" }}
+    Pod: {{ .metadata.name -}}
+    {{- range $key, $value := .metadata.labels }}
+      {{ printf "Label: %s = %s" $key $value -}}
+    {{ end -}}
+    {{- range $container := .spec.containers }}
+      Container: {{ printf "%-25s: %s" $container.name $container.image -}}
+    {{ end }}
+  {{ end -}}
+{{ end -}}
