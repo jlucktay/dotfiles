@@ -1,6 +1,6 @@
-bacon v2.8.1:
+bacon v2.10.0:
     bacon
-cargo-binstall v0.23.1:
+cargo-binstall v1.0.0:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
@@ -8,9 +8,9 @@ cargo-careful v0.3.4:
     cargo-careful
 cargo-info v0.7.3:
     cargo-info
-cargo-semver-checks v0.21.0:
+cargo-semver-checks v0.22.1:
     cargo-semver-checks
-cargo-shuttle v0.18.0:
+cargo-shuttle v0.20.0:
     cargo-shuttle
 cargo-update v13.0.4:
     cargo-install-update
@@ -36,7 +36,7 @@ sniffnet v1.2.1:
     sniffnet
 starship v1.15.0:
     starship
-wasm-pack v0.11.1:
+wasm-pack v0.12.1:
     wasm-pack
 wiki-tui v0.7.0:
     wiki-tui

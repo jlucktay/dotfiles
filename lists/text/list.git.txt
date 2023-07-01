@@ -36,7 +36,6 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/meta-tf
 /Users/james.lucktaylor/git/github.com/jlucktay/newrustacean.com
 /Users/james.lucktaylor/git/github.com/jlucktay/nomad
-/Users/james.lucktaylor/git/github.com/jlucktay/ovo-backstage
 /Users/james.lucktaylor/git/github.com/jlucktay/ovotech-interview
 /Users/james.lucktaylor/git/github.com/jlucktay/packer-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/ruby-workbench
@@ -84,6 +83,7 @@
 /Users/james.lucktaylor/git/github.com/rust-random/rand
 /Users/james.lucktaylor/git/github.com/self-actuated/actions-usage
 /Users/james.lucktaylor/git/github.com/starship/starship
+/Users/james.lucktaylor/git/github.com/stateful/runme
 /Users/james.lucktaylor/git/github.com/terraform-google-modules/terraform-google-lb-http
 /Users/james.lucktaylor/git/github.com/topgrade-rs/topgrade
 /Users/james.lucktaylor/git/github.com/unixorn/lima-xbar-plugin
@@ -102,6 +102,7 @@
 /Users/james.lucktaylor/git/go.jlucktay.dev/golang-workbench
 /Users/james.lucktaylor/git/go.jlucktay.dev/google-code-jam
 /Users/james.lucktaylor/git/go.jlucktay.dev/goppuku
+/Users/james.lucktaylor/git/go.jlucktay.dev/gql-hack
 /Users/james.lucktaylor/git/go.jlucktay.dev/hello-pulumi
 /Users/james.lucktaylor/git/go.jlucktay.dev/my-github-repos
 /Users/james.lucktaylor/git/go.jlucktay.dev/playstation-share-tidy
