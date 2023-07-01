@@ -14,8 +14,10 @@ export HISTFILE="$HOME"/.bash_eternal_history
 # Force prompt to write history after every command.
 # http://superuser.com/questions/20900/bash-history-loss
 #
-# Important to append rather than prepend, as the __prompt_command func checks $?
-PROMPT_COMMAND+="; history -a"
+# Important to append rather than prepend, because
+# - our '__prompt_command' func (if used) checks $?
+# - https://github.com/wting/autojump#known-issues
+export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND ;} history -a"
 
 # https://ss64.com/bash/history.html
 ## Setting the following makes Bash erase duplicate commands in your history.
