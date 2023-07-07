@@ -1,4 +1,4 @@
-bacon v2.10.0:
+bacon v2.11.0:
     bacon
 cargo-binstall v1.0.0:
     cargo-binstall
@@ -23,7 +23,7 @@ du-dust v0.8.6:
     dust
 just v1.14.0:
     just
-miniserve v0.23.2:
+miniserve v0.24.0:
     miniserve
 oxker v0.3.1:
     oxker
