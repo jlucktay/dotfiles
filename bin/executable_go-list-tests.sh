@@ -3,7 +3,7 @@ set -euo pipefail
 
 script_name=$(basename "${BASH_SOURCE[-1]}")
 
-if ! command -v go; then
+if ! command -v go &> /dev/null; then
   echo >&2 "$script_name: 'go' is required but it's not installed: https://golang.org/dl/"
   exit 1
 fi
