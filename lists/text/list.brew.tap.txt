@@ -1,3 +1,4 @@
+datawire/blackbird
 gcenx/wine
 hashicorp/tap
 homebrew/cask-fonts

@@ -1,4 +1,9 @@
 /Users/james.lucktaylor/git/github.com/adonovan/gopl.io
+/Users/james.lucktaylor/git/github.com/ardanlabs/conf
+/Users/james.lucktaylor/git/github.com/ardanlabs/gcuk
+/Users/james.lucktaylor/git/github.com/ardanlabs/gotraining
+/Users/james.lucktaylor/git/github.com/ardanlabs/service
+/Users/james.lucktaylor/git/github.com/ardanlabs/service.wiki
 /Users/james.lucktaylor/git/github.com/bitfield/script
 /Users/james.lucktaylor/git/github.com/carbon-language/carbon-lang
 /Users/james.lucktaylor/git/github.com/chrislusf/seaweedfs
@@ -51,8 +56,10 @@
 /Users/james.lucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/james.lucktaylor/git/github.com/meilisearch/meilisearch
 /Users/james.lucktaylor/git/github.com/mitsuhiko/insta
+/Users/james.lucktaylor/git/github.com/mr-karan/doggo
 /Users/james.lucktaylor/git/github.com/NickFitton/AdventOfCode
 /Users/james.lucktaylor/git/github.com/OpenFactorioServerManager/factorio-server-manager
+/Users/james.lucktaylor/git/github.com/opentffoundation/manifesto
 /Users/james.lucktaylor/git/github.com/ovotech/aws-network-guide
 /Users/james.lucktaylor/git/github.com/ovotech/drs-filter-pwr
 /Users/james.lucktaylor/git/github.com/ovotech/energy-ownership
@@ -60,6 +67,8 @@
 /Users/james.lucktaylor/git/github.com/ovotech/hackathon_03_2022_ovo_reach
 /Users/james.lucktaylor/git/github.com/ovotech/mercury-ui
 /Users/james.lucktaylor/git/github.com/ovotech/ovo-backstage
+/Users/james.lucktaylor/git/github.com/ovotech/ovo-backstage-tooling
+/Users/james.lucktaylor/git/github.com/ovotech/ovodevex-cloudrun-lb
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-docs
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-github-actions
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-go-vanity-imports
@@ -67,12 +76,14 @@
 /Users/james.lucktaylor/git/github.com/ovotech/route53-as-code
 /Users/james.lucktaylor/git/github.com/ovotech/sync-as-a-service
 /Users/james.lucktaylor/git/github.com/ovotech/team-cppe
+/Users/james.lucktaylor/git/github.com/ovotech/terraform-cloud-as-code
 /Users/james.lucktaylor/git/github.com/ovotech/terraform-provider-aiven-kafka-users
 /Users/james.lucktaylor/git/github.com/ovotech/trading-charts
 /Users/james.lucktaylor/git/github.com/ovotech/trading-documentation
 /Users/james.lucktaylor/git/github.com/ovotech/trading-gitops
 /Users/james.lucktaylor/git/github.com/ovotech/trading-infra
 /Users/james.lucktaylor/git/github.com/ovotech/trading-ppa-forecast-api
+/Users/james.lucktaylor/git/github.com/ovotech/trading_airflow_dags
 /Users/james.lucktaylor/git/github.com/ovotech/trading_balance_of_week
 /Users/james.lucktaylor/git/github.com/ovotech/trading_gutenberg_workflows
 /Users/james.lucktaylor/git/github.com/ovotech/trading_requirements_model
