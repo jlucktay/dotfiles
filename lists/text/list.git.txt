@@ -74,6 +74,7 @@
 /Users/james.lucktaylor/git/github.com/ovotech/ovodevex-go-vanity-imports
 /Users/james.lucktaylor/git/github.com/ovotech/ownership
 /Users/james.lucktaylor/git/github.com/ovotech/route53-as-code
+/Users/james.lucktaylor/git/github.com/ovotech/stackerr
 /Users/james.lucktaylor/git/github.com/ovotech/sync-as-a-service
 /Users/james.lucktaylor/git/github.com/ovotech/team-cppe
 /Users/james.lucktaylor/git/github.com/ovotech/terraform-cloud-as-code

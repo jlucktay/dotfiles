@@ -1,6 +1,6 @@
 bacon v2.12.1:
     bacon
-cargo-binstall v1.2.1:
+cargo-binstall v1.3.0:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
@@ -10,7 +10,7 @@ cargo-info v0.7.6:
     cargo-info
 cargo-semver-checks v0.22.1:
     cargo-semver-checks
-cargo-shuttle v0.24.0:
+cargo-shuttle v0.25.1:
     cargo-shuttle
 cargo-tarpaulin v0.26.1:
     cargo-tarpaulin
@@ -27,7 +27,7 @@ just v1.14.0:
     just
 miniserve v0.24.0:
     miniserve
-oxker v0.3.1:
+oxker v0.3.2:
     oxker
 rage v0.9.2:
     rage

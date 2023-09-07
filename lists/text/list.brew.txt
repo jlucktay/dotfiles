@@ -169,7 +169,9 @@ pycparser
 pygments
 python-certifi
 python-cryptography
+python-lxml
 python-markdown
+python-markupsafe
 python-tabulate
 python-typing-extensions
 python@3.10
