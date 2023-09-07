@@ -6,7 +6,13 @@
 #disable = ["system", "emacs"]
 
 # Ignore failures for these steps
-ignore_failures = ["containers"]
+ignore_failures = [
+  "containers",
+
+  # Temporary, until 'doggo' sorts out this issue and stops 'gup' from falling over:
+  # https://github.com/mr-karan/doggo/issues/79
+  "go",
+]
 
 # Run specific steps - same options as the command line flag
 # only = ["containers"]
