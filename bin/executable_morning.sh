@@ -33,13 +33,6 @@ declare -a morning_commands=(
   topgrade
 )
 
-# Upgrade Terraform if it is out of date.
-tf_od=$(terraform version --json | jq '.terraform_outdated')
-
-if [[ $tf_od == "true" ]]; then
-  morning_commands+=(tfenv_upgrade)
-fi
-
 # Always check last to see if Big Innings is on at a reasonable hour tonight/soon.
 morning_commands+=(biginns)
 
