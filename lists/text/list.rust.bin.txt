@@ -8,7 +8,7 @@ cargo-careful v0.3.4:
     cargo-careful
 cargo-info v0.7.6:
     cargo-info
-cargo-semver-checks v0.22.1:
+cargo-semver-checks v0.23.0:
     cargo-semver-checks
 cargo-shuttle v0.25.1:
     cargo-shuttle

@@ -59,7 +59,6 @@ golangci-lint
 goreleaser
 graphite2
 graphviz
-grep
 gron
 gts
 hadolint
@@ -197,9 +196,9 @@ sqlite
 srt
 svt-av1
 telepresence-arm64
+terraform
 terraform-docs
 tesseract
-tfenv
 tflint
 tfsec
 theora
