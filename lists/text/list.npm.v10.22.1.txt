@@ -1,3 +1,0 @@
-/Users/jameslucktaylor/.nvm/versions/node/v10.22.1/lib
-/Users/jameslucktaylor/.nvm/versions/node/v10.22.1/lib/node_modules/commitizen
-/Users/jameslucktaylor/.nvm/versions/node/v10.22.1/lib/node_modules/npm

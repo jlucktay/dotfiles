@@ -144,7 +144,6 @@ nettle
 nmap
 node
 nomad
-nvm
 oniguruma
 opencore-amr
 openexr
@@ -171,6 +170,7 @@ python-cryptography
 python-lxml
 python-markdown
 python-markupsafe
+python-pytz
 python-tabulate
 python-typing-extensions
 python@3.10

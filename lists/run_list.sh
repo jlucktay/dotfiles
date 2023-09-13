@@ -98,30 +98,7 @@ process_list "brew list -1 --cask" "brew.cask"
 
 # NPM
 npm_list_cmd="npm list --depth=0 --global --parseable"
-
-### If NVM is installed (via Homebrew) use it to iterate across all available versions
-if ! hash brew &> /dev/null; then
-  echo "$script_name: No Homebrew means no NVM; skipping"
-else
-  brew_prefix_nvm=$(brew --prefix nvm)
-
-  # shellcheck disable=SC1091
-  if [[ -s "$brew_prefix_nvm/nvm.sh" ]] && . "$brew_prefix_nvm/nvm.sh" &> /dev/null; then
-    nvm_ls=$(nvm ls --no-alias --no-colors)
-    nvm_ls_cut=$(cut -c3-15 <<< "$nvm_ls")
-    nvm_ls_cut_tr=$(tr -d ' ' <<< "$nvm_ls_cut")
-    mapfile -t nvm_versions <<< "$nvm_ls_cut_tr"
-
-    for nvm_version in "${nvm_versions[@]}"; do
-      nvm use "$nvm_version" &> /dev/null
-      npm_version=$(npm --version)
-      echo "Node: $nvm_version / npm: $npm_version"
-      process_list "$npm_list_cmd" "npm.$nvm_version"
-    done
-  else
-    process_list "$npm_list_cmd" "npm"
-  fi
-fi
+process_list "$npm_list_cmd" "npm"
 
 # VSCode extensions
 vscode_list_cmd="code --list-extensions"

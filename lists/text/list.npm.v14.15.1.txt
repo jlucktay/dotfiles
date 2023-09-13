@@ -1,3 +1,0 @@
-/Users/jameslucktaylor/.nvm/versions/node/v14.15.1/lib
-/Users/jameslucktaylor/.nvm/versions/node/v14.15.1/lib/node_modules/lerna
-/Users/jameslucktaylor/.nvm/versions/node/v14.15.1/lib/node_modules/npm
