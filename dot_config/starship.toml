@@ -202,7 +202,9 @@ bash_indicator = 'bash'
 
 [shlvl]
 disabled = false
-repeat = true
+repeat = false
+symbol = "󰳗 "
+threshold = 3
 
 [status]
 disabled = false
