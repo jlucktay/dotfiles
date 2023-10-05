@@ -33,9 +33,6 @@ declare -a morning_commands=(
   topgrade
 )
 
-# Always check last to see if Big Innings is on at a reasonable hour tonight/soon.
-morning_commands+=(biginns)
-
 tool_check "${morning_commands[@]}"
 
 for mc in "${morning_commands[@]}"; do
