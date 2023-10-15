@@ -1,10 +1,16 @@
 {{- if lookPath "op" -}}
 credentials "app.terraform.io" {
-  token = "{{ onepasswordRead "op://Private/Terraform Cloud token/credential" "ovotech.1password.com" | trim }}"
+  {{ if eq (env "CHEZMOI_TERRAFORM_TOKEN") "personal" -}}
+  // Personal token - managed by chezmoi
+  token = "{{ onepasswordRead "op://Personal/Terraform Cloud/Token" "my.1password.com" }}"
+  {{- else -}}
+  // OVO token - managed by chezmoi
+  token = "{{ onepasswordRead "op://Private/Terraform Cloud token/credential" "ovotech.1password.com" }}"
+  {{- end }}
 }
 
 credentials "terraform.ovotech.org.uk" {
-  token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" | trim }}"
+  token = "{{ onepasswordRead "op://Trading Tech/OVO Tech Terraform registry/credential" "ovotech.1password.com" }}"
 }
 {{- end }}
 
