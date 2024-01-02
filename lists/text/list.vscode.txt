@@ -1,3 +1,4 @@
+bierner.markdown-mermaid
 DavidAnson.vscode-markdownlint
 EditorConfig.EditorConfig
 esbenp.prettier-vscode
@@ -5,8 +6,10 @@ exiasr.hadolint
 foxundermoon.shell-format
 github.vscode-github-actions
 golang.go
+googlecloudtools.cloudcode
 hashicorp.hcl
 hashicorp.terraform
+jasonnutter.vscode-codeowners
 jetmartin.bats
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
@@ -31,11 +34,12 @@ richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
 serayuzgur.crates
 stkb.rewrap
+sumneko.lua
 Tailscale.vscode-tailscale
 tamasfe.even-better-toml
+task.vscode-task
 timonwong.shellcheck
 Tyriar.sort-lines
 valentjn.vscode-ltex
 WakaTime.vscode-wakatime
 yzhang.markdown-all-in-one
-zxh404.vscode-proto3

@@ -5,6 +5,7 @@ amazon-chime
 anki
 audacity
 bartender
+bbc-iplayer-downloads
 discord
 epic-games
 figma
@@ -33,6 +34,6 @@ tyke
 unofficial-wineskin
 visual-studio-code
 vlc
+wezterm
 whatsapp
-wineskin
 zoom

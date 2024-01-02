@@ -5,15 +5,18 @@
   "[go.mod]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
-    },
-    "editor.formatOnSave": true
+    }
   },
   "[go]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.formatOnSave": true,
     "editor.snippetSuggestions": "none"
+  },
+  "[go][go.mod]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -30,13 +33,6 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "[rust]": {
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2
-  },
   "[terraform]": {
     "editor.formatOnSave": false
   },
@@ -44,6 +40,7 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.executionEnvironment.pull.policy": "always",
+  "cloudcode.duetAI.enable": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
@@ -66,6 +63,7 @@
   "editor.wordWrap": "bounded",
   "editor.wordWrapColumn": 120,
   "explorer.confirmDragAndDrop": false,
+  "explorer.excludeGitIgnore": true,
   "explorer.incrementalNaming": "smart",
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
@@ -119,11 +117,12 @@
   "go.editorContextMenuCommands": {
     "fillStruct": true
   },
-  "go.lintFlags": ["--fast"],
   "go.lintTool": "golangci-lint",
+  "go.testEnvVars": {
+    "IS_NO_COLOR": 1
+  },
   "go.testExplorer.packageDisplayMode": "nested",
-  "go.testFlags": ["-count=1", "-v"],
-  "go.toolsGopath": "{{ .chezmoi.homeDir }}/vscode-go",
+  "go.testFlags": ["--count=1", "-v"],
   "go.toolsManagement.autoUpdate": true,
   "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
@@ -134,6 +133,13 @@
       "vendor": false
     },
     "ui.completion.usePlaceholders": true,
+    "ui.diagnostic.analyses": {
+      "nilness": true,
+      "unusedparams": true,
+      "unusedvariable": true,
+      "unusedwrite": true,
+      "useany": true
+    },
     "ui.diagnostic.staticcheck": true,
     "ui.navigation.importShortcut": "Both"
   },
@@ -156,21 +162,7 @@
   },
   "prettier.printWidth": 120,
   "prettier.singleQuote": true,
-  "python.showStartPage": false,
   "redhat.telemetry.enabled": true,
-  "rust-analyzer.check.command": "clippy",
-  "rust-analyzer.check.extraArgs": [
-    "--no-deps",
-    "--",
-    "--warn",
-    "clippy::pedantic",
-    "--warn",
-    "clippy::unwrap_used",
-    "--warn",
-    "clippy::expect_used",
-    "--forbid",
-    "unsafe_code"
-  ],
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
@@ -199,6 +191,7 @@
   "shellformat.path": "{{ lookPath "shfmt" }}",
   {{- end }}
   "sortLines.sortEntireFile": true,
+  "tailscale.portDiscovery.enabled": false,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",

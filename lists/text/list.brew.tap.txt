@@ -1,8 +1,6 @@
-datawire/blackbird
-gcenx/wine
+go-task/tap
 hashicorp/tap
 homebrew/cask-fonts
 rafaelgarrido/caveats
 stateful/tap
 teamookla/speedtest
-wader/tap

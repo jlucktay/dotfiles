@@ -1,33 +1,31 @@
-bacon v2.12.1:
+bacon v2.14.1:
     bacon
-cargo-binstall v1.3.0:
+cargo-binstall v1.4.9:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
-cargo-careful v0.3.4:
+cargo-careful v0.4.0:
     cargo-careful
 cargo-info v0.7.6:
     cargo-info
-cargo-semver-checks v0.23.0:
+cargo-semver-checks v0.27.0:
     cargo-semver-checks
-cargo-shuttle v0.25.1:
+cargo-shuttle v0.35.2:
     cargo-shuttle
-cargo-tarpaulin v0.26.1:
+cargo-tarpaulin v0.27.2:
     cargo-tarpaulin
-cargo-update v13.0.4:
+cargo-update v13.3.0:
     cargo-install-update
     cargo-install-update-config
 code-radio-cli v1.0.4:
     code-radio
-czkawka_cli v6.0.0:
+czkawka_cli v6.1.0:
     czkawka_cli
 du-dust v0.8.6:
     dust
-just v1.14.0:
-    just
 miniserve v0.24.0:
     miniserve
-oxker v0.3.2:
+oxker v0.4.0:
     oxker
 rage v0.9.2:
     rage
@@ -36,9 +34,5 @@ rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
 sniffnet v1.2.2:
     sniffnet
-starship v1.16.0:
+starship v1.17.0:
     starship
-wasm-pack v0.12.1:
-    wasm-pack
-wiki-tui v0.8.2:
-    wiki-tui
