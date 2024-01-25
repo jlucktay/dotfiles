@@ -28,7 +28,6 @@ corepack
 coreutils
 curl
 dav1d
-direnv
 docutils
 exa
 exiftool
@@ -85,6 +84,7 @@ k9s
 keyring
 kind
 kondo
+krb5
 krew
 kubeconform
 kubectx
@@ -106,6 +106,7 @@ libmpc
 libnghttp2
 libogg
 libpng
+libpq
 libpython-tabulate
 librist
 librsvg
@@ -230,6 +231,7 @@ theora
 tldr
 topgrade
 tree
+typescript
 unbound
 vault
 vegeta

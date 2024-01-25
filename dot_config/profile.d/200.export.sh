@@ -50,6 +50,7 @@ if test -r "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-
 fi
 
 prefix_path "${package_manager_prefix:?}/opt/curl/bin"
+prefix_path "${package_manager_prefix:?}/opt/libpq/bin"
 prefix_path "${package_manager_prefix:?}/opt/make/libexec/gnubin"
 prefix_path "${package_manager_prefix:?}/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.rd/bin"
