@@ -1,6 +1,6 @@
 bacon v2.14.1:
     bacon
-cargo-binstall v1.6.1:
+cargo-binstall v1.6.2:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
@@ -8,16 +8,16 @@ cargo-careful v0.4.1:
     cargo-careful
 cargo-info v0.7.6:
     cargo-info
-cargo-semver-checks v0.27.0:
+cargo-semver-checks v0.28.0:
     cargo-semver-checks
-cargo-shuttle v0.37.0:
+cargo-shuttle v0.38.0:
     cargo-shuttle
 cargo-tarpaulin v0.27.3:
     cargo-tarpaulin
 cargo-update v13.3.0:
     cargo-install-update
     cargo-install-update-config
-code-radio-cli v1.0.4:
+code-radio-cli v1.0.5:
     code-radio
 czkawka_cli v6.1.0:
     czkawka_cli
@@ -27,7 +27,7 @@ miniserve v0.26.0:
     miniserve
 oxker v0.6.0:
     oxker
-rage v0.9.2:
+rage v0.10.0:
     rage
     rage-keygen
 rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):

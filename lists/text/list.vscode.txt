@@ -1,6 +1,7 @@
 bierner.markdown-mermaid
-DavidAnson.vscode-markdownlint
-EditorConfig.EditorConfig
+davidanson.vscode-markdownlint
+dbaeumer.vscode-eslint
+editorconfig.editorconfig
 esbenp.prettier-vscode
 exiasr.hadolint
 foxundermoon.shell-format
@@ -13,6 +14,7 @@ jasonnutter.vscode-codeowners
 jetmartin.bats
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
+ms-python.debugpy
 ms-python.isort
 ms-python.python
 ms-python.vscode-pylance
@@ -26,7 +28,7 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.remote-explorer
 ms-vsliveshare.vsliveshare
-PKief.material-icon-theme
+pkief.material-icon-theme
 pomdtr.excalidraw-editor
 redhat.ansible
 redhat.vscode-yaml
@@ -35,11 +37,11 @@ rust-lang.rust-analyzer
 serayuzgur.crates
 stkb.rewrap
 sumneko.lua
-Tailscale.vscode-tailscale
+tailscale.vscode-tailscale
 tamasfe.even-better-toml
 task.vscode-task
 timonwong.shellcheck
-Tyriar.sort-lines
+tyriar.sort-lines
 valentjn.vscode-ltex
-WakaTime.vscode-wakatime
+wakatime.vscode-wakatime
 yzhang.markdown-all-in-one

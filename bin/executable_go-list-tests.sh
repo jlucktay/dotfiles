@@ -9,7 +9,7 @@ if ! command -v go &> /dev/null; then
 fi
 
 go list ./... | while IFS= read -r package; do
-  test_name_pattern="^(Bench|Example|Test)"
+  test_name_pattern="^(Bench|Example|Fuzz|Test)"
   go_test_output=$(go test -list="$test_name_pattern" "$package")
 
   if [[ $go_test_output =~ ^\? ]]; then

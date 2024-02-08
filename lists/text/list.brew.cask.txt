@@ -2,6 +2,7 @@
 1password-cli
 alacritty
 amazon-chime
+android-studio
 anki
 audacity
 bartender
@@ -15,6 +16,7 @@ font-jetbrains-mono-nerd-font
 google-cloud-sdk
 google-drive
 gpg-suite-no-mail
+http-toolkit
 iglance
 itsycal
 keepingyouawake
@@ -34,6 +36,5 @@ tyke
 unofficial-wineskin
 visual-studio-code
 vlc
-wezterm
 whatsapp
 zoom

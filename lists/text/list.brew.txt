@@ -33,6 +33,7 @@ exa
 exiftool
 fd
 ffmpeg
+firebase-cli
 flac
 flake8
 fontconfig
@@ -70,6 +71,7 @@ hadolint
 harfbuzz
 highway
 httpie
+hwloc
 hyperfine
 icu4c
 imath
@@ -80,12 +82,14 @@ jpeg-turbo
 jpeg-xl
 jq
 jsonlint
+k3d
 k9s
 keyring
 kind
 kondo
 krb5
 krew
+kube-linter
 kubeconform
 kubectx
 kubernetes-cli
@@ -114,6 +118,7 @@ libsamplerate
 libsndfile
 libsodium
 libsoxr
+libssh
 libssh2
 libtasn1
 libtiff
@@ -162,6 +167,7 @@ openjpeg
 openldap
 openssl@1.1
 openssl@3
+openvino
 opus
 p11-kit
 packer
@@ -173,6 +179,7 @@ pixman
 poetry
 pre-commit
 prettyping
+pugixml
 pycparser
 pygments
 python-argcomplete
@@ -222,6 +229,7 @@ speex
 sqlite
 srt
 svt-av1
+tbb
 terraform
 terraform-docs
 tesseract
