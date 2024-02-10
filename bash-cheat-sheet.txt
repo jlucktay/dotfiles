@@ -1,9 +1,5 @@
 Don't forget about `shellharden`!
 
-Currently double-parked on `kind` installs (~/go/bin && /opt/homebrew):
-- https://github.com/kubernetes-sigs/kind/issues/3277#issuecomment-1643943889
-- https://github.com/rancher-sandbox/rancher-desktop/issues/5092
-
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
 

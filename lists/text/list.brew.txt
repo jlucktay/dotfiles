@@ -85,7 +85,6 @@ jsonlint
 k3d
 k9s
 keyring
-kind
 kondo
 krb5
 krew
@@ -156,7 +155,6 @@ netpbm
 nettle
 nmap
 node
-nomad
 numpy
 oniguruma
 openblas
