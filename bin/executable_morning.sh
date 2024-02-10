@@ -49,6 +49,23 @@ morning_commands+=(
   topgrade
 )
 
+if check_rd_vm; then
+  dslog "Rancher Desktop VM check ✅ OK"
+else
+  dslog "Rancher Desktop VM check 🛑 did not pass"
+
+  morning_commands+=(
+    # Remove all build cache more than 30 days old, without confirmation.
+    "docker buildx prune --all --filter=\"until=$((30 * 24))h\" --force --verbose"
+
+    # Remove dangling images more than 30 days old.
+    "docker system prune --filter=\"until=$((30 * 24))h\" --force"
+
+    # Remove anonymous volumes.
+    "docker volume prune --force"
+  )
+fi
+
 tool_check "${morning_commands[@]}"
 
 for mc in "${morning_commands[@]}"; do
