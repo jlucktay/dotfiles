@@ -2,6 +2,7 @@
 1password-cli
 alacritty
 amazon-chime
+android-platform-tools
 android-studio
 anki
 audacity
@@ -16,7 +17,6 @@ font-jetbrains-mono-nerd-font
 google-cloud-sdk
 google-drive
 gpg-suite-no-mail
-http-toolkit
 iglance
 itsycal
 keepingyouawake

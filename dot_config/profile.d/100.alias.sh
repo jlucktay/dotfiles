@@ -42,9 +42,9 @@ else
   alias ls='ls --color --human-readable'
 fi
 
-# exa
-if command -v exa &> /dev/null; then
-  alias ll='exa --all --classify --colour-scale --colour=always --git --group-directories-first --icons --long'
+# eza
+if command -v eza &> /dev/null; then
+  alias ll='eza --all --classify --colour-scale --colour=always --git --group-directories-first --icons --long'
   alias lll='ll --grid'
 else
   alias ll='ls -l --almost-all --classify'

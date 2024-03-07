@@ -4,3 +4,4 @@ homebrew/cask-fonts
 rafaelgarrido/caveats
 stateful/tap
 teamookla/speedtest
+tilt-dev/tap
