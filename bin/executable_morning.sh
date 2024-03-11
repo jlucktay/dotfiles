@@ -31,9 +31,8 @@ if command -v gdate &> /dev/null; then
 
   if [[ $mlb_season_has_started -ge 0 ]]; then
     morning_commands+=(
-      # Check the schedules for MLB.TV and MiLB.TV (Cubs affiliates).
+      # Check the schedules for MLB.TV.
       "open 'https://www.mlb.com/live-stream-games'"
-      "open 'https://www.milb.com/live-stream-games/$date_today/all/all/cubs'"
     )
   fi
 fi
@@ -65,6 +64,11 @@ else
     "docker volume prune --force"
   )
 fi
+
+morning_commands+=(
+  # See what's on.
+  "cineworld -l 3"
+)
 
 tool_check "${morning_commands[@]}"
 
