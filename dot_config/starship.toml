@@ -2,10 +2,10 @@
 '$schema' = 'https://starship.rs/config-schema.json'
 
 # https://starship.rs/config/#default-prompt-format
-format = """($username\
+format = """($kubernetes\n)\
+($username\
 $hostname\
 $localip\
-$kubernetes\
 $git_branch\
 $git_commit\
 $git_state\
