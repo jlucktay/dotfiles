@@ -294,21 +294,20 @@ format = '[$user]($style) on '
 
 [kubernetes]
 disabled = false
-# format = '[$symbol$context:$namespace \($user|$cluster\)]($style) '
-format = '[$symbol$context:$namespace]($style) '
-style = 'fg:#326ce5 bg:#ffffff'
+format = '[$symbol$context]($style)[:](fg:#326ce5 bg:#ffffff)[$namespace]($style) '
+style = 'fg:#ffffff bg:#326ce5'
 symbol = '󱃾 '
 
 detect_extensions = []
-detect_files = []
-detect_folders = ['clusters']
+detect_files = ['.kube-linter.yaml', 'kustomization.yaml']
+detect_folders = ['bedrock', 'clusters', 'gke']
 
-[kubernetes.context_aliases]
-'^gke_(?P<var_context>[^_]+)_[^_]+_[^_]+$' = '$var_context'
-# '^gke_(?P<var_context>[^_]+)_(?P<var_region>[^_]+)_[^_]+$' = '$var_context@$var_region'
+[[kubernetes.contexts]]
+context_pattern = '^gke_(?P<var_project>[^_]+)_(?P<var_region>[^_]+)_(?P<var_cluster>[^_]+)$'
+context_alias = '$var_cluster in $var_project ($var_region)'
 
-[kubernetes.user_aliases]
-'^gke_(?P<var_user>[^_]+)_[^_]+_[^_]+$' = '$var_user'
+user_pattern = '^gke_(?P<var_user>[^_]+)_[^_]+_[^_]+$'
+user_alias = '$var_user'
 
 ### Terraform.
 
