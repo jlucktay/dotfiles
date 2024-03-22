@@ -84,6 +84,11 @@ if command -v jq &> /dev/null; then
   export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
 fi
 
+# Use cyan colour scaling for the dates column, as the default blue is difficult to read.
+if command -v eza &> /dev/null; then
+  export EZA_COLORS='da=36'
+fi
+
 # git-branchless
 # https://github.com/arxanas/git-branchless/wiki/Installation
 if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
