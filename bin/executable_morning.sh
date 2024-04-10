@@ -39,7 +39,7 @@ fi
 
 morning_commands+=(
   # Refresh GitHub/OVO SSO for the day.
-  "open 'https://github.com/orgs/ovotech/teams/ovodevex/members'"
+  "open 'https://github.com/orgs/ovotech/teams/dev-platforms-team-red/members'"
 
   # Check PR review requests.
   "open 'https://github.com/notifications?query=reason%3Areview-requested'"
