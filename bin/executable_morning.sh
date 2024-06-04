@@ -50,6 +50,11 @@ morning_commands+=(
 
 if check_rd_vm; then
   dslog "Rancher Desktop VM check ✅ OK"
+
+  morning_commands+=(
+    # Check for any pending updates; requires a restart of the Rancher Desktop app and VM.
+    "tail -n 2 \"$HOME\"/Library/Logs/rancher-desktop/update.log"
+  )
 else
   dslog "Rancher Desktop VM check 🛑 did not pass"
 
