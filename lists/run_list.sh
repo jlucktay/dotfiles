@@ -60,27 +60,10 @@ git_list_cmd="fd '^\.git$' \"$HOME\"/git --hidden --type directory --exec git -C
 process_list "$git_list_cmd" "git"
 
 # Go binaries
-# https://stackoverflow.com/a/13864829/380599
-if [[ -z ${GOPATH+x} ]]; then
-  if command -v go &> /dev/null; then
-    tmp_gopath=$(go env GOPATH)
-    export GOPATH="$tmp_gopath"
-    unset -v tmp_gopath
-  else
-    echo "$script_name: GOPATH is unset, and Go is not installed; skipping"
-  fi
-else
-  IFS=":" read -ra gopaths <<< "$GOPATH"
-
-  go_bin_list_cmd="find "
-
-  for each in "${gopaths[@]}"; do
-    go_bin_list_cmd+="$each/bin "
-  done
-
-  go_bin_list_cmd+="-type f"
-
-  process_list "$go_bin_list_cmd" "go.bin"
+if command -v gup &> /dev/null; then
+  process_list "gup list" "go.bin" skipsort
+elif [[ -d "$HOME"/go/bin ]]; then
+  process_list "find \"$HOME\"/go/bin -type f" "go.bin"
 fi
 
 # Rust binaries

@@ -1,16 +1,41 @@
-/Users/jameslucktaylor/go/bin/cobra
-/Users/jameslucktaylor/go/bin/controller-gen
-/Users/jameslucktaylor/go/bin/go-bindata
-/Users/jameslucktaylor/go/bin/go-fuzz
-/Users/jameslucktaylor/go/bin/go1.12.17
-/Users/jameslucktaylor/go/bin/go1.13.11
-/Users/jameslucktaylor/go/bin/gofumpt
-/Users/jameslucktaylor/go/bin/goimports
-/Users/jameslucktaylor/go/bin/gomod
-/Users/jameslucktaylor/go/bin/gopls-watchdog
-/Users/jameslucktaylor/go/bin/goyacc
-/Users/jameslucktaylor/go/bin/mservctl
-/Users/jameslucktaylor/go/bin/nex
-/Users/jameslucktaylor/go/bin/stringer
-/Users/jameslucktaylor/go/bin/tyk
-/Users/jameslucktaylor/go/bin/tyk-cloud
+       actions-usage: github.com/self-actuated/actions-usage@v0.1.2
+             biginns: go.jlucktay.dev/golang-workbench/mlb/biginns@v0.2.2
+           cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.4.0
+           cobra-cli: github.com/spf13/cobra-cli@v1.3.0
+          codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.1.2
+codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
+              ctlptl: github.com/tilt-dev/ctlptl/cmd/ctlptl@v0.8.29
+            deadcode: golang.org/x/tools/cmd/deadcode@v0.21.0
+                 dlv: github.com/go-delve/delve/cmd/dlv@v1.22.1
+             dockfmt: github.com/jessfraz/dockfmt@v0.3.3
+               doggo: github.com/mr-karan/doggo/cmd/doggo@v0.5.7
+           expvarmon: github.com/divan/expvarmon@v0.0.0-20230430154648-8e0b3d2778b3
+        fork-sweeper: github.com/rednafi/fork-sweeper/cmd/fork-sweeper@v0.2.0
+              gcping: github.com/GoogleCloudPlatform/gcping@v0.0.10
+        go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20230222222326-d13c9c375b57
+               goawk: github.com/benhoyt/goawk@v1.27.0
+                goda: github.com/loov/goda@v0.5.9
+               godoc: golang.org/x/tools/cmd/godoc@v0.21.0
+        gomodifytags: github.com/fatih/gomodifytags@v1.16.0
+               gonew: golang.org/x/tools/cmd/gonew@v0.21.0
+              goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
+               gopls: golang.org/x/tools/gopls@v0.15.3
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20240603224550-f2b69109f79b
+             gotests: github.com/cweill/gotests/gotests@v1.6.0
+         govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.1
+                 gup: github.com/nao1215/gup@v0.26.2
+           helm-docs: github.com/norwoodj/helm-docs/cmd/helm-docs@v1.13.1
+                impl: github.com/josharian/impl@v1.3.0
+            inframap: github.com/cycloidio/inframap@v0.6.7
+                  jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.6.0
+                  ko: github.com/google/ko@v0.15.4
+             kompose: github.com/kubernetes/kompose@v1.34.0
+                lcut: github.com/vrischmann/logfmt/cmd/lcut@v0.0.0-20231107105446-6947580a976e
+             ls-lint: github.com/loeffel-io/ls-lint@v1.11.2
+      makefile-graph: github.com/dnaeon/makefile-graph/cmd/makefile-graph@v0.1.3
+     my-github-repos: go.jlucktay.dev/my-github-repos@v0.3.4
+             nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20240524204351-885be9df8ef4
+        oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
+             oauth2c: github.com/cloudentity/oauth2c@v1.14.0
+             oauth2l: github.com/google/oauth2l@v1.3.0
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20240522143955-f20ba8434317
