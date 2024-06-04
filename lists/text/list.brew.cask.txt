@@ -2,12 +2,10 @@
 1password-cli
 alacritty
 amazon-chime
-android-platform-tools
 android-studio
 anki
 audacity
 bartender
-bbc-iplayer-downloads
 discord
 epic-games
 figma
@@ -33,7 +31,6 @@ resilio-sync
 slack
 steam
 tyke
-unofficial-wineskin
 visual-studio-code
 vlc
 whatsapp

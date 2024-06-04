@@ -1,4 +1,5 @@
 bierner.markdown-mermaid
+chdsbd.github-code-owners
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 editorconfig.editorconfig
@@ -10,8 +11,8 @@ golang.go
 googlecloudtools.cloudcode
 hashicorp.hcl
 hashicorp.terraform
-jasonnutter.vscode-codeowners
 jetmartin.bats
+jinliming2.vscode-go-template
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.debugpy

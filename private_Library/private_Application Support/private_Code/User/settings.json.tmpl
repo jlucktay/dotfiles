@@ -15,7 +15,7 @@
   },
   "[go][go.mod]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "explicit"
+      "source.organizeImports": "always"
     }
   },
   "[html]": {
@@ -72,13 +72,14 @@
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
   "files.associations": {
-    "*.mmark": "markdown",
     ".chezmoiignore": "ignore",
     ".env": "properties",
     ".firebaserc": "json",
     ".gcloudignore": "ignore",
-    ".gitconfig": "properties",
     ".gitconfig.aliases": "properties",
+    ".gitconfig": "properties",
+    "*.mmark": "markdown",
+    "*.tmpl": "go-template",
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
@@ -110,6 +111,7 @@
   "git.fetchOnPull": true,
   "git.ignoreLimitWarning": true,
   "git.openRepositoryInParentFolders": "always",
+  "githubCodeOwners.format.enabled": true,
   "go.alternateTools": {
     {{- if lookPath "go" }}
     "go": "{{ lookPath "go" }}",
@@ -212,9 +214,8 @@
     }
   },
   "terminal.integrated.scrollback": 999999,
+  "terminal.integrated.shellIntegration.enabled": false,
   "terminal.integrated.showExitAlert": false,
-  "terraform.codelens.referenceCount": true,
-  "terraform.languageServer.enable": true,
   "update.showReleaseNotes": false,
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
