@@ -94,3 +94,8 @@ fi
 if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
   alias git='git-branchless wrap --'
 fi
+
+# cf. https://github.com/npryce/adr-tools/issues/68 https://github.com/npryce/adr-tools/issues/69
+if command -v adr &> /dev/null; then
+  export ADR_PAGER='less'
+fi
