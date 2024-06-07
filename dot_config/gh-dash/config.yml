@@ -1,0 +1,61 @@
+prSections:
+  - title: Needs My Review (minus Dependabot)
+    filters: is:open review-requested:@me -author:app/dependabot
+  - title: Involved
+    filters: is:open involves:@me -author:@me
+  - title: My Pull Requests
+    filters: is:open author:@me
+issuesSections:
+  - title: Assigned
+    filters: is:open assignee:@me
+  - title: Involved
+    filters: is:open involves:@me -author:@me
+  - title: My Issues
+    filters: is:open author:@me
+defaults:
+  preview:
+    open: true
+    width: 80
+  prsLimit: 30
+  issuesLimit: 30
+  view: prs
+  layout:
+    prs:
+      updatedAt:
+        width: 7
+      repo:
+        width: 20
+      author:
+        width: 15
+      assignees:
+        width: 20
+        hidden: true
+      base:
+        width: 15
+        hidden: true
+      lines:
+        width: 16
+    issues:
+      updatedAt:
+        width: 7
+      repo:
+        width: 20
+      creator:
+        width: 10
+      assignees:
+        width: 20
+        hidden: true
+  refetchIntervalMinutes: 30
+keybindings:
+  issues: []
+  prs: []
+repoPaths:
+  # Template if you always clone repos into a consistent location.
+  :owner/:repo: ~/git/github.com/:owner/:repo
+theme:
+  ui:
+    table:
+      showSeparator: true
+pager:
+  diff: delta
+confirmQuit: true
