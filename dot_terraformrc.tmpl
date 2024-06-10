@@ -1,4 +1,9 @@
-{{- if lookPath "op" -}}
+// Note to self: if you're in here trying to figure out how to get Terraform to use locally-cached providers, instead
+// of constantly (re)downloading them all of the time:
+// 1. make sure you have a `.terraform.lock.hcl` file, because
+// 2. this issue (https://github.com/hashicorp/terraform/issues/32936) makes it clear there is a bug in the area.
+
+{{ if lookPath "op" -}}
 credentials "app.terraform.io" {
   {{ if eq (env "CHEZMOI_TERRAFORM_TOKEN") "personal" -}}
   // Personal token - managed by chezmoi
@@ -25,16 +30,16 @@ provider_installation {
   filesystem_mirror {
     path    = "{{ .chezmoi.homeDir }}/m2tp3"
     include = [
-      "hashicorp/random",
-      "hashicorp/template",
+      "registry.terraform.io/hashicorp/random",
+      "registry.terraform.io/hashicorp/template",
       "terraform.ovotech.org.uk/pe/aiven-kafka-users"
     ]
   }
 
   direct {
     exclude = [
-      "hashicorp/random",
-      "hashicorp/template",
+      "registry.terraform.io/hashicorp/random",
+      "registry.terraform.io/hashicorp/template",
       "terraform.ovotech.org.uk/pe/aiven-kafka-users"
     ]
   }
