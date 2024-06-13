@@ -35,4 +35,7 @@ program = "{{ env "package_manager_prefix" }}/bin/bash"
 decorations = "buttonless"
 dynamic_padding = true
 opacity = 1.0
+{{- if eq .chezmoi.os "darwin" }}
+option_as_alt = "Both"
+{{- end }}
 startup_mode = "Maximized"
