@@ -98,7 +98,7 @@ open = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}; }; f"
 pr = "!f() { URL=$(git config remote.origin.url); open ${URL%.git}/compare/$(git rev-parse --abbrev-ref HEAD); }; f"
 
 # Back out changes
-discard = checkout -p --
-unstage = reset -q HEAD --
+discard = checkout --patch --
+unstage = reset --quiet HEAD --
 
 up = !git pull --rebase --prune $@ && git submodule update --init --recursive
