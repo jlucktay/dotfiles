@@ -12,10 +12,10 @@ bat
 bats-core
 bfg
 binutils
-boost
 brew-caveats
 brotli
 btop
+buf
 c-ares
 ca-certificates
 cairo
@@ -33,19 +33,13 @@ cryptography
 curl
 dav1d
 dive
-double-conversion
 exiftool
 eza
-fb303
-fbthrift
 fd
 ffmpeg
 firebase-cli
-fizz
 flac
 flake8
-fmt
-folly
 fontconfig
 freetype
 frei0r
@@ -58,7 +52,6 @@ gd
 gdbm
 gdk-pixbuf
 gettext
-gflags
 gh
 giflib
 git
@@ -66,7 +59,6 @@ git-delta
 git-filter-repo
 git-machete
 glib
-glog
 gmp
 gnu-sed
 gnutls
@@ -246,8 +238,6 @@ vale
 vault
 vegeta
 vhs
-wangle
-watchman
 webp
 wget
 x264

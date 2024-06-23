@@ -1,6 +1,6 @@
 bacon v2.18.2:
     bacon
-cargo-binstall v1.6.8:
+cargo-binstall v1.7.2:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
@@ -8,9 +8,9 @@ cargo-careful v0.4.2:
     cargo-careful
 cargo-info v0.7.6:
     cargo-info
-cargo-semver-checks v0.31.0:
+cargo-semver-checks v0.32.0:
     cargo-semver-checks
-cargo-shuttle v0.45.0:
+cargo-shuttle v0.46.0:
     cargo-shuttle
 cargo-tarpaulin v0.30.0:
     cargo-tarpaulin

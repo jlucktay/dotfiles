@@ -1,3 +1,4 @@
+bufbuild/buf
 go-task/tap
 hashicorp/tap
 homebrew/cask-fonts

@@ -16,6 +16,7 @@
 /Users/james.lucktaylor/git/github.com/factoriotools/factorio-docker
 /Users/james.lucktaylor/git/github.com/fluxcd/flux
 /Users/james.lucktaylor/git/github.com/franckverrot/terraform-provider-stripe
+/Users/james.lucktaylor/git/github.com/github/vscode-github-actions
 /Users/james.lucktaylor/git/github.com/golangci/golangci-lint
 /Users/james.lucktaylor/git/github.com/google/go-github
 /Users/james.lucktaylor/git/github.com/google/oauth2l
