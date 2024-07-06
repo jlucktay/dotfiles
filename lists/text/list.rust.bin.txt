@@ -1,6 +1,6 @@
 bacon v2.18.2:
     bacon
-cargo-binstall v1.7.2:
+cargo-binstall v1.7.3:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache

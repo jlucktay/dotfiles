@@ -75,7 +75,6 @@ hadolint
 harfbuzz
 highway
 httpie
-hwloc
 hyperfine
 icu4c
 imath
@@ -86,7 +85,6 @@ jj
 jpeg-turbo
 jpeg-xl
 jq
-json-c
 jsonlint
 k3d
 k9s
@@ -135,7 +133,6 @@ libvidstab
 libvmaf
 libvorbis
 libvpx
-libwebsockets
 libx11
 libxau
 libxcb
@@ -173,7 +170,6 @@ openjpeg
 openldap
 openssl@1.1
 openssl@3
-openvino
 opus
 p11-kit
 packer
@@ -186,11 +182,9 @@ pixman
 poetry
 pre-commit
 prettyping
-pugixml
 pycparser
 python-certifi
 python-cryptography
-python-packaging
 python-pathspec
 python-setuptools
 python@3.10
@@ -218,7 +212,6 @@ sqlite
 srt
 svt-av1
 syft
-tbb
 terraform
 terraform-docs
 tesseract
@@ -231,13 +224,11 @@ topgrade
 tree
 tree-sitter
 trivy
-ttyd
 typescript
 unbound
 vale
 vault
 vegeta
-vhs
 webp
 wget
 x264

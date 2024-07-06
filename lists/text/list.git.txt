@@ -17,6 +17,7 @@
 /Users/james.lucktaylor/git/github.com/fluxcd/flux
 /Users/james.lucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/james.lucktaylor/git/github.com/github/vscode-github-actions
+/Users/james.lucktaylor/git/github.com/go-task/task
 /Users/james.lucktaylor/git/github.com/golangci/golangci-lint
 /Users/james.lucktaylor/git/github.com/google/go-github
 /Users/james.lucktaylor/git/github.com/google/oauth2l
@@ -83,6 +84,7 @@
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock-gke-platform-gitops
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock-vault
+/Users/james.lucktaylor/git/github.com/ovotech/cip-gitops
 /Users/james.lucktaylor/git/github.com/ovotech/cloud-carbon-footprint-datadog
 /Users/james.lucktaylor/git/github.com/ovotech/cloud-key-rotator
 /Users/james.lucktaylor/git/github.com/ovotech/devex-utilities

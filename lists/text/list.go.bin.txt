@@ -2,16 +2,17 @@
              biginns: go.jlucktay.dev/golang-workbench/mlb/biginns@v0.2.2
            cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.4.0
            cobra-cli: github.com/spf13/cobra-cli@v1.3.0
-          codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.1.2
+          codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.2.1
 codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
               ctlptl: github.com/tilt-dev/ctlptl/cmd/ctlptl@v0.8.29
             deadcode: golang.org/x/tools/cmd/deadcode@v0.22.0
                  dlv: github.com/go-delve/delve/cmd/dlv@v1.22.1
              dockfmt: github.com/jessfraz/dockfmt@v0.3.3
-               doggo: github.com/mr-karan/doggo/cmd/doggo@v0.5.7
+               doggo: github.com/mr-karan/doggo/cmd/doggo@v1.0.4
            expvarmon: github.com/divan/expvarmon@v0.0.0-20230430154648-8e0b3d2778b3
         fork-sweeper: github.com/rednafi/fork-sweeper/cmd/fork-sweeper@v0.2.0
               gcping: github.com/GoogleCloudPlatform/gcping@v0.0.10
+               ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.1.0
         go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20230222222326-d13c9c375b57
                goawk: github.com/benhoyt/goawk@v1.27.0
                 goda: github.com/loov/goda@v0.5.9
@@ -19,13 +20,13 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
         gomodifytags: github.com/fatih/gomodifytags@v1.16.0
                gonew: golang.org/x/tools/cmd/gonew@v0.22.0
               goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
-               gopls: golang.org/x/tools/gopls@v0.16.0
-         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20240621194115-a740542b267c
+               gopls: golang.org/x/tools/gopls@v0.16.1
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20240703200001-5377abf9626c
              gotests: github.com/cweill/gotests/gotests@v1.6.0
          govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.2
-                 gup: github.com/nao1215/gup@v0.27.1
+                 gup: github.com/nao1215/gup@v0.27.3
            helm-docs: github.com/norwoodj/helm-docs/cmd/helm-docs@v1.13.1
-                impl: github.com/josharian/impl@v1.3.0
+                impl: github.com/josharian/impl@v1.4.0
             inframap: github.com/cycloidio/inframap@v0.8.0
                   jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
                   ko: github.com/google/ko@v0.15.4
@@ -38,5 +39,6 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
         oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
              oauth2c: github.com/cloudentity/oauth2c@v1.14.0
              oauth2l: github.com/google/oauth2l@v1.3.0
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20240607184934-d8c29b80fc63
-             yamlfmt: github.com/google/yamlfmt/cmd/yamlfmt@v0.12.1
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20240701161620-30d9315975ff
+                task: github.com/go-task/task/v3/cmd/task@v3.38.0
+             yamlfmt: github.com/google/yamlfmt/cmd/yamlfmt@v0.13.0
