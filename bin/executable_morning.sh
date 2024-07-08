@@ -24,6 +24,12 @@ mlb_next_season_start='2024-03-28'
 
 declare -a morning_commands=()
 
+# Do some notification cleanup, if the tool is available and there's a token it can use.
+# Get it teed up before the GitHub commands are added to the queue.
+if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]]; then
+  morning_commands+=("ginsu --owner-allowlist='ovotech'")
+fi
+
 if command -v gdate &> /dev/null; then
   mlb_epoch=$(gdate --date="$mlb_next_season_start" +%s)
   today_epoch=$(gdate --date="$date_today" +%s)
