@@ -1,6 +1,7 @@
 # https://github.com/junegunn/fzf
-if test -f "$HOME/.fzf.bash"; then
-  # shellcheck disable=SC1091
-  source "$HOME/.fzf.bash"
+if command -v fzf &> /dev/null; then
   export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
+  fzf_bash=$(fzf --bash)
+  eval "$fzf_bash"
+  unset fzf_bash
 fi
