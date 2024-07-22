@@ -3,6 +3,6 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
     local -
     set -o pipefail
 
-    git branch | cut -c 2- | fzf | xargs git switch
+    git branch | cut -c 3- | fzf --query="" --select-1 --exit-0 | xargs git switch
   }
 fi
