@@ -1,0 +1,10 @@
+--bind='ctrl-]:toggle-wrap'
+--bind='ctrl-o:execute(code {})+abort'
+--border=rounded
+--color='pointer:bright-yellow'
+--header='Press CTRL-] to toggle line wrapping'
+--height=~50%
+--highlight-line
+--info=default
+--min-height=10
+--wrap
