@@ -59,7 +59,7 @@ prefix_path "$HOME/.rd/bin"
 prefix_path "$package_manager_prefix/bin"
 
 # Rust.
-prefix_path "$HOME/opt/rustup/bin"
+prefix_path "$package_manager_prefix/opt/rustup/bin"
 prefix_path "$HOME/.cargo/bin"
 
 prefix_path "$HOME/bin"
