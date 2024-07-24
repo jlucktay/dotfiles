@@ -46,17 +46,17 @@ prefix_path "/usr/local/sbin"
 # https://formulae.brew.sh/cask/google-cloud-sdk
 if test -r "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"; then
   # shellcheck disable=SC1091
-  source "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+  source "$package_manager_prefix/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
 fi
 
-prefix_path "${package_manager_prefix:?}/opt/curl/bin"
-prefix_path "${package_manager_prefix:?}/opt/libpq/bin"
-prefix_path "${package_manager_prefix:?}/opt/make/libexec/gnubin"
-prefix_path "${package_manager_prefix:?}/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
+prefix_path "$package_manager_prefix/opt/curl/bin"
+prefix_path "$package_manager_prefix/opt/libpq/bin"
+prefix_path "$package_manager_prefix/opt/make/libexec/gnubin"
+prefix_path "$package_manager_prefix/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.rd/bin"
 
 # Get 'kubectl' from Homebrew's 'kubernetes-cli' formula in front of Rancher Desktop's much older 'kubectl'.
-prefix_path "${package_manager_prefix:?}/bin"
+prefix_path "$package_manager_prefix/bin"
 
 # Rust.
 prefix_path "$HOME/opt/rustup/bin"
