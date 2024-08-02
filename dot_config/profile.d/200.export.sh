@@ -62,6 +62,7 @@ prefix_path "$package_manager_prefix/bin"
 prefix_path "$package_manager_prefix/opt/rustup/bin"
 prefix_path "$HOME/.cargo/bin"
 
+# Scripts et al in my own '~/bin' directory.
 prefix_path "$HOME/bin"
 
 # Go.
@@ -73,9 +74,6 @@ fi
 
 # Clean up the function and don't leave it lying around
 unset -f prefix_path
-
-# For Go, always use modules 👍
-export GO111MODULE=on
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH=":."
