@@ -20,6 +20,7 @@ only = [
   "go",
   "helm",
   "krew",
+  "mise",
   "pip3",
   "rustup",
   "system",
