@@ -17,10 +17,43 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
 
     branch_keys="${!unique_branches[*]}"
 
+    declare -a fzf_flags=(
+      --cycle
+      --exit-0
+      --preview 'git show --color=always {}'
+      --select-1
+      --tac
+    )
+
+    # For the 'fzf' call below:
+    # - if $1 is nil or '-', default the '--query' flag to the previous branch (if any)
+    # - otherwise, set '--query' to $1
+    declare default_query
+
+    if [[ -z ${1:+is_set} ]] || [[ $1 == "-" ]]; then
+      if previous_branch=$(git rev-parse --symbolic-full-name '@{-1}'); then
+        # Trim the prefix (if present) from the ref, with '${parameter#word}' expansion.
+        default_query=${previous_branch#refs/@(heads|remotes)/}
+      fi
+    else
+      default_query=$1
+    fi
+
+    if current_branch=$(git rev-parse --symbolic-full-name HEAD); then
+      if [[ $current_branch == "$previous_branch" ]]; then
+        return 0
+      fi
+    fi
+
+    # Always use the variable declared above, even if it's empty, because empty is still a valid query for fzf.
+    fzf_flags+=(
+      --query="$default_query"
+    )
+
     # Convert spaces into newlines with the '-e' flag of 'echo', then send the keys to 'fzf' to get a choice.
     branch_choice=$(echo -e "${branch_keys// /\\n}" \
       | sort --ignore-case \
-      | fzf --cycle --exit-0 --preview 'git show --color=always {}' --query="" --select-1 --tac)
+      | fzf "${fzf_flags[@]}")
 
     # If the branch choice starts with a '<remote>/' prefix, trim it.
     git_remote=$(git remote)
