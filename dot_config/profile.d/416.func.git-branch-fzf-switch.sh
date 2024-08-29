@@ -25,35 +25,29 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
       --tac
     )
 
-    # For the 'fzf' call below:
-    # - if $1 is nil or '-', default the '--query' flag to the previous branch (if any)
-    # - otherwise, set '--query' to $1
-    declare default_query
-
-    if [[ -z ${1:+is_set} ]] || [[ $1 == "-" ]]; then
-      if previous_branch=$(git rev-parse --symbolic-full-name '@{-1}'); then
-        # Trim the prefix (if present) from the ref, with '${parameter#word}' expansion.
-        default_query=${previous_branch#refs/@(heads|remotes)/}
-      fi
+    if [[ -z ${1:+is_set} ]]; then
+      # $1 is nil -> no-op
+      :
+    elif [[ $1 == "-" ]]; then
+      # If switching to the previous branch by calling 'gbfs -', just go ahead and do it without spinning up fzf.
+      git switch -
+      return $?
     else
-      default_query=$1
+      # For the 'fzf' call below, if $1 is not nil nor '-', set '--query' to $1
+      fzf_flags+=(
+        --query="$1"
+      )
     fi
-
-    if current_branch=$(git rev-parse --symbolic-full-name HEAD); then
-      if [[ $current_branch == "$previous_branch" ]]; then
-        return 0
-      fi
-    fi
-
-    # Always use the variable declared above, even if it's empty, because empty is still a valid query for fzf.
-    fzf_flags+=(
-      --query="$default_query"
-    )
 
     # Convert spaces into newlines with the '-e' flag of 'echo', then send the keys to 'fzf' to get a choice.
     branch_choice=$(echo -e "${branch_keys// /\\n}" \
       | sort --ignore-case \
       | fzf "${fzf_flags[@]}")
+
+    # If no branch choice was made, e.g. ESC was pressed during the 'fzf' call, we're done here.
+    if [[ -z $branch_choice ]]; then
+      return 0
+    fi
 
     # If the branch choice starts with a '<remote>/' prefix, trim it.
     git_remote=$(git remote)
@@ -61,15 +55,11 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
 
     for remote in "${git_remotes[@]}"; do
       if [[ $branch_choice == ${remote}/* ]]; then
+        # Trim the prefix (if present) from the ref, with '${parameter#word}' expansion.
         branch_choice="${branch_choice#"${remote}"/}"
         break
       fi
     done
-
-    # If no branch choice was made, e.g. ESC was pressed during the 'fzf' call, we're done here.
-    if [[ -z $branch_choice ]]; then
-      return 0
-    fi
 
     git switch "$branch_choice"
   }
