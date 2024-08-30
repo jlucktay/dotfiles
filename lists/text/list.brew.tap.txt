@@ -1,8 +1,11 @@
 bufbuild/buf
+cue-lang/tap
 go-task/tap
 hashicorp/tap
 homebrew/cask-fonts
+owenthereal/upterm
 rafaelgarrido/caveats
 stateful/tap
 teamookla/speedtest
 tilt-dev/tap
+upbound/tap

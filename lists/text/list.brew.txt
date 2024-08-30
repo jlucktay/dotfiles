@@ -1,3 +1,4 @@
+abseil
 act
 adr-tools
 ansible-lint
@@ -26,13 +27,16 @@ chezmoi
 circleci
 cjson
 cmake
+code-server
 consul
 corepack
 coreutils
 cryptography
+cue
 curl
 dav1d
 dive
+docker-credential-up
 exiftool
 eza
 fd
@@ -81,7 +85,6 @@ imath
 ipcalc
 isl
 jasper
-jj
 jpeg-turbo
 jpeg-xl
 jq
@@ -107,6 +110,7 @@ libbluray
 libev
 libevent
 libgit2
+libgit2@1.7
 libidn2
 liblinear
 libmicrohttpd
@@ -160,6 +164,7 @@ netpbm
 nettle
 nmap
 node
+node@20
 numpy
 oniguruma
 openblas
@@ -167,7 +172,6 @@ opencore-amr
 openexr
 openjdk
 openjpeg
-openldap
 openssl@1.1
 openssl@3
 opus
@@ -182,11 +186,11 @@ pixman
 poetry
 pre-commit
 prettyping
+protobuf
 pycparser
 python-certifi
 python-cryptography
 python-pathspec
-python-setuptools
 python@3.10
 python@3.11
 python@3.12
@@ -198,6 +202,7 @@ ripgrep
 rtmpdump
 rubberband
 runme
+rustup
 rustup-init
 sdl2
 semgrep
@@ -226,6 +231,8 @@ tree-sitter
 trivy
 typescript
 unbound
+up
+upterm
 vale
 vault
 vegeta

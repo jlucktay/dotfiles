@@ -4,6 +4,7 @@ alacritty
 amazon-chime
 android-studio
 anki
+arc
 audacity
 bartender
 discord
@@ -33,5 +34,6 @@ steam
 tyke
 visual-studio-code
 vlc
+webex
 whatsapp
 zoom

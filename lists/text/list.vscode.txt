@@ -5,6 +5,7 @@ dbaeumer.vscode-eslint
 editorconfig.editorconfig
 esbenp.prettier-vscode
 exiasr.hadolint
+fill-labs.dependi
 foxundermoon.shell-format
 github.vscode-github-actions
 golang.go
@@ -13,6 +14,8 @@ hashicorp.hcl
 hashicorp.terraform
 jetmartin.bats
 jinliming2.vscode-go-template
+mechatroner.rainbow-csv
+mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-docker
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.debugpy
@@ -35,7 +38,6 @@ redhat.ansible
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
-serayuzgur.crates
 stkb.rewrap
 sumneko.lua
 tailscale.vscode-tailscale
