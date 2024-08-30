@@ -64,5 +64,9 @@
   {
     "key": "cmd+numpad0",
     "command": "-workbench.action.zoomReset"
+  },
+  {
+    "key": "ctrl+cmd+b",
+    "command": "merge-conflict.accept.all-both"
   }
 ]
