@@ -43,8 +43,8 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.executionEnvironment.pull.policy": "always",
-  "cloudcode.duetAI.enable": false,
-  "cloudcode.yaml.format.singleQuote": true,
+  "cunneen-copy-breadcrumbs.separationString": ".",
+  "cunneen-copy-breadcrumbs.showAlert": false,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.cursorBlinking": "phase",
@@ -236,15 +236,13 @@
     {{- end }}
   },
   {{- if lookPath "helm" }}
-  "vscode-kubernetes.helm-path.mac": "{{ lookPath "helm" }}",
+  "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" }}",
   {{- end }}
   {{- if lookPath "kubectl" }}
-  "vscode-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" }}",
+  "vscode-kubernetes.kubectl-path-mac": "{{ lookPath "kubectl" }}",
   {{- end }}
   {{- if lookPath "minikube" }}
-  "vscode-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
-  {{- else }}
-  "vscode-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube",
+  "vscode-kubernetes.minikube-path-mac": "{{ lookPath "minikube" }}",
   {{- end }}
   "window.closeWhenEmpty": true,
   "window.commandCenter": true,
