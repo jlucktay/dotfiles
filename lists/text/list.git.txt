@@ -50,7 +50,9 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/coding-interview-university
 /Users/james.lucktaylor/git/github.com/jlucktay/cpp-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/crossplane-workbench
-/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit
+/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_pure-terraform
+/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/google_project
+/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/this.google_network
 /Users/james.lucktaylor/git/github.com/jlucktay/google-cloud-storage
 /Users/james.lucktaylor/git/github.com/jlucktay/hashicorp-homebrew-tap
 /Users/james.lucktaylor/git/github.com/jlucktay/hello-react

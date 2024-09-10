@@ -61,7 +61,6 @@ giflib
 git
 git-delta
 git-filter-repo
-git-machete
 glib
 gmp
 gnu-sed
@@ -152,6 +151,7 @@ lzo
 m4
 make
 mbedtls
+micro
 mkdocs
 mpdecimal
 mpfr
@@ -223,12 +223,11 @@ tesseract
 tflint
 tfsec
 theora
-tilt
+timoni
 tldr
 topgrade
 tree
 tree-sitter
-trivy
 typescript
 unbound
 up

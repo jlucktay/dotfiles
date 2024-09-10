@@ -1,14 +1,14 @@
 bacon v2.20.0:
     bacon
-cargo-binstall v1.10.3:
+cargo-binstall v1.10.4:
     cargo-binstall
 cargo-cache v0.8.3:
     cargo-cache
 cargo-careful v0.4.3:
     cargo-careful
-cargo-info v0.7.6:
+cargo-info v0.7.7:
     cargo-info
-cargo-semver-checks v0.34.0:
+cargo-semver-checks v0.35.0:
     cargo-semver-checks
 cargo-shuttle v0.47.0:
     cargo-shuttle
@@ -25,13 +25,13 @@ czkawka_cli v7.0.0:
     czkawka_cli
 du-dust v1.1.1:
     dust
-jj-cli v0.20.0:
+jj-cli v0.21.0:
     jj
 miniserve v0.27.1:
     miniserve
-mise v2024.8.15:
+mise v2024.9.1:
     mise
-oxker v0.7.0:
+oxker v0.7.2:
     oxker
 rage v0.10.0:
     rage

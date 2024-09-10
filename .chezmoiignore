@@ -14,6 +14,9 @@ TODO.md
 # Symlinked elsewhere
 /chezmoi-config.json
 
-# Miscellanea
+# Bash eternal history
 bash_eternal_history.zip
+bash_eternal_history.tar.gz.age
+
+# Homebrew auto-install
 Brewfile

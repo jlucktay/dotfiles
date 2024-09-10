@@ -37,3 +37,13 @@ fi
 if [[ -x "${package_manager_prefix:?}/bin/terraform" ]]; then
   complete -C "${package_manager_prefix:?}/bin/terraform" terraform
 fi
+
+# Timoni
+if command -v timoni > /dev/null; then
+  timoni_completion_bash=$(timoni completion bash)
+
+  # shellcheck source=/dev/null
+  source <(echo "$timoni_completion_bash")
+
+  unset timoni_completion_bash
+fi

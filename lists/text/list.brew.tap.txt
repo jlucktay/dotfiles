@@ -6,6 +6,6 @@ homebrew/cask-fonts
 owenthereal/upterm
 rafaelgarrido/caveats
 stateful/tap
+stefanprodan/tap
 teamookla/speedtest
-tilt-dev/tap
 upbound/tap

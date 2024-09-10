@@ -40,13 +40,16 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[yaml]": {
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.executionEnvironment.pull.policy": "always",
   "cunneen-copy-breadcrumbs.separationString": ".",
   "cunneen-copy-breadcrumbs.showAlert": false,
+  "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "diffEditor.renderSideBySide": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
@@ -72,14 +75,14 @@
   "explorer.openEditors.sortOrder": "alphabetical",
   "explorer.sortOrder": "type",
   "files.associations": {
+    "*.mmark": "markdown",
+    "*.tmpl": "go-template",
     ".chezmoiignore": "ignore",
     ".env": "properties",
     ".firebaserc": "json",
     ".gcloudignore": "ignore",
-    ".gitconfig.aliases": "properties",
     ".gitconfig": "properties",
-    "*.mmark": "markdown",
-    "*.tmpl": "go-template",
+    ".gitconfig.aliases": "properties",
     "htoprc": "properties"
   },
   "files.autoSave": "onFocusChange",
@@ -168,6 +171,8 @@
   "prettier.printWidth": 120,
   "prettier.singleQuote": true,
   "redhat.telemetry.enabled": true,
+  "search.defaultViewMode": "tree",
+  "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.searchOnType": false,
   "shellcheck.customArgs": [
     "--enable=all",
