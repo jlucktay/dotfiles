@@ -26,5 +26,8 @@ if ! dpa=$(docker ps --all --quiet | wc -l); then
 fi
 
 if [[ ${dpa//[[:blank:]]/} != "0" ]]; then
+  echo
+  docker ps --all
+  echo
   err "non-zero number of containers still running"
 fi
