@@ -10,7 +10,7 @@ credentials "app.terraform.io" {
   token = "{{ onepasswordRead "op://Personal/Terraform Cloud - personal/Token" "my.1password.com" }}"
   {{- else if eq (env "CHEZMOI_TERRAFORM_TOKEN") "ovo" -}}
   // OVO token - managed by chezmoi
-  token = "{{ onepasswordRead "op://Private/Terraform Cloud token/credential" "ovotech.1password.com" }}"
+  token = "{{ onepasswordRead "op://Private/OVO Terraform Cloud token/credential" "ovotech.1password.com" }}"
   {{- end }}
 }
 {{- if eq (env "CHEZMOI_TERRAFORM_TOKEN") "ovo" }}
