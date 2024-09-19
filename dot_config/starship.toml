@@ -298,10 +298,6 @@ format = '[$symbol$context]($style)[:](fg:#326ce5 bg:#ffffff)[$namespace]($style
 style = 'fg:#ffffff bg:#326ce5'
 symbol = '󱃾 '
 
-detect_extensions = []
-detect_files = ['.kube-linter.yaml', 'kustomization.yaml']
-detect_folders = ['bedrock', 'clusters', 'gke']
-
 [[kubernetes.contexts]]
 context_pattern = '^gke_(?P<var_project>[^_]+)_(?P<var_region>[^_]+)_(?P<var_cluster>[^_]+)$'
 context_alias = '$var_cluster in $var_project ($var_region)'
