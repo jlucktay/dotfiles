@@ -18,6 +18,16 @@ if command -v git &> /dev/null && [[ -r "$HOME/git-completion.bash" ]]; then
   source "$HOME/git-completion.bash"
 fi
 
+# Jira CLI
+if command -v jira &> /dev/null; then
+  jira_completion_bash=$(jira completion bash)
+
+  # shellcheck source=/dev/null
+  source <(echo "$jira_completion_bash")
+
+  unset jira_completion_bash
+fi
+
 # Kubernetes CLI
 if command -v kubectl &> /dev/null; then
   complete -F __start_kubectl k
