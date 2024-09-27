@@ -58,6 +58,9 @@ prefix_path "$HOME/.rd/bin"
 # Get 'kubectl' from Homebrew's 'kubernetes-cli' formula in front of Rancher Desktop's much older 'kubectl'.
 prefix_path "$package_manager_prefix/bin"
 
+# Ruby.
+prefix_path "$package_manager_prefix/opt/ruby/bin"
+
 # Rust.
 prefix_path "$package_manager_prefix/opt/rustup/bin"
 prefix_path "$HOME/.cargo/bin"
