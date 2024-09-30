@@ -101,3 +101,8 @@ fi
 if command -v adr &> /dev/null; then
   export ADR_PAGER='less'
 fi
+
+# https://github.com/sharkdp/bat?tab=readme-ov-file#man
+if command -v bat &> /dev/null; then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
