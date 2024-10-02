@@ -58,6 +58,9 @@ prefix_path "$HOME/.rd/bin"
 # Get 'kubectl' from Homebrew's 'kubernetes-cli' formula in front of Rancher Desktop's much older 'kubectl'.
 prefix_path "$package_manager_prefix/bin"
 
+# Python v3.12.
+prefix_path "$package_manager_prefix/opt/python@3.12/libexec/bin"
+
 # Ruby.
 prefix_path "$package_manager_prefix/opt/ruby/bin"
 
