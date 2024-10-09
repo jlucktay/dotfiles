@@ -6,12 +6,6 @@ if [[ -r "${package_manager_prefix:?}/etc/profile.d/bash_completion.sh" ]]; then
   source "${package_manager_prefix:?}/etc/profile.d/bash_completion.sh"
 fi
 
-# Completion via tabtab
-if [[ -r "$HOME/.config/tabtab/bash/__tabtab.bash" ]]; then
-  # shellcheck disable=SC1091
-  source "$HOME/.config/tabtab/bash/__tabtab.bash"
-fi
-
 # Git completion
 if command -v git &> /dev/null && [[ -r "$HOME/git-completion.bash" ]]; then
   # shellcheck disable=SC1091
@@ -41,6 +35,12 @@ fi
 # SeaweedFS
 if [[ -x "${package_manager_prefix:?}/bin/weed" ]]; then
   complete -C "${package_manager_prefix:?}/bin/weed" weed
+fi
+
+# tabtab
+if [[ -r "$HOME/.config/tabtab/bash/__tabtab.bash" ]]; then
+  # shellcheck disable=SC1091
+  source "$HOME/.config/tabtab/bash/__tabtab.bash"
 fi
 
 # Terraform
