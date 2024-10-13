@@ -54,7 +54,9 @@
 	updated = green
 
 [commit]
+{{- if lookPath "op" }}
 	gpgsign = true
+{{- end }}
 	template = {{ .chezmoi.homeDir }}/.gitmessage
 
 [core]
