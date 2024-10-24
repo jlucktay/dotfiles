@@ -98,3 +98,8 @@ if command -v git &> /dev/null; then
     alias tfmt='terraform fmt --check=false --diff=false --list --recursive --write "$(git rev-parse --show-toplevel)"'
   fi
 fi
+
+# https://docs.commonfate.io/granted/usage/assuming-roles
+if command -v assume &> /dev/null; then
+  alias assume=". assume"
+fi
