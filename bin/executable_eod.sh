@@ -21,13 +21,13 @@ if ! docker stats --no-stream &> /dev/null; then
   exit 0
 fi
 
-if ! dpa=$(docker ps --all --quiet | wc -l); then
+if ! dpa=$(docker ps --quiet | wc -l); then
   err "could not get running containers from host"
 fi
 
 if [[ ${dpa//[[:blank:]]/} != "0" ]]; then
   echo
-  docker ps --all
+  docker ps
   echo
   err "non-zero number of containers still running"
 fi
