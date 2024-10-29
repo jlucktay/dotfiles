@@ -113,5 +113,5 @@ fi
 # AWS CLI MITM
 # https://ovotech.atlassian.net/wiki/spaces/OTKB/pages/4596302401/Certificate+Error+When+Connecting+to+Resources+via+ZTNA
 if command -v aws &> /dev/null; then
-  export AWS_CA_BUNDLE="$HOME/ztna-mitm/Cloudflare_CA.pem"
+  export AWS_CA_BUNDLE="$HOME/ztna-mitm/CA-Bundle-ZTNA.pem"
 fi
