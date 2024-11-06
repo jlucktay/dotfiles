@@ -57,3 +57,13 @@ if command -v timoni > /dev/null; then
 
   unset timoni_completion_bash
 fi
+
+# Warp CLI - Cloudflare
+if command -v warp-cli > /dev/null; then
+  warp_cli_generate_completions_bash=$(warp-cli generate-completions bash)
+
+  # shellcheck source=/dev/null
+  source <(echo "$warp_cli_generate_completions_bash")
+
+  unset warp_cli_generate_completions_bash
+fi
