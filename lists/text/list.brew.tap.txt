@@ -1,8 +1,12 @@
+ankitpokhrel/jira-cli
 bufbuild/buf
+common-fate/granted
 cue-lang/tap
 go-task/tap
+grampelberg/kty
 hashicorp/tap
-homebrew/cask-fonts
+heroku/brew
+homebrew/services
 owenthereal/upterm
 rafaelgarrido/caveats
 stateful/tap

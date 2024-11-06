@@ -11,7 +11,6 @@ bash
 bash-completion@2
 bat
 bats-core
-bfg
 binutils
 brew-caveats
 brotli
@@ -29,11 +28,12 @@ cjson
 cmake
 code-server
 consul
-corepack
 coreutils
+crossplane
 cryptography
 cue
 curl
+cython
 dav1d
 dive
 docker-credential-up
@@ -70,6 +70,7 @@ go-task
 gofumpt
 golangci-lint
 goreleaser
+granted
 graphite2
 graphviz
 gron
@@ -79,11 +80,13 @@ harfbuzz
 highway
 httpie
 hyperfine
-icu4c
+icu4c@75
+icu4c@76
 imath
 ipcalc
 isl
 jasper
+jira-cli
 jpeg-turbo
 jpeg-xl
 jq
@@ -93,6 +96,7 @@ k9s
 kondo
 krb5
 krew
+kty
 kube-linter
 kubeconform
 kubectx
@@ -106,6 +110,7 @@ libass
 libavif
 libb2
 libbluray
+libdeflate
 libev
 libevent
 libgit2
@@ -171,6 +176,7 @@ openblas
 opencore-amr
 openexr
 openjdk
+openjdk@21
 openjpeg
 openssl@1.1
 openssl@3
@@ -190,10 +196,12 @@ protobuf
 pycparser
 python-certifi
 python-cryptography
+python-packaging
 python-pathspec
 python@3.10
 python@3.11
 python@3.12
+python@3.13
 pyyaml
 qpdf
 rav1e
@@ -201,6 +209,7 @@ readline
 ripgrep
 rtmpdump
 rubberband
+ruby
 runme
 rustup
 rustup-init
@@ -217,6 +226,7 @@ sqlite
 srt
 svt-av1
 syft
+tailwindcss
 terraform
 terraform-docs
 tesseract
@@ -235,6 +245,7 @@ upterm
 vale
 vault
 vegeta
+vsce
 webp
 wget
 x264

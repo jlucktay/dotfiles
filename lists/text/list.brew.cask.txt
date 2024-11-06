@@ -7,6 +7,7 @@ anki
 arc
 audacity
 bartender
+curseforge
 discord
 epic-games
 figma
@@ -23,8 +24,10 @@ loopback
 microsoft-teams
 miro
 nordvpn
+nvidia-geforce-now
 obsidian
 pingmenu
+prismlauncher
 rancher
 raspberry-pi-imager
 rectangle

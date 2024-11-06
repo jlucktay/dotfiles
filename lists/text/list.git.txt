@@ -16,6 +16,8 @@
 /Users/james.lucktaylor/git/github.com/cplee/github-actions-demo
 /Users/james.lucktaylor/git/github.com/crossplane-contrib/provider-upjet-gcp
 /Users/james.lucktaylor/git/github.com/crossplane/crossplane
+/Users/james.lucktaylor/git/github.com/cue-lang/vscode-cue
+/Users/james.lucktaylor/git/github.com/datreeio/CRDs-catalog
 /Users/james.lucktaylor/git/github.com/dtolnay/syn
 /Users/james.lucktaylor/git/github.com/factoriotools/factorio-docker
 /Users/james.lucktaylor/git/github.com/fluxcd/flux
@@ -46,6 +48,7 @@
 /Users/james.lucktaylor/git/github.com/jetli/rust-yew-realworld-example-app
 /Users/james.lucktaylor/git/github.com/jhead/phantom
 /Users/james.lucktaylor/git/github.com/jlucktay/ansible-workbench
+/Users/james.lucktaylor/git/github.com/jlucktay/chef-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/cleanroom
 /Users/james.lucktaylor/git/github.com/jlucktay/coding-interview-university
 /Users/james.lucktaylor/git/github.com/jlucktay/cpp-workbench
@@ -88,8 +91,9 @@
 /Users/james.lucktaylor/git/github.com/ovotech/aws-network-guide
 /Users/james.lucktaylor/git/github.com/ovotech/backup.ovo-backstage-tooling.20231024T170259Z
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock
+/Users/james.lucktaylor/git/github.com/ovotech/bedrock-dogfood
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock-exploration
-/Users/james.lucktaylor/git/github.com/ovotech/bedrock-gke-platform-gitops/_bedrock-gke-platform-gitops
+/Users/james.lucktaylor/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops
 /Users/james.lucktaylor/git/github.com/ovotech/bedrock-vault
 /Users/james.lucktaylor/git/github.com/ovotech/cip-gitops
 /Users/james.lucktaylor/git/github.com/ovotech/cloud-carbon-footprint-datadog
@@ -100,6 +104,7 @@
 /Users/james.lucktaylor/git/github.com/ovotech/engineering-operating-model
 /Users/james.lucktaylor/git/github.com/ovotech/gcp-network-guide
 /Users/james.lucktaylor/git/github.com/ovotech/gcp-org
+/Users/james.lucktaylor/git/github.com/ovotech/gh-br
 /Users/james.lucktaylor/git/github.com/ovotech/go-sync
 /Users/james.lucktaylor/git/github.com/ovotech/go-sync-adapter-gen
 /Users/james.lucktaylor/git/github.com/ovotech/go-sync-ovo
@@ -119,6 +124,7 @@
 /Users/james.lucktaylor/git/github.com/ovotech/scp-as-code
 /Users/james.lucktaylor/git/github.com/ovotech/stackerr
 /Users/james.lucktaylor/git/github.com/ovotech/sync-as-a-service
+/Users/james.lucktaylor/git/github.com/ovotech/target-architecture
 /Users/james.lucktaylor/git/github.com/ovotech/team-cppe
 /Users/james.lucktaylor/git/github.com/ovotech/terraform-cloud-as-code
 /Users/james.lucktaylor/git/github.com/ovotech/terraform-provider-aiven-kafka-users
@@ -156,6 +162,7 @@
 /Users/james.lucktaylor/git/github.com/yannh/kubernetes-json-schema
 /Users/james.lucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/james.lucktaylor/git/go.jlucktay.dev/arrowverse
+/Users/james.lucktaylor/git/go.jlucktay.dev/chainsaw
 /Users/james.lucktaylor/git/go.jlucktay.dev/clint
 /Users/james.lucktaylor/git/go.jlucktay.dev/codecraft-tdd-fibonacci
 /Users/james.lucktaylor/git/go.jlucktay.dev/codecraft-tdd-property-viewer

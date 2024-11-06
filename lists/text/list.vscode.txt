@@ -1,5 +1,7 @@
 bierner.markdown-mermaid
+bradlc.vscode-tailwindcss
 chdsbd.github-code-owners
+cuelang.org.cue
 davidanson.vscode-markdownlint
 dbaeumer.vscode-eslint
 editorconfig.editorconfig
@@ -32,7 +34,6 @@ ms-vscode-remote.remote-ssh
 ms-vscode-remote.remote-ssh-edit
 ms-vscode.remote-explorer
 ms-vsliveshare.vsliveshare
-nickgo.cuelang
 pkief.material-icon-theme
 pomdtr.excalidraw-editor
 redhat.ansible
