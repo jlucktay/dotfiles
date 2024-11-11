@@ -22,12 +22,12 @@ date_today+="$(date '+%d')"
 mlb_next_season_start='2025-03-18'
 #
 
-declare -a morning_commands=()
+declare -a command_queue=()
 
 # Do some notification cleanup, if the tool is available and there's a token it can use.
 # Get it teed up before the GitHub commands are added to the queue.
 if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]]; then
-  morning_commands+=("ginsu --owner-allowlist='ovotech'")
+  command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
 if command -v gdate &> /dev/null; then
@@ -36,14 +36,14 @@ if command -v gdate &> /dev/null; then
   mlb_season_has_started=$(("$today_epoch" - "$mlb_epoch"))
 
   if [[ $mlb_season_has_started -ge 0 ]]; then
-    morning_commands+=(
+    command_queue+=(
       # Check the schedules for MLB.TV.
       "open 'https://www.mlb.com/live-stream-games'"
     )
   fi
 fi
 
-morning_commands+=(
+command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
   "open 'https://github.com/orgs/ovotech/teams/dev-platforms-team-red/members'"
 
@@ -59,7 +59,7 @@ if check_rd_vm; then
 else
   dslog "Rancher Desktop VM check 🛑 did not pass"
 
-  morning_commands+=(
+  command_queue+=(
     # Remove all build cache more than 30 days old, without confirmation.
     "docker buildx prune --all --filter=\"until=$((30 * 24))h\" --force --verbose"
 
@@ -71,7 +71,7 @@ else
   )
 fi
 
-morning_commands+=(
+command_queue+=(
   # See what's on.
   "cineworld -l 3"
 
@@ -79,9 +79,9 @@ morning_commands+=(
   "tail -n 3 \"$HOME\"/Library/Logs/rancher-desktop/update.log"
 )
 
-tool_check "${morning_commands[@]}"
+tool_check "${command_queue[@]}"
 
-for mc in "${morning_commands[@]}"; do
-  dslog "$mc"
-  eval "$mc"
+for cq in "${command_queue[@]}"; do
+  dslog "$cq"
+  eval "$cq"
 done
