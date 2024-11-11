@@ -19,7 +19,7 @@ date_today+="$(date '+%m')/"
 date_today+="$(date '+%d')"
 
 #
-mlb_next_season_start='2024-03-28'
+mlb_next_season_start='2025-03-18'
 #
 
 declare -a morning_commands=()
