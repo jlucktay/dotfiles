@@ -47,8 +47,8 @@ command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
   "open 'https://github.com/orgs/ovotech/teams/dev-platforms-team-red/members'"
 
-  # Check PR review requests.
-  "open 'https://github.com/notifications?query=reason%3Areview-requested'"
+  # Check PR mentions.
+  "open 'https://github.com/notifications?query=reason%3Amention'"
 
   # Update all of the things.
   topgrade
