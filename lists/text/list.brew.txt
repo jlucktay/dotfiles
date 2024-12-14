@@ -1,6 +1,7 @@
 abseil
 act
 adr-tools
+ansible
 ansible-lint
 aom
 argocd
@@ -21,6 +22,7 @@ ca-certificates
 cairo
 certifi
 cffi
+chart-testing
 checkov
 chezmoi
 circleci
@@ -98,6 +100,7 @@ krb5
 krew
 kty
 kube-linter
+kubebuilder
 kubeconform
 kubectx
 kubernetes-cli
@@ -175,8 +178,6 @@ oniguruma
 openblas
 opencore-amr
 openexr
-openjdk
-openjdk@21
 openjpeg
 openssl@1.1
 openssl@3
@@ -254,6 +255,7 @@ xorgproto
 xq
 xvid
 xz
+yamale
 yamllint
 yarn-completion
 youtube-dl

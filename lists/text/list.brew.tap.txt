@@ -6,6 +6,7 @@ go-task/tap
 grampelberg/kty
 hashicorp/tap
 heroku/brew
+homebrew/bundle
 homebrew/services
 owenthereal/upterm
 rafaelgarrido/caveats

@@ -1,26 +1,26 @@
        actions-usage: github.com/self-actuated/actions-usage@v0.1.2
-             biginns: go.jlucktay.dev/golang-workbench/mlb/biginns@v0.2.2
+             biginns: go.jlucktay.dev/golang-workbench/mlb/biginns@v0.2.3
            cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.5.0
            cobra-cli: github.com/spf13/cobra-cli@v1.3.0
           codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.2.1
 codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
-            deadcode: golang.org/x/tools/cmd/deadcode@v0.26.0
+            deadcode: golang.org/x/tools/cmd/deadcode@v0.28.0
              dockfmt: github.com/jessfraz/dockfmt@v0.3.3
                doggo: github.com/mr-karan/doggo/cmd/doggo@v1.0.5
                  dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.1
            expvarmon: github.com/divan/expvarmon@v0.0.0-20230430154648-8e0b3d2778b3
         fork-sweeper: github.com/rednafi/fork-sweeper/cmd/fork-sweeper@v0.2.0
               gcping: github.com/GoogleCloudPlatform/gcping@v0.0.10
-               ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.6.3
+               ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.8.0
         go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20230222222326-d13c9c375b57
-               goawk: github.com/benhoyt/goawk@v1.29.0
+               goawk: github.com/benhoyt/goawk@v1.29.1
                 goda: github.com/loov/goda@v0.5.11
-               godoc: golang.org/x/tools/cmd/godoc@v0.26.0
+               godoc: golang.org/x/tools/cmd/godoc@v0.28.0
         gomodifytags: github.com/fatih/gomodifytags@v1.17.0
-               gonew: golang.org/x/tools/cmd/gonew@v0.26.0
+               gonew: golang.org/x/tools/cmd/gonew@v0.28.0
               goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
-               gopls: golang.org/x/tools/gopls@v0.16.2
-         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20241105203324-bf5a09be8123
+               gopls: golang.org/x/tools/gopls@v0.17.0
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20241212155558-b40c91e7e8c7
              gotests: github.com/cweill/gotests/gotests@v1.6.0
          govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.3
                  gum: github.com/charmbracelet/gum@v0.14.5
@@ -29,20 +29,20 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
                 impl: github.com/josharian/impl@v1.4.0
             inframap: github.com/cycloidio/inframap@v0.8.0
                   jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
-                kind: sigs.k8s.io/kind@v0.24.0
+                kind: sigs.k8s.io/kind@v0.25.0
                   ko: github.com/google/ko@v0.17.1
-             kompose: github.com/kubernetes/kompose@v1.34.0
                 lcut: github.com/vrischmann/logfmt/cmd/lcut@v0.0.0-20231107105446-6947580a976e
              ls-lint: github.com/loeffel-io/ls-lint@v1.11.2
       makefile-graph: github.com/dnaeon/makefile-graph/cmd/makefile-graph@v0.1.3
-            minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.2
-             modview: github.com/bayraktugrul/modview@v1.2.2
-                 moq: github.com/matryer/moq@v0.5.0
+            minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.3
+             modview: github.com/bayraktugrul/modview@v1.2.4
+                 moq: github.com/matryer/moq@v0.5.1
      my-github-repos: go.jlucktay.dev/my-github-repos@v0.3.4
              nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20241010202415-ba14292918d8
         oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
-             oauth2c: github.com/cloudentity/oauth2c@v1.16.0
-             oauth2l: github.com/google/oauth2l@v1.3.0
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20241004190937-78391ec0fb95
-              rclone: github.com/rclone/rclone@v1.68.1
+             oauth2c: github.com/cloudentity/oauth2c@v1.17.0
+             oauth2l: github.com/google/oauth2l@v1.3.2
+             octocov: github.com/k1LoW/octocov@v0.62.3
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20241210171136-d5afb0b68716
+              rclone: github.com/rclone/rclone@v1.68.2
              yamlfmt: github.com/google/yamlfmt/cmd/yamlfmt@v0.14.0
