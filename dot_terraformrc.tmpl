@@ -3,26 +3,26 @@
 // 1. make sure you have a `.terraform.lock.hcl` file, because
 // 2. this issue (https://github.com/hashicorp/terraform/issues/32936) makes it clear there is a bug in the area.
 
-{{ if lookPath "op" -}}
+{{if lookPath "op" -}}
 credentials "app.terraform.io" {
-  {{- if eq (env "CHEZMOI_TERRAFORM_TOKEN") "personal" }}
+  {{- if eq (env "CHEZMOI_TERRAFORM_TOKEN") "personal"}}
   // Personal token - managed by chezmoi
-  token = "{{ onepasswordRead "op://Personal/Terraform Cloud - personal/Token" "my.1password.com" }}"
-  {{- else if eq (env "CHEZMOI_TERRAFORM_TOKEN") "ovo" }}
+  token = "{{onepasswordRead "op://Personal/Terraform Cloud - personal/Token" "my.1password.com"}}"
+  {{- else if eq (env "CHEZMOI_TERRAFORM_TOKEN") "ovo"}}
   // OVO token - managed by chezmoi
-  token = "{{ onepasswordRead "op://Private/OVO Terraform Cloud token/credential" "ovotech.1password.com" }}"
-  {{- end }}
+  token = "{{onepasswordRead "op://Private/OVO Terraform Cloud token/credential" "ovotech.1password.com"}}"
+  {{- end}}
 }
-{{- end }}
 
+{{end -}}
 // Enables plugin caching and specifies, as a string, the location of the plugin cache directory.
 // https://developer.hashicorp.com/terraform/cli/config/config-file#provider-plugin-cache
-plugin_cache_dir = "{{ .chezmoi.homeDir }}/.terraform.d/plugin-cache"
+plugin_cache_dir = "{{.chezmoi.homeDir}}/.terraform.d/plugin-cache"
 
 // https://developer.hashicorp.com/terraform/cli/config/config-file#explicit-installation-method-configuration
 provider_installation {
   filesystem_mirror {
-    path    = "{{ .chezmoi.homeDir }}/m2tp3"
+    path    = "{{.chezmoi.homeDir}}/m2tp3"
     include = [
       "registry.terraform.io/hashicorp/random",
       "registry.terraform.io/hashicorp/template",
