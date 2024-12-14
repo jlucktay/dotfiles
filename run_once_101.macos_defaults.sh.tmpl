@@ -1,0 +1,30 @@
+{{if eq .chezmoi.os "darwin" -}}
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Set defaults for various macOS features
+
+## Dock
+defaults write com.apple.dock autohide -bool true          # Auto-hide
+defaults write com.apple.dock launchanim -bool true        # Enable the animation when launching applications
+defaults write com.apple.dock mru-spaces -bool true        # Enable "most recently used" spaces
+defaults write com.apple.dock orientation -string "bottom" # Set position to the bottom edge of the screen
+defaults write com.apple.dock show-recents -bool true      # Show recent applications
+
+## Driver — trackpad
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool false # Disable tap to click
+
+## Finder
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool false # Do not show full POSIX path in the title
+
+## Screenshots
+defaults write com.apple.screencapture location -string "$HOME"/Downloads # Set the location to save to
+
+## NSGlobalDomain — meant to be seen by all applications
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true # Show all file extensions in Finder
+
+# Restart to apply changes
+killall Dock
+killall Finder
+killall SystemUIServer
+{{- end}}
