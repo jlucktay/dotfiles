@@ -36,6 +36,7 @@ redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
 stkb.rewrap
+tamasfe.even-better-toml
 task.vscode-task
 timonwong.shellcheck
 tyriar.sort-lines

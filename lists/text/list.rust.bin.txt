@@ -1,4 +1,4 @@
-bacon v3.5.0:
+bacon v3.6.0:
     bacon
 cargo-binstall v1.10.17:
     cargo-binstall
@@ -30,7 +30,7 @@ jj-cli v0.24.0:
     jj
 miniserve v0.28.0:
     miniserve
-mise v2024.12.9:
+mise v2024.12.13:
     mise
 oxker v0.9.0:
     oxker

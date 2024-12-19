@@ -42,6 +42,7 @@
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform-provider-google
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform-provider-random
 /Users/james.lucktaylor/git/github.com/hashicorp/terraform-provider-template
+/Users/james.lucktaylor/git/github.com/helm-unittest/helm-unittest
 /Users/james.lucktaylor/git/github.com/helm/helm
 /Users/james.lucktaylor/git/github.com/isaachess/mlb-season-comparer
 /Users/james.lucktaylor/git/github.com/jensneuse/graphql-go-tools

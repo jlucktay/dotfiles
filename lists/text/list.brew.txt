@@ -82,7 +82,6 @@ harfbuzz
 highway
 httpie
 hyperfine
-icu4c@75
 icu4c@76
 imath
 ipcalc
@@ -158,6 +157,7 @@ lz4
 lzo
 m4
 make
+mas
 mbedtls
 micro
 mkdocs
@@ -190,6 +190,7 @@ pcre
 pcre2
 pipx
 pixman
+pnpm
 poetry
 pre-commit
 prettyping
@@ -246,7 +247,6 @@ upterm
 vale
 vault
 vegeta
-vsce
 webp
 wget
 x264
