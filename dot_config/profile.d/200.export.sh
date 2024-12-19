@@ -64,6 +64,9 @@ prefix_path "$package_manager_prefix/opt/python@3.12/libexec/bin"
 # Ruby.
 prefix_path "$package_manager_prefix/opt/ruby/bin"
 
+# pnpm.
+prefix_path "${PNPM_HOME:?}"
+
 # Rust.
 prefix_path "$package_manager_prefix/opt/rustup/bin"
 prefix_path "$HOME/.cargo/bin"

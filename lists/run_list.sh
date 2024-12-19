@@ -14,20 +14,13 @@ if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.so
   exit 1
 fi
 
-if ! hash realpath &> /dev/null; then
-  # https://stackoverflow.com/a/3572105/380599
-  function realpath() {
-    [[ $1 == /* ]] && echo "$1" || echo "$PWD/${1#./}"
-  }
-fi
-
 function process_list() {
   # Parameter #1 is the command to generate the list
   # Parameter #2 is the name of the list
   # Parameter #3 (optional) will, if set to anything, skip sorting
 
-  # Parse out the command name and make sure it is available
-  cmd_name=$(awk '{ print $1 }' <<< "$1")
+  # Parse out the command name (from the first line (NR) only) and make sure it is available
+  cmd_name=$(awk 'NR == 1 { print $1 }' <<< "$1")
 
   if ! hash "$cmd_name" &> /dev/null; then
     echo "$script_name > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
@@ -37,7 +30,7 @@ function process_list() {
   # Print command and first argument
   current_timestamp=$(TZ=UTC date '+%Y%m%dT%H%M%SZ')
   printf "%s: [%s] " "$script_name" "$current_timestamp"
-  awk '{ print $1, $2 }' <<< "$1"
+  awk 'NR == 1 { print $1, $2 }' <<< "$1"
 
   # If the command is 'brew' then make sure we're up to date before kicking off the lists
   if [[ $cmd_name == "brew" ]]; then
@@ -48,10 +41,15 @@ function process_list() {
     : # No-op; skipping errors
   fi
 
+  # Make sure the list directory structure and the file itself all exist.
+  list_file_path="$chezmoi_source/lists/text/list.$2.txt"
+  mkdir -p "$(basename list_file_path)"
+  touch "$list_file_path"
+
   if [[ -n ${3-} ]]; then
-    echo "$cmd_output" > "$(realpath "$chezmoi_source/lists/text/list.$2.txt")"
+    echo "$cmd_output" > "$list_file_path"
   else
-    sort --ignore-case <<< "$cmd_output" > "$(realpath "$chezmoi_source/lists/text/list.$2.txt")"
+    sort --ignore-case <<< "$cmd_output" > "$list_file_path"
   fi
 }
 
@@ -79,9 +77,10 @@ process_list "brew tap" "brew.tap"
 process_list "brew list -1 --formula" "brew"
 process_list "brew list -1 --cask" "brew.cask"
 
-# NPM
-npm_list_cmd="npm list --depth=0 --global --parseable"
-process_list "$npm_list_cmd" "npm"
+# pnpm
+pnpm_list_cmd='pnpm list --global --json --long \
+  | jq --raw-output '\''.[].dependencies | to_entries | .[].value | "\(.homepage):\(.version)"'\'
+process_list "$pnpm_list_cmd" "pnpm"
 
 # VSCode extensions
 vscode_list_cmd="code --list-extensions"
