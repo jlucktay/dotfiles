@@ -2,6 +2,7 @@
 if command -v starship &> /dev/null; then
   sib=$(starship init bash)
   eval "$sib"
+  unset sib
 elif command -v git &> /dev/null && test -r "$HOME/posh-git-prompt.sh"; then
   ## Git info in the prompt
   # shellcheck disable=SC1091
