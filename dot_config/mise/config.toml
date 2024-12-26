@@ -1,0 +1,4 @@
+[tools]
+# Align version with:
+# https://github.com/jlucktay/jlucktay.dev/blob/main/.github/workflows/hugo.yaml#L36
+"aqua:gohugoio/hugo/hugo-extended" = "0.140.1"
