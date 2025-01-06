@@ -1,10 +1,13 @@
 [tools]
 # Latest
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
+"aqua:npryce/adr-tools" = "latest"
 "aqua:sigstore/cosign" = "latest"
+"ubi:jlucktay/my-github-repos" = "latest"
 "ubi:slsa-framework/slsa-verifier" = "latest"
 
 # Specific versions pinned
+"aqua:goreleaser/goreleaser" = "2.5.0"
 "aqua:norwoodj/helm-docs" = "1.11.3"
 
 [settings]
