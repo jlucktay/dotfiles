@@ -20,8 +20,10 @@ keepingyouawake
 loopback
 microsoft-teams
 miro
+now-tv-player
 obsidian
 pingmenu
+pocket-casts
 rancher
 raspberry-pi-imager
 rectangle

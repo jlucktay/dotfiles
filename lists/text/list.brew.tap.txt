@@ -1,16 +1,9 @@
 ankitpokhrel/jira-cli
-bufbuild/buf
 common-fate/granted
-cue-lang/tap
-go-task/tap
-grampelberg/kty
 hashicorp/tap
-heroku/brew
 homebrew/bundle
 homebrew/services
-owenthereal/upterm
+jlucktay/tap
 rafaelgarrido/caveats
 stateful/tap
-stefanprodan/tap
 teamookla/speedtest
-upbound/tap

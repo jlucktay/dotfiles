@@ -1,7 +1,6 @@
 certifi==2024.12.14
 cffi==1.17.1
 cryptography==44.0.0
-numpy==2.2.0
 packaging==24.2
 pathspec==0.12.1
 pip==24.3.1
