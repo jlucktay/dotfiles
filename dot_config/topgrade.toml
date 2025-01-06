@@ -26,6 +26,7 @@ only = [
   "pnpm",
   "rustup",
   "system",
+  "vscode",
 ]
 
 # Display the time in step titles
