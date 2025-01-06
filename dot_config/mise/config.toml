@@ -3,6 +3,7 @@
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:sigstore/cosign" = "latest"
+"ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
 "ubi:slsa-framework/slsa-verifier" = "latest"
 
