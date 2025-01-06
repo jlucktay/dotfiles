@@ -48,7 +48,7 @@ linesgo = "!f() { \
 psu = "!f() { git push --set-upstream origin $(git symbolic-ref --short HEAD); }; f"
 
 ### Based on: https://haacked.com/archive/2019/02/14/including-git-aliases/
-aliases = "!git config --list | grep -E '^alias.' | cut -c 7-"
+aliases = "!git config --list | grep -E '^alias\\.' | cut -c 7-"
 
 # Feedback magic
 entr = !cd -- ${GIT_PREFIX:-.} && git ls-files \
