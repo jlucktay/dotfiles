@@ -6,7 +6,9 @@
 #disable = ["system", "emacs"]
 
 # Ignore failures for these steps
-ignore_failures = ["containers"]
+#ignore_failures = [
+#  "containers",
+#]
 
 # Run specific steps - same options as the command line flag
 # only = ["containers"]
@@ -40,3 +42,9 @@ skip_notify = true
 
 [brew]
 autoremove = true
+
+[containers]
+# Specify the containers to ignore while updating (wildcard supported)
+ignored_containers = [
+  "ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest",
+]
