@@ -54,7 +54,8 @@ function process_list() {
 }
 
 # Git repos I have checked out locally
-git_list_cmd="fd '^\.git$' \"$HOME\"/git --hidden --type directory --exec git -C '{//}' rev-parse --show-toplevel"
+git_list_cmd="fd '^\.git$' \"$HOME\"/git --hidden --type directory --exec git -C '{//}' rev-parse --show-toplevel \
+  | grep --invert-match '/github\.com/ovotech/'"
 process_list "$git_list_cmd" "git"
 
 # Go binaries
