@@ -10,7 +10,7 @@ cargo-info v0.7.7:
     cargo-info
 cargo-semver-checks v0.38.0:
     cargo-semver-checks
-cargo-shuttle v0.49.0:
+cargo-shuttle v0.50.0:
     cargo-shuttle
     shuttle
 cargo-tarpaulin v0.31.4:
@@ -30,7 +30,7 @@ jj-cli v0.25.0:
     jj
 miniserve v0.28.0:
     miniserve
-mise v2025.1.1:
+mise v2025.1.3:
     mise
 oxker v0.9.0:
     oxker
@@ -39,7 +39,7 @@ rage v0.11.1:
     rage-keygen
 rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
-sniffnet v1.3.1:
+sniffnet v1.3.2:
     sniffnet
 starship v1.21.1:
     starship

@@ -93,7 +93,7 @@ libb2
 libbluray
 libdeflate
 libevent
-libgit2@1.8
+libgit2
 libidn2
 liblinear
 libmicrohttpd

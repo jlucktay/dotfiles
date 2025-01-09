@@ -4,7 +4,7 @@
            cobra-cli: github.com/spf13/cobra-cli@v1.3.0
           codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.2.1
 codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
-            deadcode: golang.org/x/tools/cmd/deadcode@v0.28.0
+            deadcode: golang.org/x/tools/cmd/deadcode@v0.29.0
              dockfmt: github.com/jessfraz/dockfmt@v0.3.3
                doggo: github.com/mr-karan/doggo/cmd/doggo@v1.0.5
                  dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.1
@@ -15,9 +15,9 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
         go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20230222222326-d13c9c375b57
                goawk: github.com/benhoyt/goawk@v1.29.1
                 goda: github.com/loov/goda@v0.5.11
-               godoc: golang.org/x/tools/cmd/godoc@v0.28.0
+               godoc: golang.org/x/tools/cmd/godoc@v0.29.0
         gomodifytags: github.com/fatih/gomodifytags@v1.17.0
-               gonew: golang.org/x/tools/cmd/gonew@v0.28.0
+               gonew: golang.org/x/tools/cmd/gonew@v0.29.0
               goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
                gopls: golang.org/x/tools/gopls@v0.17.1
          gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250105011419-6d9ea865d014
@@ -41,6 +41,6 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
              oauth2c: github.com/cloudentity/oauth2c@v1.17.0
              oauth2l: github.com/google/oauth2l@v1.3.2
              octocov: github.com/k1LoW/octocov@v0.62.4
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250103163934-f8b0e9b88125
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250108000304-840de57bb859
               rclone: github.com/rclone/rclone@v1.68.2
              yamlfmt: github.com/google/yamlfmt/cmd/yamlfmt@v0.14.0
