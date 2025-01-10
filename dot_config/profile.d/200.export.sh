@@ -36,13 +36,6 @@ function prefix_path() {
 # 1) the '/etc/paths' file, and
 # 2) the files under the '/etc/paths.d/' directory
 
-# Activate mise first, so that 'command -v <binary>' checks work in subsequent profile scripts.
-if command -v mise &> /dev/null; then
-  mab="$(mise activate bash)"
-  eval "$mab"
-  unset mab
-fi
-
 # To be able to run kubectl plugins.
 if command -v kubectl-krew &> /dev/null; then
   prefix_path "$HOME/.krew/bin"
@@ -90,6 +83,13 @@ fi
 
 # Clean up the function and don't leave it lying around
 unset -f prefix_path
+
+# Activate mise so that 'command -v <binary>' checks work in subsequent profile scripts.
+if command -v mise &> /dev/null; then
+  mab="$(mise activate bash)"
+  eval "$mab"
+  unset mab
+fi
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH=":."
