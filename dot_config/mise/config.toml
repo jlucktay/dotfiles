@@ -1,5 +1,6 @@
 [tools]
 # Latest
+"aqua:aws/aws-cli" = "latest"
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:sigstore/cosign" = "latest"
