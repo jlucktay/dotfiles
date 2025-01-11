@@ -2,10 +2,8 @@ act
 ansible
 ansible-lint
 aom
-argocd
 aribb24
 autojump
-awscli
 bash
 bash-completion@2
 bat
@@ -83,7 +81,6 @@ kubebuilder
 kubeconform
 kubectx
 kubernetes-cli
-kustomize
 kyverno
 lame
 leptonica
@@ -182,7 +179,6 @@ sdl2
 shellcheck
 shellharden
 shfmt
-skaffold
 snappy
 speedtest
 speex
