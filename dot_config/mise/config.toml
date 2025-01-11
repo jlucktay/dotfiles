@@ -4,6 +4,7 @@
 "aqua:aws/aws-cli" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
 "aqua:charmbracelet/gum" = "latest"
+"aqua:FiloSottile/age" = "latest"
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
 "aqua:google/yamlfmt" = "latest"
 "aqua:GoogleContainerTools/skaffold" = "latest"
