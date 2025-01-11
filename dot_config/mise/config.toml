@@ -1,14 +1,21 @@
 [tools]
-# Latest
+# Latest version
+"aqua:argoproj/argo-cd" = "latest"
 "aqua:aws/aws-cli" = "latest"
+"aqua:cargo-bins/cargo-binstall" = "latest"
+"aqua:charmbracelet/gum" = "latest"
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
+"aqua:google/yamlfmt" = "latest"
+"aqua:GoogleContainerTools/skaffold" = "latest"
+"aqua:jj-vcs/jj" = "latest"
+"aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:sigstore/cosign" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
 "ubi:slsa-framework/slsa-verifier" = "latest"
 
-# Specific versions pinned
+# Specific pinned version
 "aqua:goreleaser/goreleaser" = "2.5.0"
 "aqua:norwoodj/helm-docs" = "1.11.3"
 
