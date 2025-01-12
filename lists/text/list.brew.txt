@@ -69,7 +69,6 @@ ipcalc
 jira-cli
 jpeg-turbo
 jpeg-xl
-jq
 jsonlint
 k3d
 k9s
@@ -77,7 +76,6 @@ kondo
 krb5
 krew
 kube-linter
-kubebuilder
 kubeconform
 kubectx
 kubernetes-cli
@@ -210,7 +208,6 @@ xz
 yamllint
 yarn-completion
 youtube-dl
-yq
 zeromq
 zimg
 zstd

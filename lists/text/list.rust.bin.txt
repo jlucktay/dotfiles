@@ -1,5 +1,7 @@
 bacon v3.7.0:
     bacon
+cargo-cache v0.8.3:
+    cargo-cache
 cargo-info v0.7.7:
     cargo-info
 cargo-semver-checks v0.38.0:
@@ -19,15 +21,15 @@ du-dust v1.1.1:
     dust
 miniserve v0.28.0:
     miniserve
-mise v2025.1.3:
+mise v2025.1.5:
     mise
 oxker v0.9.0:
     oxker
 rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
-starship v1.21.1:
+starship v1.22.1:
     starship
-usage-cli v1.7.4:
+usage-cli v2.0.3:
     usage
 viddy v1.3.0:
     viddy
