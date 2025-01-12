@@ -28,7 +28,7 @@ if command -v topgrade &> /dev/null; then
     done
 
     set -x
-    topgrade --only "$only" "${topgrade_disable_flags[@]}"
+    topgrade --only="$only" "${topgrade_disable_flags[@]}"
   }
 
   export -f topgrade_only

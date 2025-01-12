@@ -46,5 +46,6 @@ autoremove = true
 [containers]
 # Specify the containers to ignore while updating (wildcard supported)
 ignored_containers = [
+  "europe-west1-docker.pkg.dev/ovo-bedrock-dev/sapling-jl-go/evergreen-sapling-go:*",
   "ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest",
 ]
