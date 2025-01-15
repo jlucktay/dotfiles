@@ -65,7 +65,10 @@ prefix_path "$package_manager_prefix/opt/python@3.12/libexec/bin"
 prefix_path "$package_manager_prefix/opt/ruby/bin"
 
 # pnpm.
-prefix_path "${PNPM_HOME:?}"
+if command -v pnpm &> /dev/null; then
+  export PNPM_HOME="$HOME/Library/pnpm"
+  prefix_path "$PNPM_HOME"
+fi
 
 # Rust.
 prefix_path "$package_manager_prefix/opt/rustup/bin"
