@@ -55,7 +55,7 @@ prefix_path "$package_manager_prefix/opt/make/libexec/gnubin"
 prefix_path "$package_manager_prefix/opt/openssl@1.1/bin" # https://formulae.brew.sh/formula/openssl@1.1
 prefix_path "$HOME/.rd/bin"
 
-# Get 'kubectl' from Homebrew's 'kubernetes-cli' formula in front of Rancher Desktop's much older 'kubectl'.
+# Homebrew.
 prefix_path "$package_manager_prefix/bin"
 
 # Python v3.12.
@@ -84,12 +84,9 @@ fi
 # Clean up the function and don't leave it lying around
 unset -f prefix_path
 
-# Activate mise so that 'command -v <binary>' checks work in subsequent profile scripts.
-if command -v mise &> /dev/null; then
-  mab="$(mise activate bash)"
-  eval "$mab"
-  unset mab
-fi
+# Touch the mise global config file to trigger aggressive behaviour and make sure its tools are at the front of PATH.
+# https://github.com/jdx/mise/issues/3463
+touch "$HOME/.config/mise/config.toml"
 
 # https://swarm.cs.pub.ro/~razvan/blog/some-bash-tricks-cdpath-and-inputrc/
 export CDPATH=":."

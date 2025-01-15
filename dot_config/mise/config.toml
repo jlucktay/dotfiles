@@ -23,6 +23,8 @@
 "aqua:norwoodj/helm-docs" = "1.11.3"
 
 [settings]
+# Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
+activate_aggressive = true
 
 [settings.status]
 missing_tools = "always"
