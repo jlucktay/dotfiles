@@ -27,7 +27,7 @@ declare -a command_queue=()
 # Do some notification cleanup, if the tool is available and there's a token it can use.
 # Get it teed up before the GitHub commands are added to the queue.
 if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]]; then
-  command_queue+=("ginsu --owner-allowlist='ovotech' --repo-denylist='bedrock-platform-gitops'")
+  command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
 if command -v gdate &> /dev/null; then
@@ -45,7 +45,7 @@ fi
 
 command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
-  "open 'https://github.com/orgs/ovotech/teams/dev-platforms-team-red/members'"
+  "open 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
 
   # Check PR mentions.
   "open 'https://github.com/notifications?query=reason%3Amention'"
