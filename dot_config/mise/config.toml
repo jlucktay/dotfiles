@@ -1,5 +1,7 @@
 [tools]
 # Latest version
+"aqua:ahmetb/kubectx" = "latest"
+"aqua:ahmetb/kubectx/kubens" = "latest"
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:aws/aws-cli" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
@@ -10,14 +12,15 @@
 "aqua:GoogleContainerTools/skaffold" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
-"aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
 "aqua:npryce/adr-tools" = "latest"
+"aqua:pnpm/pnpm" = "latest"
 "aqua:sigstore/cosign" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
 "ubi:mikefarah/yq" = "latest"
 "ubi:slsa-framework/slsa-verifier" = "latest"
+"ubi:twpayne/chezmoi" = "latest"
 
 # Pinned minor version
 "aqua:kubernetes/kubectl" = "1.30"
