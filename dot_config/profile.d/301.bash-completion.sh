@@ -22,9 +22,20 @@ if command -v jira &> /dev/null; then
   unset jira_completion_bash
 fi
 
-# Kubernetes CLI
-if command -v kubectl &> /dev/null; then
-  complete -F __start_kubectl k
+# Kubernetes CLI, via mise.
+# This is a kludge around Rancher Desktop still being in front (PATH-wise) of mise at this stage of shell initialisation.
+# There is a 'touch' command to bump the mise global config file and trigger the aggressive PATH-first behaviour.
+# However, that won't take effect until a prompt appears and the mise hook is fired.
+if mwk=$(mise which kubectl); then
+  kubectl_completion_bash=$($mwk completion bash)
+
+  # shellcheck source=/dev/null
+  source <(echo "$kubectl_completion_bash")
+
+  unset kubectl_completion_bash
+
+  alias k=kubectl
+  complete -o default -F __start_kubectl k
 fi
 
 # Nomad CLI

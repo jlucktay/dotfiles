@@ -11,6 +11,7 @@
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
+"aqua:kubernetes-sigs/krew" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:sigstore/cosign" = "latest"
 "ubi:go-task/task" = "latest"
@@ -18,7 +19,10 @@
 "ubi:mikefarah/yq" = "latest"
 "ubi:slsa-framework/slsa-verifier" = "latest"
 
-# Specific pinned version
+# Pinned minor version
+"aqua:kubernetes/kubectl" = "1.30"
+
+# Pinned patch version
 "aqua:goreleaser/goreleaser" = "2.5.0"
 "aqua:norwoodj/helm-docs" = "1.11.3"
 

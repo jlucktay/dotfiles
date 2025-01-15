@@ -235,7 +235,7 @@
     "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
     "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
     {{- if lookPath "kubectl" }}
-    "vs-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" }}",
+    "vs-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" | replaceAllRegex "kubectl/[^/]+/kubectl" "kubectl/latest/kubectl" }}",
     {{- end }}
     {{- if lookPath "minikube" }}
     "vs-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
@@ -247,7 +247,7 @@
   "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" }}",
   {{- end }}
   {{- if lookPath "kubectl" }}
-  "vscode-kubernetes.kubectl-path-mac": "{{ lookPath "kubectl" }}",
+  "vscode-kubernetes.kubectl-path-mac": "{{ lookPath "kubectl" | replaceAllRegex "kubectl/[^/]+/kubectl" "kubectl/latest/kubectl" }}",
   {{- end }}
   {{- if lookPath "minikube" }}
   "vscode-kubernetes.minikube-path-mac": "{{ lookPath "minikube" }}",

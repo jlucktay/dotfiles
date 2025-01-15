@@ -72,11 +72,6 @@ if command -v chezmoi &> /dev/null; then
   alias cg='chezmoi git --'
 fi
 
-# Kubernetes CLI
-if command -v kubectl &> /dev/null; then
-  alias k=kubectl
-fi
-
 # Better process view with 'btop' than macOS 'top'
 if command -v btop &> /dev/null; then
   alias top=btop
