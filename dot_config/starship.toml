@@ -96,7 +96,7 @@ us-west-2 = "US West (Oregon)"
 disabled = true
 
 [gcloud]
-format = 'on [$symbol$active (\($project[[/](#a0c2f9)$region](#ffffff)\))]($style) '
+format = 'on [$symbol$active (\($project([[/](#a0c2f9)$region](#ffffff))\))]($style) '
 style = 'bold #4285f4'
 symbol = '󱇶 '
 
