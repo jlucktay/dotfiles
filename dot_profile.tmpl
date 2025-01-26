@@ -5,7 +5,19 @@
 # shellcheck disable=SC1090
 source {{ .chezmoi.homeDir }}/.bashrc
 
-for profile in "$HOME"/.config/profile.d/*.sh; do
+for _config_profile_d in "$HOME"/.config/profile.d/*.sh; do
+  _epoch_start=$EPOCHREALTIME
+
   # shellcheck disable=SC1090
-  source "$profile"
+  source "$_config_profile_d"
+
+  declare -i _duration_threshold_ms=250
+  _epoch_diff=$(bc --expression="$EPOCHREALTIME - $_epoch_start")
+  _over_threshold=$(bc --expression="($_epoch_diff * 1000) > $_duration_threshold_ms" --mathlib)
+
+  if ((_over_threshold)); then
+    printf '%80s took %3.3fs (over %dms threshold)\n' "$_config_profile_d" "$_epoch_diff" "$_duration_threshold_ms"
+  fi
+
+  unset _config_profile_d _duration_threshold_ms _epoch_diff _epoch_start _over_threshold
 done
