@@ -13,5 +13,7 @@ bind 'Space: magic-space'
 
 ### Replaces the word to be completed with a single match from the list of possible completions.
 ### Repeated execution of menu-complete steps through the list of possible completions, inserting each match in turn.
+#### Tab to cycle forward through completions.
 bind 'TAB: menu-complete'
+#### Shift+Tab to cycle backward through completions.
 bind '"\e[Z": menu-complete-backward'

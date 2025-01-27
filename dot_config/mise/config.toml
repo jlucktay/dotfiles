@@ -10,12 +10,15 @@
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
 "aqua:google/yamlfmt" = "latest"
 "aqua:GoogleContainerTools/skaffold" = "latest"
+"aqua:hashicorp/terraform" = "latest"
+"aqua:hashicorp/vault" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
 "aqua:sigstore/cosign" = "latest"
+"aqua:terraform-docs/terraform-docs" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
 "ubi:mikefarah/yq" = "latest"
@@ -30,8 +33,8 @@
 "aqua:norwoodj/helm-docs" = "1.11.3"
 
 [settings]
-# Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
-activate_aggressive = true
+# # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
+# activate_aggressive = true
 
 [settings.status]
 missing_tools = "always"
