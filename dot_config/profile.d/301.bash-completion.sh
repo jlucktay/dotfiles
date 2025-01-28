@@ -101,7 +101,7 @@ for _tcb in "${_tools_completion_bash[@]}"; do
     _tool_stat=$(gstat --printf='%Y' "$_tool_path")
 
     if ((_tool_stat > _tool_completion_file_stat)); then
-      printf >&2 "%80s: tool '%s' is newer than its completions; need to regenerate\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+      printf >&2 "%80s: tool '%s' is newer than its completions; need to regenerate..." "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
 
       _tool_completion_regenerate=1
     fi
@@ -120,7 +120,7 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 
   # Attempt to capture the tool's Bash completion script.
   if ! _tool_completion_bash=$(eval "$_tcb"); then
-    printf >&2 "%80s: could not capture completion script for command '%s'\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+    printf >&2 " ⛔️ could not capture completion script for '%s'\n" "${arrTCB[0]}"
 
     continue
   fi
@@ -134,7 +134,7 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 
   _epoch_regen_diff_ms=$(bc --expression="($EPOCHREALTIME - $_epoch_regen_start) * 1000" --mathlib)
 
-  printf >&2 "%80s: regenerated completions for command '%s' in %.0fms\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}" "$_epoch_regen_diff_ms"
+  printf >&2 " ✅ regenerated completions for '%s' in %.0fms\n" "${arrTCB[0]}" "$_epoch_regen_diff_ms"
 
   unset _epoch_regen_diff_ms _epoch_regen_start _tcb _tool_completion_bash _tool_completion_file _tool_completion_file_stat _tool_completion_regenerate _tool_path _tool_type
 done
