@@ -15,6 +15,7 @@
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
+"aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
 "aqua:sigstore/cosign" = "latest"
