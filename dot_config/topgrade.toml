@@ -1,3 +1,11 @@
+# Commands to run before anything.
+[pre_commands]
+"Before: disconnect ZTNA" = "warp-cli disconnect"
+
+# Commands to run after anything.
+[post_commands]
+"After: connect ZTNA" = "warp-cli connect"
+
 [misc]
 # Don't ask for confirmations
 #assume_yes = true
