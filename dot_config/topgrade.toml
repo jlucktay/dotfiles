@@ -1,6 +1,6 @@
 # Commands to run before anything.
 [pre_commands]
-"Before: disconnect ZTNA" = "warp-cli disconnect"
+"Before: disconnect ZTNA" = "warp-cli disconnect && sleep 1"
 
 # Commands to run after anything.
 [post_commands]
