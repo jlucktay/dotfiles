@@ -6,6 +6,10 @@
 [post_commands]
 "After: connect ZTNA" = "warp-cli connect"
 
+# Custom commands.
+[commands]
+"Pull Docker images in parallel" = "task --global topgrade:docker-pull"
+
 [misc]
 # Don't ask for confirmations
 #assume_yes = true
@@ -24,7 +28,8 @@ only = [
   "brew_cask",
   "brew_formula",
   "cargo",
-  "containers",
+  # "containers", # Quicker to pull in parallel with the custom command and global Taskfile.
+  "custom_commands",
   "gcloud",
   "github_cli_extensions",
   "go",
@@ -50,10 +55,3 @@ skip_notify = true
 
 [brew]
 autoremove = true
-
-[containers]
-# Specify the containers to ignore while updating (wildcard supported)
-ignored_containers = [
-  "europe-west1-docker.pkg.dev/ovo-bedrock-dev/sapling-jl-go/evergreen-sapling-go:*",
-  "ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy:latest",
-]

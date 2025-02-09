@@ -1,0 +1,32 @@
+version: 3
+
+vars:
+  DOCKER_IMAGES:
+    # Skip the Rancher Desktop proxy image, and images with a '<none>' tag.
+    sh: >-
+      docker images
+      --format='{{`{{-
+      if and
+      (ne .Repository "ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy")
+      (ne .Tag "<none>")
+      }}{{.Repository}}:{{.Tag}}{{end}}`}}'
+
+tasks:
+  docker:pull:
+    interactive: true
+    internal: true
+    silent: true
+    desc: Pull a Docker image.
+    requires:
+      vars:
+        - DOCKER_IMAGE
+    cmd: docker pull {{.DOCKER_IMAGE}}
+
+  topgrade:docker-pull:
+    desc: Pull all Docker images in parallel.
+    deps:
+      - for:
+          var: DOCKER_IMAGES
+        task: docker:pull
+        vars:
+          DOCKER_IMAGE: '{{.ITEM}}'
