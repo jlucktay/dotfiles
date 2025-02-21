@@ -1,10 +1,10 @@
-# Commands to run before anything.
-[pre_commands]
-"Before: disconnect ZTNA" = "warp-cli disconnect && sleep 1"
+# # Commands to run before anything.
+# [pre_commands]
+# "Before: disconnect ZTNA" = "warp-cli disconnect && sleep 1"
 
-# Commands to run after anything.
-[post_commands]
-"After: connect ZTNA" = "warp-cli connect"
+# # Commands to run after anything.
+# [post_commands]
+# "After: connect ZTNA" = "warp-cli connect"
 
 # Custom commands.
 [commands]
@@ -41,7 +41,7 @@ only = [
   "pnpm",
   "rustup",
   "system",
-  "vscode",
+  # "vscode", # Can be handled in-app, and toggling ZTNA just for this is disruptive.
 ]
 
 # Display the time in step titles
