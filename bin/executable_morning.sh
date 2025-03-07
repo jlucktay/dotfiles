@@ -26,7 +26,7 @@ declare -a command_queue=()
 
 # Do some notification cleanup, if the tool is available and there's a token it can use.
 # Get it teed up before the GitHub commands are added to the queue.
-if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]]; then
+if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]] && [[ -n $GITHUB_TOKEN ]]; then
   command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
