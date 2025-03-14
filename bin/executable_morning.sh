@@ -26,9 +26,9 @@ fi
 
 declare -a command_queue=()
 
-# Do some notification cleanup, if the tool is available and there's a token it can use.
+# Do some notification cleanup, if there's a token ginsu can use.
 # Get it teed up before the GitHub commands are added to the queue.
-if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]] && [[ -n $GITHUB_TOKEN ]]; then
+if [[ -n ${GITHUB_TOKEN:-} ]]; then
   command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
@@ -64,9 +64,9 @@ command_queue+=(
 )
 
 if check_rd_vm; then
-  dslog "Rancher Desktop VM check ✅ OK"
+  dslog "✅ Rancher Desktop VM check OK"
 else
-  dslog "Rancher Desktop VM check 🛑 did not pass"
+  dslog "🟡 Rancher Desktop VM check did not pass; queueing maintenance pruning commands"
 
   command_queue+=(
     # Remove all build cache more than 30 days old, without confirmation.
