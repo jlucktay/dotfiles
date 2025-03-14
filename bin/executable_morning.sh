@@ -14,10 +14,6 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-date_today="$(date '+%Y')/"
-date_today+="$(date '+%m')/"
-date_today+="$(date '+%d')"
-
 if command -v op &> /dev/null; then
   if ! ght=$(op read "op://Personal/5sgl3dph3g562vhmxhkatrdumu/credential" --account my.1password.com); then
     err "🛑 1Password CLI could not read GitHub token"
@@ -28,10 +24,6 @@ if command -v op &> /dev/null; then
   export GITHUB_TOKEN=$ght
 fi
 
-#
-mlb_next_season_start='2025-03-18'
-#
-
 declare -a command_queue=()
 
 # Do some notification cleanup, if the tool is available and there's a token it can use.
@@ -41,8 +33,15 @@ if command -v ginsu &> /dev/null && [[ -v GITHUB_TOKEN ]] && [[ -n $GITHUB_TOKEN
 fi
 
 if command -v gdate &> /dev/null; then
+  #
+  mlb_next_season_start='2025-03-18'
+  #
+
   mlb_epoch=$(gdate --date="$mlb_next_season_start" +%s)
+
+  date_today=$(gdate '+%Y/%m/%d')
   today_epoch=$(gdate --date="$date_today" +%s)
+
   mlb_season_has_started=$(("$today_epoch" - "$mlb_epoch"))
 
   if [[ $mlb_season_has_started -ge 0 ]]; then
