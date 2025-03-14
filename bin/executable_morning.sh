@@ -18,6 +18,16 @@ date_today="$(date '+%Y')/"
 date_today+="$(date '+%m')/"
 date_today+="$(date '+%d')"
 
+if command -v op &> /dev/null; then
+  if ! ght=$(op read "op://Personal/5sgl3dph3g562vhmxhkatrdumu/credential" --account my.1password.com); then
+    err "🛑 1Password CLI could not read GitHub token"
+  fi
+
+  dslog "✅ Got GitHub token from 1Password OK"
+
+  export GITHUB_TOKEN=$ght
+fi
+
 #
 mlb_next_season_start='2025-03-18'
 #
