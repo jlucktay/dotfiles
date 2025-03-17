@@ -13,6 +13,7 @@ vars:
 
 tasks:
   docker:pull:
+    ignore_error: true
     interactive: true
     internal: true
     silent: true
