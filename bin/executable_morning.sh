@@ -47,7 +47,7 @@ if command -v gdate &> /dev/null; then
   if [[ $mlb_season_has_started -ge 0 ]]; then
     command_queue+=(
       # Check the schedules for MLB.TV.
-      "open 'https://www.mlb.com/live-stream-games'"
+      "open_ff 'https://www.mlb.com/live-stream-games'"
     )
   fi
 fi
