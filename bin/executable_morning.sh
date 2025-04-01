@@ -49,17 +49,17 @@ if command -v gdate &> /dev/null; then
   if [[ $mlb_season_has_started -ge 0 ]]; then
     command_queue+=(
       # Check the schedules for MLB.TV.
-      "open_ff 'https://www.mlb.com/live-stream-games'"
+      "open_ff:personal 'https://www.mlb.com/live-stream-games'"
     )
   fi
 fi
 
 command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
-  "open 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
+  "open_ff:ovo 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
 
   # Check PR mentions.
-  "open 'https://github.com/notifications?query=reason%3Amention'"
+  "open_ff:ovo 'https://github.com/notifications?query=reason%3Amention'"
 
   # Update all of the things.
   topgrade
