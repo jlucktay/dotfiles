@@ -29,6 +29,7 @@ open_ff:personal() {
   open_flags+=(
     # This profile path is the one I use for my personal accounts.
     --profile "$HOME/Library/Application Support/Firefox/Profiles/osh42oko.default-release"
+    "$@"
   )
 
   open "${open_flags[@]}"
@@ -42,6 +43,7 @@ open_ff:ovo() {
   open_flags+=(
     # This profile path is the one I use for my work accounts at OVO.
     --profile "$HOME/Library/Application Support/Firefox/Profiles/wkzra9g8.james.lucktaylor@ovo.com"
+    "$@"
   )
 
   open "${open_flags[@]}"
