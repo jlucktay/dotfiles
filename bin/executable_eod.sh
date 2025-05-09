@@ -16,18 +16,43 @@ trap 'dslog "finish"' 0
 
 tool_check docker
 
-if ! docker stats --no-stream &> /dev/null; then
-  echo "Docker daemon is not running."
-  exit 0
+if docker info &> /dev/null; then
+  dslog "✅ Docker daemon is running."
+
+  if ! dpnq=$(docker ps --no-trunc --quiet); then
+    err "could not get running containers from host"
+  fi
+
+  mapfile -t running_ids < <(printf "%s" "$dpnq")
+
+  if [[ ${#running_ids[@]} -gt 0 ]]; then
+    echo
+    docker ps
+    echo
+    dslog "⚠️ non-zero number of containers still running"
+    echo
+
+    if gum confirm "Remove all running containers?" --show-output; then
+      echo
+      docker rm --force "${running_ids[@]}"
+    fi
+
+    echo
+  fi
+else
+  dslog "🐳❌ Docker daemon is not running."
 fi
 
-if ! dpa=$(docker ps --quiet | wc -l); then
-  err "could not get running containers from host"
-fi
+tool_check kubectx
 
-if [[ ${dpa//[[:blank:]]/} != "0" ]]; then
-  echo
-  docker ps
-  echo
-  err "non-zero number of containers still running"
-fi
+(
+  set -x
+  kubectx --unset
+)
+
+tool_check assume
+
+(
+  set -x
+  assume --unset
+)
