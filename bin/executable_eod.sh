@@ -29,7 +29,7 @@ if docker info &> /dev/null; then
     echo
     docker ps
     echo
-    dslog "⚠️ non-zero number of containers still running"
+    dslog "🔶 non-zero number of containers still running"
     echo
 
     if gum confirm "Remove all running containers?" --show-output; then
