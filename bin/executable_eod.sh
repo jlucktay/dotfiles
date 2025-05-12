@@ -19,13 +19,13 @@ tool_check docker
 if docker info &> /dev/null; then
   dslog "✅ Docker daemon is running."
 
-  if ! dpnq=$(docker ps --no-trunc --quiet); then
-    err "could not get running containers from host"
+  if ! dpfn=$(docker ps --format='{{.Names}}'); then
+    err "could not get names of running containers from host"
   fi
 
-  mapfile -t running_ids < <(printf "%s" "$dpnq")
+  mapfile -t running_names < <(printf "%s" "$dpfn")
 
-  if [[ ${#running_ids[@]} -gt 0 ]]; then
+  if [[ ${#running_names[@]} -gt 0 ]]; then
     echo
     docker ps
     echo
@@ -34,7 +34,38 @@ if docker info &> /dev/null; then
 
     if gum confirm "Remove all running containers?" --show-output; then
       echo
-      docker rm --force "${running_ids[@]}"
+
+      # Create a map to track any k3d clusters that are currently running.
+      # Depending on how the cluster is configured, it may have multiple containers running.
+      declare -A running_k3d_clusters=()
+
+      for running_name in "${running_names[@]}"; do
+        # Are any of the containers k3d clusters? If so, use 'k3d cluster delete' instead.
+
+        if [[ $running_name =~ ^k3d- ]] && [[ $running_name =~ -server(-[0-9]+|lb)$ ]]; then
+          running_name=${running_name#"k3d-"}
+          running_name=${running_name%"${BASH_REMATCH[0]}"}
+
+          # Use pre-increment — where ++ is before the reference to the map — and increase the number value stored against the key.
+          # If the key does not already exist, it will be created with a value of 1.
+          # Do not use post-increment — where ++ is after the reference to the map — as it will return non-zero for new keys, and halt the script.
+          ((++running_k3d_clusters[$running_name]))
+        else
+          (
+            set -x
+            docker rm --force "$running_name"
+          )
+        fi
+      done
+
+      # Iterate through the running k3d clusters and run the appropriate delete command just once per cluster, rather than once per container.
+      for rkc in "${!running_k3d_clusters[@]}"; do
+        (
+          set -x
+          k3d cluster delete "$rkc"
+        )
+      done
+
     fi
 
     echo
