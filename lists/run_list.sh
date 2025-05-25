@@ -92,4 +92,7 @@ process_list "python3 -m pip list --format freeze" "pip3"
 process_list "gem list --no-verbose" "gem"
 
 # Kubectl plugins
-process_list "kubectl krew list" "kubectl.krew" skipsort
+process_list "kubectl krew list" "kubectl.krew"
+
+# GitHub CLU extensions
+process_list "gh extension list" "gh"
