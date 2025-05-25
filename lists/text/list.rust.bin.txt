@@ -13,7 +13,7 @@ cargo-update v16.3.0:
     cargo-install-update-config
 code-radio-cli v1.0.5:
     code-radio
-count-md v0.1.0:
+count-md v0.2.0:
     count-md
 czkawka_cli v9.0.0:
     czkawka_cli
