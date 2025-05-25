@@ -69,8 +69,7 @@ fi
 if [[ ! -d $HOME/.cargo/bin ]]; then
   echo "$script_name: No '\$HOME.cargo/bin/' directory found; skipping"
 else
-  rust_bin_list_cmd="cargo install --list"
-  process_list "$rust_bin_list_cmd" "rust.bin" skipsort
+  process_list "cargo install --list" "rust.bin" skipsort
 fi
 
 # Homebrew
@@ -84,13 +83,13 @@ pnpm_list_cmd='pnpm list --global --json --long \
 process_list "$pnpm_list_cmd" "pnpm"
 
 # VSCode extensions
-vscode_list_cmd="code --list-extensions"
-process_list "$vscode_list_cmd" "vscode"
+process_list "code --list-extensions" "vscode"
 
 # Python packages
-pip_list_cmd="python3 -m pip list --format freeze"
-process_list "$pip_list_cmd" "pip3"
+process_list "python3 -m pip list --format freeze" "pip3"
 
 # Ruby gems
-gem_list_cmd="gem list --no-verbose"
-process_list "$gem_list_cmd" "gem"
+process_list "gem list --no-verbose" "gem"
+
+# Kubectl plugins
+process_list "kubectl krew list" "kubectl.krew" skipsort

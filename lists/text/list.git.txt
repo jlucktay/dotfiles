@@ -6,6 +6,7 @@
 /Users/james.lucktaylor/git/github.com/ardanlabs/service
 /Users/james.lucktaylor/git/github.com/ardanlabs/service.wiki
 /Users/james.lucktaylor/git/github.com/argoproj/argo-cd
+/Users/james.lucktaylor/git/github.com/argoproj/argo-helm
 /Users/james.lucktaylor/git/github.com/aws/aws-sdk-go-v2
 /Users/james.lucktaylor/git/github.com/awslabs/crossplane-on-eks
 /Users/james.lucktaylor/git/github.com/bitfield/script
@@ -80,6 +81,8 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/james.lucktaylor/git/github.com/jlucktay/zig-workbench
+/Users/james.lucktaylor/git/github.com/kubernetes-sigs/cli-experimental
+/Users/james.lucktaylor/git/github.com/kubernetes-sigs/controller-runtime
 /Users/james.lucktaylor/git/github.com/kyverno/chainsaw
 /Users/james.lucktaylor/git/github.com/LondonGophers/StudyGroup
 /Users/james.lucktaylor/git/github.com/meilisearch/meilisearch
@@ -108,6 +111,7 @@
 /Users/james.lucktaylor/git/github.com/unixorn/lima-xbar-plugin
 /Users/james.lucktaylor/git/github.com/vfarcic/crossplane-sql
 /Users/james.lucktaylor/git/github.com/vfarcic/crossplane-tutorial
+/Users/james.lucktaylor/git/github.com/wardviaene/golang-demos
 /Users/james.lucktaylor/git/github.com/webrtc/apprtc
 /Users/james.lucktaylor/git/github.com/webrtc/samples
 /Users/james.lucktaylor/git/github.com/yannh/kubernetes-json-schema

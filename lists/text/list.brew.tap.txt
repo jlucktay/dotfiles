@@ -1,6 +1,5 @@
 ankitpokhrel/jira-cli
 common-fate/granted
-hashicorp/tap
 homebrew/bundle
 homebrew/services
 jlucktay/tap
