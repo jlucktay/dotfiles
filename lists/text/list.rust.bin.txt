@@ -21,7 +21,7 @@ du-dust v1.2.0:
     dust
 miniserve v0.29.0:
     miniserve
-mise v2025.5.12:
+mise v2025.5.16:
     mise
 oxker v0.10.3:
     oxker

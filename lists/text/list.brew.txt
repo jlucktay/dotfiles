@@ -127,6 +127,9 @@ maven
 mbedtls
 micro
 mkdocs
+mongodb-community
+mongodb-database-tools
+mongosh
 mpdecimal
 mpfr
 mpg123

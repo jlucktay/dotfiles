@@ -20,7 +20,7 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
                gonew: golang.org/x/tools/cmd/gonew@v0.33.0
               goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
                gopls: golang.org/x/tools/gopls@v0.18.1
-         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250515191325-98a4f3d86569
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250529153537-25d2f7894191
              gotests: github.com/cweill/gotests/gotests@v1.6.0
          govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.4
                  gup: github.com/nao1215/gup@v0.27.8
@@ -36,10 +36,10 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
             minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.5
              modview: github.com/bayraktugrul/modview@v1.2.4
                  moq: github.com/matryer/moq@v0.5.3
-             nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20250523183412-2d5a0e39e16e
+             nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20250529212919-a6e314b75873
         oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
              oauth2c: github.com/cloudentity/oauth2c@v1.17.2
              oauth2l: github.com/google/oauth2l@v1.3.3
              octocov: github.com/k1LoW/octocov@v0.68.0
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250523174444-0e6de173c6b5
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250530170220-274f41854e53
               rclone: github.com/rclone/rclone@v1.69.3

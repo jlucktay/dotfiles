@@ -60,7 +60,7 @@ process_list "$git_list_cmd" "git"
 
 # Go binaries
 if command -v gup &> /dev/null; then
-  process_list "gup list" "go.bin" skipsort
+  process_list "gup list" "go.gup" skipsort
 elif [[ -d "$HOME"/go/bin ]]; then
   process_list "find \"$HOME\"/go/bin -type f" "go.bin"
 fi
@@ -96,3 +96,6 @@ process_list "kubectl krew list" "kubectl.krew"
 
 # GitHub CLU extensions
 process_list "gh extension list" "gh"
+
+# Mac App Store
+process_list "mas list" "mas" skipsort
