@@ -1,0 +1,20 @@
+NAMESPACE                POD                                                         CONTAINER                UNSET RESOURCES
+{{- range $pod := .items -}}
+{{ range $container := .spec.containers -}}
+{{ with .resources -}}
+{{- if
+  or
+    (not .limits.memory)
+    (not .requests.cpu)
+    (not .requests.memory)
+}}
+{{ printf "%-25.25s" $pod.metadata.namespace -}}
+{{ printf "%-60.60s" $pod.metadata.name -}}
+{{ printf "%-25.25s" $container.name -}}
+{{ if not .limits.memory -}}LimMem{{- end -}}
+{{- if not .requests.cpu }} ReqCPU{{- end -}}
+{{- if not .requests.memory }} ReqMem{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
+{{- end }}
