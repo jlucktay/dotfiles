@@ -5,8 +5,13 @@ if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
   exit 1
 fi
 
-# With multiple Firefox profiles present, simply calling 'open <url>' will shunt everything to a default/primary profile.
+# With multiple browser profiles present, simply calling 'open <url>' will shunt everything to a default/primary profile.
 # Sometimes we want to be very deliberate about opening a link with a specific profile.
+
+# Chrome only has one profile on my work laptop, so this list of flags will suffice.
+open_chrome:ovo() {
+  open -a "Google Chrome" "$@"
+}
 
 # This function will initialise the array passed to it (via a nameref) with some common denominator values.
 # Thank you: https://stackoverflow.com/a/49971213
@@ -15,7 +20,7 @@ open_ff:internal() {
 
   # shellcheck disable=SC2034
   arg_one=(
-    -a /Applications/Firefox.app
+    -a Firefox
     --new
     --args
   )

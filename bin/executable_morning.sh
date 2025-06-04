@@ -56,10 +56,10 @@ fi
 
 command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
-  "open_ff:ovo 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
+  "open_chrome:ovo 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
 
   # Check PR mentions.
-  "open_ff:ovo 'https://github.com/notifications?query=reason%3Amention'"
+  "open_chrome:ovo 'https://github.com/notifications?query=reason%3Amention'"
 
   # Update all of the things.
   topgrade
