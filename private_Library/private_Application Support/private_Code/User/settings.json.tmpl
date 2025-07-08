@@ -113,6 +113,7 @@
   "git.autoStash": true,
   "git.autofetch": "all",
   "git.autofetchPeriod": 30,
+  "git.blame.editorDecoration.enabled": false,
   "git.confirmSync": false,
   "git.countBadge": "off",
   "git.defaultCloneDirectory": "{{ .chezmoi.homeDir }}/git",
@@ -122,12 +123,7 @@
   "git.openRepositoryInParentFolders": "always",
   "githubCodeOwners.format.enabled": true,
   "go.alternateTools": {
-    {{- if lookPath "go" }}
-    "go": "{{ lookPath "go" }}",
-    {{- end }}
-    {{- if lookPath "golangci-lint" }}
-    "gometalinter": "{{ lookPath "golangci-lint" }}"
-    {{- end }}
+    "go": "{{ lookPath "go" }}"
   },
   "go.diagnostic.vulncheck": "Imports",
   "go.editorContextMenuCommands": {
@@ -139,6 +135,7 @@
   },
   "go.testExplorer.packageDisplayMode": "nested",
   "go.testFlags": ["--count=1", "-v"],
+  "go.toolsGopath": "{{ .chezmoi.homeDir }}/vscode-go",
   "go.toolsManagement.autoUpdate": true,
   "go.toolsManagement.checkForUpdates": "local",
   "go.useLanguageServer": true,
