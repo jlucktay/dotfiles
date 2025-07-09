@@ -14,7 +14,7 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check docker
+tool_check docker gum k3d
 
 if docker info &> /dev/null; then
   dslog "✅ Docker daemon is running."
@@ -29,10 +29,10 @@ if docker info &> /dev/null; then
     echo
     docker ps
     echo
-    dslog "🔶 non-zero number of containers still running"
+    dslog "🔶 non-zero number of containers/clusters still running"
     echo
 
-    if gum confirm "Remove all running containers?" --show-output; then
+    if gum confirm "Remove all running containers/clusters?" --show-output; then
       echo
 
       # Create a map to track any k3d clusters that are currently running.
