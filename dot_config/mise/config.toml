@@ -14,6 +14,7 @@
 "aqua:hashicorp/vault" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
+"aqua:k3d-io/k3d" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:mikefarah/yq" = "latest"
@@ -26,12 +27,13 @@
 "ubi:slsa-framework/slsa-verifier" = "latest"
 "ubi:twpayne/chezmoi" = "latest"
 
-# Pinned minor version
-"aqua:kubernetes/kubectl" = "1.30"
+# Pinned major version
+node = "22"
 
-# Pinned patch version
-"aqua:goreleaser/goreleaser" = "2.5.0"
-"aqua:norwoodj/helm-docs" = "1.11.3"
+# Pinned minor version
+"aqua:goreleaser/goreleaser" = "2.5"
+"aqua:kubernetes/kubectl" = "1.31"
+"aqua:norwoodj/helm-docs" = "1.11"
 
 [settings]
 # # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
