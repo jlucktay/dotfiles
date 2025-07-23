@@ -36,6 +36,11 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
   },
+  "[rust]": {
+    "editor.indentSize": "tabSize",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
   "[terraform]": {
     "editor.formatOnSave": false
   },
@@ -53,6 +58,7 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
+  "docker.extension.enableComposeLanguageServer": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
@@ -157,6 +163,8 @@
     "ui.navigation.importShortcut": "Both",
     "verboseOutput": true
   },
+  "hadolint.cliOptions": [],
+  "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
   "keyboard.touchbar.ignored": [
     "workbench.action.debug.run",
     "workbench.action.debug.start"
@@ -210,8 +218,8 @@
   {{- if lookPath "shfmt" }}
   "shellformat.path": "{{ lookPath "shfmt" }}",
   {{- end }}
+  "shellformat.useEditorConfig": false,
   "sortLines.sortEntireFile": true,
-  "tailscale.portDiscovery.enabled": false,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
@@ -236,19 +244,8 @@
   "vs-kubernetes": {
     "checkForMinikubeUpgrade": false,
     "vs-kubernetes.crd-code-completion": "enabled",
-    {{- if lookPath "helm" }}
-    "vs-kubernetes.helm-path.mac": "{{ lookPath "helm" }}",
-    {{- end }}
     "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
-    "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
-    {{- if lookPath "kubectl" }}
-    "vs-kubernetes.kubectl-path.mac": "{{ lookPath "kubectl" | replaceAllRegex "kubectl/[^/]+/kubectl" "kubectl/latest/kubectl" }}",
-    {{- end }}
-    {{- if lookPath "minikube" }}
-    "vs-kubernetes.minikube-path.mac": "{{ lookPath "minikube" }}",
-    {{- else }}
-    "vs-kubernetes.minikube-path.mac": "{{ .chezmoi.homeDir }}/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
-    {{- end }}
+    "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config"
   },
   {{- if lookPath "helm" }}
   "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" }}",
@@ -271,6 +268,7 @@
     "*.ipynb": "jupyter-notebook"
   },
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.opensMaximized": "always",
   "workbench.tree.renderIndentGuides": "always",
   "yaml.format.bracketSpacing": false,
   "yaml.format.singleQuote": true
