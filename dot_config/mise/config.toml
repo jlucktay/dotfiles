@@ -32,7 +32,7 @@ node = "22"
 
 # Pinned minor version
 "aqua:goreleaser/goreleaser" = "2.5"
-"aqua:kubernetes/kubectl" = "1.31"
+"aqua:kubernetes/kubectl" = "1.32"
 "aqua:norwoodj/helm-docs" = "1.11"
 
 [settings]
