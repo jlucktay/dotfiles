@@ -1,6 +1,11 @@
 // Place your key bindings in this file to override the defaults
 [
   {
+    "command": "-editor.action.indentLines",
+    "key": "cmd+]",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
     "command": "-editor.action.outdentLines",
     "key": "cmd+[",
     "when": "editorTextFocus && !editorReadonly"
@@ -9,6 +14,11 @@
     "command": "-markdown.extension.editing.toggleBold",
     "key": "cmd+b",
     "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "command": "-markdown.extension.onIndentLines",
+    "key": "cmd+]",
+    "when": "editorTextFocus && !suggestWidgetVisible && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
   },
   {
     "command": "-markdown.extension.onOutdentLines",
@@ -48,6 +58,14 @@
   {
     "command": "workbench.action.terminal.focusPrevious",
     "key": "ctrl+alt+cmd+k"
+  },
+  {
+    "command": "workbench.action.toggleAuxiliaryBar",
+    "key": "cmd+]"
+  },
+  {
+    "command": "-workbench.action.toggleAuxiliaryBar",
+    "key": "alt+cmd+b"
   },
   {
     "command": "workbench.action.toggleMaximizedPanel",
