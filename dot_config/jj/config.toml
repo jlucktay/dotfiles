@@ -1,0 +1,6 @@
+[ui]
+default-command = "help"
+
+[user]
+name = "James Lucktaylor"
+email = "jlucktay+github@gmail.com"
