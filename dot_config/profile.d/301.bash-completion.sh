@@ -26,19 +26,28 @@ fi
 # This is a kludge around Rancher Desktop still being in front (PATH-wise) of mise at this stage of shell initialisation.
 # There is a 'touch' command to bump the mise global config file and trigger mise's 'activate_aggressive' PATH-first behaviour.
 # However, that won't take effect until a prompt appears and the mise hook is fired.
-if _mwk=$(mise which kubectl); then
-  _kubectl_completion_bash=$($_mwk completion bash)
+if _mw_kubectl=$(mise which kubectl); then
+  _kubectl_completion_bash=$($_mw_kubectl completion bash)
 
   # shellcheck source=/dev/null
   source <(echo "$_kubectl_completion_bash")
 
   unset _kubectl_completion_bash
 
-  alias k=kubectl
+  if _mw_kubecolor=$(mise which kubecolor); then
+    alias kubectl="kubecolor"
+
+    # Make "kubecolor" borrow the same completion logic as "kubectl"
+    complete -o default -F __start_kubectl kubecolor
+  fi
+
+  unset _mw_kubecolor
+
+  alias k="kubectl"
   complete -o default -F __start_kubectl k
 fi
 
-unset _mwk
+unset _mw_kubectl
 
 declare -a _tools_completion_bash=(
   "cobra-cli completion bash 2> /dev/null"
