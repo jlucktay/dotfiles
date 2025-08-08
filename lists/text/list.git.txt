@@ -90,6 +90,7 @@
 /Users/james.lucktaylor/git/github.com/mitsuhiko/insta
 /Users/james.lucktaylor/git/github.com/moby/moby
 /Users/james.lucktaylor/git/github.com/mr-karan/doggo
+/Users/james.lucktaylor/git/github.com/Neo4j-engineering-hiring/James-Lucktaylor
 /Users/james.lucktaylor/git/github.com/NickFitton/AdventOfCode
 /Users/james.lucktaylor/git/github.com/OpenFactorioServerManager/factorio-server-manager
 /Users/james.lucktaylor/git/github.com/opentffoundation/manifesto
@@ -131,6 +132,7 @@
 /Users/james.lucktaylor/git/go.jlucktay.dev/goppuku
 /Users/james.lucktaylor/git/go.jlucktay.dev/gql-hack
 /Users/james.lucktaylor/git/go.jlucktay.dev/hello-pulumi
+/Users/james.lucktaylor/git/go.jlucktay.dev/monzo
 /Users/james.lucktaylor/git/go.jlucktay.dev/my-github-repos
 /Users/james.lucktaylor/git/go.jlucktay.dev/playstation-share-tidy
 /Users/james.lucktaylor/git/go.jlucktay.dev/rate-limit

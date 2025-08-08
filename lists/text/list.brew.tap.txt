@@ -3,7 +3,6 @@ common-fate/granted
 homebrew/bundle
 homebrew/services
 jlucktay/tap
-mongodb/brew
 rafaelgarrido/caveats
 stateful/tap
 teamookla/speedtest

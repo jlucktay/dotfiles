@@ -1,35 +1,46 @@
-bacon v3.14.0:
+bacon v3.16.0:
     bacon
 cargo-cache v0.8.3:
     cargo-cache
+cargo-generate v0.23.4:
+    cargo-generate
 cargo-info v0.7.7:
     cargo-info
-cargo-semver-checks v0.41.0:
+cargo-semver-checks v0.42.0:
     cargo-semver-checks
-cargo-tarpaulin v0.32.7:
+cargo-tarpaulin v0.32.8:
     cargo-tarpaulin
-cargo-update v16.3.0:
+cargo-update v17.0.0:
     cargo-install-update
     cargo-install-update-config
+cargo-upgrades v2.2.2:
+    cargo-upgrades
 code-radio-cli v1.0.5:
     code-radio
 count-md v0.2.0:
     count-md
 czkawka_cli v9.0.0:
     czkawka_cli
-du-dust v1.2.0:
+du-dust v1.2.3:
     dust
-miniserve v0.29.0:
+miniserve v0.31.0:
     miniserve
-mise v2025.5.16:
+mise v2025.8.6:
     mise
-oxker v0.10.3:
+oxker v0.10.5:
     oxker
 rustlings v5.4.0 (/Users/james.lucktaylor/git/github.com/jlucktay/rustlings):
     rustlings
 starship v1.23.0:
     starship
-usage-cli v2.1.1:
+tokei v12.1.2:
+    tokei
+usage-cli v2.2.2:
     usage
 viddy v1.3.0:
     viddy
+wiki-tui v0.9.1:
+    wiki-tui
+worker-build v0.1.4:
+    worker-build
+    worker-codegen

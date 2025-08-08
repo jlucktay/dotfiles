@@ -1,8 +1,8 @@
 gh actions-importer	github/gh-actions-importer	v1.3.6
 gh changelog	chelnak/gh-changelog	v0.15.3
-gh dash	dlvhdr/gh-dash	v4.15.0
+gh dash	dlvhdr/gh-dash	v4.16.1
 gh eg	ovotech/gh-eg	v0.0.4
 gh eg-dev		
 gh markdown-preview	yusukebe/gh-markdown-preview	ebc63cd6
 gh notify	meiji163/gh-notify	556df2ee
-gh poi	seachicken/gh-poi	v0.13.0
+gh poi	seachicken/gh-poi	v0.14.1

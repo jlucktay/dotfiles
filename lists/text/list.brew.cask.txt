@@ -6,12 +6,14 @@ android-studio
 anki
 audacity
 bartender
+clickhouse
 discord
 epic-games
 figma
 firefox
 font-jetbrains-mono
 font-jetbrains-mono-nerd-font
+gcloud-cli
 google-cloud-sdk
 google-drive
 gpg-suite-no-mail

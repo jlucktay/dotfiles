@@ -19,6 +19,7 @@ mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-containers
 ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
+ms-python.vscode-python-envs
 ms-vscode-remote.remote-containers
 ms-vsliveshare.vsliveshare
 pkief.material-icon-theme

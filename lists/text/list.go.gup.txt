@@ -1,10 +1,11 @@
        actions-usage: github.com/self-actuated/actions-usage@v0.1.2
              biginns: go.jlucktay.dev/golang-workbench/mlb/biginns@v0.2.3
+            chainsaw: github.com/kyverno/chainsaw@v0.2.12
            cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.5.0
            cobra-cli: github.com/spf13/cobra-cli@v1.3.0
           codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.2.1
 codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
-            deadcode: golang.org/x/tools/cmd/deadcode@v0.33.0
+            deadcode: golang.org/x/tools/cmd/deadcode@v0.35.0
              dockfmt: github.com/jessfraz/dockfmt@v0.3.3
                doggo: github.com/mr-karan/doggo/cmd/doggo@v1.0.5
                  dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.1
@@ -15,17 +16,12 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
         go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20250418092011-3ce278f4e19f
                goawk: github.com/benhoyt/goawk@v1.29.1
                 goda: github.com/loov/goda@v0.7.1
-               godoc: golang.org/x/tools/cmd/godoc@v0.33.0
-        gomodifytags: github.com/fatih/gomodifytags@v1.17.0
-               gonew: golang.org/x/tools/cmd/gonew@v0.33.0
-              goplay: github.com/haya14busa/goplay/cmd/goplay@v1.0.0
-               gopls: golang.org/x/tools/gopls@v0.18.1
-         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250529153537-25d2f7894191
-             gotests: github.com/cweill/gotests/gotests@v1.6.0
+               godoc: golang.org/x/tools/cmd/godoc@v0.35.0
+               gonew: golang.org/x/tools/cmd/gonew@v0.35.0
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250805150428-9469f96afdf5
          govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.4
                  gup: github.com/nao1215/gup@v0.27.8
            helm-docs: github.com/norwoodj/helm-docs/cmd/helm-docs@v1.14.2
-                impl: github.com/josharian/impl@v1.4.0
             inframap: github.com/cycloidio/inframap@v0.8.0
                   jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
                 kind: sigs.k8s.io/kind@v0.29.0
@@ -36,10 +32,11 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
             minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.5
              modview: github.com/bayraktugrul/modview@v1.2.4
                  moq: github.com/matryer/moq@v0.5.3
-             nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20250529212919-a6e314b75873
+             nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20250805202745-8ad05f089790
         oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
              oauth2c: github.com/cloudentity/oauth2c@v1.17.2
              oauth2l: github.com/google/oauth2l@v1.3.3
-             octocov: github.com/k1LoW/octocov@v0.68.0
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250530170220-274f41854e53
-              rclone: github.com/rclone/rclone@v1.69.3
+             octocov: github.com/k1LoW/octocov@v0.68.2
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250721174030-d4de6668b910
+              rclone: github.com/rclone/rclone@v1.70.3
+              vangen: 4d63.com/vangen@v1.4.1
