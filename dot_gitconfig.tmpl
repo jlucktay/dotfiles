@@ -67,14 +67,8 @@
 {{- end }}
 	editor = nano
 	excludesfile = ~/.gitignore.global
+{{- if lookPath "delta" }}
 	pager = delta
-
-[credential]
-{{- if eq .chezmoi.os "darwin" }}
-	helper = osxkeychain
-{{- else if eq .chezmoi.os "linux" }}
-	helper = cache
-{{- end }}
 
 [delta]
 	hyperlinks = true
@@ -105,6 +99,21 @@
 [delta "paging-never"]
 	paging = never
 
+[interactive]
+	diffFilter = delta --color-only
+
+[pager]
+	blame = delta
+	grep = delta
+{{- end }}
+
+[credential]
+{{- if eq .chezmoi.os "darwin" }}
+	helper = osxkeychain
+{{- else if eq .chezmoi.os "linux" }}
+	helper = cache
+{{- end }}
+
 [diff]
 	colorMoved = default
 	renameLimit = 100000
@@ -123,15 +132,8 @@
 [init]
 	defaultBranch = main
 
-[interactive]
-	diffFilter = delta --color-only
-
 [merge]
 	conflictstyle = diff3
-
-[pager]
-	blame = delta
-	grep = delta
 
 [pull]
 	rebase = false
