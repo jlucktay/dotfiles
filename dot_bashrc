@@ -2,13 +2,13 @@
 # Note: bashrc refers to something that runs in each and every new shell.
 
 for _config_bashrc_d in "$HOME"/.config/bashrc.d/*.sh; do
-  _epoch_start=$EPOCHREALTIME
+  _epoch_start=${EPOCHREALTIME:-0}
 
   # shellcheck disable=SC1090
   source "$_config_bashrc_d"
 
   declare -i _duration_threshold_ms=250
-  _epoch_diff=$(bc --expression="$EPOCHREALTIME - $_epoch_start")
+  _epoch_diff=$(bc --expression="${EPOCHREALTIME:-0} - $_epoch_start")
   _over_threshold=$(bc --expression="($_epoch_diff * 1000) > $_duration_threshold_ms" --mathlib)
 
   if ((_over_threshold)); then
