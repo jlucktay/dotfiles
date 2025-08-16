@@ -26,7 +26,7 @@ fi
 # This is a kludge around Rancher Desktop still being in front (PATH-wise) of mise at this stage of shell initialisation.
 # There is a 'touch' command to bump the mise global config file and trigger mise's 'activate_aggressive' PATH-first behaviour.
 # However, that won't take effect until a prompt appears and the mise hook is fired.
-if _mw_kubectl=$(mise which kubectl); then
+if command -v mise &> /dev/null && _mw_kubectl=$(mise which kubectl); then
   _kubectl_completion_bash=$($_mw_kubectl completion bash)
 
   # shellcheck source=/dev/null
