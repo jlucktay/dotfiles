@@ -77,6 +77,8 @@ process_list "brew tap" "brew.tap"
 process_list "brew list -1 --formula" "brew"
 process_list "brew list -1 --cask" "brew.cask"
 
+# TODO: leverage 'brew bundle dump --file=- --all' instead
+
 # pnpm
 pnpm_list_cmd='pnpm list --global --json --long \
   | jq --raw-output '\''.[].dependencies | to_entries | .[].value | "\(.homepage):\(.version)"'\'
