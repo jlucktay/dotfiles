@@ -5,20 +5,20 @@
            cobra-cli: github.com/spf13/cobra-cli@v1.3.0
           codeowners: github.com/hmarr/codeowners/cmd/codeowners@v1.2.1
 codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
-            deadcode: golang.org/x/tools/cmd/deadcode@v0.35.0
+            deadcode: golang.org/x/tools/cmd/deadcode@v0.36.0
              dockfmt: github.com/jessfraz/dockfmt@v0.3.3
                doggo: github.com/mr-karan/doggo/cmd/doggo@v1.0.5
                  dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.1
            expvarmon: github.com/divan/expvarmon@v0.0.0-20230430154648-8e0b3d2778b3
         fork-sweeper: github.com/rednafi/fork-sweeper/cmd/fork-sweeper@v0.2.0
               gcping: github.com/GoogleCloudPlatform/gcping@v0.0.10
-               ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.10.0
+               ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.11.0
         go-mutesting: github.com/avito-tech/go-mutesting/cmd/go-mutesting@v0.0.0-20250418092011-3ce278f4e19f
                goawk: github.com/benhoyt/goawk@v1.29.1
                 goda: github.com/loov/goda@v0.7.1
-               godoc: golang.org/x/tools/cmd/godoc@v0.35.0
-               gonew: golang.org/x/tools/cmd/gonew@v0.35.0
-         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250805150428-9469f96afdf5
+               godoc: golang.org/x/tools/cmd/godoc@v0.36.0
+               gonew: golang.org/x/tools/cmd/gonew@v0.36.0
+         gotelemetry: golang.org/x/telemetry/cmd/gotelemetry@v0.0.0-20250813145757-41cd51e6ab6a
          govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.1.4
                  gup: github.com/nao1215/gup@v0.27.8
            helm-docs: github.com/norwoodj/helm-docs/cmd/helm-docs@v1.14.2
@@ -29,14 +29,13 @@ codeowners-validator: github.com/mszostok/codeowners-validator@v0.7.4
                 lcut: github.com/vrischmann/logfmt/cmd/lcut@v0.0.0-20231107105446-6947580a976e
              ls-lint: github.com/loeffel-io/ls-lint@v1.11.2
       makefile-graph: github.com/dnaeon/makefile-graph/cmd/makefile-graph@v0.1.5
-            minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.5
              modview: github.com/bayraktugrul/modview@v1.2.4
                  moq: github.com/matryer/moq@v0.5.3
              nilaway: go.uber.org/nilaway/cmd/nilaway@v0.0.0-20250805202745-8ad05f089790
         oapi-codegen: github.com/deepmap/oapi-codegen/cmd/oapi-codegen@v1.16.3
              oauth2c: github.com/cloudentity/oauth2c@v1.17.2
              oauth2l: github.com/google/oauth2l@v1.3.3
-             octocov: github.com/k1LoW/octocov@v0.68.2
-             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250721174030-d4de6668b910
+             octocov: github.com/k1LoW/octocov@v0.69.0
+             pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20250808145627-259676f24e15
               rclone: github.com/rclone/rclone@v1.70.3
               vangen: 4d63.com/vangen@v1.4.1

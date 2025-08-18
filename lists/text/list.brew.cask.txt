@@ -6,7 +6,6 @@ android-studio
 anki
 audacity
 bartender
-clickhouse
 discord
 epic-games
 figma
@@ -33,6 +32,7 @@ resilio-sync
 slack
 stats
 steam
+tyke
 visual-studio-code
 vlc
 webex

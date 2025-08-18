@@ -20,11 +20,13 @@
 /Users/james.lucktaylor/git/github.com/cue-lang/vscode-cue
 /Users/james.lucktaylor/git/github.com/datreeio/CRDs-catalog
 /Users/james.lucktaylor/git/github.com/dtolnay/syn
+/Users/james.lucktaylor/git/github.com/external-secrets/external-secrets
 /Users/james.lucktaylor/git/github.com/factoriotools/factorio-docker
 /Users/james.lucktaylor/git/github.com/fluxcd/flux
 /Users/james.lucktaylor/git/github.com/franckverrot/terraform-provider-stripe
 /Users/james.lucktaylor/git/github.com/github/vscode-github-actions
 /Users/james.lucktaylor/git/github.com/go-task/task
+/Users/james.lucktaylor/git/github.com/gojuno/minimock
 /Users/james.lucktaylor/git/github.com/golangci/golangci-lint
 /Users/james.lucktaylor/git/github.com/google/go-github
 /Users/james.lucktaylor/git/github.com/google/oauth2l
@@ -56,8 +58,6 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/cpp-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/crossplane-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_pure-terraform
-/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/google_project
-/Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/this.google_network
 /Users/james.lucktaylor/git/github.com/jlucktay/google-cloud-storage
 /Users/james.lucktaylor/git/github.com/jlucktay/hashicorp-homebrew-tap
 /Users/james.lucktaylor/git/github.com/jlucktay/hello-react
