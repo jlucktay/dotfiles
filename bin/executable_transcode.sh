@@ -157,3 +157,14 @@ fi
   set -x
   ffmpeg "${common_flags[@]}" -pass 2 -codec:a libopus "$output_file"
 )
+
+# TODO
+# - consider options for H.264 encodings in MP4 containers as well, as AMD Video Code Engine (VCE) is a full hardware
+# implementation of the video codec H.264/MPEG-4 AVC
+#   - Firefox support: https://support.mozilla.org/en-US/kb/html5-audio-and-video-firefox#w_patented-media
+#   - or maybe don't bother considering H.26[45]
+# - (re)read/implement these:
+#   - https://trac.ffmpeg.org/wiki/Encode/VP9
+#   - https://developers.google.com/media/vp9/settings/vod/
+# - > [libopus @ 0x121e08260] No bit rate set. Defaulting to 320000 bps.
+#   256kbps should be fine for (up to) 5.1 (6 channels)

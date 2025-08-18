@@ -481,3 +481,5 @@ disabled = true
 [container]
 disabled = false
 symbol = '⬢'
+
+# mise: https://github.com/starship/starship/pull/5747/files

@@ -3,6 +3,9 @@ Don't forget about `shellharden`, `git bisect`, and `git worktree`!
 Cross-compile Go for all available platforms and architectures (in a tweet sized command):
     go tool dist list | awk -F'/' '{ system("GOOS="$1" GOARCH="$2" go build your/package/name") }'
 
+In Task, dependencies run _before_ preconditions:
+https://github.com/go-task/task/blob/9ecc8fc878876a8602d2e8ed277ea5ff541ce538/task.go#L195-L209
+
 === The golden rule of git rebase is to never use it on public branches ===
 
 Partial pull:                          Partial push:

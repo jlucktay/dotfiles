@@ -27,6 +27,9 @@ pipe_output=$(gh release view --repo kubernetes-sigs/kind --json body --jq '.bod
 # pipe and immediately lost.
 mapfile -t kind_image_tags <<< "$pipe_output"
 
+# TODO(jlucktay): filter the array through some logic to parse out the latest patch for each minor release; already
+# implemented in the rpi-homelab project when dealing with K8s releases over there.
+
 # For each image version/tag, pull both with and without the sha256 checksum.
 for ((i = 0; i < ${#kind_image_tags[@]}; i++)); do
   kit=${kind_image_tags[$i]}

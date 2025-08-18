@@ -23,6 +23,8 @@ tasks:
         - DOCKER_IMAGE
     cmd: docker pull {{.DOCKER_IMAGE}}
 
+  # TODO: split on same repo but different tag, so downloads don't duplicate/repeat
+
   topgrade:docker-pull:
     desc: Pull all Docker images in parallel.
     deps:
