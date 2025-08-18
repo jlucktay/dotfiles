@@ -39,7 +39,7 @@ tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
 
 ### To restore this file:
 # AGE_KEY=$(gmktemp)
-# op read "op://Private/bash-eternal - rage-keygen/Private key" --account=my.1password.com > "$AGE_KEY"
+# op read "op://Private/npeylxznmvprgbfm7mnqa3jkgi/Private key" --account=my.1password.com > "$AGE_KEY"
 # cd "$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')"
 # age --decrypt --identity "$AGE_KEY" --output bash_eternal_history.tar.gz bash_eternal_history.tar.gz.age
 # rm --force "$AGE_KEY"
