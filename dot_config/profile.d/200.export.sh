@@ -65,7 +65,7 @@ prefix_path "$package_manager_prefix/opt/python@3.12/libexec/bin"
 prefix_path "$package_manager_prefix/opt/ruby/bin"
 
 # pnpm.
-if command -v pnpm &> /dev/null; then
+if mise which pnpm &> /dev/null; then
   export PNPM_HOME="$HOME/Library/pnpm"
   prefix_path "$PNPM_HOME"
 fi
