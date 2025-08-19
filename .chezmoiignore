@@ -1,6 +1,7 @@
 # Directories
-rsync_tmbackup/
-vscode/
+/lists/
+/rsync_tmbackup/
+/vscode/
 
 # Scripts
 bootstrap.sh
