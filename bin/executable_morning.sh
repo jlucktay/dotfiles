@@ -30,7 +30,7 @@ declare -a command_queue=()
 
 # Do some notification cleanup, if there's a token ginsu can use.
 # Get it teed up before the GitHub commands are added to the queue.
-if [[ -n ${GITHUB_TOKEN:-} ]]; then
+if [[ -n ${GITHUB_TOKEN-} ]]; then
   command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
