@@ -37,7 +37,7 @@ function prefix_path() {
 # 2) the files under the '/etc/paths.d/' directory
 
 # To be able to run kubectl plugins wrangled with krew.
-if command -v krew &> /dev/null; then
+if mise which krew &> /dev/null; then
   prefix_path "$HOME/.krew/bin"
 fi
 
