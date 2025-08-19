@@ -82,7 +82,7 @@ for _tcb in "${_tools_completion_bash[@]}"; do
     continue
   fi
 
-  if complete -p "${arrTCB[0]}" 2> /dev/null; then
+  if complete -p "${arrTCB[0]}" &> /dev/null; then
     printf >&2 "%80s: bash completions are already in place for the '%s' command\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
 
     continue
@@ -117,6 +117,8 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 
     unset _tool_stat
   else
+    printf >&2 "%80s: tool '%s' needs new completions generated..." "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+
     _tool_completion_regenerate=1
   fi
 
@@ -133,6 +135,15 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 
     continue
   fi
+
+  # Make sure our directory exists, before attempting to write out to and read back from it.
+  if ! _tcf_dir="$(dirname "$_tool_completion_file")"; then
+    echo >&2 " ⛔️ could not parse directory for Bash completion files"
+
+    continue
+  fi
+
+  mkdir -p "$_tcf_dir"
 
   # Write the tool's completion script out to our directory, so that the 'bash_completion.sh' line at the top of this file will catch it next time.
   echo "$_tool_completion_bash" > "$_tool_completion_file"
