@@ -1,8 +1,1 @@
-ankitpokhrel/jira-cli
-common-fate/granted
-homebrew/bundle
-homebrew/services
-jlucktay/tap
-rafaelgarrido/caveats
-stateful/tap
-teamookla/speedtest
+alexstrnik/browserino
