@@ -84,7 +84,7 @@ fi
 
 command_queue+=(
   # Keep a backup of my vault, separate from Obsidian Sync.
-  "rclone sync \"$HOME/obsidian/jlucktay-obsidian\" \"$HOME/jlucktay@gmail.com - Google Drive/My Drive/jlucktay-obsidian\" --check-first --color=ALWAYS --delete-after --verbose"
+  "rclone sync \"$HOME/jlucktay-obsidian\" \"$HOME/jlucktay@gmail.com - Google Drive/My Drive/jlucktay-obsidian\" --check-first --color=ALWAYS --delete-after --verbose"
 
   # See what's on.
   "cineworld -l 3"
