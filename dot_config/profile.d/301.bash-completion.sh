@@ -61,7 +61,6 @@ declare -a _tools_completion_bash=(
   "nerdctl completion bash"
   "octocov completion bash"
   "op completion bash"
-  "rclone completion bash -"
   "rdctl completion bash"
   "rustup completions bash cargo"
   "rustup completions bash rustup"

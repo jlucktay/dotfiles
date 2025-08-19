@@ -23,6 +23,7 @@
 "aqua:mikefarah/yq" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
+"aqua:rclone/rclone" = "latest"
 "aqua:sigstore/cosign" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
 "ubi:go-task/task" = "latest"
