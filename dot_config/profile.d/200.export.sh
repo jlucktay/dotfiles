@@ -119,9 +119,3 @@ fi
 if command -v bat &> /dev/null; then
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
-
-# AWS CLI MITM
-# https://ovotech.atlassian.net/wiki/spaces/OTKB/pages/4596302401/Certificate+Error+When+Connecting+to+Resources+via+ZTNA
-if command -v aws &> /dev/null; then
-  export AWS_CA_BUNDLE="$HOME/ztna-mitm/CA-Bundle-ZTNA.pem"
-fi
