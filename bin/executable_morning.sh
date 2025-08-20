@@ -56,7 +56,7 @@ fi
 
 command_queue+=(
   # Refresh GitHub/OVO SSO for the day.
-  "open_chrome 'https://github.com/orgs/ovotech/teams/developer-platforms/members'"
+  "open_chrome 'https://github.com/orgs/ovotech/teams/evergreen-platform/members'"
 
   # Check PR mentions.
   "open_chrome 'https://github.com/notifications?query=reason%3Amention'"
