@@ -1,0 +1,18 @@
+# Managed by chezmoi, so edit this file in the 'dotfiles' repo, not locally.
+
+[sso-session ovo-sso]
+sso_region = eu-west-1
+sso_registration_scopes = sso:account:access
+sso_start_url = https://d-93677cf58f.awsapps.com/start
+{{- with $raw := (onepasswordRead "op://Employee/4y2dxsncr2rn7qa3vf7rguthbm/notesPlain" "ovotech.1password.com") -}}
+{{- range $line := (splitList "\n" $raw) -}}
+{{- with $account := (split "," $line) }}
+
+[profile {{ printf "%s" (kebabcase $account._0) }}]
+# email: {{ printf "%s" $account._2 }}
+sso_account_id = {{ printf "%s" $account._1 }}
+sso_role_name = {{ printf "%s" $account._3 }}
+sso_session = ovo-sso
+{{- end -}}
+{{- end -}}
+{{- end }}

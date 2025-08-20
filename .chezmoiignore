@@ -21,3 +21,6 @@ bash_eternal_history.tar.gz.age
 
 # Homebrew auto-install
 Brewfile
+
+# Raw data to import
+/aws-sso.*.csv
