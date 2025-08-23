@@ -250,7 +250,7 @@
     "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config"
   },
   {{- if lookPath "helm" }}
-  "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" }}",
+  "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" | replaceAllRegex "helm/[^/]+/darwin-arm64/helm" "helm/latest/darwin-arm64/helm" }}",
   {{- end }}
   {{- if lookPath "kubectl" }}
   "vscode-kubernetes.kubectl-path-mac": "{{ lookPath "kubectl" | replaceAllRegex "kubectl/[^/]+/kubectl" "kubectl/latest/kubectl" }}",

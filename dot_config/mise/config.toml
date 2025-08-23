@@ -14,6 +14,7 @@
 "aqua:GoogleContainerTools/skaffold" = "latest"
 "aqua:hashicorp/terraform" = "latest"
 "aqua:hashicorp/vault" = "latest"
+"aqua:helm/helm" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:k3d-io/k3d" = "latest"
