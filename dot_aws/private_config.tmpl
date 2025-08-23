@@ -1,5 +1,9 @@
 # Managed by chezmoi, so edit this file in the 'dotfiles' repo, not locally.
 
+{{ if and
+  (lookPath "aws")
+  (eq (env "CHEZMOI_PROFILE") "ovo")
+-}}
 [sso-session ovo-sso]
 sso_region = eu-west-1
 sso_registration_scopes = sso:account:access
@@ -13,6 +17,7 @@ sso_start_url = https://d-93677cf58f.awsapps.com/start
 sso_account_id = {{ printf "%s" $account._1 }}
 sso_role_name = {{ printf "%s" $account._3 }}
 sso_session = ovo-sso
+{{- end -}}
 {{- end -}}
 {{- end -}}
 {{- end }}
