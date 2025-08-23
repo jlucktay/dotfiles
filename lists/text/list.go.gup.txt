@@ -1,1 +1,6 @@
-gup: github.com/nao1215/gup@v0.27.8
+cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.5.0
+      dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.1
+    ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.11.0
+    godoc: golang.org/x/tools/cmd/godoc@v0.36.0
+  gofumpt: mvdan.cc/gofumpt@v0.8.0
+      gup: github.com/nao1215/gup@v0.27.8

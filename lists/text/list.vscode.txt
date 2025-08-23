@@ -1,8 +1,15 @@
 bierner.markdown-mermaid
+chdsbd.github-code-owners
 editorconfig.editorconfig
+esbenp.prettier-vscode
 foxundermoon.shell-format
+github.vscode-github-actions
 golang.go
+mechatroner.rainbow-csv
 mikecunneen.cunneen-copy-breadcrumbs
+ms-azuretools.vscode-containers
+ms-kubernetes-tools.vscode-kubernetes-tools
+pkief.material-icon-theme
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
@@ -10,3 +17,4 @@ tamasfe.even-better-toml
 timonwong.shellcheck
 tyriar.sort-lines
 wakatime.vscode-wakatime
+yzhang.markdown-all-in-one

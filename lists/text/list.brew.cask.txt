@@ -1,5 +1,6 @@
 1password-cli
 alacritty
+anki
 browserino
 firefox
 font-jetbrains-mono

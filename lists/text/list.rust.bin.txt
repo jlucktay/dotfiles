@@ -9,7 +9,9 @@ cargo-upgrades v2.2.3:
     cargo-upgrades
 kondo v0.8.0:
     kondo
-mise v2025.8.10:
+mise v2025.8.16:
     mise
 starship v1.23.0:
     starship
+usage-cli v2.2.2:
+    usage
