@@ -84,7 +84,8 @@ fi
 
 command_queue+=(
   # Keep a backup of my vault, separate from Obsidian Sync.
-  "rclone sync \"$HOME/jlucktay-obsidian\" \"$HOME/jlucktay@gmail.com - Google Drive/My Drive/jlucktay-obsidian\" --check-first --color=ALWAYS --delete-after --verbose"
+  # Since mise manages rclone, the version might change before this comes up in the queue, so we call via 'mise exec ...' to make sure we get the correct binary path.
+  "mise exec --verbose -- rclone sync \"$HOME/jlucktay-obsidian\" \"$HOME/jlucktay@gmail.com - Google Drive/My Drive/jlucktay-obsidian\" --check-first --color=ALWAYS --delete-after --verbose"
 
   # See what's on.
   "cineworld -l 3"
