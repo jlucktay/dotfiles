@@ -41,12 +41,12 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4
   },
-  "[terraform]": {
+  "[terraform-vars]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
   },
-  "[terraform-vars]": {
+  "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
     "editor.formatOnSaveMode": "file"
@@ -174,6 +174,25 @@
   },
   "hadolint.cliOptions": ["--no-color"],
   "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
+  "helm-ls.valuesFiles": {
+    "additionalValuesFilesGlobPattern": "values*.yaml",
+    "lintOverlayValuesFile": "values.lint.yaml",
+    "mainValuesFile": "values.yaml"
+  },
+  "helm-ls.yamlls": {
+    "config": {
+      "completion": true,
+      "hover": true,
+      "schemas": {
+        "kubernetes": "templates/**"
+      }
+    },
+    "diagnosticsLimit": 50,
+    "enabled": true,
+    "enabledForFilesGlob": "*.{yaml,yml}",
+    "path": "yaml-language-server",
+    "showDiagnosticsDirectly": false
+  },
   "keyboard.touchbar.ignored": [
     "workbench.action.debug.run",
     "workbench.action.debug.start"
