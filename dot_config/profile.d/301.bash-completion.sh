@@ -50,16 +50,12 @@ fi
 unset _mw_kubectl
 
 declare -a _tools_completion_bash=(
-  "cobra-cli completion bash 2> /dev/null"
   "docker completion bash"
   "gup completion bash"
   "helm completion bash"
-  "jira completion bash"
   "kondo --completions bash 2> /dev/null"
-  "miniserve --print-completions bash"
   # "mise completion bash" # 'mise' is a function
   "nerdctl completion bash"
-  "octocov completion bash"
   "op completion bash"
   "rdctl completion bash"
   "rustup completions bash cargo"
