@@ -18,23 +18,3 @@ credentials "app.terraform.io" {
 // Enables plugin caching and specifies, as a string, the location of the plugin cache directory.
 // https://developer.hashicorp.com/terraform/cli/config/config-file#provider-plugin-cache
 plugin_cache_dir = "{{.chezmoi.homeDir}}/.terraform.d/plugin-cache"
-
-// https://developer.hashicorp.com/terraform/cli/config/config-file#explicit-installation-method-configuration
-provider_installation {
-  filesystem_mirror {
-    path    = "{{.chezmoi.homeDir}}/m2tp3"
-    include = [
-      "registry.terraform.io/hashicorp/random",
-      "registry.terraform.io/hashicorp/template",
-      "terraform.ovotech.org.uk/pe/aiven-kafka-users"
-    ]
-  }
-
-  direct {
-    exclude = [
-      "registry.terraform.io/hashicorp/random",
-      "registry.terraform.io/hashicorp/template",
-      "terraform.ovotech.org.uk/pe/aiven-kafka-users"
-    ]
-  }
-}
