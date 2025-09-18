@@ -12,7 +12,11 @@ check_rd_vm() {
   tool_check rdctl gawk
 
   local df_raw df_pct pct_compare
-  df_raw=$(rdctl shell df /var/lib)
+
+  if ! df_raw=$(rdctl shell df /var/lib); then
+    err "Rancher Desktop does not seem to be running"
+  fi
+
   df_pct=$(gawk 'END { pct = $4; sub(/%/, "", pct); print pct; }' <<< "$df_raw")
   pct_compare=$(bc --mathlib <<< "$df_pct >= 80")
 
