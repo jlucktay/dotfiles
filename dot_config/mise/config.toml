@@ -10,6 +10,7 @@
 "aqua:FiloSottile/age" = "latest"
 "aqua:git-lfs/git-lfs" = "latest"
 "aqua:gohugoio/hugo/hugo-extended" = "latest"
+"aqua:golangci/golangci-lint" = "latest"
 "aqua:google/yamlfmt" = "latest"
 "aqua:GoogleContainerTools/skaffold" = "latest"
 "aqua:hashicorp/terraform" = "latest"
@@ -46,6 +47,9 @@ node = "22"
 [settings]
 # # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
 # activate_aggressive = true
+
+# Don't bother with '.terraform-version' files and the like
+idiomatic_version_file_enable_tools = []
 
 [settings.status]
 missing_tools = "always"
