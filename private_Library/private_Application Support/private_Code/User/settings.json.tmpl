@@ -182,16 +182,32 @@
   "helm-ls.yamlls": {
     "config": {
       "completion": true,
+      "disableDefaultProperties": false,
+      "editor": {
+        "formatOnType": false
+      },
+      "format": {
+        "bracketSpacing": false,
+        "enable": true,
+        "proseWrap": false,
+        "singleQuote": true
+      },
       "hover": true,
+      "keyOrdering": false,
+      "schemaStore": {
+        "enable": true
+      },
       "schemas": {
         "kubernetes": "templates/**"
-      }
+      },
+      "validate": true
     },
     "diagnosticsLimit": 50,
     "enabled": true,
     "enabledForFilesGlob": "*.{yaml,yml}",
+    "initTimeoutSeconds": 5,
     "path": "yaml-language-server",
-    "showDiagnosticsDirectly": false
+    "showDiagnosticsDirectly": true
   },
   "keyboard.touchbar.ignored": [
     "workbench.action.debug.run",
