@@ -2,7 +2,7 @@
 
 {{ if and
   (lookPath "aws")
-  (eq (env "CHEZMOI_PROFILE") "ovo")
+  (eq .profile "ovo")
 -}}
 [sso-session ovo-sso]
 sso_region = eu-west-1

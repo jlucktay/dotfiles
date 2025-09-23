@@ -5,10 +5,10 @@
 
 {{if lookPath "op" -}}
 credentials "app.terraform.io" {
-  {{- if eq (env "CHEZMOI_PROFILE") "personal"}}
+  {{- if eq .profile "personal"}}
   // Personal token - managed by chezmoi
   token = "{{onepasswordRead "op://Personal/Terraform Cloud - personal/Token" "my.1password.com"}}"
-  {{- else if eq (env "CHEZMOI_PROFILE") "ovo"}}
+  {{- else if eq .profile "ovo"}}
   // OVO token - managed by chezmoi
   token = "{{onepasswordRead "op://Private/OVO Terraform Cloud token/credential" "ovotech.1password.com"}}"
   {{- end}}

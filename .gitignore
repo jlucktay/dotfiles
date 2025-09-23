@@ -1,2 +1,5 @@
 # Raw data to import
 /aws-sso.*.csv
+
+# Ephemeral data
+/.chezmoidata.yaml
