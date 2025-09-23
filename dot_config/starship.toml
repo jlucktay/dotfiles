@@ -146,7 +146,6 @@ us-west4 = "Las Vegas, Nevada, USA"
 always_show_remote = true
 ignore_branches = ['main', 'master']
 symbol = ' '
-truncation_length = 16
 
 [git_commit]
 tag_disabled = false
