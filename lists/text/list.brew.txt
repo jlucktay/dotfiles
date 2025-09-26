@@ -4,6 +4,8 @@ bash-completion@2
 bat
 ca-certificates
 coreutils
+dive
+dtc
 eza
 fd
 fzf
@@ -19,12 +21,17 @@ granted
 gron
 icu4c@77
 krb5
+krunkit
+libepoxy
 libgit2
+libkrun-efi
 libpq
 libssh2
 libunistring
+libyaml
 mas
 md5sha1sum
+molten-vk-krunkit
 mpdecimal
 mpfr
 nano
@@ -32,7 +39,10 @@ nanorc
 ncurses
 oniguruma
 openssl@3
+pack
 pcre2
+podman
+pre-commit
 python@3.12
 python@3.13
 readline
@@ -40,4 +50,5 @@ ripgrep
 rustup
 sqlite
 topgrade
+virglrenderer
 xz

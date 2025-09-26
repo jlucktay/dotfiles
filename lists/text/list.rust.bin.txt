@@ -2,14 +2,14 @@ cargo-cache v0.8.3:
     cargo-cache
 cargo-info v0.7.7:
     cargo-info
-cargo-update v17.0.0:
+cargo-update v18.0.0:
     cargo-install-update
     cargo-install-update-config
-cargo-upgrades v2.2.3:
+cargo-upgrades v2.2.4:
     cargo-upgrades
 kondo v0.8.0:
     kondo
-mise v2025.8.16:
+mise v2025.9.19:
     mise
 starship v1.23.0:
     starship

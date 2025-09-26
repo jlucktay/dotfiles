@@ -32,6 +32,7 @@
 /Users/james.lucktaylor/git/github.com/google/oauth2l
 /Users/james.lucktaylor/git/github.com/googleapis/google-api-go-client
 /Users/james.lucktaylor/git/github.com/googleapis/google-cloud-go
+/Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/buildpack-samples
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/guest-agent
 /Users/james.lucktaylor/git/github.com/GoogleContainerTools/skaffold
 /Users/james.lucktaylor/git/github.com/grpc/grpc-go
@@ -103,6 +104,7 @@
 /Users/james.lucktaylor/git/github.com/rust-random/rand
 /Users/james.lucktaylor/git/github.com/santhosh-tekuri/jsonschema
 /Users/james.lucktaylor/git/github.com/self-actuated/actions-usage
+/Users/james.lucktaylor/git/github.com/sgotham/bedrock-platform-gitops
 /Users/james.lucktaylor/git/github.com/sportstimes/f1
 /Users/james.lucktaylor/git/github.com/starship/starship
 /Users/james.lucktaylor/git/github.com/stateful/runme

@@ -5,6 +5,8 @@ esbenp.prettier-vscode
 foxundermoon.shell-format
 github.vscode-github-actions
 golang.go
+hashicorp.terraform
+helm-ls.helm-ls
 mechatroner.rainbow-csv
 mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-containers

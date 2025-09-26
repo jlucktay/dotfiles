@@ -7,9 +7,11 @@ font-jetbrains-mono
 font-jetbrains-mono-nerd-font
 gcloud-cli
 gpg-suite-no-mail
+hiddenbar
 itsycal
 keepingyouawake
 obsidian
 pingmenu
-rancher
+podman-desktop
 stats
+zoom
