@@ -54,9 +54,7 @@ declare -a _tools_completion_bash=(
   "helm completion bash"
   "kondo --completions bash 2> /dev/null"
   # "mise completion bash" # 'mise' is a function
-  "nerdctl completion bash"
   "op completion bash"
-  "rdctl completion bash"
   "rustup completions bash cargo"
   "rustup completions bash rustup"
   "starship completions bash"
