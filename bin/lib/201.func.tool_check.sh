@@ -15,12 +15,12 @@ tool_check() {
       err "Can't find command from first word of '$tool'!"
     fi
 
-    if ! type -t "$tool_first_word" &> /dev/null; then
-      err "Can't find type for '$tool_first_word'!"
+    if ! command -v "$tool_first_word" &> /dev/null; then
+      err "Can't determine path for '$tool_first_word'!"
     fi
 
-    if ! hash "$tool_first_word" &> /dev/null; then
-      err "Can't determine path for '$tool'!"
+    if ! type -t "$tool_first_word" &> /dev/null; then
+      err "Can't find type for '$tool_first_word'!"
     fi
   done
 }
