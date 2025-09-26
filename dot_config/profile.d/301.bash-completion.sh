@@ -50,7 +50,6 @@ fi
 unset _mw_kubectl
 
 declare -a _tools_completion_bash=(
-  "docker completion bash"
   "gup completion bash"
   "helm completion bash"
   "kondo --completions bash 2> /dev/null"

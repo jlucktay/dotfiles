@@ -14,20 +14,20 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check docker gum k3d
+tool_check podman gum k3d
 
-if docker info &> /dev/null; then
-  dslog "✅ Docker daemon is running."
+if podman info &> /dev/null; then
+  dslog "✅ Podman Engine is running."
 
-  if ! dpfn=$(docker ps --format='{{.Names}}'); then
+  if ! ppfn=$(podman ps --format='{{.Names}}'); then
     err "could not get names of running containers from host"
   fi
 
-  mapfile -t running_names < <(printf "%s" "$dpfn")
+  mapfile -t running_names < <(printf "%s" "$ppfn")
 
   if [[ ${#running_names[@]} -gt 0 ]]; then
     echo
-    docker ps
+    podman ps
     echo
     dslog "🔶 non-zero number of containers/clusters still running"
     echo
@@ -53,7 +53,7 @@ if docker info &> /dev/null; then
         else
           (
             set -x
-            docker rm --force "$running_name"
+            podman rm --force "$running_name"
           )
         fi
       done
@@ -71,7 +71,7 @@ if docker info &> /dev/null; then
     echo
   fi
 else
-  dslog "🐳❌ Docker daemon is not running."
+  dslog "🐳❌ Podman Engine is not running."
 fi
 
 tool_check kubectx

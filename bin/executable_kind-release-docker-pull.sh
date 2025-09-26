@@ -36,9 +36,9 @@ for ((i = 0; i < ${#kind_image_tags[@]}; i++)); do
 
   (
     set -x
-    docker pull "$kit"
+    podman pull "$kit"
   )
 
   echo -n "+ "
-  cut -d '@' -f 1 <<< "$kit" | xargs -t docker pull
+  cut -d '@' -f 1 <<< "$kit" | xargs -t podman pull
 done
