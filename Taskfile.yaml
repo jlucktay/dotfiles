@@ -6,10 +6,15 @@ vars:
     sh: >-
       podman images
       --format='{{`{{-
-      if ne .Tag "<none>"
+      if and
+      (ne .Tag "<none>")
+      (ne (printf "%.10s" .Repository) "localhost/")
       }}{{.Repository}}:{{.Tag}}{{end}}`}}'
+      --sort=repository
 
 tasks:
+  default: task --list-all
+
   podman:pull:
     ignore_error: true
     interactive: true
