@@ -39,10 +39,10 @@ node = "22"
 # Pinned minor version
 "aqua:goreleaser/goreleaser" = "2.5"
 "aqua:kubernetes/kubectl" = "1.32"
-"aqua:norwoodj/helm-docs" = "1.11"
+"aqua:norwoodj/helm-docs" = "1.14.2"
 
 # Pinned patch version
-"aqua:kyverno/kyverno" = "1.13.1"
+"aqua:kyverno/kyverno" = "1.14.1"
 
 [settings]
 # # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
