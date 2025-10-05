@@ -119,3 +119,8 @@ fi
 if command -v bat &> /dev/null; then
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
+
+# AWS CLI
+if command -v aws &> /dev/null; then
+  export AWS_CONFIG_FILE="${XDG_CONFIG_HOME:?}/aws/config"
+fi
