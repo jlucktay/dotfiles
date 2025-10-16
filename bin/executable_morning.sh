@@ -36,7 +36,7 @@ fi
 
 if command -v gdate &> /dev/null; then
   #
-  mlb_next_season_start='2025-03-18'
+  mlb_next_season_start='2026-03-25'
   #
 
   mlb_epoch=$(gdate --date="$mlb_next_season_start" +%s)
