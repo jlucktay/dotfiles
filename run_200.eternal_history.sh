@@ -2,7 +2,6 @@
 set -euo pipefail
 shopt -s inherit_errexit 2> /dev/null || true
 
-{{- if lookPath "op" }}
 # Bash before 4.2 (like the default one on Macs these days) doesn't support negative subscripts:
 # https://stackoverflow.com/a/61345169/380599
 script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
@@ -30,8 +29,15 @@ if ! command -v age &> /dev/null; then
   exit 1
 fi
 
+# 1Password - CLI
+if ! command -v op &> /dev/null; then
+  echo >&2 "$script_name: 'op' is required but it's not installed:
+  https://developer.1password.com/docs/cli/get-started"
+  exit 1
+fi
+
 archive_destination=$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')
-age_recipient='{{ onepasswordRead "op://Personal/bash-eternal - age-keygen/Public key" "my.1password.com" | trim }}'
+age_recipient=$(op read "op://Personal/bash-eternal - age-keygen/Public key" --account=my.1password.com)
 
 # Tar, GZip, and encrypt (with age) the eternal history file
 tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
@@ -44,4 +50,3 @@ tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
 # age --decrypt --identity "$AGE_KEY" --output bash_eternal_history.tar.gz bash_eternal_history.tar.gz.age
 # rm --force "$AGE_KEY"
 # tar zxvf bash_eternal_history.tar.gz
-{{- end }}
