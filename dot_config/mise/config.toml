@@ -26,7 +26,6 @@
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
 "aqua:rclone/rclone" = "latest"
-"aqua:sigstore/cosign" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
@@ -38,7 +37,7 @@ node = "22"
 
 # Pinned minor version
 "aqua:goreleaser/goreleaser" = "2.5"
-"aqua:kubernetes/kubectl" = "1.32"
+"aqua:kubernetes/kubectl" = "1.33"
 "aqua:norwoodj/helm-docs" = "1.14.2"
 
 # Pinned patch version
