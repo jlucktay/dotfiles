@@ -88,5 +88,8 @@ tool_check assume
   assume --unset
 )
 
-osascript -e 'quit app "Google Chat"'
-osascript -e 'quit app "Slack"'
+(
+  set -x
+  osascript -e 'quit app "Google Chat"'
+  osascript -e 'quit app "Slack"'
+)
