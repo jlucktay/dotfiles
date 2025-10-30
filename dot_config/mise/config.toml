@@ -1,7 +1,5 @@
 [tools]
 # Latest version
-"aqua:ahmetb/kubectx" = "latest"
-"aqua:ahmetb/kubectx/kubens" = "latest"
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:aws/aws-cli" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
@@ -26,6 +24,7 @@
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
 "aqua:rclone/rclone" = "latest"
+"aqua:sunny0826/kubecm" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
 "ubi:go-task/task" = "latest"
 "ubi:jlucktay/my-github-repos" = "latest"
