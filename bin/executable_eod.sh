@@ -74,13 +74,15 @@ else
   dslog "🐳❌ Podman Engine is not running."
 fi
 
-tool_check kubectx
+# Unset the current kubectl context.
+tool_check yq
 
 (
   set -x
-  kubectx --unset
+  yq eval --inplace 'del(.current-context)' "$HOME/.kube/config"
 )
 
+# Clear any ongoing AWS sessions.
 tool_check assume
 
 (
@@ -88,6 +90,7 @@ tool_check assume
   assume --unset
 )
 
+# Close down chat apps.
 (
   set -x
   osascript -e 'quit app "Google Chat"'
