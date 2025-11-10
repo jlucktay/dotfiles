@@ -1,38 +1,37 @@
 version: 3
 
 vars:
-  PODMAN_IMAGES:
-    # Skip images with a '<none>' tag.
+  DOCKER_IMAGES:
+    # Skip the Rancher Desktop proxy image, and images with a '<none>' tag.
     sh: >-
-      podman images
+      docker images
       --format='{{`{{-
       if and
+      (ne .Repository "ghcr.io/rancher-sandbox/rancher-desktop/rdx-proxy")
       (ne .Tag "<none>")
-      (ne (printf "%.10s" .Repository) "localhost/")
       }}{{.Repository}}:{{.Tag}}{{end}}`}}'
-      --sort=repository
 
 tasks:
   default: task --list-all
 
-  podman:pull:
+  docker:pull:
     ignore_error: true
     interactive: true
     internal: true
     silent: true
-    desc: Pull an image.
+    desc: Pull a Docker image.
     requires:
       vars:
-        - PODMAN_IMAGE
-    cmd: podman pull {{.PODMAN_IMAGE}}
+        - DOCKER_IMAGE
+    cmd: docker pull {{.DOCKER_IMAGE}}
 
   # TODO: split on same repo but different tag, so downloads don't duplicate/repeat
 
-  topgrade:podman-pull:
-    desc: Pull all images in parallel.
+  topgrade:docker-pull:
+    desc: Pull all Docker images in parallel.
     deps:
       - for:
-          var: PODMAN_IMAGES
-        task: podman:pull
+          var: DOCKER_IMAGES
+        task: docker:pull
         vars:
-          PODMAN_IMAGE: '{{.ITEM}}'
+          DOCKER_IMAGE: '{{.ITEM}}'

@@ -8,7 +8,7 @@
 
 # Custom commands.
 [commands]
-"Pull images in parallel" = "mise exec --verbose -- task --global topgrade:podman-pull"
+"Pull images in parallel" = "mise exec --verbose -- task --global topgrade:docker-pull"
 
 [misc]
 # Don't ask for confirmations

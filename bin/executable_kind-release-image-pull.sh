@@ -38,12 +38,12 @@ if [[ ${#kind_image_tags[@]} -ne 1 ]]; then
 fi
 
 # Pull the image that matches the minor version of the local 'kubectl', both with and without the sha256 checksum.
-pop_gum podman pull "${kind_image_tags[0]}"
-podman pull "${kind_image_tags[0]}"
+pop_gum docker pull "${kind_image_tags[0]}"
+docker pull "${kind_image_tags[0]}"
 
 if ! trimmed_tag=$(cut -d '@' -f 1 <<< "${kind_image_tags[0]}"); then
   err "trimming tag '${kind_image_tags[0]}' with 'cut'"
 fi
 
-pop_gum podman pull "$trimmed_tag"
-podman pull "$trimmed_tag"
+pop_gum docker pull "$trimmed_tag"
+docker pull "$trimmed_tag"

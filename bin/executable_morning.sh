@@ -65,20 +65,20 @@ command_queue+=(
   topgrade
 )
 
-if check_pe_vm; then
-  dslog "✅ Podman Engine VM check OK"
+if check_rd_vm; then
+  dslog "✅ Rancher Desktop VM check OK"
 else
-  dslog "🟡 Podman Engine VM check did not pass; queueing maintenance pruning commands"
+  dslog "🟡 Rancher Desktop VM check did not pass; queueing maintenance pruning commands"
 
   command_queue+=(
     # Remove all build cache more than 30 days old, without confirmation.
-    "podman buildx prune --all --filter=\"until=$((30 * 24))h\" --force --verbose"
+    "docker buildx prune --all --filter=\"until=$((30 * 24))h\" --force --verbose"
 
     # Remove dangling images more than 30 days old.
-    "podman system prune --filter=\"until=$((30 * 24))h\" --force"
+    "docker system prune --filter=\"until=$((30 * 24))h\" --force"
 
     # Remove anonymous volumes.
-    "podman volume prune --force"
+    "docker volume prune --force"
   )
 fi
 
@@ -91,7 +91,6 @@ command_queue+=(
   "cineworld -l 3"
 )
 
-# TODO(jlucktay): may no longer need this check (or something similar) after switching from Rancher Desktop to Podman Engine
 rdu_logfile="$HOME"/Library/Logs/rancher-desktop/update.log
 
 if [[ -r $rdu_logfile ]]; then
