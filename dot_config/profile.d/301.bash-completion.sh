@@ -53,6 +53,7 @@ declare -a _tools_completion_bash=(
   "gup completion bash"
   "helm completion bash"
   "kondo --completions bash 2> /dev/null"
+  "kubecm completion bash"
   # "mise completion bash" # 'mise' is a function
   "op completion bash"
   "rustup completions bash cargo"
