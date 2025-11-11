@@ -43,8 +43,8 @@ node = "22"
 "aqua:kyverno/kyverno" = "1.14.1"
 
 [settings]
-# # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
-# activate_aggressive = true
+# Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
+activate_aggressive = true
 
 # Don't bother with '.terraform-version' files and the like
 idiomatic_version_file_enable_tools = []
