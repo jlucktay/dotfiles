@@ -14,7 +14,7 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check docker gum k3d
+tool_check docker gum kind
 
 if docker info &> /dev/null; then
   dslog "✅ Docker daemon is running."
@@ -35,21 +35,19 @@ if docker info &> /dev/null; then
     if gum confirm "Remove all running containers/clusters?" --show-output; then
       echo
 
-      # Create a map to track any k3d clusters that are currently running.
+      # Create a map to track any kind clusters that are currently running.
       # Depending on how the cluster is configured, it may have multiple containers running.
-      declare -A running_k3d_clusters=()
+      declare -A running_kind_clusters=()
 
       for running_name in "${running_names[@]}"; do
-        # Are any of the containers k3d clusters? If so, use 'k3d cluster delete' instead.
-
-        if [[ $running_name =~ ^k3d- ]] && [[ $running_name =~ -server(-[0-9]+|lb)$ ]]; then
-          running_name=${running_name#"k3d-"}
-          running_name=${running_name%"${BASH_REMATCH[0]}"}
+        # Are any of the containers kind cluster control planes? If so, use 'kind delete cluster' instead.
+        if [[ $running_name =~ -control-plane$ ]]; then
+          running_name=${running_name%"-control-plane"}
 
           # Use pre-increment — where ++ is before the reference to the map — and increase the number value stored against the key.
           # If the key does not already exist, it will be created with a value of 1.
           # Do not use post-increment — where ++ is after the reference to the map — as it will return non-zero for new keys, and halt the script.
-          ((++running_k3d_clusters[$running_name]))
+          ((++running_kind_clusters[$running_name]))
         else
           (
             set -x
@@ -58,11 +56,11 @@ if docker info &> /dev/null; then
         fi
       done
 
-      # Iterate through the running k3d clusters and run the appropriate delete command just once per cluster, rather than once per container.
-      for rkc in "${!running_k3d_clusters[@]}"; do
+      # Iterate through the running kind clusters and run the appropriate delete command just once per cluster, rather than once per container.
+      for rkc in "${!running_kind_clusters[@]}"; do
         (
           set -x
-          k3d cluster delete "$rkc"
+          kind delete cluster --name="$rkc"
         )
       done
 
