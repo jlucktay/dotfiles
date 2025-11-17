@@ -16,7 +16,6 @@
 "aqua:helm/helm" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
-"aqua:k3d-io/k3d" = "latest"
 "aqua:kubecolor/kubecolor" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
