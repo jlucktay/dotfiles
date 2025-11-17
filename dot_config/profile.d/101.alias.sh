@@ -102,3 +102,8 @@ fi
 if command -v chezmoi &> /dev/null; then
   alias cdes='chezmoi diff --exclude=scripts'
 fi
+
+# https://kubecm.cloud
+if command -v kubecm &> /dev/null; then
+  alias kubecm='kubecm --silence-table'
+fi
