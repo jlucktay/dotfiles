@@ -49,6 +49,9 @@ if test -r "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-
   source "$package_manager_prefix/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
 fi
 
+# https://github.com/kward/shflags/issues/13#issuecomment-404684801
+prefix_path "$package_manager_prefix/opt/gnu-getopt/bin"
+
 prefix_path "$package_manager_prefix/opt/curl/bin"
 prefix_path "$package_manager_prefix/opt/libpq/bin"
 prefix_path "$package_manager_prefix/opt/make/libexec/gnubin"
