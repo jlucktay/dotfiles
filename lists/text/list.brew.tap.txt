@@ -2,4 +2,3 @@ alexstrnik/browserino
 buildpacks/tap
 common-fate/granted
 rafaelgarrido/caveats
-slp/krunkit

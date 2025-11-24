@@ -9,9 +9,8 @@ gcloud-cli
 gpg-suite-no-mail
 hiddenbar
 itsycal
-keepingyouawake
 obsidian
 pingmenu
-podman-desktop
+rancher
 stats
 zoom

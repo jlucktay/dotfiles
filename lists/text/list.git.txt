@@ -9,6 +9,7 @@
 /Users/james.lucktaylor/git/github.com/argoproj/argo-helm
 /Users/james.lucktaylor/git/github.com/aws/aws-sdk-go-v2
 /Users/james.lucktaylor/git/github.com/awslabs/crossplane-on-eks
+/Users/james.lucktaylor/git/github.com/b3nj5m1n/xdg-ninja
 /Users/james.lucktaylor/git/github.com/bitfield/script
 /Users/james.lucktaylor/git/github.com/bitnami/charts
 /Users/james.lucktaylor/git/github.com/carbon-language/carbon-lang
@@ -84,6 +85,7 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
 /Users/james.lucktaylor/git/github.com/jlucktay/zig-workbench
+/Users/james.lucktaylor/git/github.com/kubecfg/kubecfg
 /Users/james.lucktaylor/git/github.com/kubernetes-sigs/cli-experimental
 /Users/james.lucktaylor/git/github.com/kubernetes-sigs/controller-runtime
 /Users/james.lucktaylor/git/github.com/kyverno/chainsaw

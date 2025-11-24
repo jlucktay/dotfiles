@@ -11,6 +11,7 @@ mechatroner.rainbow-csv
 mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-containers
 ms-kubernetes-tools.vscode-kubernetes-tools
+ms-vscode.makefile-tools
 pkief.material-icon-theme
 redhat.vscode-yaml
 richie5um2.vscode-sort-json
