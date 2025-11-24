@@ -94,11 +94,35 @@ for _tcb in "${_tools_completion_bash[@]}"; do
   declare _tool_type
   _tool_type=$(type -t "${_arr_tcb[0]}")
 
-  if [[ $_tool_type != "file" ]]; then
-    printf >&2 "%s:%s: tool type of '%s' is not a file, it is a %s\n" "${BASH_SOURCE[0]}" "$LINENO" "${arrTCB[0]}" "$_tool_type"
+  case $_tool_type in
+    alias)
+      # Cater to the case where an alias is defined for the exact name of a command/binary name.
+      declare _tool_type_p
+      _tool_type_p=$(type -P "${_arr_tcb[0]}")
 
-    continue
-  fi
+      if ! [[ -x $_tool_type_p ]]; then
+        printf >&2 "%s:%s: tool type of '%s' is 'alias' which does not correspond to an executable binary\n" "${BASH_SOURCE[0]}" "$LINENO" "${_arr_tcb[0]}"
+
+        unset _tool_type_p
+
+        continue
+      fi
+
+      _tool_path=$_tool_type_p
+
+      unset _tool_type_p
+      ;;
+
+    file)
+      : # no-op
+      ;;
+
+    *)
+      printf >&2 "%s:%s: tool type of '%s' is neither 'alias' nor 'file', it is '%s'\n" "${BASH_SOURCE[0]}" "$LINENO" "${_arr_tcb[0]}" "$_tool_type"
+
+      continue
+      ;;
+  esac
 
   # Check if the completion file exists, and whether it is older than the tool itself and needs to be regenerated.
   if _tool_completion_file_stat=$(gstat --printf='%Y' "$_tool_completion_file" 2> /dev/null); then
