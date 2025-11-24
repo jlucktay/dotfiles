@@ -66,31 +66,33 @@ declare _bash_completion_dir="$HOME/.local/share/bash-completion/completions"
 
 for _tcb in "${_tools_completion_bash[@]}"; do
   # Split the command up into an array with 'read' and the internal field separator set to a space.
-  IFS=' ' read -ra arrTCB <<< "$_tcb"
+  IFS=' ' read -ra _arr_tcb <<< "$_tcb"
 
   # The first element/word is the command generating the completion.
-  if ! _tool_path=$(command -v "${arrTCB[0]}"); then
-    printf >&2 "%80s: could not find command '%s'\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+  if ! _tool_path=$(command -v "${_arr_tcb[0]}"); then
+    printf >&2 "%80s: could not find command '%s'\n" "${BASH_SOURCE[0]}:$LINENO" "${_arr_tcb[0]}"
 
     continue
   fi
 
-  if complete -p "${arrTCB[0]}" &> /dev/null; then
-    printf >&2 "%80s: bash completions are already in place for the '%s' command\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+  if complete -p "${_arr_tcb[0]}" &> /dev/null; then
+    printf >&2 "%80s: bash completions are already in place for the '%s' command\n" "${BASH_SOURCE[0]}:$LINENO" "${_arr_tcb[0]}"
 
     continue
   fi
 
   # If the tool is installed by and being run through mise, then usage-cli should take care of generating its completions in a just-in-time fashion.
   if [[ $_tool_path == "$HOME/.local/share/mise/installs/"* ]]; then
-    printf >&2 "%80s: bash completions for '${arrTCB[0]}' should already be handled through usage-cli\n" "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+    printf >&2 "%80s: bash completions for '%s' should already be handled through usage-cli\n" "${BASH_SOURCE[0]}:$LINENO" "${_arr_tcb[0]}"
 
     continue
   fi
 
   declare -i _tool_completion_regenerate=0
-  declare _tool_completion_file="$_bash_completion_dir/${arrTCB[0]}"
-  _tool_type=$(type -t "${arrTCB[0]}")
+  declare _tool_completion_file="$_bash_completion_dir/${_arr_tcb[0]}"
+
+  declare _tool_type
+  _tool_type=$(type -t "${_arr_tcb[0]}")
 
   if [[ $_tool_type != "file" ]]; then
     printf >&2 "%s:%s: tool type of '%s' is not a file, it is a %s\n" "${BASH_SOURCE[0]}" "$LINENO" "${arrTCB[0]}" "$_tool_type"
@@ -103,14 +105,14 @@ for _tcb in "${_tools_completion_bash[@]}"; do
     _tool_stat=$(gstat --printf='%Y' "$_tool_path")
 
     if ((_tool_stat > _tool_completion_file_stat)); then
-      printf >&2 "%80s: tool '%s' is newer than its completions..." "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+      printf >&2 "%80s: tool '%s' is newer than its completions..." "${BASH_SOURCE[0]}:$LINENO" "${_arr_tcb[0]}"
 
       _tool_completion_regenerate=1
     fi
 
     unset _tool_stat
   else
-    printf >&2 "%80s: tool '%s' needs new completions generated..." "${BASH_SOURCE[0]}:$LINENO" "${arrTCB[0]}"
+    printf >&2 "%80s: tool '%s' needs new completions generated..." "${BASH_SOURCE[0]}:$LINENO" "${_arr_tcb[0]}"
 
     _tool_completion_regenerate=1
   fi
@@ -149,7 +151,7 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 
   printf >&2 " ✅ regenerated in %.0fms\n" "$_epoch_regen_diff_ms"
 
-  unset _epoch_regen_diff_ms _epoch_regen_start _tcb _tool_completion_bash _tool_completion_file _tool_completion_file_stat _tool_completion_regenerate _tool_path _tool_type
+  unset _epoch_regen_diff_ms _epoch_regen_start _tcb _tcf_dir _tool_completion_bash _tool_completion_file _tool_completion_file_stat _tool_completion_regenerate _tool_path _tool_type
 done
 
-unset _bash_completion_dir _tools_completion_bash
+unset _arr_tcb _bash_completion_dir _tools_completion_bash
