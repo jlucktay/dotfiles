@@ -72,13 +72,15 @@ else
   dslog "🐳❌ Docker daemon is not running."
 fi
 
-# Unset the current kubectl context.
+# Unset the current contexts for kubectl and argocd.
 tool_check yq
 
-(
-  set -x
-  yq eval --inplace 'del(.current-context)' "$HOME/.kube/config"
-)
+for ctx in "$HOME/.kube/config" "$HOME/.config/argocd/config"; do
+  (
+    set -x
+    yq eval --inplace 'del(.current-context)' "$ctx"
+  )
+done
 
 # Clear any ongoing AWS sessions.
 tool_check assume
