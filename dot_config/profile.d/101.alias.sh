@@ -106,4 +106,6 @@ fi
 # https://kubecm.cloud
 if command -v kubecm &> /dev/null; then
   alias kubecm='kubecm --silence-table'
+  alias kc='kubecm switch'
+  alias kn='kubecm namespace'
 fi
