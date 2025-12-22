@@ -8,7 +8,6 @@
 "aqua:derailed/k9s" = "latest"
 "aqua:FiloSottile/age" = "latest"
 "aqua:git-lfs/git-lfs" = "latest"
-"aqua:gohugoio/hugo/hugo-extended" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:google/yamlfmt" = "latest"
 "aqua:GoogleContainerTools/skaffold" = "latest"
