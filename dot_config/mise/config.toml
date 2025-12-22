@@ -26,10 +26,10 @@
 "aqua:rclone/rclone" = "latest"
 "aqua:sunny0826/kubecm" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
-"ubi:go-task/task" = "latest"
-"ubi:jlucktay/my-github-repos" = "latest"
-"ubi:slsa-framework/slsa-verifier" = "latest"
-"ubi:twpayne/chezmoi" = "latest"
+"github:go-task/task" = "latest"
+"github:jlucktay/my-github-repos" = "latest"
+"github:slsa-framework/slsa-verifier" = "latest"
+"github:twpayne/chezmoi" = "latest"
 
 # Pinned major version
 "aqua:helm/helm" = "3"
