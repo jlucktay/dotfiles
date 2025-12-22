@@ -107,5 +107,12 @@ tool_check "${command_queue[@]}"
 
 for cq in "${command_queue[@]}"; do
   dslog "$cq"
-  eval "$cq"
+
+  if [[ $cq == "topgrade" ]]; then
+    if ! eval "$cq"; then
+      pop_gum "$cq"
+    fi
+  else
+    eval "$cq"
+  fi
 done
