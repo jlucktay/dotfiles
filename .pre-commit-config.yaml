@@ -1,0 +1,26 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: check-added-large-files
+      - id: check-yaml
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+
+  - repo: local
+    hooks:
+      - id: chezmoidata
+        name: Chezmoi data
+        entry: task chezmoidata
+        language: unsupported
+        files: |
+          (?x)^(
+            chezmoidata.schema.json|
+            .chezmoidata.yaml
+          )$
+        pass_filenames: false
+        stages:
+          - pre-commit
+          - pre-push
+        description: Format the chezmoidata JSON Schema, and validate the '.chezmoidata.yaml' file with it

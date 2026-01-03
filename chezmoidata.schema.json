@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/jlucktay/dotfiles/raw/refs/heads/main/chezmoidata.schema.json",
+  "title": "Chezmoi data",
+  "description": "Structured static data which can be used in templates",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "description": "A switch that dictates branching behaviour in some files",
+      "type": "string",
+      "enum": [
+        "personal",
+        "ovo"
+      ]
+    }
+  },
+  "required": [
+    "profile"
+  ]
+}
