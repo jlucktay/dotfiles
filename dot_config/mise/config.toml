@@ -28,15 +28,16 @@
 "github:go-task/task" = "latest"
 "github:jlucktay/my-github-repos" = "latest"
 "github:slsa-framework/slsa-verifier" = "latest"
+"github:terrastruct/d2" = "latest"
 "github:twpayne/chezmoi" = "latest"
 
 # Pinned major version
 "aqua:helm/helm" = "3"
-"node" = "22"
+"node" = "24"
 
 # Pinned minor version
 "aqua:goreleaser/goreleaser" = "2.5"
-"aqua:kubernetes/kubectl" = "1.33"
+"aqua:kubernetes/kubectl" = "1.34"
 "aqua:norwoodj/helm-docs" = "1.14.2"
 
 # Pinned patch version
