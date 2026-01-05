@@ -22,6 +22,7 @@
 "aqua:mikefarah/yq" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
+"aqua:pre-commit/pre-commit" = "latest"
 "aqua:rclone/rclone" = "latest"
 "aqua:sunny0826/kubecm" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
