@@ -21,6 +21,7 @@
 /Users/james.lucktaylor/git/github.com/cue-lang/vscode-cue
 /Users/james.lucktaylor/git/github.com/datreeio/CRDs-catalog
 /Users/james.lucktaylor/git/github.com/dtolnay/syn
+/Users/james.lucktaylor/git/github.com/erik-adelbert/aoc
 /Users/james.lucktaylor/git/github.com/external-secrets/external-secrets
 /Users/james.lucktaylor/git/github.com/factoriotools/factorio-docker
 /Users/james.lucktaylor/git/github.com/fluxcd/flux
@@ -59,6 +60,7 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/coding-interview-university
 /Users/james.lucktaylor/git/github.com/jlucktay/cpp-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/crossplane-workbench
+/Users/james.lucktaylor/git/github.com/jlucktay/diagram-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_pure-terraform
 /Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/google_project
 /Users/james.lucktaylor/git/github.com/jlucktay/factorio-server-kit/rebuild_simple-debian-vm/environments/personal/.terraform/modules/this.google_network

@@ -19,5 +19,4 @@ rust-lang.rust-analyzer
 tamasfe.even-better-toml
 timonwong.shellcheck
 tyriar.sort-lines
-wakatime.vscode-wakatime
 yzhang.markdown-all-in-one
