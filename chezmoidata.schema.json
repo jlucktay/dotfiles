@@ -6,7 +6,8 @@
   "type": "object",
   "properties": {
     "profile": {
-      "description": "A switch that dictates branching behaviour in some files",
+      "title": "A switch that dictates branching behaviour in some files",
+      "description": "The value of this string property is mirrored in the names of my gcloud CLI configurations, which is templated with Chezmoi data.",
       "type": "string",
       "enum": [
         "personal",
