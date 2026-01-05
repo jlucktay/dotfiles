@@ -15,6 +15,10 @@ TODO.md
 # Symlinked elsewhere
 /chezmoi-config.json
 
+# JSON Schema and Taskfile for wrangling
+/chezmoidata.schema.json
+/Taskfile.chezmoi.yaml
+
 # Bash eternal history
 bash_eternal_history.zip
 bash_eternal_history.tar.gz.age

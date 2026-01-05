@@ -12,7 +12,7 @@ repos:
     hooks:
       - id: chezmoidata
         name: Chezmoi data
-        entry: task chezmoidata
+        entry: task --taskfile="Taskfile.chezmoi.yaml" data
         language: unsupported
         files: |
           (?x)^(

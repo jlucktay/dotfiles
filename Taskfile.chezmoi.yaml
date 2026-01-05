@@ -1,0 +1,29 @@
+---
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+version: 3
+
+tasks:
+  default: task --list-all
+
+  ### Chezmoi data file and its JSON Schema.
+
+  jq-fmt:data:
+    desc: Run the chezmoidata JSON Schema through jq to format it.
+    preconditions:
+      - sh: command -v jq
+    cmds:
+      - jq . chezmoidata.schema.json > chezmoidata.schema.json.tmp
+      - rm chezmoidata.schema.json
+      - mv chezmoidata.schema.json.tmp chezmoidata.schema.json
+
+  jv:data:
+    desc: Run the chezmoidata file through jv to validate it against the JSON Schema.
+    preconditions:
+      - sh: command -v jv
+    cmd: jv --output=detailed chezmoidata.schema.json .chezmoidata.yaml
+
+  data:
+    desc: Format the chezmoidata JSON Schema, and validate the '.chezmoidata.yaml' file with it.
+    cmds:
+      - task: jq-fmt:data
+      - task: jv:data
