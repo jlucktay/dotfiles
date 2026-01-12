@@ -24,3 +24,17 @@ repos:
           - pre-commit
           - pre-push
         description: Format the chezmoidata JSON Schema, and validate the '.chezmoidata.yaml' file with it
+
+  - repo: https://github.com/koalaman/shellcheck-precommit
+    rev: v0.11.0
+    hooks:
+      - id: shellcheck
+        args:
+          - '--enable=all'
+          - '--exclude=SC2250'
+          - '--external-sources'
+          - '--severity=style'
+          - '--shell=bash'
+        stages:
+          - pre-commit
+          - pre-push
