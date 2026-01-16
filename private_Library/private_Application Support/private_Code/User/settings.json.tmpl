@@ -71,6 +71,12 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "ansible.executionEnvironment.pull.policy": "always",
+  "bashIde.shellcheckArguments": "--enable=all --exclude=SC2250 --external-sources --severity=style --shell=bash",
+  "bashIde.shfmt.binaryNextLine": true,
+  "bashIde.shfmt.caseIndent": true,
+  "bashIde.shfmt.languageDialect": "bash",
+  "bashIde.shfmt.simplifyCode": true,
+  "bashIde.shfmt.spaceRedirects": true,
   "chat.agent.enabled": false,
   "chat.commandCenter.enabled": false,
   "chat.disableAIFeatures": true,
@@ -252,13 +258,6 @@
   "search.defaultViewMode": "tree",
   "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.searchOnType": false,
-  "shellcheck.customArgs": [
-    "--enable=all",
-    "--exclude=SC2250",
-    "--external-sources",
-    "--severity=style",
-    "--shell=bash"
-  ],
   {{- if lookPath "shellcheck" }}
   "shellcheck.executablePath": "{{ lookPath "shellcheck" }}",
   {{- end }}
@@ -274,7 +273,6 @@
     "shellscript",
     "spring-boot-properties"
   ],
-  "shellformat.flag": "--binary-next-line --case-indent --indent 2 --simplify --space-redirects",
   {{- if lookPath "shfmt" }}
   "shellformat.path": "{{ lookPath "shfmt" }}",
   {{- end }}
