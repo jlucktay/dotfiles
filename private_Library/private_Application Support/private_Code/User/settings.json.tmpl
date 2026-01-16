@@ -70,7 +70,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "ansible.executionEnvironment.pull.policy": "always",
   "bashIde.shellcheckArguments": "--enable=all --exclude=SC2250 --external-sources --severity=style --shell=bash",
   "bashIde.shfmt.binaryNextLine": true,
   "bashIde.shfmt.caseIndent": true,
@@ -87,8 +86,6 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": true,
-  "docker.extension.dockerEngineAvailabilityPrompt": false,
-  "docker.extension.enableComposeLanguageServer": false,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line-thin",
   "editor.detectIndentation": false,
@@ -192,8 +189,6 @@
     "ui.navigation.importShortcut": "Both",
     "verboseOutput": true
   },
-  "hadolint.cliOptions": ["--no-color"],
-  "hadolint.hadolintPath": "/opt/homebrew/bin/hadolint",
   "helm-ls.valuesFiles": {
     "additionalValuesFilesGlobPattern": "values*.yaml",
     "lintOverlayValuesFile": "values.lint.yaml",
@@ -258,25 +253,6 @@
   "search.defaultViewMode": "tree",
   "search.searchEditor.reusePriorSearchConfiguration": true,
   "search.searchOnType": false,
-  {{- if lookPath "shellcheck" }}
-  "shellcheck.executablePath": "{{ lookPath "shellcheck" }}",
-  {{- end }}
-  "shellformat.effectLanguages": [
-    "azcli",
-    "bats",
-    "dotenv",
-    "gitignore",
-    "hosts",
-    "ignore",
-    "jvmoptions",
-    "properties",
-    "shellscript",
-    "spring-boot-properties"
-  ],
-  {{- if lookPath "shfmt" }}
-  "shellformat.path": "{{ lookPath "shfmt" }}",
-  {{- end }}
-  "shellformat.useEditorConfig": false,
   "sortLines.sortEntireFile": true,
   "terminal.integrated.allowChords": false,
   "terminal.integrated.cursorBlinking": true,
@@ -289,8 +265,8 @@
   "terminal.integrated.profiles.osx": {
     "Bash (login)": {
       "args": ["--login"],
-      "icon": "terminal-bash",
-      {{- if lookPath "bash" }}
+      "icon": "terminal-bash"
+      {{- if lookPath "bash" }},
       "path": "{{ lookPath "bash" }}"
       {{- end }}
     }
