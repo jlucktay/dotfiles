@@ -10,3 +10,5 @@ task --dir "$HOME/.local/share/chezmoi/" --taskfile "$HOME/.local/share/chezmoi/
 
 ln -fsv "application_default_credentials.$profile.json" "$HOME/.config/gcloud/application_default_credentials.json"
 gcloud config configurations activate "$profile"
+
+chezmoi apply "$HOME/.config/aws/config" "$HOME/.terraform.d/credentials.tfrc.json" "$HOME/.terraformrc"
