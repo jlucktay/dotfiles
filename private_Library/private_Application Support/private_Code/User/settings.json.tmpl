@@ -54,6 +54,9 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 4
   },
+  "[shellscript]": {
+    "editor.insertSpaces": false
+  },
   "[terraform-vars]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
@@ -74,6 +77,9 @@
   "bashIde.shfmt.binaryNextLine": true,
   "bashIde.shfmt.caseIndent": true,
   "bashIde.shfmt.languageDialect": "bash",
+  {{- if lookPath "shfmt" }}
+  "bashIde.shfmt.path": "{{ lookPath "shfmt" }}",
+  {{- end }}
   "bashIde.shfmt.simplifyCode": true,
   "bashIde.shfmt.spaceRedirects": true,
   "chat.agent.enabled": false,
