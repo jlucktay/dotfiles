@@ -24,11 +24,26 @@ $shlvl\
 $jobs\
 $sudo\
 $cmd_duration\n)\
-$aws$gcloud$status\n\
+$custom$aws$gcloud$status\n\
 $time$directory$character"""
 
 # Inserts a blank line between shell prompts.
 add_newline = true
+
+### Chezmoi — dotfiles manager
+
+[custom.chezmoi-profile]
+disabled = false
+
+description = 'Read the current profile from my ".chezmoidata.yaml" file'
+when = 'command -v yq && test -r "$HOME"/.local/share/chezmoi/.chezmoidata.yaml'
+command = 'yq ".profile" "$HOME"/.local/share/chezmoi/.chezmoidata.yaml'
+
+symbol = '🏠'
+
+require_repo = false
+shell = ['bash', '-c', '--']
+use_stdin = false
 
 ### Programming languages.
 
