@@ -1,6 +1,11 @@
 Host homeassistant.local
-  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ecdsa_homeassistant
   User root
+
+Match host homeassistant.local exec "test %p = 22"
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ecdsa_homeassistant
+
+Match host homeassistant.local exec "test %p = 22222"
+  IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ed25519_homeassistant
 
 Host tilde.club
   User jlucktay
