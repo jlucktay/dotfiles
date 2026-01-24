@@ -11,15 +11,23 @@ tasks:
     desc: Run the chezmoidata JSON Schema through jq to format it.
     preconditions:
       - sh: command -v jq
+        msg: |-
+          The 'jq' command is not installed:
+          > https://jqlang.org/download/
+    dir: '{{.TASKFILE_DIR}}'
     cmds:
       - jq . chezmoidata.schema.json > chezmoidata.schema.json.tmp
-      - rm chezmoidata.schema.json
+      - rm -f chezmoidata.schema.json
       - mv chezmoidata.schema.json.tmp chezmoidata.schema.json
 
   jv:data:
     desc: Run the chezmoidata file through jv to validate it against the JSON Schema.
     preconditions:
       - sh: command -v jv
+        msg: |-
+          The 'jv' command for validating JSON is not installed:
+          $ go install github.com/santhosh-tekuri/jsonschema/cmd/jv@latest
+    dir: '{{.TASKFILE_DIR}}'
     cmd: jv --output=detailed chezmoidata.schema.json .chezmoidata.yaml
 
   data:
