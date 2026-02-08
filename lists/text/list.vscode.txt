@@ -1,12 +1,13 @@
 bierner.markdown-mermaid
 chdsbd.github-code-owners
+coolbear.systemd-unit-file
 editorconfig.editorconfig
 esbenp.prettier-vscode
-foxundermoon.shell-format
 github.vscode-github-actions
 golang.go
 hashicorp.terraform
 helm-ls.helm-ls
+mads-hartmann.bash-ide-vscode
 mechatroner.rainbow-csv
 mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-containers
@@ -17,6 +18,7 @@ redhat.vscode-yaml
 richie5um2.vscode-sort-json
 rust-lang.rust-analyzer
 tamasfe.even-better-toml
-timonwong.shellcheck
+terrastruct.d2
 tyriar.sort-lines
+wizcloud.wiz-vscode
 yzhang.markdown-all-in-one

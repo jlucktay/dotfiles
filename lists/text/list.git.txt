@@ -15,6 +15,7 @@
 /Users/james.lucktaylor/git/github.com/carbon-language/carbon-lang
 /Users/james.lucktaylor/git/github.com/chrislusf/seaweedfs
 /Users/james.lucktaylor/git/github.com/chrislusf/seaweedfs.wiki
+/Users/james.lucktaylor/git/github.com/containerd/containerd
 /Users/james.lucktaylor/git/github.com/cplee/github-actions-demo
 /Users/james.lucktaylor/git/github.com/crossplane-contrib/provider-upjet-gcp
 /Users/james.lucktaylor/git/github.com/crossplane/crossplane
@@ -35,6 +36,7 @@
 /Users/james.lucktaylor/git/github.com/googleapis/google-api-go-client
 /Users/james.lucktaylor/git/github.com/googleapis/google-cloud-go
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/buildpack-samples
+/Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/cloud-sql-proxy
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/guest-agent
 /Users/james.lucktaylor/git/github.com/GoogleContainerTools/skaffold
 /Users/james.lucktaylor/git/github.com/grpc/grpc-go
@@ -73,7 +75,6 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/jlucktay.github.io
 /Users/james.lucktaylor/git/github.com/jlucktay/katkas-website
 /Users/james.lucktaylor/git/github.com/jlucktay/kubernetes-workbench
-/Users/james.lucktaylor/git/github.com/jlucktay/meilisearch
 /Users/james.lucktaylor/git/github.com/jlucktay/meta-tf
 /Users/james.lucktaylor/git/github.com/jlucktay/newrustacean.com
 /Users/james.lucktaylor/git/github.com/jlucktay/packer-workbench
@@ -134,7 +135,6 @@
 /Users/james.lucktaylor/git/go.jlucktay.dev/codecraft-tdd-warehouse
 /Users/james.lucktaylor/git/go.jlucktay.dev/exporter-exercise
 /Users/james.lucktaylor/git/go.jlucktay.dev/fsml
-/Users/james.lucktaylor/git/go.jlucktay.dev/go-pebkac
 /Users/james.lucktaylor/git/go.jlucktay.dev/golang-workbench
 /Users/james.lucktaylor/git/go.jlucktay.dev/google-code-jam
 /Users/james.lucktaylor/git/go.jlucktay.dev/goppuku

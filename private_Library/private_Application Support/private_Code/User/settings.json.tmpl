@@ -6,72 +6,72 @@
     "editor.quickSuggestions": {
       "comments": false,
       "other": true,
-      "strings": true
-    }
+      "strings": true,
+    },
   },
   "[dockerfile]": {
-    "editor.defaultFormatter": "ms-azuretools.vscode-containers"
+    "editor.defaultFormatter": "ms-azuretools.vscode-containers",
   },
   "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[go.mod]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always"
-    }
+      "source.organizeImports": "always",
+    },
   },
   "[go]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always"
+      "source.organizeImports": "always",
     },
-    "editor.snippetSuggestions": "none"
+    "editor.snippetSuggestions": "none",
   },
   "[go][go.mod]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": "always"
-    }
+      "source.organizeImports": "always",
+    },
   },
   "[helm]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one",
   },
   "[rust]": {
     "editor.indentSize": "tabSize",
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "[shellscript]": {
-    "editor.insertSpaces": false
+    "editor.insertSpaces": false,
   },
   "[terraform-vars]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file"
+    "editor.formatOnSaveMode": "file",
   },
   "[terraform]": {
     "editor.defaultFormatter": "hashicorp.terraform",
     "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file"
+    "editor.formatOnSaveMode": "file",
   },
   "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "[yaml]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
+    "editor.defaultFormatter": "redhat.vscode-yaml",
   },
   "bashIde.shellcheckArguments": "--enable=all --exclude=SC2250 --external-sources --severity=style --shell=bash",
   "bashIde.shfmt.binaryNextLine": true,
@@ -123,7 +123,7 @@
     ".gcloudignore": "ignore",
     ".gitconfig": "properties",
     ".gitconfig.aliases": "properties",
-    "htoprc": "properties"
+    "htoprc": "properties",
   },
   "files.autoSave": "onFocusChange",
   "files.defaultLanguage": "${activeEditorLanguage}",
@@ -131,13 +131,13 @@
   "files.eol": "\n",
   "files.exclude": {
     "**/*.js": {
-      "when": "$(basename).ts"
+      "when": "$(basename).ts",
     },
     "**/.DS_Store": true,
     "**/.git": true,
     "**/.hg": true,
     "**/.svn": true,
-    "**/CVS": true
+    "**/CVS": true,
   },
   "files.hotExit": "onExitAndWindowClose",
   "files.insertFinalNewline": true,
@@ -146,7 +146,7 @@
   "files.watcherExclude": {
     "**/.ammonite": true,
     "**/.bloop": true,
-    "**/.metals": true
+    "**/.metals": true,
   },
   "git.autoRepositoryDetection": false,
   "git.autoStash": true,
@@ -161,15 +161,15 @@
   "git.ignoreLimitWarning": true,
   "git.openRepositoryInParentFolders": "always",
   "go.alternateTools": {
-    "go": "{{ lookPath "go" }}"
+    "go": "{{ lookPath "go" }}",
   },
   "go.diagnostic.vulncheck": "Imports",
   "go.editorContextMenuCommands": {
-    "fillStruct": true
+    "fillStruct": true,
   },
   "go.lintTool": "golangci-lint",
   "go.testEnvVars": {
-    "IS_NO_COLOR": 1
+    "IS_NO_COLOR": 1,
   },
   "go.testExplorer.packageDisplayMode": "nested",
   "go.testFlags": ["--count=1", "-v"],
@@ -181,7 +181,7 @@
     "formatting.gofumpt": true,
     "ui.codelenses": {
       "run_govulncheck": true,
-      "vendor": false
+      "vendor": false,
     },
     "ui.completion.usePlaceholders": true,
     "ui.diagnostic.analyses": {
@@ -189,53 +189,61 @@
       "unusedparams": true,
       "unusedvariable": true,
       "unusedwrite": true,
-      "useany": true
+      "useany": true,
     },
     "ui.diagnostic.staticcheck": true,
     "ui.navigation.importShortcut": "Both",
-    "verboseOutput": true
+    "verboseOutput": true,
   },
   "helm-ls.valuesFiles": {
     "additionalValuesFilesGlobPattern": "values*.yaml",
     "lintOverlayValuesFile": "values.lint.yaml",
-    "mainValuesFile": "values.yaml"
+    "mainValuesFile": "values.yaml",
   },
   "helm-ls.yamlls": {
     "config": {
       "completion": true,
       "disableDefaultProperties": false,
       "editor": {
-        "formatOnType": false
+        "formatOnType": false,
       },
       "format": {
         "bracketSpacing": false,
         "enable": true,
         "proseWrap": false,
-        "singleQuote": true
+        "singleQuote": true,
       },
       "hover": true,
       "keyOrdering": false,
       "schemaStore": {
-        "enable": true
+        "enable": true,
       },
       "schemas": {
-        "kubernetes": "templates/**"
+        "kubernetes": "templates/**",
       },
-      "validate": true
+      "validate": true,
     },
     "diagnosticsLimit": 50,
     "enabled": true,
     "enabledForFilesGlob": "*.{yaml,yml}",
     "initTimeoutSeconds": 5,
     "path": "yaml-language-server",
-    "showDiagnosticsDirectly": true
+    "showDiagnosticsDirectly": true,
+  },
+  "json.schemaDownload.trustedDomains": {
+    "https://github.com/DavidAnson/markdownlint/raw/refs/heads/main/schema/markdownlint-config-schema.json": true,
+    "https://json-schema.org/": true,
+    "https://json.schemastore.org/": true,
+    "https://raw.githubusercontent.com/": true,
+    "https://schemastore.azurewebsites.net/": true,
+    "https://www.schemastore.org/": true,
   },
   "keyboard.touchbar.ignored": [
     "workbench.action.debug.run",
-    "workbench.action.debug.start"
+    "workbench.action.debug.start",
   ],
   "ltex.dictionary": {
-    "en-AU": [":{{ .chezmoi.homeDir }}/ltex.dictionary.en-AU.txt"]
+    "en-AU": [":{{ .chezmoi.homeDir }}/ltex.dictionary.en-AU.txt"],
   },
   "ltex.enabled": ["markdown"],
   "ltex.language": "en-AU",
@@ -249,10 +257,10 @@
   "markdown.preview.doubleClickToSwitchToEditor": false,
   "markdown.preview.scrollEditorWithPreview": false,
   "markdown.styles": [
-    "https://use.fontawesome.com/releases/v6.4.2/css/all.css"
+    "https://use.fontawesome.com/releases/v6.4.2/css/all.css",
   ],
   "material-icon-theme.folders.associations": {
-    "infra": "components"
+    "infra": "components",
   },
   "prettier.singleQuote": true,
   "redhat.telemetry.enabled": true,
@@ -271,11 +279,11 @@
   "terminal.integrated.profiles.osx": {
     "Bash (login)": {
       "args": ["--login"],
-      "icon": "terminal-bash"
-      {{- if lookPath "bash" }},
-      "path": "{{ lookPath "bash" }}"
+      "icon": "terminal-bash",
+      {{- if lookPath "bash" }}
+      "path": "{{ lookPath "bash" }}",
       {{- end }}
-    }
+    },
   },
   "terminal.integrated.scrollback": 999999,
   "terminal.integrated.shellIntegration.enabled": false,
@@ -287,7 +295,7 @@
     "checkForMinikubeUpgrade": false,
     "vs-kubernetes.crd-code-completion": "enabled",
     "vs-kubernetes.knownKubeconfigs": ["{{ .chezmoi.homeDir }}/.kube/config"],
-    "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config"
+    "vs-kubernetes.kubeconfig": "{{ .chezmoi.homeDir }}/.kube/config",
   },
   {{- if lookPath "helm" }}
   "vscode-kubernetes.helm-path-mac": "{{ lookPath "helm" | replaceAllRegex "helm/[^/]+/darwin-arm64/helm" "helm/latest/darwin-arm64/helm" }}",
@@ -307,7 +315,7 @@
   "workbench.colorTheme": "Default Dark+",
   "workbench.editor.decorations.colors": true,
   "workbench.editorAssociations": {
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.panel.opensMaximized": "always",
@@ -315,5 +323,5 @@
   "workbench.tree.renderIndentGuides": "always",
   "yaml.format.bracketSpacing": false,
   "yaml.format.printWidth": 160,
-  "yaml.format.singleQuote": true
+  "yaml.format.singleQuote": true,
 }

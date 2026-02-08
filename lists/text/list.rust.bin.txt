@@ -7,14 +7,14 @@ cargo-update v18.0.0:
     cargo-install-update-config
 cargo-upgrades v2.2.4:
     cargo-upgrades
-kondo v0.8.0:
+kondo v0.9.0:
     kondo
-mise v2025.12.13:
+mise v2026.2.3:
     mise
 starship v1.24.2:
     starship
-usage-cli v2.11.0:
+usage-cli v2.16.1:
     usage
-worker-build v0.7.2:
+worker-build v0.7.4:
     worker-build
     worker-codegen

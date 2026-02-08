@@ -1,5 +1,6 @@
 alexstrnik/browserino
 buildpacks/tap
 common-fate/granted
+flux-iac/tap
 kyverno/chainsaw
 rafaelgarrido/caveats
