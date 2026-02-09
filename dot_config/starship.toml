@@ -2,7 +2,7 @@
 '$schema' = 'https://starship.rs/config-schema.json'
 
 # https://starship.rs/config/#default-prompt-format
-format = """($kubernetes\n)\
+format = """($kubernetes${custom.argocd_context}\n)\
 ($username\
 $hostname\
 $localip\
@@ -24,19 +24,35 @@ $shlvl\
 $jobs\
 $sudo\
 $cmd_duration\n)\
-$custom$aws$gcloud$status\n\
+${custom.chezmoi_profile}$aws$gcloud$status\n\
 $time$directory$character"""
 
 # Inserts a blank line between shell prompts.
 add_newline = true
 
+### ArgoCD — GitOps CD
+
+[custom.argocd_context]
+disabled = false
+
+description = 'Read the current context from the ArgoCD CLI config file'
+when = 'yq --exit-status ".current-context" "$HOME"/.config/argocd/config'
+command = 'yq ".current-context" "$HOME"/.config/argocd/config'
+
+symbol = '🐙'
+style = 'fg:#ffffff bg:#522081'
+
+require_repo = false
+shell = ['bash', '-c', '--']
+use_stdin = false
+
 ### Chezmoi — dotfiles manager
 
-[custom.chezmoi-profile]
+[custom.chezmoi_profile]
 disabled = false
 
 description = 'Read the current profile from my ".chezmoidata.yaml" file'
-when = 'command -v yq && test -r "$HOME"/.local/share/chezmoi/.chezmoidata.yaml'
+when = 'yq --exit-status ".profile" "$HOME"/.local/share/chezmoi/.chezmoidata.yaml'
 command = 'yq ".profile" "$HOME"/.local/share/chezmoi/.chezmoidata.yaml'
 
 symbol = '🏠'
