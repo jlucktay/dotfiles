@@ -8,7 +8,7 @@
 sso_region = eu-west-1
 sso_registration_scopes = sso:account:access
 sso_start_url = https://d-93677cf58f.awsapps.com/start
-{{- with $raw := (onepasswordRead "op://Employee/4y2dxsncr2rn7qa3vf7rguthbm/notesPlain" "ovotech.1password.com") -}}
+{{- with $raw := (onepasswordRead "op://cmgdfttomxa4wdpk4updezspg4/4y2dxsncr2rn7qa3vf7rguthbm/notesPlain" "ovotech.1password.com") -}}
 {{- range $line := (splitList "\n" $raw) -}}
 {{- with $account := (split "," $line) }}
 
