@@ -6,11 +6,18 @@ function topgrade_only() {
 	local -
 	set -o pipefail
 
-	yq_output=$(yq --output-format=yaml '.misc.only' "$HOME"/.config/topgrade.toml)
+	yq_output=$(yq --output-format=yaml '.misc.only | ... comments=""' "$HOME"/.config/topgrade.toml)
 	mapfile -t topgrade_misc_only <<< "$yq_output"
 
-	only="${1:?"must pass an argument for the 'only' Topgrade section to run, valid options:
-$yq_output"}"
+	if [[ $# -ne 1 ]]; then
+		echo >&2 "Must pass exactly one argument for the 'only' Topgrade section to run."
+		echo >&2 "Valid options:"
+		echo >&2 "$yq_output"
+
+		return 1
+	fi
+
+	declare only=$1
 
 	# Strip '- ' prefix from every element.
 	topgrade_misc_only=("${topgrade_misc_only[@]#'- '}")
@@ -50,7 +57,7 @@ if ! command -v yq &> /dev/null; then
 fi
 
 function _topgrade_only() {
-	yq_misc_only=$(yq --output-format=yaml '.misc.only' "$HOME"/.config/topgrade.toml)
+	yq_misc_only=$(yq --output-format=yaml '.misc.only | ... comments=""' "$HOME"/.config/topgrade.toml)
 
 	# Strip '- ' prefix from every element using '${parameter//pattern/string}' expansion.
 	compgen_yq_misc_only=$(compgen -W "${yq_misc_only//'- '/''}" -- "$2")
