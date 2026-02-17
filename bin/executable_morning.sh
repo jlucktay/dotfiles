@@ -17,7 +17,7 @@ trap 'dslog "finish"' 0
 if command -v op &> /dev/null; then
   dslog "🟡 Retrieving GitHub token from 1Password..."
 
-  if ! ght=$(op read "op://Personal/5sgl3dph3g562vhmxhkatrdumu/credential" --account my.1password.com); then
+	if ! ght=$(op read "op://lsurvr4nmmcmue52fmmzmx6zlq/5sgl3dph3g562vhmxhkatrdumu/credential" --account my.1password.com); then
     err "🛑 1Password CLI could not read GitHub token"
   fi
 
