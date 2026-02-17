@@ -4,32 +4,32 @@
 # If the given directory is already a part of PATH, it will be removed from its current position(s).
 # It is then set at the front of PATH, to take highest priority in the search order.
 function prefix_path() {
-  # If argument is not a directory which exists, return early.
-  if ! test -d "${1:?}"; then
-    return 0
-  fi
+	# If argument is not a directory which exists, return early.
+	if ! test -d "${1:?}"; then
+		return 0
+	fi
 
-  # Populate array with PATH.
-  IFS=':' read -ra split_path <<< "$PATH"
+	# Populate array with PATH.
+	IFS=':' read -ra split_path <<< "$PATH"
 
-  # If argument already present, remove from its current index(es).
-  for i in "${!split_path[@]}"; do
-    if [[ ${split_path[i]} == "$1" ]]; then
-      unset 'split_path[i]'
-    fi
-  done
+	# If argument already present, remove from its current index(es).
+	for i in "${!split_path[@]}"; do
+		if [[ ${split_path[i]} == "$1" ]]; then
+			unset 'split_path[i]'
+		fi
+	done
 
-  # Prepend argument; this will also remove any gaps created by 'unset' above
-  split_path=("$1" "${split_path[@]}")
+	# Prepend argument; this will also remove any gaps created by 'unset' above
+	split_path=("$1" "${split_path[@]}")
 
-  # Generate a variable from array contents which contains the updated PATH
-  set_path=$(
-    IFS=':'
-    echo "${split_path[*]}"
-  )
+	# Generate a variable from array contents which contains the updated PATH
+	set_path=$(
+		IFS=':'
+		echo "${split_path[*]}"
+	)
 
-  # Export updated PATH
-  export PATH="$set_path"
+	# Export updated PATH
+	export PATH="$set_path"
 }
 
 # Build up PATH in last->first order, on top of existing values inherited from:
@@ -38,15 +38,15 @@ function prefix_path() {
 
 # To be able to run kubectl plugins wrangled with krew.
 if mise which krew &> /dev/null; then
-  prefix_path "$HOME/.krew/bin"
+	prefix_path "$HOME/.krew/bin"
 fi
 
 prefix_path "/usr/local/sbin"
 
 # https://formulae.brew.sh/cask/google-cloud-sdk
 if test -r "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"; then
-  # shellcheck disable=SC1091
-  source "$package_manager_prefix/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+	# shellcheck disable=SC1091
+	source "$package_manager_prefix/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
 fi
 
 # https://github.com/kward/shflags/issues/13#issuecomment-404684801
@@ -69,8 +69,8 @@ prefix_path "$package_manager_prefix/opt/ruby/bin"
 
 # pnpm.
 if mise which pnpm &> /dev/null; then
-  export PNPM_HOME="$HOME/Library/pnpm"
-  prefix_path "$PNPM_HOME"
+	export PNPM_HOME="$HOME/Library/pnpm"
+	prefix_path "$PNPM_HOME"
 fi
 
 # Rust.
@@ -82,9 +82,9 @@ prefix_path "$HOME/bin"
 
 # Go.
 if command -v go &> /dev/null; then
-  tmp_gopath=$(go env GOPATH)
-  prefix_path "$tmp_gopath/bin"
-  unset -v tmp_gopath
+	tmp_gopath=$(go env GOPATH)
+	prefix_path "$tmp_gopath/bin"
+	unset -v tmp_gopath
 fi
 
 # Clean up the function and don't leave it lying around
@@ -99,31 +99,31 @@ export CDPATH=":."
 
 # https://github.com/stedolan/jq/issues/1972
 if command -v jq &> /dev/null; then
-  export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
+	export JQ_COLORS='0;31:0;39:0;39:0;39:0;32:1;39:1;39'
 fi
 
 # Use cyan colour scaling for the dates column, as the default blue is difficult to read.
 if command -v eza &> /dev/null; then
-  export EZA_COLORS='da=36'
+	export EZA_COLORS='da=36'
 fi
 
 # git-branchless
 # https://github.com/arxanas/git-branchless/wiki/Installation
 if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
-  alias git='git-branchless wrap --'
+	alias git='git-branchless wrap --'
 fi
 
 # cf. https://github.com/npryce/adr-tools/issues/68 https://github.com/npryce/adr-tools/issues/69
 if command -v adr &> /dev/null; then
-  export ADR_PAGER='less'
+	export ADR_PAGER='less'
 fi
 
 # https://github.com/sharkdp/bat?tab=readme-ov-file#man
 if command -v bat &> /dev/null; then
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+	export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
 # AWS CLI
 if command -v aws &> /dev/null; then
-  export AWS_CONFIG_FILE="${XDG_CONFIG_HOME:?}/aws/config"
+	export AWS_CONFIG_FILE="${XDG_CONFIG_HOME:?}/aws/config"
 fi

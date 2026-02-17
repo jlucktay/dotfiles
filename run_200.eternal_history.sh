@@ -10,30 +10,30 @@ script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
 
 # chezmoi
 if ! command -v chezmoi &> /dev/null; then
-  echo >&2 "$script_name: 'chezmoi' is required but it's not installed:
+	echo >&2 "$script_name: 'chezmoi' is required but it's not installed:
   https://www.chezmoi.io/install/"
-  exit 1
+	exit 1
 fi
 
 # JQ
 if ! command -v jq &> /dev/null; then
-  echo >&2 "$script_name: 'jq' is required but it's not installed:
+	echo >&2 "$script_name: 'jq' is required but it's not installed:
   https://github.com/stedolan/jq/wiki/Installation"
-  exit 1
+	exit 1
 fi
 
 # age
 if ! command -v age &> /dev/null; then
-  echo >&2 "$script_name: 'age' is required but it's not installed:
+	echo >&2 "$script_name: 'age' is required but it's not installed:
   https://github.com/FiloSottile/age"
-  exit 1
+	exit 1
 fi
 
 # 1Password - CLI
 if ! command -v op &> /dev/null; then
-  echo >&2 "$script_name: 'op' is required but it's not installed:
+	echo >&2 "$script_name: 'op' is required but it's not installed:
   https://developer.1password.com/docs/cli/get-started"
-  exit 1
+	exit 1
 fi
 
 archive_destination=$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')
@@ -41,7 +41,7 @@ age_recipient=$(op read "op://Personal/bash-eternal - age-keygen/Public key" --a
 
 # Tar, GZip, and encrypt (with age) the eternal history file
 tar -cvz --options='compression-level=9' "$HOME/.bash_eternal_history" \
-  | age --recipient "$age_recipient" > "$archive_destination/bash_eternal_history.tar.gz.age"
+	| age --recipient "$age_recipient" > "$archive_destination/bash_eternal_history.tar.gz.age"
 
 ### To restore this file:
 # AGE_KEY=$(gmktemp)

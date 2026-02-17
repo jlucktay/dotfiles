@@ -19,10 +19,10 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
 
 if command -v brew &> /dev/null; then
-  lesspipe_path="$(brew --prefix)/bin/lesspipe.sh"
+	lesspipe_path="$(brew --prefix)/bin/lesspipe.sh"
 
-  if test -x "$lesspipe_path"; then
-    export LESSOPEN="|$lesspipe_path %s"
-    export LESS_ADVANCED_PREPROCESSOR=1
-  fi
+	if test -x "$lesspipe_path"; then
+		export LESSOPEN="|$lesspipe_path %s"
+		export LESS_ADVANCED_PREPROCESSOR=1
+	fi
 fi

@@ -10,47 +10,47 @@ shopt -s inherit_errexit 2> /dev/null || true
 script_name=$(basename "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")
 
 if ! chezmoi_source="$(chezmoi data | jq --exit-status --raw-output '.chezmoi.sourceDir')"; then
-  echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
-  exit 1
+	echo "$script_name: couldn't fetch source directory from 'chezmoi data'"
+	exit 1
 fi
 
 function process_list() {
-  # Parameter #1 is the command to generate the list
-  # Parameter #2 is the name of the list
-  # Parameter #3 (optional) will, if set to anything, skip sorting
+	# Parameter #1 is the command to generate the list
+	# Parameter #2 is the name of the list
+	# Parameter #3 (optional) will, if set to anything, skip sorting
 
-  # Parse out the command name (from the first line (NR) only) and make sure it is available
-  cmd_name=$(awk 'NR == 1 { print $1 }' <<< "$1")
+	# Parse out the command name (from the first line (NR) only) and make sure it is available
+	cmd_name=$(awk 'NR == 1 { print $1 }' <<< "$1")
 
-  if ! hash "$cmd_name" &> /dev/null; then
-    echo "$script_name > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
-    return
-  fi
+	if ! hash "$cmd_name" &> /dev/null; then
+		echo "$script_name > ${FUNCNAME[0]}: command '$cmd_name' not found; aborting"
+		return
+	fi
 
-  # Print command and first argument
-  current_timestamp=$(TZ=UTC date '+%Y%m%dT%H%M%SZ')
-  printf "%s: [%s] " "$script_name" "$current_timestamp"
-  awk 'NR == 1 { print $1, $2 }' <<< "$1"
+	# Print command and first argument
+	current_timestamp=$(TZ=UTC date '+%Y%m%dT%H%M%SZ')
+	printf "%s: [%s] " "$script_name" "$current_timestamp"
+	awk 'NR == 1 { print $1, $2 }' <<< "$1"
 
-  # If the command is 'brew' then make sure we're up to date before kicking off the lists
-  if [[ $cmd_name == "brew" ]]; then
-    brew update
-  fi
+	# If the command is 'brew' then make sure we're up to date before kicking off the lists
+	if [[ $cmd_name == "brew" ]]; then
+		brew update
+	fi
 
-  if ! cmd_output="$(eval "$1")"; then
-    : # No-op; skipping errors
-  fi
+	if ! cmd_output="$(eval "$1")"; then
+		: # No-op; skipping errors
+	fi
 
-  # Make sure the list directory structure and the file itself all exist.
-  list_file_path="$chezmoi_source/lists/text/list.$2.txt"
-  mkdir -p "$(basename list_file_path)"
-  touch "$list_file_path"
+	# Make sure the list directory structure and the file itself all exist.
+	list_file_path="$chezmoi_source/lists/text/list.$2.txt"
+	mkdir -p "$(basename list_file_path)"
+	touch "$list_file_path"
 
-  if [[ -n ${3-} ]]; then
-    echo "$cmd_output" > "$list_file_path"
-  else
-    sort --ignore-case <<< "$cmd_output" > "$list_file_path"
-  fi
+	if [[ -n ${3-} ]]; then
+		echo "$cmd_output" > "$list_file_path"
+	else
+		sort --ignore-case <<< "$cmd_output" > "$list_file_path"
+	fi
 }
 
 # Git repos I have checked out locally
@@ -60,16 +60,16 @@ process_list "$git_list_cmd" "git"
 
 # Go binaries
 if command -v gup &> /dev/null; then
-  process_list "gup list" "go.gup" skipsort
+	process_list "gup list" "go.gup" skipsort
 elif [[ -d "$HOME"/go/bin ]]; then
-  process_list "find \"$HOME\"/go/bin -type f" "go.bin"
+	process_list "find \"$HOME\"/go/bin -type f" "go.bin"
 fi
 
 # Rust binaries
 if [[ ! -d $HOME/.cargo/bin ]]; then
-  echo "$script_name: No '\$HOME.cargo/bin/' directory found; skipping"
+	echo "$script_name: No '\$HOME.cargo/bin/' directory found; skipping"
 else
-  process_list "cargo install --list" "rust.bin" skipsort
+	process_list "cargo install --list" "rust.bin" skipsort
 fi
 
 # Homebrew

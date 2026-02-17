@@ -10,31 +10,31 @@ echo " done. Found '${#projects[@]}' projects."
 declare -i cluster_count=0
 
 for project in "${projects[@]}"; do
-  # Check if GKE is enabled in the project.
-  if ! gcloud services list --project="$project" --format=json \
-    | jq --exit-status 'any(.[].config.name; . == "container.googleapis.com")' > /dev/null; then
+	# Check if GKE is enabled in the project.
+	if ! gcloud services list --project="$project" --format=json \
+		| jq --exit-status 'any(.[].config.name; . == "container.googleapis.com")' > /dev/null; then
 
-    echo -n "."
-    continue
-  fi
+		echo -n "."
+		continue
+	fi
 
-  # Look up GKE clusters in the project.
-  gcloud_project_clusters=$(gcloud container clusters list --project="$project" --format="value(name)")
-  mapfile -t project_clusters <<< "$gcloud_project_clusters"
+	# Look up GKE clusters in the project.
+	gcloud_project_clusters=$(gcloud container clusters list --project="$project" --format="value(name)")
+	mapfile -t project_clusters <<< "$gcloud_project_clusters"
 
-  if [[ ${#project_clusters[@]} -eq 0 ]] || [[ -z ${project_clusters[0]} ]]; then
-    echo -n "+"
-    continue
-  fi
+	if [[ ${#project_clusters[@]} -eq 0 ]] || [[ -z ${project_clusters[0]} ]]; then
+		echo -n "+"
+		continue
+	fi
 
-  # If any clusters were found, print a list.
-  echo
-  echo "Project '$project':"
+	# If any clusters were found, print a list.
+	echo
+	echo "Project '$project':"
 
-  for pc in "${project_clusters[@]}"; do
-    ((cluster_count += 1))
-    echo "- $pc"
-  done
+	for pc in "${project_clusters[@]}"; do
+		((cluster_count += 1))
+		echo "- $pc"
+	done
 done
 
 echo

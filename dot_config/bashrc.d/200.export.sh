@@ -2,9 +2,9 @@
 
 # If I have to edit something in a terminal window, I like using Nano. The up-to-date version from Homebrew if present.
 if test -x "${package_manager_prefix:?}/bin/nano"; then
-  export EDITOR="${package_manager_prefix:?}/bin/nano"
+	export EDITOR="${package_manager_prefix:?}/bin/nano"
 else
-  export EDITOR=/usr/bin/nano
+	export EDITOR=/usr/bin/nano
 fi
 
 # GPG things
@@ -20,5 +20,5 @@ export AWS_SDK_LOAD_CONFIG=true
 
 # Homebrew - show off timings
 if command -v brew &> /dev/null; then
-  export HOMEBREW_DISPLAY_INSTALL_TIMES=1
+	export HOMEBREW_DISPLAY_INSTALL_TIMES=1
 fi

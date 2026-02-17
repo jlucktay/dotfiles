@@ -3,8 +3,8 @@
 #   Example: mans mplayer codec
 #   --------------------------------------------------------------------
 function mans() {
-  local -
-  set -o pipefail
+	local -
+	set -o pipefail
 
-  man "$1" | grep -iC2 "$2" | less
+	man "$1" | grep -iC2 "$2" | less
 }

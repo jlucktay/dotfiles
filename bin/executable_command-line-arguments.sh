@@ -6,23 +6,23 @@ extension=txt
 search_path=.
 
 for i in "$@"; do
-  case $i in
-    -e=* | --extension=*)
-      extension="${i#*=}"
-      shift # past argument=value
-      ;;
-    -s=* | --searchpath=*)
-      search_path="${i#*=}"
-      shift # past argument=value
-      ;;
-    --default)
-      default=YES
-      shift # past argument with no value
-      ;;
-    *)
-      # unknown option
-      ;;
-  esac
+	case $i in
+		-e=* | --extension=*)
+			extension="${i#*=}"
+			shift # past argument=value
+			;;
+		-s=* | --searchpath=*)
+			search_path="${i#*=}"
+			shift # past argument=value
+			;;
+		--default)
+			default=YES
+			shift # past argument with no value
+			;;
+		*)
+			# unknown option
+			;;
+	esac
 done
 
 echo "File extension                             = $extension"
@@ -33,9 +33,9 @@ number_files=$(find "$search_path/" -maxdepth 1 -iname "*.$extension" -not -type
 echo "Number files in SEARCH PATH with extension = $number_files"
 
 if [[ -n ${1:-} ]]; then
-  echo
-  echo "Last line of file specified as non-opt/last argument:"
-  tail -1 "$1"
+	echo
+	echo "Last line of file specified as non-opt/last argument:"
+	tail -1 "$1"
 fi
 
 # demo:

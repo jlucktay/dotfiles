@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 if [[ ${BASH_SOURCE[0]} == "${0}" ]]; then
-  echo >&2 "${BASH_SOURCE[0]} is not being sourced."
-  exit 1
+	echo >&2 "${BASH_SOURCE[0]} is not being sourced."
+	exit 1
 fi
 
 # Bash before 4.4 (like the default one on Macs these days) doesn't have this option:

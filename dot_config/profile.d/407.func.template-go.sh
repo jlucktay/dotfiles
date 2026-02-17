@@ -1,27 +1,27 @@
 if command -v git &> /dev/null; then
-  function template_go() {
-    local current_git_repo
-    current_git_repo=$(git rev-parse --show-toplevel)
-    local template_go_repo="$HOME/git/github.com/jlucktay/template-go/"
+	function template_go() {
+		local current_git_repo
+		current_git_repo=$(git rev-parse --show-toplevel)
+		local template_go_repo="$HOME/git/github.com/jlucktay/template-go/"
 
-    if [[ $current_git_repo == "" ]]; then
-      echo "${FUNCNAME[0]}: the current working directory is not inside a git repository"
-      return 1
-    fi
+		if [[ $current_git_repo == "" ]]; then
+			echo "${FUNCNAME[0]}: the current working directory is not inside a git repository"
+			return 1
+		fi
 
-    if [[ ! -d $template_go_repo ]]; then
-      echo "${FUNCNAME[0]}: the 'template-go' repo has not been checked out to '$template_go_repo'; remedying..."
-      gmkdir --parents --verbose "$template_go_repo"
-      git clone https://github.com/jlucktay/template-go.git "$template_go_repo"
-    fi
+		if [[ ! -d $template_go_repo ]]; then
+			echo "${FUNCNAME[0]}: the 'template-go' repo has not been checked out to '$template_go_repo'; remedying..."
+			gmkdir --parents --verbose "$template_go_repo"
+			git clone https://github.com/jlucktay/template-go.git "$template_go_repo"
+		fi
 
-    if ! git --git-dir="$template_go_repo.git" --work-tree="$template_go_repo" diff-index --quiet HEAD --; then
-      echo "${FUNCNAME[0]}: the 'template-go' repo at '$template_go_repo' is dirty"
-      return 1
-    fi
+		if ! git --git-dir="$template_go_repo.git" --work-tree="$template_go_repo" diff-index --quiet HEAD --; then
+			echo "${FUNCNAME[0]}: the 'template-go' repo at '$template_go_repo' is dirty"
+			return 1
+		fi
 
-    function usage() {
-      \cat << HEREDOC
+		function usage() {
+			\cat << HEREDOC
 
     Usage: ${FUNCNAME[1]} [--help|--confirm]
 
@@ -34,65 +34,65 @@ if command -v git &> /dev/null; then
         -h, --help          show this help message and exit
 
 HEREDOC
-    }
+		}
 
-    local confirmed=0
-    local run_diff=0
+		local confirmed=0
+		local run_diff=0
 
-    for arg in "$@"; do
-      case $arg in
-        -h | --help)
-          usage
-          return 0
-          ;;
-        -c | --confirm)
-          confirmed=1
-          shift
-          ;;
-        -d | --diff)
-          run_diff=1
-          shift
-          ;;
-        *) # unknown option
-          echo "${FUNCNAME[0]}: argument '$arg' unknown"
-          usage
-          return 1
-          ;;
-      esac
-    done
+		for arg in "$@"; do
+			case $arg in
+				-h | --help)
+					usage
+					return 0
+					;;
+				-c | --confirm)
+					confirmed=1
+					shift
+					;;
+				-d | --diff)
+					run_diff=1
+					shift
+					;;
+				*) # unknown option
+					echo "${FUNCNAME[0]}: argument '$arg' unknown"
+					usage
+					return 1
+					;;
+			esac
+		done
 
-    local -a rsync_args
-    rsync_args+=(--checksum)
+		local -a rsync_args
+		rsync_args+=(--checksum)
 
-    if ((confirmed != 1)); then
-      rsync_args+=(--dry-run)
-    fi
+		if ((confirmed != 1)); then
+			rsync_args+=(--dry-run)
+		fi
 
-    rsync_args+=(
-      --exclude=.git
-      --exclude=go.mod
-      --exclude=go.sum
-      --exclude=out
-      --exclude=tmp
-      --itemize-changes
-      --recursive
-      "$template_go_repo"
-      "$current_git_repo"/
-    )
+		rsync_args+=(
+			--exclude=.git
+			--exclude=go.mod
+			--exclude=go.sum
+			--exclude=out
+			--exclude=tmp
+			--itemize-changes
+			--recursive
+			"$template_go_repo"
+			"$current_git_repo"/
+		)
 
-    if ((run_diff == 1)); then
-      fd --base-directory="$template_go_repo" --hidden --no-ignore --type=file \
-        --exclude .git --exclude "go.mod" --exclude "go.sum" --exclude=out --exclude=tmp . \
-        --exec git diff --color=always "{}" "$current_git_repo/{}"
-    fi
+		if ((run_diff == 1)); then
+			fd --base-directory="$template_go_repo" --hidden --no-ignore --type=file \
+				--exclude .git --exclude "go.mod" --exclude "go.sum" --exclude=out --exclude=tmp . \
+				--exec git diff --color=always "{}" "$current_git_repo/{}"
+		fi
 
-    if ((confirmed != 1)); then
-      echo
-      echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed diff/rsync."
-    fi
+		if ((confirmed != 1)); then
+			echo
+			echo "Re-run '${FUNCNAME[0]}' with '--confirm' to execute previewed diff/rsync."
+		fi
 
-    echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
+		echo "${FUNCNAME[0]}: running 'rsync' with the following arguments: ${rsync_args[*]}"
 
-    rsync "${rsync_args[@]}"
-  }
+		rsync "${rsync_args[@]}"
+	}
 fi

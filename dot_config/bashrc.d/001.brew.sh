@@ -2,9 +2,9 @@ declare eval_brew=""
 
 # If Homebrew/Linuxbrew is installed, do the thing.
 if [[ -x /opt/homebrew/bin/brew ]]; then
-  eval_brew="$(/opt/homebrew/bin/brew shellenv)"
+	eval_brew="$(/opt/homebrew/bin/brew shellenv)"
 elif [[ -x /home/linuxbrew/.linuxbrew/bin/brew ]]; then
-  eval_brew="$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+	eval_brew="$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 fi
 
 # Even when neither of the 'if's come true, 'eval'ing an empty string has no effect.
