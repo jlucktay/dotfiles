@@ -28,6 +28,18 @@ fi
 
 declare -a command_queue=()
 
+# Make sure MacBook wi-fi is turned on, and wait until we have a live connection.
+command_queue+=(
+	"networksetup -setairportpower en0 on"
+	"until curl --max-time 3 1.1.1.1 &> /dev/null; do sleep 1; date; done"
+)
+
+# Make sure Docker is up and running.
+command_queue+=(
+	"rdctl start --verbose"
+	"until (set -x; docker info &> /dev/null;); do sleep 10; echo; date; done"
+)
+
 # Do some notification cleanup, if there's a token ginsu can use.
 # Get it teed up before the GitHub commands are added to the queue.
 if [[ -n ${GITHUB_TOKEN-} ]]; then
