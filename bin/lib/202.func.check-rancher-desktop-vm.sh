@@ -17,7 +17,7 @@ check_rd_vm() {
 		err "Rancher Desktop does not seem to be running"
 	fi
 
-	df_pct=$(gawk 'END { pct = $4; sub(/%/, "", pct); print pct; }' <<< "$df_raw")
+	df_pct=$(gawk 'END { pct = $5; sub(/%/, "", pct); print pct; }' <<< "$df_raw")
 	pct_compare=$(bc --mathlib <<< "$df_pct >= 80")
 
 	if ((pct_compare)); then

@@ -14,6 +14,13 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
+dslog "🛜 Making sure MacBook wi-fi is turned on, and we have a live connection..."
+networksetup -setairportpower en0 on
+
+until curl --max-time 3 1.1.1.1 &> /dev/null; do
+	gum spin --spinner=pulse --title="🛜 Waiting..." -- sleep 1
+done
+
 if command -v op &> /dev/null; then
 	dslog "🟡 Retrieving GitHub token from 1Password..."
 
@@ -26,19 +33,16 @@ if command -v op &> /dev/null; then
 	export GITHUB_TOKEN=$ght
 fi
 
+dslog "🐳 Getting Docker up and running..."
+if ! docker info &> /dev/null; then
+	rdctl start --verbose
+fi
+
+until docker info &> /dev/null; do
+	gum spin --spinner=pulse --title="🐳 Waiting..." -- sleep 1
+done
+
 declare -a command_queue=()
-
-# Make sure MacBook wi-fi is turned on, and wait until we have a live connection.
-command_queue+=(
-	"networksetup -setairportpower en0 on"
-	"until curl --max-time 3 1.1.1.1 &> /dev/null; do sleep 1; date; done"
-)
-
-# Make sure Docker is up and running.
-command_queue+=(
-	"rdctl start --verbose"
-	"until (set -x; docker info &> /dev/null;); do sleep 10; echo; date; done"
-)
 
 # Do some notification cleanup, if there's a token ginsu can use.
 # Get it teed up before the GitHub commands are added to the queue.
