@@ -18,7 +18,7 @@ dslog "🛜 Making sure MacBook wi-fi is turned on, and we have a live connectio
 networksetup -setairportpower en0 on
 
 until curl --max-time 3 1.1.1.1 &> /dev/null; do
-	gum spin --spinner=pulse --title="🛜 Waiting..." -- sleep 1
+	gum spin --spinner=pulse --spinner.foreground="#285CE9" --title="🛜 Waiting..." -- sleep 1
 done
 
 if command -v op &> /dev/null; then
@@ -39,7 +39,7 @@ if ! docker info &> /dev/null; then
 fi
 
 until docker info &> /dev/null; do
-	gum spin --spinner=pulse --title="🐳 Waiting..." -- sleep 1
+	gum spin --spinner=pulse --spinner.foreground="#74BFD2" --title="🐳 Waiting..." -- sleep 1
 done
 
 declare -a command_queue=()
