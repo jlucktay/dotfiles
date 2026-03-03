@@ -1,7 +1,6 @@
 [tools]
 # Latest version
 "aqua:argoproj/argo-cd" = "latest"
-"aqua:aws/aws-cli" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
 "aqua:charmbracelet/gum" = "latest"
@@ -31,6 +30,10 @@
 "github:slsa-framework/slsa-verifier" = "latest"
 "github:terrastruct/d2" = "latest"
 "github:twpayne/chezmoi" = "latest"
+
+# Prevent AWS CLI's 'python' from leaking
+# https://github.com/jdx/mise/pull/7076
+"aqua:aws/aws-cli" = { version = "latest", symlink_bins = "true" }
 
 # Pinned major version
 "aqua:helm/helm" = "3"
