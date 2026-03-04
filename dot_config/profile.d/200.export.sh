@@ -36,6 +36,9 @@ function prefix_path() {
 # 1) the '/etc/paths' file, and
 # 2) the files under the '/etc/paths.d/' directory
 
+# https://help.obsidian.md/cli
+prefix_path "/Applications/Obsidian.app/Contents/MacOS"
+
 # To be able to run kubectl plugins wrangled with krew.
 if mise which krew &> /dev/null; then
 	prefix_path "$HOME/.krew/bin"
