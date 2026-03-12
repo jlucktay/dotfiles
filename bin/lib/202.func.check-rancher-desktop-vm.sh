@@ -17,7 +17,8 @@ check_rd_vm() {
 		err "Rancher Desktop does not seem to be running"
 	fi
 
-	df_pct=$(gawk 'END { pct = $5; sub(/%/, "", pct); print pct; }' <<< "$df_raw")
+	# Iterate across columns looking for one that has at least one digit followed by a percentage sign as its last character.
+	df_pct=$(gawk '{ for (i=1; i<=NF; i++) { if ($i ~ /[0-9]%$/) { pct = $i; sub(/%/, "", pct); print pct; } } }' <<< "$df_raw")
 	pct_compare=$(bc --mathlib <<< "$df_pct >= 80")
 
 	if ((pct_compare)); then
