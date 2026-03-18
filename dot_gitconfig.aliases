@@ -102,3 +102,13 @@ discard = checkout --patch --
 unstage = reset --quiet HEAD --
 
 up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+
+# Difftastic
+# `git log` with patches shown with difftastic.
+dl = -c diff.external=difft log -p --ext-diff
+
+# Show the most recent commit with difftastic.
+ds = -c diff.external=difft show --ext-diff
+
+# `git diff` with difftastic.
+dft = -c diff.external=difft diff
