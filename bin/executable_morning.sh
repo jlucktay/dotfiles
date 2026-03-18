@@ -42,6 +42,13 @@ until docker info &> /dev/null; do
 	gum spin --spinner=pulse --spinner.foreground="#74BFD2" --title="🐳 Waiting..." -- sleep 1
 done
 
+#
+# Temporary, due to this issue:
+# https://github.com/rancher-sandbox/rancher-desktop/issues/8606#issuecomment-2979109414
+docker run --privileged --rm tonistiigi/binfmt:qemu-v7.0.0 --uninstall amd64 > /dev/null
+docker run --privileged --rm tonistiigi/binfmt:qemu-v7.0.0 --install amd64 > /dev/null
+#
+
 declare -a command_queue=()
 
 # Do some notification cleanup, if there's a token ginsu can use.
