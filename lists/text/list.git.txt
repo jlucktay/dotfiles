@@ -38,6 +38,7 @@
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/buildpack-samples
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/cloud-sql-proxy
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/guest-agent
+/Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/k8s-config-connector
 /Users/james.lucktaylor/git/github.com/GoogleContainerTools/skaffold
 /Users/james.lucktaylor/git/github.com/grpc/grpc-go
 /Users/james.lucktaylor/git/github.com/gruntwork-io/terratest

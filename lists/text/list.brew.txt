@@ -3,6 +3,7 @@ autojump
 bash
 bash-completion@2
 bat
+binaryen
 brotli
 c-ares
 ca-certificates
@@ -18,6 +19,7 @@ gettext
 gh
 git
 git-delta
+glib
 glow
 gmp
 gnu-getopt
@@ -30,7 +32,6 @@ hyperfine
 icu4c@78
 krb5
 libgit2
-libiconv
 liblinear
 libnghttp2
 libnghttp3
@@ -61,11 +62,13 @@ python@3.13
 python@3.14
 readline
 rustup
+shared-mime-info
 shellcheck
 shunit2
 simdjson
 sqlite
 tfctl
+tinygo
 topgrade
 uvwasi
 xz

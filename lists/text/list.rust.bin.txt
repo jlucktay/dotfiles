@@ -2,19 +2,21 @@ cargo-cache v0.8.3:
     cargo-cache
 cargo-info v0.7.7:
     cargo-info
-cargo-update v18.0.0:
+cargo-update v18.2.0:
     cargo-install-update
     cargo-install-update-config
-cargo-upgrades v2.2.4:
+cargo-upgrades v2.2.5:
     cargo-upgrades
+difftastic v0.68.0:
+    difft
 kondo v0.9.0:
     kondo
-mise v2026.2.3:
+mise v2026.3.13:
     mise
 starship v1.24.2:
     starship
-usage-cli v2.16.1:
+usage-cli v3.2.0:
     usage
-worker-build v0.7.4:
+worker-build v0.7.5:
     worker-build
     worker-codegen

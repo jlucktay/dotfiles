@@ -9,7 +9,7 @@ gcloud-cli
 gpg-suite-no-mail
 hiddenbar
 itsycal
-obsidian
+microsoft-teams
 pingmenu
 rancher
 stats

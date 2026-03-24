@@ -1,6 +1,7 @@
 bierner.markdown-mermaid
 chdsbd.github-code-owners
 coolbear.systemd-unit-file
+davidanson.vscode-markdownlint
 editorconfig.editorconfig
 esbenp.prettier-vscode
 github.vscode-github-actions
