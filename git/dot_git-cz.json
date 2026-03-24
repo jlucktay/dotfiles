@@ -1,0 +1,8 @@
+{
+  "closedIssueMessage": "Re: ",
+  "closedIssuePrefix": "",
+  "disableEmoji": false,
+  "format": "{type}: {emoji}{subject}",
+  "maxMessageLength": 100,
+  "questions": ["type", "subject", "body", "breaking", "issues"]
+}
