@@ -57,7 +57,8 @@ if [[ -n ${GITHUB_TOKEN-} ]]; then
 	command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
-if command -v gdate &> /dev/null; then
+# Disabled for the time being.
+if false; then
 	#
 	mlb_next_season_start='2026-03-25'
 	#
