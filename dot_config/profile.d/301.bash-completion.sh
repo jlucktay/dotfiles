@@ -171,7 +171,11 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 	# shellcheck source=/dev/null
 	source "$_tool_completion_file"
 
-	_epoch_regen_diff_ms=$(bc --expression="($EPOCHREALTIME - $_epoch_regen_start) * 1000" --mathlib)
+	if ! _epoch_regen_diff_ms=$(bc --expression="($EPOCHREALTIME - $_epoch_regen_start) * 1000" --mathlib); then
+		echo
+
+		continue
+	fi
 
 	printf >&2 " ✅ regenerated in %.0fms\n" "$_epoch_regen_diff_ms"
 
