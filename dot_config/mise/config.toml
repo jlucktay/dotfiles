@@ -30,6 +30,9 @@
 "github:slsa-framework/slsa-verifier" = "latest"
 "github:terrastruct/d2" = "latest"
 "github:twpayne/chezmoi" = "latest"
+"pipx:yamllint" = "latest"
+pipx = "latest"
+uv = "latest"
 
 # Prevent AWS CLI's 'python' from leaking
 # https://github.com/jdx/mise/pull/7076

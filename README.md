@@ -1,6 +1,6 @@
-# Dotfiles
+# My dotfiles
 
-My dotfiles, managed with [chezmoi](https://github.com/twpayne/chezmoi).
+> Managed with [chezmoi](https://github.com/twpayne/chezmoi).
 
 ## Bootstrap
 
@@ -20,7 +20,7 @@ curl --fail --location --silent https://raw.githubusercontent.com/jlucktay/dotfi
 
 ### Reminders
 
-On macOS, after installing a modern version of Bash (probably with Homebrew) don't forget to (re)set the default shell, so that desktop/UI apps inherit all of the things from the Bash profile.
+On macOS, after installing a modern version of Bash (probably with Homebrew) don't forget to (re)set the default shell, so that desktop/UI apps inherit all the things from the Bash profile.
 
 First, append the path of the Homebrew-managed Bash binary to the list of available shells:
 
