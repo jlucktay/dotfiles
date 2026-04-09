@@ -13,5 +13,5 @@ cloud-sql-proxy: github.com/GoogleCloudPlatform/cloud-sql-proxy/v2@v2.21.2
             ihj: github.com/mikecsmith/ihj/cmd/ihj@v0.5.18
              jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
        minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.7
-        pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20260407162325-f1e456b85e62
+        pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.0.0-20260408203534-b0096dc79943
           shfmt: mvdan.cc/sh/v3/cmd/shfmt@v3.13.1

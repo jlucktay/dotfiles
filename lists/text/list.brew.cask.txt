@@ -6,6 +6,7 @@ firefox
 font-jetbrains-mono
 font-jetbrains-mono-nerd-font
 gcloud-cli
+ghostty
 gpg-suite-no-mail
 hiddenbar
 itsycal

@@ -1,8 +1,11 @@
+ArgoCD
 Artifact
 cron
 Crossplane
 dotfiles
 HOWTO
+KEDA
+Kustomize
 NDJSON
 OVO
 Taskfile
