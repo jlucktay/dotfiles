@@ -27,6 +27,7 @@
 "aqua:terraform-docs/terraform-docs" = "latest"
 "github:go-task/task" = "latest"
 "github:jlucktay/my-github-repos" = "latest"
+"github:mfontanini/presenterm" = "latest"
 "github:slsa-framework/slsa-verifier" = "latest"
 "github:terrastruct/d2" = "latest"
 "github:twpayne/chezmoi" = "latest"
