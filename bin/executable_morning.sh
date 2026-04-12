@@ -78,16 +78,21 @@ if false; then
 	fi
 fi
 
-command_queue+=(
-	# Refresh GitHub/OVO SSO for the day.
-	"open_chrome 'https://github.com/orgs/ovotech/teams/evergreen-platform/members'"
+# Do work things on Mon-Fri only
+day_of_week="$(gdate +%u)"
 
-	# Check PR mentions.
-	"open_chrome 'https://github.com/notifications?query=reason%3Amention'"
+if [[ $day_of_week -ge 1 ]] && [[ $day_of_week -le 5 ]]; then
+	command_queue+=(
+		# Refresh GitHub/OVO SSO for the day.
+		"open_chrome 'https://github.com/orgs/ovotech/teams/evergreen-platform/members'"
 
-	# Update all of the things.
-	topgrade
-)
+		# Check PR mentions.
+		"open_chrome 'https://github.com/notifications?query=reason%3Amention'"
+	)
+fi
+
+# Always update all the things.
+command_queue+=(topgrade)
 
 if check_rd_vm; then
 	dslog "✅ Rancher Desktop VM check OK"
@@ -107,7 +112,7 @@ else
 fi
 
 command_queue+=(
-	# Keep a backup of my vault, separate from Obsidian Sync.
+	# Keep a backup of my Obsidian vault, separate from Obsidian Sync.
 	# Since mise manages rclone, the version might change before this comes up in the queue, so we call via 'mise exec ...' to make sure we get the correct binary path.
 	"mise exec --verbose -- rclone sync \"$HOME/jlucktay-obsidian\" \"$HOME/jlucktay@gmail.com - Google Drive/My Drive/jlucktay-obsidian\" --check-first --color=ALWAYS --delete-after --verbose"
 
