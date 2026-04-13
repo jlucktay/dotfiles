@@ -9,6 +9,7 @@ yq --inplace '.profile = strenv(PROFILE)' "$HOME/.local/share/chezmoi/.chezmoida
 task --taskfile "$HOME/.local/share/chezmoi/Taskfile.chezmoi.yaml" data
 
 ln -fsv "application_default_credentials.$PROFILE.json" "$HOME/.config/gcloud/application_default_credentials.json"
+rm -fv "$HOME/.kube/gke_gcloud_auth_plugin_cache"
 gcloud config configurations activate "$PROFILE"
 
 chezmoi apply "$HOME/.config/aws/config" "$HOME/.terraform.d/credentials.tfrc.json" "$HOME/.terraformrc"
