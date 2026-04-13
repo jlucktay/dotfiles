@@ -1,0 +1,13 @@
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/mfontanini/presenterm/master/config-file-schema.json
+
+options:
+  auto_render_languages:
+    - Mermaid
+  strict_front_matter_parsing: true
+
+transition:
+  animation:
+    style: fade
+  duration_millis: 500
+  frames: 60
