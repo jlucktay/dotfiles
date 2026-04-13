@@ -1,6 +1,5 @@
 ada-url
 ansible
-ansible-creator
 ansible-lint
 autojump
 bash
@@ -27,7 +26,6 @@ gh
 git
 git-delta
 glib
-glow
 gmp
 gnu-getopt
 gnu-sed

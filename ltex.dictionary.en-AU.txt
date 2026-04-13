@@ -3,10 +3,16 @@ Artifact
 cron
 Crossplane
 dotfiles
+gitops
 HOWTO
 KEDA
 Kustomize
+Kyverno
+Miro
 NDJSON
 OVO
+tailnet
+Tailscale
 Taskfile
 TODO
+Traefik

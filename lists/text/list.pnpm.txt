@@ -1,4 +1,6 @@
 https://backstage.io:1.10.6
+https://github.com/cdk8s-team/cdk8s-cli#readme:2.206.3
 https://github.com/commitizen/cz-cli:4.3.1
+https://github.com/mermaid-js/mermaid-cli#readme:11.12.0
 https://github.com/redhat-developer/yaml-language-server#readme:1.21.0
 https://github.com/streamich/git-cz:4.9.0

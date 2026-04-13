@@ -1,5 +1,4 @@
 1password-cli
-alacritty
 anki
 browserino
 firefox
