@@ -5,3 +5,5 @@ cursor-style = "bar"
 cursor-style-blink = "true"
 
 theme = "Catppuccin Mocha"
+
+quit-after-last-window-closed = "true"
