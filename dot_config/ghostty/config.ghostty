@@ -1,9 +1,10 @@
-font-family = "JetBrainsMono Nerd Font Mono"
-font-size = "14"
+font-family = JetBrainsMono Nerd Font Mono
+font-size = 14
 
-cursor-style = "bar"
-cursor-style-blink = "true"
+cursor-style = bar
+cursor-style-blink = true
 
-theme = "Catppuccin Mocha"
+theme = Catppuccin Mocha
 
-quit-after-last-window-closed = "true"
+quit-after-last-window-closed = true
+window-save-state = never
