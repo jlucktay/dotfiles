@@ -92,7 +92,10 @@ if [[ $day_of_week -ge 1 ]] && [[ $day_of_week -le 5 ]]; then
 fi
 
 # Always update all the things.
-command_queue+=(topgrade)
+command_queue+=(
+	topgrade
+	"GOEXPERIMENT=jsonv2 go install github.com/Zxilly/go-size-analyzer/cmd/gsa@latest"
+)
 
 if check_rd_vm; then
 	dslog "✅ Rancher Desktop VM check OK"
