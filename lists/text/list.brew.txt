@@ -55,11 +55,13 @@ lz4
 markdownlint-cli2
 mas
 md5sha1sum
+merve
 mkdocs
 mpdecimal
 mpfr
 nano
 nanorc
+nbytes
 ncurses
 nmap
 node
@@ -79,6 +81,7 @@ shared-mime-info
 shellcheck
 shunit2
 simdjson
+simdutf
 sqlite
 tfctl
 tinygo

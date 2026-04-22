@@ -3,11 +3,13 @@ Artifact
 cron
 Crossplane
 dotfiles
+Flexera
 gitops
 HOWTO
 KEDA
 Kustomize
 Kyverno
+Memorystore
 Miro
 NDJSON
 OVO

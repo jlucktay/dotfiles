@@ -4,6 +4,7 @@ coolbear.systemd-unit-file
 davidanson.vscode-markdownlint
 editorconfig.editorconfig
 esbenp.prettier-vscode
+github.copilot-chat
 github.vscode-github-actions
 golang.go
 google.gemini-cli-vscode-ide-companion
@@ -16,6 +17,9 @@ mechatroner.rainbow-csv
 mikecunneen.cunneen-copy-breadcrumbs
 ms-azuretools.vscode-containers
 ms-kubernetes-tools.vscode-kubernetes-tools
+ms-python.debugpy
+ms-python.python
+ms-python.vscode-pylance
 ms-python.vscode-python-envs
 ms-vscode.makefile-tools
 pkief.material-icon-theme

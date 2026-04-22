@@ -10,7 +10,6 @@ gpg-suite-no-mail
 hiddenbar
 itsycal
 microsoft-teams
-pingmenu
 rancher
 stats
 zoom

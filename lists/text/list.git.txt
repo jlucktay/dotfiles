@@ -125,6 +125,7 @@
 /Users/james.lucktaylor/git/github.com/wardviaene/golang-demos
 /Users/james.lucktaylor/git/github.com/webrtc/apprtc
 /Users/james.lucktaylor/git/github.com/webrtc/samples
+/Users/james.lucktaylor/git/github.com/wiz-sec/charts
 /Users/james.lucktaylor/git/github.com/yannh/kubernetes-json-schema
 /Users/james.lucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/james.lucktaylor/git/go.jlucktay.dev/arrowverse
