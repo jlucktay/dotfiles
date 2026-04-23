@@ -94,7 +94,8 @@ fi
 # Always update all the things.
 command_queue+=(
 	topgrade
-	"GOEXPERIMENT=jsonv2 go install github.com/Zxilly/go-size-analyzer/cmd/gsa@latest"
+	"export GOEXPERIMENT=jsonv2"
+	"go install github.com/Zxilly/go-size-analyzer/cmd/gsa@latest"
 )
 
 if check_rd_vm; then
