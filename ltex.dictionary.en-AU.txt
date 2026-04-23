@@ -11,6 +11,7 @@ Kustomize
 Kyverno
 Memorystore
 Miro
+mise
 NDJSON
 OVO
 tailnet
@@ -18,3 +19,4 @@ Tailscale
 Taskfile
 TODO
 Traefik
+WunderGraph
