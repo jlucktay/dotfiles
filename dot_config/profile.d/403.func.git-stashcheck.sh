@@ -6,7 +6,7 @@ if command -v git &> /dev/null; then
 		echo "[$(gdn || true)] ${FUNCNAME[0]}: finding git repos..."
 
 		local git_repos
-		git_repos=$(find "$HOME/git" -type d -name ".git")
+		git_repos=$(fd --hidden --type directory '^\.git$' "$HOME/git")
 
 		local -a repos
 		mapfile -t repos <<< "$git_repos"
