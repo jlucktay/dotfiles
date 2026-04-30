@@ -11,6 +11,7 @@ function interview() {
 	# Equivalent of macOS "open" for all the other modern *nixes.
 	if ! command -v open &> /dev/null; then
 		function open() {
+			local arg
 			for arg in "$@"; do
 				setsid nohup xdg-open "$arg" &> /dev/null
 			done
@@ -18,15 +19,16 @@ function interview() {
 	fi
 
 	# Stat the '_template.txt' file first, to make sure we can duplicate it later if necessary.
-	template_file=$HOME/Documents/Notes/Candidates/_template.txt
+	local template_file="$HOME"/Documents/Notes/Candidates/_template.txt
 
 	if ! "$stat_binary" "$template_file" &> /dev/null; then
 		return 1
 	fi
 
-	declare -a filtered=()
+	local -a filtered=()
 
 	# Take the '$@' array of arguments, and 'tr' each arg to filter down to lowercase alphanumeric characters only.
+	local arg
 	for arg in "$@"; do
 		local gs_alnum gs_lower
 		gs_alnum=$(gsed 's/[^[:alnum:]]//g' <<< "$arg")

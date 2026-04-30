@@ -25,11 +25,13 @@ function gitops_diff_tags() {
 		return 3
 	fi
 
+	local current_directory
 	current_directory=$(pwd)
 	trap 'cd $current_directory' RETURN
 
 	cd "$HOME"/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops || return
 
+	local old_tag new_tag
 	old_tag="$(git tag --list | fzf --query="helm/$1")"
 	new_tag="$(git tag --list | fzf --query="helm/$1")"
 
@@ -46,9 +48,11 @@ function _gitops_diff_tags() {
 	set -o pipefail
 
 	# Get valid Helm chart names from the gitops repo.
+	local chart_names
 	chart_names=$(fd --base-directory="$HOME"/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops/helm/ --exact-depth=1 --path-separator='' --type=directory .)
 
 	# Generate possible completions with the chart names.
+	local compgen_chart_names
 	compgen_chart_names=$(compgen -W "$chart_names" -- "$2")
 
 	# Store possible completions for 'complete' to make use of.

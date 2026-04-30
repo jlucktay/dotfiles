@@ -4,11 +4,13 @@ if command -v git &> /dev/null && command -v rg &> /dev/null && command -v awk &
 		local -
 		set -o pipefail
 
+		local git_log_head
 		if ! git_log_head=$(git log --oneline origin/HEAD..); then
 			echo "If 'origin/HEAD' is MIA, try running \`git remote set-head origin --auto\`."
 			return 1
 		fi
 
+		local git_wip
 		git_wip=$(rg '(WIP:|fixup!) ' <<< "$git_log_head" | awk '{ print $1 }' | xargs git show)
 
 		if [[ $git_wip != "" ]]; then

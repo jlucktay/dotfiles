@@ -5,19 +5,23 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
 		local -
 		set -o pipefail
 
+		local git_branch_all_format
 		git_branch_all_format=$(git branch --all --format='%(refname)' | grep --invert-match HEAD)
+
+		local -a git_branches
 		mapfile -t git_branches <<< "$git_branch_all_format"
 
 		declare -A unique_branches
 
 		# Trim a prefix from each array element with '${parameter#word}' expansion.
+		local branch
 		for branch in "${git_branches[@]#refs/@(heads|remotes)/}"; do
 			unique_branches[$branch]=0
 		done
 
-		branch_keys="${!unique_branches[*]}"
+		local branch_keys="${!unique_branches[*]}"
 
-		declare -a fzf_flags=(
+		local -a fzf_flags=(
 			--cycle
 			--exit-0
 			--preview 'git show --color=always {}'
@@ -40,6 +44,7 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
 		fi
 
 		# Convert spaces into newlines with the '-e' flag of 'echo', then send the keys to 'fzf' to get a choice.
+		local branch_choice
 		branch_choice=$(echo -e "${branch_keys// /\\n}" \
 			| sort --ignore-case \
 			| fzf "${fzf_flags[@]}")
@@ -50,9 +55,13 @@ if command -v fzf &> /dev/null && command -v git &> /dev/null; then
 		fi
 
 		# If the branch choice starts with a '<remote>/' prefix, trim it.
+		local git_remote
 		git_remote=$(git remote)
+
+		local -a git_remotes
 		mapfile -t git_remotes <<< "$git_remote"
 
+		local remote
 		for remote in "${git_remotes[@]}"; do
 			if [[ $branch_choice == ${remote}/* ]]; then
 				# Trim the prefix (if present) from the ref, with '${parameter#word}' expansion.

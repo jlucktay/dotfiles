@@ -39,6 +39,7 @@ HEREDOC
 		local confirmed=0
 		local run_diff=0
 
+		local arg
 		for arg in "$@"; do
 			case $arg in
 				-h | --help)

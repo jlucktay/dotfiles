@@ -25,4 +25,6 @@ if command -v brew &> /dev/null; then
 		export LESSOPEN="|$lesspipe_path %s"
 		export LESS_ADVANCED_PREPROCESSOR=1
 	fi
+
+	unset -v lesspipe_path
 fi

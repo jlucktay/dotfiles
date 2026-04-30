@@ -6,7 +6,10 @@ function topgrade_only() {
 	local -
 	set -o pipefail
 
+	local yq_output
 	yq_output=$(yq --output-format=yaml '.misc.only | ... comments=""' "$HOME"/.config/topgrade.toml)
+
+	local -a topgrade_misc_only
 	mapfile -t topgrade_misc_only <<< "$yq_output"
 
 	if [[ $# -ne 1 ]]; then
@@ -17,13 +20,14 @@ function topgrade_only() {
 		return 1
 	fi
 
-	declare only=$1
+	local only=$1
 
 	# Strip '- ' prefix from every element.
 	topgrade_misc_only=("${topgrade_misc_only[@]#'- '}")
 
-	declare only_found_in_config=0
+	local only_found_in_config=0
 
+	local i
 	for i in "${topgrade_misc_only[@]}"; do
 		if [[ $i == "$only" ]]; then
 			only_found_in_config=1
@@ -38,11 +42,11 @@ function topgrade_only() {
 		return 1
 	fi
 
-	declare -a topgrade_disable_flags=()
-
-	for ((i = 0; i < ${#topgrade_misc_only[@]}; i++)); do
-		if [[ ${topgrade_misc_only[i]} != "$only" ]]; then
-			topgrade_disable_flags+=(--disable="${topgrade_misc_only[i]}")
+	local -i j
+	local -a topgrade_disable_flags=()
+	for ((j = 0; j < ${#topgrade_misc_only[@]}; j++)); do
+		if [[ ${topgrade_misc_only[j]} != "$only" ]]; then
+			topgrade_disable_flags+=(--disable="${topgrade_misc_only[j]}")
 		fi
 	done
 
@@ -57,9 +61,11 @@ if ! command -v yq &> /dev/null; then
 fi
 
 function _topgrade_only() {
+	local yq_misc_only
 	yq_misc_only=$(yq --output-format=yaml '.misc.only | ... comments=""' "$HOME"/.config/topgrade.toml)
 
 	# Strip '- ' prefix from every element using '${parameter//pattern/string}' expansion.
+	local compgen_yq_misc_only
 	compgen_yq_misc_only=$(compgen -W "${yq_misc_only//'- '/''}" -- "$2")
 
 	mapfile -t COMPREPLY <<< "$compgen_yq_misc_only"

@@ -10,9 +10,11 @@ function prefix_path() {
 	fi
 
 	# Populate array with PATH.
+	local -a split_path
 	IFS=':' read -ra split_path <<< "$PATH"
 
 	# If argument already present, remove from its current index(es).
+	local i
 	for i in "${!split_path[@]}"; do
 		if [[ ${split_path[i]} == "$1" ]]; then
 			unset 'split_path[i]'
@@ -23,6 +25,7 @@ function prefix_path() {
 	split_path=("$1" "${split_path[@]}")
 
 	# Generate a variable from array contents which contains the updated PATH
+	local set_path
 	set_path=$(
 		IFS=':'
 		echo "${split_path[*]}"

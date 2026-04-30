@@ -17,6 +17,7 @@ function cmday() {
 	fi
 
 	# Dial in the target date, in ISO 8601 format.
+	local target_date
 	target_date=$(gdate --date="${1:-"0"} day ago" "+%Y-%m-%d")
 
 	HISTTIMEFORMAT="%Y-%m-%d %A %T " history 10000 | awk -v today="$target_date" '{ if ($2 == today) print $0 }'

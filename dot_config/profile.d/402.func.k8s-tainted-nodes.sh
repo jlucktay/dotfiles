@@ -20,6 +20,7 @@ if command -v kubectl &> /dev/null; then
 		sort_result=$(printf '%s\n' "${grep_arr[@]}" | sort | xargs -n 1)
 		mapfile -t sort_arr <<< "$sort_result"
 
+		local resource_type
 		for resource_type in "${sort_arr[@]}"; do
 			local headline="Resource type '$resource_type'"
 			local -a kubectl_flags=(

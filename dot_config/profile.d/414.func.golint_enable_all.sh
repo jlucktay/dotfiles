@@ -6,6 +6,7 @@ if command -v golangci-lint &> /dev/null; then
 
 		local -a do_not_enable
 
+		local arg
 		for arg in "$@"; do
 			if [[ $arg =~ "--disable="* ]]; then
 				do_not_enable+=("${arg/--disable=/}")
