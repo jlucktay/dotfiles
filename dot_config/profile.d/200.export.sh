@@ -76,7 +76,7 @@ prefix_path "$package_manager_prefix/opt/ruby/bin"
 # pnpm.
 if mise which pnpm &> /dev/null; then
 	export PNPM_HOME="$HOME/Library/pnpm"
-	prefix_path "$PNPM_HOME"
+	prefix_path "$PNPM_HOME/bin"
 fi
 
 # Rust.
