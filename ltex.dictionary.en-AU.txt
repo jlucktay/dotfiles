@@ -2,6 +2,7 @@ ArgoCD
 Artifact
 cron
 Crossplane
+DDOS
 dotfiles
 Flexera
 gitops
