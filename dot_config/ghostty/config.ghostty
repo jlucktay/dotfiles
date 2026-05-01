@@ -8,3 +8,5 @@ theme = Catppuccin Mocha
 
 quit-after-last-window-closed = true
 window-save-state = never
+
+scrollback-limit = 250000000
