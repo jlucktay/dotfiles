@@ -182,4 +182,4 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 	unset _epoch_regen_diff_ms _epoch_regen_start _tcb _tcf_dir _tool_completion_bash _tool_completion_file _tool_completion_file_stat _tool_completion_regenerate _tool_path _tool_type
 done
 
-unset _arr_tcb _bash_completion_dir _tools_completion_bash
+unset _arr_tcb _bash_completion_dir _tcb _tools_completion_bash
