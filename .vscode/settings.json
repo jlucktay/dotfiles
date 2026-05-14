@@ -1,5 +1,8 @@
 {
   "files.associations": {
     "run_200.eternal_history.sh.tmpl": "shellscript"
+  },
+  "yaml.schemas": {
+    "https://www.schemastore.org/pnpm-workspace.json": "dot_config/pnpm/config.yaml"
   }
 }
