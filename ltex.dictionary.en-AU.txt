@@ -1,11 +1,13 @@
 ArgoCD
 Artifact
+Checkov
 cron
 Crossplane
 DDOS
 dotfiles
 Flexera
 gitops
+HMAC
 HOWTO
 KEDA
 Kustomize
@@ -20,4 +22,6 @@ Tailscale
 Taskfile
 TODO
 Traefik
+Wiz
 WunderGraph
+ZTNA
