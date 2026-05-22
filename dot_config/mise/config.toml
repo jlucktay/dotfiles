@@ -3,6 +3,7 @@
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
+"aqua:cert-manager/cmctl" = "latest"
 "aqua:charmbracelet/gum" = "latest"
 "aqua:derailed/k9s" = "latest"
 "aqua:FiloSottile/age" = "latest"
