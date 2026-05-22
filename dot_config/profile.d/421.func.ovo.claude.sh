@@ -1,7 +1,7 @@
 # OVO Claude Code OTel collector wrapper
 claude-ovo() {
 	local -
-	set -euo pipefail
+	set -o pipefail
 
 	local collector_bin="$HOME/.claude/otel/otelcol-contrib"
 	local collector_pid="$HOME/.claude/otel/collector.pid"
