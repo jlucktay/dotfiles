@@ -7,9 +7,17 @@ fi
 
 # Check for availability of tool(s).
 # If any of the strings passed in contain multiple words, only the first word of each string will be checked.
+# Skips over leading words containing an equals sign '=' so that variables can be set on a per-run basis.
 tool_check() {
+	local tool tool_first_word
+
 	for tool in "$@"; do
 		tool_first_word=${tool%% *}
+
+		while [[ $tool_first_word == *"="* ]]; do
+			tool=${tool#"$tool_first_word "}
+			tool_first_word=${tool%% *}
+		done
 
 		if [[ -z $tool_first_word ]]; then
 			err "Can't find command from first word of '$tool'!"
