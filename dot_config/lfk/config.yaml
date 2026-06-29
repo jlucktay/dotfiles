@@ -1,0 +1,9 @@
+---
+# yaml-language-server: $schema=https://github.com/janosmiko/lfk/raw/refs/heads/main/docs/config.schema.json
+all_namespaces: true
+appearance:
+  icons: auto
+  no_color: false
+  transparent_background: true
+confirm_on_exit: true
+mouse: false
