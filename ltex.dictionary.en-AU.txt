@@ -6,10 +6,13 @@ Crossplane
 DDOS
 dotfiles
 Flexera
+Ghostty
 gitops
+Gravitee
 HMAC
 HOWTO
 KEDA
+Konnectivity
 Kustomize
 Kyverno
 Memorystore
