@@ -48,7 +48,7 @@ uv = "latest"
 "aqua:kubernetes/kubectl" = "1.35"
 
 # Pinned patch version
-"aqua:kyverno/kyverno" = "1.14.1"
+"aqua:kyverno/kyverno" = "1.18.1"
 "aqua:norwoodj/helm-docs" = "1.14.2"
 
 [settings]
