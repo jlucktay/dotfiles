@@ -61,6 +61,9 @@ disable_tools = ["go"]
 # Don't bother with '.terraform-version' files and the like.
 idiomatic_version_file_enable_tools = []
 
+# Filter tool versions by release date to limit supply chain risk.
+minimum_release_age = "7d"
+
 [settings.status]
 missing_tools = "always"
 show_env = true

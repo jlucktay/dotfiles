@@ -2,8 +2,9 @@
 # Prevent transitive dependencies from resolving via git repos or tarball URLs.
 blockExoticSubdeps: true
 
-# Quarantine newly published packages for 3 days, to mitigate supply chain attacks.
-minimumReleaseAge: 4320
+# Quarantine newly published packages for 7 days, to mitigate supply chain attacks.
+# This setting is defined as a number of minutes.
+minimumReleaseAge: 10080
 
 # Fail resolution if a package's registry metadata lacks a 'time' field.
 minimumReleaseAgeIgnoreMissingTime: false
