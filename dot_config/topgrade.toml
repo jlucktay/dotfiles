@@ -28,6 +28,7 @@ only = [
   "brew_cask",
   "brew_formula",
   "cargo",
+  "claude_code",
   # "containers", # Quicker to pull in parallel with the custom command and global Taskfile.
   "custom_commands",
   "gcloud",
