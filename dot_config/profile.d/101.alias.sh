@@ -44,7 +44,7 @@ fi
 
 # eza
 if command -v eza &> /dev/null; then
-	alias ll='eza --all --classify --colour-scale --colour=always --git --group-directories-first --icons --long'
+	alias ll='eza --all --classify --color-scale=age --colour=always --git --group-directories-first --icons --long'
 	alias lll='ll --grid'
 else
 	alias ll='ls -l --almost-all --classify'
