@@ -1,3 +1,6 @@
 # https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
 ## core.excludesfile
 .DS_Store
+
+# Claude Code scratch directories for session data
+**/.claude/.cc-writes/
