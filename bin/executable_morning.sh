@@ -126,12 +126,9 @@ command_queue+=(
 rdu_logfile="$HOME"/Library/Logs/rancher-desktop/update.log
 
 if [[ -r $rdu_logfile ]]; then
-	rdu_lines=$(wc -l < "$rdu_logfile" | xargs)
-	rdu_range="$((rdu_lines < 10 ? 0 : rdu_lines - 10)):$rdu_lines"
-
 	command_queue+=(
-		# Check for any pending updates to RD; requires a restart of the app and its VM.
-		"bat --line-range=\"$rdu_range\" --paging=never --style=plain $rdu_logfile"
+		# Check (up to) last 10 lines of the log for any pending updates to RD; requires a restart of the app and its VM.
+		"bat --line-range='-10:' --paging=never --style=plain $rdu_logfile"
 	)
 fi
 
