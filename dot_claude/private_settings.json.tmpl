@@ -1,5 +1,4 @@
 {
-  "effortLevel": "max",
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
     "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4317",
@@ -9,18 +8,8 @@
     "OTEL_LOG_USER_PROMPTS": "1",
     "OTEL_METRICS_EXPORTER": "otlp"
   },
-  "statusLine": {
-    "type": "command",
-    "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
-  },
-  "extraKnownMarketplaces": {
-    "ovo-claude-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "ovotech/ovo-claude-plugins"
-      },
-      "autoUpdate": true
-    }
+  "permissions": {
+    "defaultMode": "acceptEdits"
   },
   "hooks": {
     "SessionStart": [
@@ -44,19 +33,41 @@
       }
     ]
   },
-  "spinnerVerbs": {
-    "mode": "replace",
-    "verbs": [
-      "Working"
-    ]
+  "worktree": {
+    "baseRef": "fresh"
   },
-  "theme": "auto",
-  "remoteControlAtStartup": true,
+  "statusLine": {
+    "type": "command",
+    "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+  },
+  "extraKnownMarketplaces": {
+    "ovo-claude-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "ovotech/ovo-claude-plugins"
+      },
+      "autoUpdate": true
+    }
+  },
   "sandbox": {
     "filesystem": {
       "allowWrite": [
         "~/.gnupg"
       ]
     }
-  }
+  },
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Working"
+    ]
+  },
+  "autoUpdatesChannel": "stable",
+  "minimumVersion": "2.1.204",
+  "theme": "auto",
+  "editorMode": "normal",
+  "verbose": false,
+  "preferredNotifChannel": "auto"
+  "effortLevel": "max",
+  "remoteControlAtStartup": true
 }
