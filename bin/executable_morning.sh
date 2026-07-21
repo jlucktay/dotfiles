@@ -51,12 +51,6 @@ docker run --privileged --rm tonistiigi/binfmt:qemu-v7.0.0 --install amd64 > /de
 
 declare -a command_queue=()
 
-# Do some notification cleanup, if there's a token ginsu can use.
-# Get it teed up before the GitHub commands are added to the queue.
-if [[ -n ${GITHUB_TOKEN-} ]]; then
-	command_queue+=("ginsu --owner-allowlist='ovotech'")
-fi
-
 # Disabled for the time being.
 if false; then
 	#
@@ -89,6 +83,12 @@ if [[ $day_of_week -ge 1 ]] && [[ $day_of_week -le 5 ]]; then
 		# Check PR mentions.
 		"open_chrome 'https://github.com/notifications?query=reason%3Amention'"
 	)
+fi
+
+# Do some notification cleanup, if there's a token ginsu can use.
+# The token will have already been retrieved so there is no interaction required for this command.
+if [[ -n ${GITHUB_TOKEN-} ]]; then
+	command_queue+=("ginsu --owner-allowlist='ovotech'")
 fi
 
 # Always update all the things.
