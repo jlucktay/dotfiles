@@ -8,6 +8,7 @@ The following rules apply to all interactions, workspaces, and projects across t
 
 - **Never perform destructive actions** (e.g., `rm -rf`, dropping databases, force pushing to main) without explicitly asking for permission first.
 - **Double-check paths** before writing or overwriting files to avoid accidental data loss.
+- **Confirm before committing** and do not automatically create pull requests without explicit confirmation.
 
 ## 2. Communication Style
 
