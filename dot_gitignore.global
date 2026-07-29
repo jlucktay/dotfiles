@@ -2,5 +2,8 @@
 ## core.excludesfile
 .DS_Store
 
-# Claude Code scratch directories for session data
+# Claude Code
+## Scratch directories for session data
 **/.claude/.cc-writes/
+## Local per-repo settings
+**/.claude/settings.local.json
