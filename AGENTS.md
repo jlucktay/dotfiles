@@ -9,6 +9,10 @@ The following rules apply to all interactions, workspaces, and projects across t
 - **Never perform destructive actions** (e.g., `rm -rf`, dropping databases, force pushing to main) without explicitly asking for permission first.
 - **Double-check paths** before writing or overwriting files to avoid accidental data loss.
 - **Confirm before committing** and do not automatically create pull requests without explicit confirmation.
+  - Never push commits or open PRs unless explicitly asked. For local script edits, keep changes on disk and do not create worktrees or draft PRs unprompted.
+  - All PR/branch work must happen in an isolated worktree, and worktrees must be cleaned up after the task completes.
+  - Commits should be grouped logically per change — confirm grouping before committing.
+- Merges blocked by required-review policy may only be overridden with `--admin` after explicit user confirmation.
 
 ## 2. Communication Style
 
@@ -40,6 +44,8 @@ The following rules apply to all interactions, workspaces, and projects across t
 ## 6. Formatting Constraints
 
 - **NO LINE WRAPPING**: Never wrap long lines or columns in code, comments, prose, or anywhere, in any file format. There are no line length limits.
+- Respect the line-wrapping/column style directive: do not column-wrap comments or Taskfile cmd blocks at ~80 chars.
+  - Leave folded block scalars with strip chomping indicators (`>-`) in YAML alone; their multiline strings are written that way in the first instance for the sake of readability.
 
 ## 7. Go Preferences
 
@@ -59,3 +65,8 @@ restricted, automatically prefix the commands with `GOWORK=off` to isolate execu
 
 - Before writing code for a new tool or feature, explicitly list out and cross-reference all project-specific instructions (e.g., `AGENTS.md`) alongside Global Ground
 Rules (like Go Preferences) in the thought process to ensure zero missed constraints.
+
+## 11. Scripting Conventions
+
+- Use `jq` (not Python) for JSON parsing and validation.
+- Use `set -u`-safe idioms in all shell scripts (guard against empty arrays).

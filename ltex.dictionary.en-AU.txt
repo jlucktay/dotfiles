@@ -28,5 +28,7 @@ Taskfile
 TODO
 Traefik
 Wiz
+worktree
+worktrees
 WunderGraph
 ZTNA
