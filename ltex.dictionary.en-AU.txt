@@ -4,6 +4,7 @@ Checkov
 cron
 Crossplane
 DDOS
+docstrings
 dotfiles
 Flexera
 Ghostty
@@ -20,6 +21,7 @@ Miro
 mise
 NDJSON
 OVO
+PEPs
 tailnet
 Tailscale
 Taskfile
