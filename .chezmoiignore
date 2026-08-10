@@ -1,7 +1,7 @@
 # Directories
-/lists/
-/rsync_tmbackup/
-/vscode/
+lists/
+rsync_tmbackup/
+vscode/
 
 # Scripts
 bootstrap.sh
@@ -13,11 +13,11 @@ README.md
 TODO.md
 
 # Symlinked elsewhere
-/chezmoi-config.json
+chezmoi-config.json
 
 # JSON Schema and Taskfile for wrangling
-/chezmoidata.schema.json
-/Taskfile.chezmoi.yaml
+chezmoidata.schema.json
+Taskfile.chezmoi.yaml
 
 # Bash eternal history
 bash_eternal_history.zip
@@ -27,4 +27,4 @@ bash_eternal_history.tar.gz.age
 Brewfile
 
 # Raw data to import
-/aws-sso.*.csv
+aws-sso.*.csv
