@@ -52,8 +52,11 @@
   "outputStyle": "Learning",
   "sandbox": {
     "filesystem": {
+      "allowRead": [
+        "{{ .chezmoi.homeDir }}/git"
+      ],
       "allowWrite": [
-        "~/.gnupg"
+        "{{ .chezmoi.homeDir }}/git/*"
       ]
     }
   },
