@@ -93,7 +93,7 @@ fi
 
 # Always update all the things.
 command_queue+=(
-	"HOMEBREW_NO_ASK=1 topgrade"
+	"GOPRIVATE=github.com/ovotech HOMEBREW_NO_ASK=1 topgrade"
 	"GOEXPERIMENT=jsonv2 go install github.com/Zxilly/go-size-analyzer/cmd/gsa@latest"
 )
 
