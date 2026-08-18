@@ -40,6 +40,7 @@ The following rules apply to all interactions, workspaces, and projects across t
 - If a tool isn't installed and there is no network access to perform an installation, I don't need to hear about it, just move on with the material that is available.
 - When I ask about the `yq` command, I am referring to the Go binary from `mikefarah`, and not any other variant.
 - Do not mix up `yq` with `jq`, and do not try to use `jq` keywords and syntax in `yq` pipelines and vice versa.
+- For observability, we use Datadog, so do not provide PromQL code samples as they are of no use.
 
 ## 6. Formatting Constraints
 
