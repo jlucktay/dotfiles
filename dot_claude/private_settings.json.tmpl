@@ -52,11 +52,12 @@
   "outputStyle": "Learning",
   "sandbox": {
     "filesystem": {
+      "allowWrite": [
+        "{{ .chezmoi.homeDir }}/git/*",
+        "git/*"
+      ],
       "allowRead": [
         "{{ .chezmoi.homeDir }}/git"
-      ],
-      "allowWrite": [
-        "{{ .chezmoi.homeDir }}/git/*"
       ]
     }
   },
@@ -73,5 +74,8 @@
   "verbose": false,
   "preferredNotifChannel": "auto",
   "remoteControlAtStartup": false,
+  "enabledPlugins": {
+    "datadog@claude-plugins-official": true
+  },
   "effortLevel": "max"
 }
