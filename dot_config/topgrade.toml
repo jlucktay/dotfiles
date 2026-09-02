@@ -60,7 +60,5 @@ autoremove = true
 git = false
 
 [go]
-# The 'gsa' tool uses json/v2 from stdlib which is still experimental at time of writing: https://github.com/Zxilly/go-size-analyzer/issues/530
 # Exclude specified binaries from 'gup update':
-gup_exclude = ["gsa"]
-# This tool will be updated directly from 'morning.sh'.
+gup_exclude = []

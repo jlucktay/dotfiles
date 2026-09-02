@@ -94,7 +94,6 @@ fi
 # Always update all the things.
 command_queue+=(
 	"GOPRIVATE=github.com/ovotech HOMEBREW_NO_ASK=1 topgrade"
-	"GOEXPERIMENT=jsonv2 go install github.com/Zxilly/go-size-analyzer/cmd/gsa@latest"
 )
 
 if check_rd_vm; then
