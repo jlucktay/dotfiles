@@ -9,10 +9,21 @@
     "OTEL_METRICS_EXPORTER": "otlp"
   },
   "permissions": {
-    "defaultMode": "acceptEdits"
+    "defaultMode": "auto"
   },
   "hooks": {
-    "SessionStart": [
+    "PostToolUse": [
+      {
+        "matcher": "EnterWorktree",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash {{ .chezmoi.homeDir }}/.claude/hooks/link-worktree-memory.sh"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
       {
         "hooks": [
           {
@@ -22,7 +33,7 @@
         ]
       }
     ],
-    "SessionEnd": [
+    "SessionStart": [
       {
         "hooks": [
           {
@@ -39,6 +50,9 @@
   "statusLine": {
     "type": "command",
     "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+  },
+  "enabledPlugins": {
+    "datadog@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ovo-claude-plugins": {
@@ -67,15 +81,13 @@
       "Tossing word salad"
     ]
   },
+  "effortLevel": "xhigh",
+  "askUserQuestionTimeout": "never",
   "autoUpdatesChannel": "stable",
   "minimumVersion": "2.1.204",
   "theme": "auto",
   "editorMode": "normal",
   "verbose": false,
   "preferredNotifChannel": "auto",
-  "remoteControlAtStartup": false,
-  "enabledPlugins": {
-    "datadog@claude-plugins-official": true
-  },
-  "effortLevel": "max"
+  "remoteControlAtStartup": false
 }
