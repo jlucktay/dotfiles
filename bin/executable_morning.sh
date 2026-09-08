@@ -136,11 +136,13 @@ tool_check "${command_queue[@]}"
 for cq in "${command_queue[@]}"; do
 	dslog "$cq"
 
-	if [[ $cq == "topgrade" ]]; then
-		if ! eval "$cq"; then
-			pop_gum "$cq"
-		fi
-	else
-		eval "$cq"
+	status=0
+	(
+		set -o errexit -o pipefail
+		eval -- "$cq"
+	) < /dev/null || status=$?
+
+	if ((status != 0)); then
+		pop_gum "❌ exit status $status from command: $cq"
 	fi
 done
