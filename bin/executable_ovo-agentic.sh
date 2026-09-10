@@ -6,10 +6,10 @@ agentic_gits_raw=$(fd --hidden --type directory --no-ignore-vcs '^\.git$' "$HOME
 mapfile -t agentic_gits <<< "$agentic_gits_raw"
 
 for ag in "${agentic_gits[@]}"; do
+	cd "${ag%"/.git/"}"
+
 	(
 		set -x
-
-		cd "${ag%"/.git/"}"
 
 		git rs
 		git worktree prune
