@@ -10,9 +10,9 @@ This skill is not scoped to any particular repo or project; it is across the ent
 
 Query the GitHub API for pull requests, with the following filters/fields:
 
-- Authored by me, [`@jlucktay`](https://github.com/jlucktay)
-- Inside org `ovotech`
-- In draft (grey) or open (green) state, not closed (red)/merged (purple)
+- Authored by me: `author:@me`
+- Inside the OVO Tech org: `org:ovotech`
+- In draft (grey) or open (green) state, not closed (red)/merged (purple)/archived
 
 Show full URL links to each PR, along with:
 
