@@ -2,6 +2,7 @@ alexstrnik/browserino
 buildpacks/tap
 common-fate/granted
 flux-iac/tap
+janosmiko/tap
 kyverno/chainsaw
 rafaelgarrido/caveats
 tinygo-org/tools

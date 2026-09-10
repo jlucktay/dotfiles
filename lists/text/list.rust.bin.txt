@@ -2,21 +2,25 @@ cargo-cache v0.8.3:
     cargo-cache
 cargo-info v0.7.7:
     cargo-info
-cargo-update v20.0.0:
+cargo-update v22.1.1:
     cargo-install-update
     cargo-install-update-config
-cargo-upgrades v2.2.5:
+cargo-upgrades v3.1.0:
     cargo-upgrades
-difftastic v0.68.0:
+difftastic v0.70.0:
     difft
 kondo v0.9.0:
     kondo
-mise v2026.4.18:
+mise v2026.9.4:
     mise
-starship v1.25.0:
+presenterm v0.16.1 (https://github.com/mfontanini/presenterm?rev=3326cf7#3326cf7b):
+    presenterm
+starship v1.26.0:
     starship
-usage-cli v3.2.1:
+tokei v15.0.0:
+    tokei
+usage-cli v6.8.0:
     usage
-worker-build v0.8.1:
+worker-build v0.8.5:
     worker-build
     worker-codegen

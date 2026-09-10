@@ -18,6 +18,7 @@
 /Users/james.lucktaylor/git/github.com/containerd/containerd
 /Users/james.lucktaylor/git/github.com/cplee/github-actions-demo
 /Users/james.lucktaylor/git/github.com/crossplane-contrib/provider-upjet-gcp
+/Users/james.lucktaylor/git/github.com/crossplane/artwork
 /Users/james.lucktaylor/git/github.com/crossplane/crossplane
 /Users/james.lucktaylor/git/github.com/cue-lang/vscode-cue
 /Users/james.lucktaylor/git/github.com/datreeio/CRDs-catalog
@@ -35,6 +36,7 @@
 /Users/james.lucktaylor/git/github.com/google/oauth2l
 /Users/james.lucktaylor/git/github.com/googleapis/google-api-go-client
 /Users/james.lucktaylor/git/github.com/googleapis/google-cloud-go
+/Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/bank-of-anthos
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/buildpack-samples
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/cloud-sql-proxy
 /Users/james.lucktaylor/git/github.com/GoogleCloudPlatform/guest-agent
@@ -88,6 +90,7 @@
 /Users/james.lucktaylor/git/github.com/jlucktay/tyk-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/typescript-workbench
 /Users/james.lucktaylor/git/github.com/jlucktay/workshops-golanguk-2019-advanced
+/Users/james.lucktaylor/git/github.com/jlucktay/wundergraph-exercise
 /Users/james.lucktaylor/git/github.com/jlucktay/zig-workbench
 /Users/james.lucktaylor/git/github.com/kubecfg/kubecfg
 /Users/james.lucktaylor/git/github.com/kubernetes-sigs/cli-experimental
@@ -108,12 +111,15 @@
 /Users/james.lucktaylor/git/github.com/qarmin/czkawka
 /Users/james.lucktaylor/git/github.com/Ramez-/go-video-conference
 /Users/james.lucktaylor/git/github.com/rust-random/rand
+/Users/james.lucktaylor/git/github.com/s0xDk/ghostty-blackhole
 /Users/james.lucktaylor/git/github.com/santhosh-tekuri/jsonschema
 /Users/james.lucktaylor/git/github.com/self-actuated/actions-usage
 /Users/james.lucktaylor/git/github.com/sgotham/bedrock-platform-gitops
 /Users/james.lucktaylor/git/github.com/sportstimes/f1
+/Users/james.lucktaylor/git/github.com/spotinst/charts
 /Users/james.lucktaylor/git/github.com/starship/starship
 /Users/james.lucktaylor/git/github.com/stateful/runme
+/Users/james.lucktaylor/git/github.com/terraform-google-modules/terraform-docs-samples
 /Users/james.lucktaylor/git/github.com/terraform-google-modules/terraform-google-container-vm
 /Users/james.lucktaylor/git/github.com/terraform-google-modules/terraform-google-lb-http
 /Users/james.lucktaylor/git/github.com/terraform-google-modules/terraform-google-project-factory
@@ -126,6 +132,7 @@
 /Users/james.lucktaylor/git/github.com/webrtc/apprtc
 /Users/james.lucktaylor/git/github.com/webrtc/samples
 /Users/james.lucktaylor/git/github.com/wiz-sec/charts
+/Users/james.lucktaylor/git/github.com/wundergraph/cosmo
 /Users/james.lucktaylor/git/github.com/yannh/kubernetes-json-schema
 /Users/james.lucktaylor/git/go.jlucktay.dev/adventofcode
 /Users/james.lucktaylor/git/go.jlucktay.dev/arrowverse

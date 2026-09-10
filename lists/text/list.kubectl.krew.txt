@@ -1,3 +1,4 @@
 explore
 krew
+resource-capacity
 tree
