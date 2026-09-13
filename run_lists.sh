@@ -81,7 +81,7 @@ process_list "brew list -1 --cask" "brew.cask"
 
 # pnpm
 pnpm_list_cmd='pnpm list --global --json --long \
-  | jq --raw-output '\''.[].dependencies | to_entries | .[].value | "\(.homepage):\(.version)"'\'
+  | jq --raw-output '\''.[].dependencies | to_entries | .[].value | "\(.repository):\(.version)"'\'
 process_list "$pnpm_list_cmd" "pnpm"
 
 # VSCode extensions
