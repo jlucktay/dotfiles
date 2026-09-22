@@ -7,30 +7,21 @@ function topgrade_only() {
 	set -o pipefail
 
 	local yq_output
-	yq_output=$(yq --output-format=yaml '.misc.only | ... comments=""' "$HOME"/.config/topgrade.toml)
+	yq_output=$(yq --output-format=yaml '.misc.only[]' "$HOME"/.config/topgrade.toml)
 
 	local -a topgrade_misc_only
 	mapfile -t topgrade_misc_only <<< "$yq_output"
 
-	if [[ $# -ne 1 ]]; then
-		echo >&2 "Must pass exactly one argument for the 'only' Topgrade section to run."
-		echo >&2 "Valid options:"
-		echo >&2 "$yq_output"
-
-		return 1
-	fi
-
 	local only=$1
-
-	# Strip '- ' prefix from every element.
-	topgrade_misc_only=("${topgrade_misc_only[@]#'- '}")
-
 	local only_found_in_config=0
 
 	local i
 	for i in "${topgrade_misc_only[@]}"; do
 		if [[ $i == "$only" ]]; then
 			only_found_in_config=1
+			shift
+
+			break
 		fi
 	done
 
@@ -51,7 +42,7 @@ function topgrade_only() {
 	done
 
 	set -x
-	topgrade --only="$only" "${topgrade_disable_flags[@]}"
+	topgrade --only="$only" "${topgrade_disable_flags[@]}" "$@"
 }
 
 export -f topgrade_only
