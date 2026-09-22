@@ -96,3 +96,9 @@ tool_check assume
 	osascript -e 'quit app "Google Chat"'
 	osascript -e 'quit app "Slack"'
 )
+
+# Put the coffee mug down.
+(
+	set -x
+	killall -q -v caffeinate || true
+)
