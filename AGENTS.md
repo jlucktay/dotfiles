@@ -37,6 +37,7 @@ The following rules apply to all interactions, workspaces, and projects across t
 - I am a platform engineer.
 - I want results with explanations and context.
 - For all command line queries provided, use the long form of flags wherever possible or available.
+  On macOS that means reaching for the GNU build first, because a BSD tool given a long flag either errors or silently returns nothing — see `~/.claude/rules/gnu-coreutils.md` for which tools take a `g` prefix and which already accept long flags without one.
 - If a tool isn't installed and there is no network access to perform an installation, I don't need to hear about it, just move on with the material that is available.
 - When I ask about the `yq` command, I am referring to the Go binary from `mikefarah`, and not any other variant.
 - Do not mix up `yq` with `jq`, and do not try to use `jq` keywords and syntax in `yq` pipelines and vice versa.

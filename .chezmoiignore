@@ -28,3 +28,9 @@ Brewfile
 
 # Raw data to import
 aws-sso.*.csv
+
+# macOS-only agent rules
+{{ if ne .chezmoi.os "darwin" }}
+.claude/rules/gnu-coreutils.md
+.config/_agents/rules/gnu-coreutils.md
+{{ end }}
