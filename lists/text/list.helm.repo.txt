@@ -1,0 +1,26 @@
+[
+  {
+    "name": "external-secrets",
+    "url": "https://charts.external-secrets.io"
+  },
+  {
+    "name": "argo",
+    "url": "https://argoproj.github.io/argo-helm"
+  },
+  {
+    "name": "bitnami",
+    "url": "https://charts.bitnami.com/bitnami"
+  },
+  {
+    "name": "headlamp",
+    "url": "https://kubernetes-sigs.github.io/headlamp/"
+  },
+  {
+    "name": "tailscale",
+    "url": "https://pkgs.tailscale.com/helmcharts"
+  },
+  {
+    "name": "kyverno",
+    "url": "https://kyverno.github.io/kyverno/"
+  }
+]

@@ -1,3 +1,4 @@
+abseil
 ada-url
 autojump
 bash
@@ -33,6 +34,7 @@ go
 granted
 gron
 hdrhistogram_c
+highway
 hyperfine
 icu4c@78
 isl
@@ -48,8 +50,6 @@ libgpg-error
 liblinear
 libmpc
 libnghttp2
-libnghttp3
-libngtcp2
 libomp
 libpq
 libssh2

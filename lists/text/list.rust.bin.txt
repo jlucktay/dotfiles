@@ -7,11 +7,11 @@ cargo-update v22.1.1:
     cargo-install-update-config
 cargo-upgrades v3.1.0:
     cargo-upgrades
-difftastic v0.70.0:
+difftastic v0.71.0:
     difft
 kondo v0.9.0:
     kondo
-mise v2026.9.4:
+mise v2026.9.12:
     mise
 presenterm v0.16.1 (https://github.com/mfontanini/presenterm?rev=3326cf7#3326cf7b):
     presenterm
@@ -19,8 +19,8 @@ starship v1.26.0:
     starship
 tokei v15.0.0:
     tokei
-usage-cli v6.8.0:
+usage-cli v6.11.0:
     usage
-worker-build v0.8.5:
+worker-build v0.8.6:
     worker-build
     worker-codegen

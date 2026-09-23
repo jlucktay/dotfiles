@@ -10,7 +10,7 @@ cloud-sql-proxy: github.com/GoogleCloudPlatform/cloud-sql-proxy/v2@v2.25.4
         gomajor: github.com/icholy/gomajor@v0.15.0
     govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.8.0
             gsa: github.com/Zxilly/go-size-analyzer/cmd/gsa@v1.14.0
-            gup: github.com/nao1215/gup@v1.9.1
+            gup: github.com/nao1215/gup@v1.10.0
             ihj: github.com/mikecsmith/ihj/cmd/ihj@v0.5.18
              jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
        minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.7
