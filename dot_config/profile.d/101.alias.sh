@@ -1,5 +1,9 @@
 ### Useful aliases/functions
 
+# Aliases are a convenience for a human at a prompt.
+# A non-interactive shell — a script, or a tool sourcing this profile to pick up PATH — must get the real commands: `rm -i` there prompts, deletes nothing, and still exits 0.
+[[ $- == *i* ]] || return 0
+
 # Interactive and verbose
 if command -v gcp &> /dev/null; then
 	alias cp='gcp -iv'

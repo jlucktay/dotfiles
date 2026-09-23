@@ -115,7 +115,7 @@ fi
 
 # git-branchless
 # https://github.com/arxanas/git-branchless/wiki/Installation
-if command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
+if [[ $- == *i* ]] && command -v git &> /dev/null && command -v git-branchless &> /dev/null; then
 	alias git='git-branchless wrap --'
 fi
 

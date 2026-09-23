@@ -1,3 +1,7 @@
+# Aliases are a convenience for a human at a prompt.
+# A non-interactive shell — a script, or a tool sourcing this profile to pick up PATH — must get the real commands: `rm -i` there prompts, deletes nothing, and still exits 0.
+[[ $- == *i* ]] || return 0
+
 # Before making changes:
 # - if it's a mise tool, then usage-cli will (probably) have it covered
 # - check presence/absence of completions with 'complete -p <tool>'
