@@ -101,3 +101,9 @@ process_list "gh extension list" "gh"
 
 # Mac App Store
 process_list "mas list" "mas" skipsort
+
+# Helm repos
+process_list "helm repo list --output=json | jq" "helm.repo" skipsort
+
+# Claude Code plugins
+process_list "claude plugins list --json | jq" "claude" skipsort
