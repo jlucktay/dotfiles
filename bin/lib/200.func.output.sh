@@ -10,12 +10,12 @@ dslog() {
 	local log_date
 	log_date=$(date +'%Y-%m-%dT%H:%M:%S%z')
 
-	if command -v gum &> /dev/null; then
+	if mise which gum &> /dev/null; then
 		local yellow_ld green_sn
-		yellow_ld=$(gum style "$log_date" --foreground='#FFFF00')
-		green_sn=$(gum style "${SCRIPT_NAME:?}" --foreground='#00FF00')
+		yellow_ld=$(mise exec -- gum style "$log_date" --foreground='#FFFF00')
+		green_sn=$(mise exec -- gum style "${SCRIPT_NAME:?}" --foreground='#00FF00')
 
-		gum join "[" "$yellow_ld" "] " "$green_sn" ": " "$*"
+		mise exec -- gum join "[" "$yellow_ld" "] " "$green_sn" ": " "$*"
 	else
 		echo "[$log_date] $SCRIPT_NAME: $*"
 	fi
@@ -29,11 +29,11 @@ err() {
 	exit 1
 }
 
-if command -v gum &> /dev/null; then
+if mise which gum &> /dev/null; then
 	# Make some output text more noticeable.
 	pop_gum() {
 		local input_text
 		input_text="${*-}"
-		gum style "$input_text" --foreground='#9400D3' --border=rounded --align=center --padding='0 1' --italic
+		mise exec -- gum style "$input_text" --foreground='#9400D3' --border=rounded --align=center --padding='0 1' --italic
 	}
 fi
