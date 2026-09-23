@@ -187,3 +187,9 @@ for _tcb in "${_tools_completion_bash[@]}"; do
 done
 
 unset _arr_tcb _bash_completion_dir _tcb _tools_completion_bash
+
+# `ll` is an alias for `eza` so replicate `complete -p eza` with the last word swapped out for `ll`.
+declare _cpe
+_cpe=$(complete -p eza)
+${_cpe% *} ll
+unset _cpe
