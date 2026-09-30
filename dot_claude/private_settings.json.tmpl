@@ -11,6 +11,7 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "claude-opus-5-5[1m]",
   "hooks": {
     "PostToolUse": [
       {
@@ -21,6 +22,75 @@
             "command": "bash {{ .chezmoi.homeDir }}/.claude/hooks/link-worktree-memory.sh"
           }
         ]
+      },
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PostToolUseFailure": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
+          }
+        ]
       }
     ],
     "SessionEnd": [
@@ -29,6 +99,17 @@
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+          },
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
           }
         ]
       }
@@ -39,6 +120,34 @@
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+          },
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/aicodemetricsd",
+            "args": [
+              "hook",
+              "claude",
+              "--hook-input",
+              "stdin"
+            ],
+            "timeout": 10
           }
         ]
       }
@@ -75,6 +184,7 @@
       ]
     }
   },
+  "feedbackDrafts": "notify",
   "spinnerVerbs": {
     "mode": "replace",
     "verbs": [
@@ -82,13 +192,21 @@
     ]
   },
   "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "askUserQuestionTimeout": "never",
+  "dialogExpiry": "never",
   "autoUpdatesChannel": "stable",
-  "minimumVersion": "2.1.204",
+  "minimumVersion": "2.1.280",
+  "timeFormat": "24-hour",
   "theme": "auto",
   "editorMode": "normal",
   "verbose": false,
   "preferredNotifChannel": "auto",
-  "remoteControlAtStartup": false,
-  "model": "claude-opus-5-5[1m]"
+  "autoCompactEnabled": false,
+  "switchModelsOnFlag": false,
+  "remoteControlAtStartup": false
 }

@@ -1,0 +1,6 @@
+---
+overrides:
+  - files:
+      - settings.json
+    options:
+      parser: json-stringify
