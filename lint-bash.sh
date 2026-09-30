@@ -1,15 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+script_directory="$(cd "$(dirname "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")" &> /dev/null && pwd)"
+readonly script_directory
+
+if ((BASH_VERSINFO[0] < 4)); then
+	echo >&2 "$0 needs Bash 4 or later; this is $BASH_VERSION."
+
+	exit 1
+fi
+
 ### NOTES
 # Linters called by this script are (where possible) configured to follow Google's shell style guide:
 # https://google.github.io/styleguide/shell.xml
-
-script_dir="$(cd "$(dirname "${BASH_SOURCE[-1]}")" &> /dev/null && pwd)"
+# One notable exception from the above guide is using tabs to indent everywhere, not just inside here-documents.
 
 # When calling 'find', some Bash scripts that aren't mine are excluded.
 find_scripts=$(
-	find -x "$script_dir" \
+	find -x "$script_directory" \
 		-type d -name test_helper -prune -or \
 		-type f -name "dot_fzf.bash" -or \
 		-type f -name "git-completion.bash" -or \
@@ -23,7 +31,7 @@ mapfile -t script_files <<< "$find_scripts"
 shfmt_flags=(
 	"--binary-next-line"
 	"--case-indent"
-	"--indent=2"
+	"--indent=0"
 	"--simplify"
 	"--space-redirects"
 	"--write"

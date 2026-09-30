@@ -2,8 +2,14 @@
 set -euo pipefail
 
 # Boilerplate to bring in library script(s).
-script_directory="$(cd "$(dirname "${BASH_SOURCE[-1]}")" &> /dev/null && pwd)"
+script_directory="$(cd "$(dirname "${BASH_SOURCE[${#BASH_SOURCE[@]} - 1]}")" &> /dev/null && pwd)"
 readonly script_directory
+
+if ((BASH_VERSINFO[0] < 4)); then
+	echo >&2 "$0 needs Bash 4 or later; this is $BASH_VERSION."
+
+	exit 1
+fi
 
 for lib in "$script_directory"/lib/*.sh; do
 	# shellcheck disable=SC1090
@@ -96,6 +102,16 @@ tool_check assume
 	osascript -e 'quit app "Google Chat"'
 	osascript -e 'quit app "Slack"'
 )
+
+# Back up Claude Code memories while caffeinate still holds the machine awake, since the backup waits for Google Drive to confirm each upload.
+if "$script_directory/eod-backup.sh"; then
+	dslog "✅ Claude Code memories backed up to Google Drive."
+else
+	dslog "❌ Claude Code memory backup failed; the reason is logged above."
+fi
+
+# check if the Claude Code CLI is currently running
+#   - also maybe list/summarise any sessions still open
 
 # Put the coffee mug down.
 (
