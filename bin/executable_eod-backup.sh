@@ -41,10 +41,13 @@ ObjC.import('Foundation');
 function run(argv) {
   const fm = $.NSFileManager.defaultManager;
   const problems = [];
+  // Google Drive for desktop's built-in ignore list: these never upload, so they would stay pending forever.
+  const neverUploaded = /^(\.DS_Store|\._.*|\.apdisk|\.localized|Icon\r|\.Trash|\.Spotlight-V100|\.fseventsd)$/;
   for (const root of argv) {
     const walker = fm.enumeratorAtPath(root);
     if (walker.isNil()) { problems.push('missing\t' + root); continue; }
     for (let rel = walker.nextObject; !rel.isNil(); rel = walker.nextObject) {
+      if (ObjC.unwrap(rel).split('/').some((name) => neverUploaded.test(name))) { continue; }
       const path = root + '/' + ObjC.unwrap(rel);
       const isDir = Ref();
       fm.fileExistsAtPathIsDirectory(path, isDir);
