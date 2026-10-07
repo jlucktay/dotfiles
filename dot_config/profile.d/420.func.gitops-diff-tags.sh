@@ -2,6 +2,8 @@ if ! command -v fzf &> /dev/null; then
 	return 0
 fi
 
+readonly ovo_gitops_dir="$HOME/git/github.com/ovotech/evergreen-agentic/bedrock-platform-gitops"
+
 # gitops_diff_tags: show me the diff of a Helm chart in the gitops repo between version release tags.
 function gitops_diff_tags() {
 	local -
@@ -19,7 +21,7 @@ function gitops_diff_tags() {
 		return 2
 	fi
 
-	if ! [[ -d "$HOME"/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops/helm/"$1" ]]; then
+	if ! [[ -d $ovo_gitops_dir/helm/"$1" ]]; then
 		echo >&2 "error: Helm chart '$1' not found in the gitops repo"
 
 		return 3
@@ -29,7 +31,7 @@ function gitops_diff_tags() {
 	current_directory=$(pwd)
 	trap 'cd $current_directory' RETURN
 
-	cd "$HOME"/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops || return
+	cd "$ovo_gitops_dir" || return
 
 	local old_tag new_tag
 	old_tag="$(git tag --list | fzf --query="helm/$1")"
@@ -49,7 +51,7 @@ function _gitops_diff_tags() {
 
 	# Get valid Helm chart names from the gitops repo.
 	local chart_names
-	chart_names=$(fd --base-directory="$HOME"/git/github.com/ovotech/bedrock-platform-gitops/_bedrock-platform-gitops/helm/ --exact-depth=1 --path-separator='' --type=directory .)
+	chart_names=$(fd --base-directory="$ovo_gitops_dir/helm/" --exact-depth=1 --path-separator='' --type=directory .)
 
 	# Generate possible completions with the chart names.
 	local compgen_chart_names
