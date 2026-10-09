@@ -113,6 +113,15 @@ fi
 # check if the Claude Code CLI is currently running
 #   - also maybe list/summarise any sessions still open
 
+# Sync Obsidian using the headless client.
+# Doesn't work if WARP is connected.
+(
+	set -x
+
+	warp-cli disconnect
+	ob sync --path "$HOME/jlucktay-obsidian"
+)
+
 # Put the coffee mug down.
 (
 	set -x
