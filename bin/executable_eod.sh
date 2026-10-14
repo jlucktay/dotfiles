@@ -20,7 +20,14 @@ done
 dslog "start"
 trap 'dslog "finish"' 0
 
-tool_check docker gum kind
+tool_check docker gum kind ob warp-cli
+
+# Headless Obsidian Sync won't work later if WARP is connected, and it takes a moment to go into effect after this call is made.
+(
+	set -x
+
+	warp-cli disconnect
+)
 
 if docker info &> /dev/null; then
 	dslog "✅ Docker daemon is running."
@@ -113,12 +120,10 @@ fi
 # check if the Claude Code CLI is currently running
 #   - also maybe list/summarise any sessions still open
 
-# Sync Obsidian using the headless client.
-# Doesn't work if WARP is connected.
+# Sync Obsidian using the headless client; doesn't work if WARP is connected.
 (
 	set -x
 
-	warp-cli disconnect
 	ob sync --path "$HOME/jlucktay-obsidian"
 )
 
