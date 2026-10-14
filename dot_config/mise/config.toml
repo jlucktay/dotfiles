@@ -64,6 +64,11 @@ idiomatic_version_file_enable_tools = []
 # Filter tool versions by release date to limit supply chain risk.
 minimum_release_age = "7d"
 
+# Look after yourself.
+self_update.auto = true
+self_update.check_duration = "3d"
+self_update.minimum_release_age = "3d"
+
 [settings.status]
 missing_tools = "always"
 show_env = true
