@@ -1,21 +1,21 @@
       cineworld: go.jlucktay.dev/golang-workbench/cineworld@v0.5.0
-cloud-sql-proxy: github.com/GoogleCloudPlatform/cloud-sql-proxy/v2@v2.25.4
+cloud-sql-proxy: github.com/GoogleCloudPlatform/cloud-sql-proxy/v2@v2.26.0
  dd-slo-emitter: go.jlucktay.dev/golang-workbench/dd-slo-emitter@v0.1.1
         diffyml: github.com/szhekpisov/diffyml@v1.8.1
             dtm: go.jlucktay.dev/golang-workbench/dtm@v0.2.2
           ginsu: go.jlucktay.dev/golang-workbench/ginsu@v0.13.3
         gocyclo: github.com/fzipp/gocyclo/cmd/gocyclo@v0.6.0
         gofumpt: mvdan.cc/gofumpt@v0.12.0
-      goimports: golang.org/x/tools/cmd/goimports@v0.50.0
+      goimports: golang.org/x/tools/cmd/goimports@v0.52.0
         gomajor: github.com/icholy/gomajor@v0.15.0
-    govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.8.0
-            gsa: github.com/Zxilly/go-size-analyzer/cmd/gsa@v1.14.0
-            gup: github.com/nao1215/gup@v1.10.0
+    govulncheck: golang.org/x/vuln/cmd/govulncheck@v1.9.0
+            gsa: github.com/Zxilly/go-size-analyzer/cmd/gsa@v1.14.1
+            gup: github.com/nao1215/gup@v1.10.3
             ihj: github.com/mikecsmith/ihj/cmd/ihj@v0.5.18
              jv: github.com/santhosh-tekuri/jsonschema/cmd/jv@v0.7.0
        minimock: github.com/gojuno/minimock/v3/cmd/minimock@v3.4.7
-        pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.5.0
-    pkgsite-cli: golang.org/x/pkgsite/cmd/internal/pkgsite-cli@v0.5.0
+        pkgsite: golang.org/x/pkgsite/cmd/pkgsite@v0.6.0
+    pkgsite-cli: golang.org/x/pkgsite/cmd/internal/pkgsite-cli@v0.6.0
          popeye: github.com/derailed/popeye@v0.22.1
           shfmt: mvdan.cc/sh/v3/cmd/shfmt@v3.14.1
        sidekick: github.com/ovotech/sidekick/cmd/sidekick@v1.7.1

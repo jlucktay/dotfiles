@@ -1,3 +1,4 @@
 certifi==2026.7.22
 pip==26.2.1
+pycparser==3.11
 wheel==0.48.0

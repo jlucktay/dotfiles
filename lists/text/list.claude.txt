@@ -1,18 +1,19 @@
 [
   {
     "id": "atlassian@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/atlassian/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/atlassian/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.980Z",
+    "lastUpdated": "2026-10-14T14:09:20.376Z",
     "mcpServers": {
       "atlassian": {
         "type": "http",
         "url": "https://mcp.atlassian.com/v1/mcp"
       }
-    }
+    },
+    "projectEnabled": false
   },
   {
     "id": "claude-md-management@claude-plugins-official",
@@ -21,7 +22,8 @@
     "enabled": true,
     "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/claude-md-management/1.0.0",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-09T15:10:40.922Z"
+    "lastUpdated": "2026-09-09T15:10:40.922Z",
+    "projectEnabled": false
   },
   {
     "id": "code-simplifier@claude-plugins-official",
@@ -30,16 +32,18 @@
     "enabled": true,
     "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-09T15:10:40.922Z"
+    "lastUpdated": "2026-09-09T15:10:40.922Z",
+    "projectEnabled": false
   },
   {
     "id": "data-eng@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/data-eng/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/data-eng/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.976Z"
+    "lastUpdated": "2026-10-14T14:09:20.376Z",
+    "projectEnabled": false
   },
   {
     "id": "datadog@claude-plugins-official",
@@ -59,25 +63,27 @@
           "X-Datadog-MCP-Toolsets": "${DD_MCP_TOOLSETS:-}"
         }
       }
-    }
+    },
+    "projectEnabled": true
   },
   {
     "id": "design@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/design/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/design/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.977Z"
+    "lastUpdated": "2026-10-14T14:09:20.377Z",
+    "projectEnabled": false
   },
   {
     "id": "devops@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/devops/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/devops/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.975Z",
+    "lastUpdated": "2026-10-14T14:09:20.377Z",
     "mcpServers": {
       "datadog": {
         "type": "http",
@@ -90,34 +96,37 @@
           "Wiz-DataCenter": "eu6"
         }
       }
-    }
+    },
+    "projectEnabled": false
   },
   {
     "id": "feature-dev@claude-plugins-official",
-    "version": "db467cc56673",
+    "version": "641d925db5a6",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/feature-dev/db467cc56673",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/feature-dev/641d925db5a6",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T08:14:52.846Z"
+    "lastUpdated": "2026-10-14T14:09:20.381Z",
+    "projectEnabled": false
   },
   {
     "id": "frontend@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/frontend/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/frontend/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.979Z"
+    "lastUpdated": "2026-10-14T14:09:20.379Z",
+    "projectEnabled": false
   },
   {
     "id": "google@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/google/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/google/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.980Z",
+    "lastUpdated": "2026-10-14T14:09:20.378Z",
     "mcpServers": {
       "google-workspace": {
         "command": "node",
@@ -125,16 +134,17 @@
           "${CLAUDE_PLUGIN_ROOT}/servers/google-workspace/dist/index.cjs"
         ]
       }
-    }
+    },
+    "projectEnabled": false
   },
   {
     "id": "ovo-core@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/ovo-core/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/ovo-core/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.978Z",
+    "lastUpdated": "2026-10-14T14:09:20.375Z",
     "mcpServers": {
       "repo-context": {
         "command": "node",
@@ -148,25 +158,28 @@
           "@ovotech/tech-handbook-mcp@latest"
         ]
       }
-    }
+    },
+    "projectEnabled": false
   },
   {
     "id": "pr-review-toolkit@claude-plugins-official",
-    "version": "db467cc56673",
+    "version": "641d925db5a6",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/db467cc56673",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/641d925db5a6",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T08:14:52.845Z"
+    "lastUpdated": "2026-10-14T14:09:20.380Z",
+    "projectEnabled": false
   },
   {
     "id": "product-process@ovo-claude-plugins",
-    "version": "f6392bd75601",
+    "version": "7aebd6735c72",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/product-process/f6392bd75601",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/product-process/7aebd6735c72",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-23T10:47:32.977Z"
+    "lastUpdated": "2026-10-14T14:09:20.375Z",
+    "projectEnabled": false
   },
   {
     "id": "pyright-lsp@claude-plugins-official",
@@ -175,7 +188,8 @@
     "enabled": true,
     "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-09T15:10:40.922Z"
+    "lastUpdated": "2026-09-09T15:10:40.922Z",
+    "projectEnabled": false
   },
   {
     "id": "typescript-lsp@claude-plugins-official",
@@ -184,6 +198,7 @@
     "enabled": true,
     "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-09-09T15:10:40.922Z"
+    "lastUpdated": "2026-09-09T15:10:40.922Z",
+    "projectEnabled": false
   }
 ]
