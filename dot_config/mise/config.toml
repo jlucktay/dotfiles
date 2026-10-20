@@ -28,7 +28,6 @@
 "github:go-task/task" = "latest"
 "github:jlucktay/my-github-repos" = "latest"
 "github:slsa-framework/slsa-verifier" = "latest"
-"github:terrastruct/d2" = "latest"
 "github:twpayne/chezmoi" = "latest"
 "pipx:yamllint" = "latest"
 pipx = "latest"
