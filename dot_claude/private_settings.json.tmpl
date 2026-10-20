@@ -1,4 +1,5 @@
 {
+  {{ if eq .profile "ovo" -}}
   "env": {
     "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
     "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4317",
@@ -8,6 +9,7 @@
     "OTEL_LOG_USER_PROMPTS": "1",
     "OTEL_METRICS_EXPORTER": "otlp"
   },
+  {{ end -}}
   "permissions": {
     "defaultMode": "auto"
   },
@@ -22,6 +24,7 @@
             "command": "bash {{ .chezmoi.homeDir }}/.claude/hooks/link-worktree-memory.sh"
           }
         ]
+      {{ if eq .profile "ovo" -}}
       },
       {
         "matcher": "*",
@@ -38,8 +41,10 @@
             "timeout": 10
           }
         ]
+      {{ end -}}
       }
     ],
+    {{ if eq .profile "ovo" -}}
     "PostToolUseFailure": [
       {
         "matcher": "*",
@@ -93,12 +98,14 @@
         ]
       }
     ],
+    {{ end -}}
     "SessionEnd": [
       {
         "hooks": [
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+          {{ if eq .profile "ovo" -}}
           },
           {
             "type": "command",
@@ -110,6 +117,7 @@
               "stdin"
             ],
             "timeout": 10
+          {{ end -}}
           }
         ]
       }
@@ -120,6 +128,7 @@
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
+          {{ if eq .profile "ovo" -}}
           },
           {
             "type": "command",
@@ -131,9 +140,11 @@
               "stdin"
             ],
             "timeout": 10
+          {{ end -}}
           }
         ]
       }
+    {{ if eq .profile "ovo" -}}
     ],
     "Stop": [
       {
@@ -151,6 +162,7 @@
           }
         ]
       }
+    {{ end -}}
     ]
   },
   "worktree": {
@@ -163,6 +175,7 @@
   "enabledPlugins": {
     "datadog@claude-plugins-official": true
   },
+  {{ if eq .profile "ovo" -}}
   "extraKnownMarketplaces": {
     "ovo-claude-plugins": {
       "source": {
@@ -172,7 +185,9 @@
       "autoUpdate": true
     }
   },
+  {{ end -}}
   "outputStyle": "Learning",
+  {{ if eq .profile "ovo" -}}
   "sandbox": {
     "filesystem": {
       "allowWrite": [
@@ -184,6 +199,7 @@
       ]
     }
   },
+  {{ end -}}
   "feedbackDrafts": "notify",
   "spinnerVerbs": {
     "mode": "replace",
