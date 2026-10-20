@@ -12,7 +12,6 @@
 "aqua:google/yamlfmt" = "latest"
 "aqua:GoogleContainerTools/skaffold" = "latest"
 "aqua:hashicorp/terraform" = "latest"
-"aqua:hashicorp/vault" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubecolor/kubecolor" = "latest"
