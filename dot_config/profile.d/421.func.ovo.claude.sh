@@ -1,3 +1,13 @@
+if ! chezmoi_profile=$(yq --exit-status ".profile" "$HOME"/.local/share/chezmoi/.chezmoidata.yaml); then
+	return 0
+fi
+
+if [[ $chezmoi_profile != "ovo" ]]; then
+	unset chezmoi_profile
+
+	return 0
+fi
+
 # OVO Claude Code OTel collector wrapper
 claude-ovo() {
 	local -
@@ -30,3 +40,5 @@ claude-ovo() {
 
 	command claude "$@"
 }
+
+unset chezmoi_profile
