@@ -6,6 +6,9 @@
 "aqua:FiloSottile/age" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:google/yamlfmt" = "latest"
+{{ if ne .profile "ovo" -}}
+"aqua:helm/helm" = "latest"
+{{ end -}}
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubecolor/kubecolor" = "latest"
