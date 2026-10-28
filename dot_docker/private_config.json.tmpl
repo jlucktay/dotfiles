@@ -1,3 +1,11 @@
+{{ if eq .profile "ovo" -}}
+{
+  "auths": {
+    "ghcr.io": {}
+  },
+  "credsStore": "osxkeychain"
+}
+{{ else -}}
 {
   "auths": {},
   "cliPluginsExtraDirs": [
@@ -5,3 +13,4 @@
   ],
   "currentContext": "colima"
 }
+{{ end -}}

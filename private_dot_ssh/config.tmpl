@@ -1,7 +1,9 @@
+{{ if ne .profile "ovo" -}}
 Host github.com
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile {{ .chezmoi.homeDir }}/.ssh/id_ed25519_github
+{{ end -}}
 
 Host homeassistant.local
   User root
