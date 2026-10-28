@@ -1,30 +1,24 @@
 [tools]
 # Latest version
-"aqua:argoproj/argo-cd" = "latest"
 "aqua:BurntSushi/ripgrep" = "latest"
 "aqua:cargo-bins/cargo-binstall" = "latest"
-"aqua:cert-manager/cmctl" = "latest"
 "aqua:charmbracelet/gum" = "latest"
-"aqua:derailed/k9s" = "latest"
 "aqua:FiloSottile/age" = "latest"
-"aqua:git-lfs/git-lfs" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:google/yamlfmt" = "latest"
-"aqua:GoogleContainerTools/skaffold" = "latest"
-"aqua:hashicorp/terraform" = "latest"
 "aqua:jj-vcs/jj" = "latest"
 "aqua:jqlang/jq" = "latest"
 "aqua:kubecolor/kubecolor" = "latest"
 "aqua:kubernetes-sigs/kind" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
-"aqua:kubernetes-sigs/kustomize" = "latest"
+{{ if ne .profile "ovo" -}}
+"aqua:kubernetes/kubernetes/kubectl" = "latest"
+{{ end -}}
 "aqua:mikefarah/yq" = "latest"
-"aqua:npryce/adr-tools" = "latest"
 "aqua:pnpm/pnpm" = "latest"
 "aqua:pre-commit/pre-commit" = "latest"
 "aqua:rclone/rclone" = "latest"
 "aqua:sunny0826/kubecm" = "latest"
-"aqua:terraform-docs/terraform-docs" = "latest"
 "github:go-task/task" = "latest"
 "github:jlucktay/my-github-repos" = "latest"
 "github:slsa-framework/slsa-verifier" = "latest"
@@ -33,21 +27,39 @@
 pipx = "latest"
 uv = "latest"
 
+{{ if eq .profile "ovo" -}}
+# Latest version for OVO
+"aqua:argoproj/argo-cd" = "latest"
+"aqua:cert-manager/cmctl" = "latest"
+"aqua:derailed/k9s" = "latest"
+"aqua:git-lfs/git-lfs" = "latest"
+"aqua:GoogleContainerTools/skaffold" = "latest"
+"aqua:hashicorp/terraform" = "latest"
+"aqua:kubernetes-sigs/kustomize" = "latest"
+"aqua:npryce/adr-tools" = "latest"
+"aqua:terraform-docs/terraform-docs" = "latest"
+{{ end -}}
+
 # Prevent AWS CLI's 'python' from leaking
 # https://github.com/jdx/mise/pull/7076
 "aqua:aws/aws-cli" = { version = "latest", symlink_bins = "true" }
 
 # Pinned major version
-"aqua:helm/helm" = "3"
 "node" = "24"
+{{ if eq .profile "ovo" -}}
+"aqua:helm/helm" = "3"
+{{ end -}}
 
-# Pinned minor version
-"aqua:goreleaser/goreleaser" = "2.5"
-"aqua:kubernetes/kubectl" = "1.35"
+{{ if eq .profile "ovo" -}}
+# Pinned minor version for OVO
+"aqua:kubernetes/kubernetes/kubectl" = "1.35"
+{{ end -}}
 
-# Pinned patch version
+{{ if eq .profile "ovo" -}}
+# Pinned patch version for OVO
 "aqua:kyverno/kyverno" = "1.18.1"
 "aqua:norwoodj/helm-docs" = "1.14.2"
+{{ end -}}
 
 [settings]
 # Pushes tools' bin-paths to the front of PATH instead of allowing modifications of PATH after activation to take precedence.
