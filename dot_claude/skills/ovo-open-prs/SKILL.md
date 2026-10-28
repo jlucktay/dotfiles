@@ -19,6 +19,9 @@ Show full URL links to each PR, along with:
 - CI status
 - Whether the PR has any merge conflicts
 - Review status
+- Any Jira ticket(s) that the PR is linked to
 
 Also flag if any PR does not have any assigned reviewers.
 These should have been set manually, or automatically via a mechanism such as CODEOWNERS.
+
+Focus only on listing the PRs, not repairing them or modifying them in any way.
