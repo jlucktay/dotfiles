@@ -38,7 +38,7 @@ Finally, reboot, and rejoice!
 
 ### Settings
 
-#### Itsycal
+#### [Itsycal](https://www.mowglii.com/itsycal/)
 
 ```text
 E d MMM HH:mm
