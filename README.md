@@ -35,3 +35,11 @@ chsh -s "$(brew --prefix)/bin/bash"
 ```
 
 Finally, reboot, and rejoice!
+
+### Settings
+
+#### Itsycal
+
+```text
+E d MMM HH:mm
+```
