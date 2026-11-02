@@ -6,7 +6,7 @@
 "aqua:FiloSottile/age" = "latest"
 "aqua:golangci/golangci-lint" = "latest"
 "aqua:google/yamlfmt" = "latest"
-{{ if ne .profile "ovo" -}}
+{{ if ne (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:helm/helm" = "latest"
 {{ end -}}
 "aqua:jj-vcs/jj" = "latest"
@@ -14,7 +14,7 @@
 "aqua:kubecolor/kubecolor" = "latest"
 "aqua:kubernetes-sigs/kind" = "latest"
 "aqua:kubernetes-sigs/krew" = "latest"
-{{ if ne .profile "ovo" -}}
+{{ if ne (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:kubernetes/kubernetes/kubectl" = "latest"
 {{ end -}}
 "aqua:mikefarah/yq" = "latest"
@@ -30,7 +30,7 @@
 pipx = "latest"
 uv = "latest"
 
-{{ if eq .profile "ovo" -}}
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Latest version for OVO
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:cert-manager/cmctl" = "latest"
@@ -41,24 +41,24 @@ uv = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
-{{ end -}}
 
 # Prevent AWS CLI's 'python' from leaking
 # https://github.com/jdx/mise/pull/7076
 "aqua:aws/aws-cli" = { version = "latest", symlink_bins = "true" }
+{{ end -}}
 
 # Pinned major version
 "node" = "24"
-{{ if eq .profile "ovo" -}}
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:helm/helm" = "3"
 {{ end -}}
 
-{{ if eq .profile "ovo" -}}
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Pinned minor version for OVO
 "aqua:kubernetes/kubernetes/kubectl" = "1.35"
 {{ end -}}
 
-{{ if eq .profile "ovo" -}}
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Pinned patch version for OVO
 "aqua:kyverno/kyverno" = "1.18.1"
 "aqua:norwoodj/helm-docs" = "1.14.2"
