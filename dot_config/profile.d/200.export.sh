@@ -49,14 +49,15 @@ fi
 
 prefix_path "/usr/local/sbin"
 
-# https://formulae.brew.sh/cask/google-cloud-sdk
-if test -r "${package_manager_prefix:?}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"; then
+# https://docs.cloud.google.com/sdk/docs/install-sdk
+# The next line updates PATH for the Google Cloud SDK.
+if [[ -f "$HOME/google-cloud-sdk/path.bash.inc" ]]; then
 	# shellcheck disable=SC1091
-	source "$package_manager_prefix/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
+	source "$HOME/google-cloud-sdk/path.bash.inc"
 fi
 
 # https://github.com/kward/shflags/issues/13#issuecomment-404684801
-prefix_path "$package_manager_prefix/opt/gnu-getopt/bin"
+prefix_path "${package_manager_prefix:?}/opt/gnu-getopt/bin"
 
 prefix_path "$package_manager_prefix/opt/curl/bin"
 prefix_path "$package_manager_prefix/opt/libpq/bin"
