@@ -68,8 +68,8 @@ prefix_path "$HOME/.rd/bin"
 # Homebrew.
 prefix_path "$package_manager_prefix/bin"
 
-# Python v3.12.
-prefix_path "$package_manager_prefix/opt/python@3.12/libexec/bin"
+# Python v3.
+prefix_path "$package_manager_prefix/opt/python3/libexec/bin"
 
 # Ruby.
 prefix_path "$package_manager_prefix/opt/ruby/bin"
