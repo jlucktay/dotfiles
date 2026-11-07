@@ -19,3 +19,6 @@ Their scope should be generalised wherever possible and reasonable; user-specifi
 
 Summarise all work requested and achieved within the session.
 If any work item management tickets were referenced or touched, include them in the summary.
+
+List off any loose ends that have yet to be addressed or actioned.
+For each item on this list, the maximum word count is 25.
