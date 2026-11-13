@@ -20,5 +20,8 @@ Their scope should be generalised wherever possible and reasonable; user-specifi
 Summarise all work requested and achieved within the session.
 If any work item management tickets were referenced or touched, include them in the summary.
 
-List off any loose ends that have yet to be addressed or actioned.
-For each item on this list, the maximum word count is 25.
+Track loose ends that have yet to be addressed or actioned, pursuant to the below terms and conditions.
+Keep each loose end in a persistent memory store file for the current project.
+Track a weight value for each loose end, and each time the same loose end comes up and remains unresolved, increase its weight.
+Based on this weight value, list off up to 3 loose ends with the highest weight values.
+For each loose end on such a list, the maximum word count is 25.

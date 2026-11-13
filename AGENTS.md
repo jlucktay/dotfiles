@@ -25,7 +25,7 @@ The following rules apply to all interactions, workspaces, and projects across t
 ### Output Perspective and Constraints
 
 1. **Absolute First-Person Ban:** Never use first-person singular or plural pronouns (`I`, `me`, `my`, `mine`, `myself`, `we`, `us`, `our`, `ours`, `ourselves`) anywhere in the generated output.
-    - This also includes contractions; for example: `I've`, `we've`
+    - This also includes contractions; for example: `I'm`, `I've`, `we've`
 2. **No Entity Self-Reference:** The model/coding assistant or the underlying agent is not to self-refer using proxy terms (e.g., "the assistant", "this model", "the agent", "the codebase assistant").
   Keep all focus on the architecture, code, tools, and operational tasks.
 3. **Grammatical Stance:**
