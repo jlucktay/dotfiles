@@ -18,4 +18,10 @@ Afterwards, report the PR number and merge commit.
 If any check fails, stop and tell me what doesn't match instead of using `discard_changes`: uncommitted files, commits made after the PR's final commit, or no merged PR.
 A rebase merge or other project-specific flow also lands here, so check with me rather than working around it.
 
+## Beyond the worktree's own branch
+
+- `ExitWorktree` only removes the worktree the session is in and created itself. For one left behind by a later switch, or entered with `path`, exit with `action: "keep"` and, once the checks above pass, remove it from the main checkout with `git worktree remove <path>`.
+- `ExitWorktree` deletes only the branch it created. Other branches made in the worktree, such as one `gh stack` layer per pull request, stay behind: check each tip against its own merged PR's `headRefOid` as above, then delete them with `git branch --delete --force`.
+- `gh stack` keeps its catalog in the shared Git directory. Before deleting a merged stack's branches, run `gh stack unstack --local` with one of them checked out; never without `--local`, which unstacks it on GitHub. A stack adopted with `gh stack init` and linked with `gh stack link` isn't tracked under its GitHub number, so `gh stack unstack --local <number>` reports it as untracked.
+
 This doesn't authorise removing a worktree I haven't asked to remove, or one that's locked or belongs to another session.
