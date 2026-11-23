@@ -1,1 +1,1 @@
-gh poi	seachicken/gh-poi	v0.18.4
+gh poi	seachicken/gh-poi	v0.18.7

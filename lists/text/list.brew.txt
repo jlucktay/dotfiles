@@ -13,8 +13,8 @@ cffi
 chainsaw
 checkov
 cmake
-container
 coreutils
+curl
 dive
 eza
 fd
@@ -31,12 +31,11 @@ gmp
 gnu-getopt
 gnu-sed
 go
-granted
 gron
 hdrhistogram_c
 highway
 hyperfine
-icu4c@78
+icu4c@79
 isl
 json-c
 krb5
@@ -50,8 +49,11 @@ libgpg-error
 liblinear
 libmpc
 libnghttp2
+libnghttp3
+libngtcp2
 libomp
 libpq
+libpsl
 libssh2
 libunistring
 libuv
@@ -87,6 +89,7 @@ pydantic
 python@3.12
 python@3.13
 python@3.14
+python@3.15
 readline
 rpds-py
 runme

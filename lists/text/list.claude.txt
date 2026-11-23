@@ -1,12 +1,12 @@
 [
   {
     "id": "atlassian@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/atlassian/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/atlassian/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.376Z",
+    "lastUpdated": "2026-11-19T17:14:10.782Z",
     "mcpServers": {
       "atlassian": {
         "type": "http",
@@ -37,57 +37,75 @@
   },
   {
     "id": "data-eng@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/data-eng/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/data-eng/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.376Z",
+    "lastUpdated": "2026-11-19T17:14:10.783Z",
     "projectEnabled": false
   },
   {
     "id": "datadog@claude-plugins-official",
-    "version": "0.7.17",
+    "version": "0.7.19",
     "scope": "user",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/datadog/0.7.17",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/datadog/0.7.19",
     "installedAt": "2026-08-20T13:00:27.595Z",
-    "lastUpdated": "2026-08-20T13:00:27.595Z",
+    "lastUpdated": "2026-11-20T09:33:06.031Z",
     "mcpServers": {
       "mcp": {
         "type": "http",
-        "url": "https://${DD_MCP_DOMAIN:-mcp.datadoghq.eu}/v1/mcp?referrer_ide=claude-code-plugin&plugin_version=0.7.17",
+        "url": "https://${DD_MCP_DOMAIN:-not-setup}/v1/mcp",
         "headers": {
           "DD_API_KEY": "${DD_API_KEY:-}",
           "DD_APPLICATION_KEY": "${DD_APPLICATION_KEY:-}",
-          "X-Datadog-MCP-Toolsets": "${DD_MCP_TOOLSETS:-}"
+          "X-Datadog-MCP-Referrer-Name": "claude-code-plugin",
+          "X-Datadog-MCP-Referrer-Version": "0.7.19",
+          "X-Datadog-MCP-Toolsets": "${DD_MCP_TOOLSETS:-core,visualizations}"
         }
       }
     },
     "projectEnabled": true
   },
   {
-    "id": "design@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "id": "datahub@ovo-claude-plugins",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/design/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/datahub/4854f5a47bf8",
+    "installedAt": "2026-11-19T13:31:19.875Z",
+    "lastUpdated": "2026-11-19T17:14:10.781Z",
+    "mcpServers": {
+      "datahub": {
+        "type": "http",
+        "url": "https://ovo.acryl.io/mcp"
+      }
+    },
+    "projectEnabled": false
+  },
+  {
+    "id": "design@ovo-claude-plugins",
+    "version": "4854f5a47bf8",
+    "scope": "managed",
+    "enabled": true,
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/design/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.377Z",
+    "lastUpdated": "2026-11-19T17:14:10.778Z",
     "projectEnabled": false
   },
   {
     "id": "devops@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/devops/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/devops/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.377Z",
+    "lastUpdated": "2026-11-19T17:14:10.780Z",
     "mcpServers": {
       "datadog": {
         "type": "http",
-        "url": "https://mcp.datadoghq.eu/api/unstable/mcp-server/mcp"
+        "url": "https://mcp.datadoghq.eu/v1/mcp?subdomain=ovotech"
       },
       "wiz": {
         "type": "http",
@@ -101,32 +119,32 @@
   },
   {
     "id": "feature-dev@claude-plugins-official",
-    "version": "641d925db5a6",
+    "version": "1.0.1",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/feature-dev/641d925db5a6",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/feature-dev/1.0.1",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.381Z",
+    "lastUpdated": "2026-10-28T09:37:13.615Z",
     "projectEnabled": false
   },
   {
     "id": "frontend@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/frontend/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/frontend/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.379Z",
+    "lastUpdated": "2026-11-19T17:14:10.784Z",
     "projectEnabled": false
   },
   {
     "id": "google@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/google/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/google/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.378Z",
+    "lastUpdated": "2026-11-19T17:14:10.787Z",
     "mcpServers": {
       "google-workspace": {
         "command": "node",
@@ -139,12 +157,12 @@
   },
   {
     "id": "ovo-core@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/ovo-core/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/ovo-core/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.375Z",
+    "lastUpdated": "2026-11-19T17:14:10.779Z",
     "mcpServers": {
       "repo-context": {
         "command": "node",
@@ -155,7 +173,7 @@
       "tech-handbook": {
         "command": "npx",
         "args": [
-          "@ovotech/tech-handbook-mcp@latest"
+          "@ovotech/tech-handbook-mcp@1.0.36"
         ]
       }
     },
@@ -163,22 +181,22 @@
   },
   {
     "id": "pr-review-toolkit@claude-plugins-official",
-    "version": "641d925db5a6",
+    "version": "1.0.1",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/641d925db5a6",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/claude-plugins-official/pr-review-toolkit/1.0.1",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.380Z",
+    "lastUpdated": "2026-10-28T09:37:13.616Z",
     "projectEnabled": false
   },
   {
     "id": "product-process@ovo-claude-plugins",
-    "version": "7aebd6735c72",
+    "version": "4854f5a47bf8",
     "scope": "managed",
     "enabled": true,
-    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/product-process/7aebd6735c72",
+    "installPath": "/Users/james.lucktaylor/.claude/plugins/cache/ovo-claude-plugins/product-process/4854f5a47bf8",
     "installedAt": "2026-09-09T15:10:40.922Z",
-    "lastUpdated": "2026-10-14T14:09:20.375Z",
+    "lastUpdated": "2026-11-19T17:14:10.786Z",
     "projectEnabled": false
   },
   {
