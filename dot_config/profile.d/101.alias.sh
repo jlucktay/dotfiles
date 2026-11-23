@@ -98,6 +98,7 @@ if command -v git &> /dev/null; then
 	fi
 fi
 
+# https://chezmoi.io
 if command -v chezmoi &> /dev/null; then
 	alias cdes='chezmoi diff --exclude=scripts'
 fi
