@@ -98,11 +98,6 @@ if command -v git &> /dev/null; then
 	fi
 fi
 
-# https://docs.commonfate.io/granted/usage/assuming-roles
-if command -v assume &> /dev/null; then
-	alias assume=". assume"
-fi
-
 if command -v chezmoi &> /dev/null; then
 	alias cdes='chezmoi diff --exclude=scripts'
 fi

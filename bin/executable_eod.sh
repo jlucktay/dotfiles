@@ -95,14 +95,6 @@ for ctx in "$HOME/.kube/config" "$HOME/.config/argocd/config"; do
 	)
 done
 
-# Clear any ongoing AWS sessions.
-tool_check assume
-
-(
-	set -x
-	assume --unset
-)
-
 # Close down chat apps.
 (
 	set -x

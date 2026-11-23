@@ -29,8 +29,8 @@
 "pipx:yamllint" = "latest"
 pipx = "latest"
 uv = "latest"
+{{- if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" }}
 
-{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Latest version for OVO
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:cert-manager/cmctl" = "latest"
@@ -42,11 +42,7 @@ uv = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
 
-# Prevent AWS CLI's 'python' from leaking
-# https://github.com/jdx/mise/pull/7076
-"aqua:aws/aws-cli" = { version = "latest", symlink_bins = "true" }
 {{ end -}}
-
 # Pinned major version
 "node" = "24"
 {{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
