@@ -1,3 +1,7 @@
-{{ if eq .profile "ovo" -}}
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 tj-farm/
+{{ end -}}
+
+{{ if not (lookPath "aws") -}}
+aws/
 {{ end -}}
