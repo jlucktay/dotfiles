@@ -44,10 +44,10 @@ uv = "latest"
 
 {{ end -}}
 # Pinned major version
-"node" = "24"
 {{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:helm/helm" = "3"
 {{ end -}}
+"node" = "26"
 
 {{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Pinned minor version for OVO
