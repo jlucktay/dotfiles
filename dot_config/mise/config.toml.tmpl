@@ -29,8 +29,8 @@
 "pipx:yamllint" = "latest"
 pipx = "latest"
 uv = "latest"
-{{- if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" }}
 
+{{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 # Latest version for OVO
 "aqua:argoproj/argo-cd" = "latest"
 "aqua:cert-manager/cmctl" = "latest"
@@ -41,8 +41,8 @@ uv = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
-
 {{ end -}}
+
 # Pinned major version
 {{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:helm/helm" = "3"
