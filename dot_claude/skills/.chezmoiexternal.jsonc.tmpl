@@ -1,0 +1,38 @@
+{{- /* The checksum covers the whole tarball, so bump both values together. */ -}}
+{{- $commit := "6f7f7831a625f040a8e06a0e7954826b87ce775a" -}}
+{{- $sha256 := "1bd933eb15dec5b5886462916ff4a35ffe2acab62f77230ca68ac65fb7e1e813" -}}
+
+{{- $skills := list
+  "engineering/code-review"
+  "engineering/codebase-design"
+  "engineering/domain-modeling"
+  "engineering/implement"
+  "engineering/prototype"
+  "engineering/research"
+  "engineering/setup-matt-pocock-skills"
+  "engineering/tdd"
+  "engineering/wayfinder"
+  "engineering/wizard"
+  "productivity/grilling"
+  "productivity/handoff"
+  "productivity/teach"
+  "productivity/to-questionnaire"
+  "productivity/wait-what"
+  "productivity/writing-for-agents"
+-}}
+
+{
+  // Upstream: https://github.com/mattpocock/skills (MIT), pinned to {{ trunc 7 $commit }}
+{{- range $skills }}
+  {{ base . | toJson }}: {
+    "type": "archive",
+    "url": {{ printf "https://github.com/mattpocock/skills/archive/%s.tar.gz" $commit | toJson }},
+    "checksum": {
+      "sha256": {{ $sha256 | toJson }},
+    },
+    "exact": true,
+    "stripComponents": 4,
+    "include": [{{ printf "*/skills/%s/**" . | toJson }}],
+  },
+{{- end }}
+}

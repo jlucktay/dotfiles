@@ -1,3 +1,6 @@
 {{ if ne .profile "ovo" -}}
 ovo-open-prs/
 {{ end -}}
+
+# Don't need the skill metadata sub-directories.
+*/agents
