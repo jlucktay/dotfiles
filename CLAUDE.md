@@ -10,6 +10,7 @@ The machine-wide agent instructions live in `dot_config/literal__agents/AGENTS.m
 - Several targets are symlinks into other targets, so an edit through `~/.claude/CLAUDE.md` or `~/.claude/rules/` lands in `~/.config/_agents/` and is still a target edit.
 - Source names carry attributes: `dot_` becomes a leading `.`, `private_` sets owner-only permissions, `executable_` sets the execute bit, `symlink_` makes a symlink whose target is the file's content, `literal_` stops attribute parsing (`literal__agents` becomes `_agents`), and a `.tmpl` suffix renders the file as a Go template.
 - `.chezmoiignore` and `.chezmoiremove` match target paths, not source paths.
+- `.chezmoiignore` wins over `.chezmoiremove`: a target listed in both is left in place, so never ignore a target that is meant to be removed. A file at the source root always maps to a target of the same name in `$HOME`, which is why this file is `CLAUDE.md` rather than `AGENTS.md`.
 
 ## Machine pivots
 
@@ -22,6 +23,7 @@ Templates branch on one of two signals; follow whichever the file being edited a
 
 - Each `.chezmoiexternal.*` entry pins an upstream commit in its URL and the archive's `sha256` in `checksum`. Bump both together, or the apply fails on the checksum.
 - Compute a new checksum with `curl --fail --location --silent <url> | sha256sum`.
+- `chezmoi re-add` skips every target that comes from an external. In a directory that mixes both, such as `~/.local/share/ghostty-blackhole/`, `chezmoi managed --include=externals` and `--exclude=externals` show which mechanism owns each target, and only the source-state files can be re-added.
 
 ## Before applying
 
