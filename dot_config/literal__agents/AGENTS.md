@@ -80,7 +80,7 @@ The following rules apply to all interactions, workspaces, and projects across t
 
 ## 8. Internal Agent Rules
 
-- **`ask_question` Tool Usage**: Never add manual "Other" or "Something else" options when using the `ask_question` tool.
+- **Structured question tools**: When a structured question tool is available (`AskUserQuestion` in Claude Code), never add a manual "Other" or "Something else" option; the tool supplies one.
 
 ## 9. Go Workspaces in Sandbox
 
@@ -89,8 +89,7 @@ restricted, automatically prefix the commands with `GOWORK=off` to isolate execu
 
 ## 10. Comprehensive Requirements Checklist
 
-- Before writing code for a new tool or feature, explicitly list out and cross-reference all project-specific instructions (e.g., `AGENTS.md`) alongside Global Ground
-Rules (like Go Preferences) in the process to ensure zero missed constraints.
+- Before writing code for a new tool or feature, explicitly list out and cross-reference all project-specific instructions (`AGENTS.md`, `CLAUDE.md`, and rules directories) alongside Global Ground Rules (like Go Preferences) in the process to ensure zero missed constraints.
 
 ## 11. Scripting Conventions
 
