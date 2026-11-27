@@ -11,17 +11,8 @@
   },
   "model": "claude-opus-5-5[1m]",
   "hooks": {
+    {{ if $ovo -}}
     "PostToolUse": [
-      {
-        "matcher": "EnterWorktree",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash {{ .chezmoi.homeDir }}/.claude/hooks/link-worktree-memory.sh"
-          }
-        ]
-      {{ if $ovo -}}
-      },
       {
         "matcher": "*",
         "hooks": [
@@ -37,10 +28,8 @@
             "timeout": 10
           }
         ]
-      {{ end -}}
       }
     ],
-    {{ if $ovo -}}
     "PostToolUseFailure": [
       {
         "matcher": "*",
