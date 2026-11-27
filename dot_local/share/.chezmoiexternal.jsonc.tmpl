@@ -1,0 +1,17 @@
+{{- /* The checksum covers the whole tarball, so bump both values together. */ -}}
+{{- $commit := "b49fa0ab2eaf0644a690f4cb386d70c21eb9f969" -}}
+{{- $sha256 := "78b729a93b1a0bc1b47ed02dc47384895e6e22d91edb92dfc0d2feb7c33d3beb" -}}
+
+{
+  // Upstream: https://github.com/s0xDk/ghostty-blackhole (MIT), pinned to {{ trunc 7 $commit }}
+  // blackhole.glsl is managed as source state beside these files, carrying local tuning; it must stay compatible with claude-token.py's cursor-colour encoding.
+  "ghostty-blackhole": {
+    "type": "archive",
+    "url": {{ printf "https://github.com/s0xDk/ghostty-blackhole/archive/%s.tar.gz" $commit | toJson }},
+    "checksum": {
+      "sha256": {{ $sha256 | toJson }},
+    },
+    "stripComponents": 1,
+    "include": ["*/LICENSE", "*/claude-token.py"],
+  },
+}
