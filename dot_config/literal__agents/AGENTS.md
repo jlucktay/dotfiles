@@ -73,25 +73,15 @@ The following rules apply to all interactions, workspaces, and projects across t
 - Respect the line-wrapping/column style directive: do not column-wrap comments or Taskfile cmd blocks at ~80 chars.
   - Leave folded block scalars with strip chomping indicators (`>-`) in YAML alone; their multiline strings are written that way in the first instance for the sake of readability.
 
-## 7. Go Preferences
-
-- **Testing**: Always use `github.com/matryer/is` and strictly adhere to table-driven tests.
-- **CLI**: Use `github.com/urfave/cli` for building command-line tools.
-
-## 8. Internal Agent Rules
+## 7. Internal Agent Rules
 
 - **Structured question tools**: When a structured question tool is available (`AskUserQuestion` in Claude Code), never add a manual "Other" or "Something else" option; the tool supplies one.
 
-## 9. Go Workspaces in Sandbox
+## 8. Comprehensive Requirements Checklist
 
-- When executing `go` commands (like `go get`, `go test`, `go mod tidy`) within a specific module directory, if permission to the parent directory containing `go.work` is
-restricted, automatically prefix the commands with `GOWORK=off` to isolate execution to the local `go.mod`, avoiding unnecessary permission blocks.
+- Before writing code for a new tool or feature, explicitly list out and cross-reference all project-specific instructions (`AGENTS.md`, `CLAUDE.md`, and rules directories) alongside Global Ground Rules (like the Go preferences in `~/.claude/rules/agentic-go.md`) in the process to ensure zero missed constraints.
 
-## 10. Comprehensive Requirements Checklist
-
-- Before writing code for a new tool or feature, explicitly list out and cross-reference all project-specific instructions (`AGENTS.md`, `CLAUDE.md`, and rules directories) alongside Global Ground Rules (like Go Preferences) in the process to ensure zero missed constraints.
-
-## 11. Scripting Conventions
+## 9. Scripting Conventions
 
 - Use `jq` (not Python) for JSON parsing and validation.
 - Use `set -u`-safe idioms in all shell scripts (guard against empty arrays).

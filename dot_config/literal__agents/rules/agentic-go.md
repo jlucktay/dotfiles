@@ -1,4 +1,20 @@
+---
+paths:
+  - "**/*.go"
+  - "**/go.mod"
+  - "**/go.work"
+---
+
 # Agentic engineering of Go code
+
+## Preferences
+
+- **Testing**: Always use `github.com/matryer/is` and strictly adhere to table-driven tests.
+- **CLI**: Use `github.com/urfave/cli` for building command-line tools.
+
+## Go workspaces in a sandbox
+
+- When executing `go` commands (like `go get`, `go test`, `go mod tidy`) within a specific module directory, if permission to the parent directory containing `go.work` is restricted, automatically prefix the commands with `GOWORK=off` to isolate execution to the local `go.mod`, avoiding unnecessary permission blocks.
 
 ## Mock-able interfaces for clients of 3rd-party APIs
 
