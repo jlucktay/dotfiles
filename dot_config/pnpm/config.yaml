@@ -11,3 +11,9 @@ minimumReleaseAgeIgnoreMissingTime: false
 
 # Fail resolution when no version of a dependency satisfies the 'minimumReleaseAge' constraint.
 minimumReleaseAgeStrict: true
+
+# Obsidian headless pre-req needs to run a build script.
+globalPackagesConfig:
+  permissions:
+    better-sqlite3:
+      build: true
