@@ -9,6 +9,7 @@ fix-eternal.sh
 lint-bash.sh
 
 # Markdown
+CLAUDE.md
 README.md
 TODO.md
 
