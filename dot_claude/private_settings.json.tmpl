@@ -1,13 +1,9 @@
+{{- $ovo := eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 {
-  {{ if eq .profile "ovo" -}}
+  {{ if $ovo -}}
   "env": {
-    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
-    "OTEL_EXPORTER_OTLP_ENDPOINT": "http://localhost:4317",
-    "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc",
-    "OTEL_LOGS_EXPORTER": "otlp",
-    "OTEL_LOG_TOOL_DETAILS": "1",
-    "OTEL_LOG_USER_PROMPTS": "1",
-    "OTEL_METRICS_EXPORTER": "otlp"
+    "OTEL_METRICS_INCLUDE_REPOSITORY": "true",
+    "OTEL_RESOURCE_INCLUDE_HOST": "1"
   },
   {{ end -}}
   "permissions": {
@@ -24,7 +20,7 @@
             "command": "bash {{ .chezmoi.homeDir }}/.claude/hooks/link-worktree-memory.sh"
           }
         ]
-      {{ if eq .profile "ovo" -}}
+      {{ if $ovo -}}
       },
       {
         "matcher": "*",
@@ -44,7 +40,7 @@
       {{ end -}}
       }
     ],
-    {{ if eq .profile "ovo" -}}
+    {{ if $ovo -}}
     "PostToolUseFailure": [
       {
         "matcher": "*",
@@ -105,7 +101,7 @@
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
-          {{ if eq .profile "ovo" -}}
+          {{ if $ovo -}}
           },
           {
             "type": "command",
@@ -128,7 +124,7 @@
           {
             "type": "command",
             "command": "{{ .chezmoi.homeDir }}/git/github.com/s0xDk/ghostty-blackhole/claude-token.py"
-          {{ if eq .profile "ovo" -}}
+          {{ if $ovo -}}
           },
           {
             "type": "command",
@@ -144,7 +140,7 @@
           }
         ]
       }
-    {{ if eq .profile "ovo" -}}
+    {{ if $ovo -}}
     ],
     "Stop": [
       {
@@ -175,31 +171,7 @@
   "enabledPlugins": {
     "datadog@claude-plugins-official": true
   },
-  {{ if eq .profile "ovo" -}}
-  "extraKnownMarketplaces": {
-    "ovo-claude-plugins": {
-      "source": {
-        "source": "github",
-        "repo": "ovotech/ovo-claude-plugins"
-      },
-      "autoUpdate": true
-    }
-  },
-  {{ end -}}
   "outputStyle": "Learning",
-  {{ if eq .profile "ovo" -}}
-  "sandbox": {
-    "filesystem": {
-      "allowWrite": [
-        "{{ .chezmoi.homeDir }}/git/*",
-        "git/*"
-      ],
-      "allowRead": [
-        "{{ .chezmoi.homeDir }}/git"
-      ]
-    }
-  },
-  {{ end -}}
   "feedbackDrafts": "notify",
   "spinnerVerbs": {
     "mode": "replace",
