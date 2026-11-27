@@ -41,8 +41,8 @@ uv = "latest"
 "aqua:kubernetes-sigs/kustomize" = "latest"
 "aqua:npryce/adr-tools" = "latest"
 "aqua:terraform-docs/terraform-docs" = "latest"
-{{ end -}}
 
+{{ end -}}
 # Pinned major version
 {{ if eq (printf "%.4s" .chezmoi.hostname | lower) "ovo-" -}}
 "aqua:helm/helm" = "3"
